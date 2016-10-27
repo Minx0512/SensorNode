@@ -2,7 +2,7 @@
  * main.c
  *
  *  Created on: Apr 16, 2016
- *      Author: matthias
+ *      Author: Matthias Minx
  */
 #include <avr/io.h>
 #include <avr/pgmspace.h>
