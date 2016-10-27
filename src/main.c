@@ -5,6 +5,8 @@
  *      Author: matthias
  */
 #include <avr/io.h>
+#include <avr/pgmspace.h>
+
 #include <util/delay.h>
 #include <avr/interrupt.h>
 #include <inttypes.h>
@@ -42,11 +44,11 @@
 
 int enableMoveSens = 1;
 int movement = 0;
-int prThresh = 550;
 int time = 0;
 
 volatile int rf = 0;
 
+char bufferNRF[128][5];
 
 
 
@@ -104,13 +106,13 @@ void evalHumidSensor(){
 		//itoa(temp,buffer,10);
 	//	writeString("### Temperature and Humidity DHT22/AM2302 ###\r\n");
 		writeString("<DHT22>");
-		writeString("<T>");
+		writeString("<T unit='°C'>");
 		writeString(buffer);
-		writeString("°C</T>");
+		writeString("</T>");
 		dtostrf(humidity,3,1,buffer);
-		writeString("<H>");
+		writeString("<H unit='%RH'>");
 		writeString(buffer);
-		writeString("%RH</H></DHT22>");
+		writeString("</H></DHT22>");
 
 	}
 
@@ -120,26 +122,45 @@ void evalHumidSensor(){
 ISR(INT0_vect){
 
 
-rf = 1;
-	//rf_interrupt = true;
-//	writeString("INT0\r\n");
+//rf = 1;
 
+//rf_interrupt = true;
+//	writeString("INT0\r\n");
+//uint8_t data[NRF24L01_PAYLOAD];
+//char buff[100];
+//nrf24l01_read(data);
+//sprintf(buff,"RX_PLD: %i | %X \r\n",data,data); writeString(buff);
+char bufferin[NRF24L01_PAYLOAD];
+char bufferout[128];
+uint8_t pipe = 0;
+	if(nrf24l01_readready(&pipe)) { //if data is ready
+		//read buffer
+		nrf24l01_read(bufferin);
+		//	uint8_t samecheck = 1;
+
+
+		evalNRFBuffer(pipe,bufferin,bufferout);
+
+
+		for(int i=0;i<128;i++){
+			bufferNRF[i][pipe] = bufferout[i];
+		}
+
+
+
+		for(int i=0; i<sizeof(bufferin); i++)
+			bufferin[i] = 0;
+
+	}
 
 
 }
 
 ISR(INT1_vect){
 
+//Movement
+	movement = 1;
 
-	PORTD ^= (1<<PD4);
-	char buff[100];
-	sprintf(buff,"STATUS: %02X\r\n", nrf24l01_getstatus()); writeString(buff);
-	sprintf(buff,"RX_PW_P0: %02X\r\n",nrf24l01_readregister(NRF24L01_REG_RX_PW_P0)); writeString(buff);
-	sprintf(buff,"RX_PW_P1: %02X\r\n",nrf24l01_readregister(NRF24L01_REG_RX_PW_P1)); writeString(buff);
-	evalHumidSensor();
-	writeString("\r\n");
-	evalLightsensor();
-	writeString("\r\n");
 
 }
 
@@ -171,6 +192,27 @@ void v(int time,int movement, int enableMoveSens){
 
 
 }
+void v2(){
+
+
+	char mv[128];
+	sprintf(mv,"<mv>%i</mv>\r\n",movement);
+	writeString(mv);
+	char mvT[128];
+	sprintf(mvT,"<mvSen>%i</mvSen>\r\n",enableMoveSens);
+	writeString(mvT);
+
+	//	writeString(string);
+
+	evalLightsensor();
+	writeString("\r\n");
+	evalHumidSensor();
+	//	writeString("\r\n");
+
+	movement=0;
+
+
+}
 
 void printNRF24L01(){
 	char buff[100];
@@ -194,6 +236,10 @@ void printNRF24L01(){
 	nrf24l01_revaddress(adr, (uint8_t *)addrrev);
 	sprintf(buff,"RX_ADDR_P1: %02X %02X %02X %02X %02X \r\n",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); writeString(buff);
 
+	nrf24l01_readregisters(NRF24L01_REG_RX_ADDR_P2,adr,NRF24L01_ADDRSIZE);
+	nrf24l01_revaddress(adr, (uint8_t *)addrrev);
+	sprintf(buff,"RX_ADDR_P2: %02X \r\n",addrrev[0]); writeString(buff);
+
 
 	nrf24l01_readregisters(NRF24L01_REG_TX_ADDR,adr,NRF24L01_ADDRSIZE);
 	nrf24l01_revaddress(adr, (uint8_t *)addrrev);
@@ -207,6 +253,27 @@ void printNRF24L01(){
 	writeString("##########################\r\n");
 }
 
+void evalNRFBuffer(uint8_t pipe,char* buffer,char* bufferOut){
+	char buff[128];
+//	char buff2[16];
+	//sprintf(buff,"data: %i: ", pipe);
+//	writeString(buff);
+	//for(int i=0; i<sizeof(buffer); i++) {
+	//	sprintf(buff,"%c", buffer[i]);writeString(buff);
+
+//	}
+	//writeString("\r\n");
+
+	sprintf(bufferOut,"<pipe>%i</pipe><data>%s</data>\r\n", pipe,(char*)buffer);
+	//writeString(buff);
+
+
+
+	//	writeString("BUFF: ");
+//	writeString((char*)buffer);
+//	writeString("\r\n");
+
+}
 
 int main(){
 
@@ -231,8 +298,8 @@ int main(){
 
 
 	//nrf24l01 variables
-	uint8_t bufferout[NRF24L01_PAYLOAD];
-	uint8_t bufferin[NRF24L01_PAYLOAD];
+//	char bufferout[NRF24L01_PAYLOAD];
+	char bufferin[NRF24L01_PAYLOAD];
 	uint8_t i = 0;
 
 	//init nrf24l01
@@ -244,8 +311,6 @@ int main(){
 	//evalTempSensorDS18B20s();
 	//setup buffer
 
-	for(i=0; i<sizeof(bufferout); i++)
-		bufferout[i] = i+'a';
 	for(i=0; i<sizeof(bufferin); i++)
 		bufferin[i] = 0;
 
@@ -255,45 +320,97 @@ int main(){
 
 			while(1){
 
-			//	writeString("Awaiting Input...\r\n");
-			//	const char* string = readString();
-				//writeString(string);
-				//delay_ms(500);
-			//	prThresh = atoi(string);
 
-			//	v(time,movement,enableMoveSens);
 
 				uint8_t pipe = 0;
-					if(nrf24l01_readready(&pipe)) { //if data is ready
-						rf = 0;
-						char pipebuffer[5];
-						writeString("getting data, on pipe ");
-						sprintf(pipebuffer,"%i",pipe);
-						//	itoa(pipe, pipebuffer, 10);
-						writeString(pipebuffer);
-						writeString("\r\n");
 
-						//read buffer
-						nrf24l01_read(bufferin);
 
-						uint8_t samecheck = 1;
-						writeString("  data: ");
-						for(i=0; i<sizeof(bufferin); i++) {
-							if(bufferin[i] != bufferout[i])
-								samecheck = 0;
-							writeString(bufferin[i]);
+
+				const char* s = readString();
+
+				USART0_Flush();
+
+
+			//	writeString("String: ");
+			//	writeString(s);
+
+
+				char b[100];
+
+				int system = strncmp("System",s,6);
+
+				int mvcmp = strncmp("Move",s,4);
+
+			//	sprintf(b,"Compare Move: %i \r\n",mvcmp);
+			//	writeString(b);
+
+				int dht22 = strncmp("DHT22",s,5);
+
+			//	sprintf(b,"Compare DHT22: %i \r\n",dht22);
+			//	writeString(b);
+
+				int light = strncmp("Light",s,5);
+
+			//	sprintf(b,"Compare Light: %i \r\n",light);
+			//	writeString(b);
+
+				int rs = strncmp("RS",s,2);
+			//	sprintf(b,"Compare RS: %i \r\n",rs);
+			//	writeString(b);
+
+
+			//	writeString("\r\n");
+
+
+				if(system==0){
+					writeString("### System ###\r\n");
+					printNRF24L01();
+
+
+				}else if(strncmp("Help",s,4)==0){
+					writeString("### Help menu ###\r\n");
+					writeString("System:\t Get System properties\r\n");
+					writeString("Move:\t Movement detected?\r\n");
+					writeString("Light:\t Lightsensor readout \r\n");
+					writeString("DHT22:\t DHT22 readout\r\n");
+					writeString("RS:\t Remote Sensors\r\n");
+
+
+				}else if(mvcmp==0){
+
+					char mv[128];
+					sprintf(mv,"<mv>%i</mv>",movement);
+					writeString(mv);
+					movement=0;
+				}else if(dht22==0){
+					evalHumidSensor();
+				}else if(light==0){
+					writeString("<L>");
+					evalLightsensor();
+					writeString("</L>");
+
+				}else if(rs==0){
+
+					writeString("<RS>");
+					for(int i=0;i<5;i++){
+						char str[128];
+						for(int j=0;j<128;j++){
+							str[j] = bufferNRF[j][i];
+
 						}
+						writeString(str);
 						writeString("\r\n");
-						if(samecheck)
-							writeString("  check ok\r\n");
-						else
-							writeString("  check fails\r\n");
-						for(i=0; i<sizeof(bufferin); i++)
-							bufferin[i] = 0;
-
-
 					}
+					writeString("</RS>");
+
+
+				}
+
+				writeString("|end");
+
 						_delay_ms(10);
+
+
 
 
 

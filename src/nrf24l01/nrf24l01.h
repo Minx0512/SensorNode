@@ -21,8 +21,8 @@ Please refer to LICENSE file for licensing information.
 //CE and CSN port definitions
 #define NRF24L01_DDR DDRB
 #define NRF24L01_PORT PORTB
-#define NRF24L01_CE PB0
-#define NRF24L01_CSN PB1
+#define NRF24L01_CE PB1
+#define NRF24L01_CSN PB0
 
 //define the spi path
 #define NRF24L01_SPIPATH "../spi/spi.h" //spi lib path
@@ -67,22 +67,22 @@ Please refer to LICENSE file for licensing information.
 //enable / disable pipe
 #define NRF24L01_ENABLEDP0 1 //pipe 0
 #define NRF24L01_ENABLEDP1 1 //pipe 1
-#define NRF24L01_ENABLEDP2 0 //pipe 2
-#define NRF24L01_ENABLEDP3 0 //pipe 3
-#define NRF24L01_ENABLEDP4 0 //pipe 4
-#define NRF24L01_ENABLEDP5 0 //pipe 5
+#define NRF24L01_ENABLEDP2 1 //pipe 2
+#define NRF24L01_ENABLEDP3 1 //pipe 3
+#define NRF24L01_ENABLEDP4 1 //pipe 4
+#define NRF24L01_ENABLEDP5 1 //pipe 5
 
 //address size
 #define NRF24L01_ADDRSIZE 5
 
 //pipe address
-#define NRF24L01_ADDRP0 {0xe2, 0xf0, 0xf0, 0xf0, 0xf0} //pipe 0, 5 byte address
-#define NRF24L01_ADDRP1 {0xe3, 0xf0, 0xf0, 0xf0, 0xf0} //pipe 1, 5 byte address
-#define NRF24L01_ADDRP2 {0xC1, 0xC2, 0xC2, 0xC2, 0xC3} //pipe 2, 5 byte address
-#define NRF24L01_ADDRP3 {0xC1, 0xC2, 0xC2, 0xC2, 0xC4} //pipe 3, 5 byte address
-#define NRF24L01_ADDRP4 {0xC1, 0xC2, 0xC2, 0xC2, 0xC5} //pipe 4, 5 byte address
-#define NRF24L01_ADDRP5 {0xC1, 0xC2, 0xC2, 0xC2, 0xC6} //pipe 5, 5 byte address
-#define NRF24L01_ADDRTX {0xe2, 0xf0, 0xf0, 0xf0, 0xf0} //tx default address*/
+#define NRF24L01_ADDRP0 {0xe0, 0xf0, 0xf0, 0xf0, 0xf0} //pipe 0, 5 byte address
+#define NRF24L01_ADDRP1 {0xe1, 0xf0, 0xf0, 0xf0, 0xe0} //pipe 1, 5 byte address
+#define NRF24L01_ADDRP2 {0xe1, 0xf0, 0xf0, 0xf0, 0xe1} //pipe 2, 5 byte address
+#define NRF24L01_ADDRP3 {0xe1, 0xf0, 0xf0, 0xf0, 0xe2} //pipe 3, 5 byte address
+#define NRF24L01_ADDRP4 {0xe1, 0xf0, 0xf0, 0xf0, 0xe3} //pipe 4, 5 byte address
+#define NRF24L01_ADDRP5 {0xe1, 0xf0, 0xf0, 0xf0, 0xe4} //pipe 5, 5 byte address
+#define NRF24L01_ADDRTX {0xe0, 0xf0, 0xf0, 0xf0, 0xf0} //tx default address*/
 
  //enable print info function
 #define NRF24L01_PRINTENABLE 1

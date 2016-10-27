@@ -355,7 +355,7 @@ void nrf24l01_init() {
     nrf24l01_setdatarate(); //set data rate
     nrf24l01_setcrclength(); //set crc length
     nrf24l01_writeregister(NRF24L01_REG_SETUP_RETR, NRF24L01_RETR); // set retries
-    nrf24l01_writeregister(NRF24L01_REG_DYNPD, 0); //disable dynamic payloads
+    nrf24l01_writeregister(NRF24L01_REG_DYNPD, 0x03); //enable dynamic payloads
     nrf24l01_writeregister(NRF24L01_REG_RF_CH, NRF24L01_CH); //set RF channel
 
 	//payload size

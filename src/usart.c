@@ -52,6 +52,11 @@ void putByte(unsigned char data)
 
 }
 
+void USART0_Flush(void){
+	unsigned char dummy;
+	while(UCSR0A & (1<<RXC0)) dummy = UDR0;
+}
+
 /*! \brief Writes an ASCII string to the TX buffer */
 void writeString(char *str)
 {
