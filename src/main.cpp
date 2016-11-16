@@ -164,15 +164,14 @@ int main(){
 	uart.writeString(string);
 
 
-	//ds.GetSensorStringXML(string);
+
 	SetupNRF();
 	delay_ms(500);
-	//uart.writeString("...\n\r");
+
 
 	char s[500];
 	nrf.PrintInfo(s);
 	//nrf24l01_PrintNRFInfo(s);
-
 
 
 	uart.writeString(s);
