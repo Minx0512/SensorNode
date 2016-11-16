@@ -8,17 +8,16 @@ Please refer to LICENSE file for licensing information.
 */
 
 
+#include "nrf24l01.h"
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <avr/delay.h>
 #include <string.h>
 #include <stdio.h>
 
-#include "nrf24l01.h"
 #include "nrf24l01registers.h"
-
-//include spi library functions
-#include NRF24L01_SPIPATH
+#include "../spi/spi.h"
 
 //address variables
 static uint8_t nrf24l01_addr0[NRF24L01_ADDRSIZE] = NRF24L01_ADDRP0;
@@ -429,5 +428,64 @@ void nrf24l01_init() {
 
 	//set rx mode
 	nrf24l01_setRX();
+}
+
+void nrf24l01_PrintNRFInfo(char* string){
+	char buff[100];
+
+
+		sprintf(string,"##### NRF24L01+ Info #####\r\n");
+
+		sprintf(buff,"STATUS: %02X\r\n", nrf24l01_getstatus());  strcat(string,buff);
+		sprintf(buff,"CONFIG: %02X\r\n", nrf24l01_readregister(NRF24L01_REG_CONFIG)); strcat(string,buff);
+		sprintf(buff,"RF_CH: %02X\r\n", nrf24l01_readregister(NRF24L01_REG_RF_CH)); strcat(string,buff);
+		sprintf(buff,"RF_SETUP: %02X\r\n", nrf24l01_readregister(NRF24L01_REG_RF_SETUP)); strcat(string,buff);
+		sprintf(buff,"EN_AA: %02X\r\n", nrf24l01_readregister(NRF24L01_REG_EN_AA)); strcat(string,buff);
+		sprintf(buff,"EN_RXADDR: %02X\r\n", nrf24l01_readregister(NRF24L01_REG_EN_RXADDR)); strcat(string,buff);
+		sprintf(buff,"OBSERVE_TX: %02X\r\n", nrf24l01_readregister(NRF24L01_REG_OBSERVE_TX)); strcat(string,buff);
+
+		uint8_t adr[NRF24L01_ADDRSIZE];
+		uint8_t addrrev[NRF24L01_ADDRSIZE];
+
+		nrf24l01_readregisters(NRF24L01_REG_RX_ADDR_P0,adr,NRF24L01_ADDRSIZE);
+		nrf24l01_revaddress(adr, (uint8_t *)addrrev);
+		sprintf(buff,"RX_ADDR_P0: %02X %02X %02X %02X %02X \r\n",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
+
+		nrf24l01_readregisters(NRF24L01_REG_RX_ADDR_P1,adr,NRF24L01_ADDRSIZE);
+		nrf24l01_revaddress(adr, (uint8_t *)addrrev);
+		sprintf(buff,"RX_ADDR_P1: %02X %02X %02X %02X %02X \r\n",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
+
+
+
+		nrf24l01_readregisters(NRF24L01_REG_RX_ADDR_P2,adr,NRF24L01_ADDRSIZE);
+		nrf24l01_revaddress(adr, (uint8_t *)addrrev);
+		sprintf(buff,"RX_ADDR_P2: %02X \r\n",addrrev[0]); strcat(string,buff);
+
+
+		nrf24l01_readregisters(NRF24L01_REG_RX_ADDR_P3,adr,NRF24L01_ADDRSIZE);
+		nrf24l01_revaddress(adr, (uint8_t *)addrrev);
+		sprintf(buff,"RX_ADDR_P3: %02X \r\n",addrrev[0]); strcat(string,buff);
+
+		nrf24l01_readregisters(NRF24L01_REG_RX_ADDR_P4,adr,NRF24L01_ADDRSIZE);
+		nrf24l01_revaddress(adr, (uint8_t *)addrrev);
+		sprintf(buff,"RX_ADDR_P4: %02X \r\n",addrrev[0]); strcat(string,buff);
+
+
+		nrf24l01_readregisters(NRF24L01_REG_RX_ADDR_P5,adr,NRF24L01_ADDRSIZE);
+		nrf24l01_revaddress(adr, (uint8_t *)addrrev);
+		sprintf(buff,"RX_ADDR_P5: %02X \r\n",addrrev[0]); strcat(string,buff);
+
+
+		nrf24l01_readregisters(NRF24L01_REG_TX_ADDR,adr,NRF24L01_ADDRSIZE);
+		nrf24l01_revaddress(adr, (uint8_t *)addrrev);
+		sprintf(buff,"TX_ADDR: %02X %02X %02X %02X %02X \r\n",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
+
+
+		sprintf(buff,"RX_PW_P0: %02X\r\n",nrf24l01_readregister(NRF24L01_REG_RX_PW_P0)); strcat(string,buff);
+		sprintf(buff,"RX_PW_P1: %02X\r\n",nrf24l01_readregister(NRF24L01_REG_RX_PW_P1)); strcat(string,buff);
+
+
+		strcat(string,"##########################\r\n");
+
 }
 

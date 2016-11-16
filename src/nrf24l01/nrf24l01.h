@@ -86,7 +86,7 @@ Please refer to LICENSE file for licensing information.
 
  //enable print info function
 #define NRF24L01_PRINTENABLE 1
-
+void nrf24l01_PrintNRFInfo(char* string);
 extern void nrf24l01_init();
 extern uint8_t nrf24l01_getstatus();
 extern uint8_t nrf24l01_readready();
