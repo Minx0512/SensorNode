@@ -20,11 +20,6 @@
 #include "Sensors/Photoresistor.h"
 
 
-//extern "C"{
-
-//#include "nrf24l01/nrf24l01.h"
-//#include "nrf24l01/nrf24l01registers.h"
-//}
 
 #include "Wireless/NRF24L01.h"
 
