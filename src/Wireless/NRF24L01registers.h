@@ -2,14 +2,20 @@
  * NRF24L01registers.h
  *
  *  Created on: Nov 14, 2016
- *      Author: matthias
- * based on:
-nrf24l01 lib 0x02
-
-copyright (c) Davide Gironi, 2012
-
-Released under GPLv3.
-Please refer to LICENSE file for licensing information.
+ *      Author: Matthias Minx
+ *
+ * 	based on the Code of:
+ *
+ * nrf24l01 lib 0x02
+ * copyright (c) Davide Gironi, 2012
+ * References:
+ *   -  This library is based upon nRF24L01 avr lib by Stefan Engelke
+ *      http://www.tinkerer.eu/AVRLib/nRF24L01
+ *   -  and arduino library 2011 by J. Coliz
+ *      http://maniacbug.github.com/RF24
+ *
+ *      Released under GPLv3.
+ *      Please refer to LICENSE file for licensing information.
 */
 
 #ifndef NRF24L01REGISTERS_H_

@@ -2,8 +2,22 @@
  * NRF24L01.h
  *
  *  Created on: Nov 14, 2016
- *      Author: matthias
- */
+ *      Author: Matthias Minx
+ *
+ * 	based on the Code of:
+ *
+ * nrf24l01 lib 0x02
+ * copyright (c) Davide Gironi, 2012
+ * References:
+ *   -  This library is based upon nRF24L01 avr lib by Stefan Engelke
+ *      http://www.tinkerer.eu/AVRLib/nRF24L01
+ *   -  and arduino library 2011 by J. Coliz
+ *      http://maniacbug.github.com/RF24
+ *
+ *      Released under GPLv3.
+ *      Please refer to LICENSE file for licensing information.
+*/
+
 
 #ifndef NRF24L01_H_
 #define NRF24L01_H_

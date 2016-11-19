@@ -2,9 +2,21 @@
  * NRF24L01.cpp
  *
  *  Created on: Nov 14, 2016
- *      Author: matthias
- */
-
+ *      Author: Matthias Minx
+ *
+ * 	based on the Code of:
+ *
+ * nrf24l01 lib 0x02
+ * copyright (c) Davide Gironi, 2012
+ * References:
+ *   -  This library is based upon nRF24L01 avr lib by Stefan Engelke
+ *      http://www.tinkerer.eu/AVRLib/nRF24L01
+ *   -  and arduino library 2011 by J. Coliz
+ *      http://maniacbug.github.com/RF24
+ *
+ *      Released under GPLv3.
+ *      Please refer to LICENSE file for licensing information.
+*/
 #include "NRF24L01.h"
 #include "NRF24L01registers.h"
 
@@ -136,31 +148,24 @@ void NRF24L01::Init(){
 		*NRF24L01_DDR |= (1<<NRF24L01_CE); //output
 
 
-	//	u.writeString("Ports done\r\n");
 
-	 //   spi.Init(); //init spi
+	 //   init spi
 	    spi.Init();
-	//   u.writeString("spi done\r\n");
+
 
 	    CE_LOW(); //low CE
 	    CSN_HIGH(); //high CSN
 
 
-
 	    _delay_ms(5); //wait for the radio to init
 
-	//    u.writeString("radio init done\r\n");
 
 	    SetPowerLevel(); //set power level
 
-	 //   u.writeString("power done\r\n");
-
 	    SetDataRate(); //set data rate
 
-	 //   u.writeString("data rate done\r\n");
 	    SetCRClength(); //set crc length
 
-	 //  u.writeString("crc done\r\n");
 
 	    WriteRegister(NRF24L01_REG_SETUP_RETR, NRF24L01_RETR); // set retries
 	    WriteRegister(NRF24L01_REG_DYNPD, 0x03); //enable dynamic payloads
