@@ -67,7 +67,7 @@ class DS18B20 {
 
 public:
 
-	USART u;
+// USART u;
 
 
 	void ReadMeasurement( char* string );

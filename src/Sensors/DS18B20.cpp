@@ -31,7 +31,7 @@ DS18B20::DS18B20() {
 
 
 
-	u = USART();
+//u = USART();
 
 
 }
@@ -49,7 +49,7 @@ DS18B20::DS18B20(volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volati
 
 	WIRE_DQ  = Wire_DQ;
 
-	u = USART();
+	// u = USART();
 
 
 

@@ -50,7 +50,9 @@ void USART::initUART(void){
 	TX_START();
 	RX_START();
 
-	//RX_INTEN();
+	RX_INTEN();
+
+
 
 	// Set frame format = 8-N-1
 	UCSR0C = (_DATA << UCSZ00);
@@ -103,13 +105,41 @@ const char* USART::readString(void){
 	static char* temp;
 	temp = rxstr;
 
-	while((*temp = getByte()) != '\n'){
+	uint8_t num = 0;
+	while(((*temp = getByte()) != '\n') && (num<RX_BUFF-2)){
 
 		++temp;
+		num++;
 	}
 
 	return rxstr;
 }
+void USART::readString(char myString[],uint8_t maxLength){
+
+	char response;
+	uint8_t i;
+
+	i = 0;
+	while(i<(maxLength-1)){
+
+		response = getByte();
+		putByte(response);
+		if(response=='\r'){
+			break;
+		}else{
+			myString[i] = response;
+			i++;
+		}
+
+
+	}
+	myString[i]=0;
+
+
+
+}
+
+
 
 void USART::readString(char* string){
 

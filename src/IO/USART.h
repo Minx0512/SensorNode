@@ -29,13 +29,14 @@
 #define TX_INTDIS()		UCSR0B &= ~_BV(TXCIE0)	// Disable TX interrupt
 
 
+
 #define	FOSC			16000000UL
 /* Settings */
 //#define _BAUD			9600					// Baud rate (9600 is default)
 #define _DATA			0x03					// Number of data bits in frame = byte tranmission
 //#define _UBRR			(FOSC/16)/_BAUD - 1		// Used for UBRRL and UBRRH
 
-#define RX_BUFF			8
+#define RX_BUFF			128
 
 
 
@@ -61,7 +62,9 @@ public:
 
 	void writeString(char *str);
 	const char* readString(void);
+	void readString(char myString[],uint8_t maxLength);
 	void readString(char* string);
+
 
 	void initUART(void);
 	void USART0_Flush(void);

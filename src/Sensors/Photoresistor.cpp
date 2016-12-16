@@ -8,8 +8,8 @@
 #include "Photoresistor.h"
 #include <avr/io.h>
 #include <stdio.h>
-
-
+#include <string.h>
+#include <stdlib.h>
 
 Photoresistor::Photoresistor() {
 	// TODO Auto-generated constructor stub
@@ -60,9 +60,18 @@ uint16_t Photoresistor::readADValue(){
 
 void Photoresistor::GetSensorStringXML(char* string){
 
-	uint16_t valueL = readADValue();
+	float valueL = 0;
 
-	sprintf(string,"<NSL19M51>%i</NSL19M51>\n\r",valueL);
+	for(int i=0;i<1000;i++){
+		valueL+=(float)readADValue();
+	}
+
+	valueL/=1000;
+
+	char str[10];
+	dtostrf(valueL,4,3,str);
+
+	sprintf(string,"<NSL19M51>%s</NSL19M51>\n\r",str);
 
 
 
