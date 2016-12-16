@@ -14,9 +14,13 @@ Bluetooth : 1 *10 + Name: 0 | Name: 0 | Name: eg. "MinxSensorNode01"
 Bluetooth : 1 *10 + PIN: 1 | PIN: 01234 | ""
 
 nRF24L01 : 2 *10 + Pipe: 0 | pipeID: (0-5)  1 | mac-address: e.g: "e0:f0:f0:f0:f0"
+
 nRF24L01 : 2 *10 + EnablePipe: 1 | Enable PipeID: (0-5)  1 | ""
+
 nRF24L01 : 2 *10 + Channel: 2  | ChannelID: (0-125)  10 | ""
+
 nRF24L01 : 2 *10 + PowerLvl: 3 | PwrLvlVal: (1-4)  4 | ""
+
 nRF24L01 : 2 *10 + DataRate: 4 | DataRteVal: (1-3) 2 | ""
 nRF24L01 : 2 *10 + CRCLevel: 5 | CRCLvlVal: (1-3)  3 | ""
 nRF24L01 : 2 *10 + PayloadSize: 6 | payloadSzVal: 16 | ""
