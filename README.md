@@ -2,6 +2,8 @@
 A little private project for a sensor node based on the ATmega328P.
 It is connected to a HC-06 bluetooth module and a nRF24L01+ Transceiver module for communication, a DHT22 temperatur and humidity sensor, a resistive light sensor and a motion detector. 
 
+> Code is not jet ready <
+
 Through its comm interfaces it communicates with other tiny nodes based on the ATiny85 and the Raspberry Pi which will control everything, log the data into a database and sends control commands to a WLAN light control unit.
 
 The sensor nodes Wireless addresses can be configured via the raspberry pie through a python script.
