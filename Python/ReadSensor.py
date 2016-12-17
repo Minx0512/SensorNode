@@ -1,6 +1,7 @@
 import sys
 import subprocess
 import bluetooth
+from NodeProtocol import *
 from xml.dom.minidom import parse, parseString
 
 
@@ -18,20 +19,33 @@ def handleTags(dom,tag):
   t.append(u'{0}'.format(getText(item.childNodes)).encode('utf-8'))
  return t
 
+
+def GetTempDS18B20(sock):
+ SendData(sock,'{0}\n'.format(NPGetSensorDataTempDS18B20()))
+ return ReceiveData(sock,"|end")
+
  
-def GetDHT22(sock):
- SendData(sock,'DHT22\n')
+def GetTempDHT22(sock):
+ SendData(sock,'{0}\n'.format(NPGetSensorDataTempDHT22()))
  return ReceiveData(sock,"|end")
  
- 
-def GetRemoteSensors(socks):
-  SendData(sock,'RS\n')
-  return ReceiveData(sock,"|end")
+def GetHumidityDHT22(sock):
+ SendData(sock,'{0}\n'.format(NPGetSensorDataHumidityDHT22()))
+ return ReceiveData(sock,"|end") 
+def GetLightsense(sock):
+ SendData(sock,'{0}\n'.format(NPGetSensorDataLightsense()))
+ return ReceiveData(sock,"|end")
 
 def GetMovement(sock):
- SendData(sock,'Move\n')
+ SendData(sock,'{0}\n'.format(NPGetSensorDataMove()))
  return ReceiveData(sock,"|end")
-  
+ 
+def GetRemoteSensors(socks):
+  SendData(sock,'{0}\n'.format(NPGetSensorDataRemote()))
+  return ReceiveData(sock,"|end")
+ 
+##########################################################################  
+
 def Move(moveStr):
  dom = parseString(moveStr)
  return '{0}'.format(handleTags(dom,'mv')[0]).encode('utf-8')

@@ -8,13 +8,13 @@ Through its comm interfaces it communicates with other tiny nodes based on the A
 
 The sensor nodes Wireless addresses can be configured via the raspberry pie through a python script.
 
-Configure protokoll for SensorNode via Python command:
+Configure protocol for SensorNode via Python command:
 
 command id (CmdID) + command property (cmdP) | property id (PID/PVal) | property string (pString)
 
 Bluetooth : 1 *10 + Name: 0 | Name: 0 | Name: eg. "MinxSensorNode01"
 
-Bluetooth : 1 *10 + PIN: 1 | PIN: 01234 | ""
+Bluetooth : 1 *10 + PIN: 1 | PIN: 01234 | "01234"
 
 nRF24L01 : 2 *10 + Pipe: 0 | pipeID: (0-5)  1 | mac-address: e.g: "e0:f0:f0:f0:f0"
 

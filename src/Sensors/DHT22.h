@@ -23,21 +23,22 @@
 #define us(num) (num/(LOOP_CYCLES*(1/(FOSC/1000000.0))))
 
 /* Utils */
+/*
 #define AM2302_PIN_INPUT_MODE() AM2302_WIRE_DDR&=~(1<<AM2302_WIRE_DQ)
 #define AM2302_PIN_OUTPUT_MODE() AM2302_WIRE_DDR|=(1<<AM2302_WIRE_DQ)
 #define AM2302_PIN_LOW() AM2302_WIRE_PORT&=~(1<<AM2302_WIRE_DQ)
 #define AM2302_PIN_HIGH() AM2302_WIRE_PORT|=(1<<AM2302_WIRE_DQ)
 #define AM2302_HIGH_INPUT() AM2302_WIRE_PIN & (1<<AM2302_WIRE_DQ)
 
-
+*/
 
 
 class DHT22 {
 
 /* Thermometer Connections (At your choice) */
-	uint8_t AM2302_WIRE_PORT;
-	uint8_t AM2302_WIRE_DDR;
-	uint8_t AM2302_WIRE_PIN;
+	volatile uint8_t* AM2302_WIRE_PORT;
+	volatile uint8_t* AM2302_WIRE_DDR;
+	volatile uint8_t* AM2302_WIRE_PIN;
 	uint8_t AM2302_WIRE_DQ;
 
 	uint8_t TIMEOUT;
@@ -47,7 +48,7 @@ class DHT22 {
 public:
 
 	DHT22();
-	DHT22(uint8_t Wire_PORT,uint8_t Wire_DDR, uint8_t Wire_PIN,uint8_t Wire_DQ);
+	DHT22(volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volatile uint8_t &Wire_PIN,uint8_t Wire_DQ);
 
 
 	int8_t GetTemperatureHumidity(float *temperature, float *humidity);
@@ -55,6 +56,9 @@ public:
 	int8_t GetTemperature(float *temperature);
 
 	int8_t GetHumidity(float *humidity);
+	void GetSensorStringXML(char* string);
+	void GetSensorTemperatureStringXML(char* string);
+	void GetSensorHumidityStringXML(char* string);
 
 
 private:
@@ -65,6 +69,14 @@ private:
 	void Reset();
 	uint8_t SendRequest(uint8_t bit);
 	int8_t GetData(float *temperature, float *humidity);
+
+	void AM2302_PIN_INPUT_MODE(){ *AM2302_WIRE_DDR&=~(1<<AM2302_WIRE_DQ);}
+	void AM2302_PIN_OUTPUT_MODE(){ *AM2302_WIRE_DDR|=(1<<AM2302_WIRE_DQ);}
+	void AM2302_PIN_LOW(){ *AM2302_WIRE_PORT&=~(1<<AM2302_WIRE_DQ);}
+	void AM2302_PIN_HIGH(){ *AM2302_WIRE_PORT|=(1<<AM2302_WIRE_DQ);}
+	bool AM2302_HIGH_INPUT(){ return (*AM2302_WIRE_PIN & (1<<AM2302_WIRE_DQ));}
+
+
 
 };
 

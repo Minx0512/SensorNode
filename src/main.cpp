@@ -16,7 +16,7 @@
 #include "IO/USART.h"
 
 #include "IO/ParseStrings.h"
-
+#include "Sensors/DHT22.h"
 #include "Sensors/DS18B20.h"
 #include "Sensors/Photoresistor.h"
 
@@ -47,6 +47,8 @@ USART uart = USART(9600);
 char str[RX_BUFF];
 
 DS18B20 ds = DS18B20(PORTD,DDRD,PIND, PD7);
+DHT22 dht22 = DHT22(PORTD,DDRD,PIND,PD6);
+
 Photoresistor pr = Photoresistor(0x00);
 
 NRF24L01 nrf = NRF24L01(DDRB, PORTD, CE, CSN);
@@ -391,21 +393,32 @@ int main(){
 
 
 					if(ps.getCmdProperty()==0){ // TempDHT22
-
+						char dh[50];
+						dht22.GetSensorTemperatureStringXML(dh);
+						strcat(buffer,dh);
 
 
 					}else if(ps.getCmdProperty()==1){ // HumidityDHT22
 
+						char dh[50];
+						dht22.GetSensorHumidityStringXML(dh);
+						strcat(buffer,dh);
 
 
+					}else if(ps.getCmdProperty()==2){ // TempHumidityDHT22
 
-					}else if(ps.getCmdProperty()==2){ //Lightsense
+						char dh[50];
+						dht22.GetSensorStringXML(dh);
+						strcat(buffer,dh);
+
+
+					}else if(ps.getCmdProperty()==3){ //Lightsense
 
 						char prbuffer[50];
 						pr.GetSensorStringXML(prbuffer);
 						strcat(buffer,prbuffer);
 
-					}else if(ps.getCmdProperty()==3){ //TempDS18B20
+					}else if(ps.getCmdProperty()==4){ //TempDS18B20
 
 						char dsb[50];
 						ds.GetSensorStringXML(dsb);
@@ -413,7 +426,7 @@ int main(){
 
 
 
-					}else if(ps.getCmdProperty()==4){ //Movement
+					}else if(ps.getCmdProperty()==5){ //Movement
 
 						if(flag1){
 							strcat(buffer,"<mv>1</mv>\r\n");
@@ -423,6 +436,8 @@ int main(){
 						}
 
 
+
+					}else if(ps.getCmdProperty()==6){ // Remote Sensors
 
 					}
 
@@ -436,6 +451,7 @@ int main(){
 					uart.writeString(buffer);
 					sprintf(str," ");
 					sprintf(buffer,"");
+				//	sprintf(buffer,"|end");
 					uart.writeString(buffer);
 
 					flag2 = 0;

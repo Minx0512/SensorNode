@@ -18,10 +18,10 @@ DHT22::DHT22() {
 
 
 	// PORTD , DDRD , PIND , PD7
-	AM2302_WIRE_PORT = PORTD;
-	AM2302_WIRE_DDR = DDRD;
-	AM2302_WIRE_PIN = PIND;
-	AM2302_WIRE_DQ = PD7;
+	AM2302_WIRE_PORT = &PORTB;
+	AM2302_WIRE_DDR = &DDRB;
+	AM2302_WIRE_PIN = &PINB;
+	AM2302_WIRE_DQ = PB0;
 	TIMEOUT=200;
 
 
@@ -29,14 +29,14 @@ DHT22::DHT22() {
 }
 
 
-DHT22::DHT22(uint8_t Wire_PORT,uint8_t Wire_DDR, uint8_t Wire_PIN,uint8_t Wire_DQ){
+DHT22::DHT22(volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volatile uint8_t &Wire_PIN,uint8_t Wire_DQ){
 
 	/* Thermometer Connections (At your choice) */
 	// PORTD , DDRD , PIND , PD7
 
-	AM2302_WIRE_PORT = Wire_PORT;
-	AM2302_WIRE_DDR = Wire_DDR;
-	AM2302_WIRE_PIN = Wire_PIN;
+	AM2302_WIRE_PORT = &Wire_PORT;
+	AM2302_WIRE_DDR = &Wire_DDR;
+	AM2302_WIRE_PIN = &Wire_PIN;
 	AM2302_WIRE_DQ = Wire_DQ;
 
 	TIMEOUT=200;
@@ -162,6 +162,51 @@ int8_t DHT22::GetData(float *temperature, float *humidity){
 
 		return -1;
 
+
+
+
+}
+void DHT22::GetSensorStringXML(char* string){
+
+	float temp = 0;
+	float humidity = 0;
+	char tempBuff[20];
+	char humBuff[20];
+	GetTemperatureHumidity(&temp,&humidity);
+	dtostrf(temp,3,1,tempBuff);
+	dtostrf(humidity,3,1,humBuff);
+
+	sprintf(string,"<DHT22><T unit='°C'>%s</T><H unit='%%RH'>%s</H></DHT22>\r\n",tempBuff,humBuff);
+
+
+}
+void DHT22::GetSensorTemperatureStringXML(char* string){
+	float temp = 0;
+	float humidity = 0;
+	char tempBuff[5];
+
+	GetTemperatureHumidity(&temp,&humidity);
+	dtostrf(temp,3,1,tempBuff);
+
+
+	sprintf(string,"<DHT22><T unit='°C'>%s</T></DHT22>\r\n",tempBuff);
+
+
+
+
+}
+
+void DHT22::GetSensorHumidityStringXML(char* string){
+
+	float temp = 0;
+	float humidity = 0;
+
+	char humBuff[5];
+	GetTemperatureHumidity(&temp,&humidity);
+
+	dtostrf(humidity,3,1,humBuff);
+
+	sprintf(string,"<DHT22><H unit='%%RH'>%s</H></DHT22>\r\n",humBuff);
 
 
 

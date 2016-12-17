@@ -18,33 +18,31 @@ if val is not scriptname:
     print val
 
 
-
 sensorData= ReadSensorData("98:D3:31:FB:31:A6",send_str)
 print sensorData
 
 if val == 'DHT22':
  dht = re.findall("<DHT22><T unit='(.*)'>(.*)</T><H unit='(.*)'>(.*)</H></DHT22>",sensorData)
 
- for d in dht:
-  print "DHT22: T:",d[1],d[0]
-  print "DHT22: H:",d[3],d[2]
+ for d in dht:  
+  print "DHT22: T: {0}{1}\nDHT22: H: {2}{3}".format(d[1],d[0],d[3],d[2])
   
 elif val =='Light':
  try:
   l=re.findall("<NSL19M51>(.*)</NSL19M51>",sensorData)
   pr=int(l[0])
-  print "L:",pr
+  print "L: {0}".format(pr)
  except Error as e:
   print "{0}".format(e)
 elif val=='RS':
  rss = re.findall("<RS>(.*)</RS>", sensorData)
  
  for rs in rss:
-  print "RS:",rs[0]
+  print "RS: {0}".format(rs[0])
 
 elif val=='Move':
  mvs = re.findall("<mv>(.*)</mv>", sensorData)
  m=int(mvs[0])
- print "mv:", m
+ print "mv: {0}".format(m)
    
     

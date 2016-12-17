@@ -4,6 +4,7 @@ import sys
 from BluetoothConn import *
 from time import *
 from ReadSensor import *
+from NodeProtocol import *
 
 
 def isNightTime():
@@ -37,23 +38,24 @@ except IOError as e:
 prevmins = 0
 thresh = 500
 treshOut = 500
-tempHum= ''
+humDHT22= ''
+tempDHT22=''
 
-while True:
+while True and conn==1:
 
  mins = strftime("%M", gmtime())
  light = ''
  remoteSensors = ''
  move = Move(GetMovement(sock))
- # print move
- SendData(sock,'Light\n')
- light = LightsInside(ReceiveData(sock,"|end"))
+ # print move 
+ light = LightsInside(GetLightsense(sock))
  
  if mins != prevmins: 
   if mins==0:
    # get temp and humidity   
-   tempHum = GetDHT22(sock)
-   remoteSensors = GetRemoteSensors(socks)   
+   tempDHT22 = '' # GetTempDHT22(sock)
+ #  humDHT22 = GetHumidityDHT22(sock)
+ #  remoteSensors = GetRemoteSensors(socks)   
   elif mins%1 == 0 and mins > 0:   
    remoteSensors = GetRemoteSensors(socks)
   prevmins = mins
