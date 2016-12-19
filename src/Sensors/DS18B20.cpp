@@ -14,7 +14,7 @@
 #include <ctype.h>
 #include <string.h>
 
-#include "../IO/USART.h"
+//#include "../IO/USART.h"
 
 
 DS18B20::DS18B20() {

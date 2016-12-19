@@ -14,7 +14,7 @@
 #include <ctype.h>
 #include <inttypes.h>
 
-#include "../IO/USART.h"
+//#include "../IO/USART.h"
 
 
 #ifndef FOSC

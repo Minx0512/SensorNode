@@ -12,6 +12,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <avr/eeprom.h>
+
+//#include <avr/wdt.h>
 
 #include "IO/USART.h"
 
@@ -32,22 +35,31 @@
 
 uint8_t flag1 = 0;
 
-uint8_t a0[5] = {0xe0, 0xf0, 0xf0, 0xf0, 0xf0};
-uint8_t a1[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xc0};
-uint8_t a2[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xc1};
-uint8_t a3[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xc2};
-uint8_t a4[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xc3};
-uint8_t a5[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xc4};
-uint8_t aT[5] =	{0xe0, 0xf0, 0xf0, 0xf0, 0xf0};
 
-//char* bt_name = "MinxSensorNode";
+uint8_t firstrun EEMEM;
+
+char btName[21] EEMEM;
+
+//uint8_t pipeEnable EEMEM;
+uint8_t nrfChannel EEMEM;
+uint8_t nrfACK EEMEM;
+
+
+uint8_t nRFPipe0[5] EEMEM;
+uint8_t nRFPipe1[5] EEMEM;
+uint8_t nRFPipe2[5] EEMEM;
+uint8_t nRFPipe3[5] EEMEM;
+uint8_t nRFPipe4[5] EEMEM;
+uint8_t nRFPipe5[5] EEMEM;
+
+
 
 USART uart = USART(9600);
 
 char str[RX_BUFF];
 
-DS18B20 ds = DS18B20(PORTD,DDRD,PIND, PD7);
-DHT22 dht22 = DHT22(PORTD,DDRD,PIND,PD6);
+DS18B20 ds = DS18B20(PORTD,DDRD,PIND, PD6);
+DHT22 dht22 = DHT22(PORTD,DDRD,PIND,PD7);
 
 Photoresistor pr = Photoresistor(0x00);
 
@@ -72,19 +84,101 @@ void CpyMAC(uint8_t* src, uint8_t* dest, uint8_t len){
 
 
 }
+/*
+void SetupBT(){
 
+	// Bluetooth
+	uint8_t fr =eeprom_read_byte(&firstrun);
+
+	char btname[] = "MinxSensorNode";
+
+	if(fr == 0){
+		// after chip erase
+
+		eeprom_write_block(btname,btName,sizeof(btname));
+
+	}else if(fr==1){
+
+		eeprom_read_block(btname,btName,sizeof(btname));
+
+
+	}
+
+}
+*/
 
 void SetupNRF(){
 
+	// standard mac addresses
+	uint8_t  stdMACpipe0[] = {0xe0, 0xf0, 0xf0, 0xf0, 0xf0};
+	uint8_t  stdMACpipe1[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc0};
+	uint8_t  stdMACpipe2[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc1};
+	uint8_t  stdMACpipe3[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc2};
+	uint8_t  stdMACpipe4[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc3};
+	uint8_t  stdMACpipe5[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc4};
 
 
-//	uart.writeString("Set addresses\r\n");
-	nrf.SetAddresses(a0,a1,a2,a3,a4,a5,aT);
+	uint8_t nrfChn = 0x0A;
+	uint8_t nrfAutoACK = 1;
+	//uint8_t nrfPipesEnable = 0b00111111;
 
 
 
-	//	uart.writeString("Set Channel to 10\r\n");
-		nrf.SetChannel(10);
+	uint8_t fr =eeprom_read_byte(&firstrun);
+
+	if(fr == 0){
+		// empty eeprom after chip erase
+
+		// nRF config
+		eeprom_update_block(stdMACpipe0,nRFPipe0,sizeof(nRFPipe0));
+		eeprom_update_block(stdMACpipe1,nRFPipe1,sizeof(nRFPipe1));
+		eeprom_update_block(stdMACpipe2,nRFPipe2,sizeof(nRFPipe2));
+		eeprom_update_block(stdMACpipe3,nRFPipe3,sizeof(nRFPipe3));
+		eeprom_update_block(stdMACpipe4,nRFPipe4,sizeof(nRFPipe4));
+		eeprom_update_block(stdMACpipe5,nRFPipe5,sizeof(nRFPipe5));
+
+		eeprom_write_byte(&firstrun,1);
+
+		eeprom_write_byte(&nrfACK,nrfAutoACK);
+		eeprom_write_byte(&nrfChannel,nrfChn);
+	//	eeprom_write_byte(&pipeEnable,nrfPipesEnable);
+
+
+	}else if(fr==1){
+		// after restart
+
+		// read nRF config
+		eeprom_read_block (stdMACpipe0, nRFPipe0, sizeof(nRFPipe0));
+		eeprom_read_block (stdMACpipe1, nRFPipe1, sizeof(nRFPipe1));
+		eeprom_read_block (stdMACpipe2, nRFPipe2, sizeof(nRFPipe2));
+		eeprom_read_block (stdMACpipe3, nRFPipe3, sizeof(nRFPipe3));
+		eeprom_read_block (stdMACpipe4, nRFPipe4, sizeof(nRFPipe4));
+		eeprom_read_block (stdMACpipe5, nRFPipe5, sizeof(nRFPipe5));
+
+		nrfChn = eeprom_read_byte(&nrfChannel);
+		nrfAutoACK = eeprom_read_byte(&nrfACK);
+	//	nrfPipesEnable = eeprom_read_byte(&pipeEnable);
+
+
+
+
+	}
+	//	char tr[50];
+	//	sprintf(tr,"FR: %i - MAC: %02X:%02X:%02X:%02X:%02X\r\n",fr,stdMACpipe1[0],stdMACpipe1[1],stdMACpipe1[2],stdMACpipe1[3],stdMACpipe1[4]);
+	//	uart.writeString(tr);
+
+
+	nrf.SetAddressPipe0(stdMACpipe0);
+	nrf.SetAddressPipe1(stdMACpipe1);
+	nrf.SetAddressPipe2(stdMACpipe2);
+	nrf.SetAddressPipe3(stdMACpipe3);
+	nrf.SetAddressPipe4(stdMACpipe4);
+	nrf.SetAddressPipe5(stdMACpipe5);
+	nrf.SetAddressPipeT(stdMACpipe0);
+
+//	nrf.SetAutoAck(nrfAutoACK);
+	nrf.SetChannel(nrfChn);
+
 
 	//	uart.writeString("Init... ");
 
@@ -96,64 +190,6 @@ void SetupNRF(){
 
 }
 
-void SetBluetoothName(char* name){
-
-//	bt_name = name;
-
-}
-
-void Config(const char* str){
-
-
-
-
-
-}
-
-/*
-void SetNRFMac(uint8_t pipe,uint8_t* add){
-
-	switch(pipe){
-		case 0: for(int j=0;j<5;j++){a0[j] = add[j];aT[j] = add[j];}
-			break;
-		case 1: for(int j=0;j<5;j++){a1[j] = add[j];}
-			break;
-		case 2:for(int j=0;j<5;j++){a2[j] = add[j];}
-			break;
-		case 3:for(int j=0;j<5;j++){a3[j] = add[j];}
-			break;
-		case 4:for(int j=0;j<5;j++){a4[j] = add[j];}
-			break;
-		case 5:for(int j=0;j<5;j++){a5[j] = add[j];}
-			break;
-		default:
-			break;
-
-	}
-
-
-
-
-}
-*/
-
-
-
-void GetSensorData(){
-
-	PORTD ^= (1<<PD4);
-	//uart.writeString("Hi bro\n\r");
-
-	char dsbuffer[255];
-	char prbuffer[255];
-	//	ds.therm_read_DS18B20(dsbuffer);
-	ds.GetSensorStringXML(dsbuffer);
-	pr.GetSensorStringXML(prbuffer);
-	uart.writeString(dsbuffer);
-	uart.writeString(prbuffer);
-
-
-}
 
 
 void init_interupt(){
@@ -179,7 +215,7 @@ ISR(INT0_vect){
 	PORTD ^= (1<<PD4);
 	// nrf receive
 
-	//uart.writeString("Hi bro_0\n\r");
+
 }
 
 ISR(INT1_vect){
@@ -262,18 +298,23 @@ int main(){
 	delay_ms(500);
 	PORTD ^= (1<<PD4);
 
-	char* string = "\r\n########### START #############\r\n";
-	uart.writeString(string);
+	char buffer[500];
 
+	sprintf(buffer,"\r\n########### START #############\r\n");
+
+	uart.writeString(buffer);
+
+	sprintf(buffer, " ");
 
 	SetupNRF();
 	delay_ms(500);
 
 
-	char s[50];
-	nrf.PrintInfo(s);
-	uart.writeString(s);
+	//char s[50];
+	nrf.PrintInfo(buffer);
+	uart.writeString(buffer);
 
+	sprintf(buffer,"");
 
 
 		while(1){
@@ -282,9 +323,9 @@ int main(){
 
 			delay_ms(500);
 
-			if(flag2 !=0){
+			if(flag2){
 
-				char buffer[500];
+				//char buffer[500];
 
 //				uart.writeString("String: ");
 //				uart.writeString(str);
@@ -295,7 +336,11 @@ int main(){
 			//	ps.PrintVars(buffer);
 
 
+
+
+
 				if(ps.getCmdID()==1){ // configure Bluetooth
+
 
 
 
@@ -308,13 +353,17 @@ int main(){
 
 						ps.ParseMAC();
 
-						uint8_t *addr;
-						addr = ps.getMAC();
+						uint8_t addr[5];
+						ps.getMAC(addr);
 
 						if(ps.getPropertyID()==0){ // pipe 0 and T
 
-							CpyMAC(addr,a0,5);
-							CpyMAC(addr,aT,5);
+							eeprom_write_block(addr,nRFPipe0,sizeof(addr));
+
+							nrf.SetAddressPipe0(addr);
+							nrf.SetAddressPipeT(addr);
+							//CpyMAC(addr,a0,5);
+							//CpyMAC(addr,aT,5);
 
 //							char sb[50];
 //							sprintf(sb," ");
@@ -325,23 +374,32 @@ int main(){
 
 						}else if(ps.getPropertyID()==1){ // pipe 1
 
-							CpyMAC(addr,a1,5);
+							eeprom_write_block(addr,nRFPipe1,sizeof(addr));
+
+						//	strcat(buffer,"wrote block\r\n");
+
+							nrf.SetAddressPipe1(addr);
+							//CpyMAC(addr,a1,5);
 
 						}else if(ps.getPropertyID()==2){ // pipe 2
-
-							CpyMAC(addr,a2,5);
+							eeprom_update_block(addr,nRFPipe2,sizeof(addr));
+							nrf.SetAddressPipe2(addr);
+						//	CpyMAC(addr,a2,5);
 
 						}else if(ps.getPropertyID()==3){ // pipe 3
-
-							CpyMAC(addr,a3,5);
+							eeprom_update_block(addr,nRFPipe3,sizeof(addr));
+							nrf.SetAddressPipe3(addr);
+							//CpyMAC(addr,a3,5);
 
 						}else if(ps.getPropertyID()==4){ // pipe 4
-
-							CpyMAC(addr,a4,5);
+							eeprom_update_block(addr,nRFPipe4,sizeof(addr));
+							nrf.SetAddressPipe4(addr);
+						//	CpyMAC(addr,a4,5);
 
 						}else if(ps.getPropertyID()==5){ // pipe 5
-
-							CpyMAC(addr,a5,5);
+							eeprom_update_block(addr,nRFPipe5,sizeof(addr));
+							nrf.SetAddressPipe5(addr);
+							//CpyMAC(addr,a5,5);
 
 						}
 
@@ -352,10 +410,18 @@ int main(){
 
 					}else if(ps.getCmdProperty()==1){ // Enable pipe
 
+
+					//	uint8_t c = 0b00111111;
+
+					//	eeprom_update_byte(&pipeEnable,c);
+
+
 						nrf.EnablePipe(ps.getPropertyID());
 
 
 					}else if(ps.getCmdProperty()==2){ // Channel
+
+						eeprom_update_byte(&nrfChannel,ps.getPropertyID());
 
 						nrf.SetChannel(ps.getPropertyID());
 
@@ -377,12 +443,18 @@ int main(){
 
 					}else if(ps.getCmdProperty()==7){ // Auto ACK
 
+						eeprom_update_byte(&nrfACK,ps.getPropertyID());
+
 						nrf.SetAutoAck(ps.getPropertyID());
 
-					}else if(ps.getCmdProperty()==8){ // ReInitNRF
+					}else if(ps.getCmdProperty()==8){ // Reset
 
-						nrf.SetAddresses(a0,a1,a2,a3,a4,a5,aT);
-						nrf.Init();
+						//nrf.SetAddresses(a0,a1,a2,a3,a4,a5,aT);
+						//nrf.Init();
+						eeprom_write_byte(&firstrun,0);
+
+
+
 
 					}
 
@@ -447,12 +519,13 @@ int main(){
 
 
 
+				strcat(buffer,"|end\r\n");
+				uart.writeString(buffer);
+				sprintf(buffer,"\r");
+				sprintf(str," ");
 
-					uart.writeString(buffer);
-					sprintf(str," ");
-					sprintf(buffer,"");
-				//	sprintf(buffer,"|end");
-					uart.writeString(buffer);
+
+					//uart.writeString(buffer);
 
 					flag2 = 0;
 
@@ -463,8 +536,8 @@ int main(){
 			if(flag1){
 
 
-
-				uart.writeString("<mv>1</mv>\r\n");
+				//strcat(buffer,"<mv>1</mv>|end\r\n");
+				uart.writeString("<mv>1</mv>|end\r\n");
 
 
 				flag1=0;

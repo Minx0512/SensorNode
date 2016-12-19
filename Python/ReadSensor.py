@@ -1,6 +1,7 @@
 import sys
 import subprocess
 import bluetooth
+import time
 from NodeProtocol import *
 from xml.dom.minidom import parse, parseString
 
@@ -67,11 +68,22 @@ def LightsInside(lightStr):
  return '{0}'.format(handleTags(dom,'NSL19M51')[0]).encode('utf-8')
 
 def LightsOn():
- subprocess.call(['./Lights.sh c 0 on'], shell=1)
+ t = time.strftime("%H:%M %p",time.localtime())
+ st = subprocess.check_output(['./Lights.sh c 0 on'],shell=True)   
+ print "{0} : {1}".format(t,st.rstrip())
  
 def LightsOff():
- subprocess.call(['./Lights.sh c 0 off'], shell=1)
+ t = time.strftime("%H:%M %p",time.localtime())
+ st = subprocess.check_output(['./Lights.sh c 0 off'],shell=True)   
+ print "{0} : {1}".format(t,st.rstrip())
+ 
 def SetLightColor(color):
- subprocess.call('./Lights.sh c 0 c %s' % color, shell=1)
+ t = time.strftime("%H:%M %p",time.localtime())
+ st = subprocess.check_output('./Lights.sh c 0 c %s' % color, shell=1)
+ print "{0} : {1}".format(t,st.rstrip())
 def SetBrightnes(level):
- subprocess.call('./Lights.sh c 0 B %s' % level, shell=1)
+ t = time.strftime("%H:%M %p",time.localtime())
+ st = subprocess.check_output('./Lights.sh c 0 B %s' % level, shell=1)
+ print "{0} : {1}".format(t,st.rstrip())
+ 
+ 

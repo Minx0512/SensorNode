@@ -120,6 +120,26 @@ public:
 	uint8_t Write(uint8_t *data);
 
 	void SetAddresses(uint8_t* pipe0,uint8_t* pipe1,uint8_t* pipe2,uint8_t* pipe3,uint8_t* pipe4,uint8_t* pipe5,uint8_t* pipeT);
+	void SetAddress(uint8_t* pipe0,uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4);
+
+	void SetAddressPipe0(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4);
+	void SetAddressPipe1(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4);
+	void SetAddressPipe2(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4);
+	void SetAddressPipe3(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4);
+	void SetAddressPipe4(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4);
+	void SetAddressPipe5(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4);
+	void SetAddressPipeT(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4);
+
+
+	void SetAddressPipe0(uint8_t* addr);
+	void SetAddressPipe1(uint8_t* addr);
+	void SetAddressPipe2(uint8_t* addr);
+	void SetAddressPipe3(uint8_t* addr);
+	void SetAddressPipe4(uint8_t* addr);
+	void SetAddressPipe5(uint8_t* addr);
+	void SetAddressPipeT(uint8_t* addr);
+
+
 
 	void SetChannel(uint8_t channel);
 	void SetPayloadSize(uint8_t payload);

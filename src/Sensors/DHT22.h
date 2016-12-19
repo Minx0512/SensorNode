@@ -22,15 +22,6 @@
 #define LOOP_CYCLES  8  //Number of cycles that the loop takes
 #define us(num) (num/(LOOP_CYCLES*(1/(FOSC/1000000.0))))
 
-/* Utils */
-/*
-#define AM2302_PIN_INPUT_MODE() AM2302_WIRE_DDR&=~(1<<AM2302_WIRE_DQ)
-#define AM2302_PIN_OUTPUT_MODE() AM2302_WIRE_DDR|=(1<<AM2302_WIRE_DQ)
-#define AM2302_PIN_LOW() AM2302_WIRE_PORT&=~(1<<AM2302_WIRE_DQ)
-#define AM2302_PIN_HIGH() AM2302_WIRE_PORT|=(1<<AM2302_WIRE_DQ)
-#define AM2302_HIGH_INPUT() AM2302_WIRE_PIN & (1<<AM2302_WIRE_DQ)
-
-*/
 
 
 class DHT22 {

@@ -31,8 +31,8 @@ def NPSetNRFPayLoadSize(payloadsze):
 def NPSetNRFAutoACK(endisack):
     # endisack: 0/1
     return '27|{0}|ACK'.format(endisack)
-def NPSetNRFInitModule():
-    return '28|0|Init'
+def NPSetNRFResetModule():
+    return '28|0|Reset'
 def NPGetSensorDataTempDHT22():
     return '30|0|TmpDHT22'
 def NPGetSensorDataHumidityDHT22():

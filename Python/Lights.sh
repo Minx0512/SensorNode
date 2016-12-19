@@ -11,7 +11,7 @@ fi
 # Config
 ##########
 # Wifi controller information
-ipaddress="192.168.178.40"
+ipaddress="192.168.178.32"
 portnum="8899"
 
 ##########

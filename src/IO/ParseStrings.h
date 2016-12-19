@@ -31,6 +31,7 @@ public:
 	void ParseMAC();
 
 	uint8_t * getMAC();
+	uint8_t getMAC(uint8_t* a);
 	void getPropertyString(char *propString);
 
 	uint8_t getCmdID();

@@ -91,6 +91,16 @@ return addr;
 
 }
 
+uint8_t ParseStrings::getMAC(uint8_t* a){
+
+	for(uint8_t i=0;i<5;i++){
+		a[i]=addr[i];
+	}
+
+	return 0;
+
+}
+
 uint8_t ParseStrings::getCmdID(){
 	return cmdID;
 

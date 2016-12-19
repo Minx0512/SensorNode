@@ -64,7 +64,17 @@ NRF24L01::NRF24L01() {
 
 
 
-	uint8_t a0[5] = { 0xe0, 0xf0, 0xf0, 0xf0, 0xf0 };
+	//uint8_t a0[5] = { 0xe0, 0xf0, 0xf0, 0xf0, 0xf0 };
+
+	SetAddress(nrf24l01_addr0,0xe0, 0xf0, 0xf0, 0xf0, 0xf0);
+	SetAddress(nrf24l01_addr1,0xe1, 0xf0, 0xf0, 0xf0, 0xe0);
+	SetAddress(nrf24l01_addr2,0xe1, 0xf0, 0xf0, 0xf0, 0xe1);
+	SetAddress(nrf24l01_addr3,0xe1, 0xf0, 0xf0, 0xf0, 0xe2);
+	SetAddress(nrf24l01_addr4,0xe1, 0xf0, 0xf0, 0xf0, 0xe3);
+	SetAddress(nrf24l01_addr5,0xe1, 0xf0, 0xf0, 0xf0, 0xe4);
+	SetAddress(nrf24l01_addrtx,0xe0, 0xf0, 0xf0, 0xf0, 0xf0);
+
+/*
 	uint8_t a1[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe0};
 	uint8_t a2[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe1};
 	uint8_t a3[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe2};
@@ -73,7 +83,7 @@ NRF24L01::NRF24L01() {
 	uint8_t aT[5] =	{0xe0, 0xf0, 0xf0, 0xf0, 0xf0};
 
 	SetAddresses(a0,a1,a2,a3,a4,a5,aT);
-
+*/
 
 	//power setup
 	SetPowerLevel(NRF24L01_RF24_PA_MAX);
@@ -316,6 +326,111 @@ void NRF24L01::SetAddresses(uint8_t* pipe0, uint8_t* pipe1,uint8_t* pipe2,uint8_
 
 
 }
+
+void NRF24L01::SetAddress(uint8_t* pipe,uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
+
+	pipe[0]= p0;
+	pipe[1]= p1;
+	pipe[2]= p2;
+	pipe[3]= p3;
+	pipe[4]= p4;
+
+}
+
+
+void NRF24L01::SetAddressPipe0(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
+	nrf24l01_addr0[0]= p0;
+	nrf24l01_addr0[1]= p1;
+	nrf24l01_addr0[2]= p2;
+	nrf24l01_addr0[3]= p3;
+	nrf24l01_addr0[4]= p4;
+
+}
+void NRF24L01::SetAddressPipe1(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
+	nrf24l01_addr1[0]= p0;
+	nrf24l01_addr1[1]= p1;
+	nrf24l01_addr1[2]= p2;
+	nrf24l01_addr1[3]= p3;
+	nrf24l01_addr1[4]= p4;
+}
+void NRF24L01::SetAddressPipe2(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
+	nrf24l01_addr2[0]= p0;
+	nrf24l01_addr2[1]= p1;
+	nrf24l01_addr2[2]= p2;
+	nrf24l01_addr2[3]= p3;
+	nrf24l01_addr2[4]= p4;
+}
+void NRF24L01::SetAddressPipe3(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
+	nrf24l01_addr3[0]= p0;
+	nrf24l01_addr3[1]= p1;
+	nrf24l01_addr3[2]= p2;
+	nrf24l01_addr3[3]= p3;
+	nrf24l01_addr3[4]= p4;
+}
+void NRF24L01::SetAddressPipe4(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
+	nrf24l01_addr4[0]= p0;
+	nrf24l01_addr4[1]= p1;
+	nrf24l01_addr4[2]= p2;
+	nrf24l01_addr4[3]= p3;
+	nrf24l01_addr4[4]= p4;
+}
+void NRF24L01::SetAddressPipe5(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
+	nrf24l01_addr5[0]= p0;
+	nrf24l01_addr5[1]= p1;
+	nrf24l01_addr5[2]= p2;
+	nrf24l01_addr5[3]= p3;
+	nrf24l01_addr5[4]= p4;
+}
+void NRF24L01::SetAddressPipeT(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
+	nrf24l01_addrtx[0]= p0;
+	nrf24l01_addrtx[1]= p1;
+	nrf24l01_addrtx[2]= p2;
+	nrf24l01_addrtx[3]= p3;
+	nrf24l01_addrtx[4]= p4;
+}
+
+
+
+void NRF24L01::SetAddressPipe0(uint8_t* addr){
+	for(uint8_t i=0;i<5;i++){
+		nrf24l01_addr0[i]=addr[i];
+	}
+
+
+}
+void NRF24L01::SetAddressPipe1(uint8_t* addr){
+	for(uint8_t i=0;i<5;i++){
+		nrf24l01_addr1[i]=addr[i];
+	}
+}
+void NRF24L01::SetAddressPipe2(uint8_t* addr){
+	for(uint8_t i=0;i<5;i++){
+		nrf24l01_addr2[i]=addr[i];
+	}
+}
+void NRF24L01::SetAddressPipe3(uint8_t* addr){
+	for(uint8_t i=0;i<5;i++){
+		nrf24l01_addr3[i]=addr[i];
+	}
+}
+void NRF24L01::SetAddressPipe4(uint8_t* addr){
+	for(uint8_t i=0;i<5;i++){
+		nrf24l01_addr4[i]=addr[i];
+	}
+}
+void NRF24L01::SetAddressPipe5(uint8_t* addr){
+	for(uint8_t i=0;i<5;i++){
+		nrf24l01_addr5[i]=addr[i];
+	}
+}
+void NRF24L01::SetAddressPipeT(uint8_t* addr){
+	for(uint8_t i=0;i<5;i++){
+		nrf24l01_addrtx[i]=addr[i];
+	}
+}
+
+
+
 
 void NRF24L01::SetPowerLevel(uint8_t power){
 	NRF24L01_RF24_PA = power;
