@@ -25,7 +25,7 @@ ParseStrings::ParseStrings() {
 	cmdID=0;
 	cmdP =0;
 	PID=0;
-	sprintf(pString,"%s","");
+	sprintf(pString,"%s"," ");
 
 
 }
@@ -125,12 +125,15 @@ void ParseStrings::Parse(const char* string){
 
 //strtoken(s,delimiter,token);
 
-//	u.writeString(tmpStr);
+//	u.writeString((char*)string);
 //	u.writeString(" | ");
+///	u.writeString(tmpStr);
+//	u.writeString(" |t:  ");
 
-	  token = strtok_r(tmpStr, "|",&tmp);
+	  token = strtok_r((char*)string, "|",&tmp);
 
-	// u.writeString(token);
+//	 u.writeString(token);
+//	 u.writeString(" | ");
 	  cmdID = atoi(token)/10;
 
 	  cmdP = atoi(token)-(cmdID*10);
@@ -146,8 +149,8 @@ void ParseStrings::Parse(const char* string){
 	  while ( token ) {
 		i++;
 	    token = strtok_r(NULL, "|",&tmp);
-	//    u.writeString(token);
-	//  u.writeString(" ");
+//	    u.writeString(token);
+//	 u.writeString(" . ");
 	    if(token!=NULL){
 	    	if(i==1){
 	    		PID = atoi(token);

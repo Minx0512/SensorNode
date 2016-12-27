@@ -1,6 +1,7 @@
 import sys
 import subprocess
 import bluetooth
+from BluetoothConn import *
 import time
 from NodeProtocol import *
 from xml.dom.minidom import parse, parseString
@@ -22,28 +23,32 @@ def handleTags(dom,tag):
 
 
 def GetTempDS18B20(sock):
- SendData(sock,'{0}\n'.format(NPGetSensorDataTempDS18B20()))
- return ReceiveData(sock,"|end")
+ SendData(sock,'{0}\r\n'.format(NPGetSensorDataTempDS18B20()))
+ return ReceiveData(sock,"|+end\r\n")
 
- 
+
+def GetTempHumidDHT22(sock):
+ SendData(sock,'{0}\r\n'.format(NPGetSensorDataTempHumidityDHT22()))
+ return ReceiveData(sock,"|+end\r\n")
+  
 def GetTempDHT22(sock):
- SendData(sock,'{0}\n'.format(NPGetSensorDataTempDHT22()))
- return ReceiveData(sock,"|end")
+ SendData(sock,'{0}\r\n'.format(NPGetSensorDataTempDHT22()))
+ return ReceiveData(sock,"|+end\r\n")
  
 def GetHumidityDHT22(sock):
- SendData(sock,'{0}\n'.format(NPGetSensorDataHumidityDHT22()))
- return ReceiveData(sock,"|end") 
+ SendData(sock,'{0}\r\n'.format(NPGetSensorDataHumidityDHT22()))
+ return ReceiveData(sock,"|+end\r\n") 
 def GetLightsense(sock):
- SendData(sock,'{0}\n'.format(NPGetSensorDataLightsense()))
- return ReceiveData(sock,"|end")
+ SendData(sock,'{0}\r\n'.format(NPGetSensorDataLightsense()))
+ return ReceiveData(sock,"|+end\r\n")
 
 def GetMovement(sock):
- SendData(sock,'{0}\n'.format(NPGetSensorDataMove()))
- return ReceiveData(sock,"|end")
+ SendData(sock,'{0}\r\n'.format(NPGetSensorDataMove()))
+ return ReceiveData(sock,"|+end\r\n")
  
 def GetRemoteSensors(socks):
-  SendData(sock,'{0}\n'.format(NPGetSensorDataRemote()))
-  return ReceiveData(sock,"|end")
+  SendData(sock,'{0}\r\n'.format(NPGetSensorDataRemote()))
+  return ReceiveData(sock,"|+end\r\n")
  
 ##########################################################################  
 
@@ -67,23 +72,23 @@ def LightsInside(lightStr):
  dom = parseString(lightStr)
  return '{0}'.format(handleTags(dom,'NSL19M51')[0]).encode('utf-8')
 
-def LightsOn():
- t = time.strftime("%H:%M %p",time.localtime())
+def LightsOn(lightVal):
+ t = time.strftime("%I:%M:%S %p",time.localtime())
  st = subprocess.check_output(['./Lights.sh c 0 on'],shell=True)   
- print "{0} : {1}".format(t,st.rstrip())
+ return "{0} : {1} | {2}".format(t,st.rstrip(),lightVal)
  
-def LightsOff():
- t = time.strftime("%H:%M %p",time.localtime())
+def LightsOff(lightVal):
+ t = time.strftime("%I:%M:%S %p",time.localtime())
  st = subprocess.check_output(['./Lights.sh c 0 off'],shell=True)   
- print "{0} : {1}".format(t,st.rstrip())
+ return "{0} : {1} | {2}".format(t,st.rstrip(),lightVal)
  
 def SetLightColor(color):
- t = time.strftime("%H:%M %p",time.localtime())
+ t = time.strftime("%I:%M %p",time.localtime())
  st = subprocess.check_output('./Lights.sh c 0 c %s' % color, shell=1)
- print "{0} : {1}".format(t,st.rstrip())
+ return "{0} : {1}".format(t,st.rstrip())
 def SetBrightnes(level):
- t = time.strftime("%H:%M %p",time.localtime())
+ t = time.strftime("%I:%M %p",time.localtime())
  st = subprocess.check_output('./Lights.sh c 0 B %s' % level, shell=1)
- print "{0} : {1}".format(t,st.rstrip())
+ return "{0} : {1}".format(t,st.rstrip())
  
  

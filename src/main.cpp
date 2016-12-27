@@ -32,9 +32,12 @@
 #define CE PB1
 #define CSN PB0
 
+uint8_t sent = 0;
 
 uint8_t flag1 = 0;
+uint8_t nrfIntFlag = 0;
 
+char bufferNRF[128][5];
 
 uint8_t firstrun EEMEM;
 
@@ -107,15 +110,16 @@ void SetupBT(){
 }
 */
 
+
 void SetupNRF(){
 
 	// standard mac addresses
-	uint8_t  stdMACpipe0[] = {0xe0, 0xf0, 0xf0, 0xf0, 0xf0};
-	uint8_t  stdMACpipe1[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc0};
-	uint8_t  stdMACpipe2[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc1};
-	uint8_t  stdMACpipe3[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc2};
-	uint8_t  stdMACpipe4[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc3};
-	uint8_t  stdMACpipe5[] = {0xe1, 0xf0, 0xf0, 0xf0, 0xc4};
+	uint8_t  stdMACpipe0[] = {0xa0, 0xa0, 0xa0, 0xa0, 0xa0};
+	uint8_t  stdMACpipe1[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb0};
+	uint8_t  stdMACpipe2[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb1};
+	uint8_t  stdMACpipe3[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb2};
+	uint8_t  stdMACpipe4[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb3};
+	uint8_t  stdMACpipe5[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb4};
 
 
 	uint8_t nrfChn = 0x0A;
@@ -179,6 +183,10 @@ void SetupNRF(){
 //	nrf.SetAutoAck(nrfAutoACK);
 	nrf.SetChannel(nrfChn);
 
+	nrf.SetPowerLevel(NRF24L01_RF24_PA_MIN);
+
+	nrf.SetDataRate(NRF24L01_RF24_SPEED_250KBPS);
+
 
 	//	uart.writeString("Init... ");
 
@@ -215,11 +223,39 @@ ISR(INT0_vect){
 	PORTD ^= (1<<PD4);
 	// nrf receive
 
+	nrfIntFlag = 1;
+/*
+	uint8_t payloadSize = nrf.GetPayloadSize();
+	uint8_t bufferin[payloadSize];
+	char bufferout[128];
+	uint8_t pipe = 0;
+		if(nrf.ReadReady(&pipe)) { //if data is ready
+			//read buffer
+			nrf.Read(bufferin);
+			//	uint8_t samecheck = 1;
+
+
+			//evalNRFBuffer(pipe,bufferin,bufferout);
+			sprintf(bufferout,"<pipe>%i|<data>%s|", pipe,(char*)bufferin);
+
+
+			for(uint8_t i=0;i<128;i++){
+				bufferNRF[i][pipe] = bufferout[i];
+			}
+
+
+
+			for(uint8_t i=0; i<sizeof(bufferin); i++)
+				bufferin[i] = 0;
+
+		}
+*/
+
 
 }
 
 ISR(INT1_vect){
-
+	// movement
 	flag1 = 1;
 
 }
@@ -237,9 +273,8 @@ char s[50];
 
 sprintf(s," ");
 
-sprintf(s,"<input>%s</input>\r\n",str);
+sprintf(s,"<input>%s|",str);
 //sprintf(str,"%s","");
-
 uart.writeString(s);
 
 
@@ -251,6 +286,7 @@ uart.USART0_Flush();
 
 
 }
+
 /*
 ISR(USART_UDRE_vect){
     //if index is not at start of buffer
@@ -298,11 +334,11 @@ int main(){
 	delay_ms(500);
 	PORTD ^= (1<<PD4);
 
-	char buffer[500];
+	char buffer[350];
 
-	sprintf(buffer,"\r\n########### START #############\r\n");
+	//sprintf(buffer,"\r\n########### START #############\r\n");
 
-	uart.writeString(buffer);
+	//uart.writeString(buffer);
 
 	sprintf(buffer, " ");
 
@@ -310,28 +346,49 @@ int main(){
 	delay_ms(500);
 
 
+
+	//delay_ms(50);
+
+
 	//char s[50];
 	nrf.PrintInfo(buffer);
 	uart.writeString(buffer);
 
-	sprintf(buffer,"");
+	sprintf(buffer," ");
 
 
 		while(1){
+			//uint8_t macAddr[5];
+			//eeprom_read_block (macAddr, nRFPipe0, sizeof(nRFPipe0));
+			//sprintf(buffer,"<sensor mac=%02X:%02X:%02X:%02X:%02X>",macAddr[0],macAddr[1],macAddr[2],macAddr[3],macAddr[4]);
 
 			PORTD ^= (1<<PD4);
 
-			delay_ms(500);
+			delay_ms(250);
+
+
+
+
+			if(nrfIntFlag){
+
+			//	uart.writeString("NRF-INT\r\n");
+
+
+
+				nrfIntFlag = 0;
+
+			}
 
 			if(flag2){
 
 				//char buffer[500];
 
-//				uart.writeString("String: ");
-//				uart.writeString(str);
-//				uart.writeString("\r\n");
+		//	uart.writeString("String: ");
+		//		uart.writeString(str);
+		//	uart.writeString("\r\n");
 
 				ps.Parse(str);
+			//	ps.Parse("34|0|ds");
 
 			//	ps.PrintVars(buffer);
 
@@ -416,7 +473,7 @@ int main(){
 					//	eeprom_update_byte(&pipeEnable,c);
 
 
-						nrf.EnablePipe(ps.getPropertyID());
+					//	nrf.EnablePipe(ps.getPropertyID());
 
 
 					}else if(ps.getCmdProperty()==2){ // Channel
@@ -449,8 +506,8 @@ int main(){
 
 					}else if(ps.getCmdProperty()==8){ // Reset
 
-						//nrf.SetAddresses(a0,a1,a2,a3,a4,a5,aT);
-						//nrf.Init();
+					//	nrf.SetAddresses(a0,a1,a2,a3,a4,a5,aT);
+					//	nrf.Init();
 						eeprom_write_byte(&firstrun,0);
 
 
@@ -465,51 +522,80 @@ int main(){
 
 
 					if(ps.getCmdProperty()==0){ // TempDHT22
-						char dh[50];
+						char dh[30];
 						dht22.GetSensorTemperatureStringXML(dh);
-						strcat(buffer,dh);
+						uart.writeString(dh);
+						//strcat(buffer,dh);
 
 
 					}else if(ps.getCmdProperty()==1){ // HumidityDHT22
 
-						char dh[50];
+						char dh[30];
 						dht22.GetSensorHumidityStringXML(dh);
-						strcat(buffer,dh);
+						uart.writeString(dh);
+						//strcat(buffer,dh);
 
 
 					}else if(ps.getCmdProperty()==2){ // TempHumidityDHT22
 
 						char dh[50];
+
 						dht22.GetSensorStringXML(dh);
-						strcat(buffer,dh);
+
+					//	sprintf(buffer,"%s<sensor mac='%02X:%02X:%02X:%02X:%02X'>%s</sensor>\r\n",buffer,macAddr[0],macAddr[1],macAddr[2],macAddr[3],macAddr[4],dh);
+
+						uart.writeString(dh);
+						//strcat(buffer,dh);
 
 
 					}else if(ps.getCmdProperty()==3){ //Lightsense
 
 						char prbuffer[50];
 						pr.GetSensorStringXML(prbuffer);
-						strcat(buffer,prbuffer);
+						uart.writeString(prbuffer);
+						//strcat(buffer,prbuffer);
 
 					}else if(ps.getCmdProperty()==4){ //TempDS18B20
 
-						char dsb[50];
+						char dsb[150];
 						ds.GetSensorStringXML(dsb);
-						strcat(buffer,dsb);
+						uart.writeString(dsb);
+						//strcat(buffer,dsb);
+					//	strcat(buffer,"<DS18B20>No DS18B20 Sensor found.|");
 
 
 
 					}else if(ps.getCmdProperty()==5){ //Movement
 
 						if(flag1){
-							strcat(buffer,"<mv>1</mv>\r\n");
+						//strcat(buffer,"<mv>1|");
+							uart.writeString("<mv>1|");
+							flag1 = 0;
 						}else{
-							strcat(buffer,"<mv>0</mv>\r\n");
+							//strcat(buffer,"<mv>0|");
+							uart.writeString("<mv>0|");
 
 						}
 
 
 
 					}else if(ps.getCmdProperty()==6){ // Remote Sensors
+
+
+						strcat(buffer,"<RS>");
+						for(int i=0;i<5;i++){
+							char stri[128];
+							for(int j=0;j<128;j++){
+								stri[j] = bufferNRF[j][i];
+
+							}
+							uart.writeString(stri);
+							//strcat(buffer,str);
+
+						}
+
+						uart.writeString("|");
+
 
 					}
 
@@ -519,11 +605,14 @@ int main(){
 
 
 
-				strcat(buffer,"|end\r\n");
+				//strcat(buffer,"</sensor>|+end");
+				//strcat(buffer,"|+end\r\n");
+				sprintf(buffer,"|+end\r\n");
 				uart.writeString(buffer);
-				sprintf(buffer,"\r");
+				sprintf(buffer," ");
 				sprintf(str," ");
 
+				uart.USART0_Flush();
 
 					//uart.writeString(buffer);
 
@@ -533,15 +622,21 @@ int main(){
 
 
 
-			if(flag1){
+		//	if(flag1){
 
 
-				//strcat(buffer,"<mv>1</mv>|end\r\n");
-				uart.writeString("<mv>1</mv>|end\r\n");
+			//	strcat(buffer,"<mv>1||+end");
+			//	uart.writeString(buffer);
+			//	sprintf(buffer,"");
+				//strcat(buffer,"<mv>1||+end");
+				//uart.writeString(buffer);
+
+				//sent++;
+
+				//flag1=0;
+		//	}
 
 
-				flag1=0;
-			}
 
 
 

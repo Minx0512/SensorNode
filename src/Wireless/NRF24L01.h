@@ -154,6 +154,8 @@ public:
 
 	void EnablePipe(uint8_t pipe);
 
+	uint8_t GetPayloadSize();
+
 
 
 	void PrintInfo(char* string);

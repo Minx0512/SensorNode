@@ -36,7 +36,7 @@
 #define _DATA			0x03					// Number of data bits in frame = byte tranmission
 //#define _UBRR			(FOSC/16)/_BAUD - 1		// Used for UBRRL and UBRRH
 
-#define RX_BUFF			128
+#define RX_BUFF			64
 
 
 

@@ -87,7 +87,7 @@ void DS18B20::ReadMeasurement( char* string ){
 	    	break;
 	    }
 	    if( id[0] == 0x28 || id[0] == 0x10 ){	// temperature sensor
-	    	sprintf( string, "%s<DS18B20><ID>%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X</ID>",string, id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7] );
+	    	sprintf( string, "%s<DS18B20><ID>%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X|",string, id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7] );
 	    	WriteByte( THERM_CMD_RSCRATCHPAD );			// read command
 	    	temp = ReadByte();			// low byte
 	    	temp |= (unsigned int)ReadByte() << 8;		// high byte
@@ -96,7 +96,7 @@ void DS18B20::ReadMeasurement( char* string ){
 	    		temp <<= 3;
 	    	//   sprintf( string, "  %04X = ", temp );	// hex value
 
-	    	sprintf( string, "%s<T>%d.%01d°C</T></DS18B20>\r\n",string, temp >> 4, (temp << 12) / 6553 ); // 0.1C
+	    	sprintf( string, "%s<T>%d.%01d°C||",string, temp >> 4, (temp << 12) / 6553 ); // 0.1C
 
 	    }
 

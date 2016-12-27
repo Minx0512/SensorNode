@@ -86,7 +86,7 @@ NRF24L01::NRF24L01() {
 */
 
 	//power setup
-	SetPowerLevel(NRF24L01_RF24_PA_MAX);
+	SetPowerLevel(NRF24L01_RF24_PA_MIN);
 
 	//speed setup
 	SetDataRate(NRF24L01_RF24_SPEED_1MBPS);
@@ -128,7 +128,7 @@ NRF24L01::NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, ui
 	NRF24L01_ADDRSIZE = 5;
 
 	//power setup
-	NRF24L01_RF24_PA = NRF24L01_RF24_PA_MAX;
+	NRF24L01_RF24_PA = NRF24L01_RF24_PA_MIN;
 
 	//speed setup
 	NRF24L01_RF24_SPEED = NRF24L01_RF24_SPEED_1MBPS;
@@ -307,7 +307,9 @@ void NRF24L01::EnablePipe(uint8_t pipe){
 
 }
 
-
+uint8_t NRF24L01::GetPayloadSize(){
+	return NRF24L01_PAYLOAD;
+}
 
 void NRF24L01::SetAddresses(uint8_t* pipe0, uint8_t* pipe1,uint8_t* pipe2,uint8_t* pipe3,uint8_t* pipe4,uint8_t* pipe5,uint8_t* pipeT){
 
@@ -703,58 +705,62 @@ void NRF24L01::PrintInfo(char* string){
 	char buff[100];
 
 
-		sprintf(string,"##### NRF24L01+ Info #####\r\n");
+		sprintf(string,"<NRF24L01+>");
 
-		sprintf(buff,"STATUS: %02X\r\n", GetStatus());  strcat(string,buff);
-		sprintf(buff,"CONFIG: %02X\r\n", ReadRegister(NRF24L01_REG_CONFIG)); strcat(string,buff);
-		sprintf(buff,"RF_CH: %02X\r\n", ReadRegister(NRF24L01_REG_RF_CH)); strcat(string,buff);
-		sprintf(buff,"RF_SETUP: %02X\r\n", ReadRegister(NRF24L01_REG_RF_SETUP)); strcat(string,buff);
-		sprintf(buff,"EN_AA: %02X\r\n", ReadRegister(NRF24L01_REG_EN_AA)); strcat(string,buff);
-		sprintf(buff,"EN_RXADDR: %02X\r\n", ReadRegister(NRF24L01_REG_EN_RXADDR)); strcat(string,buff);
-		sprintf(buff,"OBSERVE_TX: %02X\r\n", ReadRegister(NRF24L01_REG_OBSERVE_TX)); strcat(string,buff);
+		sprintf(buff,"<STATUS>%02X|", GetStatus());  strcat(string,buff);
+		sprintf(buff,"<CONFIG>%02X|", ReadRegister(NRF24L01_REG_CONFIG)); strcat(string,buff);
+		sprintf(buff,"<RF_CH>%02X|", ReadRegister(NRF24L01_REG_RF_CH)); strcat(string,buff);
+		sprintf(buff,"<RF_SETUP>%02X|", ReadRegister(NRF24L01_REG_RF_SETUP)); strcat(string,buff);
+		sprintf(buff,"<EN_AA>%02X|", ReadRegister(NRF24L01_REG_EN_AA)); strcat(string,buff);
+		sprintf(buff,"<EN_RXADDR>%02X|", ReadRegister(NRF24L01_REG_EN_RXADDR)); strcat(string,buff);
+		sprintf(buff,"<OBSERVE_TX>%02X|", ReadRegister(NRF24L01_REG_OBSERVE_TX)); strcat(string,buff);
 
 		uint8_t adr[NRF24L01_ADDRSIZE];
 		uint8_t addrrev[NRF24L01_ADDRSIZE];
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P0,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"RX_ADDR_P0: %02X %02X %02X %02X %02X \r\n",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
+		sprintf(buff,"<RX_ADDR_P0>%02X:%02X:%02X:%02X:%02X|",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P1,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"RX_ADDR_P1: %02X %02X %02X %02X %02X \r\n",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
+		sprintf(buff,"<RX_ADDR_P1>%02X:%02X:%02X:%02X:%02X|",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
 
 
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P2,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"RX_ADDR_P2: %02X\r\n",addrrev[0]); strcat(string,buff);
+		sprintf(buff,"<RX_ADDR_P2>%02X|",addrrev[0]); strcat(string,buff);
 
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P3,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"RX_ADDR_P3: %02X\r\n",addrrev[0]); strcat(string,buff);
+		sprintf(buff,"<RX_ADDR_P3>%02X|",addrrev[0]); strcat(string,buff);
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P4,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"RX_ADDR_P4: %02X\r\n",addrrev[0]); strcat(string,buff);
+		sprintf(buff,"<RX_ADDR_P4>%02X|",addrrev[0]); strcat(string,buff);
 
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P5,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"RX_ADDR_P5: %02X \r\n",addrrev[0]); strcat(string,buff);
+		sprintf(buff,"<RX_ADDR_P5>%02X|",addrrev[0]); strcat(string,buff);
 
 
 		ReadRegisters(NRF24L01_REG_TX_ADDR,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"TX_ADDR: %02X %02X %02X %02X %02X \r\n",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
+		sprintf(buff,"<TX_ADDR>%02X:%02X:%02X:%02X:%02X|",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
 
 
-		sprintf(buff,"RX_PW_P0: %02X\r\n",ReadRegister(NRF24L01_REG_RX_PW_P0)); strcat(string,buff);
-		sprintf(buff,"RX_PW_P1: %02X\r\n",ReadRegister(NRF24L01_REG_RX_PW_P1)); strcat(string,buff);
+		sprintf(buff,"<RX_PW_P0>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P0)); strcat(string,buff);
+		sprintf(buff,"<RX_PW_P1>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P1)); strcat(string,buff);
+		sprintf(buff,"<RX_PW_P2>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P2)); strcat(string,buff);
+		sprintf(buff,"<RX_PW_P3>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P3)); strcat(string,buff);
+		sprintf(buff,"<RX_PW_P4>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P4)); strcat(string,buff);
+		sprintf(buff,"<RX_PW_P5>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P5)); strcat(string,buff);
 
 
-		strcat(string,"##########################\r\n");
+		strcat(string,"||+end\r\n");
 
 }
 
