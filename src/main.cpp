@@ -39,6 +39,8 @@ uint8_t nrfIntFlag = 0;
 
 char bufferNRF[128][5];
 
+//static char* system = "<SYSTEM><VERSION>1.0||";
+
 uint8_t firstrun EEMEM;
 
 char btName[21] EEMEM;
@@ -66,7 +68,7 @@ DHT22 dht22 = DHT22(PORTD,DDRD,PIND,PD7);
 
 Photoresistor pr = Photoresistor(0x00);
 
-NRF24L01 nrf = NRF24L01(DDRB, PORTD, CE, CSN);
+//NRF24L01 nrf = NRF24L01(DDRB, PORTD, CE, CSN);
 
 ParseStrings ps = ParseStrings();
 
@@ -172,27 +174,27 @@ void SetupNRF(){
 	//	uart.writeString(tr);
 
 
-	nrf.SetAddressPipe0(stdMACpipe0);
-	nrf.SetAddressPipe1(stdMACpipe1);
-	nrf.SetAddressPipe2(stdMACpipe2);
-	nrf.SetAddressPipe3(stdMACpipe3);
-	nrf.SetAddressPipe4(stdMACpipe4);
-	nrf.SetAddressPipe5(stdMACpipe5);
-	nrf.SetAddressPipeT(stdMACpipe0);
+//	nrf.SetAddressPipe0(stdMACpipe0);
+//	nrf.SetAddressPipe1(stdMACpipe1);
+//	nrf.SetAddressPipe2(stdMACpipe2);
+//	nrf.SetAddressPipe3(stdMACpipe3);
+//	nrf.SetAddressPipe4(stdMACpipe4);
+//	nrf.SetAddressPipe5(stdMACpipe5);
+//	nrf.SetAddressPipeT(stdMACpipe0);
 
 //	nrf.SetAutoAck(nrfAutoACK);
-	nrf.SetChannel(nrfChn);
+//	nrf.SetChannel(nrfChn);
 
-	nrf.SetPowerLevel(NRF24L01_RF24_PA_MIN);
+//	nrf.SetPowerLevel(NRF24L01_RF24_PA_MIN);
 
-	nrf.SetDataRate(NRF24L01_RF24_SPEED_250KBPS);
+//	nrf.SetDataRate(NRF24L01_RF24_SPEED_250KBPS);
 
 
 	//	uart.writeString("Init... ");
 
-		nrf.spi = SPI(DDRB,PORTB,PB4,PB3,PB5,PB2);
+	//	nrf.spi = SPI(DDRB,PORTB,PB4,PB3,PB5,PB2);
 	//nrf24l01_init();
-	nrf.Init();
+	//nrf.Init();
 
 	//	uart.writeString("... done \r\n");
 
@@ -281,6 +283,7 @@ uart.writeString(s);
 
 flag2 = 1;
 
+
 uart.USART0_Flush();
 
 
@@ -334,28 +337,45 @@ int main(){
 	delay_ms(500);
 	PORTD ^= (1<<PD4);
 
-	char buffer[350];
+	//char buffer[350];
+//	char system[500];
 
 	//sprintf(buffer,"\r\n########### START #############\r\n");
 
 	//uart.writeString(buffer);
 
-	sprintf(buffer, " ");
+	//snprintf(buffer,1, " ");
 
 	SetupNRF();
 	delay_ms(500);
 
-
+	//sprintf(system,"<SYSTEM><VERSION>1.0||");
 
 	//delay_ms(50);
 
 
-	//char s[50];
-	nrf.PrintInfo(buffer);
+	//char nrfBuff[350];
+	//char system[50];
+
+//	sprintf(nrfBuff," ");
+//	sprintf(system," ");
+	char buffer[500];
+//	nrf.PrintInfo(buffer);
+//sprintf(system,"<SYSTEM><VERSION>1.0|");
+	//strcat(system,buffer);
+
+	//sprintf(buffer,"%s|%s",system,nrfBuff);
+
+	//uart.writeString(system);
+//	uart.writeString("\r\n");
+	delay_ms(500);
 	uart.writeString(buffer);
+	// sprintf(buffer,"|+end\r\n");
+	uart.writeString("|+end\r\n");
 
+	//free(buffer);
 	sprintf(buffer," ");
-
+	//uart.writeString(buffer);
 
 		while(1){
 			//uint8_t macAddr[5];
@@ -364,8 +384,9 @@ int main(){
 
 			PORTD ^= (1<<PD4);
 
-			delay_ms(250);
+			delay_ms(100);
 
+			sprintf(buffer," ");
 
 
 
@@ -392,7 +413,7 @@ int main(){
 
 			//	ps.PrintVars(buffer);
 
-
+			//	uart.writeString(buffer);
 
 
 
@@ -417,8 +438,8 @@ int main(){
 
 							eeprom_write_block(addr,nRFPipe0,sizeof(addr));
 
-							nrf.SetAddressPipe0(addr);
-							nrf.SetAddressPipeT(addr);
+						//	nrf.SetAddressPipe0(addr);
+						//	nrf.SetAddressPipeT(addr);
 							//CpyMAC(addr,a0,5);
 							//CpyMAC(addr,aT,5);
 
@@ -435,27 +456,27 @@ int main(){
 
 						//	strcat(buffer,"wrote block\r\n");
 
-							nrf.SetAddressPipe1(addr);
+						//	nrf.SetAddressPipe1(addr);
 							//CpyMAC(addr,a1,5);
 
 						}else if(ps.getPropertyID()==2){ // pipe 2
 							eeprom_update_block(addr,nRFPipe2,sizeof(addr));
-							nrf.SetAddressPipe2(addr);
+						//	nrf.SetAddressPipe2(addr);
 						//	CpyMAC(addr,a2,5);
 
 						}else if(ps.getPropertyID()==3){ // pipe 3
 							eeprom_update_block(addr,nRFPipe3,sizeof(addr));
-							nrf.SetAddressPipe3(addr);
+						//	nrf.SetAddressPipe3(addr);
 							//CpyMAC(addr,a3,5);
 
 						}else if(ps.getPropertyID()==4){ // pipe 4
 							eeprom_update_block(addr,nRFPipe4,sizeof(addr));
-							nrf.SetAddressPipe4(addr);
+						//	nrf.SetAddressPipe4(addr);
 						//	CpyMAC(addr,a4,5);
 
 						}else if(ps.getPropertyID()==5){ // pipe 5
 							eeprom_update_block(addr,nRFPipe5,sizeof(addr));
-							nrf.SetAddressPipe5(addr);
+						//	nrf.SetAddressPipe5(addr);
 							//CpyMAC(addr,a5,5);
 
 						}
@@ -480,29 +501,29 @@ int main(){
 
 						eeprom_update_byte(&nrfChannel,ps.getPropertyID());
 
-						nrf.SetChannel(ps.getPropertyID());
+					//	nrf.SetChannel(ps.getPropertyID());
 
 					}else if(ps.getCmdProperty()==3){ // PowerLevel
 
-						nrf.SetPowerLevel(ps.getPropertyID());
+					//	nrf.SetPowerLevel(ps.getPropertyID());
 
 					}else if(ps.getCmdProperty()==4){ // Data rate
 
-						nrf.SetDataRate(ps.getPropertyID());
+					//	nrf.SetDataRate(ps.getPropertyID());
 
 					}else if(ps.getCmdProperty()==5){ // CRC level
 
-						nrf.SetCRClength(ps.getPropertyID());
+					//	nrf.SetCRClength(ps.getPropertyID());
 
 					}else if(ps.getCmdProperty()==6){ // Payload size
 
-						nrf.SetPayloadSize(ps.getPropertyID());
+					//	nrf.SetPayloadSize(ps.getPropertyID());
 
 					}else if(ps.getCmdProperty()==7){ // Auto ACK
 
 						eeprom_update_byte(&nrfACK,ps.getPropertyID());
 
-						nrf.SetAutoAck(ps.getPropertyID());
+					//	nrf.SetAutoAck(ps.getPropertyID());
 
 					}else if(ps.getCmdProperty()==8){ // Reset
 
@@ -510,6 +531,24 @@ int main(){
 					//	nrf.Init();
 						eeprom_write_byte(&firstrun,0);
 
+
+
+
+					}else if(ps.getCmdProperty()==9){ // System Info
+
+
+					//	char buf[500];
+						//sprintf(buf," ");
+					//	uart.USART0_Flush();
+					//	uart.writeString("Getting Infos...");
+						//nrf.PrintInfo(buf);
+					//	sprintf(buf,"%s|%s",system,buf);
+					//uart.writeString(system);
+					//	delay_ms(100);
+					//	uart.writeString(system);
+						//	uart.writeString("\r\n");
+						//	delay_ms(500);
+					//	uart.writeString(buf);
 
 
 
@@ -545,6 +584,7 @@ int main(){
 					//	sprintf(buffer,"%s<sensor mac='%02X:%02X:%02X:%02X:%02X'>%s</sensor>\r\n",buffer,macAddr[0],macAddr[1],macAddr[2],macAddr[3],macAddr[4],dh);
 
 						uart.writeString(dh);
+						//uart.writeString("..");
 						//strcat(buffer,dh);
 
 
@@ -557,7 +597,7 @@ int main(){
 
 					}else if(ps.getCmdProperty()==4){ //TempDS18B20
 
-						char dsb[150];
+						char dsb[360];
 						ds.GetSensorStringXML(dsb);
 						uart.writeString(dsb);
 						//strcat(buffer,dsb);
@@ -581,8 +621,9 @@ int main(){
 
 					}else if(ps.getCmdProperty()==6){ // Remote Sensors
 
+						//char buf[100];
 
-						strcat(buffer,"<RS>");
+						uart.writeString("<RS>");
 						for(int i=0;i<5;i++){
 							char stri[128];
 							for(int j=0;j<128;j++){
@@ -607,14 +648,16 @@ int main(){
 
 				//strcat(buffer,"</sensor>|+end");
 				//strcat(buffer,"|+end\r\n");
-				sprintf(buffer,"|+end\r\n");
-				uart.writeString(buffer);
-				sprintf(buffer," ");
+
+			//	sprintf(buffer,);
+				uart.writeString("|+end\r\n");
+				//uart.writeString(" ");
+			//	sprintf(buffer," ");
 				sprintf(str," ");
 
-				uart.USART0_Flush();
 
-					//uart.writeString(buffer);
+
+			//	uart.writeString(buffer);
 
 					flag2 = 0;
 
@@ -642,7 +685,7 @@ int main(){
 
 		}
 
-		PORTD ^= (1<<PD4);
+	//	PORTD ^= (1<<PD4);
 
 
 

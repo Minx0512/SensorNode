@@ -24,7 +24,7 @@
 
 #include "avr/io.h"
 #include "../IO/SPI.h"
-//#include "../IO/USART.h"
+#include "../IO/USART.h"
 
 //CE and CSN port definitions
 //#define NRF24L01_DDR DDRB

@@ -33,6 +33,8 @@ def NPSetNRFAutoACK(endisack):
     return '27|{0}|ACK'.format(endisack)
 def NPSetNRFResetModule():
     return '28|0|Reset'
+def NPGetNRGConfig():
+    return '29|0|GC'
 def NPGetSensorDataTempDHT22():
     return '30|0|TmpDHT22'
 def NPGetSensorDataHumidityDHT22():

@@ -18,7 +18,7 @@ def ReceiveData(s,endStr):
  #print "Receiving data...", endStr
  try:
   while True:
-   data = s.recv(8)
+   data = s.recv(512)
    out_str+=data
    #print out_str
    if out_str[len(out_str)-lE:len(out_str)]==endStr:

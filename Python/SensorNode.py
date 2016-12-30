@@ -86,8 +86,11 @@ def DetectMovement(socket,tInside, tOutside,rSensorsEnabled,slpmode,frame):
   #SendData(socket,"35|0|Mv\n")  
    recData = GetMovement(socket)
   
-   threadLock.release()
+   #print "Move: ",recData
    mvs = re.findall("<mv>(.*)\|", recData)
+   
+   threadLock.release()
+   
    #print mvs
    if len(mvs) > 0:
     m=int(mvs[0])
@@ -111,61 +114,70 @@ def DetectMovement(socket,tInside, tOutside,rSensorsEnabled,slpmode,frame):
    
    sleep(1)     
 
+def ReadSystemConfig(socket):
+ threadLock.acquire() 
+ recData = GetNRFConfig(socket)  
+   
+ #print "SysConfig: ",recData
+ nrf = re.findall("<SYSTEM><VERSION>(.*)\|\|<NRF24L01><STATUS>(.*)\|<CONFIG>(.*)\|<RF_CH>(.*)\|<RF_SETUP>(.*)\|<EN_AA>(.*)\|<EN_RXADDR>(.*)\|<OBSERVE_TX>(.*)\|<RX_ADDR_P0>(.*)\|<RX_ADDR_P1>(.*)\|<RX_ADDR_P2>(.*)\|<RX_ADDR_P3>(.*)\|<RX_ADDR_P4>(.*)\|<RX_ADDR_P5>(.*)\|<TX_ADDR>(.*)\|<RX_PW_P0>(.*)\|<RX_PW_P1>(.*)\|<RX_PW_P2>(.*)\|<RX_PW_P3>(.*)\|<RX_PW_P4>(.*)\|<RX_PW_P5>(.*)\|\|",recData)
+ 
+ threadLock.release()
+   
+ for n in nrf:
+  print "Version: {0}".format(n[0])   
+  print "Status: {0} \r\nConfig: {1}".format(n[1],n[2])
+ 
+ return recData  
+    
+
 def ReadSensorDataLight(socket,tnum):
  while 1:
   threadLock.acquire()
   recData = GetLightsense(socket)
-  threadLock.release()
+  #sleep(1)
+ 
   #print "recDataLight: ", recData
   l = re.findall("<NSL19M51>(.*)\|",recData)
   if len(l)>0:
    light=float(l[0])
   else:
    light = -1
+ 
+  threadLock.release()
   
-  lightVal.set(light) 
-  sleep(5)
+  if light>0:
+   lightVal.set(light)
+   sleep(30) 
+  else:
+   sleep(2)   
+  
    
     
 
 def ReadSensorData(socket,tnum):
- while 1:
- #print "In readSensorData: "
- #humDHT22 =  GetHumidityDHT22(socket) 
- #tempDHT22 = GetTempDHT22(socket)
- #lightI = GetLightsense(socket)
- #lightO = GetLightsense(socket)
+ errC = 0   
+ while 1: 
  
-  threadLock.acquire()
- # recDataLight = GetLightsense(socket)
-  #print recDataLight
-  
-  #SendData(socket,"32|0|DHT22\n")  
-  recDataDHT22 = GetTempHumidDHT22(socket)
+  threadLock.acquire() 
+  recDataDHT22 = GetTempHumidDHT22(socket) 
+    
+  #print "recDHT: {0}",recDataDHT22
+  dht = re.findall(".<DHT22><T unit='(.*)'>(.*)\|<H unit='(.*)'>(.*)\|\|err=(.*)\|",recDataDHT22)
   
   threadLock.release()
+  t = time.strftime("%I:%M:%S %p",time.localtime())  
   
- # l=re.findall("<NSL19M51>(.*)\|",recDataLight)
- # if len(l) > 0:
- #  light=(l[0])
- # else:
- #  light = -1 
-  
-  t = time.strftime("%I:%M:%S %p",time.localtime())
-  
-  #print "recDHT: {0}",recDataDHT22
-  dht = re.findall(".*<DHT22><T unit='(.*)'>(.*)\|<H unit='(.*)'>(.*)\|\|",recDataDHT22)
-
   for d in dht:  
-   lightsMsg.set("{0} : DHT22: T: {1}{2} | H: {3}{4} | Light: {5}".format(t, d[1],d[0],d[3],d[2],lightVal.get()))
+   lightsMsg.set("{0} : DHT22: T: {1}{2} | H: {3}{4} | err: {5} | Light: {6}".format(t, d[1],d[0],d[3],d[2],d[4],lightVal.get()))
    DHT22TempVal.set(float(d[1]))
    DHT22TempUnit.set("{0}".format(d[0]))
    DHT22HumVal.set(float(d[3]))
    DHT22HumUnit.set("{0}".format(d[2]))
-  # lightVal.set("{0}".format(light))
-  
-  #print recDataDHT22
-  sleep(5*60)  
+   errC = int(d[4])
+  if errC is not 0:
+   sleep(5)
+  else:     
+   sleep(5*60)  
 
 def SwitchON(frame):
 # B.config(text="Lights ON/OFF")
@@ -301,6 +313,25 @@ def LightsMenu(frame):
    
  menuID.set(1) 
 
+def SystemParamsMenu(socket,frame):
+ for widget in frame.winfo_children():
+  widget.destroy()
+ label_sensor = Label(frame,text="System Parameter")
+ label_sensor.config(bg=APP_BAR,fg=APP_FONT_COLOR,font="-weight bold -size 20")
+ label_sensor.place(x=0,y=0,width=512,height=50)
+ 
+ sysConfig = ReadSystemConfig(socket)
+ 
+      
+
+def ConfigureMenu(frame):
+ for widget in frame.winfo_children():
+  widget.destroy()
+ label_sensor = Label(frame,text="Configure")
+ label_sensor.config(bg=APP_BAR,fg=APP_FONT_COLOR,font="-weight bold -size 20")
+ label_sensor.place(x=0,y=0,width=512,height=50) 
+ 
+
 
 port = 1
 conn=0
@@ -309,6 +340,7 @@ bd_addr = '98:D3:31:FB:31:A6'
 remoteSensorsEnabled = 0
 sleepmode = 0
 
+threadLock = thread.allocate_lock()
 
 top = Tk()
 top.minsize(1024, 600)
@@ -376,11 +408,15 @@ Button_SensorsMenu = Button(Frame_Left, text ="Sensors", relief=FLAT,command =la
 Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_SENSORS,activebackground=BUTTON_BG_COLOR_SENSORS_HOVER,fg=BUTTON_FONT_COLOR_SENSORS,activeforeground=BUTTON_FONT_COLOR_SENSORS_HOVER,font="-weight bold",highlightthickness=0,bd=0)
 Button_SensorsMenu.place(x=50, y=160,width=200, height=50)
 
+Button_SensorsMenu = Button(Frame_Left, text ="Configure", relief=FLAT,command =lambda: ConfigureMenu(Frame_Right),padx=5,pady=5)
+Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_CONFIGURE,activebackground=BUTTON_BG_COLOR_CONFIGURE_HOVER,fg=BUTTON_FONT_COLOR_CONFIGURE,activeforeground=BUTTON_FONT_COLOR_CONFIGURE_HOVER,font="-weight bold",highlightthickness=0,bd=0)
+Button_SensorsMenu.place(x=50, y=220,width=200, height=50)
+
+Button_SensorsMenu = Button(Frame_Left, text ="System", relief=FLAT,command =lambda: SystemParamsMenu(sock,Frame_Right),padx=5,pady=5)
+Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_SYSTEM,activebackground=BUTTON_BG_COLOR_SYSTEM_HOVER,fg=BUTTON_FONT_COLOR_SYSTEM,activeforeground=BUTTON_FONT_COLOR_SYSTEM_HOVER,font="-weight bold",highlightthickness=0,bd=0)
+Button_SensorsMenu.place(x=50, y=280,width=200, height=50)
 
 
-
-
-threadLock = thread.allocate_lock()
 
 try:
  thread.start_new_thread(ReadSensorDataLight,(sock,2))

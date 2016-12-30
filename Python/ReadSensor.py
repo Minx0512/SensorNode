@@ -20,7 +20,9 @@ def handleTags(dom,tag):
  for item in items:
   t.append(u'{0}'.format(getText(item.childNodes)).encode('utf-8'))
  return t
-
+def GetNRFConfig(sock):
+ SendData(sock,'{0}\r\n'.format(NPGetNRGConfig()))
+ return ReceiveData(sock,"|+end\r\n")
 
 def GetTempDS18B20(sock):
  SendData(sock,'{0}\r\n'.format(NPGetSensorDataTempDS18B20()))

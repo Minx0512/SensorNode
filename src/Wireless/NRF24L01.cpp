@@ -702,65 +702,66 @@ void NRF24L01::SetTX() {
 
 
 void NRF24L01::PrintInfo(char* string){
-	char buff[100];
+	//char buff[30];
 
+		sprintf(string,"");
 
-		sprintf(string,"<NRF24L01+>");
+		sprintf(string,"%s<NRF24L01>",string);
+	//	strncat(string,"<NRF24L01>",13);
 
-		sprintf(buff,"<STATUS>%02X|", GetStatus());  strcat(string,buff);
-		sprintf(buff,"<CONFIG>%02X|", ReadRegister(NRF24L01_REG_CONFIG)); strcat(string,buff);
-		sprintf(buff,"<RF_CH>%02X|", ReadRegister(NRF24L01_REG_RF_CH)); strcat(string,buff);
-		sprintf(buff,"<RF_SETUP>%02X|", ReadRegister(NRF24L01_REG_RF_SETUP)); strcat(string,buff);
-		sprintf(buff,"<EN_AA>%02X|", ReadRegister(NRF24L01_REG_EN_AA)); strcat(string,buff);
-		sprintf(buff,"<EN_RXADDR>%02X|", ReadRegister(NRF24L01_REG_EN_RXADDR)); strcat(string,buff);
-		sprintf(buff,"<OBSERVE_TX>%02X|", ReadRegister(NRF24L01_REG_OBSERVE_TX)); strcat(string,buff);
+		sprintf(string,"%s<STATUS>%02X|",string, GetStatus()); // strncat(string,buff,13);
+		sprintf(string,"%s<CONFIG>%02X|",string, ReadRegister(NRF24L01_REG_CONFIG)); //strncat(string,buff,13);
+		sprintf(string,"%s<RF_CH>%02X|",string, ReadRegister(NRF24L01_REG_RF_CH)); //strncat(string,buff,12);
+		sprintf(string,"%s<RF_SETUP>%02X|",string, ReadRegister(NRF24L01_REG_RF_SETUP));//strncat(string,buff,15);
+		sprintf(string,"%s<EN_AA>%02X|",string, ReadRegister(NRF24L01_REG_EN_AA));// strncat(string,buff,12);
+		sprintf(string,"%s<EN_RXADDR>%02X|",string, ReadRegister(NRF24L01_REG_EN_RXADDR));// strncat(string,buff,16);
+		sprintf(string,"%s<OBSERVE_TX>%02X|",string, ReadRegister(NRF24L01_REG_OBSERVE_TX));// strncat(string,buff,17);
 
 		uint8_t adr[NRF24L01_ADDRSIZE];
 		uint8_t addrrev[NRF24L01_ADDRSIZE];
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P0,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"<RX_ADDR_P0>%02X:%02X:%02X:%02X:%02X|",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
+		sprintf(string,"%s<RX_ADDR_P0>%02X:%02X:%02X:%02X:%02X|",string,addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]);// strcat(string,buff);
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P1,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"<RX_ADDR_P1>%02X:%02X:%02X:%02X:%02X|",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
+		sprintf(string,"%s<RX_ADDR_P1>%02X:%02X:%02X:%02X:%02X|",string,addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]);// strcat(string,buff);
 
 
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P2,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"<RX_ADDR_P2>%02X|",addrrev[0]); strcat(string,buff);
+		sprintf(string,"%s<RX_ADDR_P2>%02X|",string,addrrev[0]); //strcat(string,buff);
 
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P3,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"<RX_ADDR_P3>%02X|",addrrev[0]); strcat(string,buff);
+		sprintf(string,"%s<RX_ADDR_P3>%02X|",string,addrrev[0]);// strcat(string,buff);
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P4,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"<RX_ADDR_P4>%02X|",addrrev[0]); strcat(string,buff);
+		sprintf(string,"%s<RX_ADDR_P4>%02X|",string,addrrev[0]);// strcat(string,buff);
 
 
 		ReadRegisters(NRF24L01_REG_RX_ADDR_P5,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"<RX_ADDR_P5>%02X|",addrrev[0]); strcat(string,buff);
+		sprintf(string,"%s<RX_ADDR_P5>%02X|",string,addrrev[0]);// strcat(string,buff);
 
 
 		ReadRegisters(NRF24L01_REG_TX_ADDR,adr,NRF24L01_ADDRSIZE);
 		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(buff,"<TX_ADDR>%02X:%02X:%02X:%02X:%02X|",addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]); strcat(string,buff);
+		sprintf(string,"%s<TX_ADDR>%02X:%02X:%02X:%02X:%02X|",string,addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]);// strcat(string,buff);
 
 
-		sprintf(buff,"<RX_PW_P0>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P0)); strcat(string,buff);
-		sprintf(buff,"<RX_PW_P1>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P1)); strcat(string,buff);
-		sprintf(buff,"<RX_PW_P2>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P2)); strcat(string,buff);
-		sprintf(buff,"<RX_PW_P3>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P3)); strcat(string,buff);
-		sprintf(buff,"<RX_PW_P4>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P4)); strcat(string,buff);
-		sprintf(buff,"<RX_PW_P5>%02X|",ReadRegister(NRF24L01_REG_RX_PW_P5)); strcat(string,buff);
+		sprintf(string,"%s<RX_PW_P0>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P0));// strcat(string,buff);
+		sprintf(string,"%s<RX_PW_P1>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P1));// strcat(string,buff);
+		sprintf(string,"%s<RX_PW_P2>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P2));// strcat(string,buff);
+		sprintf(string,"%s<RX_PW_P3>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P3));// strcat(string,buff);
+		sprintf(string,"%s<RX_PW_P4>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P4));// strcat(string,buff);
+		sprintf(string,"%s<RX_PW_P5>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P5));// strcat(string,buff);
 
-
-		strcat(string,"||+end\r\n");
+		sprintf(string,"%s|",string);
 
 }
 

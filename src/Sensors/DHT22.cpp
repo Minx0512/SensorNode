@@ -111,7 +111,7 @@ int8_t DHT22::GetData(float *temperature, float *humidity){
 		_delay_us(80);
 		//check start condition 2
 		if(!(AM2302_HIGH_INPUT())) {
-			return -1;
+			return -2;
 		}
 		_delay_us(80);
 
@@ -124,7 +124,7 @@ int8_t DHT22::GetData(float *temperature, float *humidity){
 				while(!(AM2302_HIGH_INPUT())) { //wait for an high input (non blocking)
 					timeoutcounter++;
 					if(timeoutcounter > TIMEOUT) {
-						return -1; //timeout
+						return -3; //timeout
 					}
 				}
 				_delay_us(30);
@@ -134,7 +134,7 @@ int8_t DHT22::GetData(float *temperature, float *humidity){
 				while(AM2302_HIGH_INPUT()) { //wait until input get low (non blocking)
 					timeoutcounter++;
 					if(timeoutcounter > TIMEOUT) {
-						return -1; //timeout
+						return -4; //timeout
 					}
 				}
 			}
@@ -160,7 +160,7 @@ int8_t DHT22::GetData(float *temperature, float *humidity){
 			return 0;
 		}
 
-		return -1;
+		return -5;
 
 
 
@@ -172,15 +172,24 @@ void DHT22::GetSensorStringXML(char* string){
 	float humidity = 0;
 	char tempBuff[20];
 	char humBuff[20];
-	GetTemperatureHumidity(&temp,&humidity);
+	int m = 0;
 
+	//while(m==-1){
+	m = GetTemperatureHumidity(&temp,&humidity);
 
+	//}
+
+	if(m!=0){
+		// if an error occurs, port gets reset and interrupt switched on again
+		Reset();
+		sei();
+	}
 
 
 	dtostrf(temp,3,1,tempBuff);
 	dtostrf(humidity,3,1,humBuff);
 
-	sprintf(string,"<DHT22><T unit='°C'>%s|<H unit='%%RH'>%s||",tempBuff,humBuff);
+	sprintf(string,"<DHT22><T unit='°C'>%s|<H unit='%%RH'>%s||err=%i|",tempBuff,humBuff,m);
 
 
 }
