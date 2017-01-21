@@ -123,7 +123,7 @@ void USART::readString(char myString[],uint8_t maxLength){
 	while(i<(maxLength-1)){
 
 		response = getByte();
-		//putByte(response);
+		putByte(response);
 		if(response=='\r'){
 			break;
 		}else{

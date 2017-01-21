@@ -704,18 +704,18 @@ void NRF24L01::SetTX() {
 void NRF24L01::PrintInfo(char* string){
 	//char buff[30];
 
-		sprintf(string,"");
+		sprintf(string,(char*)" ");
 
-		sprintf(string,"%s<NRF24L01>",string);
+		sprintf(string,"<NRF24L01>");
 	//	strncat(string,"<NRF24L01>",13);
 
 		sprintf(string,"%s<STATUS>%02X|",string, GetStatus()); // strncat(string,buff,13);
 		sprintf(string,"%s<CONFIG>%02X|",string, ReadRegister(NRF24L01_REG_CONFIG)); //strncat(string,buff,13);
 		sprintf(string,"%s<RF_CH>%02X|",string, ReadRegister(NRF24L01_REG_RF_CH)); //strncat(string,buff,12);
-		sprintf(string,"%s<RF_SETUP>%02X|",string, ReadRegister(NRF24L01_REG_RF_SETUP));//strncat(string,buff,15);
-		sprintf(string,"%s<EN_AA>%02X|",string, ReadRegister(NRF24L01_REG_EN_AA));// strncat(string,buff,12);
-		sprintf(string,"%s<EN_RXADDR>%02X|",string, ReadRegister(NRF24L01_REG_EN_RXADDR));// strncat(string,buff,16);
-		sprintf(string,"%s<OBSERVE_TX>%02X|",string, ReadRegister(NRF24L01_REG_OBSERVE_TX));// strncat(string,buff,17);
+	//	sprintf(string,"%s<RF_SETUP>%02X|",string, ReadRegister(NRF24L01_REG_RF_SETUP));//strncat(string,buff,15);
+	//	sprintf(string,"%s<EN_AA>%02X|",string, ReadRegister(NRF24L01_REG_EN_AA));// strncat(string,buff,12);
+	//	sprintf(string,"%s<EN_RXADDR>%02X|",string, ReadRegister(NRF24L01_REG_EN_RXADDR));// strncat(string,buff,16);
+	//	sprintf(string,"%s<OBSERVE_TX>%02X|",string, ReadRegister(NRF24L01_REG_OBSERVE_TX));// strncat(string,buff,17);
 
 		uint8_t adr[NRF24L01_ADDRSIZE];
 		uint8_t addrrev[NRF24L01_ADDRSIZE];

@@ -19,7 +19,7 @@ class ParseStrings {
 
 		uint8_t cmdID;
 		uint8_t cmdP ;
-		uint8_t PID;
+		char PID[36];
 		char pString[36];
 		uint8_t addr[5];
 
@@ -33,10 +33,11 @@ public:
 	uint8_t * getMAC();
 	uint8_t getMAC(uint8_t* a);
 	void getPropertyString(char *propString);
+	void getPropertyIDAsMAC(uint8_t propString[8]);
 
 	uint8_t getCmdID();
 	uint8_t getCmdProperty();
-	uint8_t getPropertyID();
+	void getPropertyID(char *PIDString);
 
 
 	void getBTName(char* name);

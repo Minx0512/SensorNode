@@ -68,26 +68,29 @@ void DS18B20::StartMeasurement( void ){
 	  }
 }
 
-void DS18B20::ReadMeasurement( char* string ){
+
+void DS18B20::ReadMeasurement( char* tempStr ){
 
 	unsigned char id[8], diff;
-	sprintf(string,"");
-	unsigned char i;
+
+	sprintf(tempStr,"%s",(char*)"");
+	sprintf(MACString,"%s",(char*)"");
+	//unsigned char i;
 	unsigned int temp;
 
 	for( diff = SEARCH_FIRST; diff != LAST_DEVICE; ){
 		diff = RomSearch( diff, id );
 
 	    if( diff == PRESENCE_ERR ){
-	    	sprintf(string, "No Sensor found." );
+	    	sprintf(tempStr, "Error 0x00|" ); // No sensor found
 	    	break;
 	    }
 	    if( diff == DATA_ERR ){
-	    	sprintf(string, "Bus Error." );
+	    	sprintf(tempStr, "Error 0x10|" ); // Bus Error
 	    	break;
 	    }
 	    if( id[0] == 0x28 || id[0] == 0x10 ){	// temperature sensor
-	    	sprintf( string, "%s<DS18B20><ID>%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X|",string, id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7] );
+	    	sprintf( MACString, "%s%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X|",MACString, id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7] );
 	    	WriteByte( THERM_CMD_RSCRATCHPAD );			// read command
 	    	temp = ReadByte();			// low byte
 	    	temp |= (unsigned int)ReadByte() << 8;		// high byte
@@ -96,7 +99,45 @@ void DS18B20::ReadMeasurement( char* string ){
 	    		temp <<= 3;
 	    	//   sprintf( string, "  %04X = ", temp );	// hex value
 
-	    	sprintf( string, "%s<T>%d.%01d°C||",string, temp >> 4, (temp << 12) / 6553 ); // 0.1C
+	    	sprintf( tempStr, "%s%d.%01d°C|",tempStr, temp >> 4, (temp << 12) / 6553 ); // 0.1C
+
+	    }
+
+	  }
+
+
+}
+
+void DS18B20::ReadMeasurement2( char* Macstring, char* tempStr ){
+
+	unsigned char id[8], diff;
+	sprintf(Macstring,(char*)" ");
+	sprintf(tempStr,(char*)" ");
+	//unsigned char i;
+	unsigned int temp;
+
+	for( diff = SEARCH_FIRST; diff != LAST_DEVICE; ){
+		diff = RomSearch( diff, id );
+
+	    if( diff == PRESENCE_ERR ){
+	    	sprintf(Macstring, "No Sensor found." );
+	    	break;
+	    }
+	    if( diff == DATA_ERR ){
+	    	sprintf(Macstring, "Bus Error." );
+	    	break;
+	    }
+	    if( id[0] == 0x28 || id[0] == 0x10 ){	// temperature sensor
+	    	sprintf( Macstring, "%s%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X|",Macstring, id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7] );
+	    	WriteByte( THERM_CMD_RSCRATCHPAD );			// read command
+	    	temp = ReadByte();			// low byte
+	    	temp |= (unsigned int)ReadByte() << 8;		// high byte
+	    	// temp-=0x20;
+	    	if( id[0] == 0x10 )			// 9 -> 12 bit
+	    		temp <<= 3;
+	    	//   sprintf( string, "  %04X = ", temp );	// hex value
+
+	    	sprintf( tempStr, "%s%d.%01d°C|",tempStr, temp >> 4, (temp << 12) / 6553 ); // 0.1C
 
 	    }
 
@@ -216,6 +257,15 @@ void DS18B20::Command( unsigned char command, unsigned char *id ){
 	  WriteByte( command );
 }
 
+void DS18B20::GetMACString(char* MACStringOut){
+	sprintf(MACStringOut,"%s",MACString);
+}
+
+void DS18B20::GetTemperatureString(char* TemperatureString){
+
+
+}
+
 void DS18B20::GetSensorStringXML(char* string){
 
 	//char str[255];
@@ -225,5 +275,13 @@ void DS18B20::GetSensorStringXML(char* string){
 	ReadMeasurement(string);
 
 }
+void DS18B20::GetTemperature(char* MACstring,char* tempString){
 
+	//char str[255];
+	StartMeasurement();
+//	ReadMeasurement(str);
+//_delay_ms(2000);
+	ReadMeasurement2( MACstring, tempString);
+
+}
 

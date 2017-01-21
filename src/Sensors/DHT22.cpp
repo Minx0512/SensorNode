@@ -189,7 +189,7 @@ void DHT22::GetSensorStringXML(char* string){
 	dtostrf(temp,3,1,tempBuff);
 	dtostrf(humidity,3,1,humBuff);
 
-	sprintf(string,"<DHT22><T unit='°C'>%s|<H unit='%%RH'>%s||err=%i|",tempBuff,humBuff,m);
+	sprintf(string,"%s:°C|%s:%%RH|%i|",tempBuff,humBuff,m);
 
 
 }

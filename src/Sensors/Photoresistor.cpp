@@ -71,7 +71,7 @@ void Photoresistor::GetSensorStringXML(char* string){
 	char str[10];
 	dtostrf(valueL,4,3,str);
 
-	sprintf(string,"<NSL19M51>%s|",str);
+	sprintf(string,"%s|",str);
 
 
 

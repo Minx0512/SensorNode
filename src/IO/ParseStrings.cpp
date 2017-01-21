@@ -24,7 +24,7 @@ ParseStrings::ParseStrings() {
 	u = USART();
 	cmdID=0;
 	cmdP =0;
-	PID=0;
+	sprintf(PID,"%s"," ");
 	sprintf(pString,"%s"," ");
 
 
@@ -43,7 +43,7 @@ void ParseStrings::ClearAll(){
 
 	cmdID = 0;
 	cmdP = 0;
-	PID = 0;
+	sprintf(PID," ");
 	sprintf(pString," ");
 
 
@@ -58,11 +58,16 @@ void ParseStrings::ParseMAC(){
 
 	uint8_t i = 0;
 	char *tmp;
-	char *tmpStr = strdup(pString);
+	char tmpStr[36];
+	sprintf(tmpStr,pString);
+	//strdup(pString);
 
 
-
+//	u.writeString(pString);
+	//u.writeString("\r\n");
 	addToken = strtok_r(tmpStr, ":",&tmp);
+
+//	u.writeString(addToken);
 
 	addr[0] = (uint8_t)strtoul(addToken,NULL,16);
 
@@ -75,13 +80,45 @@ void ParseStrings::ParseMAC(){
 
 
 	  }
-
-	  free(tmpStr);
+	//  u.writeString(pString);
+	//  free(tmpStr);
 
 }
 
 void ParseStrings::getPropertyString(char *propString){
 	sprintf(propString,"%s",pString);
+
+
+}
+void ParseStrings::getPropertyIDAsMAC(uint8_t propString[8]){
+
+	char *addToken;
+		//strtoken(pString,(char*)":",addToken);
+
+	uint8_t i = 0;
+	char *tmp;
+	char tmpStr[36];
+	sprintf(tmpStr,PID);
+
+
+
+	addToken = strtok_r(tmpStr, ":",&tmp);
+
+	propString[0] = (uint8_t)strtoul(addToken,NULL,16);
+
+	while ( addToken ) {
+		i++;
+		addToken = strtok_r(NULL, ":",&tmp);
+		if(addToken!=NULL && i<8){
+			propString[i] = (uint8_t)strtoul(addToken,NULL,16);
+		}
+
+
+	}
+
+	//free(tmpStr);
+
+
 
 
 }
@@ -108,8 +145,8 @@ uint8_t ParseStrings::getCmdID(){
 uint8_t ParseStrings::getCmdProperty(){
 	return cmdP;
 }
-uint8_t ParseStrings::getPropertyID(){
-	return PID;
+void ParseStrings::getPropertyID(char *PIDString){
+	sprintf(PIDString,"%s",PID);
 }
 
 
@@ -118,7 +155,7 @@ void ParseStrings::Parse(const char* string){
 	ClearAll();
 
 	char *token;
-
+	char* p;
 	uint8_t i = 0;
 	char *tmp;
 	char *tmpStr = strdup(string);
@@ -127,16 +164,16 @@ void ParseStrings::Parse(const char* string){
 
 //	u.writeString((char*)string);
 //	u.writeString(" | ");
-///	u.writeString(tmpStr);
+//	u.writeString(tmpStr);
 //	u.writeString(" |t:  ");
 
 	  token = strtok_r((char*)string, "|",&tmp);
 
-//	 u.writeString(token);
+	// u.writeString(token);
 //	 u.writeString(" | ");
-	  cmdID = atoi(token)/10;
+	  cmdID = uint8_t(strtoul(token,&p,16)/(0x10))*0x10;
 
-	  cmdP = atoi(token)-(cmdID*10);
+	  cmdP = uint8_t(strtoul(token,&p,16))-cmdID;
 
 
 
@@ -153,7 +190,10 @@ void ParseStrings::Parse(const char* string){
 //	 u.writeString(" . ");
 	    if(token!=NULL){
 	    	if(i==1){
-	    		PID = atoi(token);
+	    		sprintf(PID,"%s",token);
+	    	//	u.writeString("\t");
+	    	//	u.writeString(PID);
+	    	//	PID = atoi(token);
 	    	}else if(i==2){
 	    		sprintf(pString,"%s",token);
 	    	}
@@ -173,14 +213,14 @@ void ParseStrings::Parse(const char* string){
 void ParseStrings::PrintVars(char* string){
 
 	char buff[100];
-	sprintf(string,"##### Config String ###### \r\n");
+	sprintf(string,"\r\n##### Config String ###### \r\n");
 
 //	sprintf(buff,"MAC: %02X:%02X:%02X:%02X:%02X \r\n",addr[0],addr[1],addr[2],addr[3],addr[4]);strcat(string,buff);
 	sprintf(buff,"pString: %s \r\n",pString); strcat(string,buff);
 
-	sprintf(buff,"cmdID: %i \r\n",getCmdID()); strcat(string,buff);
-	sprintf(buff,"cmdP: %i \r\n",getCmdProperty());strcat(string,buff);
-	sprintf(buff,"PID: %i \r\n",getPropertyID());strcat(string,buff);
+	sprintf(buff,"cmdID: %02X \r\n",getCmdID()); strcat(string,buff);
+	sprintf(buff,"cmdP: %02X \r\n",getCmdProperty());strcat(string,buff);
+	sprintf(buff,"PID: %s \r\n",PID);strcat(string,buff);
 	sprintf(buff,"######################### \r\n");strcat(string,buff);
 
 
@@ -191,7 +231,7 @@ void ParseStrings::PrintMAC(char* string){
 
 	char buff[100];
 
-	sprintf(buff,"Pipe: %i MAC: %02X:%02X:%02X:%02X:%02X \r\n",getPropertyID(),addr[0],addr[1],addr[2],addr[3],addr[4]);strcat(string,buff);
+	sprintf(buff,"Pipe: %s MAC: %02X:%02X:%02X:%02X:%02X \r\n",PID,addr[0],addr[1],addr[2],addr[3],addr[4]);strcat(string,buff);
 
 	sprintf(buff,"######################### \r\n");strcat(string,buff);
 

@@ -63,6 +63,7 @@ class DS18B20 {
 	volatile uint8_t* WIRE_DDR;
 	volatile uint8_t* WIRE_PIN;
 	uint8_t WIRE_DQ;
+	char MACString[120];
 
 
 public:
@@ -70,15 +71,19 @@ public:
 // USART u;
 
 
-	void ReadMeasurement( char* string );
 
+
+	void ReadMeasurement( char* string );
+	void ReadMeasurement2( char* Macstring, char* tempStr );
 	DS18B20();
 	DS18B20(volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volatile uint8_t &Wire_PIN,uint8_t Wire_DQ);
 
 
 	//void therm_read_DS18B20(char*buffer);
-
+	void GetMACString(char* MACString);
+	void GetTemperatureString(char* TemperatureString);
 	void GetSensorStringXML(char* string);
+	void GetTemperature(char* MACstring,char* tempString);
 
 
 private:

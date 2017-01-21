@@ -2,7 +2,7 @@
 
 from Tkinter import *
 import tkMessageBox
-
+import os
 import sys
 import re
 import thread
@@ -30,49 +30,26 @@ def isNightTime(lightValue):
  t = int(time.strftime("%H",time.localtime()))
  #print "t: {0}".format(t)
  isNight = 1
- if t < 15 and t > 8:
+ if t < 16 and t > 8:
   isNight = 0
  return isNight
   
 def SleepMode(slpmd):
  slpmd = 1
 
-def NoMovement(lastmv,lightV,tIn,frame):
- noww = int(time.time() )
- prevMovementMins = noww - lastmv
- statLight = int(statusLight.get())  
- if prevMovementMins >= 5*60 and statLight==1:
-  SwitchOFF(frame)
-  #statusLight = 0
- #elif stateOlight ==0 and lightV<tIn:   
- # LightsOn()
- # stateOlight = 1 
- #print "Light: {0} - stateOfLight: {1}".format(lightVal,stateOlight)
- #return statusLight
+def NoMovement(lastmv,lightV,tIn):
+ statement = '/usr/bin/curl --header "Content-Type: text/plain" --request PUT --data "OFF" http://minxecho:8080/rest/items/RoomMatthias_Movement0/state'
+ os.system(statement) 
+ 
 
-def OnMovement(lightV,tIn,tOut,rsEneabled,frame):
+def OnMovement(lightV,tIn,tOut,rsEneabled):
  statLight = int(statusLight.get())
- if rsEneabled ==1:
-  #if RemoteLight(remoteSensors,0) < tOut:
-     # Lights on
-     #LightsOn()
-  #elif light< tInside:
-     #LightsOn()
-  #else:
-     #Lights off
-  SwitchOFF(frame)
- else:
-  #print "{0} {1}".format(lightV,statLight)  
-  if (lightV < tIn  or isNightTime(lightV)==1) and statLight==0: 
-   SwitchON(frame)
-     #lightsMsg.set(LightsOn(lightV))     
-    
-  elif lightV > tIn and isNightTime(lightV)==0 and statLight ==1:
-   SwitchOFF(frame)
- #return statusLight
-    
-
-def DetectMovement(socket,tInside, tOutside,rSensorsEnabled,slpmode,frame):
+ statement = '/usr/bin/curl --header "Content-Type: text/plain" --request PUT --data "ON" http://minxecho:8080/rest/items/RoomMatthias_Movement0/state'
+ os.system(statement)
+ statement = '/usr/bin/curl --header "Content-Type: text/plain" --request PUT --data "{0}" http://minxecho:8080/rest/items/RoomMatthias_LightVoltage0/state'.format(lightV)
+ os.system(statement)
+ 
+def DetectMovement(socket,tInside, tOutside,rSensorsEnabled,slpmode):
  
  
  lastmovement = 0
@@ -103,14 +80,32 @@ def DetectMovement(socket,tInside, tOutside,rSensorsEnabled,slpmode,frame):
    if m == 1: # movement detected
     lastmovement = int(time.time())
    #print "lastmovement: {0} ".format(lastmovement)
-   
+    while 1:
+     threadLock.acquire()
+     recData = GetLightsense(socket)
+  #sleep(1)
+ 
+  #print "recDataLight: ", recData
+     l = re.findall("<NSL19M51>(.*)\|",recData)
+     if len(l)>0:
+      light=float(l[0])
+     else:
+      light = -1
+ 
+     threadLock.release()
+  
+     if light>0:
+      lightVal.set(light)
+      break 
+     else:
+      sleep(2)
    #print l
     light = lightVal.get()  
    
-    OnMovement(light,tInside,tOutside,rSensorsEnabled,frame)
+    OnMovement(light,tInside,tOutside,rSensorsEnabled)
    
-   else:  # no movement
-    NoMovement(lastmovement,light,tInside,frame)
+  # else:  # no movement
+   # NoMovement(lastmovement,light,tInside,frame)
    
    sleep(1)     
 
@@ -147,7 +142,9 @@ def ReadSensorDataLight(socket,tnum):
   
   if light>0:
    lightVal.set(light)
-   sleep(30) 
+   statement = '/usr/bin/curl --header "Content-Type: text/plain" --request PUT --data "{0}" http://minxecho:8080/rest/items/RoomMatthias_LightVoltage0/state'.format(light)
+   os.system(statement)
+   sleep(120) 
   else:
    sleep(2)   
   
@@ -169,14 +166,25 @@ def ReadSensorData(socket,tnum):
   
   for d in dht:  
    lightsMsg.set("{0} : DHT22: T: {1}{2} | H: {3}{4} | err: {5} | Light: {6}".format(t, d[1],d[0],d[3],d[2],d[4],lightVal.get()))
-   DHT22TempVal.set(float(d[1]))
-   DHT22TempUnit.set("{0}".format(d[0]))
-   DHT22HumVal.set(float(d[3]))
-   DHT22HumUnit.set("{0}".format(d[2]))
-   errC = int(d[4])
+   try:
+    DHT22TempVal.set(float(d[1]))
+    DHT22TempUnit.set("{0}".format(d[0]))
+    DHT22HumVal.set(float(d[3]))
+    DHT22HumUnit.set("{0}".format(d[2]))
+    errC = int(d[4])
+   except:
+    errC = -10 
+  
+  print lightsMsg.get()
+   
   if errC is not 0:
    sleep(5)
-  else:     
+  else:
+   statement = '/usr/bin/curl --header "Content-Type: text/plain" --request PUT --data "{0}" http://minxecho:8080/rest/items/RoomMatthias_Temperature/state'.format(DHT22TempVal.get())
+   os.system(statement)
+   statement = '/usr/bin/curl --header "Content-Type: text/plain" --request PUT --data "{0}" http://minxecho:8080/rest/items/RoomMatthias_Humidity/state'.format(DHT22HumVal.get())
+   os.system(statement)
+       
    sleep(5*60)  
 
 def SwitchON(frame):
@@ -343,10 +351,10 @@ sleepmode = 0
 threadLock = thread.allocate_lock()
 
 top = Tk()
-top.minsize(1024, 600)
-top.maxsize(1024,600)
-top.title("SensorNode")
-top.config(bg=APP_BAR)
+# top.minsize(1024, 600)
+# top.maxsize(1024,600)
+# top.title("SensorNode")
+# top.config(bg=APP_BAR)
 
 timeStr = StringVar()
 lightsMsg = StringVar()
@@ -364,14 +372,15 @@ while conn==0:
   conn=1
  except IOError as e:
   lightsMsg.set("{0}".format(e))
+  print lightsMsg.get()
 
 
 # get temp and hum every hour
 # get Lightsensors every min
 # get RemoteSensors every min
 prevmins = 0
-thresh = 500
-treshOut = 500
+thresh = 360
+treshOut = 360
 
 
 
@@ -380,47 +389,47 @@ autoLights.set(1)
 
 statusLight = IntVar()
 statusLight.set(0)
+# 
+# menuID.set(0)
 
-menuID.set(0)
-
-Frame_Right = Frame(top)
-Frame_Right.config(bg=APP_BG)
-Frame_Right.place(relx=.5,rely=0,height=600,width=512)
-
-Frame_Left = Frame(top)
-Frame_Left.config(bg=APP_BG)
-Frame_Left.place(relx=0,rely=0,height=600,width=512)
-
-label_sensor = Label(Frame_Left,text="Controls ")
-label_sensor.config(bg=APP_BAR,fg=APP_FONT_COLOR,font="-weight bold -size 20")
-label_sensor.place(x=0,y=0,width=512,height=50) 
-
-Label_leftBottom = Label(Frame_Left, text=" ",padx=5,pady=5)
-Label_leftBottom.config(bg=APP_DIALOG,fg=APP_FONT_COLOR, textvariable=timeStr,anchor="w",font="-size 12")
-Label_leftBottom.place(relx=0,y=560,width=512,height=40)
-
-Button_LightsMenu = Button(Frame_Left, text ="Lights", relief=FLAT,command =lambda: LightsMenu(Frame_Right),padx=5,pady=5)
-Button_LightsMenu.config(bg=BUTTON_BG_COLOR_LIGHTS,activebackground=BUTTON_BG_COLOR_LIGHTS_HOVER,fg=BUTTON_FONT_COLOR_LIGHTS,activeforeground=BUTTON_FONT_COLOR_LIGHTS_HOVER,font="-weight bold",highlightthickness=0,bd=0)
-Button_LightsMenu.place(x=50, y=100,width=200, height=50)
-#Button_LightsMenu.invoke()
-
-Button_SensorsMenu = Button(Frame_Left, text ="Sensors", relief=FLAT,command =lambda: SensorsMenu(Frame_Right),padx=5,pady=5)
-Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_SENSORS,activebackground=BUTTON_BG_COLOR_SENSORS_HOVER,fg=BUTTON_FONT_COLOR_SENSORS,activeforeground=BUTTON_FONT_COLOR_SENSORS_HOVER,font="-weight bold",highlightthickness=0,bd=0)
-Button_SensorsMenu.place(x=50, y=160,width=200, height=50)
-
-Button_SensorsMenu = Button(Frame_Left, text ="Configure", relief=FLAT,command =lambda: ConfigureMenu(Frame_Right),padx=5,pady=5)
-Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_CONFIGURE,activebackground=BUTTON_BG_COLOR_CONFIGURE_HOVER,fg=BUTTON_FONT_COLOR_CONFIGURE,activeforeground=BUTTON_FONT_COLOR_CONFIGURE_HOVER,font="-weight bold",highlightthickness=0,bd=0)
-Button_SensorsMenu.place(x=50, y=220,width=200, height=50)
-
-Button_SensorsMenu = Button(Frame_Left, text ="System", relief=FLAT,command =lambda: SystemParamsMenu(sock,Frame_Right),padx=5,pady=5)
-Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_SYSTEM,activebackground=BUTTON_BG_COLOR_SYSTEM_HOVER,fg=BUTTON_FONT_COLOR_SYSTEM,activeforeground=BUTTON_FONT_COLOR_SYSTEM_HOVER,font="-weight bold",highlightthickness=0,bd=0)
-Button_SensorsMenu.place(x=50, y=280,width=200, height=50)
+# Frame_Right = Frame(top)
+# Frame_Right.config(bg=APP_BG)
+# Frame_Right.place(relx=.5,rely=0,height=600,width=512)
+# 
+# Frame_Left = Frame(top)
+# Frame_Left.config(bg=APP_BG)
+# Frame_Left.place(relx=0,rely=0,height=600,width=512)
+# 
+# label_sensor = Label(Frame_Left,text="Controls ")
+# label_sensor.config(bg=APP_BAR,fg=APP_FONT_COLOR,font="-weight bold -size 20")
+# label_sensor.place(x=0,y=0,width=512,height=50) 
+# 
+# Label_leftBottom = Label(Frame_Left, text=" ",padx=5,pady=5)
+# Label_leftBottom.config(bg=APP_DIALOG,fg=APP_FONT_COLOR, textvariable=timeStr,anchor="w",font="-size 12")
+# Label_leftBottom.place(relx=0,y=560,width=512,height=40)
+# 
+# Button_LightsMenu = Button(Frame_Left, text ="Lights", relief=FLAT,command =lambda: LightsMenu(Frame_Right),padx=5,pady=5)
+# Button_LightsMenu.config(bg=BUTTON_BG_COLOR_LIGHTS,activebackground=BUTTON_BG_COLOR_LIGHTS_HOVER,fg=BUTTON_FONT_COLOR_LIGHTS,activeforeground=BUTTON_FONT_COLOR_LIGHTS_HOVER,font="-weight bold",highlightthickness=0,bd=0)
+# Button_LightsMenu.place(x=50, y=100,width=200, height=50)
+# #Button_LightsMenu.invoke()
+# 
+# Button_SensorsMenu = Button(Frame_Left, text ="Sensors", relief=FLAT,command =lambda: SensorsMenu(Frame_Right),padx=5,pady=5)
+# Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_SENSORS,activebackground=BUTTON_BG_COLOR_SENSORS_HOVER,fg=BUTTON_FONT_COLOR_SENSORS,activeforeground=BUTTON_FONT_COLOR_SENSORS_HOVER,font="-weight bold",highlightthickness=0,bd=0)
+# Button_SensorsMenu.place(x=50, y=160,width=200, height=50)
+# 
+# Button_SensorsMenu = Button(Frame_Left, text ="Configure", relief=FLAT,command =lambda: ConfigureMenu(Frame_Right),padx=5,pady=5)
+# Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_CONFIGURE,activebackground=BUTTON_BG_COLOR_CONFIGURE_HOVER,fg=BUTTON_FONT_COLOR_CONFIGURE,activeforeground=BUTTON_FONT_COLOR_CONFIGURE_HOVER,font="-weight bold",highlightthickness=0,bd=0)
+# Button_SensorsMenu.place(x=50, y=220,width=200, height=50)
+# 
+# Button_SensorsMenu = Button(Frame_Left, text ="System", relief=FLAT,command =lambda: SystemParamsMenu(sock,Frame_Right),padx=5,pady=5)
+# Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_SYSTEM,activebackground=BUTTON_BG_COLOR_SYSTEM_HOVER,fg=BUTTON_FONT_COLOR_SYSTEM,activeforeground=BUTTON_FONT_COLOR_SYSTEM_HOVER,font="-weight bold",highlightthickness=0,bd=0)
+# Button_SensorsMenu.place(x=50, y=280,width=200, height=50)
 
 
 
 try:
  thread.start_new_thread(ReadSensorDataLight,(sock,2))
- thread.start_new_thread(DetectMovement, (sock,thresh,treshOut,remoteSensorsEnabled,sleepmode,Frame_Right))
+ thread.start_new_thread(DetectMovement, (sock,thresh,treshOut,remoteSensorsEnabled,sleepmode))
  thread.start_new_thread(ReadSensorData,(sock,2))
  thread.start_new_thread(GetTime,())
  #ReadSensorData(sock)
