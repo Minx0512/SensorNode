@@ -46,14 +46,7 @@
 
 
 
-extern "C"{
 
-inline __attribute__((gnu_inline)) void delay_us(uint16_t delay){
-	 while(delay--) asm volatile("nop");
-}
-
-
-}
 
 
 class DS18B20 {
@@ -106,8 +99,9 @@ private:
 	void PIN_LOW(){ *WIRE_PORT&=~(1<<WIRE_DQ);}
 	void PIN_HIGH(){*WIRE_PORT|=(1<<WIRE_DQ);}
 
-
-
+	inline __attribute__((gnu_inline)) void delay_us(uint16_t delay){
+		  	 while(delay--) asm volatile("nop");
+		  }
 
 };
 

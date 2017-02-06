@@ -32,15 +32,15 @@ if ser.isOpen():
  try:
    ser.flushInput() #flush input buffer, discarding all its contents
    ser.flushOutput()#flush output buffer, aborting current output
-   ser.write("{0}\r\n".format(NPGetSensorDataTempHumidityDHT22()))
-   print("write data: {0}".format(NPGetSensorDataTempHumidityDHT22()))
+   ser.write("{0}\r\n".format(NPGetSensorDataTempDS18B20()))
+   print("write data: {0}".format(NPGetSensorDataTempDS18B20()))
    time.sleep(0.5)
    numberOfLine = 0
 
    while True:
 
-    response = ser.read_until("|end", 1024)
-    print("Line {1} : read data: \r\n {0}\r\n".format(response,numberOfLine))
+    response = ser.read_until("\\\\+end")
+    print("Line {1} : read data: \r\n {0}".format(response,numberOfLine))
 
     numberOfLine = numberOfLine + 1
     if (numberOfLine >= 1):

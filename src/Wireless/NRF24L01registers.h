@@ -7,7 +7,12 @@
  * 	based on the Code of:
  *
  * nrf24l01 lib 0x02
- * copyright (c) Davide Gironi, 2012
+ * Copyright (C) 2011 J. Coliz <maniacbug@ymail.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation.
+ *
  * References:
  *   -  This library is based upon nRF24L01 avr lib by Stefan Engelke
  *      http://www.tinkerer.eu/AVRLib/nRF24L01
@@ -90,6 +95,15 @@
 #define NRF24L01_REG_RX_FULL     1
 #define NRF24L01_REG_RX_EMPTY    0
 #define NRF24L01_REG_RPD         0x09
+#define NRF24L01_REG_DPL_P5	    5
+#define NRF24L01_REG_DPL_P4	    4
+#define NRF24L01_REG_DPL_P3	    3
+#define NRF24L01_REG_DPL_P2	    2
+#define NRF24L01_REG_DPL_P1	    1
+#define NRF24L01_REG_DPL_P0	    0
+#define NRF24L01_REG_EN_DPL	    2
+#define NRF24L01_REG_EN_ACK_PAY  1
+#define NRF24L01_REG_EN_DYN_ACK  0
 #define NRF24L01_REG_RF_DR_LOW   5
 #define NRF24L01_REG_RF_DR_HIGH  3
 #define NRF24L01_REG_RF_PWR_LOW  1
@@ -99,13 +113,18 @@
 #define NRF24L01_CMD_R_REGISTER    0x00
 #define NRF24L01_CMD_W_REGISTER    0x20
 #define NRF24L01_CMD_REGISTER_MASK 0x1F
+#define NRF24L01_CMD_ACTIVATE      0x50
+#define NRF24L01_CMD_R_RX_PL_WID   0x60
 #define NRF24L01_CMD_R_RX_PAYLOAD  0x61
 #define NRF24L01_CMD_W_TX_PAYLOAD  0xA0
+#define NRF24L01_CMD_W_ACK_PAYLOAD 0xA8
 #define NRF24L01_CMD_FLUSH_TX      0xE1
 #define NRF24L01_CMD_FLUSH_RX      0xE2
 #define NRF24L01_CMD_REUSE_TX_PL   0xE3
 #define NRF24L01_CMD_NOP           0xFF
-
+/* P model memory Map */
+#define RPD         0x09
+#define NRF24L01_CMD_W_TX_PAYLOAD_NO_ACK  0xB0
 
 
 #endif /* NRF24L01REGISTERS_H_ */

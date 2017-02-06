@@ -45,7 +45,7 @@
 #endif
 
 uint8_t sent = 0;
-
+uint8_t flag2 = 0;
 uint8_t flagMovement = 0;
 uint8_t nrfIntFlag = 0;
 
@@ -62,16 +62,19 @@ uint8_t nrfChannel EEMEM;
 uint8_t nrfACK EEMEM;
 
 
-uint8_t nRFPipe0[5] EEMEM;
-uint8_t nRFPipe1[5] EEMEM;
-uint8_t nRFPipe2[5] EEMEM;
-uint8_t nRFPipe3[5] EEMEM;
-uint8_t nRFPipe4[5] EEMEM;
-uint8_t nRFPipe5[5] EEMEM;
+uint64_t mem_adressTx[25] EEMEM;
+uint64_t mem_adressRx[5] EEMEM;
 
+
+
+/** standard Rx address to receive data on */
+uint64_t adressRx[] = {0xa0a0a0a0a0,0xa0a0a0a0a1,0xa0a0a0a0a2,0xa0a0a0a0a3,0xa0a0a0a0a4};
+
+/**  Tx address to send data to */
+uint64_t adressTx[] = {0xb0b0b0b0b1,0xb0b0b0b0c1,0xb0b0b0b0d1,0xb0b0b0b0e1,0xb0b0b0b0f1};
 
 USART uart = USART(9600);
-NRF24L01 nrf = NRF24L01(DDRB, PORTD, CE, CSN);
+NRF24L01 nrf = NRF24L01(DDRB, PORTB, CE, CSN);
 ParseStrings ps = ParseStrings();
 
 
@@ -86,6 +89,8 @@ Photoresistor pr = Photoresistor(0x00);
 #endif
 
 char str[RX_BUFF];
+
+
 
 
 void delay_ms(uint16_t ms){
@@ -112,6 +117,7 @@ void GetNodeMAC(char* newMAC, uint8_t* nrfMAC){
 
 
 }
+
 void CreateSensorMAC(char* newMAC, uint8_t* nrfMAC,char* add){
 
 
@@ -120,17 +126,23 @@ void CreateSensorMAC(char* newMAC, uint8_t* nrfMAC,char* add){
 
 
 }
+void CreateSensorMAC(char* newMAC, uint64_t nrfMAC,char* add){
 
+
+	sprintf(newMAC,"%02X:%02X:%02X:%02X:%02X%s",
+			(uint8_t)(nrfMAC & 0x00000000ff),
+			(uint8_t)((nrfMAC & 0x000000ff00)>>8),
+			(uint8_t)((nrfMAC & 0x0000ff0000)>>16),
+			(uint8_t)((nrfMAC & 0x00ff000000)>>24),
+			(uint8_t)((nrfMAC & 0xff00000000)>>32),add);
+
+
+
+}
 
 void SetupNRF(){
 
-	// standard mac addresses
-	uint8_t  stdMACpipe0[] = {0xa0, 0xa0, 0xa0, 0xa0, 0xa0}; // Tx address
-	uint8_t  stdMACpipe1[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb0};
-	uint8_t  stdMACpipe2[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb1};
-	uint8_t  stdMACpipe3[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb2};
-	uint8_t  stdMACpipe4[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb3};
-	uint8_t  stdMACpipe5[] = {0xb1, 0xb0, 0xb0, 0xb0, 0xb4};
+
 
 
 	uint8_t nrfChn = 0x0A;
@@ -145,12 +157,9 @@ void SetupNRF(){
 		// empty eeprom after chip erase
 
 		// nRF config
-		eeprom_update_block(stdMACpipe0,nRFPipe0,sizeof(nRFPipe0));
-		eeprom_update_block(stdMACpipe1,nRFPipe1,sizeof(nRFPipe1));
-		eeprom_update_block(stdMACpipe2,nRFPipe2,sizeof(nRFPipe2));
-		eeprom_update_block(stdMACpipe3,nRFPipe3,sizeof(nRFPipe3));
-		eeprom_update_block(stdMACpipe4,nRFPipe4,sizeof(nRFPipe4));
-		eeprom_update_block(stdMACpipe5,nRFPipe5,sizeof(nRFPipe5));
+		eeprom_update_block(adressTx,mem_adressTx,sizeof(mem_adressTx));
+		eeprom_update_block(adressRx,mem_adressRx,sizeof(mem_adressRx));
+
 
 		eeprom_write_byte(&firstrun,1);
 
@@ -163,12 +172,9 @@ void SetupNRF(){
 		// after restart
 
 		// read nRF config
-		eeprom_read_block (stdMACpipe0, nRFPipe0, sizeof(nRFPipe0));
-		eeprom_read_block (stdMACpipe1, nRFPipe1, sizeof(nRFPipe1));
-		eeprom_read_block (stdMACpipe2, nRFPipe2, sizeof(nRFPipe2));
-		eeprom_read_block (stdMACpipe3, nRFPipe3, sizeof(nRFPipe3));
-		eeprom_read_block (stdMACpipe4, nRFPipe4, sizeof(nRFPipe4));
-		eeprom_read_block (stdMACpipe5, nRFPipe5, sizeof(nRFPipe5));
+		eeprom_read_block(adressTx,mem_adressTx,sizeof(mem_adressTx));
+		eeprom_read_block(adressRx,mem_adressRx,sizeof(mem_adressRx));
+
 
 		nrfChn = eeprom_read_byte(&nrfChannel);
 		nrfAutoACK = eeprom_read_byte(&nrfACK);
@@ -178,34 +184,26 @@ void SetupNRF(){
 
 
 	}
-	//	char tr[50];
-	//	sprintf(tr,"FR: %i - MAC: %02X:%02X:%02X:%02X:%02X\r\n",fr,stdMACpipe1[0],stdMACpipe1[1],stdMACpipe1[2],stdMACpipe1[3],stdMACpipe1[4]);
-	//	uart.writeString(tr);
 
 
-	nrf.SetAddressPipe0(stdMACpipe0);
-	nrf.SetAddressPipe1(stdMACpipe1);
-	nrf.SetAddressPipe2(stdMACpipe2);
-	nrf.SetAddressPipe3(stdMACpipe3);
-	nrf.SetAddressPipe4(stdMACpipe4);
-	nrf.SetAddressPipe5(stdMACpipe5);
-	nrf.SetAddressPipeT(stdMACpipe0);
-
-	nrf.SetAutoAck(nrfAutoACK);
-	nrf.SetChannel(nrfChn);
-
-	nrf.SetPowerLevel(NRF24L01_RF24_PA_MIN);
-
-	nrf.SetDataRate(NRF24L01_RF24_SPEED_250KBPS);
 
 
-	//	uart.writeString("Init... ");
-
-	nrf.spi = SPI(DDRB,PORTB,PB4,PB3,PB5,PB2);
-	//nrf24l01_init();
 	nrf.Init();
+	nrf.setChannel(nrfChn);
+	nrf.setCRCLength(RF24_CRC_16);
+	nrf.setPALevel(RF24_PA_LOW);
+	nrf.setDataRate(RF24_1MBPS);
+	nrf.setAutoAck(true);
+	nrf.enableAckPayload();
+	nrf.enableDynamicPayloads();
 
-	//	uart.writeString("... done \r\n");
+	nrf.openWritingPipe(adressTx[0]);
+	nrf.openReadingPipe(1,adressRx[1]);
+
+	nrf.startListening();
+
+
+
 
 }
 
@@ -235,14 +233,14 @@ ISR(INT0_vect){
 	// nrf receive
 	//uart.writeString("INT0\r\n");
 	nrfIntFlag = 1;
-
-	uint8_t payloadSize = nrf.GetPayloadSize();
+/*
+	uint8_t payloadSize = nrf.getPayloadSize();
 	uint8_t bufferin[payloadSize-6];
 	char bufferout[payloadSize];
 	uint8_t pipe = 0;
 		if(nrf.ReadReady(&pipe)) { //if data is ready
 			//read buffer
-			nrf.Read(bufferin);
+			nrf.read(bufferin,payloadSize);
 			//	uint8_t samecheck = 1;
 
 
@@ -262,7 +260,7 @@ ISR(INT0_vect){
 
 		}
 
-
+*/
 
 }
 
@@ -272,7 +270,7 @@ ISR(INT1_vect){
 
 }
 
-uint8_t flag2 = 0;
+
 
 ISR(USART_RX_vect){
 // fifo_put
@@ -360,33 +358,11 @@ int main(){
 	SetupNRF();
 	delay_ms(500);
 
-	//sprintf(system,"<SYSTEM><VERSION>1.0||");
 
-	//delay_ms(50);
+	uint64_t  stdMAC = {0xa0a0a0a0a0};
 
-
-	//char nrfBuff[350];
-	//char system[50];
-
-//	sprintf(nrfBuff," ");
-//	sprintf(system," ");
-//	char buffer[500];
-//	nrf.PrintInfo(buffer);
-//sprintf(system,"<SYSTEM><VERSION>1.0|");
-	//strcat(system,buffer);
-
-	//sprintf(buffer,"%s|%s",system,nrfBuff);
-	uint8_t  stdMACpipe0[] = {0xa0, 0xa0, 0xa0, 0xa0, 0xa0};
-//	uart.writeString(buffer);
-//	uart.writeString("\r\n");
-	//delay_ms(500);
-//	uart.writeString(buffer);
-	// sprintf(buffer,"|+end\r\n");
-	//uart.writeString("|+end\r\n");
 	char propString[36];
-	//free(buffer);
-	//sprintf(buffer," ");
-	//uart.writeString(buffer);
+
 
 		while(1){
 			//uint8_t macAddr[5];
@@ -395,37 +371,22 @@ int main(){
 
 			PORTD ^= (1<<PD4);
 
-		//	delay_ms(100);
 
 			sprintf(buffer," ");
 
 
-
 			if(nrfIntFlag){
-
-			//	uart.writeString("NRF-INT\r\n");
-
-
-
 				nrfIntFlag = 0;
+
+
+
 
 			}
 
 			if(flag2){
 
-			//	char buffe[120];
 
-		//	uart.writeString("String: ");
-		//		uart.writeString(str);
-		//	uart.writeString("\r\n");
-			//	sprintf(buffe,"");
 				ps.Parse(str);
-			//	ps.Parse("34|0|ds");
-
-			//	ps.PrintVars(buffe);
-
-			//	uart.writeString(buffe);
-			//	sprintf(buffe,"");
 
 
 				if(ps.getCmdID()==0x10){ // configure nRF24L01
@@ -439,16 +400,15 @@ int main(){
 
 						ps.ParseMAC();
 
-						uint8_t addr[5];
-					//	char macadd[60];
-						ps.getMAC(addr);
+						uint64_t addr = ps.getMAC();
 
 					//	sprintf(macadd,"mac: %02X:%02X:%02X:%02X:%02X\r\n",addr[0],addr[1],addr[2],addr[3],addr[4]);
 
 					//	uart.writeString(macadd);
 						if(PID==0){ // pipe 0 and T
 
-							eeprom_write_block(addr,nRFPipe0,sizeof(addr));
+							eeprom_write_block(&addr,&mem_adressTx[0],sizeof(mem_adressTx[0]));
+
 
 						//	nrf.SetAddressPipe0(addr);
 						//	nrf.SetAddressPipeT(addr);
@@ -464,7 +424,7 @@ int main(){
 
 						}else if(PID==1){ // pipe 1
 
-							eeprom_write_block(addr,nRFPipe1,sizeof(addr));
+							eeprom_write_block(&addr,&mem_adressRx[0],sizeof(mem_adressRx[0]));
 
 						//	strcat(buffer,"wrote block\r\n");
 
@@ -472,22 +432,22 @@ int main(){
 							//CpyMAC(addr,a1,5);
 
 						}else if(PID==2){ // pipe 2
-							eeprom_update_block(addr,nRFPipe2,sizeof(addr));
+							eeprom_write_block(&addr,&mem_adressRx[1],sizeof(mem_adressRx[1]));
 						//	nrf.SetAddressPipe2(addr);
 						//	CpyMAC(addr,a2,5);
 
 						}else if(PID==3){ // pipe 3
-							eeprom_update_block(addr,nRFPipe3,sizeof(addr));
+							eeprom_write_block(&addr,&mem_adressRx[2],sizeof(mem_adressRx[2]));
 						//	nrf.SetAddressPipe3(addr);
 							//CpyMAC(addr,a3,5);
 
 						}else if(PID==4){ // pipe 4
-							eeprom_update_block(addr,nRFPipe4,sizeof(addr));
+							eeprom_write_block(&addr,&mem_adressRx[3],sizeof(mem_adressRx[3]));
 						//	nrf.SetAddressPipe4(addr);
 						//	CpyMAC(addr,a4,5);
 
 						}else if(PID==5){ // pipe 5
-							eeprom_update_block(addr,nRFPipe5,sizeof(addr));
+							eeprom_write_block(&addr,&mem_adressRx[4],sizeof(mem_adressRx[4]));
 						//	nrf.SetAddressPipe5(addr);
 							//CpyMAC(addr,a5,5);
 
@@ -573,19 +533,23 @@ int main(){
 					/* Get System Info
 					 *
 					 */
+
+					char infoString[32];
+					char nodeMac[16];
+					char valBuffer[35];
+
 					ps.getPropertyString(propString);
-					eeprom_read_block (stdMACpipe0, nRFPipe0, sizeof(nRFPipe0));
+
+
+
+					eeprom_read_block (&stdMAC, &mem_adressRx[0], sizeof(mem_adressRx[0]));
 
 					if(ps.getCmdProperty()==0x00){
 						/* Get available main node sensors
 						 *
 						 */
 
-						char infoString[32];
-						char nodeMac[16];
-						char valBuffer[35];
-
-						CreateSensorMAC(nodeMac,stdMACpipe0,(char*)"|");
+						CreateSensorMAC(nodeMac,stdMAC,(char*)"|");
 						sprintf(valBuffer,"%s",(char*)"");
 
 						#if Sensor_Move
@@ -611,6 +575,20 @@ int main(){
 						uart.writeString(infoString);
 
 
+					}else if(ps.getCmdProperty()==0x01){
+						/* Get available node 1 sensors
+						 *
+						 */
+
+						CreateSensorMAC(nodeMac,stdMAC,(char*)"|");
+						sprintf(valBuffer,"%s",(char*)"");
+
+						// get node 1 sensors from nRF
+
+
+
+
+
 					}
 
 
@@ -620,7 +598,7 @@ int main(){
 
 					ps.getPropertyString(propString);
 
-					eeprom_read_block (stdMACpipe0, nRFPipe0, sizeof(nRFPipe0));
+					eeprom_read_block (&stdMAC, &mem_adressRx[0], sizeof(mem_adressRx[0]));
 					uint8_t sensorMAC[8];
 
 					ps.getPropertyIDAsMAC(sensorMAC);
@@ -637,7 +615,7 @@ int main(){
 
 
 
-							CreateSensorMAC(newMac,stdMACpipe0,(char*)":00:01:00|");
+							CreateSensorMAC(newMac,stdMAC,(char*)":00:01:00|");
 
 							if(flagMovement){
 									// movement detected
@@ -684,7 +662,7 @@ int main(){
 							pr.GetSensorStringXML(lightBuffer);
 							char lightMac[25];
 
-							CreateSensorMAC(lightMac,stdMACpipe0,(char*)":00:03:00|");
+							CreateSensorMAC(lightMac,stdMAC,(char*)":00:03:00|");
 
 							sprintf(prbuffer,sendSensorStr,propString,lightMac,lightBuffer);
 

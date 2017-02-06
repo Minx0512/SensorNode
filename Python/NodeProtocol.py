@@ -40,11 +40,11 @@ def NPGetSensorDataTempDHT22():
 def NPGetSensorDataHumidityDHT22():
     return '31|0|HumDHT22'
 def NPGetSensorDataTempHumidityDHT22():
-    return '32|0|TmpHumDHT22'
+    return '32|0|DHT'
 def NPGetSensorDataLightsense():
     return '33|0|Light'
 def NPGetSensorDataTempDS18B20():
-    return '34|0|DS'
+    return '35|0|DST'
 def NPGetSensorDataMove():
     return '35|0|Mv'
 

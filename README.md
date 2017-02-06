@@ -10,7 +10,6 @@ The sensor nodes Wireless addresses can be configured via a python script.
 
 Communications protocoll between the raspberry pi and the main sensor node:
 
-
 HEX(command id (CmdID) + command property (cmdP) )| property id (PID/PVal) | property string (pString)
 example request:
 0x31|A0:A0:A0:A0:A0:00:01|DHT 

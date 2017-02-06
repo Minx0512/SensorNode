@@ -18,7 +18,7 @@ class SPI {
 
 	//spi ports
 	volatile uint8_t* SPI_DDR;
-	volatile uint8_t* SPI_PORT;
+	//volatile uint8_t* SPI_PORT;
 	uint8_t SPI_MISO;
 	uint8_t SPI_MOSI;
 	uint8_t SPI_SCK;
@@ -32,7 +32,7 @@ class SPI {
 
 public:
 	SPI();
-	SPI(volatile uint8_t &DDR,volatile uint8_t &PORT,uint8_t MISO, uint8_t MOSI,uint8_t SCK,uint8_t SS);
+	SPI(volatile uint8_t &DDR,uint8_t MISO, uint8_t MOSI,uint8_t SCK,uint8_t SS);
 
 	void Init();
 	uint8_t WriteReadbyte(uint8_t data);

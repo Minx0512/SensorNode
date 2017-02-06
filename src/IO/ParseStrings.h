@@ -2,7 +2,7 @@
  * ParseStrings.h
  *
  *  Created on: 15 Dec 2016
- *      Author: matthias
+ *      Author: Matthias Minx
  */
 
 #ifndef PARSESTRINGS_H_
@@ -12,7 +12,7 @@
 #include <string.h>
 #include <inttypes.h>
 #include <avr/pgmspace.h>
-
+#include <stdint.h>
 #include "USART.h"
 
 class ParseStrings {
@@ -30,8 +30,9 @@ public:
 	void Parse(const char* string);
 	void ParseMAC();
 
-	uint8_t * getMAC();
-	uint8_t getMAC(uint8_t* a);
+//	uint8_t * getMAC();
+	//uint8_t getMAC(uint8_t* a);
+	uint64_t getMAC();
 	void getPropertyString(char *propString);
 	void getPropertyIDAsMAC(uint8_t propString[8]);
 

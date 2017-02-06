@@ -15,22 +15,25 @@ SPI::SPI() {
 	// TODO Auto-generated constructor stub
 
 	//spi ports
+
+#if defined(__AVR_ATmega328P__)
+
 		 SPI_DDR =&DDRB;
-		 SPI_PORT = &PORTB;
+		// SPI_PORT = &PORTB;
 		 SPI_MISO = PB4;
 		 SPI_MOSI = PB3;
 		 SPI_SCK = PB5;
 		 SPI_SS = PB2;
-
+#endif
 
 
 }
 
-SPI::SPI(volatile uint8_t &DDR,volatile uint8_t &PORT,uint8_t MISO, uint8_t MOSI,uint8_t SCK,uint8_t SS){
+SPI::SPI(volatile uint8_t &DDR,uint8_t MISO, uint8_t MOSI,uint8_t SCK,uint8_t SS){
 
 	//spi ports
 	 SPI_DDR =&DDR;
-	 SPI_PORT = &PORT;
+	// SPI_PORT = &PORT;
 	 SPI_MISO = MISO;
 	 SPI_MOSI = MOSI;
 	 SPI_SCK = SCK;

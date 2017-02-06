@@ -7,7 +7,7 @@
 
 
 #include <avr/io.h>
-
+#include <stdint.h>
 #include <avr/pgmspace.h>
 
 #include "ParseStrings.h"
@@ -122,6 +122,7 @@ void ParseStrings::getPropertyIDAsMAC(uint8_t propString[8]){
 
 
 }
+/*
 uint8_t* ParseStrings::getMAC(){
 
 return addr;
@@ -135,6 +136,21 @@ uint8_t ParseStrings::getMAC(uint8_t* a){
 	}
 
 	return 0;
+
+}
+*/
+uint64_t ParseStrings::getMAC(){
+
+uint64_t value = reinterpret_cast<uint64_t>(&addr[0]) |
+		reinterpret_cast<uint64_t>(&addr[1]) << 8 |
+		reinterpret_cast<uint64_t>(&addr[2]) << 16 |
+		reinterpret_cast<uint64_t>(&addr[3]) << 24 |
+		reinterpret_cast<uint64_t>(&addr[4]) << 32;
+
+
+
+
+	return value;
 
 }
 

@@ -7,7 +7,12 @@
  * 	based on the Code of:
  *
  * nrf24l01 lib 0x02
- * copyright (c) Davide Gironi, 2012
+ * Copyright (C) 2011 J. Coliz <maniacbug@ymail.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation.
+ *
  * References:
  *   -  This library is based upon nRF24L01 avr lib by Stefan Engelke
  *      http://www.tinkerer.eu/AVRLib/nRF24L01
@@ -29,12 +34,8 @@
 #include "../IO/SPI.h"
 
 
-
-
-
 NRF24L01::NRF24L01() {
-	// TODO Auto-generated constructor stub
-	//spi = SPI(DDRB,PORTB,PB4,PB3,PB5,PB2);
+
 
 	NRF24L01_DDR = &DDRB;
 //	NRF24L01_PORT = &PORTB;
@@ -42,14 +43,14 @@ NRF24L01::NRF24L01() {
 	NRF24L01_CSN = PB0;
 
 	//transmission channel
-	SetChannel(124);
+	setChannel(124);
 		//payload lenght
-	SetPayloadSize(16);
+	setPayloadSize(16);
 		//auto ack enabled
-	EnableAutoAck();
+	setAutoAck(true);
 
 
-
+/*
 	//enable / disable pipe
 	EnablePipe(0);
 	EnablePipe(1);
@@ -57,15 +58,12 @@ NRF24L01::NRF24L01() {
 	EnablePipe(3);
 	EnablePipe(4);
 	EnablePipe(5);
-
+*/
 	NRF24L01_ADDRSIZE = 5;
 
 
-
-
-
 	//uint8_t a0[5] = { 0xe0, 0xf0, 0xf0, 0xf0, 0xf0 };
-
+/*
 	SetAddress(nrf24l01_addr0,0xe0, 0xf0, 0xf0, 0xf0, 0xf0);
 	SetAddress(nrf24l01_addr1,0xe1, 0xf0, 0xf0, 0xf0, 0xe0);
 	SetAddress(nrf24l01_addr2,0xe1, 0xf0, 0xf0, 0xf0, 0xe1);
@@ -74,7 +72,7 @@ NRF24L01::NRF24L01() {
 	SetAddress(nrf24l01_addr5,0xe1, 0xf0, 0xf0, 0xf0, 0xe4);
 	SetAddress(nrf24l01_addrtx,0xe0, 0xf0, 0xf0, 0xf0, 0xf0);
 
-/*
+
 	uint8_t a1[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe0};
 	uint8_t a2[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe1};
 	uint8_t a3[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe2};
@@ -86,19 +84,19 @@ NRF24L01::NRF24L01() {
 */
 
 	//power setup
-	SetPowerLevel(NRF24L01_RF24_PA_MIN);
+//	SetPowerLevel(NRF24L01_RF24_PA_MIN);
 
 	//speed setup
-	SetDataRate(NRF24L01_RF24_SPEED_1MBPS);
+//	SetDataRate(NRF24L01_RF24_SPEED_1MBPS);
 
 	//crc setup
-	SetCRClength(NRF24L01_RF24_CRC_16);
+//	SetCRClength(NRF24L01_RF24_CRC_16);
 
 //	u = USART();
 
 }
 
-NRF24L01::NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, uint8_t CSN){
+NRF24L01::NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, uint8_t CSN):p_variant(true),csDelay(5){
 // DDR, PORT, CE,CSN
 	//u = USART();
 	//spi = SPI(DDRB,PORTB,PB4,PB3,PB5,PB2);
@@ -107,14 +105,18 @@ NRF24L01::NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, ui
 	NRF24L01_CE = CE;
 	NRF24L01_CSN = CSN;
 
+	txDelay = 0;
+	spi_speed = 0;
+	failureDetected=false;
+
 	//transmission channel
 	NRF24L01_CH = 124;
 			//payload lenght
-	NRF24L01_PAYLOAD = 16;
+	NRF24L01_PAYLOAD = 32;
 			//auto ack enabled
 	NRF24L01_ACK = 1;
 
-
+	dynamic_payloads_enabled = false;
 
 			//enable / disable pipe
 	NRF24L01_ENABLEDP0 = 1; //pipe 0
@@ -136,7 +138,7 @@ NRF24L01::NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, ui
 	//crc setup
 	NRF24L01_RF24_CRC = NRF24L01_RF24_CRC_16;
 
-
+/*
 	uint8_t a0[5] = {0xe0, 0xf0, 0xf0, 0xf0, 0xf0};
 	uint8_t a1[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe0};
 	uint8_t a2[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe1};
@@ -144,25 +146,26 @@ NRF24L01::NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, ui
 	uint8_t a4[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe3};
 	uint8_t a5[5] =	{0xe1, 0xf0, 0xf0, 0xf0, 0xe4};
 	uint8_t aT[5] =	{0xe0, 0xf0, 0xf0, 0xf0, 0xf0};
+*/
+	pipe0_reading_address[0]=0;
 
-	SetAddresses(a0,a1,a2,a3,a4,a5,aT);
+	//SetAddresses(a0,a1,a2,a3,a4,a5,aT);
 
 
 
 
 }
 
-void NRF24L01::Init(){
+bool NRF24L01::Init(){
+
+	 uint8_t setup=0;
 	//setup port
+
 		*NRF24L01_DDR |= (1<<NRF24L01_CSN); //output
 		*NRF24L01_DDR |= (1<<NRF24L01_CE); //output
 
-
-
-	 //   init spi
-	    spi.Init();
-
-
+		spi = SPI();
+	    spi.Init(); //   init spi
 	    CE_LOW(); //low CE
 	    CSN_HIGH(); //high CSN
 
@@ -170,108 +173,148 @@ void NRF24L01::Init(){
 	    _delay_ms(5); //wait for the radio to init
 
 
-	    SetPowerLevel(); //set power level
+	    // Reset NRF_CONFIG and enable 16-bit CRC.
+	     WriteRegister( NRF24L01_REG_CONFIG, 0x0C ) ;
 
-	    SetDataRate(); //set data rate
+	    setRetries(5,15);
 
-	    SetCRClength(); //set crc length
+	    setPALevel( RF24_PA_MAX ) ;
+
+	    if( setDataRate( RF24_250KBPS ) ){
+	        p_variant = true ;
+	    }
+	    setup = ReadRegister(NRF24L01_REG_RF_SETUP);
+
+	    // Then set the data rate to the slowest (and most reliable) speed supported by all
+	    // hardware.
+	    setDataRate( RF24_1MBPS );
+	    ToggleFeatures();
+	    WriteRegister(NRF24L01_REG_FEATURE,0 );
+	    WriteRegister(NRF24L01_REG_DYNPD,0);
+	      dynamic_payloads_enabled = false;
+
+	  // Reset current status
+	   // Notice reset and flush is the last thing we do
+	  WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MASK_RX_DR) | _BV(NRF24L01_REG_MASK_TX_DS) | _BV(NRF24L01_REG_MASK_MAX_RT) );
+	  // Set up default configuration.  Callers can always change it later.
+	  // This channel should be universally safe and not bleed over into adjacent
+	 // spectrum.
+	 setChannel(0x0A);
+
+	 // Flush buffers
+	   FlushRx();
+	   FlushTx();
+
+	   powerUp(); //Power up by default when begin() is called
+
+	   // Enable PTX, do not write CE high so radio will remain in standby I mode ( 130us max to transition to RX or TX instead of 1500us from powerUp )
+		 // PTX should use only 22uA of power
+	   WriteRegister(NRF24L01_REG_CONFIG, ( ReadRegister(NRF24L01_REG_CONFIG) ) & ~_BV(NRF24L01_REG_PRIM_RX) );
+
+		 // if setup is 0 or ff then there was no response from module
+	 return ( setup != 0 && setup != 0xff );
 
 
-	    WriteRegister(NRF24L01_REG_SETUP_RETR, NRF24L01_RETR); // set retries
-	    WriteRegister(NRF24L01_REG_DYNPD, 0x03); //enable dynamic payloads
-	    WriteRegister(NRF24L01_REG_RF_CH, NRF24L01_CH); //set RF channel
-
-	 //   u.writeString("write regs done\r\n");
-
-		//payload size
-		if(NRF24L01_ENABLEDP0){
-			WriteRegister(NRF24L01_REG_RX_PW_P0, NRF24L01_PAYLOAD);
-		}
-		if(NRF24L01_ENABLEDP1){
-			WriteRegister(NRF24L01_REG_RX_PW_P1, NRF24L01_PAYLOAD);
-		}
-		if(NRF24L01_ENABLEDP2){
-			WriteRegister(NRF24L01_REG_RX_PW_P2, NRF24L01_PAYLOAD);
-		}
-		if(NRF24L01_ENABLEDP3){
-			WriteRegister(NRF24L01_REG_RX_PW_P3, NRF24L01_PAYLOAD);
-		}
-		if(NRF24L01_ENABLEDP4){
-			WriteRegister(NRF24L01_REG_RX_PW_P4, NRF24L01_PAYLOAD);
-		}
-		if(NRF24L01_ENABLEDP5){
-			WriteRegister(NRF24L01_REG_RX_PW_P5, NRF24L01_PAYLOAD);
-		}
-
-		//enable pipe
-		WriteRegister(NRF24L01_REG_EN_RXADDR, 0);
-
-		if(NRF24L01_ENABLEDP0){
-			WriteRegister(NRF24L01_REG_EN_RXADDR, ReadRegister(NRF24L01_REG_EN_RXADDR) | (1<<NRF24L01_REG_ERX_P0));
-		}
-		if(NRF24L01_ENABLEDP1) {
-			WriteRegister(NRF24L01_REG_EN_RXADDR, ReadRegister(NRF24L01_REG_EN_RXADDR) | (1<<NRF24L01_REG_ERX_P1));
-		}
-		if(NRF24L01_ENABLEDP2){
-			WriteRegister(NRF24L01_REG_EN_RXADDR, ReadRegister(NRF24L01_REG_EN_RXADDR) | (1<<NRF24L01_REG_ERX_P2));
-		}
-		if(NRF24L01_ENABLEDP3){
-			WriteRegister(NRF24L01_REG_EN_RXADDR, ReadRegister(NRF24L01_REG_EN_RXADDR) | (1<<NRF24L01_REG_ERX_P3));
-		}
-		if(NRF24L01_ENABLEDP4){
-			WriteRegister(NRF24L01_REG_EN_RXADDR, ReadRegister(NRF24L01_REG_EN_RXADDR) | (1<<NRF24L01_REG_ERX_P4));
-		}
-		if(NRF24L01_ENABLEDP5){
-			WriteRegister(NRF24L01_REG_EN_RXADDR, ReadRegister(NRF24L01_REG_EN_RXADDR) | (1<<NRF24L01_REG_ERX_P5));
-		}
-
-		//auto ack
-		if(NRF24L01_ACK ){
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) | (1<<NRF24L01_REG_ENAA_P0));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) | (1<<NRF24L01_REG_ENAA_P1));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) | (1<<NRF24L01_REG_ENAA_P2));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) | (1<<NRF24L01_REG_ENAA_P3));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) | (1<<NRF24L01_REG_ENAA_P4));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) | (1<<NRF24L01_REG_ENAA_P5));
-		}else{
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) & ~(1<<NRF24L01_REG_ENAA_P0));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) & ~(1<<NRF24L01_REG_ENAA_P1));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) & ~(1<<NRF24L01_REG_ENAA_P2));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) & ~(1<<NRF24L01_REG_ENAA_P3));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) & ~(1<<NRF24L01_REG_ENAA_P4));
-			WriteRegister(NRF24L01_REG_EN_AA, ReadRegister(NRF24L01_REG_EN_AA) & ~(1<<NRF24L01_REG_ENAA_P5));
-		}
-
-		//rx address
-		SetRxAddr(0, nrf24l01_addr0);
-		SetRxAddr(1, nrf24l01_addr1);
-		SetRxAddr(2, nrf24l01_addr2);
-		SetRxAddr(3, nrf24l01_addr3);
-		SetRxAddr(4, nrf24l01_addr4);
-		SetRxAddr(5, nrf24l01_addr5);
-
-		//tx address
-		SetTxAddr(nrf24l01_addrtx);
-
-		//set rx mode
-		SetRX();
 }
 
+void NRF24L01::startListening(void){
+
+  powerUp();
+
+  WriteRegister(NRF24L01_REG_CONFIG, ReadRegister(NRF24L01_REG_CONFIG) | _BV(NRF24L01_REG_PRIM_RX));
+  WriteRegister(NRF24L01_REG_STATUS, _BV(NRF24L01_REG_MASK_RX_DR) | _BV(NRF24L01_REG_MASK_TX_DS) | _BV(NRF24L01_REG_MASK_MAX_RT) );
+  CE_HIGH();
+  // Restore the pipe0 adddress, if exists
+  if (pipe0_reading_address[0] > 0){
+	  WriteRegisters(NRF24L01_REG_RX_ADDR_P0, pipe0_reading_address, NRF24L01_ADDRSIZE);
+  }else{
+	closeReadingPipe(0);
+  }
+
+  // Flush buffers
+  //flush_rx();
+  if(ReadRegister(NRF24L01_REG_FEATURE) & _BV(NRF24L01_REG_EN_AA)){
+	FlushTx();
+  }
+
+  // Go!
+  //delayMicroseconds(100);
+}
+
+/****************************************************************************/
+static const uint8_t child_pipe_enable[] PROGMEM ={NRF24L01_REG_ERX_P0, NRF24L01_REG_ERX_P1, NRF24L01_REG_ERX_P2, NRF24L01_REG_ERX_P3, NRF24L01_REG_ERX_P4, NRF24L01_REG_ERX_P5};
+
+void NRF24L01::stopListening(void){
+  CE_LOW();
+
+  delay_us(txDelay);
+
+  if(ReadRegister(NRF24L01_REG_FEATURE) & _BV(NRF24L01_REG_EN_AA)){
+	  delay_us(txDelay); //200
+    FlushTx();
+  }
+  //flush_rx();
+  WriteRegister(NRF24L01_REG_CONFIG, ( ReadRegister(NRF24L01_REG_CONFIG) ) & ~_BV(NRF24L01_REG_PRIM_RX) );
+
+
+  WriteRegister(NRF24L01_REG_EN_RXADDR,ReadRegister(NRF24L01_REG_EN_RXADDR) | _BV(pgm_read_byte(&child_pipe_enable[0]))); // Enable RX on pipe0
+
+  //delayMicroseconds(100);
+
+}
+
+/****************************************************************************/
+void NRF24L01::powerDown(void)
+{
+	CE_LOW(); // Guarantee CE is low on powerDown
+  WriteRegister(NRF24L01_REG_CONFIG,ReadRegister(NRF24L01_REG_CONFIG) & ~_BV(NRF24L01_REG_PWR_UP));
+}
+
+/****************************************************************************/
+//Power up now. Radio will not power down unless instructed by MCU for config changes etc.
+void NRF24L01::powerUp(void)
+{
+   uint8_t cfg = ReadRegister(NRF24L01_REG_CONFIG);
+
+   // if not powered up then power up and wait for the radio to initialize
+   if (!(cfg & _BV(NRF24L01_REG_PWR_UP))){
+	   WriteRegister(NRF24L01_REG_CONFIG, cfg | _BV(NRF24L01_REG_PWR_UP));
+
+      // For nRF24L01+ to go from power down mode to TX or RX mode it must first pass through stand-by mode.
+	  // There must be a delay of Tpd2stby (see Table 16.) after the nRF24L01+ leaves power down mode before
+	  // the CEis set high. - Tpd2stby can be up to 5ms per the 1.0 datasheet
+      delay_ms(5);
+   }
+}
+
+
+
+/*** GetStatus ********************************************/
 uint8_t NRF24L01::GetStatus(){
-	uint8_t status = 0;
-	CSN_LOW(); //low CSN
-	status = spi.WriteReadbyte(NRF24L01_CMD_NOP); //get status, send NOP request
-	CSN_HIGH(); //high CSN
 
-return status;
+	return spiTrans(NRF24L01_CMD_NOP); //get status, send NOP request
+
+}
+/*** set channel ***************************************************/
+void NRF24L01::setChannel(uint8_t channel){
+	const uint8_t max_channel = 125;
+	WriteRegister(NRF24L01_REG_RF_CH,rf24_min(channel,max_channel));
+
+}
+uint8_t NRF24L01::getChannel(){
+  return ReadRegister(NRF24L01_REG_RF_CH);
 }
 
-void NRF24L01::SetChannel(uint8_t channel){
-	NRF24L01_CH = channel;
+/****************************************************************************/
+void NRF24L01::setPayloadSize(uint8_t size){
+	NRF24L01_PAYLOAD = rf24_min(size,32);
 }
-void NRF24L01::SetPayloadSize(uint8_t payload){
-	NRF24L01_PAYLOAD = payload;
+/****************************************************************************/
+uint8_t NRF24L01::getPayloadSize(void){
+  return NRF24L01_PAYLOAD;
 }
+
+/*
 void NRF24L01::EnableAutoAck(){
 	NRF24L01_ACK = 1;
 }
@@ -281,7 +324,6 @@ void NRF24L01::DisableAutoAck(){
 void NRF24L01::SetAutoAck(uint8_t ack){
 	NRF24L01_ACK= ack;
 }
-
 void NRF24L01::EnablePipe(uint8_t pipe){
 
 
@@ -306,11 +348,9 @@ void NRF24L01::EnablePipe(uint8_t pipe){
 
 
 }
-
 uint8_t NRF24L01::GetPayloadSize(){
 	return NRF24L01_PAYLOAD;
 }
-
 void NRF24L01::SetAddresses(uint8_t* pipe0, uint8_t* pipe1,uint8_t* pipe2,uint8_t* pipe3,uint8_t* pipe4,uint8_t* pipe5,uint8_t* pipeT){
 
 	for(int i=0;i<5;i++){
@@ -328,7 +368,6 @@ void NRF24L01::SetAddresses(uint8_t* pipe0, uint8_t* pipe1,uint8_t* pipe2,uint8_
 
 
 }
-
 void NRF24L01::SetAddress(uint8_t* pipe,uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
 
 	pipe[0]= p0;
@@ -338,8 +377,6 @@ void NRF24L01::SetAddress(uint8_t* pipe,uint8_t p0,uint8_t p1,uint8_t p2,uint8_t
 	pipe[4]= p4;
 
 }
-
-
 void NRF24L01::SetAddressPipe0(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8_t p4){
 	nrf24l01_addr0[0]= p0;
 	nrf24l01_addr0[1]= p1;
@@ -390,9 +427,6 @@ void NRF24L01::SetAddressPipeT(uint8_t p0,uint8_t p1,uint8_t p2,uint8_t p3,uint8
 	nrf24l01_addrtx[3]= p3;
 	nrf24l01_addrtx[4]= p4;
 }
-
-
-
 void NRF24L01::SetAddressPipe0(uint8_t* addr){
 	for(uint8_t i=0;i<5;i++){
 		nrf24l01_addr0[i]=addr[i];
@@ -430,10 +464,6 @@ void NRF24L01::SetAddressPipeT(uint8_t* addr){
 		nrf24l01_addrtx[i]=addr[i];
 	}
 }
-
-
-
-
 void NRF24L01::SetPowerLevel(uint8_t power){
 	NRF24L01_RF24_PA = power;
 }
@@ -443,7 +473,6 @@ void NRF24L01::SetDataRate(uint8_t speed){
 void NRF24L01::SetCRClength(uint8_t crclvl){
 	NRF24L01_RF24_CRC = crclvl;
 }
-
 uint8_t NRF24L01::ReadReady(uint8_t* pipe){
 	uint8_t status = GetStatus();
 	uint8_t ret = status & (1<<NRF24L01_REG_RX_DR);
@@ -456,69 +485,577 @@ uint8_t NRF24L01::ReadReady(uint8_t* pipe){
 
 	return ret;
 }
-void NRF24L01::Read(uint8_t *data){
-	uint8_t i = 0;
-	//read rx register
-	CSN_LOW(); //low CSN
-	spi.WriteReadbyte(NRF24L01_CMD_R_RX_PAYLOAD);
-	for(i=0; i<NRF24L01_PAYLOAD; i++){
-	    data[i] = spi.WriteReadbyte(NRF24L01_CMD_NOP);
-	}
-	CSN_HIGH(); //high CSN
-	//reset register
-	WriteRegister(NRF24L01_REG_STATUS, (1<<NRF24L01_REG_RX_DR));
-	//handle ack payload receipt
-	if (GetStatus() & (1<<NRF24L01_REG_TX_DS)){
-			WriteRegister(NRF24L01_REG_STATUS, (1<<NRF24L01_REG_TX_DS));
-	}
+*/
+/****************************************************************************/
+
+void NRF24L01::whatHappened(bool& tx_ok,bool& tx_fail,bool& rx_ready){
+  // Read the status & reset the status in one easy call
+  // Or is that such a good idea?
+  uint8_t status = WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_RX_DR) | _BV(NRF24L01_REG_TX_DS) | _BV(NRF24L01_REG_MAX_RT) );
+
+  // Report to the user what happened
+  tx_ok = status & _BV(NRF24L01_REG_TX_DS);
+  tx_fail = status & _BV(NRF24L01_REG_MAX_RT);
+  rx_ready = status & _BV(NRF24L01_REG_RX_DR);
+}
+/****************************************************************************/
+
+void NRF24L01::openWritingPipe(const uint8_t *address){
+  // Note that AVR 8-bit uC's store this LSB first, and the NRF24L01(+)
+  // expects it LSB first too, so we're good.
+
+	WriteRegisters(NRF24L01_REG_RX_ADDR_P0, address, NRF24L01_ADDRSIZE);
+	WriteRegisters(NRF24L01_REG_TX_ADDR, address, NRF24L01_ADDRSIZE);
+
+
+  //const uint8_t max_payload_size = 32;
+  //write_register(RX_PW_P0,rf24_min(payload_size,max_payload_size));
+	WriteRegister(NRF24L01_REG_RX_PW_P0,NRF24L01_PAYLOAD);
+}
+/****************************************************************************/
+
+void NRF24L01::openWritingPipe(uint64_t value){
+  // Note that AVR 8-bit uC's store this LSB first, and the NRF24L01(+)
+  // expects it LSB first too, so we're good.
+
+	WriteRegisters(NRF24L01_REG_RX_ADDR_P0, reinterpret_cast<uint8_t*>(&value), NRF24L01_ADDRSIZE);
+  WriteRegisters(NRF24L01_REG_TX_ADDR, reinterpret_cast<uint8_t*>(&value), NRF24L01_ADDRSIZE);
+
+
+  //const uint8_t max_payload_size = 32;
+  //write_register(RX_PW_P0,rf24_min(payload_size,max_payload_size));
+  WriteRegister(NRF24L01_REG_RX_PW_P0,NRF24L01_PAYLOAD);
+}
+
+/****************************************************************************/
+static const uint8_t child_pipe[] PROGMEM =
+{
+		NRF24L01_REG_RX_ADDR_P0, NRF24L01_REG_RX_ADDR_P1, NRF24L01_REG_RX_ADDR_P2, NRF24L01_REG_RX_ADDR_P3, NRF24L01_REG_RX_ADDR_P4, NRF24L01_REG_RX_ADDR_P5
+};
+static const uint8_t child_payload_size[] PROGMEM =
+{
+		NRF24L01_REG_RX_PW_P0, NRF24L01_REG_RX_PW_P1, NRF24L01_REG_RX_PW_P2, NRF24L01_REG_RX_PW_P3, NRF24L01_REG_RX_PW_P4, NRF24L01_REG_RX_PW_P5
+};
+/****************************************************************************/
+void NRF24L01::setAddressWidth(uint8_t a_width){
+
+	if(a_width -= 2){
+		WriteRegister(NRF24L01_REG_SETUP_AW,a_width%4);
+		NRF24L01_ADDRSIZE = (a_width%4) + 2;
+	}else{
+		WriteRegister(NRF24L01_REG_SETUP_AW,0);
+		NRF24L01_ADDRSIZE = 2;
+    }
 
 }
-uint8_t NRF24L01::Write(uint8_t *data){
-	uint8_t i = 0;
-		uint8_t ret = 0;
+/****************************************************************************/
+void NRF24L01::openReadingPipe(uint8_t child, const uint8_t *address){
+  // If this is pipe 0, cache the address.  This is needed because
+  // openWritingPipe() will overwrite the pipe 0 address, so
+  // startListening() will have to restore it.
+  if (child == 0){
+    memcpy(pipe0_reading_address,address,NRF24L01_ADDRSIZE);
+  }
+  if (child <= 6){
+    // For pipes 2-5, only write the LSB
+    if ( child < 2 ){
+    	WriteRegisters(pgm_read_byte(&child_pipe[child]), address, NRF24L01_ADDRSIZE);
+    }else{
+    	WriteRegisters(pgm_read_byte(&child_pipe[child]), address, 1);
+	}
+    WriteRegister(pgm_read_byte(&child_payload_size[child]),NRF24L01_PAYLOAD);
 
-		//set tx mode
-		SetTX();
+    // Note it would be more efficient to set all of the bits for all open
+    // pipes at once.  However, I thought it would make the calling code
+    // more simple to do it this way.
+    WriteRegister(NRF24L01_REG_EN_RXADDR,ReadRegister(NRF24L01_REG_EN_RXADDR) | _BV(pgm_read_byte(&child_pipe_enable[child])));
 
-		//write data
-		CSN_LOW(); //low CSN
-		spi.WriteReadbyte(NRF24L01_CMD_W_TX_PAYLOAD);
-		for (i=0; i<NRF24L01_PAYLOAD; i++)
-			spi.WriteReadbyte(data[i]);
-		CSN_HIGH(); //high CSN
+  }
+}
+void NRF24L01::openReadingPipe(uint8_t child, uint64_t address){
+  // If this is pipe 0, cache the address.  This is needed because
+  // openWritingPipe() will overwrite the pipe 0 address, so
+  // startListening() will have to restore it.
+  if (child == 0){
+    memcpy(pipe0_reading_address,&address,NRF24L01_ADDRSIZE);
+  }
 
-		//start transmission
-		CE_HIGH(); //high CE
-		_delay_us(15);
-		CE_LOW(); //low CE
+  if (child <= 6) {
+    // For pipes 2-5, only write the LSB
+    if ( child < 2 )
+    	WriteRegisters(pgm_read_byte(&child_pipe[child]), reinterpret_cast<const uint8_t*>(&address), NRF24L01_ADDRSIZE);
+    else
+    	WriteRegisters(pgm_read_byte(&child_pipe[child]), reinterpret_cast<const uint8_t*>(&address), 1);
+
+    WriteRegister(pgm_read_byte(&child_payload_size[child]),NRF24L01_PAYLOAD);
+
+    // Note it would be more efficient to set all of the bits for all open
+    // pipes at once.  However, I thought it would make the calling code
+    // more simple to do it this way.
+    WriteRegister(NRF24L01_REG_EN_RXADDR,ReadRegister(NRF24L01_REG_EN_RXADDR) | _BV(pgm_read_byte(&child_pipe_enable[child])));
+  }
+}
+/****************************************************************************/
+void NRF24L01::closeReadingPipe( uint8_t pipe ){
+	WriteRegister(NRF24L01_REG_EN_RXADDR,ReadRegister(NRF24L01_REG_EN_RXADDR) & ~_BV(pgm_read_byte(&child_pipe_enable[pipe])));
+}
+/****************************************************************************/
+
+void NRF24L01::ToggleFeatures(void){
+    CSN_LOW();
+    spi.WriteReadbyte(NRF24L01_CMD_ACTIVATE );
+    spi.WriteReadbyte(0x73 );
+	CSN_HIGH();
+}
+/****************************************************************************/
+void NRF24L01::enableDynamicPayloads(void){
+  // Enable dynamic payload throughout the system
+
+    //toggle_features();
+	WriteRegister(NRF24L01_REG_FEATURE,ReadRegister(NRF24L01_REG_FEATURE) | _BV(NRF24L01_REG_EN_DPL) );
+
+  // Enable dynamic payload on all pipes
+  //
+  // Not sure the use case of only having dynamic payload on certain
+  // pipes, so the library does not support it.
+	WriteRegister(NRF24L01_REG_DYNPD,ReadRegister(NRF24L01_REG_DYNPD) | _BV(NRF24L01_REG_DPL_P5) | _BV(NRF24L01_REG_DPL_P4) | _BV(NRF24L01_REG_DPL_P3) | _BV(NRF24L01_REG_DPL_P2) | _BV(NRF24L01_REG_DPL_P1) | _BV(NRF24L01_REG_DPL_P0));
+
+  dynamic_payloads_enabled = true;
+}
+/****************************************************************************/
+void NRF24L01::disableDynamicPayloads(void){
+  // Disables dynamic payload throughout the system.  Also disables Ack Payloads
+
+  //toggle_features();
+	WriteRegister(NRF24L01_REG_FEATURE,ReadRegister(NRF24L01_REG_FEATURE) & ~(_BV(NRF24L01_REG_EN_DPL) | _BV(NRF24L01_REG_EN_ACK_PAY)));
+
+  // Disable dynamic payload on all pipes
+  //
+  // Not sure the use case of only having dynamic payload on certain
+  // pipes, so the library does not support it.
+  WriteRegister(NRF24L01_REG_DYNPD,ReadRegister(NRF24L01_REG_DYNPD) & ~( _BV(NRF24L01_REG_DPL_P5) | _BV(NRF24L01_REG_DPL_P4) | _BV(NRF24L01_REG_DPL_P3) | _BV(NRF24L01_REG_DPL_P2) | _BV(NRF24L01_REG_DPL_P1) | _BV(NRF24L01_REG_DPL_P0)));
+
+  dynamic_payloads_enabled = false;
+}
+/****************************************************************************/
+void NRF24L01::enableAckPayload(void){
+  //
+  // enable ack payload and dynamic payload features
+  //
+
+    //toggle_features();
+	WriteRegister(NRF24L01_REG_FEATURE,ReadRegister(NRF24L01_REG_FEATURE) | _BV(NRF24L01_REG_EN_ACK_PAY) | _BV(NRF24L01_REG_EN_DPL) );
+  //
+  // Enable dynamic payload on pipes 0 & 1
+  //
+
+	WriteRegister(NRF24L01_REG_DYNPD,ReadRegister(NRF24L01_REG_DYNPD) | _BV(NRF24L01_REG_DPL_P1) | _BV(NRF24L01_REG_DPL_P0));
+  dynamic_payloads_enabled = true;
+}
+/****************************************************************************/
+void NRF24L01::enableDynamicAck(void){
+  //
+  // enable dynamic ack features
+  //
+    //toggle_features();
+	WriteRegister(NRF24L01_REG_FEATURE,ReadRegister(NRF24L01_REG_FEATURE) | _BV(NRF24L01_REG_EN_DYN_ACK) );
+
+
+}
+/****************************************************************************/
+void NRF24L01::writeAckPayload(uint8_t pipe, const void* buf, uint8_t len){
+  const uint8_t* current = reinterpret_cast<const uint8_t*>(buf);
+  uint8_t data_len = rf24_min(len,32);
+
+  CSN_LOW();
+  spi.WriteReadbyte(NRF24L01_CMD_W_ACK_PAYLOAD | ( pipe & 0x07 ) );
+
+  while ( data_len-- )
+	  spi.WriteReadbyte(*current++);
+  CSN_HIGH();
+
+
+
+}
+/****************************************************************************/
+bool NRF24L01::isAckPayloadAvailable(void){
+  return ! (ReadRegister(NRF24L01_REG_FIFO_STATUS) & _BV(NRF24L01_REG_RX_EMPTY));
+}
+/****************************************************************************/
+void NRF24L01::read(void* buf, uint8_t len){
+	// Fetch the payload
+	  ReadPayload( buf, len );
+
+	  //Clear the two possible interrupt flags with one command
+	  WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_RX_DR) | _BV(NRF24L01_REG_MAX_RT) | _BV(NRF24L01_REG_TX_DS) );
+
+
+}
+/****************************************************************************/
+bool NRF24L01::isPVariant(void){
+  return p_variant ;
+}
+/****************************************************************************/
+void NRF24L01::setAutoAck(bool enable){
+  if ( enable )
+	  WriteRegister(NRF24L01_REG_EN_AA, 0x3F);
+  else
+	  WriteRegister(NRF24L01_REG_EN_AA, 0);
+}
+/****************************************************************************/
+void NRF24L01::setAutoAck( uint8_t pipe, bool enable ){
+  if ( pipe <= 6 ){
+    uint8_t en_aa = ReadRegister( NRF24L01_REG_EN_AA ) ;
+    if( enable ){
+      en_aa |= _BV(pipe) ;
+    } else {
+      en_aa &= ~_BV(pipe) ;
+    }
+    WriteRegister( NRF24L01_REG_EN_AA, en_aa ) ;
+  }
+}
+/****************************************************************************/
+bool NRF24L01::testCarrier(void){
+  return ( ReadRegister(NRF24L01_REG_CD) & 1 );
+}
+/****************************************************************************/
+bool NRF24L01::testRPD(void){
+  return ( ReadRegister(RPD) & 1 ) ;
+}
+/****************************************************************************/
+void NRF24L01::setPALevel(uint8_t level){
+
+  uint8_t setup = ReadRegister(NRF24L01_REG_RF_SETUP) & 0xF8;
+
+  if(level > 3){  						// If invalid level, go to max PA
+	  level = (RF24_PA_MAX << 1) + 1;		// +1 to support the SI24R1 chip extra bit
+  }else{
+	  level = (level << 1) + 1;	 		// Else set level as requested
+  }
+
+
+  WriteRegister( NRF24L01_REG_RF_SETUP, setup |= level ) ;	// Write it to the chip
+}
+/****************************************************************************/
+uint8_t NRF24L01::getPALevel(void){
+
+  return (ReadRegister(NRF24L01_REG_RF_SETUP) & (_BV(NRF24L01_REG_RF_PWR_LOW) | _BV(NRF24L01_REG_RF_PWR_HIGH))) >> 1 ;
+}
+/****************************************************************************/
+bool NRF24L01::setDataRate(uint8_t speed){
+  bool result = false;
+  uint8_t setup = ReadRegister(NRF24L01_REG_RF_SETUP) ;
+
+  // HIGH and LOW '00' is 1Mbs - our default
+  setup &= ~(_BV(NRF24L01_REG_RF_DR_LOW) | _BV(NRF24L01_REG_RF_DR_HIGH)) ;
+
+ //16Mhz Arduino
+    txDelay=85;
+
+  if( speed == RF24_250KBPS ){
+    // Must set the RF_DR_LOW to 1; RF_DR_HIGH (used to be RF_DR) is already 0
+    // Making it '10'.
+    setup |= _BV( NRF24L01_REG_RF_DR_LOW ) ;
+   //16Mhz Arduino
+	txDelay=155;
+
+  } else {
+    // Set 2Mbs, RF_DR (RF_DR_HIGH) is set 1
+    // Making it '01'
+    if ( speed == RF24_2MBPS ){
+      setup |= _BV(NRF24L01_REG_RF_DR_HIGH);
+       //16Mhz Arduino
+	  txDelay=65;
+    }
+  }
+  WriteRegister(NRF24L01_REG_RF_SETUP,setup);
+
+  // Verify our result
+  if ( ReadRegister(NRF24L01_REG_RF_SETUP) == setup ){
+    result = true;
+  }
+  return result;
+}
+
+/****************************************************************************/
+rf24_datarate_e NRF24L01::getDataRate( void ){
+  rf24_datarate_e result ;
+  uint8_t dr = ReadRegister(NRF24L01_REG_RF_SETUP) & (_BV(NRF24L01_REG_RF_DR_LOW) | _BV(NRF24L01_REG_RF_DR_HIGH));
+
+  // switch uses RAM (evil!)
+  // Order matters in our case below
+  if ( dr == _BV(NRF24L01_REG_RF_DR_LOW) ){
+    // '10' = 250KBPS
+    result = RF24_250KBPS ;
+  }else if ( dr == _BV(NRF24L01_REG_RF_DR_HIGH) ) {
+    // '01' = 2MBPS
+    result = RF24_2MBPS ;
+  }else {
+    // '00' = 1MBPS
+    result = RF24_1MBPS ;
+  }
+  return result ;
+}
+/****************************************************************************/
+void NRF24L01::setCRCLength(uint8_t length){
+  uint8_t config = ReadRegister(NRF24L01_REG_CONFIG) & ~( _BV(NRF24L01_REG_CRCO) | _BV(NRF24L01_REG_EN_CRC)) ;
+
+  // switch uses RAM (evil!)
+  if ( length == RF24_CRC_DISABLED ){
+    // Do nothing, we turned it off above.
+  }else if ( length == RF24_CRC_8 ) {
+    config |= _BV(NRF24L01_REG_EN_CRC);
+  } else {
+    config |= _BV(NRF24L01_REG_EN_CRC);
+    config |= _BV( NRF24L01_REG_CRCO );
+  }
+  WriteRegister( NRF24L01_REG_CONFIG, config ) ;
+}
+/****************************************************************************/
+rf24_crclength_e NRF24L01::getCRCLength(void){
+  rf24_crclength_e result = RF24_CRC_DISABLED;
+
+  uint8_t config = ReadRegister(NRF24L01_REG_CONFIG) & ( _BV(NRF24L01_REG_CRCO) | _BV(NRF24L01_REG_EN_CRC)) ;
+  uint8_t AA = ReadRegister(NRF24L01_REG_EN_AA);
+
+  if ( config & _BV(NRF24L01_REG_EN_CRC ) || AA) {
+    if ( config & _BV(NRF24L01_REG_CRCO) )
+      result = RF24_CRC_16;
+    else
+      result = RF24_CRC_8;
+  }
+
+  return result;
+}
+/****************************************************************************/
+void NRF24L01::disableCRC( void ){
+  uint8_t disable = ReadRegister(NRF24L01_REG_CONFIG) & ~_BV(NRF24L01_REG_EN_CRC) ;
+  WriteRegister( NRF24L01_REG_CONFIG, disable ) ;
+}
+/****************************************************************************/
+void NRF24L01::setRetries(uint8_t delay, uint8_t count){
+	WriteRegister(NRF24L01_REG_SETUP_RETR,(delay&0xf)<<NRF24L01_REG_ARD | (count&0xf)<<NRF24L01_REG_ARC);
+}
+
+/******************************************************************/
+//Similar to the previous write, clears the interrupt flags
+bool NRF24L01::write(const void* buf, uint8_t len, const bool multicast){
+	//Start Writing
+		startFastWrite(buf,len,multicast);
 
 		//stop if max_retries reached or send is ok
-		do {
-			_delay_us(10);
-		}
+
 		while( !(GetStatus() & (1<<NRF24L01_REG_MAX_RT | 1<<NRF24L01_REG_TX_DS)) );
 
-		if(GetStatus() & 1<<NRF24L01_REG_TX_DS)
-			ret = 1;
+		CE_LOW(); //low CE
 
-		//reset PLOS_CNT
-		WriteRegister(NRF24L01_REG_RF_CH, NRF24L01_CH);
+		uint8_t status = WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MASK_RX_DR) | _BV(NRF24L01_REG_TX_DS) | _BV(NRF24L01_REG_MAX_RT) );
 
-		//power down
-		WriteRegister(NRF24L01_REG_CONFIG, ReadRegister(NRF24L01_REG_CONFIG) & ~(1<<NRF24L01_REG_PWR_UP));
 
-		//set rx mode
-		SetRX();
+		//Max retries exceeded
+		  if( status & _BV(NRF24L01_REG_MAX_RT)){
+		  	FlushTx(); //Only going to be 1 packet int the FIFO at a time using this method, so just flush
+		  	return 0;
+		  }
 
-		return ret;
+
+
+		return 1;
 }
 
+bool NRF24L01::write( const void* buf, uint8_t len ){
+	return write(buf,len,0);
+}
+/****************************************************************************/
 
-/*
- * read one register
- */
+//For general use, the interrupt flags are not important to clear
+bool NRF24L01::writeBlocking( const void* buf, uint8_t len, uint32_t timeout ){
+	//Block until the FIFO is NOT full.
+	//Keep track of the MAX retries and set auto-retry if seeing failures
+	//This way the FIFO will fill up and allow blocking until packets go through
+	//The radio will auto-clear everything in the FIFO as long as CE remains high
+
+						  //Get the time that the payload transmission started
+
+	while( ( GetStatus()  & ( _BV(NRF24L01_REG_TX_FULL) ))) {		  //Blocking only if FIFO is full. This will loop and block until TX is successful or timeout
+
+		if( GetStatus() & _BV(NRF24L01_REG_MAX_RT)){					  //If MAX Retries have been reached
+			reUseTX();										  //Set re-transmit and clear the MAX_RT interrupt flag
+
+		}
+
+
+  	}
+
+  	//Start Writing
+	startFastWrite(buf,len,0);								  //Write the payload if a buffer is clear
+
+	return 1;												  //Return 1 to indicate successful transmission
+}
+/****************************************************************************/
+
+void NRF24L01::reUseTX(){
+	WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MAX_RT) );			  //Clear max retry flag
+		spiTrans( NRF24L01_CMD_REUSE_TX_PL );
+		CE_LOW();										  //Re-Transfer packet
+		CE_HIGH();
+}
+
+/****************************************************************************/
+bool NRF24L01::writeFast( const void* buf, uint8_t len, const bool multicast ){
+	//Block until the FIFO is NOT full.
+	//Keep track of the MAX retries and set auto-retry if seeing failures
+	//Return 0 so the user can control the retrys and set a timer or failure counter if required
+	//The radio will auto-clear everything in the FIFO as long as CE remains high
+
+	while( ( GetStatus()  & ( _BV(NRF24L01_REG_TX_FULL) ))) {			  //Blocking only if FIFO is full. This will loop and block until TX is successful or fail
+
+		if( GetStatus() & _BV(NRF24L01_REG_MAX_RT)){
+			//reUseTX();										  //Set re-transmit
+			WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MAX_RT) );			  //Clear max retry flag
+			return 0;										  //Return 0. The previous payload has been retransmitted
+															  //From the user perspective, if you get a 0, just keep trying to send the same payload
+		}
+
+  	}
+		     //Start Writing
+	startFastWrite(buf,len,multicast);
+
+	return 1;
+}
+bool NRF24L01::writeFast( const void* buf, uint8_t len ){
+	return writeFast(buf,len,0);
+}
+/****************************************************************************/
+//Per the documentation, we want to set PTX Mode when not listening. Then all we do is write data and set CE high
+//In this mode, if we can keep the FIFO buffers loaded, packets will transmit immediately (no 130us delay)
+//Otherwise we enter Standby-II mode, which is still faster than standby mode
+//Also, we remove the need to keep writing the config register over and over and delaying for 150 us each time if sending a stream of data
+void NRF24L01::startFastWrite( const void* buf, uint8_t len, const bool multicast, bool startTx){ //TMRh20
+
+	//write_payload( buf,len);
+	WritePayload(buf, len,multicast ? NRF24L01_CMD_W_TX_PAYLOAD_NO_ACK : NRF24L01_CMD_W_TX_PAYLOAD ) ;
+	if(startTx){
+		CE_HIGH();
+	}
+
+}
+/****************************************************************************/
+//Added the original startWrite back in so users can still use interrupts, ack payloads, etc
+//Allows the library to pass all tests
+void NRF24L01::startWrite( const void* buf, uint8_t len, const bool multicast ){
+
+  // Send the payload
+
+  //write_payload( buf, len );
+	WritePayload( buf, len,multicast? NRF24L01_CMD_W_TX_PAYLOAD_NO_ACK : NRF24L01_CMD_W_TX_PAYLOAD ) ;
+	CE_HIGH();
+
+	CE_LOW();
+}
+/****************************************************************************/
+
+bool NRF24L01::rxFifoFull(){
+	return ReadRegister(NRF24L01_REG_FIFO_STATUS) & _BV(NRF24L01_REG_RX_FULL);
+}
+/****************************************************************************/
+
+bool NRF24L01::txStandBy(){
+
+
+	while( ! (ReadRegister(NRF24L01_REG_FIFO_STATUS) & _BV(NRF24L01_REG_TX_EMPTY)) ){
+		if( GetStatus() & _BV(NRF24L01_REG_MAX_RT)){
+			WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MAX_RT) );
+			CE_LOW();
+			FlushTx();    //Non blocking, flush the data
+			return 0;
+		}
+
+	}
+
+	CE_LOW();			   //Set STANDBY-I mode
+	return 1;
+}
+/****************************************************************************/
+/**
+bool NRF24L01::txStandBy(uint32_t timeout, bool startTx){
+
+    if(startTx){
+	  stopListening();
+	  CE_HIGH();
+	}
+	uint32_t start = millis();
+
+	while( ! (ReadRegister(NRF24L01_REG_FIFO_STATUS) & _BV(NRF24L01_REG_TX_EMPTY)) ){
+		if( GetStatus() & _BV(NRF24L01_REG_MAX_RT)){
+			WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MAX_RT) );
+			CE_LOW();									  //Set re-transmit
+			CE_HIGH();
+				if(millis() - start >= timeout){
+					CE_LOW(); FlushTx(); return 0;
+				}
+		}
+
+	}
+
+
+	CE_LOW();				   //Set STANDBY-I mode
+	return 1;
+
+}*/
+
+/****************************************************************************/
+
+void NRF24L01::maskIRQ(bool tx, bool fail, bool rx){
+
+	uint8_t config = ReadRegister(NRF24L01_REG_CONFIG);
+	/* clear the interrupt flags */
+	config &= ~(1 << NRF24L01_REG_MASK_MAX_RT | 1 << NRF24L01_REG_MASK_TX_DS | 1 << NRF24L01_REG_MASK_RX_DR);
+	/* set the specified interrupt flags */
+	config |= fail << NRF24L01_REG_MASK_MAX_RT | tx << NRF24L01_REG_MASK_TX_DS | rx << NRF24L01_REG_MASK_RX_DR;
+	WriteRegister(NRF24L01_REG_CONFIG, config);
+}
+/****************************************************************************/
+
+uint8_t NRF24L01::getDynamicPayloadSize(void)
+{
+  uint8_t result = 0;
+
+  CSN_LOW();
+  spi.WriteReadbyte( NRF24L01_CMD_R_RX_PL_WID );
+  result = spi.WriteReadbyte(0xff);
+  CSN_HIGH();
+
+
+  if(result > 32) { FlushRx(); delay_ms(2); return 0; }
+  return result;
+}
+/****************************************************************************/
+
+bool NRF24L01::available(void){
+  return available(NULL);
+}
+
+/****************************************************************************/
+bool NRF24L01::available(uint8_t* pipe_num){
+  if (!( ReadRegister(NRF24L01_REG_FIFO_STATUS) & _BV(NRF24L01_REG_RX_EMPTY) )){
+
+    // If the caller wants the pipe number, include that
+    if ( pipe_num ){
+	  uint8_t status = GetStatus();
+      *pipe_num = ( status >> NRF24L01_REG_RX_P_NO ) & 0x07;
+  	}
+  	return 1;
+  }
+
+  return 0;
+
+}
+
+/*** read one register **************************************/
 uint8_t NRF24L01::ReadRegister(uint8_t reg) {
 	//u.writeString("In read Regs...\r\n");
+
 	CSN_LOW(); //low CSN
 	spi.WriteReadbyte(NRF24L01_CMD_R_REGISTER | (NRF24L01_CMD_REGISTER_MASK & reg));
     uint8_t result = spi.WriteReadbyte(NRF24L01_CMD_NOP); //read write register
@@ -526,244 +1063,108 @@ uint8_t NRF24L01::ReadRegister(uint8_t reg) {
     return result;
 }
 
-/*
- * read many registers
- */
-void NRF24L01::ReadRegisters(uint8_t reg, uint8_t *value, uint8_t len) {
-	uint8_t i = 0;
+/*** read many registers ***********************************/
+uint8_t NRF24L01::ReadRegisters(uint8_t reg, uint8_t *value, uint8_t len) {
+
+	uint8_t status;
+
 	CSN_LOW(); //low CSN
-	spi.WriteReadbyte(NRF24L01_CMD_R_REGISTER | (NRF24L01_CMD_REGISTER_MASK & reg));
-	for(i=0; i<len; i++)
-		value[i] = spi.WriteReadbyte(NRF24L01_CMD_NOP); //read write register
+	status = spi.WriteReadbyte(NRF24L01_CMD_R_REGISTER | (NRF24L01_CMD_REGISTER_MASK & reg));
+	while ( len-- ){
+	  *value++ = spi.WriteReadbyte(NRF24L01_CMD_NOP); //read write register
+	}
 	CSN_HIGH(); //high CSN
+	return status;
 }
 
-/*
- * write one register
- */
-void NRF24L01::WriteRegister(uint8_t reg, uint8_t value) {
+/*** write one register *************************************/
+uint8_t NRF24L01::WriteRegister(uint8_t reg, uint8_t value) {
+	uint8_t status;
 	CSN_LOW(); //low CSN
-	spi.WriteReadbyte(NRF24L01_CMD_W_REGISTER | (NRF24L01_CMD_REGISTER_MASK & reg));
+	status = spi.WriteReadbyte(NRF24L01_CMD_W_REGISTER | (NRF24L01_CMD_REGISTER_MASK & reg));
 	spi.WriteReadbyte(value); //write register
 	CSN_HIGH(); //high CSN
+	return status;
 }
 
-/*
- * write many registers
- */
-void NRF24L01::WriteRegisters(uint8_t reg, uint8_t *value, uint8_t len) {
-	uint8_t i = 0;
+/*** write many registers ***********************************/
+uint8_t NRF24L01::WriteRegisters(uint8_t reg, const uint8_t *value, uint8_t len) {
+	uint8_t status;
 	CSN_LOW(); //low CSN
-    spi.WriteReadbyte(NRF24L01_CMD_W_REGISTER | (NRF24L01_CMD_REGISTER_MASK & reg));
-	for(i=0; i<len; i++)
-		spi.WriteReadbyte(value[i]); //write register
-	CSN_HIGH(); //high CSN
+    status = spi.WriteReadbyte(NRF24L01_CMD_W_REGISTER | (NRF24L01_CMD_REGISTER_MASK & reg));
+    while ( len-- ){
+		spi.WriteReadbyte(*value++); //write register
+    }
+    CSN_HIGH(); //high CSN
+	return status;
 }
 
+/*************************************************************/
+uint8_t NRF24L01::WritePayload(const void* buf, uint8_t data_len, const uint8_t writeType){
 
-/*
- * reverse an array, NRF24L01 expects LSB first
- */
-void NRF24L01::ReverseAddress(uint8_t *addr, uint8_t *addrrev) {
-	//reverse address
-	uint8_t i = 0;
-	for(i=0; i<NRF24L01_ADDRSIZE; i++)
-		memcpy(&addrrev[i], &addr[NRF24L01_ADDRSIZE-1-i], 1);
-}
+	uint8_t status;
+	const uint8_t* current = reinterpret_cast<const uint8_t*>(buf);
+	data_len = rf24_min(data_len, NRF24L01_PAYLOAD);
+	uint8_t blank_len = dynamic_payloads_enabled ? 0 : NRF24L01_PAYLOAD - data_len;
 
-void NRF24L01::SetRxAddr(uint8_t pipe, uint8_t *addr){
-	if(pipe == 0) {
-			memcpy(&nrf24l01_addr0, addr, NRF24L01_ADDRSIZE); //cache address
-			uint8_t addrrev[NRF24L01_ADDRSIZE];
-			ReverseAddress(addr, (uint8_t *)addrrev);
-			WriteRegisters(NRF24L01_REG_RX_ADDR_P0, addrrev, NRF24L01_ADDRSIZE);
-		} else if(pipe == 1) {
-			memcpy(&nrf24l01_addr1, addr, NRF24L01_ADDRSIZE); //cache address
-			uint8_t addrrev[NRF24L01_ADDRSIZE];
-			ReverseAddress(addr, (uint8_t *)addrrev);
-			WriteRegisters(NRF24L01_REG_RX_ADDR_P1, addrrev, NRF24L01_ADDRSIZE);
-		} else if(pipe == 2) {
-			memcpy(&nrf24l01_addr2, addr, NRF24L01_ADDRSIZE); //cache address
-			WriteRegister(NRF24L01_REG_RX_ADDR_P2, addr[NRF24L01_ADDRSIZE-1]); //write only LSB MSBytes are equal to RX_ADDR_P
-		} else if(pipe == 3) {
-			memcpy(&nrf24l01_addr3, addr, NRF24L01_ADDRSIZE); //cache address
-			WriteRegister(NRF24L01_REG_RX_ADDR_P3, addr[NRF24L01_ADDRSIZE-1]); //write only LSB MSBytes are equal to RX_ADDR_P
-		} else if(pipe == 4) {
-			memcpy(&nrf24l01_addr4, addr, NRF24L01_ADDRSIZE); //cache address
-			WriteRegister(NRF24L01_REG_RX_ADDR_P4, addr[NRF24L01_ADDRSIZE-1]); //write only LSB MSBytes are equal to RX_ADDR_P
-		} else if(pipe == 5) {
-			memcpy(&nrf24l01_addr5, addr, NRF24L01_ADDRSIZE); //cache address
-			WriteRegister(NRF24L01_REG_RX_ADDR_P5, addr[NRF24L01_ADDRSIZE-1]); //write only LSB MSBytes are equal to RX_ADDR_P
-		}
-}
-
-void NRF24L01::SetTxAddr(uint8_t *addr){
-	memcpy(&nrf24l01_addrtx, addr, NRF24L01_ADDRSIZE); //cache address
-	uint8_t addrrev[NRF24L01_ADDRSIZE];
-	ReverseAddress(addr, (uint8_t *)addrrev);
-	WriteRegisters(NRF24L01_REG_RX_ADDR_P0, addrrev, NRF24L01_ADDRSIZE); //set rx address for ack on pipe 0
-	WriteRegisters(NRF24L01_REG_TX_ADDR, addrrev, NRF24L01_ADDRSIZE); //set tx address
-}
-
-void NRF24L01::SetPowerLevel(){
- //set power level
-	uint8_t setup = ReadRegister(NRF24L01_REG_RF_SETUP);
-	  setup &= ~((1<<NRF24L01_REG_RF_PWR_LOW) | (1<<NRF24L01_REG_RF_PWR_HIGH));
-
-	  if (NRF24L01_RF24_PA == NRF24L01_RF24_PA_MAX) {
-		  setup |= (1<<NRF24L01_REG_RF_PWR_LOW) | (1<<NRF24L01_REG_RF_PWR_HIGH);
-	  } else if (NRF24L01_RF24_PA == NRF24L01_RF24_PA_HIGH) {
-		  setup |= (1<<NRF24L01_REG_RF_PWR_HIGH) ;
-	  } else if (NRF24L01_RF24_PA == NRF24L01_RF24_PA_LOW) {
-		  setup |= (1<<NRF24L01_REG_RF_PWR_LOW);
-	  } else if (NRF24L01_RF24_PA == NRF24L01_RF24_PA_MIN) {
-	  } else {
-		  //default is max power
-		  setup |= (1<<NRF24L01_REG_RF_PWR_LOW) | (1<<NRF24L01_REG_RF_PWR_HIGH);
+	CSN_LOW(); //low CSN
+	status = spi.WriteReadbyte( writeType );
+	  while ( data_len-- ) {
+		  spi.WriteReadbyte(*current++);
+	  }
+	  while ( blank_len-- ) {
+		  spi.WriteReadbyte(0);
 	  }
 
-	  WriteRegister(NRF24L01_REG_RF_SETUP, setup);
-
-}
-void NRF24L01::SetDataRate(){
-//set data rate
-	 uint8_t setup = ReadRegister(NRF24L01_REG_RF_SETUP) ;
-
-	  setup &= ~((1<<NRF24L01_REG_RF_DR_LOW) | (1<<NRF24L01_REG_RF_DR_HIGH));
-	  if(NRF24L01_RF24_SPEED == NRF24L01_RF24_SPEED_250KBPS) {
-	    setup |= (1<<NRF24L01_REG_RF_DR_LOW);
-	  } else {
-	    if (NRF24L01_RF24_SPEED == NRF24L01_RF24_SPEED_2MBPS) {
-	    	setup |= (1<<NRF24L01_REG_RF_DR_HIGH);
-	    } else if (NRF24L01_RF24_SPEED == NRF24L01_RF24_SPEED_2MBPS) {
-	    } else {
-	    	//default is 1Mbps
-	    }
-	  }
-
-	  WriteRegister(NRF24L01_REG_RF_SETUP, setup);
-
-
-}
-void NRF24L01::SetCRClength(){
-//set crc length
-	uint8_t config = ReadRegister(NRF24L01_REG_CONFIG) & ~((1<<NRF24L01_REG_CRCO) | (1<<NRF24L01_REG_EN_CRC));
-
-	  if (NRF24L01_RF24_CRC == NRF24L01_RF24_CRC_DISABLED) {
-		  //nothing
-	  } else if (NRF24L01_RF24_CRC == NRF24L01_RF24_CRC_8) {
-		  config |= (1<<NRF24L01_REG_EN_CRC);
-	  } else if (NRF24L01_RF24_CRC == NRF24L01_RF24_CRC_16) {
-		  config |= (1<<NRF24L01_REG_EN_CRC);
-		  config |= (1<<NRF24L01_REG_CRCO);
-	  } else {
-		  //default is disabled
-	  }
-
-	  WriteRegister(NRF24L01_REG_CONFIG, config);
-
-}
-
-/*
- * flush RX fifo
- */
-void NRF24L01::FlushRXfifo() {
-	CSN_LOW(); //low CSN
-	spi.WriteReadbyte(NRF24L01_CMD_FLUSH_RX);
 	CSN_HIGH(); //high CSN
+	return status;
 }
-/*
- * flush RX fifo
- */
-void NRF24L01::FlushTXfifo() {
-	CSN_LOW(); //low CSN
-	spi.WriteReadbyte(NRF24L01_CMD_FLUSH_TX);
-	CSN_HIGH(); //high CSN
-}
-void NRF24L01::SetRX() {
-	SetRxAddr(0, nrf24l01_addr0); //restore pipe 0 address
-	WriteRegister(NRF24L01_REG_CONFIG, ReadRegister(NRF24L01_REG_CONFIG) | (1<<NRF24L01_REG_PRIM_RX)); //prx mode
-	WriteRegister(NRF24L01_REG_CONFIG, ReadRegister(NRF24L01_REG_CONFIG) | (1<<NRF24L01_REG_PWR_UP)); //power up
-	WriteRegister(NRF24L01_REG_STATUS, (1<<NRF24L01_REG_RX_DR) | (1<<NRF24L01_REG_TX_DS) | (1<<NRF24L01_REG_MAX_RT)); //reset status
-	FlushRXfifo(); //flush rx fifo
-	FlushTXfifo(); //flush tx fifo
-	CE_HIGH(); //start listening
-	_delay_us(150); //wait for the radio to power up
-}
-void NRF24L01::SetTX() {
-	CE_LOW(); //stop listening
-	WriteRegister(NRF24L01_REG_CONFIG, ReadRegister(NRF24L01_REG_CONFIG) & ~(1<<NRF24L01_REG_PRIM_RX)); //ptx mode
-	WriteRegister(NRF24L01_REG_CONFIG, ReadRegister(NRF24L01_REG_CONFIG) | (1<<NRF24L01_REG_PWR_UP)); //power up
-	WriteRegister(NRF24L01_REG_STATUS, (1<<NRF24L01_REG_RX_DR) | (1<<NRF24L01_REG_TX_DS) | (1<<NRF24L01_REG_MAX_RT)); //reset status
-	FlushTXfifo(); //flush tx fifo
-	_delay_us(150); //wait for the radio to power up
+/****************************************************************************/
+uint8_t NRF24L01::ReadPayload(void* buf, uint8_t data_len){
+	 uint8_t status;
+	 uint8_t* current = reinterpret_cast<uint8_t*>(buf);
+	 if(data_len > NRF24L01_PAYLOAD) data_len = NRF24L01_PAYLOAD;
+	 uint8_t blank_len = dynamic_payloads_enabled ? 0 : NRF24L01_PAYLOAD - data_len;
+
+
+	 CSN_LOW(); //low CSN
+	 	status = spi.WriteReadbyte( NRF24L01_CMD_R_RX_PAYLOAD );
+	  while ( data_len-- ) {
+	    *current++ = spi.WriteReadbyte(0xFF);
+	  }
+	  while ( blank_len-- ) {
+		  spi.WriteReadbyte(0xff);
+	  }
+	  CSN_HIGH(); //high CSN
+	  	return status;
+
 }
 
 
-
-void NRF24L01::PrintInfo(char* string){
-	//char buff[30];
-
-		sprintf(string,(char*)" ");
-
-		sprintf(string,"<NRF24L01>");
-	//	strncat(string,"<NRF24L01>",13);
-
-		sprintf(string,"%s<STATUS>%02X|",string, GetStatus()); // strncat(string,buff,13);
-		sprintf(string,"%s<CONFIG>%02X|",string, ReadRegister(NRF24L01_REG_CONFIG)); //strncat(string,buff,13);
-		sprintf(string,"%s<RF_CH>%02X|",string, ReadRegister(NRF24L01_REG_RF_CH)); //strncat(string,buff,12);
-	//	sprintf(string,"%s<RF_SETUP>%02X|",string, ReadRegister(NRF24L01_REG_RF_SETUP));//strncat(string,buff,15);
-	//	sprintf(string,"%s<EN_AA>%02X|",string, ReadRegister(NRF24L01_REG_EN_AA));// strncat(string,buff,12);
-	//	sprintf(string,"%s<EN_RXADDR>%02X|",string, ReadRegister(NRF24L01_REG_EN_RXADDR));// strncat(string,buff,16);
-	//	sprintf(string,"%s<OBSERVE_TX>%02X|",string, ReadRegister(NRF24L01_REG_OBSERVE_TX));// strncat(string,buff,17);
-
-		uint8_t adr[NRF24L01_ADDRSIZE];
-		uint8_t addrrev[NRF24L01_ADDRSIZE];
-
-		ReadRegisters(NRF24L01_REG_RX_ADDR_P0,adr,NRF24L01_ADDRSIZE);
-		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(string,"%s<RX_ADDR_P0>%02X:%02X:%02X:%02X:%02X|",string,addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]);// strcat(string,buff);
-
-		ReadRegisters(NRF24L01_REG_RX_ADDR_P1,adr,NRF24L01_ADDRSIZE);
-		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(string,"%s<RX_ADDR_P1>%02X:%02X:%02X:%02X:%02X|",string,addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]);// strcat(string,buff);
-
-
-
-		ReadRegisters(NRF24L01_REG_RX_ADDR_P2,adr,NRF24L01_ADDRSIZE);
-		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(string,"%s<RX_ADDR_P2>%02X|",string,addrrev[0]); //strcat(string,buff);
-
-
-		ReadRegisters(NRF24L01_REG_RX_ADDR_P3,adr,NRF24L01_ADDRSIZE);
-		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(string,"%s<RX_ADDR_P3>%02X|",string,addrrev[0]);// strcat(string,buff);
-
-		ReadRegisters(NRF24L01_REG_RX_ADDR_P4,adr,NRF24L01_ADDRSIZE);
-		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(string,"%s<RX_ADDR_P4>%02X|",string,addrrev[0]);// strcat(string,buff);
-
-
-		ReadRegisters(NRF24L01_REG_RX_ADDR_P5,adr,NRF24L01_ADDRSIZE);
-		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(string,"%s<RX_ADDR_P5>%02X|",string,addrrev[0]);// strcat(string,buff);
-
-
-		ReadRegisters(NRF24L01_REG_TX_ADDR,adr,NRF24L01_ADDRSIZE);
-		ReverseAddress(adr, (uint8_t *)addrrev);
-		sprintf(string,"%s<TX_ADDR>%02X:%02X:%02X:%02X:%02X|",string,addrrev[0],addrrev[1],addrrev[2],addrrev[3],addrrev[4]);// strcat(string,buff);
-
-
-		sprintf(string,"%s<RX_PW_P0>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P0));// strcat(string,buff);
-		sprintf(string,"%s<RX_PW_P1>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P1));// strcat(string,buff);
-		sprintf(string,"%s<RX_PW_P2>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P2));// strcat(string,buff);
-		sprintf(string,"%s<RX_PW_P3>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P3));// strcat(string,buff);
-		sprintf(string,"%s<RX_PW_P4>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P4));// strcat(string,buff);
-		sprintf(string,"%s<RX_PW_P5>%02X|",string,ReadRegister(NRF24L01_REG_RX_PW_P5));// strcat(string,buff);
-
-		sprintf(string,"%s|",string);
+/*** flush RX fifo ******************************************/
+uint8_t NRF24L01::FlushRx() {
+	return spiTrans(NRF24L01_CMD_FLUSH_RX);
 
 }
+/*** flush TX fifo **************************************************/
+uint8_t NRF24L01::FlushTx(){
+
+	return spiTrans(NRF24L01_CMD_FLUSH_TX);
+
+}
+
+/****************************************************************************/
+uint8_t NRF24L01::spiTrans(uint8_t cmd){
+
+  uint8_t status;
+
+  CSN_LOW(); //low CSN
+  status = spi.WriteReadbyte( cmd );
+  CSN_HIGH(); //high CSN
+
+  return status;
+}
+
 
 
 
