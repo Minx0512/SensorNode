@@ -16,24 +16,17 @@ example request:
 
 nRF24L01 : 0x10 + Pipe: 0x00 | pipeID: (0-5)  1 | mac-address: e.g: "e0:f0:f0:f0:f0"
 
-nRF24L01 : 0x10 + EnablePipe: 0x01 | Enable PipeID: (0-5)  1 | ""
+nRF24L01 : 0x10 + Channel: 0x01  | ChannelID: (0-125)  10 | ""
+nRF24L01 : 0x10 + PowerLvl: 0x02 | PwrLvlVal: (1-4)  4 | ""
+nRF24L01 : 0x10 + DataRate: 0x03 | DataRteVal: (1-3) 2 | ""
+nRF24L01 : 0x10 + CRCLevel: 0x04 | CRCLvlVal: (1-3)  3 | ""
+nRF24L01 : 0x10 + PayloadSize: 0x05 | payloadSzVal: 16 | ""
+nRF24L01 : 0x10 + ResetModule: 0x06 | 0 | ""
+nRF24L01 : 0x10 + SystemInfo: 0x07 | 0 | ""
 
-nRF24L01 : 0x10 + Channel: 0x02  | ChannelID: (0-125)  10 | ""
+GetSensorInfos: 0x20 + availableSensors: 0x00 | %MAC | Sensors
+GetSensorInfos: 0x20 + availableSensors: 0x01 | %MAC | Sensors
 
-nRF24L01 : 0x10 + PowerLvl: 0x03 | PwrLvlVal: (1-4)  4 | ""
-
-nRF24L01 : 0x10 + DataRate: 0x04 | DataRteVal: (1-3) 2 | ""
-
-nRF24L01 : 0x10 + CRCLevel: 0x05 | CRCLvlVal: (1-3)  3 | ""
-
-nRF24L01 : 0x10 + PayloadSize: 0x06 | payloadSzVal: 16 | ""
-
-nRF24L01 : 0x10 + AutoAck: 0x07 | En/Dis ACK: (0/1)  1 | ""
-
-nRF24L01 : 0x10 + ReInitModule: 0x08 | 0 | ""
-
-
-GetSensorInfos: 0x30 + Infos: 0x00 | %MAC | Info
 GetSensorData : 0x30 + Movement: 0x01 | %MAC | Mv
 GetSensorData : 0x30 + DHT22: 0x02 | %MAC | DHT22
 GetSensorData : 0x30 + LightSense: 0x03 | %MAC | Lap
@@ -46,8 +39,6 @@ Light on analog Port: Lap
 Light digital in Lux: Ldx
 TempDS: TDS
 TempHumDHT22: DHT
-    TempDHT22: TD
-    HumDHT22: HD
 Pressure: P
 Movement: M
 

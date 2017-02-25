@@ -33,6 +33,10 @@
 #define Sensor_LightLux 0
 #define Sensor_Pressure 0
 
+#define NRF_MainNode 1
+#define NRF_SN 0
+#define NRF_SNnum 0
+
 
 #if Sensor_DHT22
 #include "Sensors/DHT22.h"
@@ -45,7 +49,7 @@
 #endif
 
 uint8_t sent = 0;
-uint8_t flag2 = 0;
+uint8_t uartRX_flag = 0;
 uint8_t flagMovement = 0;
 uint8_t nrfIntFlag = 0;
 
@@ -55,27 +59,43 @@ char bufferNRF[128][5];
 
 uint8_t firstrun EEMEM;
 
-const char sendSensorStr[]  = "//sensor/%s/|%s/|%s\\\\";
-const char sendSystemStr[]  = "//system/%s/|%s/|%s\\\\";
-//uint8_t pipeEnable EEMEM;
+const char sendSensorStr[]  = "/sensor/%s/|%s/|%s";
+const char sendSystemStr[]  = "/system/%s/|%s/|%s";
+const char getSystemStr[] = "%s|%s|%s";
+uint8_t pipeEnable EEMEM;
 uint8_t nrfChannel EEMEM;
 uint8_t nrfACK EEMEM;
-
+uint8_t pwrLvl EEMEM;
+uint8_t dataRate EEMEM;
+uint8_t crcLvl EEMEM;
 
 uint64_t mem_adressTx[25] EEMEM;
 uint64_t mem_adressRx[5] EEMEM;
 
 
+#if NRF_MainNode
 
 /** standard Rx address to receive data on */
-uint64_t adressRx[] = {0xa0a0a0a0a0,0xa0a0a0a0a1,0xa0a0a0a0a2,0xa0a0a0a0a3,0xa0a0a0a0a4};
+uint64_t adressRx[] = {0xA0A0A0A0A0,0xA0A0A0A0A1,0xA0A0A0A0A2,0xA0A0A0A0A3,0xA0A0A0A0A4};
 
 /**  Tx address to send data to */
-uint64_t adressTx[] = {0xb0b0b0b0b1,0xb0b0b0b0c1,0xb0b0b0b0d1,0xb0b0b0b0e1,0xb0b0b0b0f1};
+uint64_t adressTx[] = {0xB0B0B0B0B0,0xB0B0B0B0C0,0xB0B0B0B0D0,0xB0B0B0B0E0,0xB0B0B0B0F0};
+
+#elif NRF_SN
+/** standard Rx address to receive data on */
+uint64_t adressRx[] = {0xB0B0B0B0B0,0xB0B0B0B0C0,0xB0B0B0B0D0,0xB0B0B0B0E0,0xB0B0B0B0F0};
+
+/**  Tx address to send data to */
+uint64_t adressTx[] = {0xA0A0A0A0A0,0xA0A0A0A0A1,0xA0A0A0A0A2,0xA0A0A0A0A3,0xA0A0A0A0A4};
+
+#endif
+
 
 USART uart = USART(9600);
 NRF24L01 nrf = NRF24L01(DDRB, PORTB, CE, CSN);
 ParseStrings ps = ParseStrings();
+
+
 
 
 #if Sensor_DS18B20
@@ -98,6 +118,8 @@ void delay_ms(uint16_t ms){
 		_delay_ms(1);
 	}
 }
+
+
 
 void CpyMAC(uint8_t* src, uint8_t* dest, uint8_t len){
 
@@ -130,11 +152,11 @@ void CreateSensorMAC(char* newMAC, uint64_t nrfMAC,char* add){
 
 
 	sprintf(newMAC,"%02X:%02X:%02X:%02X:%02X%s",
-			(uint8_t)(nrfMAC & 0x00000000ff),
-			(uint8_t)((nrfMAC & 0x000000ff00)>>8),
-			(uint8_t)((nrfMAC & 0x0000ff0000)>>16),
+			(uint8_t)((nrfMAC & 0xff00000000)>>32),
 			(uint8_t)((nrfMAC & 0x00ff000000)>>24),
-			(uint8_t)((nrfMAC & 0xff00000000)>>32),add);
+			(uint8_t)((nrfMAC & 0x0000ff0000)>>16),
+			(uint8_t)((nrfMAC & 0x000000ff00)>>8),
+			(uint8_t)(nrfMAC & 0x00000000ff),add);
 
 
 
@@ -147,7 +169,13 @@ void SetupNRF(){
 
 	uint8_t nrfChn = 0x0A;
 	uint8_t nrfAutoACK = 1;
-	//uint8_t nrfPipesEnable = 0b00111111;
+	uint8_t nrfPipesEnable = 0b00111111;
+
+	uint8_t powerLvl = RF24_PA_LOW;
+	uint8_t dataRt = RF24_1MBPS;
+	uint8_t crcLevel = RF24_CRC_16;
+
+
 
 
 
@@ -165,7 +193,11 @@ void SetupNRF(){
 
 		eeprom_write_byte(&nrfACK,nrfAutoACK);
 		eeprom_write_byte(&nrfChannel,nrfChn);
-	//	eeprom_write_byte(&pipeEnable,nrfPipesEnable);
+		eeprom_write_byte(&pipeEnable,nrfPipesEnable);
+
+		eeprom_write_byte(&pwrLvl,powerLvl);
+		eeprom_write_byte(&dataRate,dataRt);
+		eeprom_write_byte(&crcLvl,crcLevel);
 
 
 	}else if(fr==1){
@@ -178,7 +210,11 @@ void SetupNRF(){
 
 		nrfChn = eeprom_read_byte(&nrfChannel);
 		nrfAutoACK = eeprom_read_byte(&nrfACK);
-	//	nrfPipesEnable = eeprom_read_byte(&pipeEnable);
+		nrfPipesEnable = eeprom_read_byte(&pipeEnable);
+
+		powerLvl = eeprom_read_byte(&pwrLvl);
+		dataRt = eeprom_read_byte(&dataRate);
+		crcLevel = eeprom_read_byte(&crcLvl);
 
 
 
@@ -190,15 +226,22 @@ void SetupNRF(){
 
 	nrf.Init();
 	nrf.setChannel(nrfChn);
-	nrf.setCRCLength(RF24_CRC_16);
-	nrf.setPALevel(RF24_PA_LOW);
-	nrf.setDataRate(RF24_1MBPS);
-	nrf.setAutoAck(true);
+	nrf.setCRCLength(crcLevel);
+	nrf.setPALevel(powerLvl);
+	nrf.setDataRate(dataRt);
+
+	if (nrfAutoACK==1){
+		nrf.setAutoAck(true);
+	}else{
+		nrf.setAutoAck(false);
+	}
+
+
 	nrf.enableAckPayload();
 	nrf.enableDynamicPayloads();
 
 	nrf.openWritingPipe(adressTx[0]);
-	nrf.openReadingPipe(1,adressRx[1]);
+	nrf.openReadingPipe(1,adressRx[0]);
 
 	nrf.startListening();
 
@@ -233,34 +276,25 @@ ISR(INT0_vect){
 	// nrf receive
 	//uart.writeString("INT0\r\n");
 	nrfIntFlag = 1;
-/*
-	uint8_t payloadSize = nrf.getPayloadSize();
-	uint8_t bufferin[payloadSize-6];
-	char bufferout[payloadSize];
-	uint8_t pipe = 0;
-		if(nrf.ReadReady(&pipe)) { //if data is ready
-			//read buffer
-			nrf.read(bufferin,payloadSize);
-			//	uint8_t samecheck = 1;
 
+	bool tx,fail,rx;
+	nrf.whatHappened(tx,fail,rx);
+	uint8_t pipeNo;
+	uint8_t received[128];
 
-			//evalNRFBuffer(pipe,bufferin,bufferout);
-			sprintf(bufferout,"%i: %s|",pipe, (char*)bufferin);
-			uart.writeString(bufferout);
+	if(rx || nrf.available(&pipeNo) ){
 
-			for(uint8_t i=0;i<128;i++){
-				bufferNRF[i][pipe] = bufferout[i];
+		nrf.read(&received,sizeof(received));
 
-			}
-
-
-
-			for(uint8_t i=0; i<sizeof(bufferin); i++)
-				bufferin[i] = 0;
-
+		for(uint8_t i=0;i<sizeof(received);i++){
+			bufferNRF[i][pipeNo] = received[i];
 		}
 
-*/
+
+	}
+
+
+
 
 }
 
@@ -283,13 +317,13 @@ char s[50];
 
 sprintf(s," ");
 
-sprintf(s,"//input/%s",str);
+sprintf(s,"//input/%s/",str);
 //sprintf(str,"%s","");
 uart.writeString(s);
 
 
 
-flag2 = 1;
+uartRX_flag = 1;
 
 
 uart.USART0_Flush();
@@ -383,7 +417,7 @@ int main(){
 
 			}
 
-			if(flag2){
+			if(uartRX_flag){
 
 
 				ps.Parse(str);
@@ -395,7 +429,7 @@ int main(){
 					ps.getPropertyID(pidString);
 					uint8_t PID = (uint8_t)strtoul(pidString,NULL,16);
 
-					if(ps.getCmdProperty()==0){ // get MAC address for pipe
+					if(ps.getCmdProperty()==0){ // set MAC address for pipe
 
 
 						ps.ParseMAC();
@@ -458,55 +492,37 @@ int main(){
 
 					//	ps.PrintMAC(buffer);
 
-					}else if(ps.getCmdProperty()==1){ // Enable pipe
-
-
-					//	uint8_t c = 0b00111111;
-
-					//	eeprom_update_byte(&pipeEnable,c);
-
-
-					//	nrf.EnablePipe(ps.getPropertyID());
-
-
-					}else if(ps.getCmdProperty()==2){ // Channel
+					}else if(ps.getCmdProperty()==1){ // set Channel
 
 						eeprom_update_byte(&nrfChannel,PID);
 
-					//	nrf.SetChannel(ps.getPropertyID());
 
-					}else if(ps.getCmdProperty()==3){ // PowerLevel
+					}else if(ps.getCmdProperty()==2){ // PowerLevel
 
-					//	nrf.SetPowerLevel(ps.getPropertyID());
+						eeprom_update_byte(&pwrLvl,PID);
 
-					}else if(ps.getCmdProperty()==4){ // Data rate
 
-					//	nrf.SetDataRate(ps.getPropertyID());
+					}else if(ps.getCmdProperty()==3){ // Data rate
 
-					}else if(ps.getCmdProperty()==5){ // CRC level
+						eeprom_update_byte(&dataRate,PID);
 
-					//	nrf.SetCRClength(ps.getPropertyID());
 
-					}else if(ps.getCmdProperty()==6){ // Payload size
+					}else if(ps.getCmdProperty()==4){ // CRC level
 
-					//	nrf.SetPayloadSize(ps.getPropertyID());
+						eeprom_update_byte(&crcLvl,PID);
 
-					}else if(ps.getCmdProperty()==7){ // Auto ACK
+
+					}else if(ps.getCmdProperty()==5){ // Auto ACK
 
 						eeprom_update_byte(&nrfACK,PID);
 
-					//	nrf.SetAutoAck(ps.getPropertyID());
 
-					}else if(ps.getCmdProperty()==8){ // Reset
+					}else if(ps.getCmdProperty()==6){ // Reset
 
-					//	nrf.SetAddresses(a0,a1,a2,a3,a4,a5,aT);
-					//	nrf.Init();
 						eeprom_write_byte(&firstrun,0);
 
 
-
-
-					}else if(ps.getCmdProperty()==9){ // System Info
+					}else if(ps.getCmdProperty()==7){ // System Info
 
 
 					//	char buf[500];
@@ -534,7 +550,7 @@ int main(){
 					 *
 					 */
 
-					char infoString[32];
+					char infoString[80];
 					char nodeMac[16];
 					char valBuffer[35];
 
@@ -542,13 +558,11 @@ int main(){
 
 
 
-					eeprom_read_block (&stdMAC, &mem_adressRx[0], sizeof(mem_adressRx[0]));
-
 					if(ps.getCmdProperty()==0x00){
-						/* Get available main node sensors
+						/* Get available node sensors
 						 *
 						 */
-
+						eeprom_read_block (&stdMAC, &mem_adressRx[0], sizeof(mem_adressRx[0]));
 						CreateSensorMAC(nodeMac,stdMAC,(char*)"|");
 						sprintf(valBuffer,"%s",(char*)"");
 
@@ -575,23 +589,44 @@ int main(){
 						uart.writeString(infoString);
 
 
-					}else if(ps.getCmdProperty()==0x01){
-						/* Get available node 1 sensors
+					}
+#if NRF_MainNode
+					else if(ps.getCmdProperty()==0x01  ){
+						/* Get available sensors on node n
 						 *
 						 */
 
-						CreateSensorMAC(nodeMac,stdMAC,(char*)"|");
-						sprintf(valBuffer,"%s",(char*)"");
+						uint8_t cp = ps.getCmdProperty()-1;
+						uint64_t writeto = {0x00};
+						eeprom_read_block (&writeto, &mem_adressTx[cp], sizeof(mem_adressTx[cp]));
 
-						// get node 1 sensors from nRF
 
+
+						nrf.stopListening();
+						nrf.openWritingPipe(writeto);
+						nrf.openReadingPipe(1,adressRx[0]);
+
+						nrf.startListening();
+
+
+						CreateSensorMAC(nodeMac,writeto,(char*)"");
+						sprintf(valBuffer,"%s",(char*)"Sensors");
+
+
+
+
+						sprintf(infoString,getSystemStr,(char*)"20",nodeMac,valBuffer);
+
+						// get node n sensors via nRF
+					//	nrf.write(infoString,sizeof(infoString));
+						uart.writeString(infoString);
 
 
 
 
 					}
 
-
+#endif
 
 
 				}else if(ps.getCmdID()==0x30){ // get Sensor data
@@ -752,13 +787,13 @@ int main(){
 
 
 
-				uart.writeString((char*)"+end\r\n");
+				uart.writeString((char*)"\\\\+end\r\n");
 
 				sprintf(str," ");
 
 
 
-					flag2 = 0;
+				uartRX_flag = 0;
 
 			}
 
