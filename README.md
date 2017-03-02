@@ -14,7 +14,7 @@ Communications protocoll between the raspberry pi and the main sensor node:
 example request:
 0x31|A0:A0:A0:A0:A0:00:01|DHT 
 
-| I |HEX(command id (CmdID) + command property (cmdP) )| property id (PID/PVal) | property string (pString)|
+|  |HEX(command id (CmdID) + command property (cmdP) )| property id (PID/PVal) | property string (pString)|
 |-------- |--------------------------------------------------|------------------------|--------------------------|
 |nRF24L01 | 0x10 + Pipe: 0x00 | pipeID: (0-5)  1 | mac-address: e.g: "e0:f0:f0:f0:f0"|
 |nRF24L01 | 0x10 + Channel: 0x01  | ChannelID: (0-125)  10 | "" |
