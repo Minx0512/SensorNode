@@ -16,7 +16,6 @@ example request:
 
 |  |HEX(command id (CmdID) + command property (cmdP) )| property id (PID/PVal) | property string (pString)|
 |-------- |--------------------------------------|------------------------|--------------------------|
-|nRF24L01 Pipe| 0x10 + 0x00 | pipeID: (0-5)  1 | mac-address: e.g: "e0:f0:f0:f0:f0"|
 |nRF24L01 Channel | 0x10 + 0x01  | ChannelID: (0-125)  10 | "" |
 |nRF24L01 PowerLvl| 0x10 +  0x02 | PwrLvlVal: (1-4)  4 | ""|
 |nRF24L01 DataRate| 0x10 +  0x03 | DataRteVal: (1-3) 2 | ""|
@@ -24,8 +23,8 @@ example request:
 |nRF24L01 PayloadSize| 0x10 + 0x05 | payloadSzVal: 16 | ""|
 |nRF24L01 ResetModule| 0x10 + 0x06 | 0 | ""|
 |nRF24L01 SystemInfo| 0x10 + 0x07 | 0 | ""|
-|GetSensorInfos availableSensors| 0x20 + 0x00 | %MAC | Sensors|
-|GetSensorInfos availableSensors| 0x20 + 0x01 | %MAC | Sensors|
+|GetSensorInfos availableSensors on current node| 0x20 + 0x00 | %MAC | Sensors|
+|GetSensorInfos availableSensors on connected node n| 0x20 + 0x01 | %MAC | Sensors|
 |GetSensorData Movement| 0x30 + 0x01 | %MAC | Mv|
 |GetSensorData DHT22 | 0x30 + 0x02 | %MAC | DHT22|
 |GetSensorData LightSense| 0x30 + 0x03 | %MAC | Lap|

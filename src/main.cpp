@@ -759,26 +759,7 @@ int main(){
 
 						}
 					#endif
-						else if(ps.getCmdProperty()==0x07){ // Remote Sensors
 
-							//char buf[100];
-
-							//uart.writeString("<RS>");
-							for(int i=0;i<5;i++){
-								char stri[128];
-								for(int j=0;j<128;j++){
-									stri[j] = bufferNRF[j][i];
-
-								}
-								uart.writeString(stri);
-
-
-							}
-
-
-
-
-						}
 
 
 
