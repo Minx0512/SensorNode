@@ -12,7 +12,7 @@ Communications protocoll between the raspberry pi and the main sensor node:
 
 
 example request:
-0x31|A0:A0:A0:A0:A0:00:01|DHT 
+0x31|A0:A0:A0:A0:A0|DHT22 
 
 |  |HEX(command id (CmdID) + command property (cmdP) )| property id (PID/PVal) | property string (pString)|
 |-------- |--------------------------------------|------------------------|--------------------------|
