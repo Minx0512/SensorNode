@@ -24,16 +24,14 @@ example request:
 |nRF24L01 | 0x10 + PayloadSize: 0x05 | payloadSzVal: 16 | ""|
 |nRF24L01 | 0x10 + ResetModule: 0x06 | 0 | ""|
 |nRF24L01 | 0x10 + SystemInfo: 0x07 | 0 | ""|
-
-GetSensorInfos: 0x20 + availableSensors: 0x00 | %MAC | Sensors
-GetSensorInfos: 0x20 + availableSensors: 0x01 | %MAC | Sensors
-
-GetSensorData : 0x30 + Movement: 0x01 | %MAC | Mv
-GetSensorData : 0x30 + DHT22: 0x02 | %MAC | DHT22
-GetSensorData : 0x30 + LightSense: 0x03 | %MAC | Lap
-GetSensorData : 0x30 + LightSense: 0x04 | %MAC | Ldx
-GetSensorData : 0x30 + TempDS18B20: 0x05 | %MAC | TDS
-GetSensorData : 0x30 + Pressure: 0x06 | %MAC | P
+|GetSensorInfos| 0x20 + availableSensors: 0x00 | %MAC | Sensors|
+|GetSensorInfos| 0x20 + availableSensors: 0x01 | %MAC | Sensors|
+|GetSensorData | 0x30 + Movement: 0x01 | %MAC | Mv|
+|GetSensorData | 0x30 + DHT22: 0x02 | %MAC | DHT22|
+|GetSensorData | 0x30 + LightSense: 0x03 | %MAC | Lap|
+|GetSensorData | 0x30 + LightSense: 0x04 | %MAC | Ldx|
+|GetSensorData | 0x30 + TempDS18B20: 0x05 | %MAC | TDS|
+|GetSensorData | 0x30 + Pressure: 0x06 | %MAC | P|
 
 
 Light on analog Port: Lap
