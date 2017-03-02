@@ -44,17 +44,14 @@ example request:
 
 
 answer:
-DS18B20
-//sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0|%TempVal1|...|\\
 
-DHT22:
-//sensor/DHT/|%sensorMAC|/|%tempVal:%unit|%humVal:%unit|%errCode|\\
+DS18B20: //sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0|%TempVal1|...|\\
 
-Movement:
-//sensor/M/|%sensorMAC|/|(0|1)|\\
+DHT22: //sensor/DHT/|%sensorMAC|/|%tempVal:%unit|%humVal:%unit|%errCode|\\
 
-LightAnalog
-//sensor/Lav/|%sensorMAC|/|%d.%03d|\\
+Movement: //sensor/M/|%sensorMAC|/|(0|1)|\\
+
+LightAnalog: //sensor/Lav/|%sensorMAC|/|%d.%03d|\\
 
 
 
