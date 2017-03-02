@@ -15,7 +15,7 @@ example request:
 0x31|A0:A0:A0:A0:A0:00:01|DHT 
 
 |  |HEX(command id (CmdID) + command property (cmdP) )| property id (PID/PVal) | property string (pString)|
-|-------- |--------------------------------------------------|------------------------|--------------------------|
+|-------- |--------------------------------------|------------------------|--------------------------|
 |nRF24L01 Pipe| 0x10 + 0x00 | pipeID: (0-5)  1 | mac-address: e.g: "e0:f0:f0:f0:f0"|
 |nRF24L01 Channel | 0x10 + 0x01  | ChannelID: (0-125)  10 | "" |
 |nRF24L01 PowerLvl| 0x10 +  0x02 | PwrLvlVal: (1-4)  4 | ""|
