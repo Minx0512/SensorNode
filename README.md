@@ -33,6 +33,7 @@ example request:
 |GetSensorData TempDS18B20| 0x30 + 0x05 | %MAC | TDS|
 |GetSensorData Pressure| 0x30 + 0x06 | %MAC | P|
 
+| | |
 |------------| ------ |
 |Light on analog Port | Lap |
 |Light digital in Lux | Ldx |
