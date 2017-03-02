@@ -34,12 +34,12 @@ example request:
 |GetSensorData Pressure| 0x30 + 0x06 | %MAC | P|
 
 
-Light on analog Port: Lap
-Light digital in Lux: Ldx
-TempDS: TDS
-TempHumDHT22: DHT
-Pressure: P
-Movement: M
+|Light on analog Port | Lap |
+|Light digital in Lux | Ldx |
+|TempDS | TDS|
+|TempHumDHT22 | DHT |
+|Pressure | P|
+|Movement | M|
 
 
 answer:
