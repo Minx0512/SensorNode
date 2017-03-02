@@ -43,8 +43,7 @@ example request:
 |Movement | M|
 
 
-answer:
-
+answers:
 ```
 DS18B20: //sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0|%TempVal1|...|\\
 DHT22: //sensor/DHT/|%sensorMAC|/|%tempVal:%unit|%humVal:%unit|%errCode|\\
