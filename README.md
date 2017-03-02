@@ -10,19 +10,20 @@ The sensor nodes Wireless addresses can be configured via a python script.
 
 Communications protocoll between the raspberry pi and the main sensor node:
 
-HEX(command id (CmdID) + command property (cmdP) )| property id (PID/PVal) | property string (pString)
+
 example request:
 0x31|A0:A0:A0:A0:A0:00:01|DHT 
 
-nRF24L01 : 0x10 + Pipe: 0x00 | pipeID: (0-5)  1 | mac-address: e.g: "e0:f0:f0:f0:f0"
-
-nRF24L01 : 0x10 + Channel: 0x01  | ChannelID: (0-125)  10 | ""
-nRF24L01 : 0x10 + PowerLvl: 0x02 | PwrLvlVal: (1-4)  4 | ""
-nRF24L01 : 0x10 + DataRate: 0x03 | DataRteVal: (1-3) 2 | ""
-nRF24L01 : 0x10 + CRCLevel: 0x04 | CRCLvlVal: (1-3)  3 | ""
-nRF24L01 : 0x10 + PayloadSize: 0x05 | payloadSzVal: 16 | ""
-nRF24L01 : 0x10 + ResetModule: 0x06 | 0 | ""
-nRF24L01 : 0x10 + SystemInfo: 0x07 | 0 | ""
+| |HEX(command id (CmdID) + command property (cmdP) )| property id (PID/PVal) | property string (pString)|
+=========================================================================================================
+|nRF24L01 | 0x10 + Pipe: 0x00 | pipeID: (0-5)  1 | mac-address: e.g: "e0:f0:f0:f0:f0"|
+|nRF24L01 | 0x10 + Channel: 0x01  | ChannelID: (0-125)  10 | "" |
+|nRF24L01 | 0x10 + PowerLvl: 0x02 | PwrLvlVal: (1-4)  4 | ""|
+|nRF24L01 : 0x10 + DataRate: 0x03 | DataRteVal: (1-3) 2 | ""|
+|nRF24L01 : 0x10 + CRCLevel: 0x04 | CRCLvlVal: (1-3)  3 | ""|
+|nRF24L01 : 0x10 + PayloadSize: 0x05 | payloadSzVal: 16 | ""|
+|nRF24L01 : 0x10 + ResetModule: 0x06 | 0 | ""|
+|nRF24L01 : 0x10 + SystemInfo: 0x07 | 0 | ""|
 
 GetSensorInfos: 0x20 + availableSensors: 0x00 | %MAC | Sensors
 GetSensorInfos: 0x20 + availableSensors: 0x01 | %MAC | Sensors
