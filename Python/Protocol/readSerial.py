@@ -5,7 +5,6 @@ from cherrypy import response
 
 
 
-
 def NewSerialCon(port, baudrate):
  ser = serial.Serial(port, baudrate)
  ser.bytesize = serial.EIGHTBITS #number of bits per bytes

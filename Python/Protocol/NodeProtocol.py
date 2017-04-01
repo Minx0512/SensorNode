@@ -1,13 +1,11 @@
 #!/usr/bin/python
 
 import sys
-from .. import readSerial
+from readSerial import *
+
 # Get Sensor data
 def DHT22():
     return "{0}".format(32)
-
-def DS18B20():
-    return "{0}".format(35)
 
 
 def ReadSensorDS18B20(tt,MAC):
