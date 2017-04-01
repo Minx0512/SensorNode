@@ -4,6 +4,9 @@
 #import thread
 #import time
 import ReadSensor
+import Sensors.Sensors as Sensors
+
+# 1. get available sensors per Node
 
 
 
@@ -20,7 +23,7 @@ rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 print rs.DS18B20("A0:A0:A0:A0:A0")
 
 
-print rs.resp
+
 
 
 

@@ -27,9 +27,9 @@ class ReadSensor:
      """Reads all DS18B20 sensors on one node with a certain MAC address"""
      q = self.queryStr.format(35,MAC,"DST")
      self.resp = self.serialCon.ReadData(q)
-     ds = Sensors.DS18B20(self.resp)
-     vals = ds.GetValuePair(0)
-     return vals
+     ds = Sensors.DS18B20(self.resp,"DST")
+     #vals = ds.GetValuePair(0)
+     return ds
 
     def DHT22(self,MAC):
      """Reads the DHT22 sensor on a node with a certain MAC address"""   

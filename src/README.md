@@ -44,7 +44,7 @@ example request:
 
 answers:
 ```
-DS18B20: //sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0|%TempVal1|...|\\
+DS18B20: //sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0:%unit|%TempVal1:%unit|...|\\
 DHT22: //sensor/DHT/|%sensorMAC|/|%tempVal:%unit|%humVal:%unit|%errCode|\\
 Movement: //sensor/M/|%sensorMAC|/|(0|1)|\\
 LightAnalog: //sensor/Lav/|%sensorMAC|/|%d.%03d|\\

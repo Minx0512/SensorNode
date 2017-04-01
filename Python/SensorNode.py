@@ -18,7 +18,15 @@ from time import sleep
 from gtk._gtk import ANCHOR_WEST
 from DesignColors import *
 
-
+def GetMovement(sock):
+ SendData(sock,'{0}\r\n'.format(NPGetSensorDataMove()))
+ return ReceiveData(sock,"|+end\r\n")
+def GetTempHumidDHT22(sock):
+ SendData(sock,'{0}\r\n'.format(NPGetSensorDataTempHumidityDHT22()))
+ return ReceiveData(sock,"|+end\r\n")
+def GetLightsense(sock):
+ SendData(sock,'{0}\r\n'.format(NPGetSensorDataLightsense()))
+ return ReceiveData(sock,"|+end\r\n")
 
 def GetTime():
  while 1:   
