@@ -40,7 +40,7 @@ class ReadSensor:
     
     def Movement(self,MAC):
      """Reads the movement detector of a certain node """   
-     q = self.queryStr.format(31,MAC,"MV")
+     q = self.queryStr.format(31,MAC,"M")
      self.resp = self.serialCon.ReadData(q)
      mv = Sensors.Movment(self.resp,"M")
      return mv 

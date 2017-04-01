@@ -45,7 +45,8 @@ class DHT22:
 
 class Movment:
     def __init__(self,responseStr,sensStr):
-     self.move = 0     
+     self.move = 0   
+     print responseStr  
      self.mv = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)
      if len(self.mv) > 0:
       self.mv = self.mv[0]
