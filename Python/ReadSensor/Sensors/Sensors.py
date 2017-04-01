@@ -31,7 +31,8 @@ class DHT22:
      self.T = 0.0
      self.unitT = ""
      self.err = 0
-     # //input/32|0|Sensors//sensor/DHT22/|A0:A0:A0:A0:A0|/|30.1:°C|40.0:%%RH|0|\\+end
+
+
      self.dht = re.findall(".\/\/sensor\/DHT22\/\|(.*)\|\/\|(.*):(.*)\|(.*):(.*)\|(.*)\|",responseStr)
      if len(self.dht) > 0:
       self.dht = self.dht[0]   
