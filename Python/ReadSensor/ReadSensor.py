@@ -10,7 +10,7 @@ class ReadSensor:
      self.cmdID = 0
      self.propertyString = ""
      self.queryStr = "{0}|{1}|{2}"
-     self.serialCon = SerialConnection(port,baudrate)
+     self.serialCon = SerialConnection.SerialConnection(port,baudrate)
     
     def DS18B20(self,MAC):
      q = self.queryStr.format(35,MAC,"DST")
