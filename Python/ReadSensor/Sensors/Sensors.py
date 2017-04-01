@@ -25,7 +25,7 @@ class DS18B20:
      return [self.MAC[idx], self.T[idx]]
      
 class DHT22:
-    def __init__(self,responseStr):
+    def __init__(self,responseStr,sensStr):
      self.H = 0.0
      self.unitH = ""
      self.T = 0.0
@@ -33,7 +33,7 @@ class DHT22:
      self.err = 0
 
 
-     self.dht = re.findall(".\/\/sensor\/DHT22\/\|(.*)\|\/\|(.*):(.*)\|(.*):(.*)\|(.*)\|",responseStr)
+     self.dht = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*):(.*)\|(.*):(.*)\|(.*)\|".format(sensStr),responseStr)
      if len(self.dht) > 0:
       self.dht = self.dht[0]   
       self.H = float(self.dht[3])
@@ -44,9 +44,9 @@ class DHT22:
      
 
 class Movment:
-    def __init__(self,responseStr):
+    def __init__(self,responseStr,sensStr):
      self.move = 0     
-     self.mv = re.findall(".\/\/sensor\/M\/\|(.*)\|\/\|(.*)\|",responseStr)
+     self.mv = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)
      if len(self.mv) > 0:
       self.mv = self.mv[0]
       self.move = int(self.mv[1])

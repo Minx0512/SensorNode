@@ -35,11 +35,15 @@ class ReadSensor:
      """Reads the DHT22 sensor on a node with a certain MAC address"""   
      q = self.queryStr.format(32,MAC,"DHT22")
      self.resp = self.serialCon.ReadData(q)
+     dht = Sensors.DHT22(self.resp,"DHT22")
+     return dht
     
     def Movement(self,MAC):
      """Reads the movement detector of a certain node """   
      q = self.queryStr.format(31,MAC,"MV")
-     self.resp = self.serialCon.ReadData(q) 
+     self.resp = self.serialCon.ReadData(q)
+     mv = Sensors.Movment(self.resp,"M")
+     return mv 
     
     def LightAnalog(self,MAC):
      """ Reads the analog photoresistor on a certain node """   

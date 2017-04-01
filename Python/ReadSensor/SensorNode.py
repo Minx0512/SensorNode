@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 #import os
 #import sys
 #import thread
@@ -20,7 +21,15 @@ rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 
 #rs.GetAvailableSensors("A0:A0:A0:A0:A0")
 
-print rs.DS18B20("A0:A0:A0:A0:A0")
+ds =  rs.DS18B20("A0:A0:A0:A0:A0")
+
+mv = rs.Movement("A0:A0:A0:A0:A0")
+
+print mv.move
+
+for idx in range(0,ds.numEl):
+ print ds.GetValuePair(idx)
+
 
 
 
