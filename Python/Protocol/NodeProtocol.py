@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import sys
-
+from .. import readSerial
 # Get Sensor data
 def DHT22():
     return "{0}".format(32)
