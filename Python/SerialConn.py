@@ -8,7 +8,7 @@ from xml.dom.minidom import parse, parseString
 from pyasn1.compat.octets import null
 
 from ReadSensor import *
-#from Protocol.NodeProtocol import *
+from Protocol.NodeProtocol import *
 from readSerial import *
 
 
