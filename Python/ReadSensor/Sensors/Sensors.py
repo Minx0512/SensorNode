@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import re
 
@@ -45,8 +46,7 @@ class DHT22:
 
 class Movment:
     def __init__(self,responseStr,sensStr):
-     self.move = 0   
-     print responseStr  
+     self.move = 0     
      self.mv = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)
      if len(self.mv) > 0:
       self.mv = self.mv[0]

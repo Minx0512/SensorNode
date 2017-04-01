@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+# -*- coding: utf-8 -*-
 
 import SerialConnection
 import Sensors.Sensors as Sensors
