@@ -1,0 +1,1627 @@
+.TH "NRF24L01" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NRF24L01 \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NRF24L01\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNRF24L01\fP ()"
+.br
+.ti -1c
+.RI "\fBNRF24L01\fP (volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t \fBCE\fP, uint8_t \fBCSN\fP)"
+.br
+.ti -1c
+.RI "bool \fBInit\fP ()"
+.br
+.ti -1c
+.RI "void \fBstartListening\fP ()"
+.br
+.ti -1c
+.RI "void \fBstopListening\fP ()"
+.br
+.ti -1c
+.RI "bool \fBavailable\fP ()"
+.br
+.ti -1c
+.RI "void \fBread\fP (void *buf, uint8_t len)"
+.br
+.ti -1c
+.RI "bool \fBwrite\fP (const void *buf, uint8_t len)"
+.br
+.ti -1c
+.RI "void \fBopenWritingPipe\fP (const uint8_t *address)"
+.br
+.ti -1c
+.RI "void \fBopenReadingPipe\fP (uint8_t number, const uint8_t *address)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.PP
+.RI "\fBLow-level internal interface\&.\fP"
+.br
+Protected methods that address the chip directly\&. Regular users cannot ever call these\&. They are documented for completeness and for developers who may want to extend this class\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "uint8_t \fBReadRegisters\fP (uint8_t reg, uint8_t *buf, uint8_t len)"
+.br
+.ti -1c
+.RI "uint8_t \fBReadRegister\fP (uint8_t reg)"
+.br
+.ti -1c
+.RI "uint8_t \fBWriteRegisters\fP (uint8_t reg, const uint8_t *buf, uint8_t len)"
+.br
+.ti -1c
+.RI "uint8_t \fBWriteRegister\fP (uint8_t reg, uint8_t value)"
+.br
+.ti -1c
+.RI "uint8_t \fBWritePayload\fP (const void *buf, uint8_t len, const uint8_t writeType)"
+.br
+.ti -1c
+.RI "uint8_t \fBReadPayload\fP (void *buf, uint8_t len)"
+.br
+.ti -1c
+.RI "uint8_t \fBFlushRx\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBgetStatus\fP (void)"
+.br
+.ti -1c
+.RI "void \fBToggleFeatures\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBspiTrans\fP (uint8_t cmd)"
+.br
+.ti -1c
+.RI "\fB__attribute__\fP ((gnu_inline)) void delay_us(uint16_t delay)"
+.br
+.in -1c
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "volatile uint8_t * \fBNRF24L01_DDR\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_CE\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_CSN\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBspi_speed\fP"
+.br
+.ti -1c
+.RI "bool \fBp_variant\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_CH\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_PAYLOAD\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_ACK\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_ENABLEDP0\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_ENABLEDP1\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_ENABLEDP2\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_ENABLEDP3\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_ENABLEDP4\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_ENABLEDP5\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_ADDRSIZE\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBpipe0_reading_address\fP [5]"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_RF24_PA\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_RF24_SPEED\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBNRF24L01_RF24_CRC\fP"
+.br
+.ti -1c
+.RI "bool \fBdynamic_payloads_enabled\fP"
+.br
+.in -1c
+.SS "Advanced Operation"
+ Methods you can use to drive the chip in more advanced ways 
+.in +1c
+.ti -1c
+.RI "bool \fBfailureDetected\fP"
+.br
+.ti -1c
+.RI "void \fBprintDetails\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBavailable\fP (uint8_t *pipe_num)"
+.br
+.ti -1c
+.RI "bool \fBrxFifoFull\fP ()"
+.br
+.ti -1c
+.RI "void \fBpowerDown\fP (void)"
+.br
+.ti -1c
+.RI "void \fBpowerUp\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBwrite\fP (const void *buf, uint8_t len, const bool multicast)"
+.br
+.ti -1c
+.RI "bool \fBwriteFast\fP (const void *buf, uint8_t len)"
+.br
+.ti -1c
+.RI "bool \fBwriteFast\fP (const void *buf, uint8_t len, const bool multicast)"
+.br
+.ti -1c
+.RI "bool \fBwriteBlocking\fP (const void *buf, uint8_t len, uint32_t timeout)"
+.br
+.ti -1c
+.RI "bool \fBtxStandBy\fP ()"
+.br
+.ti -1c
+.RI "bool \fBtxStandBy\fP (uint32_t timeout, bool startTx=0)"
+.br
+.ti -1c
+.RI "void \fBwriteAckPayload\fP (uint8_t pipe, const void *buf, uint8_t len)"
+.br
+.ti -1c
+.RI "bool \fBisAckPayloadAvailable\fP (void)"
+.br
+.ti -1c
+.RI "void \fBwhatHappened\fP (bool &tx_ok, bool &tx_fail, bool &rx_ready)"
+.br
+.ti -1c
+.RI "void \fBstartFastWrite\fP (const void *buf, uint8_t len, const bool multicast, bool startTx=1)"
+.br
+.ti -1c
+.RI "void \fBstartWrite\fP (const void *buf, uint8_t len, const bool multicast)"
+.br
+.ti -1c
+.RI "void \fBreUseTX\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBFlushTx\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBtestCarrier\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBtestRPD\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBisValid\fP ()"
+.br
+.ti -1c
+.RI "void \fBcloseReadingPipe\fP (uint8_t pipe)"
+.br
+.in -1c
+.SS "Optional Configurators"
+ Methods you can use to get or set the configuration of the chip\&. None are required\&. Calling begin() sets up a reasonable set of defaults\&. 
+.in +1c
+.ti -1c
+.RI "uint32_t \fBtxDelay\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBcsDelay\fP"
+.br
+.ti -1c
+.RI "\fBSPI\fP \fBspi\fP"
+.br
+.ti -1c
+.RI "void \fBsetAddressWidth\fP (uint8_t a_width)"
+.br
+.ti -1c
+.RI "void \fBsetRetries\fP (uint8_t delay, uint8_t count)"
+.br
+.ti -1c
+.RI "void \fBsetChannel\fP (uint8_t channel)"
+.br
+.ti -1c
+.RI "uint8_t \fBgetChannel\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsetPayloadSize\fP (uint8_t size)"
+.br
+.ti -1c
+.RI "uint8_t \fBgetPayloadSize\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBgetDynamicPayloadSize\fP (void)"
+.br
+.ti -1c
+.RI "void \fBenableAckPayload\fP (void)"
+.br
+.ti -1c
+.RI "void \fBenableDynamicPayloads\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdisableDynamicPayloads\fP (void)"
+.br
+.ti -1c
+.RI "void \fBenableDynamicAck\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisPVariant\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsetAutoAck\fP (bool enable)"
+.br
+.ti -1c
+.RI "void \fBsetAutoAck\fP (uint8_t pipe, bool enable)"
+.br
+.ti -1c
+.RI "void \fBsetPALevel\fP (uint8_t level)"
+.br
+.ti -1c
+.RI "uint8_t \fBgetPALevel\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBsetDataRate\fP (uint8_t speed)"
+.br
+.ti -1c
+.RI "\fBrf24_datarate_e\fP \fBgetDataRate\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsetCRCLength\fP (uint8_t length)"
+.br
+.ti -1c
+.RI "\fBrf24_crclength_e\fP \fBgetCRCLength\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdisableCRC\fP (void)"
+.br
+.ti -1c
+.RI "void \fBmaskIRQ\fP (bool tx_ok, bool tx_fail, bool rx_ready)"
+.br
+.ti -1c
+.RI "void \fBopenReadingPipe\fP (uint8_t number, uint64_t address)"
+.br
+.ti -1c
+.RI "void \fBopenWritingPipe\fP (uint64_t address)"
+.br
+.ti -1c
+.RI "void \fBdelay_ms\fP (uint16_t ms)"
+.br
+.ti -1c
+.RI "void \fBCSN_HIGH\fP ()"
+.br
+.ti -1c
+.RI "void \fBCSN_LOW\fP ()"
+.br
+.ti -1c
+.RI "void \fBCE_HIGH\fP ()"
+.br
+.ti -1c
+.RI "void \fBCE_LOW\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Driver for nRF24L01(+) 2\&.4GHz Wireless Transceiver 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NRF24L01::NRF24L01 ()"
+
+.SS "NRF24L01::NRF24L01 (volatile uint8_t & DDR, volatile uint8_t & PORT, uint8_t CE, uint8_t CSN)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "NRF24L01::__attribute__ ((gnu_inline))\fC [inline]\fP, \fC [private]\fP"
+
+.SS "bool NRF24L01::available (void)"
+Check whether there are bytes available to be read 
+.PP
+.nf
+if(radio\&.available()){
+  radio\&.read(&data,sizeof(data));
+}
+
+.fi
+.PP
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+True if there is a payload available, false if none is 
+.RE
+.PP
+
+.SS "bool NRF24L01::available (uint8_t * pipe_num)"
+Test whether there are bytes available to be read in the FIFO buffers\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpipe_num\fP Which pipe has the payload available
+.RE
+.PP
+.PP
+.nf
+uint8_t pipeNum;
+if(radio\&.available(&pipeNum)){
+  radio\&.read(&data,sizeof(data));
+  Serial\&.print("Got data on pipe");
+  Serial\&.println(pipeNum);
+}
+.fi
+.PP
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+True if there is a payload available, false if none is 
+.RE
+.PP
+
+.SS "void NRF24L01::CE_HIGH ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void NRF24L01::CE_LOW ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void NRF24L01::closeReadingPipe (uint8_t pipe)"
+Close a pipe after it has been previously opened\&. Can be safely called without having previously opened a pipe\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpipe\fP Which pipe # to close, 0-5\&. 
+.RE
+.PP
+
+.SS "void NRF24L01::CSN_HIGH ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void NRF24L01::CSN_LOW ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void NRF24L01::delay_ms (uint16_t ms)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void NRF24L01::disableCRC (void)"
+Disable CRC validation
+.PP
+\fBWarning:\fP
+.RS 4
+CRC cannot be disabled if auto-ack/ESB is enabled\&. 
+.RE
+.PP
+
+.SS "void NRF24L01::disableDynamicPayloads (void)"
+Disable dynamically-sized payloads
+.PP
+This disables dynamic payloads on ALL pipes\&. Since Ack Payloads requires Dynamic Payloads, Ack Payloads are also disabled\&. If dynamic payloads are later re-enabled and ack payloads are desired then \fBenableAckPayload()\fP must be called again as well\&. 
+.SS "void NRF24L01::enableAckPayload (void)"
+Enable custom payloads on the acknowledge packets
+.PP
+Ack payloads are a handy way to return data back to senders without manually changing the radio modes on both units\&.
+.PP
+\fBNote:\fP
+.RS 4
+Ack payloads are dynamic payloads\&. This only works on pipes 0&1 by default\&. Call \fBenableDynamicPayloads()\fP to enable on all pipes\&. 
+.RE
+.PP
+
+.SS "void NRF24L01::enableDynamicAck (void)"
+Enable dynamic ACKs (single write multicast or unicast) for chosen messages
+.PP
+\fBNote:\fP
+.RS 4
+To enable full multicast or per-pipe multicast, use \fBsetAutoAck()\fP
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+This MUST be called prior to attempting single write NOACK calls 
+.PP
+.nf
+radio\&.enableDynamicAck();
+radio\&.write(&data,32,1);  // Sends a payload with no acknowledgement requested
+radio\&.write(&data,32,0);  // Sends a payload using auto-retry/autoACK
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "void NRF24L01::enableDynamicPayloads (void)"
+Enable dynamically-sized payloads
+.PP
+This way you don't always have to send large packets just to send them once in a while\&. This enables dynamic payloads on ALL pipes\&. 
+.SS "uint8_t NRF24L01::FlushRx (void)\fC [private]\fP"
+Empty the receive buffer
+.PP
+\fBReturns:\fP
+.RS 4
+Current value of status register 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::FlushTx (void)"
+Empty the transmit buffer\&. This is generally not required in standard operation\&. May be required in specific cases after \fBstopListening()\fP , if operating at 250KBPS data rate\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Current value of status register 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::getChannel (void)"
+Get RF communication channel
+.PP
+\fBReturns:\fP
+.RS 4
+The currently configured RF Channel 
+.RE
+.PP
+
+.SS "\fBrf24_crclength_e\fP NRF24L01::getCRCLength (void)"
+Get the CRC length 
+.br
+CRC checking cannot be disabled if auto-ack is enabled 
+.PP
+\fBReturns:\fP
+.RS 4
+RF24_CRC_DISABLED if disabled or RF24_CRC_8 for 8-bit or RF24_CRC_16 for 16-bit 
+.RE
+.PP
+
+.SS "\fBrf24_datarate_e\fP NRF24L01::getDataRate (void)"
+Fetches the transmission data rate
+.PP
+\fBReturns:\fP
+.RS 4
+Returns the hardware's currently configured datarate\&. The value is one of 250kbs, RF24_1MBPS for 1Mbps, or RF24_2MBPS, as defined in the rf24_datarate_e enum\&. 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::getDynamicPayloadSize (void)"
+Get Dynamic Payload Size
+.PP
+For dynamic payloads, this pulls the size of the payload off the chip
+.PP
+\fBNote:\fP
+.RS 4
+Corrupt packets are now detected and flushed per the manufacturer\&. 
+.PP
+.nf
+if(radio\&.available()){
+  if(radio\&.getDynamicPayloadSize() < 1){
+    // Corrupt payload has been flushed
+    return;
+  }
+  radio\&.read(&data,sizeof(data));
+}
+
+.fi
+.PP
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Payload length of last-received dynamic payload 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::getPALevel (void)"
+Fetches the current PA level\&.
+.PP
+\fBNRF24L01\fP: -18dBm, -12dBm, -6dBm and 0dBm SI24R1: -6dBm, 0dBm, 3dBm, 7dBm
+.PP
+\fBReturns:\fP
+.RS 4
+Returns values 0 to 3 representing the PA Level\&. 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::getPayloadSize (void)"
+Get Static Payload Size
+.PP
+\fBSee also:\fP
+.RS 4
+\fBsetPayloadSize()\fP
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The number of bytes in the payload 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::getStatus (void)\fC [private]\fP"
+Retrieve the current status of the chip
+.PP
+\fBReturns:\fP
+.RS 4
+Current value of status register 
+.RE
+.PP
+
+.SS "bool NRF24L01::Init ()"
+Begin operation of the chip
+.PP
+Call this in setup(), before calling any other methods\&. 
+.PP
+.nf
+radio\&.Init() 
+
+.fi
+.PP
+ 
+.SS "bool NRF24L01::isAckPayloadAvailable (void)"
+Determine if an ack payload was received in the most recent call to \fBwrite()\fP\&. The regular \fBavailable()\fP can also be used\&.
+.PP
+Call \fBread()\fP to retrieve the ack payload\&.
+.PP
+\fBReturns:\fP
+.RS 4
+True if an ack payload is available\&. 
+.RE
+.PP
+
+.SS "bool NRF24L01::isPVariant (void)"
+Determine whether the hardware is an nRF24L01+ or not\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true if the hardware is nRF24L01+ (or compatible) and false if its not\&. 
+.RE
+.PP
+
+.SS "bool NRF24L01::isValid ()\fC [inline]\fP"
+Test whether this is a real radio, or a mock shim for debugging\&. Setting either pin to 0xff is the way to indicate that this is not a real radio\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true if this is a legitimate radio 
+.RE
+.PP
+
+.SS "void NRF24L01::maskIRQ (bool tx, bool fail, bool rx)"
+The radio will generate interrupt signals when a transmission is complete, a transmission fails, or a payload is received\&. This allows users to mask those interrupts to prevent them from generating a signal on the interrupt pin\&. Interrupts are enabled on the radio chip by default\&.
+.PP
+.PP
+.nf
+Mask all interrupts except the receive interrupt:
+
+radio\&.maskIRQ(1,1,0);
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fItx_ok\fP Mask transmission complete interrupts 
+.br
+\fItx_fail\fP Mask transmit failure interrupts 
+.br
+\fIrx_ready\fP Mask payload received interrupts
+.RE
+.PP
+bool \fBNRF24L01::txStandBy(uint32_t timeout, bool startTx)\fP{ 
+.PP
+.nf
+if(startTx){
+  stopListening();
+  CE_HIGH();
+}
+uint32_t start = millis();
+
+while( ! (ReadRegister(NRF24L01_REG_FIFO_STATUS) & _BV(NRF24L01_REG_TX_EMPTY)) ){
+    if( GetStatus() & _BV(NRF24L01_REG_MAX_RT)){
+        WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MAX_RT) );
+        CE_LOW();                                     //Set re-transmit
+        CE_HIGH();
+            if(millis() - start >= timeout){
+                CE_LOW(); FlushTx(); return 0;
+            }
+    }
+
+}
+
+
+CE_LOW();                  //Set STANDBY-I mode
+return 1;
+
+.fi
+.PP
+.PP
+} 
+.SS "void NRF24L01::openReadingPipe (uint8_t number, const uint8_t * address)"
+Open a pipe for reading
+.PP
+Up to 6 pipes can be open for reading at once\&. Open all the required reading pipes, and then call \fBstartListening()\fP\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBopenWritingPipe\fP 
+.PP
+\fBsetAddressWidth\fP
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+Pipes 0 and 1 will store a full 5-byte address\&. Pipes 2-5 will technically only store a single byte, borrowing up to 4 additional bytes from pipe #1 per the assigned address width\&. 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+Pipes 1-5 should share the same address, except the first byte\&. Only the first byte in the array should be unique, e\&.g\&. 
+.PP
+.nf
+uint8_t addresses[][6] = {"1Node","2Node"};
+openReadingPipe(1,addresses[0]);
+openReadingPipe(2,addresses[1]);
+
+.fi
+.PP
+.PP
+Pipe 0 is also used by the writing pipe\&. So if you open pipe 0 for reading, and then \fBstartListening()\fP, it will overwrite the writing pipe\&. Ergo, do an \fBopenWritingPipe()\fP again before \fBwrite()\fP\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fInumber\fP Which pipe# to open, 0-5\&. 
+.br
+\fIaddress\fP The 24, 32 or 40 bit address of the pipe to open\&. 
+.RE
+.PP
+
+.SS "void NRF24L01::openReadingPipe (uint8_t number, uint64_t address)"
+Open a pipe for reading 
+.PP
+\fBNote:\fP
+.RS 4
+For compatibility with old code only, see new function
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+Pipes 1-5 should share the first 32 bits\&. Only the least significant byte should be unique, e\&.g\&. 
+.PP
+.nf
+openReadingPipe(1,0xF0F0F0F0AA);
+openReadingPipe(2,0xF0F0F0F066);
+
+.fi
+.PP
+.PP
+Pipe 0 is also used by the writing pipe\&. So if you open pipe 0 for reading, and then \fBstartListening()\fP, it will overwrite the writing pipe\&. Ergo, do an \fBopenWritingPipe()\fP again before \fBwrite()\fP\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fInumber\fP Which pipe# to open, 0-5\&. 
+.br
+\fIaddress\fP The 40-bit address of the pipe to open\&. 
+.RE
+.PP
+
+.SS "void NRF24L01::openWritingPipe (const uint8_t * address)"
+New: Open a pipe for writing via byte array\&. Old addressing format retained for compatibility\&.
+.PP
+Only one writing pipe can be open at once, but you can change the address you'll write to\&. Call \fBstopListening()\fP first\&.
+.PP
+Addresses are assigned via a byte array, default is 5 byte address lengths
+.PP
+.PP
+.nf
+uint8_t addresses[][6] = {"1Node","2Node"};
+radio\&.openWritingPipe(addresses[0]);
+.fi
+.PP
+ 
+.PP
+.nf
+uint8_t address[] = { 0xCC,0xCE,0xCC,0xCE,0xCC };
+radio\&.openWritingPipe(address);
+address[0] = 0x33;
+radio\&.openReadingPipe(1,address);
+
+.fi
+.PP
+ 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBsetAddressWidth\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIaddress\fP The address of the pipe to open\&. Coordinate these pipe addresses amongst nodes on the network\&. 
+.RE
+.PP
+
+.SS "void NRF24L01::openWritingPipe (uint64_t address)"
+Open a pipe for writing 
+.PP
+\fBNote:\fP
+.RS 4
+For compatibility with old code only, see new function
+.RE
+.PP
+Addresses are 40-bit hex values, e\&.g\&.:
+.PP
+.PP
+.nf
+openWritingPipe(0xF0F0F0F0F0);
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIaddress\fP The 40-bit address of the pipe to open\&. 
+.RE
+.PP
+
+.SS "void NRF24L01::powerDown (void)"
+Enter low-power mode
+.PP
+To return to normal power mode, call \fBpowerUp()\fP\&.
+.PP
+\fBNote:\fP
+.RS 4
+After calling \fBstartListening()\fP, a basic radio will consume about 13\&.5mA at max PA level\&. During active transmission, the radio will consume about 11\&.5mA, but this will be reduced to 26uA (\&.026mA) between sending\&. In full powerDown mode, the radio will consume approximately 900nA (\&.0009mA)
+.RE
+.PP
+.PP
+.nf
+radio\&.powerDown();
+avr_enter_sleep_mode(); // Custom function to sleep the device
+radio\&.powerUp();
+.fi
+.PP
+ 
+.SS "void NRF24L01::powerUp (void)"
+Leave low-power mode - required for normal radio operation after calling \fBpowerDown()\fP
+.PP
+To return to low power mode, call \fBpowerDown()\fP\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This will take up to 5ms for maximum compatibility 
+.RE
+.PP
+
+.SS "void NRF24L01::printDetails (void)"
+Print a giant block of debugging information to stdout
+.PP
+\fBWarning:\fP
+.RS 4
+Does nothing if stdout is not defined\&. See fdevopen in stdio\&.h The printf\&.h file is included with the library for Arduino\&. 
+.PP
+.nf
+#include <printf\&.h>
+setup(){
+ Serial\&.begin(115200);
+ printf_begin();
+ \&.\&.\&.
+}
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.SS "void NRF24L01::read (void * buf, uint8_t len)"
+Read the available payload
+.PP
+The size of data read is the fixed payload size, see \fBgetPayloadSize()\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Pointer to a buffer where the data should be written 
+.br
+\fIlen\fP Maximum number of bytes to read into the buffer
+.RE
+.PP
+.PP
+.nf
+if(radio\&.available()){
+  radio\&.read(&data,sizeof(data));
+}
+.fi
+.PP
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+No return value\&. Use \fBavailable()\fP\&. 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::ReadPayload (void * buf, uint8_t len)\fC [private]\fP"
+Read the receive payload
+.PP
+The size of data read is the fixed payload size, see \fBgetPayloadSize()\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Where to put the data 
+.br
+\fIlen\fP Maximum number of bytes to read 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Current value of status register 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::ReadRegister (uint8_t reg)\fC [private]\fP"
+Read single byte from a register
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreg\fP Which register\&. Use constants from nRF24L01\&.h 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Current value of register \fCreg\fP 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::ReadRegisters (uint8_t reg, uint8_t * buf, uint8_t len)\fC [private]\fP"
+Read a chunk of data in from a register
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreg\fP Which register\&. Use constants from nRF24L01\&.h 
+.br
+\fIbuf\fP Where to put the data 
+.br
+\fIlen\fP How many bytes of data to transfer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Current value of status register 
+.RE
+.PP
+
+.SS "void NRF24L01::reUseTX ()"
+This function is mainly used internally to take advantage of the auto payload re-use functionality of the chip, but can be beneficial to users as well\&.
+.PP
+The function will instruct the radio to re-use the data in the FIFO buffers, and instructs the radio to re-send once the timeout limit has been reached\&. Used by writeFast and writeBlocking to initiate retries when a TX failure occurs\&. Retries are automatically initiated except with the standard \fBwrite()\fP\&. This way, data is not flushed from the buffer until switching between modes\&.
+.PP
+\fBNote:\fP
+.RS 4
+This is to be used AFTER auto-retry fails if wanting to resend using the built-in payload reuse features\&. After issuing \fBreUseTX()\fP, it will keep reending the same payload forever or until a payload is written to the FIFO, or a flush_tx command is given\&. 
+.RE
+.PP
+
+.SS "bool NRF24L01::rxFifoFull ()"
+Check if the radio needs to be read\&. Can be used to prevent data loss 
+.PP
+\fBReturns:\fP
+.RS 4
+True if all three 32-byte radio buffers are full 
+.RE
+.PP
+
+.SS "void NRF24L01::setAddressWidth (uint8_t a_width)"
+Set the address width from 3 to 5 bytes (24, 32 or 40 bit)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa_width\fP The address width to use: 3,4 or 5 
+.RE
+.PP
+
+.SS "void NRF24L01::setAutoAck (bool enable)"
+Enable or disable auto-acknowlede packets
+.PP
+This is enabled by default, so it's only needed if you want to turn it off for some reason\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIenable\fP Whether to enable (true) or disable (false) auto-acks 
+.RE
+.PP
+
+.SS "void NRF24L01::setAutoAck (uint8_t pipe, bool enable)"
+Enable or disable auto-acknowlede packets on a per pipeline basis\&.
+.PP
+AA is enabled by default, so it's only needed if you want to turn it off/on for some reason on a per pipeline basis\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpipe\fP Which pipeline to modify 
+.br
+\fIenable\fP Whether to enable (true) or disable (false) auto-acks 
+.RE
+.PP
+
+.SS "void NRF24L01::setChannel (uint8_t channel)"
+Set RF communication channel
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP Which RF channel to communicate on, 0-125 
+.RE
+.PP
+
+.SS "void NRF24L01::setCRCLength (uint8_t length)"
+Set the CRC length 
+.br
+CRC checking cannot be disabled if auto-ack is enabled 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlength\fP RF24_CRC_8 for 8-bit or RF24_CRC_16 for 16-bit 
+.RE
+.PP
+
+.SS "bool NRF24L01::setDataRate (uint8_t speed)"
+Set the transmission data rate
+.PP
+\fBWarning:\fP
+.RS 4
+setting RF24_250KBPS will fail for non-plus units
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIspeed\fP RF24_250KBPS for 250kbs, RF24_1MBPS for 1Mbps, or RF24_2MBPS for 2Mbps 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the change was successful 
+.RE
+.PP
+
+.SS "void NRF24L01::setPALevel (uint8_t level)"
+Set Power Amplifier (PA) level to one of four levels: RF24_PA_MIN, RF24_PA_LOW, RF24_PA_HIGH and RF24_PA_MAX
+.PP
+The power levels correspond to the following output levels respectively: \fBNRF24L01\fP: -18dBm, -12dBm,-6dBM, and 0dBm
+.PP
+SI24R1: -6dBm, 0dBm, 3dBM, and 7dBm\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlevel\fP Desired PA level\&. 
+.RE
+.PP
+
+.SS "void NRF24L01::setPayloadSize (uint8_t size)"
+Set Static Payload Size
+.PP
+This implementation uses a pre-stablished fixed payload size for all transmissions\&. If this method is never called, the driver will always transmit the maximum payload size (32 bytes), no matter how much was sent to \fBwrite()\fP\&.
+.PP
+\fBTodo\fP
+.RS 4
+Implement variable-sized payloads feature
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsize\fP The number of bytes in the payload 
+.RE
+.PP
+
+.SS "void NRF24L01::setRetries (uint8_t delay, uint8_t count)"
+Set the number and delay of retries upon failed submit
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdelay\fP How long to wait between each retry, in multiples of 250us, max is 15\&. 0 means 250us, 15 means 4000us\&. 
+.br
+\fIcount\fP How many retries before giving up, max 15 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::spiTrans (uint8_t cmd)\fC [private]\fP"
+Built in spi transfer function to simplify repeating code repeating code 
+.SS "void NRF24L01::startFastWrite (const void * buf, uint8_t len, const bool multicast, bool startTx = \fC1\fP)"
+Non-blocking write to the open writing pipe used for buffered writes
+.PP
+\fBNote:\fP
+.RS 4
+Optimization: This function now leaves the CE pin high, so the radio will remain in TX or STANDBY-II Mode until a \fBtxStandBy()\fP command is issued\&. Can be used as an alternative to \fBstartWrite()\fP if writing multiple payloads at once\&. 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+It is important to never keep the nRF24L01 in TX mode with FIFO full for more than 4ms at a time\&. If the auto retransmit/autoAck is enabled, the nRF24L01 is never in TX mode long enough to disobey this rule\&. Allow the FIFO to clear by issuing \fBtxStandBy()\fP or ensure appropriate time between transmissions\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBwrite()\fP 
+.PP
+\fBwriteFast()\fP 
+.PP
+\fBstartWrite()\fP 
+.PP
+\fBwriteBlocking()\fP
+.RE
+.PP
+For single noAck writes see: 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBenableDynamicAck()\fP 
+.PP
+\fBsetAutoAck()\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Pointer to the data to be sent 
+.br
+\fIlen\fP Number of bytes to be sent 
+.br
+\fImulticast\fP Request ACK (0) or NOACK (1) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True if the payload was delivered successfully false if not 
+.RE
+.PP
+
+.SS "void NRF24L01::startListening (void)"
+Start listening on the pipes opened for reading\&.
+.PP
+.IP "1." 4
+Be sure to call \fBopenReadingPipe()\fP first\&.
+.IP "2." 4
+Do not call \fBwrite()\fP while in this mode, without first calling \fBstopListening()\fP\&.
+.IP "3." 4
+Call \fBavailable()\fP to check for incoming traffic, and \fBread()\fP to get it\&.
+.PP
+.PP
+.PP
+.nf
+Open reading pipe 1 using address CCCECCCECC
+
+byte address[] = { 0xCC,0xCE,0xCC,0xCE,0xCC };
+radio\&.openReadingPipe(1,address);
+radio\&.startListening();
+.fi
+.PP
+ 
+.SS "void NRF24L01::startWrite (const void * buf, uint8_t len, const bool multicast)"
+Non-blocking write to the open writing pipe
+.PP
+Just like \fBwrite()\fP, but it returns immediately\&. To find out what happened to the send, catch the IRQ and then call \fBwhatHappened()\fP\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBwrite()\fP 
+.PP
+\fBwriteFast()\fP 
+.PP
+\fBstartFastWrite()\fP 
+.PP
+\fBwhatHappened()\fP
+.RE
+.PP
+For single noAck writes see: 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBenableDynamicAck()\fP 
+.PP
+\fBsetAutoAck()\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Pointer to the data to be sent 
+.br
+\fIlen\fP Number of bytes to be sent 
+.br
+\fImulticast\fP Request ACK (0) or NOACK (1) 
+.RE
+.PP
+
+.SS "void NRF24L01::stopListening (void)"
+Stop listening for incoming messages, and switch to transmit mode\&.
+.PP
+Do this before calling \fBwrite()\fP\&. 
+.PP
+.nf
+radio\&.stopListening();
+radio\&.write(&data,sizeof(data));
+
+.fi
+.PP
+ 
+.SS "bool NRF24L01::testCarrier (void)"
+Test whether there was a carrier on the line for the previous listening period\&.
+.PP
+Useful to check for interference on the current channel\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true if was carrier, false if not 
+.RE
+.PP
+
+.SS "bool NRF24L01::testRPD (void)"
+Test whether a signal (carrier or otherwise) greater than or equal to -64dBm is present on the channel\&. Valid only on nRF24L01P (+) hardware\&. On nRF24L01, use \fBtestCarrier()\fP\&.
+.PP
+Useful to check for interference on the current channel and channel hopping strategies\&.
+.PP
+.PP
+.nf
+bool goodSignal = radio\&.testRPD();
+if(radio\&.available()){
+   Serial\&.println(goodSignal ? "Strong signal > 64dBm" : "Weak signal < 64dBm" );
+   radio\&.read(0,0);
+}
+.fi
+.PP
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+true if signal => -64dBm, false if not 
+.RE
+.PP
+
+.SS "void NRF24L01::ToggleFeatures (void)\fC [private]\fP"
+Turn on or off the special features of the chip
+.PP
+The chip has certain 'features' which are only available when the 'features' are enabled\&. See the datasheet for details\&. 
+.SS "bool NRF24L01::txStandBy ()"
+This function should be called as soon as transmission is finished to drop the radio back to STANDBY-I mode\&. If not issued, the radio will remain in STANDBY-II mode which, per the data sheet, is not a recommended operating mode\&.
+.PP
+\fBNote:\fP
+.RS 4
+When transmitting data in rapid succession, it is still recommended by the manufacturer to drop the radio out of TX or STANDBY-II mode if there is time enough between sends for the FIFOs to empty\&. This is not required if auto-ack is enabled\&.
+.RE
+.PP
+Relies on built-in auto retry functionality\&.
+.PP
+.PP
+.nf
+Example (Partial blocking):
+
+        radio\&.writeFast(&buf,32);
+        radio\&.writeFast(&buf,32);
+        radio\&.writeFast(&buf,32);  //Fills the FIFO buffers up
+        bool ok = txStandBy();     //Returns 0 if failed\&. 1 if success\&.
+                                   //Blocks only until MAX_RT timeout or success\&. Data flushed on fail\&.
+.fi
+.PP
+ 
+.PP
+\fBSee also:\fP
+.RS 4
+txStandBy(unsigned long timeout) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True if transmission is successful 
+.RE
+.PP
+
+.SS "bool NRF24L01::txStandBy (uint32_t timeout, bool startTx = \fC0\fP)"
+This function allows extended blocking and auto-retries per a user defined timeout 
+.PP
+.nf
+Fully Blocking Example:
+
+     radio\&.writeFast(&buf,32);
+     radio\&.writeFast(&buf,32);
+     radio\&.writeFast(&buf,32);   //Fills the FIFO buffers up
+     bool ok = txStandBy(1000);  //Returns 0 if failed after 1 second of retries\&. 1 if success\&.
+                                 //Blocks only until user defined timeout or success\&. Data flushed on fail\&.
+
+.fi
+.PP
+ 
+.PP
+\fBNote:\fP
+.RS 4
+If used from within an interrupt, the interrupt should be disabled until completion, and sei(); called to enable millis()\&. 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fItimeout\fP Number of milliseconds to retry failed payloads 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True if transmission is successful 
+.RE
+.PP
+
+.SS "void NRF24L01::whatHappened (bool & tx_ok, bool & tx_fail, bool & rx_ready)"
+Call this when you get an interrupt to find out why
+.PP
+Tells you what caused the interrupt, and clears the state of interrupts\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItx_ok\fP The send was successful (TX_DS) 
+.br
+\fItx_fail\fP The send failed, too many retries (MAX_RT) 
+.br
+\fIrx_ready\fP There is a message waiting to be read (RX_DS) 
+.RE
+.PP
+
+.SS "bool NRF24L01::write (const void * buf, uint8_t len)"
+Be sure to call \fBopenWritingPipe()\fP first to set the destination of where to write to\&.
+.PP
+This blocks until the message is successfully acknowledged by the receiver or the timeout/retransmit maxima are reached\&. In the current configuration, the max delay here is 60-70ms\&.
+.PP
+The maximum size of data written is the fixed payload size, see \fBgetPayloadSize()\fP\&. However, you can write less, and the remainder will just be filled with zeroes\&.
+.PP
+TX/RX/RT interrupt flags will be cleared every time write is called
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Pointer to the data to be sent 
+.br
+\fIlen\fP Number of bytes to be sent
+.RE
+.PP
+.PP
+.nf
+radio\&.stopListening();
+radio\&.write(&data,sizeof(data));
+.fi
+.PP
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+True if the payload was delivered successfully false if not 
+.RE
+.PP
+
+.SS "bool NRF24L01::write (const void * buf, uint8_t len, const bool multicast)"
+Write for single NOACK writes\&. Optionally disables acknowledgements/autoretries for a single write\&.
+.PP
+\fBNote:\fP
+.RS 4
+\fBenableDynamicAck()\fP must be called to enable this feature
+.RE
+.PP
+Can be used with \fBenableAckPayload()\fP to request a response 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBenableDynamicAck()\fP 
+.PP
+\fBsetAutoAck()\fP 
+.PP
+\fBwrite()\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Pointer to the data to be sent 
+.br
+\fIlen\fP Number of bytes to be sent 
+.br
+\fImulticast\fP Request ACK (0), NOACK (1) 
+.RE
+.PP
+
+.SS "void NRF24L01::writeAckPayload (uint8_t pipe, const void * buf, uint8_t len)"
+Write an ack payload for the specified pipe
+.PP
+The next time a message is received on \fCpipe\fP, the data in \fCbuf\fP will be sent back in the acknowledgement\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBenableAckPayload()\fP 
+.PP
+\fBenableDynamicPayloads()\fP 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+Only three of these can be pending at any time as there are only 3 FIFO buffers\&.
+.br
+ Dynamic payloads must be enabled\&. 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+Ack payloads are handled automatically by the radio chip when a payload is received\&. Users should generally write an ack payload as soon as \fBstartListening()\fP is called, so one is available when a regular payload is received\&. 
+.PP
+Ack payloads are dynamic payloads\&. This only works on pipes 0&1 by default\&. Call \fBenableDynamicPayloads()\fP to enable on all pipes\&.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpipe\fP Which pipe# (typically 1-5) will get this response\&. 
+.br
+\fIbuf\fP Pointer to data that is sent 
+.br
+\fIlen\fP Length of the data to send, up to 32 bytes max\&. Not affected by the static payload set by \fBsetPayloadSize()\fP\&. 
+.RE
+.PP
+
+.SS "bool NRF24L01::writeBlocking (const void * buf, uint8_t len, uint32_t timeout)"
+This function extends the auto-retry mechanism to any specified duration\&. It will not block until the 3 FIFO buffers are filled with data\&. If so the library will auto retry until a new payload is written or the user specified timeout period is reached\&. 
+.PP
+\fBWarning:\fP
+.RS 4
+It is important to never keep the nRF24L01 in TX mode and FIFO full for more than 4ms at a time\&. If the auto retransmit is enabled, the nRF24L01 is never in TX mode long enough to disobey this rule\&. Allow the FIFO to clear by issuing \fBtxStandBy()\fP or ensure appropriate time between transmissions\&.
+.RE
+.PP
+.PP
+.nf
+Example (Full blocking):
+
+        radio\&.writeBlocking(&buf,32,1000); //Wait up to 1 second to write 1 payload to the buffers
+        txStandBy(1000);                   //Wait up to 1 second for the payload to send\&. Return 1 if ok, 0 if failed\&.
+                                           //Blocks only until user timeout or success\&. Data flushed on fail\&.
+.fi
+.PP
+ 
+.PP
+\fBNote:\fP
+.RS 4
+If used from within an interrupt, the interrupt should be disabled until completion, and sei(); called to enable millis()\&. 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBtxStandBy()\fP 
+.PP
+\fBwrite()\fP 
+.PP
+\fBwriteFast()\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Pointer to the data to be sent 
+.br
+\fIlen\fP Number of bytes to be sent 
+.br
+\fItimeout\fP User defined timeout in milliseconds\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True if the payload was loaded into the buffer successfully false if not 
+.RE
+.PP
+
+.SS "bool NRF24L01::writeFast (const void * buf, uint8_t len)"
+This will not block until the 3 FIFO buffers are filled with data\&. Once the FIFOs are full, writeFast will simply wait for success or timeout, and return 1 or 0 respectively\&. From a user perspective, just keep trying to send the same data\&. The library will keep auto retrying the current payload using the built in functionality\&. 
+.PP
+\fBWarning:\fP
+.RS 4
+It is important to never keep the nRF24L01 in TX mode and FIFO full for more than 4ms at a time\&. If the auto retransmit is enabled, the nRF24L01 is never in TX mode long enough to disobey this rule\&. Allow the FIFO to clear by issuing \fBtxStandBy()\fP or ensure appropriate time between transmissions\&.
+.RE
+.PP
+.PP
+.nf
+Example (Partial blocking):
+
+        radio\&.writeFast(&buf,32);  // Writes 1 payload to the buffers
+        txStandBy();               // Returns 0 if failed\&. 1 if success\&. Blocks only until MAX_RT timeout or success\&. Data flushed on fail\&.
+
+        radio\&.writeFast(&buf,32);  // Writes 1 payload to the buffers
+        txStandBy(1000);           // Using extended timeouts, returns 1 if success\&. Retries failed payloads for 1 seconds before returning 0\&.
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBtxStandBy()\fP 
+.PP
+\fBwrite()\fP 
+.PP
+\fBwriteBlocking()\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Pointer to the data to be sent 
+.br
+\fIlen\fP Number of bytes to be sent 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True if the payload was delivered successfully false if not 
+.RE
+.PP
+
+.SS "bool NRF24L01::writeFast (const void * buf, uint8_t len, const bool multicast)"
+WriteFast for single NOACK writes\&. Disables acknowledgements/autoretries for a single write\&.
+.PP
+\fBNote:\fP
+.RS 4
+\fBenableDynamicAck()\fP must be called to enable this feature 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBenableDynamicAck()\fP 
+.PP
+\fBsetAutoAck()\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Pointer to the data to be sent 
+.br
+\fIlen\fP Number of bytes to be sent 
+.br
+\fImulticast\fP Request ACK (0) or NOACK (1) 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::WritePayload (const void * buf, uint8_t len, const uint8_t writeType)\fC [private]\fP"
+Write the transmit payload
+.PP
+The size of data written is the fixed payload size, see \fBgetPayloadSize()\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Where to get the data 
+.br
+\fIlen\fP Number of bytes to be sent 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Current value of status register 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::WriteRegister (uint8_t reg, uint8_t value)\fC [private]\fP"
+Write a single byte to a register
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreg\fP Which register\&. Use constants from nRF24L01\&.h 
+.br
+\fIvalue\fP The new value to write 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Current value of status register 
+.RE
+.PP
+
+.SS "uint8_t NRF24L01::WriteRegisters (uint8_t reg, const uint8_t * buf, uint8_t len)\fC [private]\fP"
+Write a chunk of data to a register
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreg\fP Which register\&. Use constants from nRF24L01\&.h 
+.br
+\fIbuf\fP Where to get the data 
+.br
+\fIlen\fP How many bytes of data to transfer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Current value of status register 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t NRF24L01::csDelay"
+On all devices but Linux and ATTiny, a small delay is added to the CSN toggling function
+.PP
+This is intended to minimise the speed of \fBSPI\fP polling due to radio commands
+.PP
+If using interrupts or timed requests, this can be set to 0 Default:5 
+.SS "bool NRF24L01::dynamic_payloads_enabled\fC [private]\fP"
+Whether dynamic payloads are enabled\&. 
+.SS "bool NRF24L01::failureDetected"
+Enable error detection by un-commenting #define FAILURE_HANDLING in RF24_config\&.h If a failure has been detected, it usually indicates a hardware issue\&. By default the library will cease operation when a failure is detected\&. This should allow advanced users to detect and resolve intermittent hardware issues\&.
+.PP
+In most cases, the radio must be re-enabled via radio\&.begin(); and the appropriate settings applied after a failure occurs, if wanting to re-enable the device immediately\&.
+.PP
+Usage: (Failure handling must be enabled per above) 
+.PP
+.nf
+if(radio\&.failureDetected){
+  radio\&.begin();                       // Attempt to re-configure the radio with defaults
+  radio\&.failureDetected = 0;           // Reset the detection value
+ radio\&.openWritingPipe(addresses[1]); // Re-configure pipe addresses
+  radio\&.openReadingPipe(1,addresses[0]);
+  report_failure();                    // Blink leds, send a message, etc\&. to indicate failure
+}
+
+.fi
+.PP
+ 
+.SS "uint8_t NRF24L01::NRF24L01_ACK\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_ADDRSIZE\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_CE\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_CH\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_CSN\fC [private]\fP"
+
+.SS "volatile uint8_t* NRF24L01::NRF24L01_DDR\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_ENABLEDP0\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_ENABLEDP1\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_ENABLEDP2\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_ENABLEDP3\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_ENABLEDP4\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_ENABLEDP5\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_PAYLOAD\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_RF24_CRC\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_RF24_PA\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::NRF24L01_RF24_SPEED\fC [private]\fP"
+
+.SS "bool NRF24L01::p_variant\fC [private]\fP"
+
+.SS "uint8_t NRF24L01::pipe0_reading_address[5]\fC [private]\fP"
+Last address set on pipe 0 for reading\&. 
+.SS "\fBSPI\fP NRF24L01::spi"
+
+.SS "uint16_t NRF24L01::spi_speed\fC [private]\fP"
+\fBSPI\fP Bus Speed 
+.SS "uint32_t NRF24L01::txDelay"
+The driver will delay for this duration when \fBstopListening()\fP is called
+.PP
+When responding to payloads, faster devices like ARM(RPi) are much faster than Arduino:
+.IP "1." 4
+Arduino sends data to RPi, switches to RX mode
+.IP "2." 4
+The RPi receives the data, switches to TX mode and sends before the Arduino radio is in RX mode
+.IP "3." 4
+If AutoACK is disabled, this can be set as low as 0\&. If AA/ESB enabled, set to 100uS minimum on RPi
+.PP
+.PP
+\fBWarning:\fP
+.RS 4
+If set to 0, ensure 130uS delay after \fBstopListening()\fP and before any sends 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

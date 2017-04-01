@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="src_2IO_2I2C-master-lib_2README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>I2C<sp/>Master<sp/>library</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Table<sp/>of<sp/>contents</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>What<sp/>is<sp/>this<sp/>library?</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Contents<sp/>of<sp/>this<sp/>library</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Supported<sp/>devices</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Functions<sp/>in<sp/>this<sp/>library</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">------------------------------------------------------------------------------------</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>1.<sp/>What<sp/>is<sp/>this<sp/>library?</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>library<sp/>is<sp/>an<sp/>I2C<sp/>master<sp/>library<sp/>which<sp/>uses<sp/>the<sp/>TWI<sp/>peripheral<sp/>inside<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">AVR<sp/>microcontroller<sp/>to<sp/>establish<sp/>connections<sp/>using<sp/>the<sp/>I2C<sp/>protocol</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">------------------------------------------------------------------------------------</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>2.<sp/>Contents<sp/>of<sp/>this<sp/>library</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>library<sp/>contains<sp/>the<sp/>following<sp/>files:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>main.c</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>I2C_master.c</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>I2C_master.h</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>main.c</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>a<sp/>piece<sp/>of<sp/>example<sp/>code<sp/>which<sp/>uses<sp/>this<sp/>library<sp/>to<sp/>read<sp/>out</highlight></codeline>
+<codeline><highlight class="normal">an<sp/>HMC5338L<sp/>I2C<sp/>magnetometer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>I2C_master.c</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>file<sp/>contains<sp/>all<sp/>the<sp/>function<sp/>declarations<sp/>to<sp/>setup<sp/>and<sp/>work<sp/>with<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">TWI<sp/>hardware<sp/>peripheral<sp/>inside<sp/>the<sp/>AVR.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*Make<sp/>sure<sp/>you<sp/>add<sp/>this<sp/>source<sp/>file<sp/>to<sp/>your<sp/>Makefile!*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>I2C_master.h</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>file<sp/>contains<sp/>the<sp/>function<sp/>prototypes<sp/>and<sp/>the<sp/>definition<sp/>of<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">Read<sp/>/<sp/>Write<sp/>bit<sp/>(0<sp/>=<sp/>read,<sp/>1<sp/>=<sp/>write)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*This<sp/>file<sp/>has<sp/>to<sp/>be<sp/>included<sp/>in<sp/>your<sp/>source<sp/>file*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">------------------------------------------------------------------------------------</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>3.<sp/>Supported<sp/>devices</highlight></codeline>
+<codeline><highlight class="normal">Though<sp/>I<sp/>have<sp/>only<sp/>tested<sp/>this<sp/>library<sp/>on<sp/>an<sp/>ATmega328P<sp/>it<sp/>should<sp/>be<sp/>running</highlight></codeline>
+<codeline><highlight class="normal">on<sp/>all<sp/>major<sp/>ATmega<sp/>AVRs<sp/>like:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>ATmega644</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>ATmega32</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>ATmega16</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>ATmega328/P</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>ATmega168/P</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>ATmega88/P</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>ATmega44/P</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>ATmega8</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>your<sp/>device<sp/>is<sp/>not<sp/>supported<sp/>you<sp/>can<sp/>probably<sp/>adapt<sp/>this<sp/>library<sp/>easily<sp/>to<sp/>your</highlight></codeline>
+<codeline><highlight class="normal">needs<sp/>by<sp/>having<sp/>a<sp/>look<sp/>at<sp/>the<sp/>your<sp/>device&apos;s<sp/>data<sp/>sheet<sp/>and<sp/>changing<sp/>the<sp/>register<sp/>names</highlight></codeline>
+<codeline><highlight class="normal">appropriately</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>ATtiny<sp/>range<sp/>of<sp/>microcontrolles<sp/>is<sp/>not<sp/>supported<sp/>as<sp/>they<sp/>only<sp/>provide<sp/>a<sp/>USI</highlight></codeline>
+<codeline><highlight class="normal">peripheral<sp/>which<sp/>is<sp/>completely<sp/>different<sp/>from<sp/>the<sp/>TWI<sp/>peripheral<sp/>used<sp/>on<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">other<sp/>controllers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">------------------------------------------------------------------------------------</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>4.<sp/>Functions<sp/>in<sp/>this<sp/>library</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>void<sp/>i2c_init(void)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>uint8_t<sp/>i2c_start(uint8_t<sp/>address)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>uint8_t<sp/>i2c_write(uint8_t<sp/>data)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>uint8_t<sp/>i2c_read_ack(void)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>uint8_t<sp/>i2c_read_nack(void)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>uint8_t<sp/>i2c_transmit(uint8_t<sp/>address,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>uint8_t<sp/>i2c_receive(uint8_t<sp/>address,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>void<sp/>i2c_stop(void)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>void<sp/>I2C_init(void)</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>needs<sp/>to<sp/>be<sp/>called<sp/>only<sp/>once<sp/>to<sp/>set<sp/>up<sp/>the<sp/>correct<sp/>SCL<sp/>frequency</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>the<sp/>bus</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>uint8_t<sp/>I2C_start(uint8_t<sp/>address)</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>needs<sp/>to<sp/>be<sp/>called<sp/>any<sp/>time<sp/>a<sp/>connection<sp/>to<sp/>a<sp/>new<sp/>slave<sp/>device<sp/>should</highlight></codeline>
+<codeline><highlight class="normal">be<sp/>established.<sp/>The<sp/>function<sp/>returns<sp/>1<sp/>if<sp/>an<sp/>error<sp/>has<sp/>occurred,<sp/>otherwise<sp/>it<sp/>returns</highlight></codeline>
+<codeline><highlight class="normal">0.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>syntax<sp/>to<sp/>start<sp/>a<sp/>operation<sp/>write<sp/>to<sp/>a<sp/>device<sp/>is<sp/>either:</highlight></codeline>
+<codeline><highlight class="normal">`I2C_start(SLAVE_ADDRESS+I2C_WRITE);`</highlight></codeline>
+<codeline><highlight class="normal">or</highlight></codeline>
+<codeline><highlight class="normal">`I2C_start(SLAVE_WRITE_ADDRESS);`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>syntax<sp/>to<sp/>start<sp/>a<sp/>read<sp/>operation<sp/>from<sp/>a<sp/>device<sp/>is<sp/>either:</highlight></codeline>
+<codeline><highlight class="normal">`I2C_start(SLAVE_ADDRESS+I2C_READ);`</highlight></codeline>
+<codeline><highlight class="normal">or</highlight></codeline>
+<codeline><highlight class="normal">`I2C_start(SLAVE_READ_ADDRESS);`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>uint8_t<sp/>I2C_write(uint8_t<sp/>data)</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>is<sp/>used<sp/>to<sp/>write<sp/>data<sp/>to<sp/>the<sp/>currently<sp/>active<sp/>device.</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>only<sp/>parameter<sp/>this<sp/>function<sp/>takes<sp/>is<sp/>the<sp/>8<sp/>bit<sp/>unsigned<sp/>integer<sp/>to<sp/>be<sp/>sent.</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>function<sp/>returns<sp/>1<sp/>if<sp/>an<sp/>error<sp/>has<sp/>occurred,<sp/>otherwise<sp/>it<sp/>returns</highlight></codeline>
+<codeline><highlight class="normal">0.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>uint8_t<sp/>I2C_read_ack(void)</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>is<sp/>used<sp/>to<sp/>read<sp/>one<sp/>byte<sp/>from<sp/>a<sp/>device<sp/>and<sp/>request<sp/>another<sp/>byte<sp/>of<sp/>data</highlight></codeline>
+<codeline><highlight class="normal">after<sp/>the<sp/>transmission<sp/>is<sp/>complete<sp/>by<sp/>sending<sp/>the<sp/>acknowledge<sp/>bit.</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>returns<sp/>the<sp/>received<sp/>byte.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>uint8_t<sp/>I2C_read_nack(void)</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>is<sp/>used<sp/>to<sp/>read<sp/>one<sp/>byte<sp/>from<sp/>a<sp/>device<sp/>an<sp/>then<sp/>not<sp/>requesting<sp/>another</highlight></codeline>
+<codeline><highlight class="normal">byte<sp/>and<sp/>therefore<sp/>stopping<sp/>the<sp/>current<sp/>transmission.</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>returns<sp/>the<sp/>received<sp/>byte.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>uint8_t<sp/>i2c_transmit(uint8_t<sp/>address,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>is<sp/>used<sp/>to<sp/>transmit<sp/>[length]<sp/>number<sp/>of<sp/>bytes<sp/>to<sp/>an<sp/>I2C<sp/>device<sp/>with<sp/>the<sp/>given</highlight></codeline>
+<codeline><highlight class="normal">I2C<sp/>address<sp/>from<sp/>[data].</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>[address]<sp/>passed<sp/>to<sp/>this<sp/>function<sp/>is<sp/>the<sp/>7-bit<sp/>slave<sp/>address,<sp/>left</highlight></codeline>
+<codeline><highlight class="normal">shifted<sp/>by<sp/>one<sp/>bit<sp/>(i.e.<sp/>7-bit<sp/>slave<sp/>address<sp/>is<sp/>`0x2F`<sp/>-&gt;<sp/>`(0x2F)&lt;&lt;1`<sp/>=<sp/>`0x5E`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>uint8_t<sp/>i2c_receive(uint8_t<sp/>address,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>is<sp/>used<sp/>to<sp/>read<sp/>[length]<sp/>number<sp/>of<sp/>bytes<sp/>from<sp/>the<sp/>I2C<sp/>device<sp/>with<sp/>the<sp/>given</highlight></codeline>
+<codeline><highlight class="normal">I2C<sp/>address<sp/>into<sp/>the<sp/>[data].</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>[address]<sp/>passed<sp/>to<sp/>this<sp/>function<sp/>is<sp/>the<sp/>7-bit<sp/>slave<sp/>address,<sp/>left</highlight></codeline>
+<codeline><highlight class="normal">shifted<sp/>by<sp/>one<sp/>bit<sp/>(i.e.<sp/>7-bit<sp/>slave<sp/>address<sp/>is<sp/>`0x2F`<sp/>-&gt;<sp/>`(0x2F)&lt;&lt;1`<sp/>=<sp/>`0x5E`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>void<sp/>I2C_stop(void)</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>disables<sp/>the<sp/>TWI<sp/>peripheral<sp/>completely</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>therefore<sp/>disconnects<sp/>the<sp/>device<sp/>from<sp/>the<sp/>bus.</highlight></codeline>
+    </programlisting>
+    <location file="src/IO/I2C-master-lib/README.md"/>
+  </compounddef>
+</doxygen>

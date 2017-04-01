@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classSPI" kind="class" language="C++" prot="public">
+    <compoundname>SPI</compoundname>
+    <includes refid="SPI_8h" local="no">SPI.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* SPI::SPI_DDR</definition>
+        <argsstring></argsstring>
+        <name>SPI_DDR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/SPI.h" line="35" column="1" bodyfile="src/IO/SPI.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSPI_1a6fefdb147a2789fe10efb13f8100235c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SPI::SPI_MISO</definition>
+        <argsstring></argsstring>
+        <name>SPI_MISO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/SPI.h" line="37" column="1" bodyfile="src/IO/SPI.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSPI_1a10159404dbabef20333fe73f69a3fca6" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SPI::SPI_MOSI</definition>
+        <argsstring></argsstring>
+        <name>SPI_MOSI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/SPI.h" line="38" column="1" bodyfile="src/IO/SPI.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSPI_1ad9ff914a9831b004b1f8fa5368558e01" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SPI::SPI_SCK</definition>
+        <argsstring></argsstring>
+        <name>SPI_SCK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/SPI.h" line="39" column="1" bodyfile="src/IO/SPI.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSPI_1ad4cb7d5cd46647baf68bb98a0e06e2aa" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SPI::SPI_SS</definition>
+        <argsstring></argsstring>
+        <name>SPI_SS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/SPI.h" line="40" column="1" bodyfile="src/IO/SPI.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSPI_1a2ba081c29fbdecc704c6bf00b24d5205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SPI::SPI</definition>
+        <argsstring>()</argsstring>
+        <name>SPI</name>
+        <briefdescription>
+<para><ref refid="classSPI" kindref="compound">SPI</ref> standard constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>new <ref refid="classSPI" kindref="compound">SPI</ref> object where MOSI, MISO, SCK and SS are set according to the pins on the microcontroller </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/SPI.h" line="55" column="1" bodyfile="src/IO/SPI.cpp" bodystart="27" bodyend="43"/>
+        <references refid="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" compoundref="SPI_8h" startline="35">SPI_DDR</references>
+        <references refid="classSPI_1a6fefdb147a2789fe10efb13f8100235c" compoundref="SPI_8h" startline="37">SPI_MISO</references>
+        <references refid="classSPI_1a10159404dbabef20333fe73f69a3fca6" compoundref="SPI_8h" startline="38">SPI_MOSI</references>
+        <references refid="classSPI_1ad9ff914a9831b004b1f8fa5368558e01" compoundref="SPI_8h" startline="39">SPI_SCK</references>
+        <references refid="classSPI_1ad4cb7d5cd46647baf68bb98a0e06e2aa" compoundref="SPI_8h" startline="40">SPI_SS</references>
+      </memberdef>
+      <memberdef kind="function" id="classSPI_1a32722ff55ed030eb70b8a71fa19f2436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SPI::SPI</definition>
+        <argsstring>(volatile uint8_t &amp;DDR, uint8_t MISO, uint8_t MOSI, uint8_t SCK, uint8_t SS)</argsstring>
+        <name>SPI</name>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>DDR</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>MISO</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>MOSI</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>SCK</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>SS</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classSPI" kindref="compound">SPI</ref> constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">DDR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">MISO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Master In Slave Out </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">MOSI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Master Out Slave In </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">SCK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signal Clock </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">SS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Slave Select </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/SPI.h" line="67" column="1" bodyfile="src/IO/SPI.cpp" bodystart="45" bodyend="58"/>
+        <references refid="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" compoundref="SPI_8h" startline="35">SPI_DDR</references>
+        <references refid="classSPI_1a6fefdb147a2789fe10efb13f8100235c" compoundref="SPI_8h" startline="37">SPI_MISO</references>
+        <references refid="classSPI_1a10159404dbabef20333fe73f69a3fca6" compoundref="SPI_8h" startline="38">SPI_MOSI</references>
+        <references refid="classSPI_1ad9ff914a9831b004b1f8fa5368558e01" compoundref="SPI_8h" startline="39">SPI_SCK</references>
+        <references refid="classSPI_1ad4cb7d5cd46647baf68bb98a0e06e2aa" compoundref="SPI_8h" startline="40">SPI_SS</references>
+      </memberdef>
+      <memberdef kind="function" id="classSPI_1a7e28e3328e32b650ead0f7640cee6e81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SPI::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Initialize <ref refid="classSPI" kindref="compound">SPI</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/SPI.h" line="73" column="1" bodyfile="src/IO/SPI.cpp" bodystart="61" bodyend="77"/>
+        <references refid="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" compoundref="SPI_8h" startline="35">SPI_DDR</references>
+        <references refid="classSPI_1a10159404dbabef20333fe73f69a3fca6" compoundref="SPI_8h" startline="38">SPI_MOSI</references>
+        <references refid="classSPI_1ad4cb7d5cd46647baf68bb98a0e06e2aa" compoundref="SPI_8h" startline="40">SPI_SS</references>
+        <references refid="classSPI_1ad9ff914a9831b004b1f8fa5368558e01" compoundref="SPI_8h" startline="39">SPI_SCK</references>
+        <references refid="classSPI_1a6fefdb147a2789fe10efb13f8100235c" compoundref="SPI_8h" startline="37">SPI_MISO</references>
+      </memberdef>
+      <memberdef kind="function" id="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SPI::WriteReadbyte</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>WriteReadbyte</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Write and Read one byte. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Databyte to write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Byte </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/SPI.h" line="81" column="1" bodyfile="src/IO/SPI.cpp" bodystart="79" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classSPI" kindref="compound">SPI</ref> class definition. </para>    </briefdescription>
+    <detaileddescription>
+<para>Defines methods for accessing the <ref refid="classSPI" kindref="compound">SPI</ref> interface </para>    </detaileddescription>
+    <location file="src/IO/SPI.h" line="31" column="1" bodyfile="src/IO/SPI.h" bodystart="31" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classSPI_1a7e28e3328e32b650ead0f7640cee6e81" prot="public" virt="non-virtual"><scope>SPI</scope><name>Init</name></member>
+      <member refid="classSPI_1a2ba081c29fbdecc704c6bf00b24d5205" prot="public" virt="non-virtual"><scope>SPI</scope><name>SPI</name></member>
+      <member refid="classSPI_1a32722ff55ed030eb70b8a71fa19f2436" prot="public" virt="non-virtual"><scope>SPI</scope><name>SPI</name></member>
+      <member refid="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" prot="private" virt="non-virtual"><scope>SPI</scope><name>SPI_DDR</name></member>
+      <member refid="classSPI_1a6fefdb147a2789fe10efb13f8100235c" prot="private" virt="non-virtual"><scope>SPI</scope><name>SPI_MISO</name></member>
+      <member refid="classSPI_1a10159404dbabef20333fe73f69a3fca6" prot="private" virt="non-virtual"><scope>SPI</scope><name>SPI_MOSI</name></member>
+      <member refid="classSPI_1ad9ff914a9831b004b1f8fa5368558e01" prot="private" virt="non-virtual"><scope>SPI</scope><name>SPI_SCK</name></member>
+      <member refid="classSPI_1ad4cb7d5cd46647baf68bb98a0e06e2aa" prot="private" virt="non-virtual"><scope>SPI</scope><name>SPI_SS</name></member>
+      <member refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" prot="public" virt="non-virtual"><scope>SPI</scope><name>WriteReadbyte</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

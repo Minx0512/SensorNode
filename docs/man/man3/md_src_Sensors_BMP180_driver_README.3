@@ -1,0 +1,107 @@
+.TH "md_src_Sensors_BMP180_driver_README" 3 "Mon Mar 27 2017" "Version 0.1" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md_src_Sensors_BMP180_driver_README \- CONTENTS OF THIS FILE 
+
+.IP "\(bu" 2
+Introduction
+.IP "\(bu" 2
+Version
+.IP "\(bu" 2
+Integration details
+.IP "\(bu" 2
+Driver files information
+.IP "\(bu" 2
+Supported sensor interface
+.IP "\(bu" 2
+Copyright
+.PP
+.PP
+.SH "INTRODUCTION "
+.PP
+.PP
+.IP "\(bu" 2
+This package contains the Bosch Sensortec MEMS pressure sensor driver (sensor API)
+.IP "\(bu" 2
+The sensor driver package includes \fBbmp180\&.h\fP, bmp180\&.c and bmp180_support\&.c files
+.PP
+.PP
+.SH "VERSION "
+.PP
+.PP
+.IP "\(bu" 2
+Version of bmp180 sensor driver is:
+.IP "  \(bu" 4
+bmp180\&.c - V2\&.0\&.3
+.IP "  \(bu" 4
+\fBbmp180\&.h\fP - V2\&.2\&.2
+.IP "  \(bu" 4
+bmp180_support\&.c - V1\&.0\&.4
+.PP
+
+.PP
+.PP
+.SH "INTEGRATION DETAILS "
+.PP
+.PP
+.IP "\(bu" 2
+Integrate \fBbmp180\&.h\fP and bmp180\&.c file in to your project\&.
+.IP "\(bu" 2
+The bmp180_support\&.c file contains only examples for API use cases, so it is not required to integrate into project\&.
+.PP
+.PP
+.SH "DRIVER FILES INFORMATION "
+.PP
+.PP
+.SS "\fBbmp180\&.h\fP "
+.PP
+.IP "\(bu" 2
+This header file has the register address definition, constant definitions, data type definition and supported sensor driver calls declarations\&.
+.PP
+.PP
+.SS "bmp180\&.c "
+.PP
+.IP "\(bu" 2
+This file contains the implementation for the sensor driver APIs\&.
+.PP
+.PP
+.SS "bmp180_support\&.c "
+.PP
+.IP "\(bu" 2
+This file shall be used as an user guidance, here you can find samples of
+.IP "  \(bu" 4
+Initialize the sensor with I2C communication
+.IP "    \(bu" 6
+Add your code to the I2C bus read and bus write functions\&.
+.IP "      \(bu" 8
+Return value can be chosen by yourself
+.PP
+
+.PP
+
+.PP
+
+.PP
+.PP
+API just passes that value to your application code
+.IP "\(bu" 2
+Add your code to the delay function
+.PP
+.PP
+Reading the sensor read out data
+.PP
+.SH "SUPPORTED SENSOR INTERFACE "
+.PP
+.PP
+.IP "\(bu" 2
+This pressure sensor driver supports I2C interface
+.PP
+.PP
+.SH "COPYRIGHT "
+.PP
+.PP
+.IP "\(bu" 2
+Copyright (C) 2008 - 2015 Bosch Sensortec GmbH 
+.PP
+

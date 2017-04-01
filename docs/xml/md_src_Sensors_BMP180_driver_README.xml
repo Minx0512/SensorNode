@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="md_src_Sensors_BMP180_driver_README" kind="page">
+    <compoundname>md_src_Sensors_BMP180_driver_README</compoundname>
+    <title>CONTENTS OF THIS FILE</title>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Introduction</para></listitem><listitem><para>Version</para></listitem><listitem><para>Integration details</para></listitem><listitem><para>Driver files information</para></listitem><listitem><para>Supported sensor interface</para></listitem><listitem><para>Copyright</para></listitem></itemizedlist>
+</para><para><heading level="1">INTRODUCTION </heading>
+</para><para><itemizedlist>
+<listitem><para>This package contains the Bosch Sensortec MEMS pressure sensor driver (sensor API)</para></listitem><listitem><para>The sensor driver package includes <ref refid="bmp180_8h" kindref="compound">bmp180.h</ref>, bmp180.c and bmp180_support.c files</para></listitem></itemizedlist>
+</para><para><heading level="1">VERSION </heading>
+</para><para><itemizedlist>
+<listitem><para>Version of bmp180 sensor driver is:<itemizedlist>
+<listitem><para>bmp180.c - V2.0.3</para></listitem><listitem><para><ref refid="bmp180_8h" kindref="compound">bmp180.h</ref> - V2.2.2</para></listitem><listitem><para>bmp180_support.c - V1.0.4</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para><para><heading level="1">INTEGRATION DETAILS </heading>
+</para><para><itemizedlist>
+<listitem><para>Integrate <ref refid="bmp180_8h" kindref="compound">bmp180.h</ref> and bmp180.c file in to your project.</para></listitem><listitem><para>The bmp180_support.c file contains only examples for API use cases, so it is not required to integrate into project.</para></listitem></itemizedlist>
+</para><para><heading level="1">DRIVER FILES INFORMATION </heading>
+</para><para><heading level="2"><ref refid="bmp180_8h" kindref="compound">bmp180.h</ref> </heading>
+</para><para><itemizedlist>
+<listitem><para>This header file has the register address definition, constant definitions, data type definition and supported sensor driver calls declarations.</para></listitem></itemizedlist>
+</para><para><heading level="2">bmp180.c </heading>
+</para><para><itemizedlist>
+<listitem><para>This file contains the implementation for the sensor driver APIs.</para></listitem></itemizedlist>
+</para><para><heading level="2">bmp180_support.c </heading>
+</para><para><itemizedlist>
+<listitem><para>This file shall be used as an user guidance, here you can find samples of<itemizedlist>
+<listitem><para>Initialize the sensor with I2C communication<itemizedlist>
+<listitem><para>Add your code to the I2C bus read and bus write functions.<itemizedlist>
+<listitem><para>Return value can be chosen by yourself</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para><para>API just passes that value to your application code<itemizedlist>
+<listitem><para>Add your code to the delay function</para></listitem></itemizedlist>
+</para><para>Reading the sensor read out data</para><para><heading level="1">SUPPORTED SENSOR INTERFACE </heading>
+</para><para><itemizedlist>
+<listitem><para>This pressure sensor driver supports I2C interface</para></listitem></itemizedlist>
+</para><para><heading level="1">COPYRIGHT </heading>
+</para><para><itemizedlist>
+<listitem><para>Copyright (C) 2008 - 2015 Bosch Sensortec GmbH </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

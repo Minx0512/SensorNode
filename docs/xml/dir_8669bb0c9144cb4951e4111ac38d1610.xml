@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_8669bb0c9144cb4951e4111ac38d1610" kind="dir">
+    <compoundname>Python</compoundname>
+    <innerdir refid="dir_e0f368aaf9303b1b45be4972626ddfeb">Python/Protocol</innerdir>
+    <innerfile refid="BluetoothConn_8py">BluetoothConn.py</innerfile>
+    <innerfile refid="ConfigSensorNode_8py">ConfigSensorNode.py</innerfile>
+    <innerfile refid="DesignColors_8py">DesignColors.py</innerfile>
+    <innerfile refid="findmyphone_8py">findmyphone.py</innerfile>
+    <innerfile refid="NodeProtocol_8py">NodeProtocol.py</innerfile>
+    <innerfile refid="ReadSensor_8py">ReadSensor.py</innerfile>
+    <innerfile refid="readSensorNode_8py">readSensorNode.py</innerfile>
+    <innerfile refid="sensLights_8py">sensLights.py</innerfile>
+    <innerfile refid="SensorNode_8py">SensorNode.py</innerfile>
+    <innerfile refid="SensorNode0_8py">SensorNode0.py</innerfile>
+    <innerfile refid="SerialConn_8py">SerialConn.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/"/>
+  </compounddef>
+</doxygen>

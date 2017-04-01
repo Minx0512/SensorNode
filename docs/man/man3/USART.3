@@ -1,0 +1,189 @@
+.TH "USART" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USART \- \fBUSART\fP class definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <USART\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUSART\fP ()"
+.br
+.RI "\fI\fBUSART\fP standard constructor\&. \fP"
+.ti -1c
+.RI "\fBUSART\fP (uint32_t baudrate)"
+.br
+.RI "\fI\fBUSART\fP constructor\&. \fP"
+.ti -1c
+.RI "void \fBwriteString\fP (char *\fBstr\fP)"
+.br
+.RI "\fIWrites String to interface\&. \fP"
+.ti -1c
+.RI "const char * \fBreadString\fP (void)"
+.br
+.RI "\fIReads incoming string\&. \fP"
+.ti -1c
+.RI "void \fBreadString\fP (char myString[], uint8_t maxLength)"
+.br
+.RI "\fIReads incoming string\&. \fP"
+.ti -1c
+.RI "void \fBreadString\fP (char *string)"
+.br
+.RI "\fIReads incoming string\&. \fP"
+.ti -1c
+.RI "void \fBinitUART\fP (void)"
+.br
+.RI "\fIInitialize \fBUSART\fP interface\&. \fP"
+.ti -1c
+.RI "void \fBUSART0_Flush\fP (void)"
+.br
+.RI "\fIFlush \fBUSART\fP buffer\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBgetByte\fP (void)"
+.br
+.RI "\fIRead 1 Byte of incoming data\&. \fP"
+.ti -1c
+.RI "void \fBputByte\fP (unsigned char data)"
+.br
+.RI "\fISend Byte via the \fBUSART\fP interface\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fB_BAUD\fP"
+.br
+.RI "\fIBaud rate\&. \fP"
+.ti -1c
+.RI "uint32_t \fB_UBRR\fP"
+.br
+.RI "\fI\fBUSART\fP Baud Rate Register\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBUSART\fP class definition\&. 
+
+Defines methods for accessing the \fBUSART\fP interface 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "USART::USART ()"
+
+.PP
+\fBUSART\fP standard constructor\&. new \fBUSART\fP object with baud rate set to 9600 
+.SS "USART::USART (uint32_t baudrate)"
+
+.PP
+\fBUSART\fP constructor\&. new \fBUSART\fP object with baud rate set to baudrate 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbaudrate\fP in bit per second (bps) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "uint8_t USART::getByte (void)\fC [private]\fP"
+
+.PP
+Read 1 Byte of incoming data\&. Returns a byte from the serial buffer Use this function if the RX interrupt is not enabled\&. Returns 0 on empty buffer\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Receive 1 Characterbyte as uint8 
+.RE
+.PP
+
+.SS "void USART::initUART (void)"
+
+.PP
+Initialize \fBUSART\fP interface\&. Configures baud rate (refer datasheet) 
+.SS "void USART::putByte (unsigned char data)\fC [private]\fP"
+
+.PP
+Send Byte via the \fBUSART\fP interface\&. Transmits a byte Use this function if the TX interrupt is not enabled\&. Blocks the serial port while TX completes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP Databyte to transmit 
+.RE
+.PP
+
+.SS "const char * USART::readString (void)"
+
+.PP
+Reads incoming string\&. Reads an ASCII string from the RX buffer\&.
+.PP
+Reads incoming string until a new line character 
+.PP
+\fBReturns:\fP
+.RS 4
+constant character array 
+.RE
+.PP
+
+.SS "void USART::readString (char myString[], uint8_t maxLength)"
+
+.PP
+Reads incoming string\&. Reads an ASCII string from the RX buffer\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImyString\fP character array 
+.br
+\fImaxLength\fP Maximum length of string to read 
+.RE
+.PP
+
+.SS "void USART::readString (char * string)"
+
+.PP
+Reads incoming string\&. Reads an ASCII string from the RX buffer\&.
+.PP
+Reads incoming string until a new line character 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP character array 
+.RE
+.PP
+
+.SS "void USART::USART0_Flush (void)"
+
+.PP
+Flush \fBUSART\fP buffer\&. Empties the RX buffer\&. 
+.SS "void USART::writeString (char * str)"
+
+.PP
+Writes String to interface\&. Writes an ASCII string to the TX buffer\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstr\fP character array 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32_t USART::_BAUD\fC [private]\fP"
+
+.PP
+Baud rate\&. Baud rate (9600 is default) 
+.SS "uint32_t USART::_UBRR\fC [private]\fP"
+
+.PP
+\fBUSART\fP Baud Rate Register\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

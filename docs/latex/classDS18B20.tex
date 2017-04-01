@@ -1,0 +1,454 @@
+\hypertarget{classDS18B20}{}\section{D\+S18\+B20 Class Reference}
+\label{classDS18B20}\index{D\+S18\+B20@{D\+S18\+B20}}
+
+
+\hyperlink{classDS18B20}{D\+S18\+B20} class definition.  
+
+
+
+
+{\ttfamily \#include $<$D\+S18\+B20.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDS18B20_a6340d31cea87cf473af13fc7f15f60e4}{Read\+Measurement} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Takes a Measurement per sensor on the bus. \end{DoxyCompactList}\item 
+void \hyperlink{classDS18B20_a440a17340ac61a693316550422e4ae4e}{Read\+Measurement2} (char $\ast$Macstring, char $\ast$temp\+Str)
+\begin{DoxyCompactList}\small\item\em Takes a Measurement per sensor on the bus. \end{DoxyCompactList}\item 
+\hyperlink{classDS18B20_afc1a4166a4d1d00baef15a9e4c59b632}{D\+S18\+B20} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDS18B20}{D\+S18\+B20} standard constructor. \end{DoxyCompactList}\item 
+\hyperlink{classDS18B20_afb0ce114e04bc699bc2e3c5282a31bc3}{D\+S18\+B20} (volatile uint8\+\_\+t \&Wire\+\_\+\+P\+O\+RT, volatile uint8\+\_\+t \&Wire\+\_\+\+D\+DR, volatile uint8\+\_\+t \&Wire\+\_\+\+P\+IN, uint8\+\_\+t Wire\+\_\+\+DQ)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDS18B20}{D\+S18\+B20} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classDS18B20_af18146fd823d04f5472fb305e46f02b0}{Get\+M\+A\+C\+String} (char $\ast$M\+A\+C\+String\+Out)
+\begin{DoxyCompactList}\small\item\em Get M\+AC addresses from M\+A\+C\+String. \end{DoxyCompactList}\item 
+void \hyperlink{classDS18B20_a64a03b4a18a9d2b3faeb7943865055e9}{Get\+Sensor\+String\+X\+ML} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Get xml style sensor string. \end{DoxyCompactList}\item 
+void \hyperlink{classDS18B20_ae3d50f1b5b71517d633958f54654ea55}{Get\+Temperature} (char $\ast$M\+A\+Cstring, char $\ast$temp\+String)
+\begin{DoxyCompactList}\small\item\em Get temperature values in one string an the M\+AC addresses in a seperate one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDS18B20_a817183f6ef9552d6559d58d714e5c804}{Start\+Measurement} (void)
+\item 
+uint8\+\_\+t \hyperlink{classDS18B20_a890b94747fbd3ec6e45088735c7bc1fe}{Reset} ()
+\item 
+uint8\+\_\+t \hyperlink{classDS18B20_ac2bf79674d18e4ad00d7b41d76d411e3}{Bit\+IO} (uint8\+\_\+t bit)
+\item 
+uint8\+\_\+t \hyperlink{classDS18B20_a7314cb6a438ddd0c214ed409f7dd5d86}{Write\+Byte} (uint8\+\_\+t byte)
+\item 
+uint8\+\_\+t \hyperlink{classDS18B20_aa43d0c42ebb25bbdc9b7904710652c75}{Read\+Byte} (void)
+\item 
+unsigned char \hyperlink{classDS18B20_a356e88e8a6bca4f5ffeb41180c08f91d}{Rom\+Search} (unsigned char diff, unsigned char $\ast$id)
+\item 
+void \hyperlink{classDS18B20_a1f03dae7ea2d07a225343eaa33d119cf}{Command} (unsigned char command, unsigned char $\ast$id)
+\item 
+void \hyperlink{classDS18B20_abd68014bd97396c4b0365d3e1ca1f61c}{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE} ()
+\item 
+void \hyperlink{classDS18B20_aaa611dcdffd8f02719f62c8a93c0c7c0}{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE} ()
+\item 
+void \hyperlink{classDS18B20_a8a8a45bbfe229978ea7280177b6fe18b}{P\+I\+N\+\_\+\+L\+OW} ()
+\item 
+void \hyperlink{classDS18B20_af9d029958b4a835a15867df7ad59d7d3}{P\+I\+N\+\_\+\+H\+I\+GH} ()
+\item 
+\hyperlink{classDS18B20_a458a891af1a3631958fa84c5b5bbc457}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((gnu\+\_\+inline)) void delay\+\_\+us(uint16\+\_\+t delay)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classDS18B20_a4e8d420cd118999883bde12e766bc1d4}{W\+I\+R\+E\+\_\+\+P\+O\+RT}
+\begin{DoxyCompactList}\small\item\em Thermometer data port. \end{DoxyCompactList}\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classDS18B20_a06a1f548d087b8d8971dee5e94653f5c}{W\+I\+R\+E\+\_\+\+D\+DR}
+\begin{DoxyCompactList}\small\item\em Thermometer data port. \end{DoxyCompactList}\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classDS18B20_a03a1ad890f9713fc10dc353c9779a7f2}{W\+I\+R\+E\+\_\+\+P\+IN}
+\begin{DoxyCompactList}\small\item\em Thermometer data port. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classDS18B20_aebc6a6ab3c604f19dac9a24ef3301938}{W\+I\+R\+E\+\_\+\+DQ}
+\begin{DoxyCompactList}\small\item\em Thermometer data line. \end{DoxyCompactList}\item 
+char \hyperlink{classDS18B20_a6884de10b175289718239bdac0b8e52e}{M\+A\+C\+String} \mbox{[}120\mbox{]}
+\begin{DoxyCompactList}\small\item\em M\+AC string of the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classDS18B20}{D\+S18\+B20} class definition. 
+
+Defines methods for accessing the \hyperlink{classDS18B20}{D\+S18\+B20} interface 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{D\+S18\+B20@{D\+S18\+B20}!D\+S18\+B20@{D\+S18\+B20}}
+\index{D\+S18\+B20@{D\+S18\+B20}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{D\+S18\+B20()}{DS18B20()}}]{\setlength{\rightskip}{0pt plus 5cm}D\+S18\+B20\+::\+D\+S18\+B20 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDS18B20_afc1a4166a4d1d00baef15a9e4c59b632}{}\label{classDS18B20_afc1a4166a4d1d00baef15a9e4c59b632}
+
+
+\hyperlink{classDS18B20}{D\+S18\+B20} standard constructor. 
+
+new \hyperlink{classDS18B20}{D\+S18\+B20} object and initializes variables \index{D\+S18\+B20@{D\+S18\+B20}!D\+S18\+B20@{D\+S18\+B20}}
+\index{D\+S18\+B20@{D\+S18\+B20}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{D\+S18\+B20(volatile uint8\+\_\+t \&\+Wire\+\_\+\+P\+O\+R\+T, volatile uint8\+\_\+t \&\+Wire\+\_\+\+D\+D\+R, volatile uint8\+\_\+t \&\+Wire\+\_\+\+P\+I\+N, uint8\+\_\+t Wire\+\_\+\+D\+Q)}{DS18B20(volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volatile uint8_t &Wire_PIN, uint8_t Wire_DQ)}}]{\setlength{\rightskip}{0pt plus 5cm}D\+S18\+B20\+::\+D\+S18\+B20 (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t \&}]{Wire\+\_\+\+P\+O\+RT, }
+\item[{volatile uint8\+\_\+t \&}]{Wire\+\_\+\+D\+DR, }
+\item[{volatile uint8\+\_\+t \&}]{Wire\+\_\+\+P\+IN, }
+\item[{uint8\+\_\+t}]{Wire\+\_\+\+DQ}
+\end{DoxyParamCaption}
+)}\hypertarget{classDS18B20_afb0ce114e04bc699bc2e3c5282a31bc3}{}\label{classDS18B20_afb0ce114e04bc699bc2e3c5282a31bc3}
+
+
+\hyperlink{classDS18B20}{D\+S18\+B20} constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Wire\+\_\+\+P\+O\+RT} & \\
+\hline
+\mbox{\tt in}  & {\em Wire\+\_\+\+D\+DR} & \\
+\hline
+\mbox{\tt in}  & {\em Wire\+\_\+\+P\+IN} & \\
+\hline
+\mbox{\tt in}  & {\em Wire\+\_\+\+DQ} & Data line \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{D\+S18\+B20@{D\+S18\+B20}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+((gnu\+\_\+inline)) void delay\+\_\+us(uint16\+\_\+t delay)}{__attribute__((gnu_inline)) void delay_us(uint16_t delay)}}]{\setlength{\rightskip}{0pt plus 5cm}D\+S18\+B20\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(gnu\+\_\+inline)}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classDS18B20_a458a891af1a3631958fa84c5b5bbc457}{}\label{classDS18B20_a458a891af1a3631958fa84c5b5bbc457}
+\index{D\+S18\+B20@{D\+S18\+B20}!Bit\+IO@{Bit\+IO}}
+\index{Bit\+IO@{Bit\+IO}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Bit\+I\+O(uint8\+\_\+t bit)}{BitIO(uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t D\+S18\+B20\+::\+Bit\+IO (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_ac2bf79674d18e4ad00d7b41d76d411e3}{}\label{classDS18B20_ac2bf79674d18e4ad00d7b41d76d411e3}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_ac2bf79674d18e4ad00d7b41d76d411e3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!Command@{Command}}
+\index{Command@{Command}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Command(unsigned char command, unsigned char $\ast$id)}{Command(unsigned char command, unsigned char *id)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+Command (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{command, }
+\item[{unsigned char $\ast$}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_a1f03dae7ea2d07a225343eaa33d119cf}{}\label{classDS18B20_a1f03dae7ea2d07a225343eaa33d119cf}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_a1f03dae7ea2d07a225343eaa33d119cf_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!Get\+M\+A\+C\+String@{Get\+M\+A\+C\+String}}
+\index{Get\+M\+A\+C\+String@{Get\+M\+A\+C\+String}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Get\+M\+A\+C\+String(char $\ast$\+M\+A\+C\+String\+Out)}{GetMACString(char *MACStringOut)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+Get\+M\+A\+C\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{M\+A\+C\+String\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{classDS18B20_af18146fd823d04f5472fb305e46f02b0}{}\label{classDS18B20_af18146fd823d04f5472fb305e46f02b0}
+
+
+Get M\+AC addresses from M\+A\+C\+String. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em M\+A\+C\+String\+Out} & Character array of M\+AC addresses \\
+\hline
+\end{DoxyParams}
+\index{D\+S18\+B20@{D\+S18\+B20}!Get\+Sensor\+String\+X\+ML@{Get\+Sensor\+String\+X\+ML}}
+\index{Get\+Sensor\+String\+X\+ML@{Get\+Sensor\+String\+X\+ML}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Get\+Sensor\+String\+X\+M\+L(char $\ast$string)}{GetSensorStringXML(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+Get\+Sensor\+String\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classDS18B20_a64a03b4a18a9d2b3faeb7943865055e9}{}\label{classDS18B20_a64a03b4a18a9d2b3faeb7943865055e9}
+
+
+Get xml style sensor string. 
+
+Puts out one string with M\+AC addresses and their temperature values 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & X\+ML style sensor string \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_a64a03b4a18a9d2b3faeb7943865055e9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!Get\+Temperature@{Get\+Temperature}}
+\index{Get\+Temperature@{Get\+Temperature}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Get\+Temperature(char $\ast$\+M\+A\+Cstring, char $\ast$temp\+String)}{GetTemperature(char *MACstring, char *tempString)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+Get\+Temperature (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{M\+A\+Cstring, }
+\item[{char $\ast$}]{temp\+String}
+\end{DoxyParamCaption}
+)}\hypertarget{classDS18B20_ae3d50f1b5b71517d633958f54654ea55}{}\label{classDS18B20_ae3d50f1b5b71517d633958f54654ea55}
+
+
+Get temperature values in one string an the M\+AC addresses in a seperate one. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em M\+A\+Cstring} & M\+AC addresses of each sensor on the bus \\
+\hline
+\mbox{\tt out}  & {\em temp\+String} & Temperature values in one string \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_ae3d50f1b5b71517d633958f54654ea55_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!P\+I\+N\+\_\+\+H\+I\+GH@{P\+I\+N\+\_\+\+H\+I\+GH}}
+\index{P\+I\+N\+\_\+\+H\+I\+GH@{P\+I\+N\+\_\+\+H\+I\+GH}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+\+H\+I\+G\+H()}{PIN_HIGH()}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+P\+I\+N\+\_\+\+H\+I\+GH (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classDS18B20_af9d029958b4a835a15867df7ad59d7d3}{}\label{classDS18B20_af9d029958b4a835a15867df7ad59d7d3}
+\index{D\+S18\+B20@{D\+S18\+B20}!P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE@{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE}}
+\index{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE@{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+D\+E()}{PIN_INPUT_MODE()}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classDS18B20_abd68014bd97396c4b0365d3e1ca1f61c}{}\label{classDS18B20_abd68014bd97396c4b0365d3e1ca1f61c}
+\index{D\+S18\+B20@{D\+S18\+B20}!P\+I\+N\+\_\+\+L\+OW@{P\+I\+N\+\_\+\+L\+OW}}
+\index{P\+I\+N\+\_\+\+L\+OW@{P\+I\+N\+\_\+\+L\+OW}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+\+L\+O\+W()}{PIN_LOW()}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+P\+I\+N\+\_\+\+L\+OW (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classDS18B20_a8a8a45bbfe229978ea7280177b6fe18b}{}\label{classDS18B20_a8a8a45bbfe229978ea7280177b6fe18b}
+\index{D\+S18\+B20@{D\+S18\+B20}!P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE@{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE}}
+\index{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE@{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+D\+E()}{PIN_OUTPUT_MODE()}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classDS18B20_aaa611dcdffd8f02719f62c8a93c0c7c0}{}\label{classDS18B20_aaa611dcdffd8f02719f62c8a93c0c7c0}
+\index{D\+S18\+B20@{D\+S18\+B20}!Read\+Byte@{Read\+Byte}}
+\index{Read\+Byte@{Read\+Byte}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Read\+Byte(void)}{ReadByte(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t D\+S18\+B20\+::\+Read\+Byte (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_aa43d0c42ebb25bbdc9b7904710652c75}{}\label{classDS18B20_aa43d0c42ebb25bbdc9b7904710652c75}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_aa43d0c42ebb25bbdc9b7904710652c75_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!Read\+Measurement@{Read\+Measurement}}
+\index{Read\+Measurement@{Read\+Measurement}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Read\+Measurement(char $\ast$string)}{ReadMeasurement(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+Read\+Measurement (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classDS18B20_a6340d31cea87cf473af13fc7f15f60e4}{}\label{classDS18B20_a6340d31cea87cf473af13fc7f15f60e4}
+
+
+Takes a Measurement per sensor on the bus. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & String with M\+AC addresses and temperature values \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_a6340d31cea87cf473af13fc7f15f60e4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!Read\+Measurement2@{Read\+Measurement2}}
+\index{Read\+Measurement2@{Read\+Measurement2}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Read\+Measurement2(char $\ast$\+Macstring, char $\ast$temp\+Str)}{ReadMeasurement2(char *Macstring, char *tempStr)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+Read\+Measurement2 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{Macstring, }
+\item[{char $\ast$}]{temp\+Str}
+\end{DoxyParamCaption}
+)}\hypertarget{classDS18B20_a440a17340ac61a693316550422e4ae4e}{}\label{classDS18B20_a440a17340ac61a693316550422e4ae4e}
+
+
+Takes a Measurement per sensor on the bus. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em Macstring} & M\+AC addresses of each sensor on the bus \\
+\hline
+\mbox{\tt out}  & {\em temp\+Str} & Temperature values in one string \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_a440a17340ac61a693316550422e4ae4e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!Reset@{Reset}}
+\index{Reset@{Reset}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Reset()}{Reset()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t D\+S18\+B20\+::\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_a890b94747fbd3ec6e45088735c7bc1fe}{}\label{classDS18B20_a890b94747fbd3ec6e45088735c7bc1fe}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_a890b94747fbd3ec6e45088735c7bc1fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!Rom\+Search@{Rom\+Search}}
+\index{Rom\+Search@{Rom\+Search}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Rom\+Search(unsigned char diff, unsigned char $\ast$id)}{RomSearch(unsigned char diff, unsigned char *id)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char D\+S18\+B20\+::\+Rom\+Search (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{diff, }
+\item[{unsigned char $\ast$}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_a356e88e8a6bca4f5ffeb41180c08f91d}{}\label{classDS18B20_a356e88e8a6bca4f5ffeb41180c08f91d}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_a356e88e8a6bca4f5ffeb41180c08f91d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!Start\+Measurement@{Start\+Measurement}}
+\index{Start\+Measurement@{Start\+Measurement}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Start\+Measurement(void)}{StartMeasurement(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+S18\+B20\+::\+Start\+Measurement (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_a817183f6ef9552d6559d58d714e5c804}{}\label{classDS18B20_a817183f6ef9552d6559d58d714e5c804}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_a817183f6ef9552d6559d58d714e5c804_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{D\+S18\+B20@{D\+S18\+B20}!Write\+Byte@{Write\+Byte}}
+\index{Write\+Byte@{Write\+Byte}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Write\+Byte(uint8\+\_\+t byte)}{WriteByte(uint8_t byte)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t D\+S18\+B20\+::\+Write\+Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_a7314cb6a438ddd0c214ed409f7dd5d86}{}\label{classDS18B20_a7314cb6a438ddd0c214ed409f7dd5d86}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDS18B20_a7314cb6a438ddd0c214ed409f7dd5d86_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{D\+S18\+B20@{D\+S18\+B20}!M\+A\+C\+String@{M\+A\+C\+String}}
+\index{M\+A\+C\+String@{M\+A\+C\+String}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{M\+A\+C\+String}{MACString}}]{\setlength{\rightskip}{0pt plus 5cm}char D\+S18\+B20\+::\+M\+A\+C\+String\mbox{[}120\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_a6884de10b175289718239bdac0b8e52e}{}\label{classDS18B20_a6884de10b175289718239bdac0b8e52e}
+
+
+M\+AC string of the sensor. 
+
+\index{D\+S18\+B20@{D\+S18\+B20}!W\+I\+R\+E\+\_\+\+D\+DR@{W\+I\+R\+E\+\_\+\+D\+DR}}
+\index{W\+I\+R\+E\+\_\+\+D\+DR@{W\+I\+R\+E\+\_\+\+D\+DR}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{W\+I\+R\+E\+\_\+\+D\+DR}{WIRE_DDR}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ D\+S18\+B20\+::\+W\+I\+R\+E\+\_\+\+D\+DR\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_a06a1f548d087b8d8971dee5e94653f5c}{}\label{classDS18B20_a06a1f548d087b8d8971dee5e94653f5c}
+
+
+Thermometer data port. 
+
+\index{D\+S18\+B20@{D\+S18\+B20}!W\+I\+R\+E\+\_\+\+DQ@{W\+I\+R\+E\+\_\+\+DQ}}
+\index{W\+I\+R\+E\+\_\+\+DQ@{W\+I\+R\+E\+\_\+\+DQ}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{W\+I\+R\+E\+\_\+\+DQ}{WIRE_DQ}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t D\+S18\+B20\+::\+W\+I\+R\+E\+\_\+\+DQ\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_aebc6a6ab3c604f19dac9a24ef3301938}{}\label{classDS18B20_aebc6a6ab3c604f19dac9a24ef3301938}
+
+
+Thermometer data line. 
+
+\index{D\+S18\+B20@{D\+S18\+B20}!W\+I\+R\+E\+\_\+\+P\+IN@{W\+I\+R\+E\+\_\+\+P\+IN}}
+\index{W\+I\+R\+E\+\_\+\+P\+IN@{W\+I\+R\+E\+\_\+\+P\+IN}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{W\+I\+R\+E\+\_\+\+P\+IN}{WIRE_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ D\+S18\+B20\+::\+W\+I\+R\+E\+\_\+\+P\+IN\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_a03a1ad890f9713fc10dc353c9779a7f2}{}\label{classDS18B20_a03a1ad890f9713fc10dc353c9779a7f2}
+
+
+Thermometer data port. 
+
+\index{D\+S18\+B20@{D\+S18\+B20}!W\+I\+R\+E\+\_\+\+P\+O\+RT@{W\+I\+R\+E\+\_\+\+P\+O\+RT}}
+\index{W\+I\+R\+E\+\_\+\+P\+O\+RT@{W\+I\+R\+E\+\_\+\+P\+O\+RT}!D\+S18\+B20@{D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{W\+I\+R\+E\+\_\+\+P\+O\+RT}{WIRE_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ D\+S18\+B20\+::\+W\+I\+R\+E\+\_\+\+P\+O\+RT\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDS18B20_a4e8d420cd118999883bde12e766bc1d4}{}\label{classDS18B20_a4e8d420cd118999883bde12e766bc1d4}
+
+
+Thermometer data port. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sensors/\hyperlink{DS18B20_8h}{D\+S18\+B20.\+h}\item 
+src/\+Sensors/\hyperlink{DS18B20_8cpp}{D\+S18\+B20.\+cpp}\end{DoxyCompactItemize}

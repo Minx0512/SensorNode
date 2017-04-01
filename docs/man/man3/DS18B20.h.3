@@ -1,0 +1,199 @@
+.TH "src/Sensors/DS18B20.h" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Sensors/DS18B20.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <util/delay\&.h>\fP
+.br
+\fC#include <avr/io\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <inttypes\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDS18B20\fP"
+.br
+.RI "\fI\fBDS18B20\fP class definition\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFOSC\fP   16000000UL"
+.br
+.RI "\fICPU clock speed\&. \fP"
+.ti -1c
+.RI "#define \fBLOOP_CYCLES\fP   8"
+.br
+.RI "\fINumber of cycles that the loop takes\&. \fP"
+.ti -1c
+.RI "#define \fBus\fP(num)   (num/(\fBLOOP_CYCLES\fP*(1/(\fBFOSC\fP/1000000\&.0))))"
+.br
+.RI "\fIMicroseconds\&. \fP"
+.ti -1c
+.RI "#define \fBTHERM_CMD_CONVERTTEMP\fP   0x44"
+.br
+.RI "\fICommand convert temperature\&. \fP"
+.ti -1c
+.RI "#define \fBTHERM_CMD_RSCRATCHPAD\fP   0xBE"
+.br
+.RI "\fICommand read scratchpad\&. \fP"
+.ti -1c
+.RI "#define \fBTHERM_CMD_WSCRATCHPAD\fP   0x4E"
+.br
+.RI "\fICommand write scratchpad\&. \fP"
+.ti -1c
+.RI "#define \fBTHERM_CMD_CPYSCRATCHPAD\fP   0x48"
+.br
+.RI "\fICommand copy scratchpad\&. \fP"
+.ti -1c
+.RI "#define \fBTHERM_CMD_RECEEPROM\fP   0xb8"
+.br
+.RI "\fICommand record eeprom\&. \fP"
+.ti -1c
+.RI "#define \fBTHERM_CMD_RPWRSUPPLY\fP   0xb4"
+.br
+.RI "\fICommand reset power supply\&. \fP"
+.ti -1c
+.RI "#define \fBTHERM_CMD_READROM\fP   0x33"
+.br
+.RI "\fICommand read ROM\&. \fP"
+.ti -1c
+.RI "#define \fBTHERM_CMD_ALARMSEARCH\fP   0xec"
+.br
+.RI "\fICommand alarm search\&. \fP"
+.ti -1c
+.RI "#define \fBTHERM_DECIMAL_STEPS_12BIT\fP   625"
+.br
+.RI "\fIDecimal Steps 12 Bit: \&.0625\&. \fP"
+.ti -1c
+.RI "#define \fBMATCH_ROM\fP   0x55"
+.br
+.RI "\fIMatch Rom\&. \fP"
+.ti -1c
+.RI "#define \fBSKIP_ROM\fP   0xCC"
+.br
+.RI "\fISkip ROM search\&. \fP"
+.ti -1c
+.RI "#define \fBSEARCH_ROM\fP   0xF0"
+.br
+.RI "\fIInit ROM search\&. \fP"
+.ti -1c
+.RI "#define \fBSEARCH_FIRST\fP   0xFF"
+.br
+.RI "\fIstart new search \fP"
+.ti -1c
+.RI "#define \fBPRESENCE_ERR\fP   0xFF"
+.br
+.RI "\fIPresence error\&. \fP"
+.ti -1c
+.RI "#define \fBDATA_ERR\fP   0xFE"
+.br
+.RI "\fIData error\&. \fP"
+.ti -1c
+.RI "#define \fBLAST_DEVICE\fP   0x00"
+.br
+.RI "\fIlast device found \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Project: SensorNode
+.PP
+\fBDS18B20\&.h\fP
+.PP
+Created on: Nov 12, 2016
+.PP
+Author: Matthias Minx
+.PP
+Revision: 0\&.2 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DATA_ERR   0xFE"
+
+.PP
+Data error\&. 
+.SS "#define FOSC   16000000UL"
+
+.PP
+CPU clock speed\&. 
+.SS "#define LAST_DEVICE   0x00"
+
+.PP
+last device found 
+.SS "#define LOOP_CYCLES   8"
+
+.PP
+Number of cycles that the loop takes\&. 
+.SS "#define MATCH_ROM   0x55"
+
+.PP
+Match Rom\&. 
+.SS "#define PRESENCE_ERR   0xFF"
+
+.PP
+Presence error\&. 
+.SS "#define SEARCH_FIRST   0xFF"
+
+.PP
+start new search 
+.SS "#define SEARCH_ROM   0xF0"
+
+.PP
+Init ROM search\&. 
+.SS "#define SKIP_ROM   0xCC"
+
+.PP
+Skip ROM search\&. 
+.SS "#define THERM_CMD_ALARMSEARCH   0xec"
+
+.PP
+Command alarm search\&. 
+.SS "#define THERM_CMD_CONVERTTEMP   0x44"
+
+.PP
+Command convert temperature\&. 
+.SS "#define THERM_CMD_CPYSCRATCHPAD   0x48"
+
+.PP
+Command copy scratchpad\&. 
+.SS "#define THERM_CMD_READROM   0x33"
+
+.PP
+Command read ROM\&. 
+.SS "#define THERM_CMD_RECEEPROM   0xb8"
+
+.PP
+Command record eeprom\&. 
+.SS "#define THERM_CMD_RPWRSUPPLY   0xb4"
+
+.PP
+Command reset power supply\&. 
+.SS "#define THERM_CMD_RSCRATCHPAD   0xBE"
+
+.PP
+Command read scratchpad\&. 
+.SS "#define THERM_CMD_WSCRATCHPAD   0x4E"
+
+.PP
+Command write scratchpad\&. 
+.SS "#define THERM_DECIMAL_STEPS_12BIT   625"
+
+.PP
+Decimal Steps 12 Bit: \&.0625\&. 
+.SS "#define us(num)   (num/(\fBLOOP_CYCLES\fP*(1/(\fBFOSC\fP/1000000\&.0))))"
+
+.PP
+Microseconds\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="SensorNode0_8py" kind="file" language="Python">
+    <compoundname>SensorNode0.py</compoundname>
+    <innernamespace refid="namespaceSensorNode0">SensorNode0</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#!/usr/bin/python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>re</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>thread</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#<sp/>import<sp/>MySQLdb<sp/>as<sp/>mdb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>BluetoothConn<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>time</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>ReadSensor<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>NodeProtocol<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>xml.dom.minidom<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>parse,<sp/>parseString</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pyasn1.compat.octets<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>null</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bluetooth._bluetooth<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>btsocket</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>time<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sleep</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>sys<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>getsizeof</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">isNightTime(lightValue):</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/>t<sp/>=<sp/>int(time.strftime(</highlight><highlight class="stringliteral">&quot;%H&quot;</highlight><highlight class="normal">,time.localtime()))</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/></highlight><highlight class="comment">#print<sp/>&quot;{0}&quot;.format(t)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/>isNight<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>t<sp/>&lt;<sp/>15<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>t<sp/>&gt;<sp/>8:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>isNight<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isNight</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">SleepMode(slpmd):</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/>slpmd<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">NoMovement(lastmv,lightVal,tIn,stateOlight):</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/>noww<sp/>=<sp/>int(time.time()<sp/>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/>prevMovementMins<sp/>=<sp/>noww<sp/>-<sp/>lastmv</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>prevMovementMins<sp/>&gt;=<sp/>5*60<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>stateOlight==1:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>LightsOff(lightVal)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>stateOlight<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight><highlight class="comment">#elif<sp/>stateOlight<sp/>==0<sp/>and<sp/>lightVal&lt;tIn:<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/></highlight><highlight class="comment">#<sp/>LightsOn()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/></highlight><highlight class="comment">#<sp/>stateOlight<sp/>=<sp/>1<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/></highlight><highlight class="comment">#print<sp/>&quot;Light:<sp/>{0}<sp/>-<sp/>stateOfLight:<sp/>{1}&quot;.format(lightVal,stateOlight)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stateOlight</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">OnMovement(lightVal,tIn,tOut,stateOlight,rsEneabled):</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>rsEneabled<sp/>==1:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#if<sp/>RemoteLight(remoteSensors,0)<sp/>&lt;<sp/>tOut:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Lights<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#LightsOn()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#elif<sp/>light&lt;<sp/>tInside:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#LightsOn()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#else:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#Lights<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>LightsOff(lightVal)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lightVal<sp/>&lt;<sp/>tIn<sp/><sp/></highlight><highlight class="keywordflow">or</highlight><highlight class="normal"><sp/>isNightTime(lightVal)==1)<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>stateOlight==0:<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>LightsOn(lightVal)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>stateOlight<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">elif</highlight><highlight class="normal"><sp/>lightVal<sp/>&gt;<sp/>tIn<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>isNightTime(lightVal)==0<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>stateOlight<sp/>==1:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>LightsOff(lightVal)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>stateOlight<sp/>=<sp/>0<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stateOlight</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">DetectMovement(socket,tInside,<sp/>tOutside,rSensorsEnabled,slpmode):</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/>lastmovement<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/>lightson<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/>natLightVal<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/>light<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>threadLock.acquire()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#SendData(socket,&quot;35|0|Mv\n&quot;)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>recData<sp/>=<sp/>GetMovement(socket)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>threadLock.release()</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>mvs<sp/>=<sp/>re.findall(</highlight><highlight class="stringliteral">&quot;&lt;mv&gt;(.*)\|&quot;</highlight><highlight class="normal">,<sp/>recData)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#print<sp/>mvs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>len(mvs)<sp/>&gt;<sp/>0:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/>m=int(mvs[0])</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/>m<sp/>=<sp/>-1<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#print<sp/>&quot;mv:<sp/>{0}&quot;.format(m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>m<sp/>==<sp/>1:<sp/></highlight><highlight class="comment">#<sp/>movement<sp/>detected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/>lastmovement<sp/>=<sp/>int(time.time())</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">#print<sp/>&quot;lastmovement:<sp/>{0}<sp/>&quot;.format(lastmovement)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/>threadLock.acquire()</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">#SendData(socket,&quot;33|0|L\n&quot;)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/>sensorData<sp/>=<sp/>GetLightsense(socket)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/>threadLock.release()</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/>l=re.findall(</highlight><highlight class="stringliteral">&quot;&lt;NSL19M51&gt;(.*)\|&quot;</highlight><highlight class="normal">,sensorData)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">#print<sp/>l</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>len(l)<sp/>&gt;<sp/>0:</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>light=(l[0])</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>light<sp/>=<sp/>-1<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">#print<sp/>&quot;Light:<sp/>{0}<sp/>&quot;.format(light)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">#light<sp/>=<sp/>LightsInside(GetLightsense(socket))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/>lightson<sp/>=<sp/>OnMovement(light,tInside,tOutside,lightson,rSensorsEnabled)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:<sp/><sp/></highlight><highlight class="comment">#<sp/>no<sp/>movement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/>lightson<sp/>=<sp/>NoMovement(lastmovement,light,tInside,lightson)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>sleep(1)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">ReadSensorData(socket,tnum):</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/></highlight><highlight class="comment">#print<sp/>&quot;In<sp/>readSensorData:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/></highlight><highlight class="comment">#humDHT22<sp/>=<sp/><sp/>GetHumidityDHT22(socket)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/></highlight><highlight class="comment">#tempDHT22<sp/>=<sp/>GetTempDHT22(socket)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/></highlight><highlight class="comment">#lightI<sp/>=<sp/>GetLightsense(socket)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/></highlight><highlight class="comment">#lightO<sp/>=<sp/>GetLightsense(socket)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>threadLock.acquire()</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>recDataLight<sp/>=<sp/>GetLightsense(socket)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#print<sp/>recDataLight</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#SendData(socket,&quot;32|0|DHT22\n&quot;)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>recDataDHT22<sp/>=<sp/>GetTempHumidDHT22(socket)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>threadLock.release()</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>l=re.findall(</highlight><highlight class="stringliteral">&quot;&lt;NSL19M51&gt;(.*)\|&quot;</highlight><highlight class="normal">,recDataLight)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>len(l)<sp/>&gt;<sp/>0:</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/>light=(l[0])</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/>light<sp/>=<sp/>-1<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>t<sp/>=<sp/>time.strftime(</highlight><highlight class="stringliteral">&quot;%H:%M:%S<sp/>%p&quot;</highlight><highlight class="normal">,time.localtime())</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#print<sp/>recDataDHT22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>dht<sp/>=<sp/>re.findall(</highlight><highlight class="stringliteral">&quot;.*&lt;DHT22&gt;&lt;T<sp/>unit=&apos;(.*)&apos;&gt;(.*)\|&lt;H<sp/>unit=&apos;(.*)&apos;&gt;(.*)\|\|&quot;</highlight><highlight class="normal">,recDataDHT22)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>d<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>dht:<sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;{0}<sp/>:<sp/>DHT22:<sp/>T:<sp/>{1}{2}<sp/>|<sp/>H:<sp/>{3}{4}<sp/>|<sp/>Light:<sp/>{5}&quot;</highlight><highlight class="normal">.format(t,<sp/>d[1],d[0],d[3],d[2],light)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#print<sp/>recDataDHT22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#print<sp/>&quot;{0}<sp/>:<sp/>{1}<sp/>&quot;.format(t,recDataDHT22,light)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/></highlight><highlight class="comment">#print<sp/>&quot;HumDHT22:<sp/>{0}<sp/>|<sp/>TmpDHT22:<sp/>{1}<sp/>|<sp/>Light:<sp/>{2}\r\n&quot;.format(humDHT22,tempDHT22,lightI)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>sleep(5*60)<sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/></highlight><highlight class="comment">#con<sp/>=<sp/>mdb.connect(&apos;localhost&apos;,&apos;SensorLog&apos;,&apos;sensNode059&apos;,&apos;sensors&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/></highlight><highlight class="comment">#with<sp/>con:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#cur<sp/>=<sp/>con.cursor()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#cur.execute(&quot;INSERT<sp/>INTO<sp/>sensorlog_all<sp/>(SensorID,Value)<sp/>VALUES<sp/>(,%s),(,%s),(,%s),(,%s);&quot;,(humDHT22,tempDHT22,lightI,lightO))<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">port<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">conn=0</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">out_str<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">bd_addr<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;98:D3:31:FB:31:A6&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">remoteSensorsEnabled<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">sleepmode<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">LightsOff(0)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>conn==0:</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>sock<sp/>=<sp/>BlueConnect(bd_addr,port,5.0)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>conn=1</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>IOError<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>e:</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;{0}&quot;</highlight><highlight class="normal">.format(e)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">#<sp/>get<sp/>temp<sp/>and<sp/>hum<sp/>every<sp/>hour</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">#<sp/>get<sp/>Lightsensors<sp/>every<sp/>min</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">#<sp/>get<sp/>RemoteSensors<sp/>every<sp/>min</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">prevmins<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">thresh<sp/>=<sp/>500</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">treshOut<sp/>=<sp/>500</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">humDHT22=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">tempDHT22=</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal">threadLock<sp/>=<sp/>thread.allocate_lock()</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/>thread.start_new_thread(DetectMovement,<sp/>(sock,thresh,treshOut,remoteSensorsEnabled,sleepmode))</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/>thread.start_new_thread(ReadSensorData,(sock,2))</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/></highlight><highlight class="comment">#ReadSensorData(sock)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>Exception,<sp/>e:</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;{0}&quot;</highlight><highlight class="normal">.format(e)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/>sleep(1)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Python/SensorNode0.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,56 @@
+\hypertarget{NRF24L01_8cpp}{}\section{src/\+Wireless/\+N\+R\+F24\+L01.cpp File Reference}
+\label{NRF24L01_8cpp}\index{src/\+Wireless/\+N\+R\+F24\+L01.\+cpp@{src/\+Wireless/\+N\+R\+F24\+L01.\+cpp}}
+{\ttfamily \#include \char`\"{}N\+R\+F24\+L01.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}N\+R\+F24\+L01registers.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\\*
+{\ttfamily \#include $<$util/delay.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../\+I\+O/\+S\+P\+I.\+h\char`\"{}}\\*
+Include dependency graph for N\+R\+F24\+L01.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{NRF24L01_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const uint8\+\_\+t child\+\_\+pipe\+\_\+enable\mbox{[}$\,$\mbox{]} \hyperlink{NRF24L01_8cpp_abb144610c9204c33a16ac68ac76d2a43}{P\+R\+O\+G\+M\+EM} =\{\hyperlink{NRF24L01registers_8h_a7e202f82550ac18575c0f1ef8c1725c0}{N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P0}, \hyperlink{NRF24L01registers_8h_a19e782c866bc55be66a8a6e9f0f9bbcf}{N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P1}, \hyperlink{NRF24L01registers_8h_af00c112cab8374d6792b34ae7305498e}{N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P2}, \hyperlink{NRF24L01registers_8h_a9b2f73129d5709696b31aad9288f6ba8}{N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P3}, \hyperlink{NRF24L01registers_8h_a24faa21706176176091693e1c6147b63}{N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P4}, \hyperlink{NRF24L01registers_8h_a6605a0d4d3779f40aae2bc09895aca08}{N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P5}\}
+\item 
+static const uint8\+\_\+t \hyperlink{NRF24L01_8cpp_abb144610c9204c33a16ac68ac76d2a43}{P\+R\+O\+G\+M\+EM} \hyperlink{NRF24L01_8cpp_abb559312d5695b2e999a6f9c1c70f43e}{child\+\_\+pipe} \mbox{[}$\,$\mbox{]}
+\item 
+static const uint8\+\_\+t \hyperlink{NRF24L01_8cpp_abb144610c9204c33a16ac68ac76d2a43}{P\+R\+O\+G\+M\+EM} \hyperlink{NRF24L01_8cpp_a7f2a8ffadcb84a16a11236e320dec823}{child\+\_\+payload\+\_\+size} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{N\+R\+F24\+L01.\+cpp@{N\+R\+F24\+L01.\+cpp}!child\+\_\+payload\+\_\+size@{child\+\_\+payload\+\_\+size}}
+\index{child\+\_\+payload\+\_\+size@{child\+\_\+payload\+\_\+size}!N\+R\+F24\+L01.\+cpp@{N\+R\+F24\+L01.\+cpp}}
+\subsubsection[{\texorpdfstring{child\+\_\+payload\+\_\+size}{child_payload_size}}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t {\bf P\+R\+O\+G\+M\+EM} child\+\_\+payload\+\_\+size\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{NRF24L01_8cpp_a7f2a8ffadcb84a16a11236e320dec823}{}\label{NRF24L01_8cpp_a7f2a8ffadcb84a16a11236e320dec823}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+        \hyperlink{NRF24L01registers_8h_ae87408247e1b981750056d2b07817982}{NRF24L01\_REG\_RX\_PW\_P0}, \hyperlink{NRF24L01registers_8h_a6a7369b8248ac36b8912ea8200757a1a}{NRF24L01\_REG\_RX\_PW\_P1}, 
+      \hyperlink{NRF24L01registers_8h_aa5d00102521b09e68ba9b4bb58cbb469}{NRF24L01\_REG\_RX\_PW\_P2}, \hyperlink{NRF24L01registers_8h_a73c8d772edcc8e34aa12338966015a6e}{NRF24L01\_REG\_RX\_PW\_P3}, 
+      \hyperlink{NRF24L01registers_8h_a0db5de1ea1678e0043a13429742fbc62}{NRF24L01\_REG\_RX\_PW\_P4}, \hyperlink{NRF24L01registers_8h_a30df3dd8bcc59a406a538314e2034940}{NRF24L01\_REG\_RX\_PW\_P5}
+\}
+\end{DoxyCode}
+\index{N\+R\+F24\+L01.\+cpp@{N\+R\+F24\+L01.\+cpp}!child\+\_\+pipe@{child\+\_\+pipe}}
+\index{child\+\_\+pipe@{child\+\_\+pipe}!N\+R\+F24\+L01.\+cpp@{N\+R\+F24\+L01.\+cpp}}
+\subsubsection[{\texorpdfstring{child\+\_\+pipe}{child_pipe}}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t {\bf P\+R\+O\+G\+M\+EM} child\+\_\+pipe\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{NRF24L01_8cpp_abb559312d5695b2e999a6f9c1c70f43e}{}\label{NRF24L01_8cpp_abb559312d5695b2e999a6f9c1c70f43e}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+        \hyperlink{NRF24L01registers_8h_afcaaf2d19fb6b9ebd0b122d173c13b88}{NRF24L01\_REG\_RX\_ADDR\_P0}, \hyperlink{NRF24L01registers_8h_a47a2face7996f7830800208e22777bf3}{NRF24L01\_REG\_RX\_ADDR\_P1}, 
+      \hyperlink{NRF24L01registers_8h_ab12deb84276c49739eebe79d0c3d4831}{NRF24L01\_REG\_RX\_ADDR\_P2}, \hyperlink{NRF24L01registers_8h_a6fcb6cdbb116cae4e9a8ab4def17e6d3}{NRF24L01\_REG\_RX\_ADDR\_P3}, 
+      \hyperlink{NRF24L01registers_8h_aa3761cab02cceffda8a3a6e121d5599f}{NRF24L01\_REG\_RX\_ADDR\_P4}, \hyperlink{NRF24L01registers_8h_a5fc47fc3d10a8fd1a5af575a997ccbb0}{NRF24L01\_REG\_RX\_ADDR\_P5}
+\}
+\end{DoxyCode}
+\index{N\+R\+F24\+L01.\+cpp@{N\+R\+F24\+L01.\+cpp}!P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}}
+\index{P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}!N\+R\+F24\+L01.\+cpp@{N\+R\+F24\+L01.\+cpp}}
+\subsubsection[{\texorpdfstring{P\+R\+O\+G\+M\+EM}{PROGMEM}}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t child\+\_\+pipe\+\_\+enable \mbox{[}$\,$\mbox{]} P\+R\+O\+G\+M\+EM =\{{\bf N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P0}, {\bf N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P1}, {\bf N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P2}, {\bf N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P3}, {\bf N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P4}, {\bf N\+R\+F24\+L01\+\_\+\+R\+E\+G\+\_\+\+E\+R\+X\+\_\+\+P5}\}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{NRF24L01_8cpp_abb144610c9204c33a16ac68ac76d2a43}{}\label{NRF24L01_8cpp_abb144610c9204c33a16ac68ac76d2a43}

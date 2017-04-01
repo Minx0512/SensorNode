@@ -1,0 +1,218 @@
+\hypertarget{DS18B20_8h}{}\section{src/\+Sensors/\+D\+S18\+B20.h File Reference}
+\label{DS18B20_8h}\index{src/\+Sensors/\+D\+S18\+B20.\+h@{src/\+Sensors/\+D\+S18\+B20.\+h}}
+{\ttfamily \#include $<$util/delay.\+h$>$}\\*
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+Include dependency graph for D\+S18\+B20.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DS18B20_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{DS18B20_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDS18B20}{D\+S18\+B20}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDS18B20}{D\+S18\+B20} class definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{DS18B20_8h_a802b2b582b121e4632aa9a491d503720}{F\+O\+SC}~16000000\+UL
+\begin{DoxyCompactList}\small\item\em C\+PU clock speed. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a3a15b9e4cfa1f6668b3bc5e324af42c0}{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}~8
+\begin{DoxyCompactList}\small\item\em Number of cycles that the loop takes. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a9feef6e5eed237807d11af797efbbea8}{us}(num)~(num/(\hyperlink{DS18B20_8h_a3a15b9e4cfa1f6668b3bc5e324af42c0}{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}$\ast$(1/(\hyperlink{DS18B20_8h_a802b2b582b121e4632aa9a491d503720}{F\+O\+SC}/1000000.\+0))))
+\begin{DoxyCompactList}\small\item\em Microseconds. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a3d233d75d73e3baf6d9a7e30b4afed66}{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+V\+E\+R\+T\+T\+E\+MP}~0x44
+\begin{DoxyCompactList}\small\item\em Command convert temperature. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_ac1fe271992c3ff8aea781ad1ead35f35}{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+S\+C\+R\+A\+T\+C\+H\+P\+AD}~0x\+BE
+\begin{DoxyCompactList}\small\item\em Command read scratchpad. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a60ff389a158dbe0258431893b27eace7}{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+W\+S\+C\+R\+A\+T\+C\+H\+P\+AD}~0x4E
+\begin{DoxyCompactList}\small\item\em Command write scratchpad. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_af5e5caf3a5441e9497fa5362ba6ca9c4}{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+P\+Y\+S\+C\+R\+A\+T\+C\+H\+P\+AD}~0x48
+\begin{DoxyCompactList}\small\item\em Command copy scratchpad. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_aade1ec30d01b81df2cbf86faa51576ca}{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+E\+P\+R\+OM}~0xb8
+\begin{DoxyCompactList}\small\item\em Command record eeprom. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a96a80bb9dee4d82e409c4c16ffa94bfd}{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+P\+W\+R\+S\+U\+P\+P\+LY}~0xb4
+\begin{DoxyCompactList}\small\item\em Command reset power supply. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a5e3616625c6a8c94a1272ab066f7cdde}{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+R\+OM}~0x33
+\begin{DoxyCompactList}\small\item\em Command read R\+OM. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_ad87daf6ca3b56fb882be1b2224a9286b}{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+A\+L\+A\+R\+M\+S\+E\+A\+R\+CH}~0xec
+\begin{DoxyCompactList}\small\item\em Command alarm search. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a28d81f447ab522c61076b973ed06a2e6}{T\+H\+E\+R\+M\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+T\+E\+P\+S\+\_\+12\+B\+IT}~625
+\begin{DoxyCompactList}\small\item\em Decimal Steps 12 Bit\+: .0625. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a20a70a05486a1fa3aba1881aa90104cd}{M\+A\+T\+C\+H\+\_\+\+R\+OM}~0x55
+\begin{DoxyCompactList}\small\item\em Match Rom. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_ae5773d5b673b0c12c6615958dd2efb22}{S\+K\+I\+P\+\_\+\+R\+OM}~0x\+CC
+\begin{DoxyCompactList}\small\item\em Skip R\+OM search. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_ae22115770cfd724213b05d36afcb7d8e}{S\+E\+A\+R\+C\+H\+\_\+\+R\+OM}~0x\+F0
+\begin{DoxyCompactList}\small\item\em Init R\+OM search. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_accfeed0bea98f3185af84c049ed64959}{S\+E\+A\+R\+C\+H\+\_\+\+F\+I\+R\+ST}~0x\+FF
+\begin{DoxyCompactList}\small\item\em start new search \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a4daa975e080ccafa8db3ed7b46f35567}{P\+R\+E\+S\+E\+N\+C\+E\+\_\+\+E\+RR}~0x\+FF
+\begin{DoxyCompactList}\small\item\em Presence error. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a1ed8ed33743473a38141862212eeb93f}{D\+A\+T\+A\+\_\+\+E\+RR}~0x\+FE
+\begin{DoxyCompactList}\small\item\em Data error. \end{DoxyCompactList}\item 
+\#define \hyperlink{DS18B20_8h_a42de6aa1135578f9ed5abd25930b1ad5}{L\+A\+S\+T\+\_\+\+D\+E\+V\+I\+CE}~0x00
+\begin{DoxyCompactList}\small\item\em last device found \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Project\+: Sensor\+Node
+
+\hyperlink{DS18B20_8h}{D\+S18\+B20.\+h}
+
+Created on\+: Nov 12, 2016
+
+Author\+: Matthias Minx
+
+Revision\+: 0.\+2 
+
+\subsection{Macro Definition Documentation}
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!D\+A\+T\+A\+\_\+\+E\+RR@{D\+A\+T\+A\+\_\+\+E\+RR}}
+\index{D\+A\+T\+A\+\_\+\+E\+RR@{D\+A\+T\+A\+\_\+\+E\+RR}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{D\+A\+T\+A\+\_\+\+E\+RR}{DATA_ERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+E\+RR~0x\+FE}\hypertarget{DS18B20_8h_a1ed8ed33743473a38141862212eeb93f}{}\label{DS18B20_8h_a1ed8ed33743473a38141862212eeb93f}
+
+
+Data error. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!F\+O\+SC@{F\+O\+SC}}
+\index{F\+O\+SC@{F\+O\+SC}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{F\+O\+SC}{FOSC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+O\+SC~16000000\+UL}\hypertarget{DS18B20_8h_a802b2b582b121e4632aa9a491d503720}{}\label{DS18B20_8h_a802b2b582b121e4632aa9a491d503720}
+
+
+C\+PU clock speed. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!L\+A\+S\+T\+\_\+\+D\+E\+V\+I\+CE@{L\+A\+S\+T\+\_\+\+D\+E\+V\+I\+CE}}
+\index{L\+A\+S\+T\+\_\+\+D\+E\+V\+I\+CE@{L\+A\+S\+T\+\_\+\+D\+E\+V\+I\+CE}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{L\+A\+S\+T\+\_\+\+D\+E\+V\+I\+CE}{LAST_DEVICE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+S\+T\+\_\+\+D\+E\+V\+I\+CE~0x00}\hypertarget{DS18B20_8h_a42de6aa1135578f9ed5abd25930b1ad5}{}\label{DS18B20_8h_a42de6aa1135578f9ed5abd25930b1ad5}
+
+
+last device found 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES@{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}}
+\index{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES@{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}{LOOP_CYCLES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES~8}\hypertarget{DS18B20_8h_a3a15b9e4cfa1f6668b3bc5e324af42c0}{}\label{DS18B20_8h_a3a15b9e4cfa1f6668b3bc5e324af42c0}
+
+
+Number of cycles that the loop takes. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!M\+A\+T\+C\+H\+\_\+\+R\+OM@{M\+A\+T\+C\+H\+\_\+\+R\+OM}}
+\index{M\+A\+T\+C\+H\+\_\+\+R\+OM@{M\+A\+T\+C\+H\+\_\+\+R\+OM}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+T\+C\+H\+\_\+\+R\+OM}{MATCH_ROM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+T\+C\+H\+\_\+\+R\+OM~0x55}\hypertarget{DS18B20_8h_a20a70a05486a1fa3aba1881aa90104cd}{}\label{DS18B20_8h_a20a70a05486a1fa3aba1881aa90104cd}
+
+
+Match Rom. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!P\+R\+E\+S\+E\+N\+C\+E\+\_\+\+E\+RR@{P\+R\+E\+S\+E\+N\+C\+E\+\_\+\+E\+RR}}
+\index{P\+R\+E\+S\+E\+N\+C\+E\+\_\+\+E\+RR@{P\+R\+E\+S\+E\+N\+C\+E\+\_\+\+E\+RR}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{P\+R\+E\+S\+E\+N\+C\+E\+\_\+\+E\+RR}{PRESENCE_ERR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+E\+S\+E\+N\+C\+E\+\_\+\+E\+RR~0x\+FF}\hypertarget{DS18B20_8h_a4daa975e080ccafa8db3ed7b46f35567}{}\label{DS18B20_8h_a4daa975e080ccafa8db3ed7b46f35567}
+
+
+Presence error. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!S\+E\+A\+R\+C\+H\+\_\+\+F\+I\+R\+ST@{S\+E\+A\+R\+C\+H\+\_\+\+F\+I\+R\+ST}}
+\index{S\+E\+A\+R\+C\+H\+\_\+\+F\+I\+R\+ST@{S\+E\+A\+R\+C\+H\+\_\+\+F\+I\+R\+ST}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{S\+E\+A\+R\+C\+H\+\_\+\+F\+I\+R\+ST}{SEARCH_FIRST}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+A\+R\+C\+H\+\_\+\+F\+I\+R\+ST~0x\+FF}\hypertarget{DS18B20_8h_accfeed0bea98f3185af84c049ed64959}{}\label{DS18B20_8h_accfeed0bea98f3185af84c049ed64959}
+
+
+start new search 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!S\+E\+A\+R\+C\+H\+\_\+\+R\+OM@{S\+E\+A\+R\+C\+H\+\_\+\+R\+OM}}
+\index{S\+E\+A\+R\+C\+H\+\_\+\+R\+OM@{S\+E\+A\+R\+C\+H\+\_\+\+R\+OM}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{S\+E\+A\+R\+C\+H\+\_\+\+R\+OM}{SEARCH_ROM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+A\+R\+C\+H\+\_\+\+R\+OM~0x\+F0}\hypertarget{DS18B20_8h_ae22115770cfd724213b05d36afcb7d8e}{}\label{DS18B20_8h_ae22115770cfd724213b05d36afcb7d8e}
+
+
+Init R\+OM search. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!S\+K\+I\+P\+\_\+\+R\+OM@{S\+K\+I\+P\+\_\+\+R\+OM}}
+\index{S\+K\+I\+P\+\_\+\+R\+OM@{S\+K\+I\+P\+\_\+\+R\+OM}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{S\+K\+I\+P\+\_\+\+R\+OM}{SKIP_ROM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+K\+I\+P\+\_\+\+R\+OM~0x\+CC}\hypertarget{DS18B20_8h_ae5773d5b673b0c12c6615958dd2efb22}{}\label{DS18B20_8h_ae5773d5b673b0c12c6615958dd2efb22}
+
+
+Skip R\+OM search. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+A\+L\+A\+R\+M\+S\+E\+A\+R\+CH@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+A\+L\+A\+R\+M\+S\+E\+A\+R\+CH}}
+\index{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+A\+L\+A\+R\+M\+S\+E\+A\+R\+CH@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+A\+L\+A\+R\+M\+S\+E\+A\+R\+CH}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+A\+L\+A\+R\+M\+S\+E\+A\+R\+CH}{THERM_CMD_ALARMSEARCH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+A\+L\+A\+R\+M\+S\+E\+A\+R\+CH~0xec}\hypertarget{DS18B20_8h_ad87daf6ca3b56fb882be1b2224a9286b}{}\label{DS18B20_8h_ad87daf6ca3b56fb882be1b2224a9286b}
+
+
+Command alarm search. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+V\+E\+R\+T\+T\+E\+MP@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+V\+E\+R\+T\+T\+E\+MP}}
+\index{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+V\+E\+R\+T\+T\+E\+MP@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+V\+E\+R\+T\+T\+E\+MP}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+V\+E\+R\+T\+T\+E\+MP}{THERM_CMD_CONVERTTEMP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+V\+E\+R\+T\+T\+E\+MP~0x44}\hypertarget{DS18B20_8h_a3d233d75d73e3baf6d9a7e30b4afed66}{}\label{DS18B20_8h_a3d233d75d73e3baf6d9a7e30b4afed66}
+
+
+Command convert temperature. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+P\+Y\+S\+C\+R\+A\+T\+C\+H\+P\+AD@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+P\+Y\+S\+C\+R\+A\+T\+C\+H\+P\+AD}}
+\index{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+P\+Y\+S\+C\+R\+A\+T\+C\+H\+P\+AD@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+P\+Y\+S\+C\+R\+A\+T\+C\+H\+P\+AD}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+P\+Y\+S\+C\+R\+A\+T\+C\+H\+P\+AD}{THERM_CMD_CPYSCRATCHPAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+C\+P\+Y\+S\+C\+R\+A\+T\+C\+H\+P\+AD~0x48}\hypertarget{DS18B20_8h_af5e5caf3a5441e9497fa5362ba6ca9c4}{}\label{DS18B20_8h_af5e5caf3a5441e9497fa5362ba6ca9c4}
+
+
+Command copy scratchpad. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+R\+OM@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+R\+OM}}
+\index{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+R\+OM@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+R\+OM}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+R\+OM}{THERM_CMD_READROM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+R\+OM~0x33}\hypertarget{DS18B20_8h_a5e3616625c6a8c94a1272ab066f7cdde}{}\label{DS18B20_8h_a5e3616625c6a8c94a1272ab066f7cdde}
+
+
+Command read R\+OM. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+E\+P\+R\+OM@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+E\+P\+R\+OM}}
+\index{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+E\+P\+R\+OM@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+E\+P\+R\+OM}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+E\+P\+R\+OM}{THERM_CMD_RECEEPROM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+E\+C\+E\+E\+P\+R\+OM~0xb8}\hypertarget{DS18B20_8h_aade1ec30d01b81df2cbf86faa51576ca}{}\label{DS18B20_8h_aade1ec30d01b81df2cbf86faa51576ca}
+
+
+Command record eeprom. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+P\+W\+R\+S\+U\+P\+P\+LY@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+P\+W\+R\+S\+U\+P\+P\+LY}}
+\index{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+P\+W\+R\+S\+U\+P\+P\+LY@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+P\+W\+R\+S\+U\+P\+P\+LY}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+P\+W\+R\+S\+U\+P\+P\+LY}{THERM_CMD_RPWRSUPPLY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+P\+W\+R\+S\+U\+P\+P\+LY~0xb4}\hypertarget{DS18B20_8h_a96a80bb9dee4d82e409c4c16ffa94bfd}{}\label{DS18B20_8h_a96a80bb9dee4d82e409c4c16ffa94bfd}
+
+
+Command reset power supply. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+S\+C\+R\+A\+T\+C\+H\+P\+AD@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+S\+C\+R\+A\+T\+C\+H\+P\+AD}}
+\index{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+S\+C\+R\+A\+T\+C\+H\+P\+AD@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+S\+C\+R\+A\+T\+C\+H\+P\+AD}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+S\+C\+R\+A\+T\+C\+H\+P\+AD}{THERM_CMD_RSCRATCHPAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+R\+S\+C\+R\+A\+T\+C\+H\+P\+AD~0x\+BE}\hypertarget{DS18B20_8h_ac1fe271992c3ff8aea781ad1ead35f35}{}\label{DS18B20_8h_ac1fe271992c3ff8aea781ad1ead35f35}
+
+
+Command read scratchpad. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+W\+S\+C\+R\+A\+T\+C\+H\+P\+AD@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+W\+S\+C\+R\+A\+T\+C\+H\+P\+AD}}
+\index{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+W\+S\+C\+R\+A\+T\+C\+H\+P\+AD@{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+W\+S\+C\+R\+A\+T\+C\+H\+P\+AD}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+W\+S\+C\+R\+A\+T\+C\+H\+P\+AD}{THERM_CMD_WSCRATCHPAD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+R\+M\+\_\+\+C\+M\+D\+\_\+\+W\+S\+C\+R\+A\+T\+C\+H\+P\+AD~0x4E}\hypertarget{DS18B20_8h_a60ff389a158dbe0258431893b27eace7}{}\label{DS18B20_8h_a60ff389a158dbe0258431893b27eace7}
+
+
+Command write scratchpad. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!T\+H\+E\+R\+M\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+T\+E\+P\+S\+\_\+12\+B\+IT@{T\+H\+E\+R\+M\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+T\+E\+P\+S\+\_\+12\+B\+IT}}
+\index{T\+H\+E\+R\+M\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+T\+E\+P\+S\+\_\+12\+B\+IT@{T\+H\+E\+R\+M\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+T\+E\+P\+S\+\_\+12\+B\+IT}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{T\+H\+E\+R\+M\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+T\+E\+P\+S\+\_\+12\+B\+IT}{THERM_DECIMAL_STEPS_12BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+R\+M\+\_\+\+D\+E\+C\+I\+M\+A\+L\+\_\+\+S\+T\+E\+P\+S\+\_\+12\+B\+IT~625}\hypertarget{DS18B20_8h_a28d81f447ab522c61076b973ed06a2e6}{}\label{DS18B20_8h_a28d81f447ab522c61076b973ed06a2e6}
+
+
+Decimal Steps 12 Bit\+: .0625. 
+
+\index{D\+S18\+B20.\+h@{D\+S18\+B20.\+h}!us@{us}}
+\index{us@{us}!D\+S18\+B20.\+h@{D\+S18\+B20.\+h}}
+\subsubsection[{\texorpdfstring{us}{us}}]{\setlength{\rightskip}{0pt plus 5cm}\#define us(
+\begin{DoxyParamCaption}
+\item[{}]{num}
+\end{DoxyParamCaption}
+)~(num/({\bf L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}$\ast$(1/({\bf F\+O\+SC}/1000000.\+0))))}\hypertarget{DS18B20_8h_a9feef6e5eed237807d11af797efbbea8}{}\label{DS18B20_8h_a9feef6e5eed237807d11af797efbbea8}
+
+
+Microseconds. 
+

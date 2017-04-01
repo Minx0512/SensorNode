@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="i2c__master_8h" kind="file" language="C++">
+    <compoundname>i2c_master.h</compoundname>
+    <includedby refid="i2c__master_8c" local="yes">src/IO/I2C-master-lib/i2c_master.c</includedby>
+    <includedby refid="main_8c" local="yes">src/IO/I2C-master-lib/main.c</includedby>
+    <includedby refid="BMP180_8hpp" local="yes">src/Sensors/BMP180.hpp</includedby>
+    <invincdepgraph>
+      <node id="36">
+        <label>src/IO/I2C-master-lib/i2c_master.h</label>
+        <link refid="i2c_master.h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>src/Sensors/BMP180.hpp</label>
+        <link refid="BMP180_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="i2c__master_8h_1ab5c0fbe837494c5f9130a5914854250d" prot="public" static="no">
+        <name>I2C_READ</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="4" column="9" bodyfile="src/IO/I2C-master-lib/i2c_master.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="i2c__master_8h_1a9536bf85bced4f4e549a82fb18eb6140" prot="public" static="no">
+        <name>I2C_WRITE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="5" column="9" bodyfile="src/IO/I2C-master-lib/i2c_master.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="i2c__master_8h_1a5730d9445429351b9f750084c5cb5aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void i2c_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>i2c_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="7" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="i2c__master_8h_1aa80979eb300f011d45794f1f5c81a35f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t i2c_start</definition>
+        <argsstring>(uint8_t address)</argsstring>
+        <name>i2c_start</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="8" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="19" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="i2c__master_8h_1ae963f348645a0bfad8a483bc91c4d0e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t i2c_write</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>i2c_write</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="9" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="45" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="i2c__master_8h_1aa7f5f94b089b26f76a4f9cc95e89a3db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t i2c_read_ack</definition>
+        <argsstring>(void)</argsstring>
+        <name>i2c_read_ack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="10" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="59" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="i2c__master_8h_1a2ed07e3ef7ae934c32f6fbd52dcfec7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t i2c_read_nack</definition>
+        <argsstring>(void)</argsstring>
+        <name>i2c_read_nack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="11" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="70" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="i2c__master_8h_1aaaf4c8c9bda19801d605917f3a47dc13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t i2c_transmit</definition>
+        <argsstring>(uint8_t address, uint8_t *data, uint16_t length)</argsstring>
+        <name>i2c_transmit</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="12" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="81" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="i2c__master_8h_1afae6aaaef07547e44ddfc2c949583755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t i2c_receive</definition>
+        <argsstring>(uint8_t address, uint8_t *data, uint16_t length)</argsstring>
+        <name>i2c_receive</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="13" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="95" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="i2c__master_8h_1aa6ecc511c99dd323624e0ddded9e23d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t i2c_writeReg</definition>
+        <argsstring>(uint8_t devaddr, uint8_t regaddr, uint8_t *data, uint16_t length)</argsstring>
+        <name>i2c_writeReg</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>devaddr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>regaddr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="14" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="110" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="i2c__master_8h_1a0807dfa8cf7cacee1675b9c5625c15ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t i2c_readReg</definition>
+        <argsstring>(uint8_t devaddr, uint8_t regaddr, uint8_t *data, uint16_t length)</argsstring>
+        <name>i2c_readReg</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>devaddr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>regaddr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="15" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="126" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="i2c__master_8h_1ad35d4e4f52ca74b503d5e5e1e0a3f5f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void i2c_stop</definition>
+        <argsstring>(void)</argsstring>
+        <name>i2c_stop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/i2c_master.h" line="16" column="1" bodyfile="src/IO/I2C-master-lib/i2c_master.c" bodystart="145" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>I2C_MASTER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_MASTER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_READ<sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_WRITE<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>i2c_init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">uint8_t<sp/>i2c_start(uint8_t<sp/>address);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">uint8_t<sp/>i2c_write(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">uint8_t<sp/>i2c_read_ack(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">uint8_t<sp/>i2c_read_nack(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">uint8_t<sp/>i2c_transmit(uint8_t<sp/>address,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">uint8_t<sp/>i2c_receive(uint8_t<sp/>address,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">uint8_t<sp/>i2c_writeReg(uint8_t<sp/>devaddr,<sp/>uint8_t<sp/>regaddr,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">uint8_t<sp/>i2c_readReg(uint8_t<sp/>devaddr,<sp/>uint8_t<sp/>regaddr,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>i2c_stop(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>I2C_MASTER_H</highlight></codeline>
+    </programlisting>
+    <location file="src/IO/I2C-master-lib/i2c_master.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_afe58f6d0ef7eec69c2706509daaefe7" kind="dir">
+    <compoundname>src/Sensors</compoundname>
+    <innerfile refid="BMP180_8cpp">BMP180.cpp</innerfile>
+    <innerfile refid="BMP180_8hpp">BMP180.hpp</innerfile>
+    <innerfile refid="DHT22_8cpp">DHT22.cpp</innerfile>
+    <innerfile refid="DHT22_8h">DHT22.h</innerfile>
+    <innerfile refid="DS18B20_8cpp">DS18B20.cpp</innerfile>
+    <innerfile refid="DS18B20_8h">DS18B20.h</innerfile>
+    <innerfile refid="Photoresistor_8cpp">Photoresistor.cpp</innerfile>
+    <innerfile refid="Photoresistor_8h">Photoresistor.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Sensors/"/>
+  </compounddef>
+</doxygen>

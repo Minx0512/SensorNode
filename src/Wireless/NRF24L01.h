@@ -1,4 +1,4 @@
-/*
+/**
  * NRF24L01.h
  *
  *  Created on: Nov 14, 2016
@@ -1083,7 +1083,7 @@ private:
 	   *
 	   * @return Current value of status register
 	   */
-	  uint8_t GetStatus(void);
+	  uint8_t getStatus(void);
 	  /**
 	   * Turn on or off the special features of the chip
 	   *

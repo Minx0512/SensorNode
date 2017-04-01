@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="BMP180_8cpp" kind="file" language="C++">
+    <compoundname>BMP180.cpp</compoundname>
+    <includes refid="BMP180_8hpp" local="yes">BMP180.hpp</includes>
+    <incdepgraph>
+      <node id="218">
+        <label>src/Sensors/BMP180.cpp</label>
+        <link refid="BMP180.cpp"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+      </node>
+      <node id="219">
+        <label>BMP180.hpp</label>
+        <link refid="BMP180_8hpp"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>BMP180.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>27<sp/>Mar<sp/>2017</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>matthias</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="BMP180_8hpp" kindref="compound">BMP180.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classBMP180_1a8c3e89c7ea65e49c0001a43af07b7c35" refkind="member"><highlight class="normal"><ref refid="classBMP180_1a8c3e89c7ea65e49c0001a43af07b7c35" kindref="member">BMP180::BMP180</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>constructor<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classBMP180_1a8d434a3074ba607d2dbc14657ae224dd" refkind="member"><highlight class="normal"><ref refid="classBMP180_1a8d434a3074ba607d2dbc14657ae224dd" kindref="member">BMP180::~BMP180</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>destructor<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/Sensors/BMP180.cpp"/>
+  </compounddef>
+</doxygen>

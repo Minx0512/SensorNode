@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="md_README" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>SensorNode</title>
+    <detaileddescription>
+<para>A little private project for a sensor node based on the ATmega328P. The main node is connected to the serial interface of a Raspberry Pi on which an openHab server is running. A nRF24L01+ Transceiver module on the SPI-bus of the ATmega328P serves for communication to other nodes. The main node has 2x <ref refid="classDS18B20" kindref="compound">DS18B20</ref> temperature sensors, 1 motion sensor and 1 resistive light sensor connected to it.</para><para>The sensor nodes Wireless addresses can be configured via a python script.</para><para><blockquote><para>Code is not yet ready &lt; </para></blockquote></para><para>Communications protocoll between the raspberry pi and the main sensor node:</para><para>example request: 0x31|A0:A0:A0:A0:A0|DHT22</para><para><table rows="16" cols="4"><row>
+<entry thead="yes"><para></para></entry><entry thead="yes"><para>HEX(command id (CmdID) + command property (cmdP) )</para></entry><entry thead="yes"><para>property id (PID/PVal) </para></entry><entry thead="yes"><para>property string (pString)  </para></entry></row>
+<row>
+<entry thead="no"><para>nRF24L01 Channel </para></entry><entry thead="no"><para>0x10 + 0x01 </para></entry><entry thead="no"><para>ChannelID: (0-125) 10 </para></entry><entry thead="no"><para>&quot;&quot; </para></entry></row>
+<row>
+<entry thead="no"><para>nRF24L01 PowerLvl</para></entry><entry thead="no"><para>0x10 + 0x02 </para></entry><entry thead="no"><para>PwrLvlVal: (1-4) 4 </para></entry><entry thead="no"><para>&quot;&quot; </para></entry></row>
+<row>
+<entry thead="no"><para>nRF24L01 DataRate</para></entry><entry thead="no"><para>0x10 + 0x03 </para></entry><entry thead="no"><para>DataRteVal: (1-3) 2 </para></entry><entry thead="no"><para>&quot;&quot; </para></entry></row>
+<row>
+<entry thead="no"><para>nRF24L01 CRCLevel</para></entry><entry thead="no"><para>0x10 + 0x04 </para></entry><entry thead="no"><para>CRCLvlVal: (1-3) 3 </para></entry><entry thead="no"><para>&quot;&quot; </para></entry></row>
+<row>
+<entry thead="no"><para>nRF24L01 PayloadSize</para></entry><entry thead="no"><para>0x10 + 0x05 </para></entry><entry thead="no"><para>payloadSzVal: 16 </para></entry><entry thead="no"><para>&quot;&quot; </para></entry></row>
+<row>
+<entry thead="no"><para>nRF24L01 ResetModule</para></entry><entry thead="no"><para>0x10 + 0x06 </para></entry><entry thead="no"><para>0 </para></entry><entry thead="no"><para>&quot;&quot; </para></entry></row>
+<row>
+<entry thead="no"><para>nRF24L01 SystemInfo</para></entry><entry thead="no"><para>0x10 + 0x07 </para></entry><entry thead="no"><para>0 </para></entry><entry thead="no"><para>&quot;&quot; </para></entry></row>
+<row>
+<entry thead="no"><para>GetSensorInfos availableSensors on current node</para></entry><entry thead="no"><para>0x20 + 0x00 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>Sensors </para></entry></row>
+<row>
+<entry thead="no"><para>GetSensorInfos availableSensors on connected node n</para></entry><entry thead="no"><para>0x20 + 0x01 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>Sensors </para></entry></row>
+<row>
+<entry thead="no"><para>GetSensorData Movement</para></entry><entry thead="no"><para>0x30 + 0x01 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>Mv </para></entry></row>
+<row>
+<entry thead="no"><para>GetSensorData <ref refid="classDHT22" kindref="compound">DHT22</ref> </para></entry><entry thead="no"><para>0x30 + 0x02 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para><ref refid="classDHT22" kindref="compound">DHT22</ref> </para></entry></row>
+<row>
+<entry thead="no"><para>GetSensorData LightSense</para></entry><entry thead="no"><para>0x30 + 0x03 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>La </para></entry></row>
+<row>
+<entry thead="no"><para>GetSensorData LightSense</para></entry><entry thead="no"><para>0x30 + 0x04 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>Ld </para></entry></row>
+<row>
+<entry thead="no"><para>GetSensorData TempDS18B20</para></entry><entry thead="no"><para>0x30 + 0x05 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>TDS </para></entry></row>
+<row>
+<entry thead="no"><para>GetSensorData Pressure</para></entry><entry thead="no"><para>0x30 + 0x06 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>PT </para></entry></row>
+</table>
+<table rows="7" cols="2"><row>
+<entry thead="yes"><para></para></entry><entry thead="yes"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Light on analog Port </para></entry><entry thead="no"><para>Lap </para></entry></row>
+<row>
+<entry thead="no"><para>Light digital in Lux </para></entry><entry thead="no"><para>Ldx </para></entry></row>
+<row>
+<entry thead="no"><para>TempDS </para></entry><entry thead="no"><para>TDS </para></entry></row>
+<row>
+<entry thead="no"><para>TempHumDHT22 </para></entry><entry thead="no"><para>DHT </para></entry></row>
+<row>
+<entry thead="no"><para>Pressure </para></entry><entry thead="no"><para>P </para></entry></row>
+<row>
+<entry thead="no"><para>Movement </para></entry><entry thead="no"><para>M </para></entry></row>
+</table>
+</para><para>answers: <programlisting><codeline><highlight class="normal">DS18B20:<sp/>//sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0|%TempVal1|...|\\</highlight></codeline>
+<codeline><highlight class="normal">DHT22:<sp/>//sensor/DHT/|%sensorMAC|/|%tempVal:%unit|%humVal:%unit|%errCode|\\</highlight></codeline>
+<codeline><highlight class="normal">Movement:<sp/>//sensor/M/|%sensorMAC|/|(0|1)|\\</highlight></codeline>
+<codeline><highlight class="normal">LightAnalog:<sp/>//sensor/Lav/|%sensorMAC|/|%d.%03d|\\</highlight></codeline>
+<codeline><highlight class="normal">BMP180:<sp/>//sensors/PT/|%sensorMAC|/|%pressureVal:%unit|%tempVal:%unit|%errCode|\\</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

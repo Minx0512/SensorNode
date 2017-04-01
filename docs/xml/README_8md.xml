@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>SensorNode</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>little<sp/>private<sp/>project<sp/>for<sp/>a<sp/>sensor<sp/>node<sp/>based<sp/>on<sp/>the<sp/>ATmega328P.</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>node<sp/>is<sp/>connected<sp/>to<sp/>the<sp/>serial<sp/>interface<sp/>of<sp/>a<sp/>Raspberry<sp/>Pi<sp/>on<sp/>which<sp/>an<sp/>openHab<sp/>server<sp/>is<sp/>running.</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>nRF24L01+<sp/>Transceiver<sp/>module<sp/>on<sp/>the<sp/>SPI-bus<sp/>of<sp/>the<sp/>ATmega328P<sp/>serves<sp/>for<sp/>communication<sp/>to<sp/>other<sp/>nodes.</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>node<sp/>has<sp/>2x<sp/>DS18B20<sp/>temperature<sp/>sensors,<sp/>1<sp/>motion<sp/>sensor<sp/>and<sp/>1<sp/>resistive<sp/>light<sp/>sensor<sp/>connected<sp/>to<sp/>it.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>sensor<sp/>nodes<sp/>Wireless<sp/>addresses<sp/>can<sp/>be<sp/>configured<sp/>via<sp/>a<sp/>python<sp/>script.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>Code<sp/>is<sp/>not<sp/>yet<sp/>ready<sp/>&lt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Communications<sp/>protocoll<sp/>between<sp/>the<sp/>raspberry<sp/>pi<sp/>and<sp/>the<sp/>main<sp/>sensor<sp/>node:</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">example<sp/>request:</highlight></codeline>
+<codeline><highlight class="normal">0x31|A0:A0:A0:A0:A0|DHT22<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>|HEX(command<sp/>id<sp/>(CmdID)<sp/>+<sp/>command<sp/>property<sp/>(cmdP)<sp/>)|<sp/>property<sp/>id<sp/>(PID/PVal)<sp/>|<sp/>property<sp/>string<sp/>(pString)|</highlight></codeline>
+<codeline><highlight class="normal">|--------<sp/>|--------------------------------------|------------------------|--------------------------|</highlight></codeline>
+<codeline><highlight class="normal">|nRF24L01<sp/>Channel<sp/>|<sp/>0x10<sp/>+<sp/>0x01<sp/><sp/>|<sp/>ChannelID:<sp/>(0-125)<sp/><sp/>10<sp/>|<sp/>&quot;&quot;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|nRF24L01<sp/>PowerLvl|<sp/>0x10<sp/>+<sp/><sp/>0x02<sp/>|<sp/>PwrLvlVal:<sp/>(1-4)<sp/><sp/>4<sp/>|<sp/>&quot;&quot;|</highlight></codeline>
+<codeline><highlight class="normal">|nRF24L01<sp/>DataRate|<sp/>0x10<sp/>+<sp/><sp/>0x03<sp/>|<sp/>DataRteVal:<sp/>(1-3)<sp/>2<sp/>|<sp/>&quot;&quot;|</highlight></codeline>
+<codeline><highlight class="normal">|nRF24L01<sp/>CRCLevel|<sp/>0x10<sp/>+<sp/><sp/>0x04<sp/>|<sp/>CRCLvlVal:<sp/>(1-3)<sp/><sp/>3<sp/>|<sp/>&quot;&quot;|</highlight></codeline>
+<codeline><highlight class="normal">|nRF24L01<sp/>PayloadSize|<sp/>0x10<sp/>+<sp/>0x05<sp/>|<sp/>payloadSzVal:<sp/>16<sp/>|<sp/>&quot;&quot;|</highlight></codeline>
+<codeline><highlight class="normal">|nRF24L01<sp/>ResetModule|<sp/>0x10<sp/>+<sp/>0x06<sp/>|<sp/>0<sp/>|<sp/>&quot;&quot;|</highlight></codeline>
+<codeline><highlight class="normal">|nRF24L01<sp/>SystemInfo|<sp/>0x10<sp/>+<sp/>0x07<sp/>|<sp/>0<sp/>|<sp/>&quot;&quot;|</highlight></codeline>
+<codeline><highlight class="normal">|GetSensorInfos<sp/>availableSensors<sp/>on<sp/>current<sp/>node|<sp/>0x20<sp/>+<sp/>0x00<sp/>|<sp/>%MAC<sp/>|<sp/>Sensors|</highlight></codeline>
+<codeline><highlight class="normal">|GetSensorInfos<sp/>availableSensors<sp/>on<sp/>connected<sp/>node<sp/>n|<sp/>0x20<sp/>+<sp/>0x01<sp/>|<sp/>%MAC<sp/>|<sp/>Sensors|</highlight></codeline>
+<codeline><highlight class="normal">|GetSensorData<sp/>Movement|<sp/>0x30<sp/>+<sp/>0x01<sp/>|<sp/>%MAC<sp/>|<sp/>Mv|</highlight></codeline>
+<codeline><highlight class="normal">|GetSensorData<sp/>DHT22<sp/>|<sp/>0x30<sp/>+<sp/>0x02<sp/>|<sp/>%MAC<sp/>|<sp/>DHT22|</highlight></codeline>
+<codeline><highlight class="normal">|GetSensorData<sp/>LightSense|<sp/>0x30<sp/>+<sp/>0x03<sp/>|<sp/>%MAC<sp/>|<sp/>La|</highlight></codeline>
+<codeline><highlight class="normal">|GetSensorData<sp/>LightSense|<sp/>0x30<sp/>+<sp/>0x04<sp/>|<sp/>%MAC<sp/>|<sp/>Ld|</highlight></codeline>
+<codeline><highlight class="normal">|GetSensorData<sp/>TempDS18B20|<sp/>0x30<sp/>+<sp/>0x05<sp/>|<sp/>%MAC<sp/>|<sp/>TDS|</highlight></codeline>
+<codeline><highlight class="normal">|GetSensorData<sp/>Pressure|<sp/>0x30<sp/>+<sp/>0x06<sp/>|<sp/>%MAC<sp/>|<sp/>PT|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>|<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|------------|<sp/>------<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|Light<sp/>on<sp/>analog<sp/>Port<sp/>|<sp/>Lap<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|Light<sp/>digital<sp/>(I2C)<sp/>in<sp/>Lux<sp/>|<sp/>Ldx<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|TempDS<sp/>(1-Wire)|<sp/>TDS|</highlight></codeline>
+<codeline><highlight class="normal">|TempHumDHT22<sp/>(1-Wire)|<sp/>DHT<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|Pressure<sp/>(I2C)|<sp/>PT|</highlight></codeline>
+<codeline><highlight class="normal">|Movement<sp/>|<sp/>M|</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">answers:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">DS18B20:<sp/>//sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0|%TempVal1|...|\\</highlight></codeline>
+<codeline><highlight class="normal">DHT22:<sp/>//sensor/DHT/|%sensorMAC|/|%tempVal:%unit|%humVal:%unit|%errCode|\\</highlight></codeline>
+<codeline><highlight class="normal">Movement:<sp/>//sensor/M/|%sensorMAC|/|(0|1)|\\</highlight></codeline>
+<codeline><highlight class="normal">LightAnalog:<sp/>//sensor/Lav/|%sensorMAC|/|%d.%03d|\\</highlight></codeline>
+<codeline><highlight class="normal">BMP180:<sp/>//sensors/PT/|%sensorMAC|/|%pressureVal:%unit|%tempVal:%unit|%errCode|\\</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="src/README.md"/>
+  </compounddef>
+</doxygen>

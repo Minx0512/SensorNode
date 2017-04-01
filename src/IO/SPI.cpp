@@ -1,8 +1,19 @@
-/*
- * SPI.cpp
+/**
+****************************************************************************
+* Project: SensorNode
+*
+* SPI.cpp
+*
+* Created on: Nov 12, 2016
+*
+* Author: Matthias Minx
+*
+* Revision: 1
+*
+*
+****************************************************************************/
+/** \file SPI.cpp
  *
- *  Created on: Nov 12, 2016
- *      Author: matthias
  */
 
 #include "SPI.h"
@@ -10,9 +21,11 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-
+/*!
+ *
+ */
 SPI::SPI() {
-	// TODO Auto-generated constructor stub
+
 
 	//spi ports
 
@@ -45,9 +58,6 @@ SPI::SPI(volatile uint8_t &DDR,uint8_t MISO, uint8_t MOSI,uint8_t SCK,uint8_t SS
 }
 
 
-/*
- * spi initialize
- */
 void SPI::Init() {
   //  SPI_DDR &= ~((1<<SPI_MOSI) | (1<<SPI_MISO) | (1<<SPI_SS) | (1<<SPI_SCK)); //input
     *SPI_DDR |= ((1<<SPI_MOSI) | (1<<SPI_SS) | (1<<SPI_SCK)); //output
@@ -66,9 +76,6 @@ void SPI::Init() {
     sei();
 }
 
-/*
- * spi write one byte and read it back
- */
 uint8_t SPI::WriteReadbyte(uint8_t data) {
     SPDR = data;
     while(!(SPSR & (1<<SPIF)));

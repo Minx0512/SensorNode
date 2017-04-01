@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_e0f368aaf9303b1b45be4972626ddfeb" kind="dir">
+    <compoundname>Python/Protocol</compoundname>
+    <innerfile refid="Protocol_2NodeProtocol_8py">NodeProtocol.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/Protocol/"/>
+  </compounddef>
+</doxygen>

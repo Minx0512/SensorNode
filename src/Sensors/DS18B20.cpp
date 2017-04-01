@@ -1,8 +1,19 @@
-/*
- * DS18B20.cpp
+/**
+****************************************************************************
+* Project: SensorNode
+*
+* DS18B20.cpp
+*
+* Created on: Nov 12, 2016
+*
+* Author: Matthias Minx
+*
+* Revision: 0.2
+*
+*
+****************************************************************************/
+/** \file DS18B20.cpp
  *
- *  Created on: Nov 12, 2016
- *      Author: matthias
  */
 
 #include "DS18B20.h"
@@ -166,7 +177,7 @@ uint8_t DS18B20::Reset(){
 	 i = 1;
 
 
-	return i;
+	return (i);
 
 }
 uint8_t DS18B20::BitIO(uint8_t bit){
@@ -185,7 +196,7 @@ uint8_t DS18B20::BitIO(uint8_t bit){
 		 delay_us(us(60));
 		 PIN_INPUT_MODE();
 		sei();
-	return bit;
+	return (bit)
 }
 uint8_t DS18B20::WriteByte(uint8_t byte){
 	uint8_t i=8, j;
@@ -199,7 +210,7 @@ uint8_t DS18B20::WriteByte(uint8_t byte){
 
 	 	 }while(--i);
 
-	return byte;
+	return (byte);
 }
 uint8_t DS18B20::ReadByte(void){
 	 return WriteByte( 0xFF );
@@ -260,12 +271,12 @@ void DS18B20::Command( unsigned char command, unsigned char *id ){
 void DS18B20::GetMACString(char* MACStringOut){
 	sprintf(MACStringOut,"%s",MACString);
 }
-
+/*
 void DS18B20::GetTemperatureString(char* TemperatureString){
 
 
 }
-
+*/
 void DS18B20::GetSensorStringXML(char* string){
 
 	//char str[255];

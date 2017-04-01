@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceBluetoothConn" kind="namespace" language="Python">
+    <compoundname>BluetoothConn</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="BluetoothConn_8py_1ab0d988d648786cc8189040dca527bc06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def BluetoothConn.BlueConnect</definition>
+        <argsstring>(MAC, port, timeOut)</argsstring>
+        <name>BlueConnect</name>
+        <param>
+          <type>MAC</type>
+          <defname>MAC</defname>
+        </param>
+        <param>
+          <type>port</type>
+          <defname>port</defname>
+        </param>
+        <param>
+          <type>timeOut</type>
+          <defname>timeOut</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/BluetoothConn.py" line="4" column="1" bodyfile="Python/BluetoothConn.py" bodystart="4" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="BluetoothConn_8py_1a26df1ae079844968383f943f79611564" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def BluetoothConn.CloseConn</definition>
+        <argsstring>(s)</argsstring>
+        <name>CloseConn</name>
+        <param>
+          <type>s</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/BluetoothConn.py" line="11" column="1" bodyfile="Python/BluetoothConn.py" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="BluetoothConn_8py_1a83232f3a490b3985e04a24d1b8fc981a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def BluetoothConn.ReceiveData</definition>
+        <argsstring>(s, endStr)</argsstring>
+        <name>ReceiveData</name>
+        <param>
+          <type>s</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>endStr</type>
+          <defname>endStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/BluetoothConn.py" line="15" column="1" bodyfile="Python/BluetoothConn.py" bodystart="15" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="BluetoothConn_8py_1a529bdfae6ea4b07c397c05d9bb64261c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def BluetoothConn.SendData</definition>
+        <argsstring>(s, string)</argsstring>
+        <name>SendData</name>
+        <param>
+          <type>s</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>string</type>
+          <defname>string</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/BluetoothConn.py" line="31" column="1" bodyfile="Python/BluetoothConn.py" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="BluetoothConn_8py_1ad64f432c5491c489f7ae16b5e5d98149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def BluetoothConn.ReadSensorData</definition>
+        <argsstring>(bd_addr, send_str)</argsstring>
+        <name>ReadSensorData</name>
+        <param>
+          <type>bd_addr</type>
+          <defname>bd_addr</defname>
+        </param>
+        <param>
+          <type>send_str</type>
+          <defname>send_str</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/BluetoothConn.py" line="39" column="1" bodyfile="Python/BluetoothConn.py" bodystart="39" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/BluetoothConn.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

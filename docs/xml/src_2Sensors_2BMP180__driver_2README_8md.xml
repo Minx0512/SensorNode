@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="src_2Sensors_2BMP180__driver_2README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline></codeline>
+<codeline><highlight class="normal">CONTENTS<sp/>OF<sp/>THIS<sp/>FILE</highlight></codeline>
+<codeline><highlight class="normal">=======================</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>Introduction</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>Version</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>Integration<sp/>details</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>Driver<sp/>files<sp/>information</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>Supported<sp/>sensor<sp/>interface</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>Copyright</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">INTRODUCTION</highlight></codeline>
+<codeline><highlight class="normal">===============</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>This<sp/>package<sp/>contains<sp/>the<sp/>Bosch<sp/>Sensortec<sp/>MEMS<sp/>pressure<sp/>sensor<sp/>driver<sp/>(sensor<sp/>API)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>The<sp/>sensor<sp/>driver<sp/>package<sp/>includes<sp/>bmp180.h,<sp/>bmp180.c<sp/>and<sp/>bmp180_support.c<sp/>files</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">VERSION</highlight></codeline>
+<codeline><highlight class="normal">=========</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Version<sp/>of<sp/>bmp180<sp/>sensor<sp/>driver<sp/>is:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>bmp180.c<sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>V2.0.3</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>bmp180.h<sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>V2.2.2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>bmp180_support.c<sp/><sp/>-<sp/>V1.0.4</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">INTEGRATION<sp/>DETAILS</highlight></codeline>
+<codeline><highlight class="normal">=====================</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Integrate<sp/>bmp180.h<sp/>and<sp/>bmp180.c<sp/>file<sp/>in<sp/>to<sp/>your<sp/>project.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>The<sp/>bmp180_support.c<sp/>file<sp/>contains<sp/>only<sp/>examples<sp/>for<sp/>API<sp/>use<sp/>cases,<sp/>so<sp/>it<sp/>is<sp/>not<sp/>required<sp/>to<sp/>integrate<sp/>into<sp/>project.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">DRIVER<sp/>FILES<sp/>INFORMATION</highlight></codeline>
+<codeline><highlight class="normal">===========================</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bmp180.h</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-----------</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>header<sp/>file<sp/>has<sp/>the<sp/>register<sp/>address<sp/>definition,<sp/>constant<sp/>definitions,<sp/>data<sp/>type<sp/>definition<sp/>and<sp/>supported<sp/>sensor<sp/>driver<sp/>calls<sp/>declarations.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>bmp180.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>------------</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>file<sp/>contains<sp/>the<sp/>implementation<sp/>for<sp/>the<sp/>sensor<sp/>driver<sp/>APIs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>bmp180_support.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>----------------------</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>file<sp/>shall<sp/>be<sp/>used<sp/>as<sp/>an<sp/>user<sp/>guidance,<sp/>here<sp/>you<sp/>can<sp/>find<sp/>samples<sp/>of</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Initialize<sp/>the<sp/>sensor<sp/>with<sp/>I2C<sp/>communication</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Add<sp/>your<sp/>code<sp/>to<sp/>the<sp/>I2C<sp/>bus<sp/>read<sp/>and<sp/>bus<sp/>write<sp/>functions.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Return<sp/>value<sp/>can<sp/>be<sp/>chosen<sp/>by<sp/>yourself</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>API<sp/>just<sp/>passes<sp/>that<sp/>value<sp/>to<sp/>your<sp/>application<sp/>code</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Add<sp/>your<sp/>code<sp/>to<sp/>the<sp/>delay<sp/>function</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Reading<sp/>the<sp/>sensor<sp/>read<sp/>out<sp/>data</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">SUPPORTED<sp/>SENSOR<sp/>INTERFACE</highlight></codeline>
+<codeline><highlight class="normal">====================================</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>This<sp/>pressure<sp/>sensor<sp/>driver<sp/>supports<sp/>I2C<sp/>interface</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">COPYRIGHT</highlight></codeline>
+<codeline><highlight class="normal">===========</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Copyright<sp/>(C)<sp/>2008<sp/>-<sp/>2015<sp/>Bosch<sp/>Sensortec<sp/>GmbH</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="src/Sensors/BMP180_driver/README.md"/>
+  </compounddef>
+</doxygen>

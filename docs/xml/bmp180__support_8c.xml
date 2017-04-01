@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="bmp180__support_8c" kind="file" language="C++">
+    <compoundname>bmp180_support.c</compoundname>
+    <includes refid="bmp180_8h" local="yes">bmp180.h</includes>
+    <incdepgraph>
+      <node id="122">
+        <label>bmp180.h</label>
+        <link refid="bmp180_8h"/>
+      </node>
+      <node id="121">
+        <label>src/Sensors/BMP180_driver/bmp180_support.c</label>
+        <link refid="bmp180_support.c"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="bmp180__support_8c_1a43913da3ecb9f62ae8d8969aa6606beb" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structbmp180__t" kindref="compound">bmp180_t</ref></type>
+        <definition>struct bmp180_t bmp180</definition>
+        <argsstring></argsstring>
+        <name>bmp180</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/BMP180_driver/bmp180_support.c" line="93" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180_support.c" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bmp180__support_8c_1a7b3bfeb7d04d7376f74ccd4d932979a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BMP180_delay_msek</definition>
+        <argsstring>(u32 msek)</argsstring>
+        <name>BMP180_delay_msek</name>
+        <param>
+          <type><ref refid="bmp180_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref></type>
+          <declname>msek</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/BMP180_driver/bmp180_support.c" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="bmp180__support_8c_1a5d20f4be8d19af66765ea3f2c5697d98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bmp180_8h_1a0ce6887c26c1c49ad3be5710dd42bfd6" kindref="member">s32</ref></type>
+        <definition>s32 bmp180_data_readout_template</definition>
+        <argsstring>(void)</argsstring>
+        <name>bmp180_data_readout_template</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/BMP180_driver/bmp180_support.c" line="93" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180_support.c" bodystart="110" bodyend="187"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">****************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/>Copyright<sp/>(C)<sp/>2014<sp/>-<sp/>2015<sp/>Bosch<sp/>Sensortec<sp/>GmbH</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>bmp180_support.c</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>Date:<sp/>2015/07/16</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>Revision:<sp/>1.0.5<sp/>$</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>Usage:<sp/>Sensor<sp/>Driver<sp/>support<sp/>file<sp/>for<sp/>BMP180</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">****************************************************************************</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/>License:</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*<sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/><sp/><sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/><sp/><sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>copyright<sp/>holder<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/><sp/><sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>COPYRIGHT<sp/>HOLDER</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">*<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">*<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">*<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">*<sp/>The<sp/>information<sp/>provided<sp/>is<sp/>believed<sp/>to<sp/>be<sp/>accurate<sp/>and<sp/>reliable.</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*<sp/>The<sp/>copyright<sp/>holder<sp/>assumes<sp/>no<sp/>responsibility</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*<sp/>for<sp/>the<sp/>consequences<sp/>of<sp/>use</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">*<sp/>of<sp/>such<sp/>information<sp/>nor<sp/>for<sp/>any<sp/>infringement<sp/>of<sp/>patents<sp/>or</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*<sp/>other<sp/>rights<sp/>of<sp/>third<sp/>parties<sp/>which<sp/>may<sp/>result<sp/>from<sp/>its<sp/>use.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*<sp/>No<sp/>license<sp/>is<sp/>granted<sp/>by<sp/>implication<sp/>or<sp/>otherwise<sp/>under<sp/>any<sp/>patent<sp/>or</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">*<sp/>patent<sp/>rights<sp/>of<sp/>the<sp/>copyright<sp/>holder.</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*---------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Includes*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*---------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bmp180_8h" kindref="compound">bmp180.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/>*<sp/>The<sp/>following<sp/>functions<sp/>are<sp/>used<sp/>for<sp/>reading<sp/>and<sp/>writing<sp/>of</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/>*<sp/>sensor<sp/>data<sp/>using<sp/>I2C<sp/>or<sp/>SPI<sp/>communication</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BMP180_API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>\Brief:<sp/>The<sp/>function<sp/>is<sp/>used<sp/>as<sp/>I2C<sp/>bus<sp/>read</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*<sp/><sp/>\Return<sp/>:<sp/>Status<sp/>of<sp/>the<sp/>I2C<sp/>read</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>dev_addr<sp/>:<sp/>The<sp/>device<sp/>address<sp/>of<sp/>the<sp/>sensor</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>reg_addr<sp/>:<sp/>Address<sp/>of<sp/>the<sp/>first<sp/>register,<sp/>will<sp/>data<sp/>is<sp/>going<sp/>to<sp/>be<sp/>read</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>reg_data<sp/>:<sp/>This<sp/>data<sp/>read<sp/>from<sp/>the<sp/>sensor,<sp/>which<sp/>is<sp/>hold<sp/>in<sp/>an<sp/>array</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>cnt<sp/>:<sp/>The<sp/>no<sp/>of<sp/>byte<sp/>of<sp/>data<sp/>to<sp/>be<sp/>read</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="bmp180_8h_1a151f780fb455885061d3b77ec1c90c03" kindref="member">s8</ref><sp/>BMP180_I2C_bus_read(<ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>dev_addr,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>reg_addr,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>*reg_data,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>cnt);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>\Brief:<sp/>The<sp/>function<sp/>is<sp/>used<sp/>as<sp/>SPI<sp/>bus<sp/>write</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/>*<sp/><sp/>\Return<sp/>:<sp/>Status<sp/>of<sp/>the<sp/>SPI<sp/>write</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>dev_addr<sp/>:<sp/>The<sp/>device<sp/>address<sp/>of<sp/>the<sp/>sensor</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>reg_addr<sp/>:<sp/>Address<sp/>of<sp/>the<sp/>first<sp/>register,<sp/>will<sp/>data<sp/>is<sp/>going<sp/>to<sp/>be<sp/>written</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>reg_data<sp/>:<sp/>It<sp/>is<sp/>a<sp/>value<sp/>hold<sp/>in<sp/>the<sp/>array,</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>will<sp/>be<sp/>used<sp/>for<sp/>write<sp/>the<sp/>value<sp/>into<sp/>the<sp/>register</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>cnt<sp/>:<sp/>The<sp/>no<sp/>of<sp/>byte<sp/>of<sp/>data<sp/>to<sp/>be<sp/>write</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="bmp180_8h_1a151f780fb455885061d3b77ec1c90c03" kindref="member">s8</ref><sp/>BMP180_I2C_bus_write(<ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>dev_addr,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>reg_addr,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>*reg_data,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>cnt);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/>*<sp/>\Brief:<sp/>I2C<sp/>init<sp/>routine</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><ref refid="bmp180_8h_1a151f780fb455885061d3b77ec1c90c03" kindref="member">s8</ref><sp/>I2C_routine(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/********************End<sp/>of<sp/>I2C<sp/>function<sp/>declarations***********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Brief<sp/>:<sp/>The<sp/>delay<sp/>routine</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>:<sp/>delay<sp/>in<sp/>ms</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BMP180_delay_msek(<ref refid="bmp180_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>msek);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>is<sp/>an<sp/>example<sp/>for<sp/>reading<sp/>sensor<sp/>data</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/>*<sp/><sp/>\param:<sp/>None</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/>*<sp/><sp/>\return:<sp/>communication<sp/>result</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><ref refid="bmp180_8h_1a0ce6887c26c1c49ad3be5710dd42bfd6" kindref="member">s32</ref><sp/>bmp180_data_readout_template(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>struct<sp/>bmp180_t<sp/>parameters<sp/>can<sp/>be<sp/>accessed<sp/>by<sp/>using<sp/>bmp180</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/>*<sp/><sp/>bmp180_t<sp/>having<sp/>the<sp/>following<sp/>parameters</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/>*<sp/><sp/>Bus<sp/>write<sp/>function<sp/>pointer:<sp/>BMP180_WR_FUNC_PTR</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/>*<sp/><sp/>Bus<sp/>read<sp/>function<sp/>pointer:<sp/>BMP180_RD_FUNC_PTR</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/>*<sp/><sp/>Delay<sp/>function<sp/>pointer:<sp/>delay_msec</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*<sp/><sp/>I2C<sp/>address:<sp/>dev_addr</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>*<sp/><sp/>Chip<sp/>id<sp/>of<sp/>the<sp/>sensor:<sp/>chip_id</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/>*<sp/><sp/>Calibration<sp/>parameters</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/>---------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbmp180__t" kindref="compound">bmp180_t</ref><sp/>bmp180;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/*----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>is<sp/>an<sp/>example<sp/>for<sp/>reading<sp/>sensor<sp/>data</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/>*<sp/><sp/>\param:<sp/>None</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/>*<sp/><sp/>\return:<sp/>communication<sp/>result</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><ref refid="bmp180_8h_1a0ce6887c26c1c49ad3be5710dd42bfd6" kindref="member">s32</ref><sp/>bmp180_data_readout_template(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>result<sp/>of<sp/>communication<sp/>results*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bmp180_8h_1a0ce6887c26c1c49ad3be5710dd42bfd6" kindref="member">s32</ref><sp/>com_rslt<sp/>=<sp/>E_BMP_COMM_RES;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bmp180_8h_1aa0b167025ed1eead1300bc4dbdfb230e" kindref="member">u16</ref><sp/>v_uncomp_temp_u16<sp/>=<sp/>BMP180_INIT_VALUE;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bmp180_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>v_uncomp_press_u32<sp/>=<sp/>BMP180_INIT_VALUE;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">/***********************<sp/>START<sp/>INITIALIZATION<sp/>************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/**************Call<sp/>the<sp/>I2C<sp/>init<sp/>routine<sp/>***************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>BMP180_API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>I2C_routine();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/*--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>function<sp/>used<sp/>to<sp/>assign<sp/>the<sp/>value/reference<sp/>of</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/>*<sp/><sp/>the<sp/>following<sp/>parameters</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*<sp/><sp/>I2C<sp/>address</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*<sp/><sp/>Bus<sp/>Write</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/><sp/>Bus<sp/>read</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*<sp/><sp/>Chip<sp/>id</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>*<sp/><sp/>Calibration<sp/>values</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>com_rslt<sp/>=<sp/><ref refid="bmp180_8h_1aa5e50a84c838cf3c1c0fb92d6ef06782" kindref="member">bmp180_init</ref>(&amp;bmp180);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">/*************************<sp/>END<sp/>INITIALIZATION<sp/>*************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">/*------------------------------------------------------------------*</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">*************************<sp/>START<sp/>CALIPRATION<sp/>********</highlight></codeline>
+<codeline lineno="135"><highlight class="comment">*---------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>This<sp/>function<sp/>used<sp/>to<sp/>read<sp/>the<sp/>calibration<sp/>values<sp/>of<sp/>following</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>these<sp/>values<sp/>are<sp/>used<sp/>to<sp/>calculate<sp/>the<sp/>true<sp/>pressure<sp/>and<sp/>temperature</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>Parameter<sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSB<sp/><sp/><sp/><sp/><sp/>LSB<sp/><sp/><sp/><sp/><sp/>bit</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>AC1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xAA<sp/><sp/><sp/><sp/>0xAB<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>AC2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xAC<sp/><sp/><sp/><sp/>0xAD<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>AC3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xAE<sp/><sp/><sp/><sp/>0xAF<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>AC4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xB0<sp/><sp/><sp/><sp/>0xB1<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>AC5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xB2<sp/><sp/><sp/><sp/>0xB3<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>AC6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xB4<sp/><sp/><sp/><sp/>0xB5<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>B1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xB6<sp/><sp/><sp/><sp/>0xB7<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>B2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xB8<sp/><sp/><sp/><sp/>0xB9<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>MB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xBA<sp/><sp/><sp/><sp/>0xBB<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>MC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xBC<sp/><sp/><sp/><sp/>0xBD<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>MD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xBE<sp/><sp/><sp/><sp/>0xBF<sp/><sp/><sp/><sp/>0<sp/>to<sp/>7*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>com_rslt<sp/>+=<sp/><ref refid="bmp180_8h_1abeccff920cfd8dfabfdb09c778fddbb0" kindref="member">bmp180_get_calib_param</ref>();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">/*------------------------------------------------------------------*</highlight></codeline>
+<codeline lineno="152"><highlight class="comment">*************************<sp/>END<sp/>CALIPRATION<sp/>********</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">*---------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">/*************************<sp/>START<sp/>READ<sp/>UNCOMPENSATED<sp/>TEMPERATURE<sp/>AND<sp/>PRESSURE********/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>This<sp/>API<sp/>is<sp/>used<sp/>to<sp/>read<sp/>the</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>uncompensated<sp/>temperature(ut)<sp/>value*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>v_uncomp_temp_u16<sp/>=<sp/><ref refid="bmp180_8h_1a076fbf9d8fc6c6b8c6c508af3700a286" kindref="member">bmp180_get_uncomp_temperature</ref>();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>This<sp/>API<sp/>is<sp/>used<sp/>to<sp/>read<sp/>the</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>uncompensated<sp/>pressure(ut)<sp/>value*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>v_uncomp_press_u32<sp/>=<sp/><ref refid="bmp180_8h_1a4febf9888426169a9c63785cbab0ec85" kindref="member">bmp180_get_uncomp_pressure</ref>();</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="comment">/*************************<sp/>END<sp/>READ<sp/>UNCOMPENSATED<sp/>TEMPERATURE<sp/>AND<sp/>PRESSURE********/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">/*************************<sp/>START<sp/>READ<sp/>TRUE<sp/>TEMPERATURE<sp/>AND<sp/>PRESSURE********/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>API<sp/>is<sp/>used<sp/>to<sp/>read<sp/>the</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/>*<sp/><sp/>true<sp/>temperature(t)<sp/>value<sp/>input</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/>*<sp/><sp/>parameter<sp/>as<sp/>uncompensated<sp/>temperature(ut)</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>com_rslt<sp/>+=<sp/><ref refid="bmp180_8h_1a644b92a4e5f0605920c8095be351e917" kindref="member">bmp180_get_temperature</ref>(v_uncomp_temp_u16);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>API<sp/>is<sp/>used<sp/>to<sp/>read<sp/>the</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/>*<sp/><sp/>true<sp/>pressure(p)<sp/>value</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/>*<sp/><sp/>input<sp/>parameter<sp/>as<sp/>uncompensated<sp/>pressure(up)</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>com_rslt<sp/>+=<sp/><ref refid="bmp180_8h_1ab43ebb138296584870f3eeb45e0daa13" kindref="member">bmp180_get_pressure</ref>(v_uncomp_press_u32);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">/*************************<sp/>END<sp/>READ<sp/>TRUE<sp/>TEMPERATURE<sp/>AND<sp/>PRESSURE********/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>com_rslt;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BMP180_API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">/*--------------------------------------------------------------------------*</highlight></codeline>
+<codeline lineno="191"><highlight class="comment">*<sp/><sp/><sp/>The<sp/>following<sp/>function<sp/>is<sp/>used<sp/>to<sp/>map<sp/>the<sp/>I2C<sp/>bus<sp/>read,<sp/>write,<sp/>delay<sp/>and</highlight></codeline>
+<codeline lineno="192"><highlight class="comment">*<sp/><sp/><sp/>device<sp/>address<sp/>with<sp/>global<sp/>structure<sp/>bmp180_t</highlight></codeline>
+<codeline lineno="193"><highlight class="comment">*-------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><ref refid="bmp180_8h_1a151f780fb455885061d3b77ec1c90c03" kindref="member">s8</ref><sp/>I2C_routine(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*--------------------------------------------------------------------------*</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/>*<sp/><sp/>By<sp/>using<sp/>bmp180<sp/>the<sp/>following<sp/>structure<sp/>parameter<sp/>can<sp/>be<sp/>accessed</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/>*<sp/><sp/>Bus<sp/>write<sp/>function<sp/>pointer:<sp/>BMP180_WR_FUNC_PTR</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/>*<sp/><sp/>Bus<sp/>read<sp/>function<sp/>pointer:<sp/>BMP180_RD_FUNC_PTR</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/>*<sp/><sp/>Delay<sp/>function<sp/>pointer:<sp/>delay_msec</highlight></codeline>
+<codeline lineno="200"><highlight class="comment"><sp/>*<sp/><sp/>I2C<sp/>address:<sp/>dev_addr</highlight></codeline>
+<codeline lineno="201"><highlight class="comment"><sp/>*--------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>bmp180.bus_write<sp/>=<sp/>BMP180_I2C_bus_write;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>bmp180.bus_read<sp/>=<sp/>BMP180_I2C_bus_read;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>bmp180.<ref refid="structbmp180__t_1a1fac092bc595a86dc1dae9604f557d5e" kindref="member">dev_addr</ref><sp/>=<sp/>BMP180_I2C_ADDR;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>bmp180.<ref refid="structbmp180__t_1ad6875c8bcf81da576a90decbdf0f2a93" kindref="member">delay_msec</ref><sp/>=<sp/>BMP180_delay_msek;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>BMP180_INIT_VALUE;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="comment">/**************<sp/>I2C<sp/>buffer<sp/>length<sp/>******/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_BUFFER_LEN<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C0<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------*</highlight></codeline>
+<codeline lineno="215"><highlight class="comment">*<sp/><sp/><sp/>This<sp/>is<sp/>a<sp/>sample<sp/>code<sp/>for<sp/>read<sp/>and<sp/>write<sp/>the<sp/>data<sp/>by<sp/>using<sp/>I2C</highlight></codeline>
+<codeline lineno="216"><highlight class="comment">*<sp/><sp/><sp/>Configure<sp/>the<sp/>below<sp/>code<sp/>to<sp/>your<sp/>I2C<sp/>driver</highlight></codeline>
+<codeline lineno="217"><highlight class="comment">*<sp/><sp/><sp/>The<sp/>device<sp/>address<sp/>is<sp/>defined<sp/>in<sp/>the<sp/>bmp180.c<sp/>file</highlight></codeline>
+<codeline lineno="218"><highlight class="comment">*-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>\Brief:<sp/>The<sp/>function<sp/>is<sp/>used<sp/>as<sp/>I2C<sp/>bus<sp/>write</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/>*<sp/><sp/>\Return<sp/>:<sp/>Status<sp/>of<sp/>the<sp/>I2C<sp/>write</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>dev_addr<sp/>:<sp/>The<sp/>device<sp/>address<sp/>of<sp/>the<sp/>sensor</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>reg_addr<sp/>:<sp/>Address<sp/>of<sp/>the<sp/>first<sp/>register,<sp/>will<sp/>data<sp/>is<sp/>going<sp/>to<sp/>be<sp/>written</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>reg_data<sp/>:<sp/>It<sp/>is<sp/>a<sp/>value<sp/>hold<sp/>in<sp/>the<sp/>array,</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>will<sp/>be<sp/>used<sp/>for<sp/>write<sp/>the<sp/>value<sp/>into<sp/>the<sp/>register</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>cnt<sp/>:<sp/>The<sp/>no<sp/>of<sp/>byte<sp/>of<sp/>data<sp/>to<sp/>be<sp/>write</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><ref refid="bmp180_8h_1a151f780fb455885061d3b77ec1c90c03" kindref="member">s8</ref><sp/>BMP180_I2C_bus_write(<ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/><ref refid="structbmp180__t_1a1fac092bc595a86dc1dae9604f557d5e" kindref="member">dev_addr</ref>,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>reg_addr,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>*reg_data,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>cnt)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bmp180_8h_1a0ce6887c26c1c49ad3be5710dd42bfd6" kindref="member">s32</ref><sp/>iError<sp/>=<sp/>BMP180_INIT_VALUE;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>array[I2C_BUFFER_LEN];</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>stringpos<sp/>=<sp/>BMP180_INIT_VALUE;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>array[BMP180_INIT_VALUE]<sp/>=<sp/>reg_addr;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(stringpos<sp/>=<sp/>BMP180_INIT_VALUE;<sp/>stringpos<sp/>&lt;<sp/>cnt;<sp/>stringpos++)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array[stringpos<sp/>+<sp/>C_BMP180_ONE_U8X]<sp/>=<sp/>*(reg_data<sp/>+<sp/>stringpos);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="237"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Please<sp/>take<sp/>the<sp/>below<sp/>function<sp/>as<sp/>your<sp/>reference<sp/>for</highlight></codeline>
+<codeline lineno="238"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>write<sp/>the<sp/>data<sp/>using<sp/>I2C<sp/>communication</highlight></codeline>
+<codeline lineno="239"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>&quot;IERROR<sp/>=<sp/>I2C_WRITE_STRING(DEV_ADDR,<sp/>ARRAY,<sp/>CNT+C_BMP180_ONE_U8X)&quot;</highlight></codeline>
+<codeline lineno="240"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>add<sp/>your<sp/>I2C<sp/>write<sp/>function<sp/>here</highlight></codeline>
+<codeline lineno="241"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>iError<sp/>is<sp/>an<sp/>return<sp/>value<sp/>of<sp/>I2C<sp/>read<sp/>function</highlight></codeline>
+<codeline lineno="242"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Please<sp/>select<sp/>your<sp/>valid<sp/>return<sp/>value</highlight></codeline>
+<codeline lineno="243"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>In<sp/>the<sp/>driver<sp/>SUCCESS<sp/>defined<sp/>as<sp/>BMP180_INIT_VALUE</highlight></codeline>
+<codeline lineno="244"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>and<sp/>FAILURE<sp/>defined<sp/>as<sp/>-C_BMP180_ONE_U8X</highlight></codeline>
+<codeline lineno="245"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Note<sp/>:</highlight></codeline>
+<codeline lineno="246"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>This<sp/>is<sp/>a<sp/>full<sp/>duplex<sp/>operation,</highlight></codeline>
+<codeline lineno="247"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>The<sp/>first<sp/>read<sp/>data<sp/>is<sp/>discarded,<sp/>for<sp/>that<sp/>extra<sp/>write<sp/>operation</highlight></codeline>
+<codeline lineno="248"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>have<sp/>to<sp/>be<sp/>initiated.<sp/>For<sp/>that<sp/>cnt+C_BMP180_ONE_U8X<sp/>operation<sp/>done<sp/>in<sp/>the<sp/>I2C<sp/>write<sp/>string<sp/>function</highlight></codeline>
+<codeline lineno="249"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>For<sp/>more<sp/>information<sp/>please<sp/>refer<sp/>data<sp/>sheet<sp/>SPI<sp/>communication:</highlight></codeline>
+<codeline lineno="250"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="bmp180_8h_1a151f780fb455885061d3b77ec1c90c03" kindref="member">s8</ref>)iError;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>\Brief:<sp/>The<sp/>function<sp/>is<sp/>used<sp/>as<sp/>I2C<sp/>bus<sp/>read</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/>*<sp/><sp/>\Return<sp/>:<sp/>Status<sp/>of<sp/>the<sp/>I2C<sp/>read</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>dev_addr<sp/>:<sp/>The<sp/>device<sp/>address<sp/>of<sp/>the<sp/>sensor</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>reg_addr<sp/>:<sp/>Address<sp/>of<sp/>the<sp/>first<sp/>register,<sp/>will<sp/>data<sp/>is<sp/>going<sp/>to<sp/>be<sp/>read</highlight></codeline>
+<codeline lineno="258"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>reg_data<sp/>:<sp/>This<sp/>data<sp/>read<sp/>from<sp/>the<sp/>sensor,<sp/>which<sp/>is<sp/>hold<sp/>in<sp/>an<sp/>array</highlight></codeline>
+<codeline lineno="259"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>cnt<sp/>:<sp/>The<sp/>no<sp/>of<sp/>byte<sp/>of<sp/>data<sp/>to<sp/>be<sp/>read</highlight></codeline>
+<codeline lineno="260"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><ref refid="bmp180_8h_1a151f780fb455885061d3b77ec1c90c03" kindref="member">s8</ref><sp/>BMP180_I2C_bus_read(<ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>dev_addr,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>reg_addr,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>*reg_data,<sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>cnt)</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bmp180_8h_1a0ce6887c26c1c49ad3be5710dd42bfd6" kindref="member">s32</ref><sp/>iError<sp/>=<sp/>BMP180_INIT_VALUE;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>array[I2C_BUFFER_LEN]<sp/>=<sp/>{BMP180_INIT_VALUE};</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bmp180_8h_1aed742c436da53c1080638ce6ef7d13de" kindref="member">u8</ref><sp/>stringpos<sp/>=<sp/>BMP180_INIT_VALUE;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>array[BMP180_INIT_VALUE]<sp/>=<sp/>reg_addr;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Please<sp/>take<sp/>the<sp/>below<sp/>function<sp/>as<sp/>your<sp/>reference</highlight></codeline>
+<codeline lineno="268"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>for<sp/>read<sp/>the<sp/>data<sp/>using<sp/>I2C<sp/>communication</highlight></codeline>
+<codeline lineno="269"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>add<sp/>your<sp/>I2C<sp/>rad<sp/>function<sp/>here.</highlight></codeline>
+<codeline lineno="270"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>&quot;IERROR<sp/>=<sp/>I2C_WRITE_READ_STRING(DEV_ADDR,<sp/>ARRAY,<sp/>ARRAY,<sp/>C_BMP180_ONE_U8X,<sp/>CNT)&quot;</highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>iError<sp/>is<sp/>an<sp/>return<sp/>value<sp/>of<sp/>SPI<sp/>write<sp/>function</highlight></codeline>
+<codeline lineno="272"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Please<sp/>select<sp/>your<sp/>valid<sp/>return<sp/>value</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>In<sp/>the<sp/>driver<sp/>SUCCESS<sp/>defined<sp/>as<sp/>BMP180_INIT_VALUE</highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>FAILURE<sp/>defined<sp/>as<sp/>-C_BMP180_ONE_U8X</highlight></codeline>
+<codeline lineno="275"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(stringpos<sp/>=<sp/>BMP180_INIT_VALUE;<sp/>stringpos<sp/>&lt;<sp/>cnt;<sp/>stringpos++)<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(reg_data<sp/>+<sp/>stringpos)<sp/>=<sp/>array[stringpos];</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="bmp180_8h_1a151f780fb455885061d3b77ec1c90c03" kindref="member">s8</ref>)iError;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Brief<sp/>:<sp/>The<sp/>delay<sp/>routine</highlight></codeline>
+<codeline lineno="282"><highlight class="comment"><sp/>*<sp/><sp/>\param<sp/>:<sp/>delay<sp/>in<sp/>ms</highlight></codeline>
+<codeline lineno="283"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BMP180_delay_msek(<ref refid="bmp180_8h_1a10e94b422ef0c20dcdec20d31a1f5049" kindref="member">u32</ref><sp/>msek)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Here<sp/>you<sp/>can<sp/>write<sp/>your<sp/>own<sp/>delay<sp/>routine*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/Sensors/BMP180_driver/bmp180_support.c"/>
+  </compounddef>
+</doxygen>

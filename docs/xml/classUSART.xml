@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classUSART" kind="class" language="C++" prot="public">
+    <compoundname>USART</compoundname>
+    <includes refid="USART_8h" local="no">USART.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t USART::_BAUD</definition>
+        <argsstring></argsstring>
+        <name>_BAUD</name>
+        <briefdescription>
+<para>Baud rate. </para>        </briefdescription>
+        <detaileddescription>
+<para>Baud rate (9600 is default) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="66" column="1" bodyfile="src/IO/USART.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classUSART_1acbd19517b595cf04ff087e040270904f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t USART::_UBRR</definition>
+        <argsstring></argsstring>
+        <name>_UBRR</name>
+        <briefdescription>
+<para><ref refid="classUSART" kindref="compound">USART</ref> Baud Rate Register. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="72" column="1" bodyfile="src/IO/USART.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classUSART_1a538ccfb4c4ae821f4fd4e87afe9fd96e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>USART::USART</definition>
+        <argsstring>()</argsstring>
+        <name>USART</name>
+        <briefdescription>
+<para><ref refid="classUSART" kindref="compound">USART</ref> standard constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>new <ref refid="classUSART" kindref="compound">USART</ref> object with baud rate set to 9600 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="87" column="1" bodyfile="src/IO/USART.cpp" bodystart="26" bodyend="38"/>
+        <references refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" compoundref="USART_8h" startline="66">_BAUD</references>
+        <references refid="classUSART_1acbd19517b595cf04ff087e040270904f" compoundref="USART_8h" startline="72">_UBRR</references>
+        <references refid="USART_8h_1a802b2b582b121e4632aa9a491d503720" compoundref="USART_8h" startline="45">FOSC</references>
+      </memberdef>
+      <memberdef kind="function" id="classUSART_1a889e2ca93527fd03811fdff317f50f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>USART::USART</definition>
+        <argsstring>(uint32_t baudrate)</argsstring>
+        <name>USART</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>baudrate</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classUSART" kindref="compound">USART</ref> constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>new <ref refid="classUSART" kindref="compound">USART</ref> object with baud rate set to baudrate <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baudrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in bit per second (bps) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="94" column="1" bodyfile="src/IO/USART.cpp" bodystart="40" bodyend="44"/>
+        <references refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" compoundref="USART_8h" startline="66">_BAUD</references>
+        <references refid="classUSART_1acbd19517b595cf04ff087e040270904f" compoundref="USART_8h" startline="72">_UBRR</references>
+        <references refid="USART_8h_1a802b2b582b121e4632aa9a491d503720" compoundref="USART_8h" startline="45">FOSC</references>
+      </memberdef>
+      <memberdef kind="function" id="classUSART_1a249b0d6967ead56f39448d4954835a27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART::writeString</definition>
+        <argsstring>(char *str)</argsstring>
+        <name>writeString</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Writes String to interface. </para>        </briefdescription>
+        <detaileddescription>
+<para>Writes an ASCII string to the TX buffer.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="102" column="1" bodyfile="src/IO/USART.cpp" bodystart="107" bodyend="113"/>
+        <references refid="classUSART_1a0103c87dca8c49a1fa9ec607d4d494a9" compoundref="USART_8cpp" startline="90" endline="95">putByte</references>
+        <references refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" compoundref="main_8cpp" startline="97">str</references>
+      </memberdef>
+      <memberdef kind="function" id="classUSART_1a7e56b380e59b576bbac13e60ca9ba829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * USART::readString</definition>
+        <argsstring>(void)</argsstring>
+        <name>readString</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reads incoming string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Reads an ASCII string from the RX buffer.</para><para>Reads incoming string until a new line character <simplesect kind="return"><para>constant character array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="109" column="1" bodyfile="src/IO/USART.cpp" bodystart="116" bodyend="129"/>
+        <references refid="USART_8h_1af679da36f24305cc55bc4e62a2375d2d" compoundref="USART_8h" startline="51">RX_BUFF</references>
+        <references refid="classUSART_1a42a1789b9a8805da6ed3f4f62f74a764" compoundref="USART_8cpp" startline="79" endline="83">getByte</references>
+      </memberdef>
+      <memberdef kind="function" id="classUSART_1a6c22ca3ab4707ade9a03a0293358f192" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART::readString</definition>
+        <argsstring>(char myString[], uint8_t maxLength)</argsstring>
+        <name>readString</name>
+        <param>
+          <type>char</type>
+          <declname>myString</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>maxLength</declname>
+        </param>
+        <briefdescription>
+<para>Reads incoming string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Reads an ASCII string from the RX buffer.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">myString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character array </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">maxLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum length of string to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="117" column="1" bodyfile="src/IO/USART.cpp" bodystart="132" bodyend="155"/>
+        <references refid="classUSART_1a42a1789b9a8805da6ed3f4f62f74a764" compoundref="USART_8cpp" startline="79" endline="83">getByte</references>
+        <references refid="classUSART_1a0103c87dca8c49a1fa9ec607d4d494a9" compoundref="USART_8cpp" startline="90" endline="95">putByte</references>
+      </memberdef>
+      <memberdef kind="function" id="classUSART_1af016ea3df95f00dd664edb0b8c57787d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART::readString</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>readString</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Reads incoming string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Reads an ASCII string from the RX buffer.</para><para>Reads incoming string until a new line character <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="124" column="1" bodyfile="src/IO/USART.cpp" bodystart="158" bodyend="172"/>
+        <references refid="classUSART_1a42a1789b9a8805da6ed3f4f62f74a764" compoundref="USART_8cpp" startline="79" endline="83">getByte</references>
+        <references refid="classUSART_1abad4151d072782e70255f999a1451199" compoundref="USART_8cpp" startline="98" endline="101">USART0_Flush</references>
+      </memberdef>
+      <memberdef kind="function" id="classUSART_1a5f8bbc3788153e13d94ece254f8ee2e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART::initUART</definition>
+        <argsstring>(void)</argsstring>
+        <name>initUART</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize <ref refid="classUSART" kindref="compound">USART</ref> interface. </para>        </briefdescription>
+        <detaileddescription>
+<para>Configures baud rate (refer datasheet) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="131" column="1" bodyfile="src/IO/USART.cpp" bodystart="48" bodyend="73"/>
+        <references refid="classUSART_1acbd19517b595cf04ff087e040270904f" compoundref="USART_8h" startline="72">_UBRR</references>
+        <references refid="USART_8h_1a86e1ba42fdfc73a48c61a2852e2a36b6" compoundref="USART_8h" startline="31">TX_START</references>
+        <references refid="USART_8h_1a00aa27797d6c1f8f5504167981533443" compoundref="USART_8h" startline="33">RX_START</references>
+        <references refid="USART_8h_1a4742a15e3e609a42266a7ff536d0939a" compoundref="USART_8h" startline="38">RX_INTEN</references>
+        <references refid="USART_8h_1a040d462ae108df7aeebed67a5ed5e6f4" compoundref="USART_8h" startline="48">_DATA</references>
+      </memberdef>
+      <memberdef kind="function" id="classUSART_1abad4151d072782e70255f999a1451199" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART::USART0_Flush</definition>
+        <argsstring>(void)</argsstring>
+        <name>USART0_Flush</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Flush <ref refid="classUSART" kindref="compound">USART</ref> buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Empties the RX buffer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="137" column="1" bodyfile="src/IO/USART.cpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classUSART_1a42a1789b9a8805da6ed3f4f62f74a764" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t USART::getByte</definition>
+        <argsstring>(void)</argsstring>
+        <name>getByte</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Read 1 Byte of incoming data. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns a byte from the serial buffer Use this function if the RX interrupt is not enabled. Returns 0 on empty buffer.</para><para><simplesect kind="return"><para>Receive 1 Characterbyte as uint8 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="148" column="1" bodyfile="src/IO/USART.cpp" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classUSART_1a0103c87dca8c49a1fa9ec607d4d494a9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART::putByte</definition>
+        <argsstring>(unsigned char data)</argsstring>
+        <name>putByte</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Send Byte via the <ref refid="classUSART" kindref="compound">USART</ref> interface. </para>        </briefdescription>
+        <detaileddescription>
+<para>Transmits a byte Use this function if the TX interrupt is not enabled. Blocks the serial port while TX completes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Databyte to transmit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/USART.h" line="155" column="1" bodyfile="src/IO/USART.cpp" bodystart="90" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classUSART" kindref="compound">USART</ref> class definition. </para>    </briefdescription>
+    <detaileddescription>
+<para>Defines methods for accessing the <ref refid="classUSART" kindref="compound">USART</ref> interface </para>    </detaileddescription>
+    <location file="src/IO/USART.h" line="58" column="1" bodyfile="src/IO/USART.h" bodystart="58" bodyend="178"/>
+    <listofallmembers>
+      <member refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" prot="private" virt="non-virtual"><scope>USART</scope><name>_BAUD</name></member>
+      <member refid="classUSART_1acbd19517b595cf04ff087e040270904f" prot="private" virt="non-virtual"><scope>USART</scope><name>_UBRR</name></member>
+      <member refid="classUSART_1a42a1789b9a8805da6ed3f4f62f74a764" prot="private" virt="non-virtual"><scope>USART</scope><name>getByte</name></member>
+      <member refid="classUSART_1a5f8bbc3788153e13d94ece254f8ee2e7" prot="public" virt="non-virtual"><scope>USART</scope><name>initUART</name></member>
+      <member refid="classUSART_1a0103c87dca8c49a1fa9ec607d4d494a9" prot="private" virt="non-virtual"><scope>USART</scope><name>putByte</name></member>
+      <member refid="classUSART_1a7e56b380e59b576bbac13e60ca9ba829" prot="public" virt="non-virtual"><scope>USART</scope><name>readString</name></member>
+      <member refid="classUSART_1a6c22ca3ab4707ade9a03a0293358f192" prot="public" virt="non-virtual"><scope>USART</scope><name>readString</name></member>
+      <member refid="classUSART_1af016ea3df95f00dd664edb0b8c57787d" prot="public" virt="non-virtual"><scope>USART</scope><name>readString</name></member>
+      <member refid="classUSART_1a538ccfb4c4ae821f4fd4e87afe9fd96e" prot="public" virt="non-virtual"><scope>USART</scope><name>USART</name></member>
+      <member refid="classUSART_1a889e2ca93527fd03811fdff317f50f39" prot="public" virt="non-virtual"><scope>USART</scope><name>USART</name></member>
+      <member refid="classUSART_1abad4151d072782e70255f999a1451199" prot="public" virt="non-virtual"><scope>USART</scope><name>USART0_Flush</name></member>
+      <member refid="classUSART_1a249b0d6967ead56f39448d4954835a27" prot="public" virt="non-virtual"><scope>USART</scope><name>writeString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

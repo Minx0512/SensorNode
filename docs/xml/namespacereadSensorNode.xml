@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacereadSensorNode" kind="namespace" language="Python">
+    <compoundname>readSensorNode</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="readSensorNode_8py_1af709b4a0649a2ea9861b259a849678b4" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>readSensorNode.send_str</definition>
+        <argsstring></argsstring>
+        <name>send_str</name>
+        <initializer>= &apos;34|0|ds\r\n&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/readSensorNode.py" line="10" column="1" bodyfile="Python/readSensorNode.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="readSensorNode_8py_1acade05a74d18b0ee0e6f280ad09d687f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>readSensorNode.scriptname</definition>
+        <argsstring></argsstring>
+        <name>scriptname</name>
+        <initializer>= sys.argv[0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/readSensorNode.py" line="12" column="1" bodyfile="Python/readSensorNode.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="readSensorNode_8py_1a6402c2b5b9511b1753751a57999229db" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>readSensorNode.val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
+        <initializer>= sys.argv.pop()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/readSensorNode.py" line="13" column="1" bodyfile="Python/readSensorNode.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="readSensorNode_8py_1ad6357a640d5eeb83da28688160844249" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>readSensorNode.sensorData</definition>
+        <argsstring></argsstring>
+        <name>sensorData</name>
+        <initializer>= ReadSensorData(&quot;98:D3:31:FB:31:A6&quot;,send_str)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/readSensorNode.py" line="21" column="1" bodyfile="Python/readSensorNode.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="readSensorNode_8py_1aacb56f7a4c0fd89326dc4540e886f618" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>readSensorNode.dht</definition>
+        <argsstring></argsstring>
+        <name>dht</name>
+        <initializer>= re.findall(&quot;&lt;DHT22&gt;&lt;T unit=&apos;(.*)&apos;&gt;(.*)\|&lt;H unit=&apos;(.*)&apos;&gt;(.*)\|\|&quot;,sensorData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/readSensorNode.py" line="25" column="1" bodyfile="Python/readSensorNode.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="readSensorNode_8py_1a7746a922c2180be4998ed3a6f2ea55c6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>readSensorNode.mvs</definition>
+        <argsstring></argsstring>
+        <name>mvs</name>
+        <initializer>= re.findall(&quot;&lt;mv&gt;(.*)\|\|&quot;, sensorData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/readSensorNode.py" line="44" column="1" bodyfile="Python/readSensorNode.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="readSensorNode_8py_1a71804d993bcdc7ce54f096240e107167" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>readSensorNode.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>= int(mvs[0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/readSensorNode.py" line="45" column="1" bodyfile="Python/readSensorNode.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/readSensorNode.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

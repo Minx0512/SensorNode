@@ -1,0 +1,50 @@
+.TH "src/Sensors/DHT22.h" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Sensors/DHT22.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <avr/io\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <inttypes\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDHT22\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFOSC\fP   16000000UL"
+.br
+.ti -1c
+.RI "#define \fBLOOP_CYCLES\fP   8"
+.br
+.ti -1c
+.RI "#define \fBus\fP(num)   (num/(\fBLOOP_CYCLES\fP*(1/(\fBFOSC\fP/1000000\&.0))))"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FOSC   16000000UL"
+
+.SS "#define LOOP_CYCLES   8"
+
+.SS "#define us(num)   (num/(\fBLOOP_CYCLES\fP*(1/(\fBFOSC\fP/1000000\&.0))))"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

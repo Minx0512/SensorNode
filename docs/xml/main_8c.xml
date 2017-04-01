@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="main_8c" kind="file" language="C++">
+    <compoundname>main.c</compoundname>
+    <includes local="no">avr/io.h</includes>
+    <includes local="no">util/delay.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="i2c__master_8h" local="yes">i2c_master.h</includes>
+    <incdepgraph>
+      <node id="42">
+        <label>stdlib.h</label>
+      </node>
+      <node id="43">
+        <label>i2c_master.h</label>
+        <link refid="i2c__master_8h_source"/>
+      </node>
+      <node id="38">
+        <label>src/IO/I2C-master-lib/main.c</label>
+        <link refid="main.c"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>avr/io.h</label>
+      </node>
+      <node id="40">
+        <label>util/delay.h</label>
+      </node>
+      <node id="41">
+        <label>math.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="main_8c_1a43bafb28b29491ec7f871319b5a3b2f8" prot="public" static="no">
+        <name>F_CPU</name>
+        <initializer>16000000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="2" column="9" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1a426849a5f0a67f95a6ab4340a09ff854" prot="public" static="no">
+        <name>HMC5883L_WRITE</name>
+        <initializer>0x3C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="12" column="9" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8c_1a4117068bb7d1826450170ab3643dd058" prot="public" static="no">
+        <name>HMC5883L_READ</name>
+        <initializer>0x3D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="13" column="9" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8c_1a4b92294b4e82a7d875de15a7c2f804b3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char buffer[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="39" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a675845dac0123012a55c6b4f295a1496" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t raw_x</definition>
+        <argsstring></argsstring>
+        <name>raw_x</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="41" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a9ec000738992abc76eda06f11cd9e4f3" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t raw_y</definition>
+        <argsstring></argsstring>
+        <name>raw_y</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="42" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a1c12c2dcd382aa77a6e46f1bc046fd73" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t raw_z</definition>
+        <argsstring></argsstring>
+        <name>raw_z</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="43" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8c_1a7321ff8ddb002b00308d22cdf1052d55" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float headingDegrees</definition>
+        <argsstring></argsstring>
+        <name>headingDegrees</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="44" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8c_1a74cfc8383025bab5ee99c53a08e9c89e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_uart</definition>
+        <argsstring>(uint16_t baudrate)</argsstring>
+        <name>init_uart</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>baudrate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="15" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="15" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a8eaa1ed3292777a3ed02045bd4b612c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uart_putc</definition>
+        <argsstring>(unsigned char c)</argsstring>
+        <name>uart_putc</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="26" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a2e065279ae8db44201c28eaaf6f430b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uart_puts</definition>
+        <argsstring>(char *s)</argsstring>
+        <name>uart_puts</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="32" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a4eea5e21b8ae8d731ad1b3dd596e5fe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_HMC5883L</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_HMC5883L</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="46" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="46" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a5b5176abf7b68e862ffa94e4b6bddf1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float getHeading</definition>
+        <argsstring>(void)</argsstring>
+        <name>getHeading</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="64" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="64" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C-master-lib/main.c" line="88" column="1" bodyfile="src/IO/I2C-master-lib/main.c" bodystart="88" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>F_CPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>F_CPU<sp/>16000000UL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;util/delay.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;i2c_master.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HMC5883L_WRITE<sp/>0x3C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HMC5883L_READ<sp/>0x3D<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_uart(uint16_t<sp/>baudrate){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>UBRR_val<sp/>=<sp/>(F_CPU/16)/(baudrate-1);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>UBRR0H<sp/>=<sp/>UBRR_val<sp/>&gt;&gt;<sp/>8;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>UBRR0L<sp/>=<sp/>UBRR_val;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>UCSR0B<sp/>|=<sp/>(1&lt;&lt;TXEN0)<sp/>|<sp/>(1&lt;&lt;RXEN0)<sp/>|<sp/>(1&lt;&lt;RXCIE0);<sp/></highlight><highlight class="comment">//<sp/>UART<sp/>TX<sp/>(Transmit<sp/>-<sp/>senden)<sp/>einschalten</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>UCSR0C<sp/>|=<sp/>(1&lt;&lt;USBS0)<sp/>|<sp/>(3&lt;&lt;UCSZ00);<sp/></highlight><highlight class="comment">//Modus<sp/>Asynchron<sp/>8N1<sp/>(8<sp/>Datenbits,<sp/>No<sp/>Parity,<sp/>1<sp/>Stopbit)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>uart_putc(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!(UCSR0A<sp/>&amp;<sp/>(1&lt;&lt;UDRE0)));<sp/></highlight><highlight class="comment">//<sp/>wait<sp/>until<sp/>sending<sp/>is<sp/>possible</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>UDR0<sp/>=<sp/>c;<sp/></highlight><highlight class="comment">//<sp/>output<sp/>character<sp/>saved<sp/>in<sp/>c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>uart_puts(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(*s){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uart_putc(*s);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s++;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[6];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">int16_t<sp/>raw_x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">int16_t<sp/>raw_y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">int16_t<sp/>raw_z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>headingDegrees<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_HMC5883L(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_start(HMC5883L_WRITE);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_write(0x00);<sp/></highlight><highlight class="comment">//<sp/>set<sp/>pointer<sp/>to<sp/>CRA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_write(0x70);<sp/></highlight><highlight class="comment">//<sp/>write<sp/>0x70<sp/>to<sp/>CRA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_stop();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_start(HMC5883L_WRITE);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_write(0x01);<sp/></highlight><highlight class="comment">//<sp/>set<sp/>pointer<sp/>to<sp/>CRB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_write(0xA0);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_stop();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_start(HMC5883L_WRITE);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_write(0x02);<sp/></highlight><highlight class="comment">//<sp/>set<sp/>pointer<sp/>to<sp/>measurement<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_write(0x00);<sp/></highlight><highlight class="comment">//<sp/>continous<sp/>measurement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_stop();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>getHeading(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_start(HMC5883L_WRITE);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_write(0x03);<sp/></highlight><highlight class="comment">//<sp/>set<sp/>pointer<sp/>to<sp/>X<sp/>axis<sp/>MSB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_stop();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_start(HMC5883L_READ);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>raw_x<sp/>=<sp/>((uint8_t)i2c_read_ack())&lt;&lt;8;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>raw_x<sp/>|=<sp/>i2c_read_ack();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>raw_z<sp/>=<sp/>((uint8_t)i2c_read_ack())&lt;&lt;8;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>raw_z<sp/>|=<sp/>i2c_read_ack();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>raw_y<sp/>=<sp/>((uint8_t)i2c_read_ack())&lt;&lt;8;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>raw_y<sp/>|=<sp/>i2c_read_nack();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_stop();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>headingDegrees<sp/>=<sp/>atan2((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)raw_y,(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)raw_x)<sp/>*<sp/>180<sp/>/<sp/>3.141592654<sp/>+<sp/>180;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>headingDegrees;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>init_uart(57600);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_init();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>init_HMC5883L();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1){</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getHeading();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>itoa(raw_x,<sp/>buffer,<sp/>10);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uart_puts(buffer);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uart_puts(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>itoa(raw_y,<sp/>buffer,<sp/>10);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uart_puts(buffer);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uart_puts(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>itoa(raw_z,<sp/>buffer,<sp/>10);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uart_puts(buffer);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uart_puts(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtostrf(headingDegrees,<sp/>6,<sp/>2,<sp/>buffer);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uart_puts(buffer);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uart_puts(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_delay_ms(1000);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/IO/I2C-master-lib/main.c"/>
+  </compounddef>
+</doxygen>

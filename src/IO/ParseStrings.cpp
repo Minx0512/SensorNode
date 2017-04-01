@@ -1,8 +1,19 @@
-/*
- * ParseStrings.cpp
+/**
+****************************************************************************
+* Project: SensorNode
+*
+* ParseStrings.cpp
+*
+* Created on: 15 Dec 2016
+*
+* Author: Matthias Minx
+*
+* Revision: 0.2
+*
+*
+****************************************************************************/
+/** \file ParseStrings.cpp
  *
- *  Created on: 15 Dec 2016
- *      Author: matthias
  */
 
 
@@ -15,24 +26,21 @@
 #include <string.h>
 #include <inttypes.h>
 #include <stdio.h>
-#include "USART.h"
+//#include "USART.h"
 
 
 
 ParseStrings::ParseStrings() {
 	// TODO Auto-generated constructor stub
-	u = USART();
-	cmdID=0;
-	cmdP =0;
-	sprintf(PID,"%s"," ");
-	sprintf(pString,"%s"," ");
+	//u = USART();
+	ClearAll();
 
 
 }
 ParseStrings::ParseStrings(char* string) {
 	// TODO Auto-generated constructor stub
 
-	u = USART();
+	//u = USART();
 	Parse(string);
 
 
@@ -43,8 +51,8 @@ void ParseStrings::ClearAll(){
 
 	cmdID = 0;
 	cmdP = 0;
-	sprintf(PID," ");
-	sprintf(pString," ");
+	sprintf(PID,"%s"," ");
+	sprintf(pString,"%s"," ");
 
 
 
@@ -122,23 +130,8 @@ void ParseStrings::getPropertyIDAsMAC(uint8_t propString[8]){
 
 
 }
-/*
-uint8_t* ParseStrings::getMAC(){
 
-return addr;
 
-}
-
-uint8_t ParseStrings::getMAC(uint8_t* a){
-
-	for(uint8_t i=0;i<5;i++){
-		a[i]=addr[i];
-	}
-
-	return 0;
-
-}
-*/
 uint64_t ParseStrings::getMAC(){
 
 uint64_t value = reinterpret_cast<uint64_t>(&addr[0]) |
@@ -150,16 +143,16 @@ uint64_t value = reinterpret_cast<uint64_t>(&addr[0]) |
 
 
 
-	return value;
+	return (value);
 
 }
 
 uint8_t ParseStrings::getCmdID(){
-	return cmdID;
+	return (cmdID);
 
 }
 uint8_t ParseStrings::getCmdProperty(){
-	return cmdP;
+	return (cmdP);
 }
 void ParseStrings::getPropertyID(char *PIDString){
 	sprintf(PIDString,"%s",PID);

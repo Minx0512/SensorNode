@@ -389,42 +389,6 @@ autoLights.set(1)
 
 statusLight = IntVar()
 statusLight.set(0)
-# 
-# menuID.set(0)
-
-# Frame_Right = Frame(top)
-# Frame_Right.config(bg=APP_BG)
-# Frame_Right.place(relx=.5,rely=0,height=600,width=512)
-# 
-# Frame_Left = Frame(top)
-# Frame_Left.config(bg=APP_BG)
-# Frame_Left.place(relx=0,rely=0,height=600,width=512)
-# 
-# label_sensor = Label(Frame_Left,text="Controls ")
-# label_sensor.config(bg=APP_BAR,fg=APP_FONT_COLOR,font="-weight bold -size 20")
-# label_sensor.place(x=0,y=0,width=512,height=50) 
-# 
-# Label_leftBottom = Label(Frame_Left, text=" ",padx=5,pady=5)
-# Label_leftBottom.config(bg=APP_DIALOG,fg=APP_FONT_COLOR, textvariable=timeStr,anchor="w",font="-size 12")
-# Label_leftBottom.place(relx=0,y=560,width=512,height=40)
-# 
-# Button_LightsMenu = Button(Frame_Left, text ="Lights", relief=FLAT,command =lambda: LightsMenu(Frame_Right),padx=5,pady=5)
-# Button_LightsMenu.config(bg=BUTTON_BG_COLOR_LIGHTS,activebackground=BUTTON_BG_COLOR_LIGHTS_HOVER,fg=BUTTON_FONT_COLOR_LIGHTS,activeforeground=BUTTON_FONT_COLOR_LIGHTS_HOVER,font="-weight bold",highlightthickness=0,bd=0)
-# Button_LightsMenu.place(x=50, y=100,width=200, height=50)
-# #Button_LightsMenu.invoke()
-# 
-# Button_SensorsMenu = Button(Frame_Left, text ="Sensors", relief=FLAT,command =lambda: SensorsMenu(Frame_Right),padx=5,pady=5)
-# Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_SENSORS,activebackground=BUTTON_BG_COLOR_SENSORS_HOVER,fg=BUTTON_FONT_COLOR_SENSORS,activeforeground=BUTTON_FONT_COLOR_SENSORS_HOVER,font="-weight bold",highlightthickness=0,bd=0)
-# Button_SensorsMenu.place(x=50, y=160,width=200, height=50)
-# 
-# Button_SensorsMenu = Button(Frame_Left, text ="Configure", relief=FLAT,command =lambda: ConfigureMenu(Frame_Right),padx=5,pady=5)
-# Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_CONFIGURE,activebackground=BUTTON_BG_COLOR_CONFIGURE_HOVER,fg=BUTTON_FONT_COLOR_CONFIGURE,activeforeground=BUTTON_FONT_COLOR_CONFIGURE_HOVER,font="-weight bold",highlightthickness=0,bd=0)
-# Button_SensorsMenu.place(x=50, y=220,width=200, height=50)
-# 
-# Button_SensorsMenu = Button(Frame_Left, text ="System", relief=FLAT,command =lambda: SystemParamsMenu(sock,Frame_Right),padx=5,pady=5)
-# Button_SensorsMenu.config(bg=BUTTON_BG_COLOR_SYSTEM,activebackground=BUTTON_BG_COLOR_SYSTEM_HOVER,fg=BUTTON_FONT_COLOR_SYSTEM,activeforeground=BUTTON_FONT_COLOR_SYSTEM_HOVER,font="-weight bold",highlightthickness=0,bd=0)
-# Button_SensorsMenu.place(x=50, y=280,width=200, height=50)
-
 
 
 try:

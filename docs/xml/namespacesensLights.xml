@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacesensLights" kind="namespace" language="Python">
+    <compoundname>sensLights</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sensLights_8py_1abac1fd1adebeaff35fb495576dbddc5b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sensLights.prThresh</definition>
+        <argsstring></argsstring>
+        <name>prThresh</name>
+        <initializer>= 550</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="8" column="1" bodyfile="Python/sensLights.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1a6e1162048c8d736a8db0351d57a8b139" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string sensLights.send_str</definition>
+        <argsstring></argsstring>
+        <name>send_str</name>
+        <initializer>= &quot;550\n&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="9" column="1" bodyfile="Python/sensLights.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1a8b0ffad4098c0b49ff9ed83c3e7a279c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensLights.sensorData</definition>
+        <argsstring></argsstring>
+        <name>sensorData</name>
+        <initializer>= ReadSensorData(&quot;98:D3:31:FB:31:A6&quot;,send_str)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="12" column="1" bodyfile="Python/sensLights.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1a3039fae16cd626cac6686b09a079e832" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensLights.pr</definition>
+        <argsstring></argsstring>
+        <name>pr</name>
+        <initializer>= int(re.search(&quot;&lt;NSL19M51&gt;(.*)&lt;/NSL19M51&gt;&quot;,sensorData)[0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="15" column="1" bodyfile="Python/sensLights.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1ac8aa58ba0e3b1d1e5e43af8368d84bde" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensLights.ds18b20</definition>
+        <argsstring></argsstring>
+        <name>ds18b20</name>
+        <initializer>= re.findall(&quot;&lt;DS18B20&gt;&lt;ID&gt;(.*)&lt;/ID&gt;&lt;T&gt;(.*)\xc2\xb0C&lt;/T&gt;&lt;/<ref refid="classDS18B20" kindref="compound">DS18B20</ref>&gt;&quot;,sensorData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="19" column="1" bodyfile="Python/sensLights.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1a332e8e9c0d25bdce1ada40499576e97d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensLights.dht</definition>
+        <argsstring></argsstring>
+        <name>dht</name>
+        <initializer>= re.findall(&quot;&lt;DHT22&gt;&lt;T&gt;(.*)\xc2\xb0C&lt;/T&gt;&lt;H&gt;(.*)%RH&lt;/H&gt;&lt;/<ref refid="classDHT22" kindref="compound">DHT22</ref>&gt;&quot;,sensorData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="20" column="1" bodyfile="Python/sensLights.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1a2285eac93c571f3e13b7c75eb076d452" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensLights.movement</definition>
+        <argsstring></argsstring>
+        <name>movement</name>
+        <initializer>= int(re.search(&quot;&lt;mv&gt;(.*)&lt;/mv&gt;&quot;,sensorData).group(1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="30" column="1" bodyfile="Python/sensLights.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1af4085cc84e3f4ffd4e949bc88e9fbd29" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensLights.moveSenseEnabled</definition>
+        <argsstring></argsstring>
+        <name>moveSenseEnabled</name>
+        <initializer>= int(re.search(&quot;&lt;mvSen&gt;(.*)&lt;/mvSen&gt;&quot;,sensorData).group(1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="31" column="1" bodyfile="Python/sensLights.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1a5c2a6a5aad94452fb16ef2b595eade73" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sensLights.lights</definition>
+        <argsstring></argsstring>
+        <name>lights</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="32" column="1" bodyfile="Python/sensLights.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1a8c334ce46f2ca382615e30ca82fa7a2c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sensLights.lightSwitch</definition>
+        <argsstring></argsstring>
+        <name>lightSwitch</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="33" column="1" bodyfile="Python/sensLights.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1a043e829ccb1ca220d4668cdd65be4988" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensLights.time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <initializer>= int(re.search(&quot;&lt;time&gt;(.*)&lt;/time&gt;&quot;,sensorData).group(1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="34" column="1" bodyfile="Python/sensLights.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sensLights_8py_1a6af9fcb7c8252a343f039e728ab218b3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensLights.shell</definition>
+        <argsstring></argsstring>
+        <name>shell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensLights.py" line="40" column="1" bodyfile="Python/sensLights.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/sensLights.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

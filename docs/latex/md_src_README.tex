@@ -1,0 +1,66 @@
+A little private project for a sensor node based on the A\+Tmega328P. The main node is connected to the serial interface of a Raspberry Pi on which an open\+Hab server is running. A n\+R\+F24\+L01+ Transceiver module on the S\+P\+I-\/bus of the A\+Tmega328P serves for communication to other nodes. The main node has 2x \hyperlink{classDS18B20}{D\+S18\+B20} temperature sensors, 1 motion sensor and 1 resistive light sensor connected to it.
+
+The sensor nodes Wireless addresses can be configured via a python script.
+
+\begin{quote}
+Code is not yet ready $<$ \end{quote}
+
+
+Communications protocoll between the raspberry pi and the main sensor node\+:
+
+example request\+: 0x31$\vert$\+A0\+:A0\+:\+A0\+:\+A0\+:A0$\vert$\+D\+H\+T22
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*4{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}{\bf }&{\bf H\+EX(command id (Cmd\+ID) + command property (cmdP) )}&{\bf property id (P\+I\+D/\+P\+Val) }&{\bf property string (p\+String)  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}{\bf }&{\bf H\+EX(command id (Cmd\+ID) + command property (cmdP) )}&{\bf property id (P\+I\+D/\+P\+Val) }&{\bf property string (p\+String)  }\\\cline{1-4}
+\endhead
+n\+R\+F24\+L01 Channel &0x10 + 0x01 &Channel\+ID\+: (0-\/125) 10 &\char`\"{}\char`\"{} \\\cline{1-4}
+n\+R\+F24\+L01 Power\+Lvl&0x10 + 0x02 &Pwr\+Lvl\+Val\+: (1-\/4) 4 &\char`\"{}\char`\"{} \\\cline{1-4}
+n\+R\+F24\+L01 Data\+Rate&0x10 + 0x03 &Data\+Rte\+Val\+: (1-\/3) 2 &\char`\"{}\char`\"{} \\\cline{1-4}
+n\+R\+F24\+L01 C\+R\+C\+Level&0x10 + 0x04 &C\+R\+C\+Lvl\+Val\+: (1-\/3) 3 &\char`\"{}\char`\"{} \\\cline{1-4}
+n\+R\+F24\+L01 Payload\+Size&0x10 + 0x05 &payload\+Sz\+Val\+: 16 &\char`\"{}\char`\"{} \\\cline{1-4}
+n\+R\+F24\+L01 Reset\+Module&0x10 + 0x06 &0 &\char`\"{}\char`\"{} \\\cline{1-4}
+n\+R\+F24\+L01 System\+Info&0x10 + 0x07 &0 &\char`\"{}\char`\"{} \\\cline{1-4}
+Get\+Sensor\+Infos available\+Sensors on current node&0x20 + 0x00 &M\+AC &Sensors \\\cline{1-4}
+Get\+Sensor\+Infos available\+Sensors on connected node n&0x20 + 0x01 &M\+AC &Sensors \\\cline{1-4}
+Get\+Sensor\+Data Movement&0x30 + 0x01 &M\+AC &Mv \\\cline{1-4}
+Get\+Sensor\+Data \hyperlink{classDHT22}{D\+H\+T22} &0x30 + 0x02 &M\+AC &\hyperlink{classDHT22}{D\+H\+T22} \\\cline{1-4}
+Get\+Sensor\+Data Light\+Sense&0x30 + 0x03 &M\+AC &La \\\cline{1-4}
+Get\+Sensor\+Data Light\+Sense&0x30 + 0x04 &M\+AC &Ld \\\cline{1-4}
+Get\+Sensor\+Data Temp\+D\+S18\+B20&0x30 + 0x05 &M\+AC &T\+DS \\\cline{1-4}
+Get\+Sensor\+Data Pressure&0x30 + 0x06 &M\+AC &PT \\\cline{1-4}
+\end{longtabu}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*2{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}{\bf }&{\bf }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}{\bf }&{\bf }\\\cline{1-2}
+\endhead
+Light on analog Port &Lap \\\cline{1-2}
+Light digital (I2C) in Lux &Ldx \\\cline{1-2}
+Temp\+DS (1-\/\+Wire)&T\+DS \\\cline{1-2}
+Temp\+Hum\+D\+H\+T22 (1-\/\+Wire)&D\+HT \\\cline{1-2}
+Pressure (I2C)&PT \\\cline{1-2}
+Movement &M \\\cline{1-2}
+\end{longtabu}
+
+
+answers\+: 
+\begin{DoxyCode}
+1 DS18B20: //sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0|%TempVal1|...|\(\backslash\)\(\backslash\)
+2 DHT22: //sensor/DHT/|%sensorMAC|/|%tempVal:%unit|%humVal:%unit|%errCode|\(\backslash\)\(\backslash\)
+3 Movement: //sensor/M/|%sensorMAC|/|(0|1)|\(\backslash\)\(\backslash\)
+4 LightAnalog: //sensor/Lav/|%sensorMAC|/|%d.%03d|\(\backslash\)\(\backslash\)
+5 BMP180: //sensors/PT/|%sensorMAC|/|%pressureVal:%unit|%tempVal:%unit|%errCode|\(\backslash\)\(\backslash\)
+\end{DoxyCode}
+ 

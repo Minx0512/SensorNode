@@ -1,0 +1,248 @@
+.TH "ParseStrings" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ParseStrings \- \fBParseStrings\fP class definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ParseStrings\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBParse\fP (const char *string)"
+.br
+.RI "\fIParse const character string\&. \fP"
+.ti -1c
+.RI "void \fBParseMAC\fP ()"
+.br
+.RI "\fIParse MAC address\&. \fP"
+.ti -1c
+.RI "uint64_t \fBgetMAC\fP ()"
+.br
+.RI "\fIGet MAC address as uint64_t\&. \fP"
+.ti -1c
+.RI "void \fBgetPropertyString\fP (char *propString)"
+.br
+.RI "\fIGet Property string\&. \fP"
+.ti -1c
+.RI "void \fBgetPropertyIDAsMAC\fP (uint8_t propString[8])"
+.br
+.RI "\fIget Property ID as a MAC address array \fP"
+.ti -1c
+.RI "uint8_t \fBgetCmdID\fP ()"
+.br
+.RI "\fIget Command ID \fP"
+.ti -1c
+.RI "uint8_t \fBgetCmdProperty\fP ()"
+.br
+.RI "\fIReturns command property\&. \fP"
+.ti -1c
+.RI "void \fBgetPropertyID\fP (char *PIDString)"
+.br
+.RI "\fIReturns Property ID as character array\&. \fP"
+.ti -1c
+.RI "void \fBPrintVars\fP (char *string)"
+.br
+.RI "\fIReturns Variables as string\&. \fP"
+.ti -1c
+.RI "void \fBPrintMAC\fP (char *string)"
+.br
+.RI "\fIReturns MAC address to string\&. \fP"
+.ti -1c
+.RI "void \fBClearAll\fP ()"
+.br
+.RI "\fIClears all variables\&. \fP"
+.ti -1c
+.RI "\fBParseStrings\fP ()"
+.br
+.RI "\fI\fBParseStrings\fP standard constructor\&. \fP"
+.ti -1c
+.RI "\fBParseStrings\fP (char *string)"
+.br
+.RI "\fI\fBParseStrings\fP constructor\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBcmdID\fP"
+.br
+.RI "\fICommand ID\&. \fP"
+.ti -1c
+.RI "uint8_t \fBcmdP\fP"
+.br
+.RI "\fICommand Property\&. \fP"
+.ti -1c
+.RI "char \fBPID\fP [36]"
+.br
+.RI "\fIProperty ID\&. \fP"
+.ti -1c
+.RI "char \fBpString\fP [36]"
+.br
+.RI "\fIProperty String\&. \fP"
+.ti -1c
+.RI "uint8_t \fBaddr\fP [5]"
+.br
+.RI "\fI5 Byte address array \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBParseStrings\fP class definition\&. 
+
+Defines methods for accessing the \fBParseStrings\fP interface 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ParseStrings::ParseStrings ()"
+
+.PP
+\fBParseStrings\fP standard constructor\&. new \fBParseStrings\fP object and initializes variables 
+.SS "ParseStrings::ParseStrings (char * string)"
+
+.PP
+\fBParseStrings\fP constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP Character array to parse 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ParseStrings::ClearAll ()"
+
+.PP
+Clears all variables\&. 
+.SS "uint8_t ParseStrings::getCmdID ()"
+
+.PP
+get Command ID 
+.PP
+\fBReturns:\fP
+.RS 4
+Command ID as uint8_t 
+.RE
+.PP
+
+.SS "uint8_t ParseStrings::getCmdProperty ()"
+
+.PP
+Returns command property\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Command Property as uint8_t 
+.RE
+.PP
+
+.SS "uint64_t ParseStrings::getMAC ()"
+
+.PP
+Get MAC address as uint64_t\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+MAC address as a 64 Bit unsigned integer 
+.RE
+.PP
+
+.SS "void ParseStrings::getPropertyID (char * PIDString)"
+
+.PP
+Returns Property ID as character array\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIPIDString\fP Character array of Property ID 
+.RE
+.PP
+
+.SS "void ParseStrings::getPropertyIDAsMAC (uint8_t propString[8])"
+
+.PP
+get Property ID as a MAC address array 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropString\fP 8 Byte Address array 
+.RE
+.PP
+
+.SS "void ParseStrings::getPropertyString (char * propString)"
+
+.PP
+Get Property string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpropString\fP Character array 
+.RE
+.PP
+
+.SS "void ParseStrings::Parse (const char * string)"
+
+.PP
+Parse const character string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP Character string to parse 
+.RE
+.PP
+
+.SS "void ParseStrings::ParseMAC ()"
+
+.PP
+Parse MAC address\&. Parses MAC address from pString into the addr array 
+.SS "void ParseStrings::PrintMAC (char * string)"
+
+.PP
+Returns MAC address to string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP Character array of MAC address 
+.RE
+.PP
+
+.SS "void ParseStrings::PrintVars (char * string)"
+
+.PP
+Returns Variables as string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP Character array of variable values 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t ParseStrings::addr[5]\fC [private]\fP"
+
+.PP
+5 Byte address array 
+.SS "uint8_t ParseStrings::cmdID\fC [private]\fP"
+
+.PP
+Command ID\&. 
+.SS "uint8_t ParseStrings::cmdP\fC [private]\fP"
+
+.PP
+Command Property\&. 
+.SS "char ParseStrings::PID[36]\fC [private]\fP"
+
+.PP
+Property ID\&. 
+.SS "char ParseStrings::pString[36]\fC [private]\fP"
+
+.PP
+Property String\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

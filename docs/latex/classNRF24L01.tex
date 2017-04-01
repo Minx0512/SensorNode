@@ -1,0 +1,2357 @@
+\hypertarget{classNRF24L01}{}\section{N\+R\+F24\+L01 Class Reference}
+\label{classNRF24L01}\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+
+
+{\ttfamily \#include $<$N\+R\+F24\+L01.\+h$>$}
+
+
+
+Collaboration diagram for N\+R\+F24\+L01\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classNRF24L01__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNRF24L01_ad3e6263e0afaa974637d1450b6c8cb37}{N\+R\+F24\+L01} ()
+\item 
+\hyperlink{classNRF24L01_a8e2cc2ca751ff3bd4ea351bd2fcea93e}{N\+R\+F24\+L01} (volatile uint8\+\_\+t \&D\+DR, volatile uint8\+\_\+t \&P\+O\+RT, uint8\+\_\+t \hyperlink{main_8cpp_af332f65aca07c44deeda884c8f6c353c}{CE}, uint8\+\_\+t \hyperlink{main_8cpp_a8df4f3a8a2035df063402ae5f0c1d2f8}{C\+SN})
+\item 
+bool \hyperlink{classNRF24L01_a2973773d1a158e1cfbf52198f248c548}{Init} ()
+\item 
+void \hyperlink{classNRF24L01_aaabd39829998b609c0dc317af4f141b2}{start\+Listening} ()
+\item 
+void \hyperlink{classNRF24L01_a6ad13189b732f237ac148c659ddf6b01}{stop\+Listening} ()
+\item 
+bool \hyperlink{classNRF24L01_ab368039cf5448f0ff5d489563d530c7b}{available} ()
+\item 
+void \hyperlink{classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da}{read} (void $\ast$buf, uint8\+\_\+t len)
+\item 
+bool \hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write} (const void $\ast$buf, uint8\+\_\+t len)
+\item 
+void \hyperlink{classNRF24L01_ad64a887cae746be5ca43cf08445feed9}{open\+Writing\+Pipe} (const uint8\+\_\+t $\ast$address)
+\item 
+void \hyperlink{classNRF24L01_a9b458f77f6ae6c42f330710e703dd847}{open\+Reading\+Pipe} (uint8\+\_\+t number, const uint8\+\_\+t $\ast$address)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{Indent}{\bf Low-\/level internal interface.}\par
+{\em Protected methods that address the chip directly. Regular users cannot ever call these. They are documented for completeness and for developers who may want to extend this class. }\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a9766146f8b6bcab59e91e7545484c401}{Read\+Registers} (uint8\+\_\+t reg, uint8\+\_\+t $\ast$buf, uint8\+\_\+t len)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a6fc7da02296e9f91908e89438ba67901}{Read\+Register} (uint8\+\_\+t reg)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_ac7d69c51eca87f16fa3a30b5e8aa85cb}{Write\+Registers} (uint8\+\_\+t reg, const uint8\+\_\+t $\ast$buf, uint8\+\_\+t len)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_abfaaa54aff7ce60c4c844dd540c47af5}{Write\+Register} (uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a9abae657dc54d97b6eb63f33c83e9f59}{Write\+Payload} (const void $\ast$buf, uint8\+\_\+t len, const uint8\+\_\+t write\+Type)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_ad733911b261f73964817dad526745716}{Read\+Payload} (void $\ast$buf, uint8\+\_\+t len)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a83cfc941bafe563f38e183504ee8533c}{Flush\+Rx} (void)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a95faa729cb8245516e9eb0248c6d9b0f}{get\+Status} (void)
+\item 
+void \hyperlink{classNRF24L01_aceeaa16f91d7c5fd6a429a6adf678bd4}{Toggle\+Features} (void)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_ab604b1e177e4812e33ebc39287503197}{spi\+Trans} (uint8\+\_\+t cmd)
+\item 
+\hyperlink{classNRF24L01_ad796eb9996a6b528534d1ac2ae2d37cd}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((gnu\+\_\+inline)) void delay\+\_\+us(uint16\+\_\+t delay)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classNRF24L01_a42ef1a6d858a115327d0a7310aaba57c}{N\+R\+F24\+L01\+\_\+\+D\+DR}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a56a20345fcb667fcfc9bc1cb62d5152f}{N\+R\+F24\+L01\+\_\+\+CE}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a4d36b61597b9919dd4a0ecdc53526020}{N\+R\+F24\+L01\+\_\+\+C\+SN}
+\item 
+uint16\+\_\+t \hyperlink{classNRF24L01_a4701641c1e8b3d082deb03f93c84d8c7}{spi\+\_\+speed}
+\item 
+bool \hyperlink{classNRF24L01_a082a99d802a3f2335da94e67cf8440ea}{p\+\_\+variant}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a2f5e84525760899949446db94d225700}{N\+R\+F24\+L01\+\_\+\+CH}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a6f035e7c49d8ed5e1ab84242cef0e9be}{N\+R\+F24\+L01\+\_\+\+P\+A\+Y\+L\+O\+AD}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_af2e0a88f330c86d0cc6c43180f70ecbd}{N\+R\+F24\+L01\+\_\+\+A\+CK}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a10c710f3795c47ebde120ca3d975c891}{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P0}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a8ebd82a57efbaa5928a56ba6780740de}{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P1}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_aac40f597790cf3a62b382f919f1293ce}{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P2}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_aea0d090c7d6da9b137ce4ce3690535e8}{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P3}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a4f19e32ed3324724d3478b9f841a2790}{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P4}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_ae77cf1829f80c703e36ef57b6d23e9a9}{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P5}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a0b5c60487c6b715b9f17f968f7958d93}{N\+R\+F24\+L01\+\_\+\+A\+D\+D\+R\+S\+I\+ZE}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_af836ff0a915587aa40b5eabe4101ea4c}{pipe0\+\_\+reading\+\_\+address} \mbox{[}5\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_ac798ba6ce52fd4a13eb40ff274818157}{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+PA}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a2dc0073a56f6aca86da205dd720fd132}{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+S\+P\+E\+ED}
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_af6a260dd55ee5c2f7de7cfac4e91178d}{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+C\+RC}
+\item 
+bool \hyperlink{classNRF24L01_ae319d1b6a3d950888d2608cc69efb07c}{dynamic\+\_\+payloads\+\_\+enabled}
+\end{DoxyCompactItemize}
+\subsection*{Advanced Operation}
+\label{_amgrpaf32cf1216e734b82e2b52429dae0bf6}%
+ Methods you can use to drive the chip in more advanced ways \begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classNRF24L01_a749f38c45c00905b3d8e8c180626bff6}{failure\+Detected}
+\item 
+void \hyperlink{classNRF24L01_ae5c878a568b54ba045a99b9de377b13b}{print\+Details} (void)
+\item 
+bool \hyperlink{classNRF24L01_a6bfbb693418e2d60556637b6a3599d05}{available} (uint8\+\_\+t $\ast$pipe\+\_\+num)
+\item 
+bool \hyperlink{classNRF24L01_aebd4d389685333013b4bd12662c0b411}{rx\+Fifo\+Full} ()
+\item 
+void \hyperlink{classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82}{power\+Down} (void)
+\item 
+void \hyperlink{classNRF24L01_a8e184a0a6ca30fbae69c1331a567deda}{power\+Up} (void)
+\item 
+bool \hyperlink{classNRF24L01_af59b3fd7aece1ae295a2e634a57d2b02}{write} (const void $\ast$buf, uint8\+\_\+t len, const bool multicast)
+\item 
+bool \hyperlink{classNRF24L01_a693f48de67c8b11ed5860dc481fcfc99}{write\+Fast} (const void $\ast$buf, uint8\+\_\+t len)
+\item 
+bool \hyperlink{classNRF24L01_a094a978ed0c7da890c90351bd945fabe}{write\+Fast} (const void $\ast$buf, uint8\+\_\+t len, const bool multicast)
+\item 
+bool \hyperlink{classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84}{write\+Blocking} (const void $\ast$buf, uint8\+\_\+t len, uint32\+\_\+t timeout)
+\item 
+bool \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{tx\+Stand\+By} ()
+\item 
+bool \hyperlink{classNRF24L01_a9351f4bff2196c4f69623f636de7c6a4}{tx\+Stand\+By} (uint32\+\_\+t timeout, bool start\+Tx=0)
+\item 
+void \hyperlink{classNRF24L01_ae0f4b84a244463e8e594d238a71140c5}{write\+Ack\+Payload} (uint8\+\_\+t pipe, const void $\ast$buf, uint8\+\_\+t len)
+\item 
+bool \hyperlink{classNRF24L01_a99aae87d62d5097447305d66a0b3281d}{is\+Ack\+Payload\+Available} (void)
+\item 
+void \hyperlink{classNRF24L01_ad98d10f3759d41e565397aba824d121b}{what\+Happened} (bool \&tx\+\_\+ok, bool \&tx\+\_\+fail, bool \&rx\+\_\+ready)
+\item 
+void \hyperlink{classNRF24L01_ab1ca9025a8740bc38ad5dd7a427e2d4f}{start\+Fast\+Write} (const void $\ast$buf, uint8\+\_\+t len, const bool multicast, bool start\+Tx=1)
+\item 
+void \hyperlink{classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2}{start\+Write} (const void $\ast$buf, uint8\+\_\+t len, const bool multicast)
+\item 
+void \hyperlink{classNRF24L01_ad0797d9c6f8ecd9619c9e48168571a01}{re\+Use\+TX} ()
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_ab40eeb5ca2337c5f15992f29ee3b5b18}{Flush\+Tx} (void)
+\item 
+bool \hyperlink{classNRF24L01_a5e934f8f7d37245264ad16e3c360eca7}{test\+Carrier} (void)
+\item 
+bool \hyperlink{classNRF24L01_abf1d84ed988aa6c7925ebb712b7c7f60}{test\+R\+PD} (void)
+\item 
+bool \hyperlink{classNRF24L01_aaddabe35ed60f03a2fb2fb475a3cafb5}{is\+Valid} ()
+\item 
+void \hyperlink{classNRF24L01_a7214eaa3fcd3b6576d8f290e6ab71955}{close\+Reading\+Pipe} (uint8\+\_\+t pipe)
+\end{DoxyCompactItemize}
+\subsection*{Optional Configurators}
+\label{_amgrpe1a83b99ec8153e5baf680edeeed1586}%
+ Methods you can use to get or set the configuration of the chip. None are required. Calling begin() sets up a reasonable set of defaults. \begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{classNRF24L01_a1feaab910ecff17805f8141fe40028e7}{tx\+Delay}
+\item 
+uint32\+\_\+t \hyperlink{classNRF24L01_abae8b8afbf747344006d6163c607be00}{cs\+Delay}
+\item 
+\hyperlink{classSPI}{S\+PI} \hyperlink{classNRF24L01_a6321af25fee367445baa6ab4840f8443}{spi}
+\item 
+void \hyperlink{classNRF24L01_a17752733515f67aa9f6ed3daa1ed3d1d}{set\+Address\+Width} (uint8\+\_\+t a\+\_\+width)
+\item 
+void \hyperlink{classNRF24L01_a0bb209d94b62e2a28af53179af713f3c}{set\+Retries} (uint8\+\_\+t delay, uint8\+\_\+t count)
+\item 
+void \hyperlink{classNRF24L01_aa8eaf9d5ed604f60a00cd79fed9edad7}{set\+Channel} (uint8\+\_\+t channel)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a6b269b519d57d54d0682a29ce9036b12}{get\+Channel} (void)
+\item 
+void \hyperlink{classNRF24L01_abe5983a57d0d3bd77508e5345774c890}{set\+Payload\+Size} (uint8\+\_\+t size)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a4a7f48ca92e14baabd8be1c0831e8c2f}{get\+Payload\+Size} (void)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a0d0cd5dd09d60e06280f378166725d64}{get\+Dynamic\+Payload\+Size} (void)
+\item 
+void \hyperlink{classNRF24L01_ae4067455572c6731211315b3900f5cbd}{enable\+Ack\+Payload} (void)
+\item 
+void \hyperlink{classNRF24L01_abd060c4df7efac781ed5812a0ee19d08}{enable\+Dynamic\+Payloads} (void)
+\item 
+void \hyperlink{classNRF24L01_abf6bf0c18b2b12674cfbc150a2bdb778}{disable\+Dynamic\+Payloads} (void)
+\item 
+void \hyperlink{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344}{enable\+Dynamic\+Ack} ()
+\item 
+bool \hyperlink{classNRF24L01_ad05024c9586c1dc76c2fd95d54ce6b4c}{is\+P\+Variant} (void)
+\item 
+void \hyperlink{classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8}{set\+Auto\+Ack} (bool enable)
+\item 
+void \hyperlink{classNRF24L01_a79cab6f958c8d9e18273d7c4750480fd}{set\+Auto\+Ack} (uint8\+\_\+t pipe, bool enable)
+\item 
+void \hyperlink{classNRF24L01_a7319961d6048e32546ad5df934bd42d8}{set\+P\+A\+Level} (uint8\+\_\+t level)
+\item 
+uint8\+\_\+t \hyperlink{classNRF24L01_a8fdb80b79100186afad90d9a2a5c79fb}{get\+P\+A\+Level} (void)
+\item 
+bool \hyperlink{classNRF24L01_a9db0803c6d87e6ada7febea2240a7b1c}{set\+Data\+Rate} (uint8\+\_\+t speed)
+\item 
+\hyperlink{NRF24L01_8h_a82745de4aa1251b7561564b3ed1d6522}{rf24\+\_\+datarate\+\_\+e} \hyperlink{classNRF24L01_a6184de85c94400cde96b7f83b316efa8}{get\+Data\+Rate} (void)
+\item 
+void \hyperlink{classNRF24L01_a6081dd6dd9cdffbc1c7534ee1824201d}{set\+C\+R\+C\+Length} (uint8\+\_\+t length)
+\item 
+\hyperlink{NRF24L01_8h_adbe00719f3f835c82bd007081d040a7e}{rf24\+\_\+crclength\+\_\+e} \hyperlink{classNRF24L01_ac83fb86df156475aeda2ef637078fcd3}{get\+C\+R\+C\+Length} (void)
+\item 
+void \hyperlink{classNRF24L01_a1e997f3c946acdbe8bd622e431f80034}{disable\+C\+RC} (void)
+\item 
+void \hyperlink{classNRF24L01_ad23d4111c3a26d18db51eb72a5491dbb}{mask\+I\+RQ} (bool tx\+\_\+ok, bool tx\+\_\+fail, bool rx\+\_\+ready)
+\item 
+void \hyperlink{classNRF24L01_a02c91592a6c762c1a4e86252f8958bd6}{open\+Reading\+Pipe} (uint8\+\_\+t number, uint64\+\_\+t address)
+\item 
+void \hyperlink{classNRF24L01_a0fe37f8ff95b7c562ad1fc277890e29a}{open\+Writing\+Pipe} (uint64\+\_\+t address)
+\item 
+void \hyperlink{classNRF24L01_ad311ef5130c99ab8ddca292adfe76603}{delay\+\_\+ms} (uint16\+\_\+t ms)
+\item 
+void \hyperlink{classNRF24L01_a958fa3e8a0457c0c655b9652ee9dbad4}{C\+S\+N\+\_\+\+H\+I\+GH} ()
+\item 
+void \hyperlink{classNRF24L01_acffaad2c6b5e3713f7fe6af22d4553ef}{C\+S\+N\+\_\+\+L\+OW} ()
+\item 
+void \hyperlink{classNRF24L01_a85274c10cbe6317796a209913bfb0253}{C\+E\+\_\+\+H\+I\+GH} ()
+\item 
+void \hyperlink{classNRF24L01_aa5e261363986c590c90e7cb2adc2d75d}{C\+E\+\_\+\+L\+OW} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Driver for n\+R\+F24\+L01(+) 2.\+4\+G\+Hz Wireless Transceiver 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01()}{NRF24L01()}}]{\setlength{\rightskip}{0pt plus 5cm}N\+R\+F24\+L01\+::\+N\+R\+F24\+L01 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ad3e6263e0afaa974637d1450b6c8cb37}{}\label{classNRF24L01_ad3e6263e0afaa974637d1450b6c8cb37}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ad3e6263e0afaa974637d1450b6c8cb37_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01(volatile uint8\+\_\+t \&\+D\+D\+R, volatile uint8\+\_\+t \&\+P\+O\+R\+T, uint8\+\_\+t C\+E, uint8\+\_\+t C\+S\+N)}{NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, uint8_t CSN)}}]{\setlength{\rightskip}{0pt plus 5cm}N\+R\+F24\+L01\+::\+N\+R\+F24\+L01 (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t \&}]{D\+DR, }
+\item[{volatile uint8\+\_\+t \&}]{P\+O\+RT, }
+\item[{uint8\+\_\+t}]{CE, }
+\item[{uint8\+\_\+t}]{C\+SN}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a8e2cc2ca751ff3bd4ea351bd2fcea93e}{}\label{classNRF24L01_a8e2cc2ca751ff3bd4ea351bd2fcea93e}
+
+
+\subsection{Member Function Documentation}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+((gnu\+\_\+inline)) void delay\+\_\+us(uint16\+\_\+t delay)}{__attribute__((gnu_inline)) void delay_us(uint16_t delay)}}]{\setlength{\rightskip}{0pt plus 5cm}N\+R\+F24\+L01\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(gnu\+\_\+inline)}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classNRF24L01_ad796eb9996a6b528534d1ac2ae2d37cd}{}\label{classNRF24L01_ad796eb9996a6b528534d1ac2ae2d37cd}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!available@{available}}
+\index{available@{available}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{available()}{available()}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::available (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ab368039cf5448f0ff5d489563d530c7b}{}\label{classNRF24L01_ab368039cf5448f0ff5d489563d530c7b}
+Check whether there are bytes available to be read 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(radio.available())\{
+  radio.read(&data,\textcolor{keyword}{sizeof}(data));
+\}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+True if there is a payload available, false if none is 
+\end{DoxyReturn}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!available@{available}}
+\index{available@{available}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{available(uint8\+\_\+t $\ast$pipe\+\_\+num)}{available(uint8_t *pipe_num)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::available (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{pipe\+\_\+num}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a6bfbb693418e2d60556637b6a3599d05}{}\label{classNRF24L01_a6bfbb693418e2d60556637b6a3599d05}
+Test whether there are bytes available to be read in the F\+I\+FO buffers.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em pipe\+\_\+num} & Which pipe has the payload available\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+uint8\_t pipeNum;
+\textcolor{keywordflow}{if}(radio.available(&pipeNum))\{
+  radio.read(&data,\textcolor{keyword}{sizeof}(data));
+  Serial.print(\textcolor{stringliteral}{"Got data on pipe"});
+  Serial.println(pipeNum);
+\}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+True if there is a payload available, false if none is 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a6bfbb693418e2d60556637b6a3599d05_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!C\+E\+\_\+\+H\+I\+GH@{C\+E\+\_\+\+H\+I\+GH}}
+\index{C\+E\+\_\+\+H\+I\+GH@{C\+E\+\_\+\+H\+I\+GH}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{C\+E\+\_\+\+H\+I\+G\+H()}{CE_HIGH()}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::\+C\+E\+\_\+\+H\+I\+GH (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classNRF24L01_a85274c10cbe6317796a209913bfb0253}{}\label{classNRF24L01_a85274c10cbe6317796a209913bfb0253}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!C\+E\+\_\+\+L\+OW@{C\+E\+\_\+\+L\+OW}}
+\index{C\+E\+\_\+\+L\+OW@{C\+E\+\_\+\+L\+OW}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{C\+E\+\_\+\+L\+O\+W()}{CE_LOW()}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::\+C\+E\+\_\+\+L\+OW (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classNRF24L01_aa5e261363986c590c90e7cb2adc2d75d}{}\label{classNRF24L01_aa5e261363986c590c90e7cb2adc2d75d}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_aa5e261363986c590c90e7cb2adc2d75d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!close\+Reading\+Pipe@{close\+Reading\+Pipe}}
+\index{close\+Reading\+Pipe@{close\+Reading\+Pipe}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{close\+Reading\+Pipe(uint8\+\_\+t pipe)}{closeReadingPipe(uint8_t pipe)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::close\+Reading\+Pipe (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{pipe}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a7214eaa3fcd3b6576d8f290e6ab71955}{}\label{classNRF24L01_a7214eaa3fcd3b6576d8f290e6ab71955}
+Close a pipe after it has been previously opened. Can be safely called without having previously opened a pipe. 
+\begin{DoxyParams}{Parameters}
+{\em pipe} & Which pipe \# to close, 0-\/5. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a7214eaa3fcd3b6576d8f290e6ab71955_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!C\+S\+N\+\_\+\+H\+I\+GH@{C\+S\+N\+\_\+\+H\+I\+GH}}
+\index{C\+S\+N\+\_\+\+H\+I\+GH@{C\+S\+N\+\_\+\+H\+I\+GH}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{C\+S\+N\+\_\+\+H\+I\+G\+H()}{CSN_HIGH()}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::\+C\+S\+N\+\_\+\+H\+I\+GH (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classNRF24L01_a958fa3e8a0457c0c655b9652ee9dbad4}{}\label{classNRF24L01_a958fa3e8a0457c0c655b9652ee9dbad4}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!C\+S\+N\+\_\+\+L\+OW@{C\+S\+N\+\_\+\+L\+OW}}
+\index{C\+S\+N\+\_\+\+L\+OW@{C\+S\+N\+\_\+\+L\+OW}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{C\+S\+N\+\_\+\+L\+O\+W()}{CSN_LOW()}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::\+C\+S\+N\+\_\+\+L\+OW (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classNRF24L01_acffaad2c6b5e3713f7fe6af22d4553ef}{}\label{classNRF24L01_acffaad2c6b5e3713f7fe6af22d4553ef}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!delay\+\_\+ms@{delay\+\_\+ms}}
+\index{delay\+\_\+ms@{delay\+\_\+ms}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{delay\+\_\+ms(uint16\+\_\+t ms)}{delay_ms(uint16_t ms)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::delay\+\_\+ms (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{ms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classNRF24L01_ad311ef5130c99ab8ddca292adfe76603}{}\label{classNRF24L01_ad311ef5130c99ab8ddca292adfe76603}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!disable\+C\+RC@{disable\+C\+RC}}
+\index{disable\+C\+RC@{disable\+C\+RC}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{disable\+C\+R\+C(void)}{disableCRC(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::disable\+C\+RC (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a1e997f3c946acdbe8bd622e431f80034}{}\label{classNRF24L01_a1e997f3c946acdbe8bd622e431f80034}
+Disable C\+RC validation
+
+\begin{DoxyWarning}{Warning}
+C\+RC cannot be disabled if auto-\/ack/\+E\+SB is enabled. 
+\end{DoxyWarning}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a1e997f3c946acdbe8bd622e431f80034_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!disable\+Dynamic\+Payloads@{disable\+Dynamic\+Payloads}}
+\index{disable\+Dynamic\+Payloads@{disable\+Dynamic\+Payloads}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{disable\+Dynamic\+Payloads(void)}{disableDynamicPayloads(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::disable\+Dynamic\+Payloads (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_abf6bf0c18b2b12674cfbc150a2bdb778}{}\label{classNRF24L01_abf6bf0c18b2b12674cfbc150a2bdb778}
+Disable dynamically-\/sized payloads
+
+This disables dynamic payloads on A\+LL pipes. Since Ack Payloads requires Dynamic Payloads, Ack Payloads are also disabled. If dynamic payloads are later re-\/enabled and ack payloads are desired then \hyperlink{classNRF24L01_ae4067455572c6731211315b3900f5cbd}{enable\+Ack\+Payload()} must be called again as well. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_abf6bf0c18b2b12674cfbc150a2bdb778_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!enable\+Ack\+Payload@{enable\+Ack\+Payload}}
+\index{enable\+Ack\+Payload@{enable\+Ack\+Payload}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{enable\+Ack\+Payload(void)}{enableAckPayload(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::enable\+Ack\+Payload (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ae4067455572c6731211315b3900f5cbd}{}\label{classNRF24L01_ae4067455572c6731211315b3900f5cbd}
+Enable custom payloads on the acknowledge packets
+
+Ack payloads are a handy way to return data back to senders without manually changing the radio modes on both units.
+
+\begin{DoxyNote}{Note}
+Ack payloads are dynamic payloads. This only works on pipes 0\&1 by default. Call \hyperlink{classNRF24L01_abd060c4df7efac781ed5812a0ee19d08}{enable\+Dynamic\+Payloads()} to enable on all pipes. 
+\end{DoxyNote}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ae4067455572c6731211315b3900f5cbd_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!enable\+Dynamic\+Ack@{enable\+Dynamic\+Ack}}
+\index{enable\+Dynamic\+Ack@{enable\+Dynamic\+Ack}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{enable\+Dynamic\+Ack()}{enableDynamicAck()}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::enable\+Dynamic\+Ack (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344}{}\label{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344}
+Enable dynamic A\+C\+Ks (single write multicast or unicast) for chosen messages
+
+\begin{DoxyNote}{Note}
+To enable full multicast or per-\/pipe multicast, use \hyperlink{classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8}{set\+Auto\+Ack()}
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+This M\+U\+ST be called prior to attempting single write N\+O\+A\+CK calls 
+\begin{DoxyCode}
+radio.enableDynamicAck();
+radio.write(&data,32,1);  \textcolor{comment}{// Sends a payload with no acknowledgement requested}
+radio.write(&data,32,0);  \textcolor{comment}{// Sends a payload using auto-retry/autoACK}
+\end{DoxyCode}
+ 
+\end{DoxyWarning}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!enable\+Dynamic\+Payloads@{enable\+Dynamic\+Payloads}}
+\index{enable\+Dynamic\+Payloads@{enable\+Dynamic\+Payloads}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{enable\+Dynamic\+Payloads(void)}{enableDynamicPayloads(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::enable\+Dynamic\+Payloads (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_abd060c4df7efac781ed5812a0ee19d08}{}\label{classNRF24L01_abd060c4df7efac781ed5812a0ee19d08}
+Enable dynamically-\/sized payloads
+
+This way you don\textquotesingle{}t always have to send large packets just to send them once in a while. This enables dynamic payloads on A\+LL pipes. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_abd060c4df7efac781ed5812a0ee19d08_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Flush\+Rx@{Flush\+Rx}}
+\index{Flush\+Rx@{Flush\+Rx}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Flush\+Rx(void)}{FlushRx(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+Flush\+Rx (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a83cfc941bafe563f38e183504ee8533c}{}\label{classNRF24L01_a83cfc941bafe563f38e183504ee8533c}
+Empty the receive buffer
+
+\begin{DoxyReturn}{Returns}
+Current value of status register 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a83cfc941bafe563f38e183504ee8533c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Flush\+Tx@{Flush\+Tx}}
+\index{Flush\+Tx@{Flush\+Tx}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Flush\+Tx(void)}{FlushTx(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+Flush\+Tx (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ab40eeb5ca2337c5f15992f29ee3b5b18}{}\label{classNRF24L01_ab40eeb5ca2337c5f15992f29ee3b5b18}
+Empty the transmit buffer. This is generally not required in standard operation. May be required in specific cases after \hyperlink{classNRF24L01_a6ad13189b732f237ac148c659ddf6b01}{stop\+Listening()} , if operating at 250\+K\+B\+PS data rate.
+
+\begin{DoxyReturn}{Returns}
+Current value of status register 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ab40eeb5ca2337c5f15992f29ee3b5b18_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!get\+Channel@{get\+Channel}}
+\index{get\+Channel@{get\+Channel}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{get\+Channel(void)}{getChannel(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::get\+Channel (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a6b269b519d57d54d0682a29ce9036b12}{}\label{classNRF24L01_a6b269b519d57d54d0682a29ce9036b12}
+Get RF communication channel
+
+\begin{DoxyReturn}{Returns}
+The currently configured RF Channel 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a6b269b519d57d54d0682a29ce9036b12_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!get\+C\+R\+C\+Length@{get\+C\+R\+C\+Length}}
+\index{get\+C\+R\+C\+Length@{get\+C\+R\+C\+Length}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{get\+C\+R\+C\+Length(void)}{getCRCLength(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rf24\+\_\+crclength\+\_\+e} N\+R\+F24\+L01\+::get\+C\+R\+C\+Length (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ac83fb86df156475aeda2ef637078fcd3}{}\label{classNRF24L01_ac83fb86df156475aeda2ef637078fcd3}
+Get the C\+RC length ~\newline
+C\+RC checking cannot be disabled if auto-\/ack is enabled \begin{DoxyReturn}{Returns}
+R\+F24\+\_\+\+C\+R\+C\+\_\+\+D\+I\+S\+A\+B\+L\+ED if disabled or R\+F24\+\_\+\+C\+R\+C\+\_\+8 for 8-\/bit or R\+F24\+\_\+\+C\+R\+C\+\_\+16 for 16-\/bit 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ac83fb86df156475aeda2ef637078fcd3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!get\+Data\+Rate@{get\+Data\+Rate}}
+\index{get\+Data\+Rate@{get\+Data\+Rate}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{get\+Data\+Rate(void)}{getDataRate(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rf24\+\_\+datarate\+\_\+e} N\+R\+F24\+L01\+::get\+Data\+Rate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a6184de85c94400cde96b7f83b316efa8}{}\label{classNRF24L01_a6184de85c94400cde96b7f83b316efa8}
+Fetches the transmission data rate
+
+\begin{DoxyReturn}{Returns}
+Returns the hardware\textquotesingle{}s currently configured datarate. The value is one of 250kbs, R\+F24\+\_\+1\+M\+B\+PS for 1\+Mbps, or R\+F24\+\_\+2\+M\+B\+PS, as defined in the rf24\+\_\+datarate\+\_\+e enum. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a6184de85c94400cde96b7f83b316efa8_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!get\+Dynamic\+Payload\+Size@{get\+Dynamic\+Payload\+Size}}
+\index{get\+Dynamic\+Payload\+Size@{get\+Dynamic\+Payload\+Size}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{get\+Dynamic\+Payload\+Size(void)}{getDynamicPayloadSize(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::get\+Dynamic\+Payload\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a0d0cd5dd09d60e06280f378166725d64}{}\label{classNRF24L01_a0d0cd5dd09d60e06280f378166725d64}
+Get Dynamic Payload Size
+
+For dynamic payloads, this pulls the size of the payload off the chip
+
+\begin{DoxyNote}{Note}
+Corrupt packets are now detected and flushed per the manufacturer. 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(radio.available())\{
+  \textcolor{keywordflow}{if}(radio.getDynamicPayloadSize() < 1)\{
+    \textcolor{comment}{// Corrupt payload has been flushed}
+    \textcolor{keywordflow}{return};
+  \}
+  radio.read(&data,\textcolor{keyword}{sizeof}(data));
+\}
+\end{DoxyCode}
+
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Payload length of last-\/received dynamic payload 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a0d0cd5dd09d60e06280f378166725d64_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!get\+P\+A\+Level@{get\+P\+A\+Level}}
+\index{get\+P\+A\+Level@{get\+P\+A\+Level}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{get\+P\+A\+Level(void)}{getPALevel(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::get\+P\+A\+Level (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a8fdb80b79100186afad90d9a2a5c79fb}{}\label{classNRF24L01_a8fdb80b79100186afad90d9a2a5c79fb}
+Fetches the current PA level.
+
+\hyperlink{classNRF24L01}{N\+R\+F24\+L01}\+: -\/18d\+Bm, -\/12d\+Bm, -\/6d\+Bm and 0d\+Bm S\+I24\+R1\+: -\/6d\+Bm, 0d\+Bm, 3d\+Bm, 7d\+Bm
+
+\begin{DoxyReturn}{Returns}
+Returns values 0 to 3 representing the PA Level. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a8fdb80b79100186afad90d9a2a5c79fb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!get\+Payload\+Size@{get\+Payload\+Size}}
+\index{get\+Payload\+Size@{get\+Payload\+Size}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{get\+Payload\+Size(void)}{getPayloadSize(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::get\+Payload\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a4a7f48ca92e14baabd8be1c0831e8c2f}{}\label{classNRF24L01_a4a7f48ca92e14baabd8be1c0831e8c2f}
+Get Static Payload Size
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_abe5983a57d0d3bd77508e5345774c890}{set\+Payload\+Size()}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The number of bytes in the payload 
+\end{DoxyReturn}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{get\+Status(void)}{getStatus(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::get\+Status (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a95faa729cb8245516e9eb0248c6d9b0f}{}\label{classNRF24L01_a95faa729cb8245516e9eb0248c6d9b0f}
+Retrieve the current status of the chip
+
+\begin{DoxyReturn}{Returns}
+Current value of status register 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a95faa729cb8245516e9eb0248c6d9b0f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Init@{Init}}
+\index{Init@{Init}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Init()}{Init()}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a2973773d1a158e1cfbf52198f248c548}{}\label{classNRF24L01_a2973773d1a158e1cfbf52198f248c548}
+Begin operation of the chip
+
+Call this in setup(), before calling any other methods. 
+\begin{DoxyCode}
+radio.Init() 
+\end{DoxyCode}
+ 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a2973773d1a158e1cfbf52198f248c548_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!is\+Ack\+Payload\+Available@{is\+Ack\+Payload\+Available}}
+\index{is\+Ack\+Payload\+Available@{is\+Ack\+Payload\+Available}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{is\+Ack\+Payload\+Available(void)}{isAckPayloadAvailable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::is\+Ack\+Payload\+Available (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a99aae87d62d5097447305d66a0b3281d}{}\label{classNRF24L01_a99aae87d62d5097447305d66a0b3281d}
+Determine if an ack payload was received in the most recent call to \hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()}. The regular \hyperlink{classNRF24L01_ab368039cf5448f0ff5d489563d530c7b}{available()} can also be used.
+
+Call \hyperlink{classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da}{read()} to retrieve the ack payload.
+
+\begin{DoxyReturn}{Returns}
+True if an ack payload is available. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a99aae87d62d5097447305d66a0b3281d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!is\+P\+Variant@{is\+P\+Variant}}
+\index{is\+P\+Variant@{is\+P\+Variant}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{is\+P\+Variant(void)}{isPVariant(void)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::is\+P\+Variant (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ad05024c9586c1dc76c2fd95d54ce6b4c}{}\label{classNRF24L01_ad05024c9586c1dc76c2fd95d54ce6b4c}
+Determine whether the hardware is an n\+R\+F24\+L01+ or not.
+
+\begin{DoxyReturn}{Returns}
+true if the hardware is n\+R\+F24\+L01+ (or compatible) and false if its not. 
+\end{DoxyReturn}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{is\+Valid()}{isValid()}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNRF24L01_aaddabe35ed60f03a2fb2fb475a3cafb5}{}\label{classNRF24L01_aaddabe35ed60f03a2fb2fb475a3cafb5}
+Test whether this is a real radio, or a mock shim for debugging. Setting either pin to 0xff is the way to indicate that this is not a real radio.
+
+\begin{DoxyReturn}{Returns}
+true if this is a legitimate radio 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_aaddabe35ed60f03a2fb2fb475a3cafb5_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!mask\+I\+RQ@{mask\+I\+RQ}}
+\index{mask\+I\+RQ@{mask\+I\+RQ}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{mask\+I\+R\+Q(bool tx\+\_\+ok, bool tx\+\_\+fail, bool rx\+\_\+ready)}{maskIRQ(bool tx_ok, bool tx_fail, bool rx_ready)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::mask\+I\+RQ (
+\begin{DoxyParamCaption}
+\item[{bool}]{tx, }
+\item[{bool}]{fail, }
+\item[{bool}]{rx}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ad23d4111c3a26d18db51eb72a5491dbb}{}\label{classNRF24L01_ad23d4111c3a26d18db51eb72a5491dbb}
+The radio will generate interrupt signals when a transmission is complete, a transmission fails, or a payload is received. This allows users to mask those interrupts to prevent them from generating a signal on the interrupt pin. Interrupts are enabled on the radio chip by default.
+
+
+\begin{DoxyCode}
+Mask all interrupts except the receive interrupt:
+
+radio.maskIRQ(1,1,0);
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+ok} & Mask transmission complete interrupts \\
+\hline
+{\em tx\+\_\+fail} & Mask transmit failure interrupts \\
+\hline
+{\em rx\+\_\+ready} & Mask payload received interrupts\\
+\hline
+\end{DoxyParams}
+bool \hyperlink{classNRF24L01_a9351f4bff2196c4f69623f636de7c6a4}{N\+R\+F24\+L01\+::tx\+Stand\+By(uint32\+\_\+t timeout, bool start\+Tx)}\{ \begin{DoxyVerb}if(startTx){
+  stopListening();
+  CE_HIGH();
+}
+uint32_t start = millis();
+
+while( ! (ReadRegister(NRF24L01_REG_FIFO_STATUS) & _BV(NRF24L01_REG_TX_EMPTY)) ){
+    if( GetStatus() & _BV(NRF24L01_REG_MAX_RT)){
+        WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MAX_RT) );
+        CE_LOW();                                     //Set re-transmit
+        CE_HIGH();
+            if(millis() - start >= timeout){
+                CE_LOW(); FlushTx(); return 0;
+            }
+    }
+
+}
+
+
+CE_LOW();                  //Set STANDBY-I mode
+return 1;
+\end{DoxyVerb}
+
+
+\} 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ad23d4111c3a26d18db51eb72a5491dbb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!open\+Reading\+Pipe@{open\+Reading\+Pipe}}
+\index{open\+Reading\+Pipe@{open\+Reading\+Pipe}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{open\+Reading\+Pipe(uint8\+\_\+t number, const uint8\+\_\+t $\ast$address)}{openReadingPipe(uint8_t number, const uint8_t *address)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::open\+Reading\+Pipe (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{number, }
+\item[{const uint8\+\_\+t $\ast$}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a9b458f77f6ae6c42f330710e703dd847}{}\label{classNRF24L01_a9b458f77f6ae6c42f330710e703dd847}
+Open a pipe for reading
+
+Up to 6 pipes can be open for reading at once. Open all the required reading pipes, and then call \hyperlink{classNRF24L01_aaabd39829998b609c0dc317af4f141b2}{start\+Listening()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_ad64a887cae746be5ca43cf08445feed9}{open\+Writing\+Pipe} 
+
+\hyperlink{classNRF24L01_a17752733515f67aa9f6ed3daa1ed3d1d}{set\+Address\+Width}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Pipes 0 and 1 will store a full 5-\/byte address. Pipes 2-\/5 will technically only store a single byte, borrowing up to 4 additional bytes from pipe \#1 per the assigned address width. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Pipes 1-\/5 should share the same address, except the first byte. Only the first byte in the array should be unique, e.\+g. 
+\begin{DoxyCode}
+uint8\_t addresses[][6] = \{\textcolor{stringliteral}{"1Node"},\textcolor{stringliteral}{"2Node"}\};
+\hyperlink{classNRF24L01_a9b458f77f6ae6c42f330710e703dd847}{openReadingPipe}(1,addresses[0]);
+\hyperlink{classNRF24L01_a9b458f77f6ae6c42f330710e703dd847}{openReadingPipe}(2,addresses[1]);
+\end{DoxyCode}
+
+
+Pipe 0 is also used by the writing pipe. So if you open pipe 0 for reading, and then \hyperlink{classNRF24L01_aaabd39829998b609c0dc317af4f141b2}{start\+Listening()}, it will overwrite the writing pipe. Ergo, do an \hyperlink{classNRF24L01_ad64a887cae746be5ca43cf08445feed9}{open\+Writing\+Pipe()} again before \hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()}.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Which pipe\# to open, 0-\/5. \\
+\hline
+{\em address} & The 24, 32 or 40 bit address of the pipe to open. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a9b458f77f6ae6c42f330710e703dd847_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!open\+Reading\+Pipe@{open\+Reading\+Pipe}}
+\index{open\+Reading\+Pipe@{open\+Reading\+Pipe}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{open\+Reading\+Pipe(uint8\+\_\+t number, uint64\+\_\+t address)}{openReadingPipe(uint8_t number, uint64_t address)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::open\+Reading\+Pipe (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{number, }
+\item[{uint64\+\_\+t}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a02c91592a6c762c1a4e86252f8958bd6}{}\label{classNRF24L01_a02c91592a6c762c1a4e86252f8958bd6}
+Open a pipe for reading \begin{DoxyNote}{Note}
+For compatibility with old code only, see new function
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Pipes 1-\/5 should share the first 32 bits. Only the least significant byte should be unique, e.\+g. 
+\begin{DoxyCode}
+\hyperlink{classNRF24L01_a9b458f77f6ae6c42f330710e703dd847}{openReadingPipe}(1,0xF0F0F0F0AA);
+\hyperlink{classNRF24L01_a9b458f77f6ae6c42f330710e703dd847}{openReadingPipe}(2,0xF0F0F0F066);
+\end{DoxyCode}
+
+
+Pipe 0 is also used by the writing pipe. So if you open pipe 0 for reading, and then \hyperlink{classNRF24L01_aaabd39829998b609c0dc317af4f141b2}{start\+Listening()}, it will overwrite the writing pipe. Ergo, do an \hyperlink{classNRF24L01_ad64a887cae746be5ca43cf08445feed9}{open\+Writing\+Pipe()} again before \hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()}.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Which pipe\# to open, 0-\/5. \\
+\hline
+{\em address} & The 40-\/bit address of the pipe to open. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a02c91592a6c762c1a4e86252f8958bd6_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!open\+Writing\+Pipe@{open\+Writing\+Pipe}}
+\index{open\+Writing\+Pipe@{open\+Writing\+Pipe}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{open\+Writing\+Pipe(const uint8\+\_\+t $\ast$address)}{openWritingPipe(const uint8_t *address)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::open\+Writing\+Pipe (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ad64a887cae746be5ca43cf08445feed9}{}\label{classNRF24L01_ad64a887cae746be5ca43cf08445feed9}
+New\+: Open a pipe for writing via byte array. Old addressing format retained for compatibility.
+
+Only one writing pipe can be open at once, but you can change the address you\textquotesingle{}ll write to. Call \hyperlink{classNRF24L01_a6ad13189b732f237ac148c659ddf6b01}{stop\+Listening()} first.
+
+Addresses are assigned via a byte array, default is 5 byte address lengths
+
+
+\begin{DoxyCode}
+uint8\_t addresses[][6] = \{\textcolor{stringliteral}{"1Node"},\textcolor{stringliteral}{"2Node"}\};
+radio.openWritingPipe(addresses[0]);
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+uint8\_t address[] = \{ 0xCC,0xCE,0xCC,0xCE,0xCC \};
+radio.openWritingPipe(address);
+address[0] = 0x33;
+radio.openReadingPipe(1,address);
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_a17752733515f67aa9f6ed3daa1ed3d1d}{set\+Address\+Width}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The address of the pipe to open. Coordinate these pipe addresses amongst nodes on the network. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ad64a887cae746be5ca43cf08445feed9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!open\+Writing\+Pipe@{open\+Writing\+Pipe}}
+\index{open\+Writing\+Pipe@{open\+Writing\+Pipe}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{open\+Writing\+Pipe(uint64\+\_\+t address)}{openWritingPipe(uint64_t address)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::open\+Writing\+Pipe (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a0fe37f8ff95b7c562ad1fc277890e29a}{}\label{classNRF24L01_a0fe37f8ff95b7c562ad1fc277890e29a}
+Open a pipe for writing \begin{DoxyNote}{Note}
+For compatibility with old code only, see new function
+\end{DoxyNote}
+Addresses are 40-\/bit hex values, e.\+g.\+:
+
+
+\begin{DoxyCode}
+\hyperlink{classNRF24L01_ad64a887cae746be5ca43cf08445feed9}{openWritingPipe}(0xF0F0F0F0F0);
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The 40-\/bit address of the pipe to open. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a0fe37f8ff95b7c562ad1fc277890e29a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!power\+Down@{power\+Down}}
+\index{power\+Down@{power\+Down}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{power\+Down(void)}{powerDown(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::power\+Down (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82}{}\label{classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82}
+Enter low-\/power mode
+
+To return to normal power mode, call \hyperlink{classNRF24L01_a8e184a0a6ca30fbae69c1331a567deda}{power\+Up()}.
+
+\begin{DoxyNote}{Note}
+After calling \hyperlink{classNRF24L01_aaabd39829998b609c0dc317af4f141b2}{start\+Listening()}, a basic radio will consume about 13.\+5mA at max PA level. During active transmission, the radio will consume about 11.\+5mA, but this will be reduced to 26uA (.026mA) between sending. In full power\+Down mode, the radio will consume approximately 900nA (.0009mA)
+\end{DoxyNote}
+
+\begin{DoxyCode}
+radio.powerDown();
+avr\_enter\_sleep\_mode(); \textcolor{comment}{// Custom function to sleep the device}
+radio.powerUp();
+\end{DoxyCode}
+ 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!power\+Up@{power\+Up}}
+\index{power\+Up@{power\+Up}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{power\+Up(void)}{powerUp(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::power\+Up (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a8e184a0a6ca30fbae69c1331a567deda}{}\label{classNRF24L01_a8e184a0a6ca30fbae69c1331a567deda}
+Leave low-\/power mode -\/ required for normal radio operation after calling \hyperlink{classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82}{power\+Down()}
+
+To return to low power mode, call \hyperlink{classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82}{power\+Down()}. \begin{DoxyNote}{Note}
+This will take up to 5ms for maximum compatibility 
+\end{DoxyNote}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a8e184a0a6ca30fbae69c1331a567deda_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!print\+Details@{print\+Details}}
+\index{print\+Details@{print\+Details}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{print\+Details(void)}{printDetails(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::print\+Details (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ae5c878a568b54ba045a99b9de377b13b}{}\label{classNRF24L01_ae5c878a568b54ba045a99b9de377b13b}
+Print a giant block of debugging information to stdout
+
+\begin{DoxyWarning}{Warning}
+Does nothing if stdout is not defined. See fdevopen in stdio.\+h The printf.\+h file is included with the library for Arduino. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <printf.h>}
+setup()\{
+ Serial.begin(115200);
+ printf\_begin();
+ ...
+\}
+\end{DoxyCode}
+ 
+\end{DoxyWarning}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!read@{read}}
+\index{read@{read}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{read(void $\ast$buf, uint8\+\_\+t len)}{read(void *buf, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::read (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da}{}\label{classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da}
+Read the available payload
+
+The size of data read is the fixed payload size, see \hyperlink{classNRF24L01_a4a7f48ca92e14baabd8be1c0831e8c2f}{get\+Payload\+Size()} 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to a buffer where the data should be written \\
+\hline
+{\em len} & Maximum number of bytes to read into the buffer\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(radio.available())\{
+  radio.read(&data,\textcolor{keyword}{sizeof}(data));
+\}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+No return value. Use \hyperlink{classNRF24L01_ab368039cf5448f0ff5d489563d530c7b}{available()}. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Read\+Payload@{Read\+Payload}}
+\index{Read\+Payload@{Read\+Payload}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Read\+Payload(void $\ast$buf, uint8\+\_\+t len)}{ReadPayload(void *buf, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+Read\+Payload (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_ad733911b261f73964817dad526745716}{}\label{classNRF24L01_ad733911b261f73964817dad526745716}
+Read the receive payload
+
+The size of data read is the fixed payload size, see \hyperlink{classNRF24L01_a4a7f48ca92e14baabd8be1c0831e8c2f}{get\+Payload\+Size()}
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Where to put the data \\
+\hline
+{\em len} & Maximum number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of status register 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ad733911b261f73964817dad526745716_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Read\+Register@{Read\+Register}}
+\index{Read\+Register@{Read\+Register}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Read\+Register(uint8\+\_\+t reg)}{ReadRegister(uint8_t reg)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+Read\+Register (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{reg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a6fc7da02296e9f91908e89438ba67901}{}\label{classNRF24L01_a6fc7da02296e9f91908e89438ba67901}
+Read single byte from a register
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Which register. Use constants from n\+R\+F24\+L01.\+h \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of register {\ttfamily reg} 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a6fc7da02296e9f91908e89438ba67901_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Read\+Registers@{Read\+Registers}}
+\index{Read\+Registers@{Read\+Registers}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Read\+Registers(uint8\+\_\+t reg, uint8\+\_\+t $\ast$buf, uint8\+\_\+t len)}{ReadRegisters(uint8_t reg, uint8_t *buf, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+Read\+Registers (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{reg, }
+\item[{uint8\+\_\+t $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a9766146f8b6bcab59e91e7545484c401}{}\label{classNRF24L01_a9766146f8b6bcab59e91e7545484c401}
+Read a chunk of data in from a register
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Which register. Use constants from n\+R\+F24\+L01.\+h \\
+\hline
+{\em buf} & Where to put the data \\
+\hline
+{\em len} & How many bytes of data to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of status register 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a9766146f8b6bcab59e91e7545484c401_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!re\+Use\+TX@{re\+Use\+TX}}
+\index{re\+Use\+TX@{re\+Use\+TX}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{re\+Use\+T\+X()}{reUseTX()}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::re\+Use\+TX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ad0797d9c6f8ecd9619c9e48168571a01}{}\label{classNRF24L01_ad0797d9c6f8ecd9619c9e48168571a01}
+This function is mainly used internally to take advantage of the auto payload re-\/use functionality of the chip, but can be beneficial to users as well.
+
+The function will instruct the radio to re-\/use the data in the F\+I\+FO buffers, and instructs the radio to re-\/send once the timeout limit has been reached. Used by write\+Fast and write\+Blocking to initiate retries when a TX failure occurs. Retries are automatically initiated except with the standard \hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()}. This way, data is not flushed from the buffer until switching between modes.
+
+\begin{DoxyNote}{Note}
+This is to be used A\+F\+T\+ER auto-\/retry fails if wanting to resend using the built-\/in payload reuse features. After issuing \hyperlink{classNRF24L01_ad0797d9c6f8ecd9619c9e48168571a01}{re\+Use\+T\+X()}, it will keep reending the same payload forever or until a payload is written to the F\+I\+FO, or a flush\+\_\+tx command is given. 
+\end{DoxyNote}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ad0797d9c6f8ecd9619c9e48168571a01_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!rx\+Fifo\+Full@{rx\+Fifo\+Full}}
+\index{rx\+Fifo\+Full@{rx\+Fifo\+Full}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{rx\+Fifo\+Full()}{rxFifoFull()}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::rx\+Fifo\+Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_aebd4d389685333013b4bd12662c0b411}{}\label{classNRF24L01_aebd4d389685333013b4bd12662c0b411}
+Check if the radio needs to be read. Can be used to prevent data loss \begin{DoxyReturn}{Returns}
+True if all three 32-\/byte radio buffers are full 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_aebd4d389685333013b4bd12662c0b411_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!set\+Address\+Width@{set\+Address\+Width}}
+\index{set\+Address\+Width@{set\+Address\+Width}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{set\+Address\+Width(uint8\+\_\+t a\+\_\+width)}{setAddressWidth(uint8_t a_width)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::set\+Address\+Width (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{a\+\_\+width}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a17752733515f67aa9f6ed3daa1ed3d1d}{}\label{classNRF24L01_a17752733515f67aa9f6ed3daa1ed3d1d}
+Set the address width from 3 to 5 bytes (24, 32 or 40 bit)
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+width} & The address width to use\+: 3,4 or 5 \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a17752733515f67aa9f6ed3daa1ed3d1d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!set\+Auto\+Ack@{set\+Auto\+Ack}}
+\index{set\+Auto\+Ack@{set\+Auto\+Ack}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{set\+Auto\+Ack(bool enable)}{setAutoAck(bool enable)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::set\+Auto\+Ack (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8}{}\label{classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8}
+Enable or disable auto-\/acknowlede packets
+
+This is enabled by default, so it\textquotesingle{}s only needed if you want to turn it off for some reason.
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & Whether to enable (true) or disable (false) auto-\/acks \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!set\+Auto\+Ack@{set\+Auto\+Ack}}
+\index{set\+Auto\+Ack@{set\+Auto\+Ack}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{set\+Auto\+Ack(uint8\+\_\+t pipe, bool enable)}{setAutoAck(uint8_t pipe, bool enable)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::set\+Auto\+Ack (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{pipe, }
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a79cab6f958c8d9e18273d7c4750480fd}{}\label{classNRF24L01_a79cab6f958c8d9e18273d7c4750480fd}
+Enable or disable auto-\/acknowlede packets on a per pipeline basis.
+
+AA is enabled by default, so it\textquotesingle{}s only needed if you want to turn it off/on for some reason on a per pipeline basis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipe} & Which pipeline to modify \\
+\hline
+{\em enable} & Whether to enable (true) or disable (false) auto-\/acks \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a79cab6f958c8d9e18273d7c4750480fd_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!set\+Channel@{set\+Channel}}
+\index{set\+Channel@{set\+Channel}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{set\+Channel(uint8\+\_\+t channel)}{setChannel(uint8_t channel)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::set\+Channel (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{channel}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_aa8eaf9d5ed604f60a00cd79fed9edad7}{}\label{classNRF24L01_aa8eaf9d5ed604f60a00cd79fed9edad7}
+Set RF communication channel
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Which RF channel to communicate on, 0-\/125 \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_aa8eaf9d5ed604f60a00cd79fed9edad7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!set\+C\+R\+C\+Length@{set\+C\+R\+C\+Length}}
+\index{set\+C\+R\+C\+Length@{set\+C\+R\+C\+Length}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{set\+C\+R\+C\+Length(uint8\+\_\+t length)}{setCRCLength(uint8_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::set\+C\+R\+C\+Length (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a6081dd6dd9cdffbc1c7534ee1824201d}{}\label{classNRF24L01_a6081dd6dd9cdffbc1c7534ee1824201d}
+Set the C\+RC length ~\newline
+C\+RC checking cannot be disabled if auto-\/ack is enabled 
+\begin{DoxyParams}{Parameters}
+{\em length} & R\+F24\+\_\+\+C\+R\+C\+\_\+8 for 8-\/bit or R\+F24\+\_\+\+C\+R\+C\+\_\+16 for 16-\/bit \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a6081dd6dd9cdffbc1c7534ee1824201d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!set\+Data\+Rate@{set\+Data\+Rate}}
+\index{set\+Data\+Rate@{set\+Data\+Rate}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{set\+Data\+Rate(uint8\+\_\+t speed)}{setDataRate(uint8_t speed)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::set\+Data\+Rate (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{speed}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a9db0803c6d87e6ada7febea2240a7b1c}{}\label{classNRF24L01_a9db0803c6d87e6ada7febea2240a7b1c}
+Set the transmission data rate
+
+\begin{DoxyWarning}{Warning}
+setting R\+F24\+\_\+250\+K\+B\+PS will fail for non-\/plus units
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & R\+F24\+\_\+250\+K\+B\+PS for 250kbs, R\+F24\+\_\+1\+M\+B\+PS for 1\+Mbps, or R\+F24\+\_\+2\+M\+B\+PS for 2\+Mbps \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the change was successful 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a9db0803c6d87e6ada7febea2240a7b1c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!set\+P\+A\+Level@{set\+P\+A\+Level}}
+\index{set\+P\+A\+Level@{set\+P\+A\+Level}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{set\+P\+A\+Level(uint8\+\_\+t level)}{setPALevel(uint8_t level)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::set\+P\+A\+Level (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{level}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a7319961d6048e32546ad5df934bd42d8}{}\label{classNRF24L01_a7319961d6048e32546ad5df934bd42d8}
+Set Power Amplifier (PA) level to one of four levels\+: R\+F24\+\_\+\+P\+A\+\_\+\+M\+IN, R\+F24\+\_\+\+P\+A\+\_\+\+L\+OW, R\+F24\+\_\+\+P\+A\+\_\+\+H\+I\+GH and R\+F24\+\_\+\+P\+A\+\_\+\+M\+AX
+
+The power levels correspond to the following output levels respectively\+: \hyperlink{classNRF24L01}{N\+R\+F24\+L01}\+: -\/18d\+Bm, -\/12d\+Bm,-\/6d\+BM, and 0d\+Bm
+
+S\+I24\+R1\+: -\/6d\+Bm, 0d\+Bm, 3d\+BM, and 7d\+Bm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Desired PA level. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a7319961d6048e32546ad5df934bd42d8_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!set\+Payload\+Size@{set\+Payload\+Size}}
+\index{set\+Payload\+Size@{set\+Payload\+Size}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{set\+Payload\+Size(uint8\+\_\+t size)}{setPayloadSize(uint8_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::set\+Payload\+Size (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_abe5983a57d0d3bd77508e5345774c890}{}\label{classNRF24L01_abe5983a57d0d3bd77508e5345774c890}
+Set Static Payload Size
+
+This implementation uses a pre-\/stablished fixed payload size for all transmissions. If this method is never called, the driver will always transmit the maximum payload size (32 bytes), no matter how much was sent to \hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()}.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Implement variable-\/sized payloads feature\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The number of bytes in the payload \\
+\hline
+\end{DoxyParams}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!set\+Retries@{set\+Retries}}
+\index{set\+Retries@{set\+Retries}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{set\+Retries(uint8\+\_\+t delay, uint8\+\_\+t count)}{setRetries(uint8_t delay, uint8_t count)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::set\+Retries (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{delay, }
+\item[{uint8\+\_\+t}]{count}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a0bb209d94b62e2a28af53179af713f3c}{}\label{classNRF24L01_a0bb209d94b62e2a28af53179af713f3c}
+Set the number and delay of retries upon failed submit
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & How long to wait between each retry, in multiples of 250us, max is 15. 0 means 250us, 15 means 4000us. \\
+\hline
+{\em count} & How many retries before giving up, max 15 \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a0bb209d94b62e2a28af53179af713f3c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!spi\+Trans@{spi\+Trans}}
+\index{spi\+Trans@{spi\+Trans}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{spi\+Trans(uint8\+\_\+t cmd)}{spiTrans(uint8_t cmd)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::spi\+Trans (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{cmd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_ab604b1e177e4812e33ebc39287503197}{}\label{classNRF24L01_ab604b1e177e4812e33ebc39287503197}
+Built in spi transfer function to simplify repeating code repeating code 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classNRF24L01_ab604b1e177e4812e33ebc39287503197_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!start\+Fast\+Write@{start\+Fast\+Write}}
+\index{start\+Fast\+Write@{start\+Fast\+Write}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{start\+Fast\+Write(const void $\ast$buf, uint8\+\_\+t len, const bool multicast, bool start\+Tx=1)}{startFastWrite(const void *buf, uint8_t len, const bool multicast, bool startTx=1)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::start\+Fast\+Write (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len, }
+\item[{const bool}]{multicast, }
+\item[{bool}]{start\+Tx = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ab1ca9025a8740bc38ad5dd7a427e2d4f}{}\label{classNRF24L01_ab1ca9025a8740bc38ad5dd7a427e2d4f}
+Non-\/blocking write to the open writing pipe used for buffered writes
+
+\begin{DoxyNote}{Note}
+Optimization\+: This function now leaves the CE pin high, so the radio will remain in TX or S\+T\+A\+N\+D\+B\+Y-\/\+II Mode until a \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{tx\+Stand\+By()} command is issued. Can be used as an alternative to \hyperlink{classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2}{start\+Write()} if writing multiple payloads at once. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+It is important to never keep the n\+R\+F24\+L01 in TX mode with F\+I\+FO full for more than 4ms at a time. If the auto retransmit/auto\+Ack is enabled, the n\+R\+F24\+L01 is never in TX mode long enough to disobey this rule. Allow the F\+I\+FO to clear by issuing \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{tx\+Stand\+By()} or ensure appropriate time between transmissions.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()} 
+
+\hyperlink{classNRF24L01_a693f48de67c8b11ed5860dc481fcfc99}{write\+Fast()} 
+
+\hyperlink{classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2}{start\+Write()} 
+
+\hyperlink{classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84}{write\+Blocking()}
+\end{DoxySeeAlso}
+For single no\+Ack writes see\+: \begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344}{enable\+Dynamic\+Ack()} 
+
+\hyperlink{classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8}{set\+Auto\+Ack()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the data to be sent \\
+\hline
+{\em len} & Number of bytes to be sent \\
+\hline
+{\em multicast} & Request A\+CK (0) or N\+O\+A\+CK (1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the payload was delivered successfully false if not 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ab1ca9025a8740bc38ad5dd7a427e2d4f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!start\+Listening@{start\+Listening}}
+\index{start\+Listening@{start\+Listening}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{start\+Listening()}{startListening()}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::start\+Listening (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_aaabd39829998b609c0dc317af4f141b2}{}\label{classNRF24L01_aaabd39829998b609c0dc317af4f141b2}
+Start listening on the pipes opened for reading.
+
+
+\begin{DoxyEnumerate}
+\item Be sure to call \hyperlink{classNRF24L01_a9b458f77f6ae6c42f330710e703dd847}{open\+Reading\+Pipe()} first.
+\item Do not call \hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()} while in this mode, without first calling \hyperlink{classNRF24L01_a6ad13189b732f237ac148c659ddf6b01}{stop\+Listening()}.
+\item Call \hyperlink{classNRF24L01_ab368039cf5448f0ff5d489563d530c7b}{available()} to check for incoming traffic, and \hyperlink{classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da}{read()} to get it.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+Open reading pipe 1 \textcolor{keyword}{using} address CCCECCCECC
+
+byte address[] = \{ 0xCC,0xCE,0xCC,0xCE,0xCC \};
+radio.openReadingPipe(1,address);
+radio.startListening();
+\end{DoxyCode}
+ 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_aaabd39829998b609c0dc317af4f141b2_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!start\+Write@{start\+Write}}
+\index{start\+Write@{start\+Write}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{start\+Write(const void $\ast$buf, uint8\+\_\+t len, const bool multicast)}{startWrite(const void *buf, uint8_t len, const bool multicast)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::start\+Write (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len, }
+\item[{const bool}]{multicast}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2}{}\label{classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2}
+Non-\/blocking write to the open writing pipe
+
+Just like \hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()}, but it returns immediately. To find out what happened to the send, catch the I\+RQ and then call \hyperlink{classNRF24L01_ad98d10f3759d41e565397aba824d121b}{what\+Happened()}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()} 
+
+\hyperlink{classNRF24L01_a693f48de67c8b11ed5860dc481fcfc99}{write\+Fast()} 
+
+\hyperlink{classNRF24L01_ab1ca9025a8740bc38ad5dd7a427e2d4f}{start\+Fast\+Write()} 
+
+\hyperlink{classNRF24L01_ad98d10f3759d41e565397aba824d121b}{what\+Happened()}
+\end{DoxySeeAlso}
+For single no\+Ack writes see\+: \begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344}{enable\+Dynamic\+Ack()} 
+
+\hyperlink{classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8}{set\+Auto\+Ack()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the data to be sent \\
+\hline
+{\em len} & Number of bytes to be sent \\
+\hline
+{\em multicast} & Request A\+CK (0) or N\+O\+A\+CK (1) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!stop\+Listening@{stop\+Listening}}
+\index{stop\+Listening@{stop\+Listening}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{stop\+Listening()}{stopListening()}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::stop\+Listening (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a6ad13189b732f237ac148c659ddf6b01}{}\label{classNRF24L01_a6ad13189b732f237ac148c659ddf6b01}
+Stop listening for incoming messages, and switch to transmit mode.
+
+Do this before calling \hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()}. 
+\begin{DoxyCode}
+radio.stopListening();
+radio.write(&data,\textcolor{keyword}{sizeof}(data));
+\end{DoxyCode}
+ 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a6ad13189b732f237ac148c659ddf6b01_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!test\+Carrier@{test\+Carrier}}
+\index{test\+Carrier@{test\+Carrier}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{test\+Carrier(void)}{testCarrier(void)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::test\+Carrier (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a5e934f8f7d37245264ad16e3c360eca7}{}\label{classNRF24L01_a5e934f8f7d37245264ad16e3c360eca7}
+Test whether there was a carrier on the line for the previous listening period.
+
+Useful to check for interference on the current channel.
+
+\begin{DoxyReturn}{Returns}
+true if was carrier, false if not 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a5e934f8f7d37245264ad16e3c360eca7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!test\+R\+PD@{test\+R\+PD}}
+\index{test\+R\+PD@{test\+R\+PD}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{test\+R\+P\+D(void)}{testRPD(void)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::test\+R\+PD (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_abf1d84ed988aa6c7925ebb712b7c7f60}{}\label{classNRF24L01_abf1d84ed988aa6c7925ebb712b7c7f60}
+Test whether a signal (carrier or otherwise) greater than or equal to -\/64d\+Bm is present on the channel. Valid only on n\+R\+F24\+L01P (+) hardware. On n\+R\+F24\+L01, use \hyperlink{classNRF24L01_a5e934f8f7d37245264ad16e3c360eca7}{test\+Carrier()}.
+
+Useful to check for interference on the current channel and channel hopping strategies.
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{bool} goodSignal = radio.testRPD();
+\textcolor{keywordflow}{if}(radio.available())\{
+   Serial.println(goodSignal ? \textcolor{stringliteral}{"Strong signal > 64dBm"} : \textcolor{stringliteral}{"Weak signal < 64dBm"} );
+   radio.read(0,0);
+\}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+true if signal =$>$ -\/64d\+Bm, false if not 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_abf1d84ed988aa6c7925ebb712b7c7f60_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Toggle\+Features@{Toggle\+Features}}
+\index{Toggle\+Features@{Toggle\+Features}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Toggle\+Features(void)}{ToggleFeatures(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::\+Toggle\+Features (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_aceeaa16f91d7c5fd6a429a6adf678bd4}{}\label{classNRF24L01_aceeaa16f91d7c5fd6a429a6adf678bd4}
+Turn on or off the special features of the chip
+
+The chip has certain \textquotesingle{}features\textquotesingle{} which are only available when the \textquotesingle{}features\textquotesingle{} are enabled. See the datasheet for details. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_aceeaa16f91d7c5fd6a429a6adf678bd4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!tx\+Stand\+By@{tx\+Stand\+By}}
+\index{tx\+Stand\+By@{tx\+Stand\+By}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{tx\+Stand\+By()}{txStandBy()}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::tx\+Stand\+By (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{}\label{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}
+This function should be called as soon as transmission is finished to drop the radio back to S\+T\+A\+N\+D\+B\+Y-\/I mode. If not issued, the radio will remain in S\+T\+A\+N\+D\+B\+Y-\/\+II mode which, per the data sheet, is not a recommended operating mode.
+
+\begin{DoxyNote}{Note}
+When transmitting data in rapid succession, it is still recommended by the manufacturer to drop the radio out of TX or S\+T\+A\+N\+D\+B\+Y-\/\+II mode if there is time enough between sends for the F\+I\+F\+Os to empty. This is not required if auto-\/ack is enabled.
+\end{DoxyNote}
+Relies on built-\/in auto retry functionality.
+
+
+\begin{DoxyCode}
+Example (Partial blocking):
+
+        radio.\hyperlink{classNRF24L01_a693f48de67c8b11ed5860dc481fcfc99}{writeFast}(&buf,32);
+        radio.writeFast(&buf,32);
+        radio.writeFast(&buf,32);  \textcolor{comment}{//Fills the FIFO buffers up}
+        \textcolor{keywordtype}{bool} ok = \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{txStandBy}();     \textcolor{comment}{//Returns 0 if failed. 1 if success.}
+                                   \textcolor{comment}{//Blocks only until MAX\_RT timeout or success. Data flushed on fail.}
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+tx\+Stand\+By(unsigned long timeout) 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+True if transmission is successful 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!tx\+Stand\+By@{tx\+Stand\+By}}
+\index{tx\+Stand\+By@{tx\+Stand\+By}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{tx\+Stand\+By(uint32\+\_\+t timeout, bool start\+Tx=0)}{txStandBy(uint32_t timeout, bool startTx=0)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::tx\+Stand\+By (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{timeout, }
+\item[{bool}]{start\+Tx = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a9351f4bff2196c4f69623f636de7c6a4}{}\label{classNRF24L01_a9351f4bff2196c4f69623f636de7c6a4}
+This function allows extended blocking and auto-\/retries per a user defined timeout 
+\begin{DoxyCode}
+Fully Blocking Example:
+
+     radio.writeFast(&buf,32);
+     radio.writeFast(&buf,32);
+     radio.writeFast(&buf,32);   \textcolor{comment}{//Fills the FIFO buffers up}
+     \textcolor{keywordtype}{bool} ok = \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{txStandBy}(1000);  \textcolor{comment}{//Returns 0 if failed after 1 second of retries. 1 if success.}
+                                 \textcolor{comment}{//Blocks only until user defined timeout or success. Data flushed on fail.}
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+If used from within an interrupt, the interrupt should be disabled until completion, and sei(); called to enable millis(). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & Number of milliseconds to retry failed payloads \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if transmission is successful 
+\end{DoxyReturn}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!what\+Happened@{what\+Happened}}
+\index{what\+Happened@{what\+Happened}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{what\+Happened(bool \&tx\+\_\+ok, bool \&tx\+\_\+fail, bool \&rx\+\_\+ready)}{whatHappened(bool &tx_ok, bool &tx_fail, bool &rx_ready)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::what\+Happened (
+\begin{DoxyParamCaption}
+\item[{bool \&}]{tx\+\_\+ok, }
+\item[{bool \&}]{tx\+\_\+fail, }
+\item[{bool \&}]{rx\+\_\+ready}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ad98d10f3759d41e565397aba824d121b}{}\label{classNRF24L01_ad98d10f3759d41e565397aba824d121b}
+Call this when you get an interrupt to find out why
+
+Tells you what caused the interrupt, and clears the state of interrupts.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em tx\+\_\+ok} & The send was successful (T\+X\+\_\+\+DS) \\
+\hline
+\mbox{\tt out}  & {\em tx\+\_\+fail} & The send failed, too many retries (M\+A\+X\+\_\+\+RT) \\
+\hline
+\mbox{\tt out}  & {\em rx\+\_\+ready} & There is a message waiting to be read (R\+X\+\_\+\+DS) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ad98d10f3759d41e565397aba824d121b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!write@{write}}
+\index{write@{write}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{write(const void $\ast$buf, uint8\+\_\+t len)}{write(const void *buf, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::write (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{}\label{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}
+Be sure to call \hyperlink{classNRF24L01_ad64a887cae746be5ca43cf08445feed9}{open\+Writing\+Pipe()} first to set the destination of where to write to.
+
+This blocks until the message is successfully acknowledged by the receiver or the timeout/retransmit maxima are reached. In the current configuration, the max delay here is 60-\/70ms.
+
+The maximum size of data written is the fixed payload size, see \hyperlink{classNRF24L01_a4a7f48ca92e14baabd8be1c0831e8c2f}{get\+Payload\+Size()}. However, you can write less, and the remainder will just be filled with zeroes.
+
+T\+X/\+R\+X/\+RT interrupt flags will be cleared every time write is called
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the data to be sent \\
+\hline
+{\em len} & Number of bytes to be sent\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+radio.stopListening();
+radio.write(&data,\textcolor{keyword}{sizeof}(data));
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+True if the payload was delivered successfully false if not 
+\end{DoxyReturn}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!write@{write}}
+\index{write@{write}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{write(const void $\ast$buf, uint8\+\_\+t len, const bool multicast)}{write(const void *buf, uint8_t len, const bool multicast)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::write (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len, }
+\item[{const bool}]{multicast}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_af59b3fd7aece1ae295a2e634a57d2b02}{}\label{classNRF24L01_af59b3fd7aece1ae295a2e634a57d2b02}
+Write for single N\+O\+A\+CK writes. Optionally disables acknowledgements/autoretries for a single write.
+
+\begin{DoxyNote}{Note}
+\hyperlink{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344}{enable\+Dynamic\+Ack()} must be called to enable this feature
+\end{DoxyNote}
+Can be used with \hyperlink{classNRF24L01_ae4067455572c6731211315b3900f5cbd}{enable\+Ack\+Payload()} to request a response \begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344}{enable\+Dynamic\+Ack()} 
+
+\hyperlink{classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8}{set\+Auto\+Ack()} 
+
+\hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the data to be sent \\
+\hline
+{\em len} & Number of bytes to be sent \\
+\hline
+{\em multicast} & Request A\+CK (0), N\+O\+A\+CK (1) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_af59b3fd7aece1ae295a2e634a57d2b02_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!write\+Ack\+Payload@{write\+Ack\+Payload}}
+\index{write\+Ack\+Payload@{write\+Ack\+Payload}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{write\+Ack\+Payload(uint8\+\_\+t pipe, const void $\ast$buf, uint8\+\_\+t len)}{writeAckPayload(uint8_t pipe, const void *buf, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+R\+F24\+L01\+::write\+Ack\+Payload (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{pipe, }
+\item[{const void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ae0f4b84a244463e8e594d238a71140c5}{}\label{classNRF24L01_ae0f4b84a244463e8e594d238a71140c5}
+Write an ack payload for the specified pipe
+
+The next time a message is received on {\ttfamily pipe}, the data in {\ttfamily buf} will be sent back in the acknowledgement. \begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_ae4067455572c6731211315b3900f5cbd}{enable\+Ack\+Payload()} 
+
+\hyperlink{classNRF24L01_abd060c4df7efac781ed5812a0ee19d08}{enable\+Dynamic\+Payloads()} 
+\end{DoxySeeAlso}
+\begin{DoxyWarning}{Warning}
+Only three of these can be pending at any time as there are only 3 F\+I\+FO buffers.~\newline
+ Dynamic payloads must be enabled. 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+Ack payloads are handled automatically by the radio chip when a payload is received. Users should generally write an ack payload as soon as \hyperlink{classNRF24L01_aaabd39829998b609c0dc317af4f141b2}{start\+Listening()} is called, so one is available when a regular payload is received. 
+
+Ack payloads are dynamic payloads. This only works on pipes 0\&1 by default. Call \hyperlink{classNRF24L01_abd060c4df7efac781ed5812a0ee19d08}{enable\+Dynamic\+Payloads()} to enable on all pipes.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em pipe} & Which pipe\# (typically 1-\/5) will get this response. \\
+\hline
+{\em buf} & Pointer to data that is sent \\
+\hline
+{\em len} & Length of the data to send, up to 32 bytes max. Not affected by the static payload set by \hyperlink{classNRF24L01_abe5983a57d0d3bd77508e5345774c890}{set\+Payload\+Size()}. \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ae0f4b84a244463e8e594d238a71140c5_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!write\+Blocking@{write\+Blocking}}
+\index{write\+Blocking@{write\+Blocking}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{write\+Blocking(const void $\ast$buf, uint8\+\_\+t len, uint32\+\_\+t timeout)}{writeBlocking(const void *buf, uint8_t len, uint32_t timeout)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::write\+Blocking (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len, }
+\item[{uint32\+\_\+t}]{timeout}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84}{}\label{classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84}
+This function extends the auto-\/retry mechanism to any specified duration. It will not block until the 3 F\+I\+FO buffers are filled with data. If so the library will auto retry until a new payload is written or the user specified timeout period is reached. \begin{DoxyWarning}{Warning}
+It is important to never keep the n\+R\+F24\+L01 in TX mode and F\+I\+FO full for more than 4ms at a time. If the auto retransmit is enabled, the n\+R\+F24\+L01 is never in TX mode long enough to disobey this rule. Allow the F\+I\+FO to clear by issuing \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{tx\+Stand\+By()} or ensure appropriate time between transmissions.
+\end{DoxyWarning}
+
+\begin{DoxyCode}
+Example (Full blocking):
+
+        radio.\hyperlink{classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84}{writeBlocking}(&buf,32,1000); \textcolor{comment}{//Wait up to 1 second to write 1 payload to the
+       buffers}
+        \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{txStandBy}(1000);                   \textcolor{comment}{//Wait up to 1 second for the payload to send. Return 1
+       if ok, 0 if failed.}
+                                           \textcolor{comment}{//Blocks only until user timeout or success. Data flushed on
+       fail.}
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+If used from within an interrupt, the interrupt should be disabled until completion, and sei(); called to enable millis(). 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{tx\+Stand\+By()} 
+
+\hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()} 
+
+\hyperlink{classNRF24L01_a693f48de67c8b11ed5860dc481fcfc99}{write\+Fast()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the data to be sent \\
+\hline
+{\em len} & Number of bytes to be sent \\
+\hline
+{\em timeout} & User defined timeout in milliseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the payload was loaded into the buffer successfully false if not 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!write\+Fast@{write\+Fast}}
+\index{write\+Fast@{write\+Fast}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{write\+Fast(const void $\ast$buf, uint8\+\_\+t len)}{writeFast(const void *buf, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::write\+Fast (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a693f48de67c8b11ed5860dc481fcfc99}{}\label{classNRF24L01_a693f48de67c8b11ed5860dc481fcfc99}
+This will not block until the 3 F\+I\+FO buffers are filled with data. Once the F\+I\+F\+Os are full, write\+Fast will simply wait for success or timeout, and return 1 or 0 respectively. From a user perspective, just keep trying to send the same data. The library will keep auto retrying the current payload using the built in functionality. \begin{DoxyWarning}{Warning}
+It is important to never keep the n\+R\+F24\+L01 in TX mode and F\+I\+FO full for more than 4ms at a time. If the auto retransmit is enabled, the n\+R\+F24\+L01 is never in TX mode long enough to disobey this rule. Allow the F\+I\+FO to clear by issuing \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{tx\+Stand\+By()} or ensure appropriate time between transmissions.
+\end{DoxyWarning}
+
+\begin{DoxyCode}
+Example (Partial blocking):
+
+        radio.\hyperlink{classNRF24L01_a693f48de67c8b11ed5860dc481fcfc99}{writeFast}(&buf,32);  \textcolor{comment}{// Writes 1 payload to the buffers}
+        \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{txStandBy}();               \textcolor{comment}{// Returns 0 if failed. 1 if success. Blocks only until MAX\_RT
+       timeout or success. Data flushed on fail.}
+
+        radio.writeFast(&buf,32);  \textcolor{comment}{// Writes 1 payload to the buffers}
+        \hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{txStandBy}(1000);           \textcolor{comment}{// Using extended timeouts, returns 1 if success. Retries
+       failed payloads for 1 seconds before returning 0.}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_a4416a731de8d23cac507e8b69ec2becc}{tx\+Stand\+By()} 
+
+\hyperlink{classNRF24L01_a719390c69a2e45df08379f17e3289f4c}{write()} 
+
+\hyperlink{classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84}{write\+Blocking()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the data to be sent \\
+\hline
+{\em len} & Number of bytes to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the payload was delivered successfully false if not 
+\end{DoxyReturn}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!write\+Fast@{write\+Fast}}
+\index{write\+Fast@{write\+Fast}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{write\+Fast(const void $\ast$buf, uint8\+\_\+t len, const bool multicast)}{writeFast(const void *buf, uint8_t len, const bool multicast)}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::write\+Fast (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len, }
+\item[{const bool}]{multicast}
+\end{DoxyParamCaption}
+)}\hypertarget{classNRF24L01_a094a978ed0c7da890c90351bd945fabe}{}\label{classNRF24L01_a094a978ed0c7da890c90351bd945fabe}
+Write\+Fast for single N\+O\+A\+CK writes. Disables acknowledgements/autoretries for a single write.
+
+\begin{DoxyNote}{Note}
+\hyperlink{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344}{enable\+Dynamic\+Ack()} must be called to enable this feature 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNRF24L01_aeaa968ea74bfd2690fff331e9f115344}{enable\+Dynamic\+Ack()} 
+
+\hyperlink{classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8}{set\+Auto\+Ack()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Pointer to the data to be sent \\
+\hline
+{\em len} & Number of bytes to be sent \\
+\hline
+{\em multicast} & Request A\+CK (0) or N\+O\+A\+CK (1) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a094a978ed0c7da890c90351bd945fabe_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Write\+Payload@{Write\+Payload}}
+\index{Write\+Payload@{Write\+Payload}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Write\+Payload(const void $\ast$buf, uint8\+\_\+t len, const uint8\+\_\+t write\+Type)}{WritePayload(const void *buf, uint8_t len, const uint8_t writeType)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+Write\+Payload (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len, }
+\item[{const uint8\+\_\+t}]{write\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a9abae657dc54d97b6eb63f33c83e9f59}{}\label{classNRF24L01_a9abae657dc54d97b6eb63f33c83e9f59}
+Write the transmit payload
+
+The size of data written is the fixed payload size, see \hyperlink{classNRF24L01_a4a7f48ca92e14baabd8be1c0831e8c2f}{get\+Payload\+Size()}
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Where to get the data \\
+\hline
+{\em len} & Number of bytes to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of status register 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_a9abae657dc54d97b6eb63f33c83e9f59_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Write\+Register@{Write\+Register}}
+\index{Write\+Register@{Write\+Register}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Write\+Register(uint8\+\_\+t reg, uint8\+\_\+t value)}{WriteRegister(uint8_t reg, uint8_t value)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+Write\+Register (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{reg, }
+\item[{uint8\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_abfaaa54aff7ce60c4c844dd540c47af5}{}\label{classNRF24L01_abfaaa54aff7ce60c4c844dd540c47af5}
+Write a single byte to a register
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Which register. Use constants from n\+R\+F24\+L01.\+h \\
+\hline
+{\em value} & The new value to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of status register 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_abfaaa54aff7ce60c4c844dd540c47af5_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!Write\+Registers@{Write\+Registers}}
+\index{Write\+Registers@{Write\+Registers}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{Write\+Registers(uint8\+\_\+t reg, const uint8\+\_\+t $\ast$buf, uint8\+\_\+t len)}{WriteRegisters(uint8_t reg, const uint8_t *buf, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+Write\+Registers (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{reg, }
+\item[{const uint8\+\_\+t $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_ac7d69c51eca87f16fa3a30b5e8aa85cb}{}\label{classNRF24L01_ac7d69c51eca87f16fa3a30b5e8aa85cb}
+Write a chunk of data to a register
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Which register. Use constants from n\+R\+F24\+L01.\+h \\
+\hline
+{\em buf} & Where to get the data \\
+\hline
+{\em len} & How many bytes of data to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of status register 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNRF24L01_ac7d69c51eca87f16fa3a30b5e8aa85cb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!cs\+Delay@{cs\+Delay}}
+\index{cs\+Delay@{cs\+Delay}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{cs\+Delay}{csDelay}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t N\+R\+F24\+L01\+::cs\+Delay}\hypertarget{classNRF24L01_abae8b8afbf747344006d6163c607be00}{}\label{classNRF24L01_abae8b8afbf747344006d6163c607be00}
+On all devices but Linux and A\+T\+Tiny, a small delay is added to the C\+SN toggling function
+
+This is intended to minimise the speed of \hyperlink{classSPI}{S\+PI} polling due to radio commands
+
+If using interrupts or timed requests, this can be set to 0 Default\+:5 \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!dynamic\+\_\+payloads\+\_\+enabled@{dynamic\+\_\+payloads\+\_\+enabled}}
+\index{dynamic\+\_\+payloads\+\_\+enabled@{dynamic\+\_\+payloads\+\_\+enabled}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{dynamic\+\_\+payloads\+\_\+enabled}{dynamic_payloads_enabled}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::dynamic\+\_\+payloads\+\_\+enabled\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_ae319d1b6a3d950888d2608cc69efb07c}{}\label{classNRF24L01_ae319d1b6a3d950888d2608cc69efb07c}
+Whether dynamic payloads are enabled. \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!failure\+Detected@{failure\+Detected}}
+\index{failure\+Detected@{failure\+Detected}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{failure\+Detected}{failureDetected}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::failure\+Detected}\hypertarget{classNRF24L01_a749f38c45c00905b3d8e8c180626bff6}{}\label{classNRF24L01_a749f38c45c00905b3d8e8c180626bff6}
+Enable error detection by un-\/commenting \#define F\+A\+I\+L\+U\+R\+E\+\_\+\+H\+A\+N\+D\+L\+I\+NG in R\+F24\+\_\+config.\+h If a failure has been detected, it usually indicates a hardware issue. By default the library will cease operation when a failure is detected. This should allow advanced users to detect and resolve intermittent hardware issues.
+
+In most cases, the radio must be re-\/enabled via radio.\+begin(); and the appropriate settings applied after a failure occurs, if wanting to re-\/enable the device immediately.
+
+Usage\+: (Failure handling must be enabled per above) 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(radio.failureDetected)\{
+  radio.begin();                       \textcolor{comment}{// Attempt to re-configure the radio with defaults}
+  radio.failureDetected = 0;           \textcolor{comment}{// Reset the detection value}
+ radio.openWritingPipe(addresses[1]); \textcolor{comment}{// Re-configure pipe addresses}
+  radio.openReadingPipe(1,addresses[0]);
+  report\_failure();                    \textcolor{comment}{// Blink leds, send a message, etc. to indicate failure}
+\}
+\end{DoxyCode}
+ \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+A\+CK@{N\+R\+F24\+L01\+\_\+\+A\+CK}}
+\index{N\+R\+F24\+L01\+\_\+\+A\+CK@{N\+R\+F24\+L01\+\_\+\+A\+CK}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+A\+CK}{NRF24L01_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+A\+CK\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_af2e0a88f330c86d0cc6c43180f70ecbd}{}\label{classNRF24L01_af2e0a88f330c86d0cc6c43180f70ecbd}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+A\+D\+D\+R\+S\+I\+ZE@{N\+R\+F24\+L01\+\_\+\+A\+D\+D\+R\+S\+I\+ZE}}
+\index{N\+R\+F24\+L01\+\_\+\+A\+D\+D\+R\+S\+I\+ZE@{N\+R\+F24\+L01\+\_\+\+A\+D\+D\+R\+S\+I\+ZE}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+A\+D\+D\+R\+S\+I\+ZE}{NRF24L01_ADDRSIZE}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+A\+D\+D\+R\+S\+I\+ZE\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a0b5c60487c6b715b9f17f968f7958d93}{}\label{classNRF24L01_a0b5c60487c6b715b9f17f968f7958d93}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+CE@{N\+R\+F24\+L01\+\_\+\+CE}}
+\index{N\+R\+F24\+L01\+\_\+\+CE@{N\+R\+F24\+L01\+\_\+\+CE}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+CE}{NRF24L01_CE}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+CE\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a56a20345fcb667fcfc9bc1cb62d5152f}{}\label{classNRF24L01_a56a20345fcb667fcfc9bc1cb62d5152f}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+CH@{N\+R\+F24\+L01\+\_\+\+CH}}
+\index{N\+R\+F24\+L01\+\_\+\+CH@{N\+R\+F24\+L01\+\_\+\+CH}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+CH}{NRF24L01_CH}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+CH\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a2f5e84525760899949446db94d225700}{}\label{classNRF24L01_a2f5e84525760899949446db94d225700}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+C\+SN@{N\+R\+F24\+L01\+\_\+\+C\+SN}}
+\index{N\+R\+F24\+L01\+\_\+\+C\+SN@{N\+R\+F24\+L01\+\_\+\+C\+SN}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+C\+SN}{NRF24L01_CSN}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+C\+SN\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a4d36b61597b9919dd4a0ecdc53526020}{}\label{classNRF24L01_a4d36b61597b9919dd4a0ecdc53526020}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+D\+DR@{N\+R\+F24\+L01\+\_\+\+D\+DR}}
+\index{N\+R\+F24\+L01\+\_\+\+D\+DR@{N\+R\+F24\+L01\+\_\+\+D\+DR}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+D\+DR}{NRF24L01_DDR}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+D\+DR\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a42ef1a6d858a115327d0a7310aaba57c}{}\label{classNRF24L01_a42ef1a6d858a115327d0a7310aaba57c}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P0@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P0}}
+\index{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P0@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P0}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P0}{NRF24L01_ENABLEDP0}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a10c710f3795c47ebde120ca3d975c891}{}\label{classNRF24L01_a10c710f3795c47ebde120ca3d975c891}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P1@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P1}}
+\index{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P1@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P1}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P1}{NRF24L01_ENABLEDP1}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P1\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a8ebd82a57efbaa5928a56ba6780740de}{}\label{classNRF24L01_a8ebd82a57efbaa5928a56ba6780740de}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P2@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P2}}
+\index{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P2@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P2}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P2}{NRF24L01_ENABLEDP2}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P2\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_aac40f597790cf3a62b382f919f1293ce}{}\label{classNRF24L01_aac40f597790cf3a62b382f919f1293ce}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P3@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P3}}
+\index{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P3@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P3}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P3}{NRF24L01_ENABLEDP3}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P3\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_aea0d090c7d6da9b137ce4ce3690535e8}{}\label{classNRF24L01_aea0d090c7d6da9b137ce4ce3690535e8}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P4@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P4}}
+\index{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P4@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P4}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P4}{NRF24L01_ENABLEDP4}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P4\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a4f19e32ed3324724d3478b9f841a2790}{}\label{classNRF24L01_a4f19e32ed3324724d3478b9f841a2790}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P5@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P5}}
+\index{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P5@{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P5}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P5}{NRF24L01_ENABLEDP5}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+E\+N\+A\+B\+L\+E\+D\+P5\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_ae77cf1829f80c703e36ef57b6d23e9a9}{}\label{classNRF24L01_ae77cf1829f80c703e36ef57b6d23e9a9}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+P\+A\+Y\+L\+O\+AD@{N\+R\+F24\+L01\+\_\+\+P\+A\+Y\+L\+O\+AD}}
+\index{N\+R\+F24\+L01\+\_\+\+P\+A\+Y\+L\+O\+AD@{N\+R\+F24\+L01\+\_\+\+P\+A\+Y\+L\+O\+AD}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+P\+A\+Y\+L\+O\+AD}{NRF24L01_PAYLOAD}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+P\+A\+Y\+L\+O\+AD\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a6f035e7c49d8ed5e1ab84242cef0e9be}{}\label{classNRF24L01_a6f035e7c49d8ed5e1ab84242cef0e9be}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+C\+RC@{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+C\+RC}}
+\index{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+C\+RC@{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+C\+RC}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+C\+RC}{NRF24L01_RF24_CRC}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+C\+RC\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_af6a260dd55ee5c2f7de7cfac4e91178d}{}\label{classNRF24L01_af6a260dd55ee5c2f7de7cfac4e91178d}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+PA@{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+PA}}
+\index{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+PA@{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+PA}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+PA}{NRF24L01_RF24_PA}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+PA\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_ac798ba6ce52fd4a13eb40ff274818157}{}\label{classNRF24L01_ac798ba6ce52fd4a13eb40ff274818157}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+S\+P\+E\+ED@{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+S\+P\+E\+ED}}
+\index{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+S\+P\+E\+ED@{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+S\+P\+E\+ED}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+S\+P\+E\+ED}{NRF24L01_RF24_SPEED}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+R\+F24\+\_\+\+S\+P\+E\+ED\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a2dc0073a56f6aca86da205dd720fd132}{}\label{classNRF24L01_a2dc0073a56f6aca86da205dd720fd132}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!p\+\_\+variant@{p\+\_\+variant}}
+\index{p\+\_\+variant@{p\+\_\+variant}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{p\+\_\+variant}{p_variant}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::p\+\_\+variant\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a082a99d802a3f2335da94e67cf8440ea}{}\label{classNRF24L01_a082a99d802a3f2335da94e67cf8440ea}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!pipe0\+\_\+reading\+\_\+address@{pipe0\+\_\+reading\+\_\+address}}
+\index{pipe0\+\_\+reading\+\_\+address@{pipe0\+\_\+reading\+\_\+address}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{pipe0\+\_\+reading\+\_\+address}{pipe0_reading_address}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::pipe0\+\_\+reading\+\_\+address\mbox{[}5\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_af836ff0a915587aa40b5eabe4101ea4c}{}\label{classNRF24L01_af836ff0a915587aa40b5eabe4101ea4c}
+Last address set on pipe 0 for reading. \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!spi@{spi}}
+\index{spi@{spi}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{spi}{spi}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+PI} N\+R\+F24\+L01\+::spi}\hypertarget{classNRF24L01_a6321af25fee367445baa6ab4840f8443}{}\label{classNRF24L01_a6321af25fee367445baa6ab4840f8443}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!spi\+\_\+speed@{spi\+\_\+speed}}
+\index{spi\+\_\+speed@{spi\+\_\+speed}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{spi\+\_\+speed}{spi_speed}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t N\+R\+F24\+L01\+::spi\+\_\+speed\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a4701641c1e8b3d082deb03f93c84d8c7}{}\label{classNRF24L01_a4701641c1e8b3d082deb03f93c84d8c7}
+\hyperlink{classSPI}{S\+PI} Bus Speed \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!tx\+Delay@{tx\+Delay}}
+\index{tx\+Delay@{tx\+Delay}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{tx\+Delay}{txDelay}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t N\+R\+F24\+L01\+::tx\+Delay}\hypertarget{classNRF24L01_a1feaab910ecff17805f8141fe40028e7}{}\label{classNRF24L01_a1feaab910ecff17805f8141fe40028e7}
+The driver will delay for this duration when \hyperlink{classNRF24L01_a6ad13189b732f237ac148c659ddf6b01}{stop\+Listening()} is called
+
+When responding to payloads, faster devices like A\+R\+M(\+R\+Pi) are much faster than Arduino\+:
+\begin{DoxyEnumerate}
+\item Arduino sends data to R\+Pi, switches to RX mode
+\item The R\+Pi receives the data, switches to TX mode and sends before the Arduino radio is in RX mode
+\item If Auto\+A\+CK is disabled, this can be set as low as 0. If A\+A/\+E\+SB enabled, set to 100uS minimum on R\+Pi
+\end{DoxyEnumerate}
+
+\begin{DoxyWarning}{Warning}
+If set to 0, ensure 130uS delay after \hyperlink{classNRF24L01_a6ad13189b732f237ac148c659ddf6b01}{stop\+Listening()} and before any sends 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Wireless/\hyperlink{NRF24L01_8h}{N\+R\+F24\+L01.\+h}\item 
+src/\+Wireless/\hyperlink{NRF24L01_8cpp}{N\+R\+F24\+L01.\+cpp}\end{DoxyCompactItemize}

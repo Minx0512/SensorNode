@@ -1,0 +1,721 @@
+\hypertarget{bmp180_8h}{}\section{src/\+Sensors/\+B\+M\+P180\+\_\+driver/bmp180.h File Reference}
+\label{bmp180_8h}\index{src/\+Sensors/\+B\+M\+P180\+\_\+driver/bmp180.\+h@{src/\+Sensors/\+B\+M\+P180\+\_\+driver/bmp180.\+h}}
+
+
+Header file for all define constants and function prototypes.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structbmp180__calib__param__t}{bmp180\+\_\+calib\+\_\+param\+\_\+t}
+\begin{DoxyCompactList}\small\item\em This structure holds all device specific calibration parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{structbmp180__t}{bmp180\+\_\+t}
+\begin{DoxyCompactList}\small\item\em This structure holds \hyperlink{classBMP180}{B\+M\+P180} initialization parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{bmp180_8h_abd876f9063f4967bbc64bf50e33cbb89}{M\+A\+C\+H\+I\+N\+E\+\_\+32\+\_\+\+B\+IT}
+\begin{DoxyCompactList}\small\item\em The following definition uses for define the data types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf F\+U\+N\+C\+T\+I\+ON D\+E\+F\+I\+N\+I\+T\+I\+O\+NS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries bmp180\+\_\+calc\+\_\+temperature}(ut)~\hyperlink{bmp180_8h_a644b92a4e5f0605920c8095be351e917}{bmp180\+\_\+get\+\_\+temperature}(ut)\hypertarget{bmp180_8h_a2120ff0e43a1f49206cdc67be080486b}{}\label{bmp180_8h_a2120ff0e43a1f49206cdc67be080486b}
+
+\item 
+\#define {\bfseries bmp180\+\_\+calc\+\_\+pressure}(up)~\hyperlink{bmp180_8h_ab43ebb138296584870f3eeb45e0daa13}{bmp180\+\_\+get\+\_\+pressure}(up)\hypertarget{bmp180_8h_aa332848da15c74881fdc74eb8c54108c}{}\label{bmp180_8h_aa332848da15c74881fdc74eb8c54108c}
+
+\item 
+\#define {\bfseries bmp180\+\_\+read\+\_\+ut}()~bmp180\+\_\+get\+\_\+ut()\hypertarget{bmp180_8h_acf88585da636354fd162a8e5c3aecfba}{}\label{bmp180_8h_acf88585da636354fd162a8e5c3aecfba}
+
+\item 
+\#define {\bfseries bmp180\+\_\+read\+\_\+up}()~bmp180\+\_\+get\+\_\+up()\hypertarget{bmp180_8h_a968364ef9681812f8478bc52f12f4472}{}\label{bmp180_8h_a968364ef9681812f8478bc52f12f4472}
+
+\item 
+\#define {\bfseries bmp180\+\_\+read\+\_\+cal\+\_\+param}()~bmp180\+\_\+get\+\_\+cal\+\_\+param()\hypertarget{bmp180_8h_a19c489e441163a04e14c75a7ce301894}{}\label{bmp180_8h_a19c489e441163a04e14c75a7ce301894}
+
+\item 
+\#define {\bfseries smd500\+\_\+read\+\_\+cal\+\_\+param}()~smd500\+\_\+get\+\_\+cal\+\_\+param()\hypertarget{bmp180_8h_a4e689b49577a90a8380a0947c691da6f}{}\label{bmp180_8h_a4e689b49577a90a8380a0947c691da6f}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\+US R\+E\+AD A\+ND W\+R\+I\+TE F\+U\+N\+C\+T\+I\+ON}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{bmp180_8h_a6284933b54c0ffc45aede2f93d97831b}{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}~\hyperlink{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{s8}
+\begin{DoxyCompactList}\small\item\em Define the calling convention of Y\+O\+UR bus communication routine. \end{DoxyCompactList}\item 
+\#define \hyperlink{bmp180_8h_a962a2114ae1a784c25fd4f40b86f2320}{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}
+\item 
+\#define \hyperlink{bmp180_8h_a40b7c5dc2b8043ffa752db139d30c498}{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+U\+NC}(device\+\_\+addr,  register\+\_\+addr,  register\+\_\+data,  write\+\_\+length)~bus\+\_\+write(device\+\_\+addr, register\+\_\+addr, register\+\_\+data, write\+\_\+length)\hypertarget{bmp180_8h_a8dae40d3a97b699e53799c84aa93eb08}{}\label{bmp180_8h_a8dae40d3a97b699e53799c84aa93eb08}
+
+\item 
+\#define \hyperlink{bmp180_8h_ad69495bc93869df994aeea8a2d48d0ce}{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}~\hyperlink{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{s8}
+\begin{DoxyCompactList}\small\item\em link macro between A\+PI function calls and bus read function \end{DoxyCompactList}\item 
+\#define \hyperlink{bmp180_8h_a94481617aa2c3a672e6d2d6089acda04}{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}
+\item 
+\#define \hyperlink{bmp180_8h_a7f0e28b18c6d87f89c4e42d240044894}{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+E\+A\+D\+\_\+\+F\+U\+NC}(device\+\_\+addr,  register\+\_\+addr,  register\+\_\+data,  read\+\_\+length)~bus\+\_\+read(device\+\_\+addr, register\+\_\+addr, register\+\_\+data, read\+\_\+length)\hypertarget{bmp180_8h_a89b642dd9cb978d15292a47b9439230b}{}\label{bmp180_8h_a89b642dd9cb978d15292a47b9439230b}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\+US R\+E\+AD A\+ND W\+R\+I\+TE F\+U\+N\+C\+T\+I\+ON P\+O\+I\+N\+T\+E\+RS D\+E\+F\+I\+N\+I\+T\+I\+O\+NS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+W\+R\+\_\+\+F\+U\+N\+C\+\_\+\+P\+TR}~\hyperlink{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{s8} ($\ast$bus\+\_\+write)(\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})\hypertarget{bmp180_8h_aae32751f4b5a3faa99171eaa31ea71e6}{}\label{bmp180_8h_aae32751f4b5a3faa99171eaa31ea71e6}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+R\+D\+\_\+\+F\+U\+N\+C\+\_\+\+P\+TR}~\hyperlink{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{s8} ($\ast$bus\+\_\+read)(\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})\hypertarget{bmp180_8h_a51635847148bde36c1f3c082cb7b340c}{}\label{bmp180_8h_a51635847148bde36c1f3c082cb7b340c}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+M\+D\+E\+L\+A\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+T\+Y\+PE}~\hyperlink{bmp180_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}\hypertarget{bmp180_8h_a41a86f515b1a9c1fdd9b74a2a307be08}{}\label{bmp180_8h_a41a86f515b1a9c1fdd9b74a2a307be08}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf I2C A\+D\+D\+R\+E\+SS D\+E\+F\+I\+N\+I\+T\+I\+ON OF B\+M\+P180}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+I2\+C\+\_\+\+A\+D\+DR}~(0x\+E\+E$>$$>$1)\hypertarget{bmp180_8h_ad668cff49b7688857e73921f67fe6e1b}{}\label{bmp180_8h_ad668cff49b7688857e73921f67fe6e1b}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf E\+R\+R\+OR C\+O\+DE D\+E\+F\+I\+N\+I\+T\+I\+O\+NS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries E\+\_\+\+B\+M\+P\+\_\+\+N\+U\+L\+L\+\_\+\+P\+TR}~((\hyperlink{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{s8})-\/127)\hypertarget{bmp180_8h_af04a50240d8c75932bf4729fb95b89b8}{}\label{bmp180_8h_af04a50240d8c75932bf4729fb95b89b8}
+
+\item 
+\#define {\bfseries E\+\_\+\+B\+M\+P\+\_\+\+C\+O\+M\+M\+\_\+\+R\+ES}~((\hyperlink{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{s8})-\/1)\hypertarget{bmp180_8h_abaf12c9360a5167e07e32e1cc76f1b19}{}\label{bmp180_8h_abaf12c9360a5167e07e32e1cc76f1b19}
+
+\item 
+\#define {\bfseries E\+\_\+\+B\+M\+P\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}~((\hyperlink{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{s8})-\/2)\hypertarget{bmp180_8h_abb34c5864fd4dfefeda5f84d1d0692a6}{}\label{bmp180_8h_abb34c5864fd4dfefeda5f84d1d0692a6}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf C\+O\+N\+S\+T\+A\+N\+TS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}~\hyperlink{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{s8}\hypertarget{bmp180_8h_a0b2541dda714686ae536954aaf5c3387}{}\label{bmp180_8h_a0b2541dda714686ae536954aaf5c3387}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+I\+N\+I\+T\+\_\+\+V\+A\+L\+UE}~((\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})0)\hypertarget{bmp180_8h_aec91741157ae5da3b06f1b5558c9e804}{}\label{bmp180_8h_aec91741157ae5da3b06f1b5558c9e804}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+O\+V\+E\+R\+S\+A\+M\+P\+\_\+\+S\+E\+T\+T\+I\+N\+G\+\_\+\+U8X}~((\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})0)\hypertarget{bmp180_8h_a9818646a9db453e41b1442eeba251e67}{}\label{bmp180_8h_a9818646a9db453e41b1442eeba251e67}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+S\+W\+\_\+\+O\+V\+E\+R\+S\+A\+M\+P\+\_\+\+U8X}~((\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})0)\hypertarget{bmp180_8h_a1731a4d0da9c8eca1a064f79b2c828b8}{}\label{bmp180_8h_a1731a4d0da9c8eca1a064f79b2c828b8}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+A\+M\+P\+L\+E\+S\+\_\+\+U8X}~((\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})1)\hypertarget{bmp180_8h_ac9208a7578552f16452075c5a3b0fd06}{}\label{bmp180_8h_ac9208a7578552f16452075c5a3b0fd06}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+G\+E\+N\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~((\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})1)\hypertarget{bmp180_8h_aefe14c0103090f8d4b5976dbb3a53af2}{}\label{bmp180_8h_aefe14c0103090f8d4b5976dbb3a53af2}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~((\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})2)\hypertarget{bmp180_8h_ad96e88c9d3070b400ebab27712e1df79}{}\label{bmp180_8h_ad96e88c9d3070b400ebab27712e1df79}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+R\+E\+S\+S\+U\+R\+E\+\_\+\+D\+A\+T\+A\+\_\+\+L\+E\+N\+G\+TH}~((\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})3)\hypertarget{bmp180_8h_ab604fb195c734be810208debc0bfcd99}{}\label{bmp180_8h_ab604fb195c734be810208debc0bfcd99}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+W\+\_\+\+O\+V\+E\+R\+S\+A\+M\+P\+\_\+\+U8X}~((\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})1)\hypertarget{bmp180_8h_a1dfe583ff745c6214c47408184bde624}{}\label{bmp180_8h_a1dfe583ff745c6214c47408184bde624}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+O\+V\+E\+R\+S\+A\+M\+P\+\_\+\+S\+E\+T\+T\+I\+N\+G\+\_\+\+U8X}~((\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})3)\hypertarget{bmp180_8h_af459774ee28cfb538cd08f17585ff394}{}\label{bmp180_8h_af459774ee28cfb538cd08f17585ff394}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+2\+M\+S\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+U8X}~(2)\hypertarget{bmp180_8h_a80f92c90d7f4d60e4d3f4fe4c52e876e}{}\label{bmp180_8h_a80f92c90d7f4d60e4d3f4fe4c52e876e}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+3\+M\+S\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+U8X}~(3)\hypertarget{bmp180_8h_aacb74302845470d29a2257326095696b}{}\label{bmp180_8h_aacb74302845470d29a2257326095696b}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+A\+V\+E\+R\+A\+G\+E\+\_\+\+U8X}~(3)\hypertarget{bmp180_8h_aa78d0a0991a2ddbb9fbd66667ce55bd1}{}\label{bmp180_8h_aa78d0a0991a2ddbb9fbd66667ce55bd1}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+TA}~(0)\hypertarget{bmp180_8h_a819977dbbeb071c0bf62c8494f373daf}{}\label{bmp180_8h_a819977dbbeb071c0bf62c8494f373daf}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+H\+E\+C\+K\+\_\+\+D\+I\+V\+I\+S\+OR}~(0)\hypertarget{bmp180_8h_a14bcdd0c199b6d7cb1dd01e5981d3ca1}{}\label{bmp180_8h_a14bcdd0c199b6d7cb1dd01e5981d3ca1}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+D\+A\+T\+A\+\_\+\+M\+E\+A\+S\+U\+RE}~(3)\hypertarget{bmp180_8h_a880654f882b7d7dc6ec8c15e47231251}{}\label{bmp180_8h_a880654f882b7d7dc6ec8c15e47231251}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+T\+R\+U\+E\+\_\+\+P\+R\+E\+S\+S\+U\+RE}~(8)\hypertarget{bmp180_8h_a00734fa93ec7c7c04b3370f5c4e98de9}{}\label{bmp180_8h_a00734fa93ec7c7c04b3370f5c4e98de9}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+T\+R\+U\+E\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}~(8)\hypertarget{bmp180_8h_afce1e88950bc0bd739f01b4f09678b5a}{}\label{bmp180_8h_afce1e88950bc0bd739f01b4f09678b5a}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+01\+\_\+\+B\+IT}~(1)\hypertarget{bmp180_8h_a6ef73fdc1ab45e0813a93f17e361d9b2}{}\label{bmp180_8h_a6ef73fdc1ab45e0813a93f17e361d9b2}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+02\+\_\+\+B\+I\+TS}~(2)\hypertarget{bmp180_8h_a660d3a734e219a49617299a52bf503d8}{}\label{bmp180_8h_a660d3a734e219a49617299a52bf503d8}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+04\+\_\+\+B\+I\+TS}~(4)\hypertarget{bmp180_8h_afcf00cb84a90469cd2affe034803bccc}{}\label{bmp180_8h_afcf00cb84a90469cd2affe034803bccc}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+06\+\_\+\+B\+I\+TS}~(6)\hypertarget{bmp180_8h_a19129024c0e826db4e65b03017619fc9}{}\label{bmp180_8h_a19129024c0e826db4e65b03017619fc9}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+08\+\_\+\+B\+I\+TS}~(8)\hypertarget{bmp180_8h_a8f9f6ab90b3fc35d8df2bc1f423513b7}{}\label{bmp180_8h_a8f9f6ab90b3fc35d8df2bc1f423513b7}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+11\+\_\+\+B\+I\+TS}~(11)\hypertarget{bmp180_8h_ae97d5ce9c32107818cb1cadee7e08d6b}{}\label{bmp180_8h_ae97d5ce9c32107818cb1cadee7e08d6b}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+12\+\_\+\+B\+I\+TS}~(12)\hypertarget{bmp180_8h_afae522f538b396741fe09b707f6df7ae}{}\label{bmp180_8h_afae522f538b396741fe09b707f6df7ae}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+13\+\_\+\+B\+I\+TS}~(13)\hypertarget{bmp180_8h_a39d12b3bf4fe21b9ab87e5ca63293a0a}{}\label{bmp180_8h_a39d12b3bf4fe21b9ab87e5ca63293a0a}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+15\+\_\+\+B\+I\+TS}~(15)\hypertarget{bmp180_8h_a3bd16520470bfb7f28d9d3b09519246b}{}\label{bmp180_8h_a3bd16520470bfb7f28d9d3b09519246b}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+B\+Y\+\_\+16\+\_\+\+B\+I\+TS}~(16)\hypertarget{bmp180_8h_a5a695b4bac3f3415c84ccbe25eafae55}{}\label{bmp180_8h_a5a695b4bac3f3415c84ccbe25eafae55}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf R\+E\+G\+I\+S\+T\+ER A\+D\+D\+R\+E\+SS D\+E\+F\+I\+N\+I\+T\+I\+ON}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+R\+O\+M\+\_\+\+S\+T\+A\+R\+T\+\_\+\+\_\+\+A\+D\+DR}~(0x\+A\+A)\hypertarget{bmp180_8h_aae9dcd153a483f9b55fee66e46e55215}{}\label{bmp180_8h_aae9dcd153a483f9b55fee66e46e55215}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+R\+O\+M\+\_\+\+D\+A\+T\+A\+\_\+\+\_\+\+L\+EN}~(22)\hypertarget{bmp180_8h_a864467e0bf3ce8f5913b772f720c666a}{}\label{bmp180_8h_a864467e0bf3ce8f5913b772f720c666a}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+R\+EG}~(0x\+D0)\hypertarget{bmp180_8h_ad5beba6e424ba56b2dddaffaf427138a}{}\label{bmp180_8h_ad5beba6e424ba56b2dddaffaf427138a}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+EG}~(0x\+D1)\hypertarget{bmp180_8h_a66aebdbb8ff129d30b1412579a0b340c}{}\label{bmp180_8h_a66aebdbb8ff129d30b1412579a0b340c}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+T\+R\+L\+\_\+\+M\+E\+A\+S\+\_\+\+R\+EG}~(0x\+F4)\hypertarget{bmp180_8h_ab2bd49ee6d3f26126c5cc01b4a5e1192}{}\label{bmp180_8h_ab2bd49ee6d3f26126c5cc01b4a5e1192}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+A\+D\+C\+\_\+\+O\+U\+T\+\_\+\+M\+S\+B\+\_\+\+R\+EG}~(0x\+F6)\hypertarget{bmp180_8h_a29580a04b1219dbb55b3341bf24a4ce7}{}\label{bmp180_8h_a29580a04b1219dbb55b3341bf24a4ce7}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+A\+D\+C\+\_\+\+O\+U\+T\+\_\+\+L\+S\+B\+\_\+\+R\+EG}~(0x\+F7)\hypertarget{bmp180_8h_a62dfda70d87fbbca20bb167bd4acff4c}{}\label{bmp180_8h_a62dfda70d87fbbca20bb167bd4acff4c}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+R\+EG}~(0x\+E0)\hypertarget{bmp180_8h_a2ae64f3da794401ea2249932fd92e396}{}\label{bmp180_8h_a2ae64f3da794401ea2249932fd92e396}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+T\+\_\+\+M\+E\+A\+S\+U\+RE}~(0x2\+E)\hypertarget{bmp180_8h_a981fc4d0873b0aa2e8e81b673b78e182}{}\label{bmp180_8h_a981fc4d0873b0aa2e8e81b673b78e182}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+\_\+\+M\+E\+A\+S\+U\+RE}~(0x34)\hypertarget{bmp180_8h_a750a3efd27f418b085813a55e9835659}{}\label{bmp180_8h_a750a3efd27f418b085813a55e9835659}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+T\+E\+M\+P\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+I\+ME}~(5)\hypertarget{bmp180_8h_a64142b951dd5038273d171e75a92bf44}{}\label{bmp180_8h_a64142b951dd5038273d171e75a92bf44}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+A\+R\+A\+M\+\_\+\+MG}~(3038)\hypertarget{bmp180_8h_af0585656c25b2652e25a1ab60f579247}{}\label{bmp180_8h_af0585656c25b2652e25a1ab60f579247}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+A\+R\+A\+M\+\_\+\+MH}~(-\/7357)\hypertarget{bmp180_8h_a318760ad4869a9da5864ce6e202bba25}{}\label{bmp180_8h_a318760ad4869a9da5864ce6e202bba25}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+A\+R\+A\+M\+\_\+\+MI}~(3791)\hypertarget{bmp180_8h_a788f1e53260ff41658069d07c84e04c1}{}\label{bmp180_8h_a788f1e53260ff41658069d07c84e04c1}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf A\+R\+R\+AY S\+I\+ZE D\+E\+F\+I\+N\+I\+T\+I\+O\+NS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+T\+ES}~(2)\hypertarget{bmp180_8h_a5e37fe64ea4d3df3cbc74dc2252d1799}{}\label{bmp180_8h_a5e37fe64ea4d3df3cbc74dc2252d1799}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+R\+E\+S\+S\+U\+R\+E\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+T\+ES}~(3)\hypertarget{bmp180_8h_afde813116043db05684aec4c882ef72b}{}\label{bmp180_8h_afde813116043db05684aec4c882ef72b}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+L\+S\+B\+\_\+\+D\+A\+TA}~(1)\hypertarget{bmp180_8h_ac3c5e002d22156752dab103a84894a91}{}\label{bmp180_8h_ac3c5e002d22156752dab103a84894a91}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+M\+S\+B\+\_\+\+D\+A\+TA}~(0)\hypertarget{bmp180_8h_a318e4b8c649cb1191b1e32f812e973a9}{}\label{bmp180_8h_a318e4b8c649cb1191b1e32f812e973a9}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+R\+E\+S\+S\+U\+R\+E\+\_\+\+M\+S\+B\+\_\+\+D\+A\+TA}~(0)\hypertarget{bmp180_8h_ad6b416924b21cf8c65d07ecdc943e366}{}\label{bmp180_8h_ad6b416924b21cf8c65d07ecdc943e366}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+R\+E\+S\+S\+U\+R\+E\+\_\+\+L\+S\+B\+\_\+\+D\+A\+TA}~(1)\hypertarget{bmp180_8h_af62c5810a7ce223732c0bfe4cdf6ac39}{}\label{bmp180_8h_af62c5810a7ce223732c0bfe4cdf6ac39}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+P\+R\+E\+S\+S\+U\+R\+E\+\_\+\+X\+L\+S\+B\+\_\+\+D\+A\+TA}~(2)\hypertarget{bmp180_8h_a2c5796a9889c9f6b52cdd6f6849d6e75}{}\label{bmp180_8h_a2c5796a9889c9f6b52cdd6f6849d6e75}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}~(22)\hypertarget{bmp180_8h_a45bdfa6d9d7d0cd755e19f73f2dc8b50}{}\label{bmp180_8h_a45bdfa6d9d7d0cd755e19f73f2dc8b50}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C1\+\_\+\+M\+SB}~(0)\hypertarget{bmp180_8h_a39e64257dddcc6853c0b37c7eb452431}{}\label{bmp180_8h_a39e64257dddcc6853c0b37c7eb452431}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C1\+\_\+\+L\+SB}~(1)\hypertarget{bmp180_8h_ac0dddf978225be0576d56bf325dbd65b}{}\label{bmp180_8h_ac0dddf978225be0576d56bf325dbd65b}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C2\+\_\+\+M\+SB}~(2)\hypertarget{bmp180_8h_a45b13027666ff588d4e0ea25a0b7e5de}{}\label{bmp180_8h_a45b13027666ff588d4e0ea25a0b7e5de}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C2\+\_\+\+L\+SB}~(3)\hypertarget{bmp180_8h_a44c89211983078d4d29df65a90cecfd7}{}\label{bmp180_8h_a44c89211983078d4d29df65a90cecfd7}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C3\+\_\+\+M\+SB}~(4)\hypertarget{bmp180_8h_ad7ba1882b02203a13e798fc610c08e8b}{}\label{bmp180_8h_ad7ba1882b02203a13e798fc610c08e8b}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C3\+\_\+\+L\+SB}~(5)\hypertarget{bmp180_8h_a304cdb889839a99363936553b0ec1d0b}{}\label{bmp180_8h_a304cdb889839a99363936553b0ec1d0b}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C4\+\_\+\+M\+SB}~(6)\hypertarget{bmp180_8h_a17c8ba1b4a61d5ab9d4f13b06c81ccbd}{}\label{bmp180_8h_a17c8ba1b4a61d5ab9d4f13b06c81ccbd}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C4\+\_\+\+L\+SB}~(7)\hypertarget{bmp180_8h_a38bba8ad36653ba3fbabff5c7c921294}{}\label{bmp180_8h_a38bba8ad36653ba3fbabff5c7c921294}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C5\+\_\+\+M\+SB}~(8)\hypertarget{bmp180_8h_ac973ad7edc5e8470da8001d0bef6d6fd}{}\label{bmp180_8h_ac973ad7edc5e8470da8001d0bef6d6fd}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C5\+\_\+\+L\+SB}~(9)\hypertarget{bmp180_8h_ad47bb58cca0ed07df864e6078c4e8db9}{}\label{bmp180_8h_ad47bb58cca0ed07df864e6078c4e8db9}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C6\+\_\+\+M\+SB}~(10)\hypertarget{bmp180_8h_ae14dd74542602653319571c69d5edfec}{}\label{bmp180_8h_ae14dd74542602653319571c69d5edfec}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+C6\+\_\+\+L\+SB}~(11)\hypertarget{bmp180_8h_a3d88f5bed7114e516780150aba8434ab}{}\label{bmp180_8h_a3d88f5bed7114e516780150aba8434ab}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+B1\+\_\+\+M\+SB}~(12)\hypertarget{bmp180_8h_afed57e0c81c090ec16a4eba681e60b63}{}\label{bmp180_8h_afed57e0c81c090ec16a4eba681e60b63}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+B1\+\_\+\+L\+SB}~(13)\hypertarget{bmp180_8h_af6c60f2ca0d25e1bedc43511d6b15658}{}\label{bmp180_8h_af6c60f2ca0d25e1bedc43511d6b15658}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+B2\+\_\+\+M\+SB}~(14)\hypertarget{bmp180_8h_a7b96056467ac2826714e9a95c4995f4a}{}\label{bmp180_8h_a7b96056467ac2826714e9a95c4995f4a}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+B2\+\_\+\+L\+SB}~(15)\hypertarget{bmp180_8h_a7ca62ccf1b54fc51026c96dcbba8776e}{}\label{bmp180_8h_a7ca62ccf1b54fc51026c96dcbba8776e}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+M\+B\+\_\+\+M\+SB}~(16)\hypertarget{bmp180_8h_a5d53ece45a69f1a924b529915f46c295}{}\label{bmp180_8h_a5d53ece45a69f1a924b529915f46c295}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+M\+B\+\_\+\+L\+SB}~(17)\hypertarget{bmp180_8h_a133c7d4adaaf1b3947ac1faa0ed368c9}{}\label{bmp180_8h_a133c7d4adaaf1b3947ac1faa0ed368c9}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+M\+C\+\_\+\+M\+SB}~(18)\hypertarget{bmp180_8h_a6c8321b858deb498a709d4bccf89a502}{}\label{bmp180_8h_a6c8321b858deb498a709d4bccf89a502}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+M\+C\+\_\+\+L\+SB}~(19)\hypertarget{bmp180_8h_aba8f243a128c4213e02bbfaaf071741c}{}\label{bmp180_8h_aba8f243a128c4213e02bbfaaf071741c}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+M\+D\+\_\+\+M\+SB}~(20)\hypertarget{bmp180_8h_ada2dde5c9f08995ce361d7a90ddfc6a2}{}\label{bmp180_8h_ada2dde5c9f08995ce361d7a90ddfc6a2}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+A\+L\+I\+B\+\_\+\+P\+A\+R\+A\+M\+\_\+\+M\+D\+\_\+\+L\+SB}~(21)\hypertarget{bmp180_8h_a3bb56114540128ef597fb04ca7722a2e}{}\label{bmp180_8h_a3bb56114540128ef597fb04ca7722a2e}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf B\+IT M\+A\+SK, L\+E\+N\+G\+TH A\+ND P\+O\+S\+I\+T\+I\+ON F\+OR}\par
+{\em AL V\+E\+R\+S\+I\+ON }\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+\_\+\+P\+OS}~(0)\hypertarget{bmp180_8h_a3b56a17531818d126c7acad8067182a4}{}\label{bmp180_8h_a3b56a17531818d126c7acad8067182a4}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+\_\+\+M\+SK}~(0x\+F\+F)\hypertarget{bmp180_8h_a168dc897ce5d32989da523d49bfa7964}{}\label{bmp180_8h_a168dc897ce5d32989da523d49bfa7964}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+\_\+\+L\+EN}~(8)\hypertarget{bmp180_8h_a8e81ee53ed255cfbec05d4d781c60a16}{}\label{bmp180_8h_a8e81ee53ed255cfbec05d4d781c60a16}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+\_\+\+R\+EG}~(B\+M\+P180\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+R\+EG)\hypertarget{bmp180_8h_a6125d3bc40494582fd50ebcd3f42ecd5}{}\label{bmp180_8h_a6125d3bc40494582fd50ebcd3f42ecd5}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+M\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+\_\+\+P\+OS}~(0)\hypertarget{bmp180_8h_a74a96faedb454d800d35bee00e1c72ab}{}\label{bmp180_8h_a74a96faedb454d800d35bee00e1c72ab}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+M\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+\_\+\+L\+EN}~(4)\hypertarget{bmp180_8h_a1632ff899bf24a8b3dddbbf3ea0c9342}{}\label{bmp180_8h_a1632ff899bf24a8b3dddbbf3ea0c9342}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+M\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+\_\+\+M\+SK}~(0x0\+F)\hypertarget{bmp180_8h_a3b258767949daae20afe836f47070bef}{}\label{bmp180_8h_a3b258767949daae20afe836f47070bef}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+M\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+\_\+\+R\+EG}~(B\+M\+P180\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+EG)\hypertarget{bmp180_8h_aefa3e380b95b1d7bc681c90e4d49aca5}{}\label{bmp180_8h_aefa3e380b95b1d7bc681c90e4d49aca5}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+A\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+\_\+\+P\+OS}~(4)\hypertarget{bmp180_8h_a7ecaf88098287f008b364ee7eca7d0f7}{}\label{bmp180_8h_a7ecaf88098287f008b364ee7eca7d0f7}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+A\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+\_\+\+L\+EN}~(4)\hypertarget{bmp180_8h_a9bfc3bf191bb3ce02ea9aa4364bc2091}{}\label{bmp180_8h_a9bfc3bf191bb3ce02ea9aa4364bc2091}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+A\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+\_\+\+M\+SK}~(0x\+F0)\hypertarget{bmp180_8h_ac0f026640da01c5921b9a1c6743c4c23}{}\label{bmp180_8h_ac0f026640da01c5921b9a1c6743c4c23}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+A\+L\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+\_\+\+R\+EG}~(B\+M\+P180\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+EG)\hypertarget{bmp180_8h_a4e01df7b153652ae440bfbffbe72da6c}{}\label{bmp180_8h_a4e01df7b153652ae440bfbffbe72da6c}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf G\+ET A\+ND S\+ET B\+I\+T\+S\+L\+I\+CE F\+U\+N\+C\+T\+I\+O\+NS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+S\+L\+I\+CE}(regvar,  bitname)~((regvar \& bitname\#\#\+\_\+\+\_\+\+M\+SK) $>$$>$ (bitname\#\#\+\_\+\+\_\+\+P\+OS))\hypertarget{bmp180_8h_a26aca2ea1b03a88992a676e268c4a863}{}\label{bmp180_8h_a26aca2ea1b03a88992a676e268c4a863}
+
+\item 
+\#define {\bfseries B\+M\+P180\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+S\+L\+I\+CE}(regvar,  bitname,  val)~((regvar \& $\sim$bitname\#\#\+\_\+\+\_\+\+M\+SK) $\vert$ ((val$<$$<$bitname\#\#\+\_\+\+\_\+\+P\+OS)\&bitname\#\#\+\_\+\+\_\+\+M\+SK))\hypertarget{bmp180_8h_a09ad4542a757613599d835155eb8eeca}{}\label{bmp180_8h_a09ad4542a757613599d835155eb8eeca}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed char \hyperlink{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{s8}
+\item 
+typedef signed short int \hyperlink{bmp180_8h_a4cb19f4a3324cfe0938ddfbfabaa825b}{s16}
+\item 
+typedef signed int \hyperlink{bmp180_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}
+\item 
+typedef signed long long int \hyperlink{bmp180_8h_a5ace6ff5dbe86acc6c8b3387b8d80ecc}{s64}
+\item 
+typedef unsigned char \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8}
+\item 
+typedef unsigned short int \hyperlink{bmp180_8h_aa0b167025ed1eead1300bc4dbdfb230e}{u16}
+\item 
+typedef unsigned int \hyperlink{bmp180_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}
+\item 
+typedef unsigned long long int \hyperlink{bmp180_8h_ac0b0e5ad15a599850f4ca02c451110ba}{u64}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf F\+U\+N\+C\+T\+I\+ON F\+OR I\+N\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+ON}\par
+\begin{DoxyCompactItemize}
+\item 
+B\+M\+P180\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE \hyperlink{bmp180_8h_aa5e50a84c838cf3c1c0fb92d6ef06782}{bmp180\+\_\+init} (struct \hyperlink{structbmp180__t}{bmp180\+\_\+t} $\ast$bmp180)
+\begin{DoxyCompactList}\small\item\em This function is used for initialize the bus read and bus write functions and assign the chip id and I2C address of the \hyperlink{classBMP180}{B\+M\+P180} chip id is read in the register 0x\+D0 bit from 0 to 7. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf F\+U\+N\+C\+T\+I\+ON F\+OR T\+E\+M\+P\+E\+R\+A\+T\+U\+RE A\+ND P\+R\+E\+S\+S\+U\+RE R\+E\+AD}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{bmp180_8h_a4cb19f4a3324cfe0938ddfbfabaa825b}{s16} \hyperlink{bmp180_8h_a644b92a4e5f0605920c8095be351e917}{bmp180\+\_\+get\+\_\+temperature} (\hyperlink{bmp180_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32} v\+\_\+uncomp\+\_\+temperature\+\_\+u32)
+\begin{DoxyCompactList}\small\item\em this A\+PI is used to calculate the true temperature using the uncompensated temperature(ut) \end{DoxyCompactList}\item 
+\hyperlink{bmp180_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32} \hyperlink{bmp180_8h_ab43ebb138296584870f3eeb45e0daa13}{bmp180\+\_\+get\+\_\+pressure} (\hyperlink{bmp180_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32} v\+\_\+uncomp\+\_\+pressure\+\_\+u32)
+\begin{DoxyCompactList}\small\item\em this A\+PI is used to calculate the true pressure using the uncompensated pressure(up) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf F\+U\+N\+C\+T\+I\+ON F\+OR U\+N\+C\+O\+M\+P\+E\+N\+S\+A\+T\+ED P\+R\+E\+S\+S\+U\+RE A\+ND T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{bmp180_8h_aa0b167025ed1eead1300bc4dbdfb230e}{u16} \hyperlink{bmp180_8h_a076fbf9d8fc6c6b8c6c508af3700a286}{bmp180\+\_\+get\+\_\+uncomp\+\_\+temperature} (void)
+\begin{DoxyCompactList}\small\item\em this A\+PI is used to read the uncompensated temperature(ut) from the register \end{DoxyCompactList}\item 
+\hyperlink{bmp180_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32} \hyperlink{bmp180_8h_a4febf9888426169a9c63785cbab0ec85}{bmp180\+\_\+get\+\_\+uncomp\+\_\+pressure} (void)
+\begin{DoxyCompactList}\small\item\em this A\+PI is used to read the uncompensated pressure(up) from the register \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf F\+U\+N\+C\+T\+I\+ON F\+OR C\+A\+L\+I\+B\+R\+A\+T\+I\+ON}\par
+\begin{DoxyCompactItemize}
+\item 
+B\+M\+P180\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE \hyperlink{bmp180_8h_abeccff920cfd8dfabfdb09c778fddbb0}{bmp180\+\_\+get\+\_\+calib\+\_\+param} (void)
+\begin{DoxyCompactList}\small\item\em this function used for read the calibration parameter from the register \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Header file for all define constants and function prototypes. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}}
+\index{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}{BMP180_BUS_RD_PARAM_ORDER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}\hypertarget{bmp180_8h_a7f0e28b18c6d87f89c4e42d240044894}{}\label{bmp180_8h_a7f0e28b18c6d87f89c4e42d240044894}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(device\_addr, \(\backslash\)
+register\_addr, register\_data, read\_length)
+\end{DoxyCode}
+links the order of parameters defined in B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+PE to function calls used inside the A\+PI \index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}}
+\index{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}{BMP180_BUS_RD_PARAM_TYPES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}\hypertarget{bmp180_8h_a94481617aa2c3a672e6d2d6089acda04}{}\label{bmp180_8h_a94481617aa2c3a672e6d2d6089acda04}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8},\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{\(\backslash\)}
+\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\end{DoxyCode}
+defines the calling parameter types of the B\+M\+P180\+\_\+\+W\+R\+\_\+\+F\+U\+N\+C\+T\+I\+ON \index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}}
+\index{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}{BMP180_BUS_RD_RETURN_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE~{\bf s8}}\hypertarget{bmp180_8h_ad69495bc93869df994aeea8a2d48d0ce}{}\label{bmp180_8h_ad69495bc93869df994aeea8a2d48d0ce}
+
+
+link macro between A\+PI function calls and bus read function 
+
+\begin{DoxyNote}{Note}
+The bus write function can change since this is a system dependant issue.
+\end{DoxyNote}
+If the bus\+\_\+read parameter calling order is like\+: reg\+\_\+addr, reg\+\_\+data, wr\+\_\+len it would be as it is here.
+
+If the parameters are differently ordered or your communication function like I2C need to know the device address, you can change this macro accordingly.
+
+B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+R\+E\+A\+D\+\_\+\+F\+U\+N\+C(dev\+\_\+addr, reg\+\_\+addr, reg\+\_\+data, wr\+\_\+len)\textbackslash{} bus\+\_\+read(dev\+\_\+addr, reg\+\_\+addr, reg\+\_\+data, wr\+\_\+len)
+
+This macro lets all A\+PI functions call Y\+O\+UR communication routine in a way that equals your definition in the refer B\+M\+P180\+\_\+\+W\+R\+\_\+\+F\+U\+N\+C\+\_\+\+P\+TR definition.
+
+\begin{DoxyNote}{Note}
+\+: this macro also includes the "M\+SB=\textquotesingle{}1\textquotesingle{} for reading \hyperlink{classBMP180}{B\+M\+P180} addresses.\+defines the return parameter type of the B\+M\+P180\+\_\+\+W\+R\+\_\+\+F\+U\+N\+C\+T\+I\+ON 
+\end{DoxyNote}
+\index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}}
+\index{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}{BMP180_BUS_WR_PARAM_ORDER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+O\+R\+D\+ER}\hypertarget{bmp180_8h_a40b7c5dc2b8043ffa752db139d30c498}{}\label{bmp180_8h_a40b7c5dc2b8043ffa752db139d30c498}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(device\_addr, register\_addr,\(\backslash\)
+register\_data, write\_length)
+\end{DoxyCode}
+links the order of parameters defined in B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+PE to function calls used inside the A\+PI \index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}}
+\index{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}{BMP180_BUS_WR_PARAM_TYPES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+T\+Y\+P\+ES}\hypertarget{bmp180_8h_a962a2114ae1a784c25fd4f40b86f2320}{}\label{bmp180_8h_a962a2114ae1a784c25fd4f40b86f2320}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8},\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{\(\backslash\)}
+\hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *, \hyperlink{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{u8}
+\end{DoxyCode}
+defines the calling parameter types of the B\+M\+P180\+\_\+\+W\+R\+\_\+\+F\+U\+N\+C\+T\+I\+ON \index{bmp180.\+h@{bmp180.\+h}!B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}}
+\index{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE@{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}{BMP180_BUS_WR_RETURN_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE~{\bf s8}}\hypertarget{bmp180_8h_a6284933b54c0ffc45aede2f93d97831b}{}\label{bmp180_8h_a6284933b54c0ffc45aede2f93d97831b}
+
+
+Define the calling convention of Y\+O\+UR bus communication routine. 
+
+\begin{DoxyNote}{Note}
+This includes types of parameters. This example shows the configuration for an \hyperlink{classSPI}{S\+PI} bus link.
+\end{DoxyNote}
+If your communication function looks like this\+:
+
+write\+\_\+my\+\_\+bus\+\_\+xy(u8 device\+\_\+addr, u8 register\+\_\+addr, u8 $\ast$ data, u8 length);
+
+The B\+M\+P180\+\_\+\+W\+R\+\_\+\+F\+U\+N\+C\+\_\+\+P\+TR would equal\+:
+
+B\+M\+P180\+\_\+\+W\+R\+\_\+\+F\+U\+N\+C\+\_\+\+P\+TR s8 ($\ast$ bus\+\_\+write)(u8, u8, u8 $\ast$, u8)
+
+Parameters can be mixed as needed refer to the refer B\+M\+P180\+\_\+\+B\+U\+S\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+U\+NC macro. \index{bmp180.\+h@{bmp180.\+h}!M\+A\+C\+H\+I\+N\+E\+\_\+32\+\_\+\+B\+IT@{M\+A\+C\+H\+I\+N\+E\+\_\+32\+\_\+\+B\+IT}}
+\index{M\+A\+C\+H\+I\+N\+E\+\_\+32\+\_\+\+B\+IT@{M\+A\+C\+H\+I\+N\+E\+\_\+32\+\_\+\+B\+IT}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+C\+H\+I\+N\+E\+\_\+32\+\_\+\+B\+IT}{MACHINE_32_BIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+C\+H\+I\+N\+E\+\_\+32\+\_\+\+B\+IT}\hypertarget{bmp180_8h_abd876f9063f4967bbc64bf50e33cbb89}{}\label{bmp180_8h_abd876f9063f4967bbc64bf50e33cbb89}
+
+
+The following definition uses for define the data types. 
+
+\begin{DoxyNote}{Note}
+While porting the A\+PI please consider the following 
+
+Please check the version of C standard 
+
+Are you using Linux platform
+\end{DoxyNote}
+For the Linux platform support Please use the types.\+h for your data types definitions
+
+By default it is defined as 32 bit machine configuration define your data types based on your machine/compiler/controller configuration 
+
+\subsection{Typedef Documentation}
+\index{bmp180.\+h@{bmp180.\+h}!s16@{s16}}
+\index{s16@{s16}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{s16}{s16}}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed short int {\bf s16}}\hypertarget{bmp180_8h_a4cb19f4a3324cfe0938ddfbfabaa825b}{}\label{bmp180_8h_a4cb19f4a3324cfe0938ddfbfabaa825b}
+used for signed 16bit \index{bmp180.\+h@{bmp180.\+h}!s32@{s32}}
+\index{s32@{s32}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{s32}{s32}}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed int {\bf s32}}\hypertarget{bmp180_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{}\label{bmp180_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}
+used for signed 32bit \index{bmp180.\+h@{bmp180.\+h}!s64@{s64}}
+\index{s64@{s64}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{s64}{s64}}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed long long int {\bf s64}}\hypertarget{bmp180_8h_a5ace6ff5dbe86acc6c8b3387b8d80ecc}{}\label{bmp180_8h_a5ace6ff5dbe86acc6c8b3387b8d80ecc}
+used for signed 64bit \index{bmp180.\+h@{bmp180.\+h}!s8@{s8}}
+\index{s8@{s8}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{s8}{s8}}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf s8}}\hypertarget{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}{}\label{bmp180_8h_a151f780fb455885061d3b77ec1c90c03}
+used for signed 8bit \index{bmp180.\+h@{bmp180.\+h}!u16@{u16}}
+\index{u16@{u16}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{u16}{u16}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short int {\bf u16}}\hypertarget{bmp180_8h_aa0b167025ed1eead1300bc4dbdfb230e}{}\label{bmp180_8h_aa0b167025ed1eead1300bc4dbdfb230e}
+used for unsigned 16bit \index{bmp180.\+h@{bmp180.\+h}!u32@{u32}}
+\index{u32@{u32}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{u32}{u32}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf u32}}\hypertarget{bmp180_8h_a10e94b422ef0c20dcdec20d31a1f5049}{}\label{bmp180_8h_a10e94b422ef0c20dcdec20d31a1f5049}
+used for unsigned 32bit \index{bmp180.\+h@{bmp180.\+h}!u64@{u64}}
+\index{u64@{u64}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{u64}{u64}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long long int {\bf u64}}\hypertarget{bmp180_8h_ac0b0e5ad15a599850f4ca02c451110ba}{}\label{bmp180_8h_ac0b0e5ad15a599850f4ca02c451110ba}
+used for unsigned 64bit \index{bmp180.\+h@{bmp180.\+h}!u8@{u8}}
+\index{u8@{u8}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{u8}{u8}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf u8}}\hypertarget{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}{}\label{bmp180_8h_aed742c436da53c1080638ce6ef7d13de}
+used for unsigned 8bit 
+
+\subsection{Function Documentation}
+\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+get\+\_\+calib\+\_\+param@{bmp180\+\_\+get\+\_\+calib\+\_\+param}}
+\index{bmp180\+\_\+get\+\_\+calib\+\_\+param@{bmp180\+\_\+get\+\_\+calib\+\_\+param}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{bmp180\+\_\+get\+\_\+calib\+\_\+param(void)}{bmp180_get_calib_param(void)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+M\+P180\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE bmp180\+\_\+get\+\_\+calib\+\_\+param (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{bmp180_8h_abeccff920cfd8dfabfdb09c778fddbb0}{}\label{bmp180_8h_abeccff920cfd8dfabfdb09c778fddbb0}
+
+
+this function used for read the calibration parameter from the register 
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*4{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Parameter }&{\bf M\+SB }&{\bf L\+SB }&{\bf bit  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Parameter }&{\bf M\+SB }&{\bf L\+SB }&{\bf bit  }\\\cline{1-4}
+\endhead
+A\+C1 &0x\+AA &0x\+AB &0 to 7 \\\cline{1-4}
+A\+C2 &0x\+AC &0x\+AD &0 to 7 \\\cline{1-4}
+A\+C3 &0x\+AE &0x\+AF &0 to 7 \\\cline{1-4}
+A\+C4 &0x\+B0 &0x\+B1 &0 to 7 \\\cline{1-4}
+A\+C5 &0x\+B2 &0x\+B3 &0 to 7 \\\cline{1-4}
+A\+C6 &0x\+B4 &0x\+B5 &0 to 7 \\\cline{1-4}
+B1 &0x\+B6 &0x\+B7 &0 to 7 \\\cline{1-4}
+B2 &0x\+B8 &0x\+B9 &0 to 7 \\\cline{1-4}
+MB &0x\+BA &0x\+BB &0 to 7 \\\cline{1-4}
+MC &0x\+BC &0x\+BD &0 to 7 \\\cline{1-4}
+MD &0x\+BE &0x\+BF &0 to 7 \\\cline{1-4}
+\end{longtabu}
+
+
+\begin{DoxyReturn}{Returns}
+results of bus communication function 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/$>$ Success \\
+\hline
+{\em -\/1} & -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+get\+\_\+pressure@{bmp180\+\_\+get\+\_\+pressure}}
+\index{bmp180\+\_\+get\+\_\+pressure@{bmp180\+\_\+get\+\_\+pressure}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{bmp180\+\_\+get\+\_\+pressure(u32 v\+\_\+uncomp\+\_\+pressure\+\_\+u32)}{bmp180_get_pressure(u32 v_uncomp_pressure_u32)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32} bmp180\+\_\+get\+\_\+pressure (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{v\+\_\+uncomp\+\_\+pressure\+\_\+u32}
+\end{DoxyParamCaption}
+)}\hypertarget{bmp180_8h_ab43ebb138296584870f3eeb45e0daa13}{}\label{bmp180_8h_ab43ebb138296584870f3eeb45e0daa13}
+
+
+this A\+PI is used to calculate the true pressure using the uncompensated pressure(up) 
+
+\begin{DoxyNote}{Note}
+For reading the up data refer \+: bmp180\+\_\+read\+\_\+up()
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+uncomp\+\_\+pressure\+\_\+u32} & the value of uncompensated pressure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the value of pressure in steps of 1.\+0 Pa 
+\end{DoxyReturn}
+\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+get\+\_\+temperature@{bmp180\+\_\+get\+\_\+temperature}}
+\index{bmp180\+\_\+get\+\_\+temperature@{bmp180\+\_\+get\+\_\+temperature}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{bmp180\+\_\+get\+\_\+temperature(u32 v\+\_\+uncomp\+\_\+temperature\+\_\+u32)}{bmp180_get_temperature(u32 v_uncomp_temperature_u32)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s16} bmp180\+\_\+get\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{v\+\_\+uncomp\+\_\+temperature\+\_\+u32}
+\end{DoxyParamCaption}
+)}\hypertarget{bmp180_8h_a644b92a4e5f0605920c8095be351e917}{}\label{bmp180_8h_a644b92a4e5f0605920c8095be351e917}
+
+
+this A\+PI is used to calculate the true temperature using the uncompensated temperature(ut) 
+
+\begin{DoxyNote}{Note}
+For reading the ut data refer \+: bmp180\+\_\+read\+\_\+ut()
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+uncomp\+\_\+temperature\+\_\+u32} & the value of uncompensated temperature\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the temperature in steps of 0.\+1 deg Celsius 
+\end{DoxyReturn}
+\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+get\+\_\+uncomp\+\_\+pressure@{bmp180\+\_\+get\+\_\+uncomp\+\_\+pressure}}
+\index{bmp180\+\_\+get\+\_\+uncomp\+\_\+pressure@{bmp180\+\_\+get\+\_\+uncomp\+\_\+pressure}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{bmp180\+\_\+get\+\_\+uncomp\+\_\+pressure(void)}{bmp180_get_uncomp_pressure(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} bmp180\+\_\+get\+\_\+uncomp\+\_\+pressure (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{bmp180_8h_a4febf9888426169a9c63785cbab0ec85}{}\label{bmp180_8h_a4febf9888426169a9c63785cbab0ec85}
+
+
+this A\+PI is used to read the uncompensated pressure(up) from the register 
+
+\begin{DoxyNote}{Note}
+0x\+F6(M\+SB) bit from 0 to 7 
+
+0x\+F7(L\+SB) bit from 0 to 7 
+
+0x\+F8(L\+SB) bit from 3 to 7
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+results of bus communication function 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/$>$ Success \\
+\hline
+{\em -\/1} & -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+get\+\_\+uncomp\+\_\+temperature@{bmp180\+\_\+get\+\_\+uncomp\+\_\+temperature}}
+\index{bmp180\+\_\+get\+\_\+uncomp\+\_\+temperature@{bmp180\+\_\+get\+\_\+uncomp\+\_\+temperature}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{bmp180\+\_\+get\+\_\+uncomp\+\_\+temperature(void)}{bmp180_get_uncomp_temperature(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} bmp180\+\_\+get\+\_\+uncomp\+\_\+temperature (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{bmp180_8h_a076fbf9d8fc6c6b8c6c508af3700a286}{}\label{bmp180_8h_a076fbf9d8fc6c6b8c6c508af3700a286}
+
+
+this A\+PI is used to read the uncompensated temperature(ut) from the register 
+
+\begin{DoxyNote}{Note}
+0x\+F6(M\+SB) bit from 0 to 7 
+
+0x\+F7(L\+SB) bit from 0 to 7
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+results of bus communication function 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/$>$ Success \\
+\hline
+{\em -\/1} & -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+\index{bmp180.\+h@{bmp180.\+h}!bmp180\+\_\+init@{bmp180\+\_\+init}}
+\index{bmp180\+\_\+init@{bmp180\+\_\+init}!bmp180.\+h@{bmp180.\+h}}
+\subsubsection[{\texorpdfstring{bmp180\+\_\+init(struct bmp180\+\_\+t $\ast$bmp180)}{bmp180_init(struct bmp180_t *bmp180)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+M\+P180\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE bmp180\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf bmp180\+\_\+t} $\ast$}]{bmp180}
+\end{DoxyParamCaption}
+)}\hypertarget{bmp180_8h_aa5e50a84c838cf3c1c0fb92d6ef06782}{}\label{bmp180_8h_aa5e50a84c838cf3c1c0fb92d6ef06782}
+
+
+This function is used for initialize the bus read and bus write functions and assign the chip id and I2C address of the \hyperlink{classBMP180}{B\+M\+P180} chip id is read in the register 0x\+D0 bit from 0 to 7. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bmp180} & structure pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+While changing the parameter of the \hyperlink{structbmp180__t}{bmp180\+\_\+t} 
+
+consider the following point\+: Changing the reference value of the parameter will changes the local copy or local reference make sure your changes will not affect the reference value of the parameter (Better case don\textquotesingle{}t change the reference value of the parameter)
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+results of bus communication function 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/$>$ Success \\
+\hline
+{\em -\/1} & -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}

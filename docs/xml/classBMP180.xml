@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classBMP180" kind="class" language="C++" prot="public">
+    <compoundname>BMP180</compoundname>
+    <includes refid="BMP180_8hpp" local="no">BMP180.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBMP180_1a8c3e89c7ea65e49c0001a43af07b7c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BMP180::BMP180</definition>
+        <argsstring>()</argsstring>
+        <name>BMP180</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/BMP180.hpp" line="28" column="1" bodyfile="src/Sensors/BMP180.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1a8d434a3074ba607d2dbc14657ae224dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>BMP180::~BMP180</definition>
+        <argsstring>()</argsstring>
+        <name>~BMP180</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/BMP180.hpp" line="29" column="1" bodyfile="src/Sensors/BMP180.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1a4a5650b6821c73b5ad9654a9765a9d82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BMP180::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/BMP180.hpp" line="31" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="BMP180_8hpp" kindref="compound">BMP180.hpp</ref></para><para>Created on: 27 Mar 2017 Author: Matthias Minx </para>    </detaileddescription>
+    <location file="src/Sensors/BMP180.hpp" line="15" column="1" bodyfile="src/Sensors/BMP180.hpp" bodystart="15" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classBMP180_1a8c3e89c7ea65e49c0001a43af07b7c35" prot="public" virt="non-virtual"><scope>BMP180</scope><name>BMP180</name></member>
+      <member refid="classBMP180_1a4a5650b6821c73b5ad9654a9765a9d82" prot="public" virt="non-virtual"><scope>BMP180</scope><name>Init</name></member>
+      <member refid="classBMP180_1a8d434a3074ba607d2dbc14657ae224dd" prot="public" virt="virtual"><scope>BMP180</scope><name>~BMP180</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

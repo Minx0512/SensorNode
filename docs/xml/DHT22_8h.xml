@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="DHT22_8h" kind="file" language="C++">
+    <compoundname>DHT22.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">avr/io.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <includedby refid="DHT22_8cpp" local="yes">src/Sensors/DHT22.cpp</includedby>
+    <incdepgraph>
+      <node id="235">
+        <label>src/Sensors/DHT22.h</label>
+        <link refid="DHT22.h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>stdlib.h</label>
+      </node>
+      <node id="237">
+        <label>avr/io.h</label>
+      </node>
+      <node id="239">
+        <label>ctype.h</label>
+      </node>
+      <node id="236">
+        <label>stdio.h</label>
+      </node>
+      <node id="240">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="241">
+        <label>src/Sensors/DHT22.h</label>
+        <link refid="DHT22.h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>src/Sensors/DHT22.cpp</label>
+        <link refid="DHT22_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classDHT22" prot="public">DHT22</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="DHT22_8h_1a802b2b582b121e4632aa9a491d503720" prot="public" static="no">
+        <name>FOSC</name>
+        <initializer>16000000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="20" column="9" bodyfile="src/Sensors/DHT22.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DHT22_8h_1a3a15b9e4cfa1f6668b3bc5e324af42c0" prot="public" static="no">
+        <name>LOOP_CYCLES</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="22" column="10" bodyfile="src/Sensors/DHT22.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" prot="public" static="no">
+        <name>us</name>
+        <param><defname>num</defname></param>
+        <initializer>(num/(<ref refid="DS18B20_8h_1a3a15b9e4cfa1f6668b3bc5e324af42c0" kindref="member">LOOP_CYCLES</ref>*(1/(<ref refid="DS18B20_8h_1a802b2b582b121e4632aa9a491d503720" kindref="member">FOSC</ref>/1000000.0))))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="23" column="9" bodyfile="src/Sensors/DHT22.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>DHT22.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>12,<sp/>2016</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>matthias</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DHT22_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DHT22_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctype.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FOSC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="DHT22_8h_1a802b2b582b121e4632aa9a491d503720" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FOSC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16000000UL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="DHT22_8h_1a3a15b9e4cfa1f6668b3bc5e324af42c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOOP_CYCLES<sp/><sp/>8<sp/><sp/>//Number<sp/>of<sp/>cycles<sp/>that<sp/>the<sp/>loop<sp/>takes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>us(num)<sp/>(num/(LOOP_CYCLES*(1/(FOSC/1000000.0))))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classDHT22" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDHT22" kindref="compound">DHT22</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Thermometer<sp/>Connections<sp/>(At<sp/>your<sp/>choice)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classDHT22_1a0966fbe5db17d7ca6f1f036830e27502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="classDHT22_1a0966fbe5db17d7ca6f1f036830e27502" kindref="member">AM2302_WIRE_PORT</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classDHT22_1a69649c4246cd4e255a6e61961b0c948b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="classDHT22_1a69649c4246cd4e255a6e61961b0c948b" kindref="member">AM2302_WIRE_DDR</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classDHT22_1a5555aa8aa95149f3a3723582bb4ceffa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="classDHT22_1a5555aa8aa95149f3a3723582bb4ceffa" kindref="member">AM2302_WIRE_PIN</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" kindref="member">AM2302_WIRE_DQ</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classDHT22_1acbca744f7ed6f46e2d060c7047b0b1a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDHT22_1acbca744f7ed6f46e2d060c7047b0b1a4" kindref="member">TIMEOUT</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDHT22_1ad80f0ddc323aa1ec6702230d4a80349f" kindref="member">DHT22</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDHT22_1ad80f0ddc323aa1ec6702230d4a80349f" kindref="member">DHT22</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_PORT,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_DDR,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_PIN,uint8_t<sp/>Wire_DQ);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDHT22_1a51552e5b7373329a6751aeffc04a8fd5" kindref="member">GetTemperatureHumidity</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temperature,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*humidity);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDHT22_1abe301571f40deb569b74e980ef2da9a7" kindref="member">GetTemperature</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temperature);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDHT22_1acaffb8b6e2602a291d3b2e2ec5bc340c" kindref="member">GetHumidity</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*humidity);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDHT22_1ac3f4e0757e14c5a8ea96cd4eb5e8d57c" kindref="member">GetSensorStringXML</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDHT22_1a7384e5b3512bca9692932cbc74c0d110" kindref="member">GetSensorTemperatureStringXML</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDHT22_1acee19cfc832183328130ec99ce0f9854" kindref="member">GetSensorHumidityStringXML</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDHT22_1acfa5b6640685318856f09aa84080fd76" kindref="member">Reset</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDHT22_1acf1337337af198d3a6216f625c70cbc7" kindref="member">SendRequest</ref>(uint8_t<sp/>bit);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="classDHT22_1ae8fbd3966b285fd9b7318dcad2036e93" kindref="member">GetData</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temperature,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*humidity);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classDHT22_1aae1d3f75d7a34843d3a4b533c56e474c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDHT22_1aae1d3f75d7a34843d3a4b533c56e474c" kindref="member">AM2302_PIN_INPUT_MODE</ref>(){<sp/>*AM2302_WIRE_DDR&amp;=~(1&lt;&lt;<ref refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" kindref="member">AM2302_WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="65" refid="classDHT22_1a96e379a2cf2c6239253c9f706959253c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDHT22_1a96e379a2cf2c6239253c9f706959253c" kindref="member">AM2302_PIN_OUTPUT_MODE</ref>(){<sp/>*AM2302_WIRE_DDR|=(1&lt;&lt;<ref refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" kindref="member">AM2302_WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="66" refid="classDHT22_1a312eb760672d2818f8de68c553bd5a21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDHT22_1a312eb760672d2818f8de68c553bd5a21" kindref="member">AM2302_PIN_LOW</ref>(){<sp/>*AM2302_WIRE_PORT&amp;=~(1&lt;&lt;<ref refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" kindref="member">AM2302_WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="67" refid="classDHT22_1a98ca5e15fa219b57e819691e16707122" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDHT22_1a98ca5e15fa219b57e819691e16707122" kindref="member">AM2302_PIN_HIGH</ref>(){<sp/>*AM2302_WIRE_PORT|=(1&lt;&lt;<ref refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" kindref="member">AM2302_WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="68" refid="classDHT22_1ae2f4f7c34bf80cd3f4bf0da52fa96572" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classDHT22_1ae2f4f7c34bf80cd3f4bf0da52fa96572" kindref="member">AM2302_HIGH_INPUT</ref>(){<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*AM2302_WIRE_PIN<sp/>&amp;<sp/>(1&lt;&lt;AM2302_WIRE_DQ));}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DHT22_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="src/Sensors/DHT22.h"/>
+  </compounddef>
+</doxygen>

@@ -1,8 +1,19 @@
-/*
- * USART.cpp
+/**
+****************************************************************************
+* Project: SensorNode
+*
+* USART.cpp
+*
+* Created on: Nov 12, 2016
+*
+* Author: Matthias Minx
+*
+* Revision: 0.2
+*
+*
+****************************************************************************/
+/** \file USART.cpp
  *
- *  Created on: Nov 12, 2016
- *      Author: matthias
  */
 
 
@@ -13,7 +24,7 @@
 
 
 USART::USART(){
-	// TODO Auto-generated constructor stub
+
 
 	//FOSC =16000000UL;
 	_BAUD =	9600;					// Baud rate (9600 is default)
@@ -83,6 +94,7 @@ void USART::putByte(unsigned char data){
 
 }
 
+/*! \brief Empties the RX buffer */
 void USART::USART0_Flush(void){
 	unsigned char dummy;
 	while(UCSR0A & (1<<RXC0)) dummy = UDR0;
@@ -100,6 +112,7 @@ void USART::writeString(char *str){
 	}
 }
 
+/*! \brief Reads an ASCII string from the RX buffer */
 const char* USART::readString(void){
 	static char rxstr[RX_BUFF];
 	static char* temp;
@@ -114,6 +127,8 @@ const char* USART::readString(void){
 
 	return rxstr;
 }
+
+/*! \brief Reads an ASCII string from the RX buffer */
 void USART::readString(char myString[],uint8_t maxLength){
 
 	char response;
@@ -139,8 +154,7 @@ void USART::readString(char myString[],uint8_t maxLength){
 
 }
 
-
-
+/*! \brief Reads an ASCII string from the RX buffer */
 void USART::readString(char* string){
 
 //static char rxstr[l_puffer];

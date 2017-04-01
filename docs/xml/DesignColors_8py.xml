@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="DesignColors_8py" kind="file" language="Python">
+    <compoundname>DesignColors.py</compoundname>
+    <innernamespace refid="namespaceDesignColors">DesignColors</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#!/usr/bin/python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">APP_BAR<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#212121&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">APP_BG<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#303030&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">APP_DIALOG<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#424242&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">APP_FONT_COLOR<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#ffffff&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">BUTTON_BG_COLOR_ACTIVE<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#3f51b5&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">BUTTON_BG_COLOR_INACTIVE<sp/>=<sp/>APP_BG</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#BUTTON_BG_COLOR_DISABLED<sp/>=<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">BUTTON_BG_COLOR_HOVER<sp/>=<sp/>APP_BG</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">BUTTON_BG_COLOR_NORMAL<sp/>=<sp/>APP_BG</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">BUTTON_FONT_COLOR<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#FFFFFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">BUTTON_FONT_COLOR_HOVER_ACTIVE<sp/>=<sp/>APP_BG</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">BUTTON_FONT_COLOR_HOVER_INACTIVE<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#3f51b5&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">BUTTON_BG_COLOR_LIGHTS<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#3F51B5&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">BUTTON_BG_COLOR_LIGHTS_HOVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#1A237E&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">BUTTON_FONT_COLOR_LIGHTS<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#FFFFFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">BUTTON_FONT_COLOR_LIGHTS_HOVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#FFFFFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">BUTTON_BG_COLOR_SENSORS<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#3F51B5&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">BUTTON_FONT_COLOR_SENSORS<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#FFFFFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">BUTTON_BG_COLOR_SENSORS_HOVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#1A237E&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">BUTTON_FONT_COLOR_SENSORS_HOVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#FFFFFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">BUTTON_BG_COLOR_CONFIGURE<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#2196f3&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">BUTTON_FONT_COLOR_CONFIGURE<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#FFFFFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">BUTTON_BG_COLOR_CONFIGURE_HOVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#0d47a1&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">BUTTON_FONT_COLOR_CONFIGURE_HOVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#FFFFFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">BUTTON_BG_COLOR_SYSTEM<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#2196f3&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">BUTTON_FONT_COLOR_SYSTEM<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#FFFFFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">BUTTON_BG_COLOR_SYSTEM_HOVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#0d47a1&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">BUTTON_FONT_COLOR_SYSTEM_HOVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#FFFFFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Python/DesignColors.py"/>
+  </compounddef>
+</doxygen>

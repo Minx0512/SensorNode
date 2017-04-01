@@ -1,0 +1,278 @@
+\hypertarget{classUSART}{}\section{U\+S\+A\+RT Class Reference}
+\label{classUSART}\index{U\+S\+A\+RT@{U\+S\+A\+RT}}
+
+
+\hyperlink{classUSART}{U\+S\+A\+RT} class definition.  
+
+
+
+
+{\ttfamily \#include $<$U\+S\+A\+R\+T.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUSART_a538ccfb4c4ae821f4fd4e87afe9fd96e}{U\+S\+A\+RT} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUSART}{U\+S\+A\+RT} standard constructor. \end{DoxyCompactList}\item 
+\hyperlink{classUSART_a889e2ca93527fd03811fdff317f50f39}{U\+S\+A\+RT} (uint32\+\_\+t baudrate)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUSART}{U\+S\+A\+RT} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classUSART_a249b0d6967ead56f39448d4954835a27}{write\+String} (char $\ast$\hyperlink{main_8cpp_ac19b967928c4ef5b461808cbac40840c}{str})
+\begin{DoxyCompactList}\small\item\em Writes String to interface. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classUSART_a7e56b380e59b576bbac13e60ca9ba829}{read\+String} (void)
+\begin{DoxyCompactList}\small\item\em Reads incoming string. \end{DoxyCompactList}\item 
+void \hyperlink{classUSART_a6c22ca3ab4707ade9a03a0293358f192}{read\+String} (char my\+String\mbox{[}$\,$\mbox{]}, uint8\+\_\+t max\+Length)
+\begin{DoxyCompactList}\small\item\em Reads incoming string. \end{DoxyCompactList}\item 
+void \hyperlink{classUSART_af016ea3df95f00dd664edb0b8c57787d}{read\+String} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Reads incoming string. \end{DoxyCompactList}\item 
+void \hyperlink{classUSART_a5f8bbc3788153e13d94ece254f8ee2e7}{init\+U\+A\+RT} (void)
+\begin{DoxyCompactList}\small\item\em Initialize \hyperlink{classUSART}{U\+S\+A\+RT} interface. \end{DoxyCompactList}\item 
+void \hyperlink{classUSART_abad4151d072782e70255f999a1451199}{U\+S\+A\+R\+T0\+\_\+\+Flush} (void)
+\begin{DoxyCompactList}\small\item\em Flush \hyperlink{classUSART}{U\+S\+A\+RT} buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{classUSART_a42a1789b9a8805da6ed3f4f62f74a764}{get\+Byte} (void)
+\begin{DoxyCompactList}\small\item\em Read 1 Byte of incoming data. \end{DoxyCompactList}\item 
+void \hyperlink{classUSART_a0103c87dca8c49a1fa9ec607d4d494a9}{put\+Byte} (unsigned char data)
+\begin{DoxyCompactList}\small\item\em Send Byte via the \hyperlink{classUSART}{U\+S\+A\+RT} interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{classUSART_adb222c3be48f5a559ed2dd9b4743edda}{\+\_\+\+B\+A\+UD}
+\begin{DoxyCompactList}\small\item\em Baud rate. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classUSART_acbd19517b595cf04ff087e040270904f}{\+\_\+\+U\+B\+RR}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUSART}{U\+S\+A\+RT} Baud Rate Register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classUSART}{U\+S\+A\+RT} class definition. 
+
+Defines methods for accessing the \hyperlink{classUSART}{U\+S\+A\+RT} interface 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T()}{USART()}}]{\setlength{\rightskip}{0pt plus 5cm}U\+S\+A\+R\+T\+::\+U\+S\+A\+RT (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUSART_a538ccfb4c4ae821f4fd4e87afe9fd96e}{}\label{classUSART_a538ccfb4c4ae821f4fd4e87afe9fd96e}
+
+
+\hyperlink{classUSART}{U\+S\+A\+RT} standard constructor. 
+
+new \hyperlink{classUSART}{U\+S\+A\+RT} object with baud rate set to 9600 \index{U\+S\+A\+RT@{U\+S\+A\+RT}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T(uint32\+\_\+t baudrate)}{USART(uint32_t baudrate)}}]{\setlength{\rightskip}{0pt plus 5cm}U\+S\+A\+R\+T\+::\+U\+S\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{baudrate}
+\end{DoxyParamCaption}
+)}\hypertarget{classUSART_a889e2ca93527fd03811fdff317f50f39}{}\label{classUSART_a889e2ca93527fd03811fdff317f50f39}
+
+
+\hyperlink{classUSART}{U\+S\+A\+RT} constructor. 
+
+new \hyperlink{classUSART}{U\+S\+A\+RT} object with baud rate set to baudrate 
+\begin{DoxyParams}{Parameters}
+{\em baudrate} & in bit per second (bps) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!get\+Byte@{get\+Byte}}
+\index{get\+Byte@{get\+Byte}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{get\+Byte(void)}{getByte(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t U\+S\+A\+R\+T\+::get\+Byte (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classUSART_a42a1789b9a8805da6ed3f4f62f74a764}{}\label{classUSART_a42a1789b9a8805da6ed3f4f62f74a764}
+
+
+Read 1 Byte of incoming data. 
+
+Returns a byte from the serial buffer Use this function if the RX interrupt is not enabled. Returns 0 on empty buffer.
+
+\begin{DoxyReturn}{Returns}
+Receive 1 Characterbyte as uint8 
+\end{DoxyReturn}
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!init\+U\+A\+RT@{init\+U\+A\+RT}}
+\index{init\+U\+A\+RT@{init\+U\+A\+RT}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{init\+U\+A\+R\+T(void)}{initUART(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+A\+R\+T\+::init\+U\+A\+RT (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUSART_a5f8bbc3788153e13d94ece254f8ee2e7}{}\label{classUSART_a5f8bbc3788153e13d94ece254f8ee2e7}
+
+
+Initialize \hyperlink{classUSART}{U\+S\+A\+RT} interface. 
+
+Configures baud rate (refer datasheet) \index{U\+S\+A\+RT@{U\+S\+A\+RT}!put\+Byte@{put\+Byte}}
+\index{put\+Byte@{put\+Byte}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{put\+Byte(unsigned char data)}{putByte(unsigned char data)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+A\+R\+T\+::put\+Byte (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classUSART_a0103c87dca8c49a1fa9ec607d4d494a9}{}\label{classUSART_a0103c87dca8c49a1fa9ec607d4d494a9}
+
+
+Send Byte via the \hyperlink{classUSART}{U\+S\+A\+RT} interface. 
+
+Transmits a byte Use this function if the TX interrupt is not enabled. Blocks the serial port while TX completes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & Databyte to transmit \\
+\hline
+\end{DoxyParams}
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!read\+String@{read\+String}}
+\index{read\+String@{read\+String}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{read\+String(void)}{readString(void)}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ U\+S\+A\+R\+T\+::read\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUSART_a7e56b380e59b576bbac13e60ca9ba829}{}\label{classUSART_a7e56b380e59b576bbac13e60ca9ba829}
+
+
+Reads incoming string. 
+
+Reads an A\+S\+C\+II string from the RX buffer.
+
+Reads incoming string until a new line character \begin{DoxyReturn}{Returns}
+constant character array 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classUSART_a7e56b380e59b576bbac13e60ca9ba829_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!read\+String@{read\+String}}
+\index{read\+String@{read\+String}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{read\+String(char my\+String[], uint8\+\_\+t max\+Length)}{readString(char myString[], uint8_t maxLength)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+A\+R\+T\+::read\+String (
+\begin{DoxyParamCaption}
+\item[{char}]{my\+String\mbox{[}$\,$\mbox{]}, }
+\item[{uint8\+\_\+t}]{max\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{classUSART_a6c22ca3ab4707ade9a03a0293358f192}{}\label{classUSART_a6c22ca3ab4707ade9a03a0293358f192}
+
+
+Reads incoming string. 
+
+Reads an A\+S\+C\+II string from the RX buffer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em my\+String} & character array \\
+\hline
+\mbox{\tt in}  & {\em max\+Length} & Maximum length of string to read \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classUSART_a6c22ca3ab4707ade9a03a0293358f192_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!read\+String@{read\+String}}
+\index{read\+String@{read\+String}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{read\+String(char $\ast$string)}{readString(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+A\+R\+T\+::read\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classUSART_af016ea3df95f00dd664edb0b8c57787d}{}\label{classUSART_af016ea3df95f00dd664edb0b8c57787d}
+
+
+Reads incoming string. 
+
+Reads an A\+S\+C\+II string from the RX buffer.
+
+Reads incoming string until a new line character 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & character array \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classUSART_af016ea3df95f00dd664edb0b8c57787d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!U\+S\+A\+R\+T0\+\_\+\+Flush@{U\+S\+A\+R\+T0\+\_\+\+Flush}}
+\index{U\+S\+A\+R\+T0\+\_\+\+Flush@{U\+S\+A\+R\+T0\+\_\+\+Flush}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T0\+\_\+\+Flush(void)}{USART0_Flush(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+A\+R\+T\+::\+U\+S\+A\+R\+T0\+\_\+\+Flush (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUSART_abad4151d072782e70255f999a1451199}{}\label{classUSART_abad4151d072782e70255f999a1451199}
+
+
+Flush \hyperlink{classUSART}{U\+S\+A\+RT} buffer. 
+
+Empties the RX buffer. \index{U\+S\+A\+RT@{U\+S\+A\+RT}!write\+String@{write\+String}}
+\index{write\+String@{write\+String}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{write\+String(char $\ast$str)}{writeString(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+A\+R\+T\+::write\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{classUSART_a249b0d6967ead56f39448d4954835a27}{}\label{classUSART_a249b0d6967ead56f39448d4954835a27}
+
+
+Writes String to interface. 
+
+Writes an A\+S\+C\+II string to the TX buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & character array \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classUSART_a249b0d6967ead56f39448d4954835a27_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{U\+S\+A\+RT@{U\+S\+A\+RT}!\+\_\+\+B\+A\+UD@{\+\_\+\+B\+A\+UD}}
+\index{\+\_\+\+B\+A\+UD@{\+\_\+\+B\+A\+UD}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{\+\_\+\+B\+A\+UD}{_BAUD}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+A\+R\+T\+::\+\_\+\+B\+A\+UD\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classUSART_adb222c3be48f5a559ed2dd9b4743edda}{}\label{classUSART_adb222c3be48f5a559ed2dd9b4743edda}
+
+
+Baud rate. 
+
+Baud rate (9600 is default) \index{U\+S\+A\+RT@{U\+S\+A\+RT}!\+\_\+\+U\+B\+RR@{\+\_\+\+U\+B\+RR}}
+\index{\+\_\+\+U\+B\+RR@{\+\_\+\+U\+B\+RR}!U\+S\+A\+RT@{U\+S\+A\+RT}}
+\subsubsection[{\texorpdfstring{\+\_\+\+U\+B\+RR}{_UBRR}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t U\+S\+A\+R\+T\+::\+\_\+\+U\+B\+RR\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classUSART_acbd19517b595cf04ff087e040270904f}{}\label{classUSART_acbd19517b595cf04ff087e040270904f}
+
+
+\hyperlink{classUSART}{U\+S\+A\+RT} Baud Rate Register. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+I\+O/\hyperlink{USART_8h}{U\+S\+A\+R\+T.\+h}\item 
+src/\+I\+O/\hyperlink{USART_8cpp}{U\+S\+A\+R\+T.\+cpp}\end{DoxyCompactItemize}

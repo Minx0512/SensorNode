@@ -1,0 +1,63 @@
+.TH "src/Wireless/NRF24L01.cpp" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Wireless/NRF24L01.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'NRF24L01\&.h'\fP
+.br
+\fC#include 'NRF24L01registers\&.h'\fP
+.br
+\fC#include <avr/io\&.h>\fP
+.br
+\fC#include <avr/interrupt\&.h>\fP
+.br
+\fC#include <util/delay\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include '\&.\&./IO/SPI\&.h'\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const uint8_t child_pipe_enable[] \fBPROGMEM\fP ={\fBNRF24L01_REG_ERX_P0\fP, \fBNRF24L01_REG_ERX_P1\fP, \fBNRF24L01_REG_ERX_P2\fP, \fBNRF24L01_REG_ERX_P3\fP, \fBNRF24L01_REG_ERX_P4\fP, \fBNRF24L01_REG_ERX_P5\fP}"
+.br
+.ti -1c
+.RI "static const uint8_t \fBPROGMEM\fP \fBchild_pipe\fP []"
+.br
+.ti -1c
+.RI "static const uint8_t \fBPROGMEM\fP \fBchild_payload_size\fP []"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "const uint8_t \fBPROGMEM\fP child_payload_size[]\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+{
+        NRF24L01_REG_RX_PW_P0, NRF24L01_REG_RX_PW_P1, NRF24L01_REG_RX_PW_P2, NRF24L01_REG_RX_PW_P3, NRF24L01_REG_RX_PW_P4, NRF24L01_REG_RX_PW_P5
+}
+.fi
+.SS "const uint8_t \fBPROGMEM\fP child_pipe[]\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+{
+        NRF24L01_REG_RX_ADDR_P0, NRF24L01_REG_RX_ADDR_P1, NRF24L01_REG_RX_ADDR_P2, NRF24L01_REG_RX_ADDR_P3, NRF24L01_REG_RX_ADDR_P4, NRF24L01_REG_RX_ADDR_P5
+}
+.fi
+.SS "const uint8_t child_pipe_enable [] PROGMEM ={\fBNRF24L01_REG_ERX_P0\fP, \fBNRF24L01_REG_ERX_P1\fP, \fBNRF24L01_REG_ERX_P2\fP, \fBNRF24L01_REG_ERX_P3\fP, \fBNRF24L01_REG_ERX_P4\fP, \fBNRF24L01_REG_ERX_P5\fP}\fC [static]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

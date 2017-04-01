@@ -1,0 +1,403 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classDHT22" kind="class" language="C++" prot="public">
+    <compoundname>DHT22</compoundname>
+    <includes refid="DHT22_8h" local="no">DHT22.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDHT22_1a0966fbe5db17d7ca6f1f036830e27502" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* DHT22::AM2302_WIRE_PORT</definition>
+        <argsstring></argsstring>
+        <name>AM2302_WIRE_PORT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="30" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDHT22_1a69649c4246cd4e255a6e61961b0c948b" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* DHT22::AM2302_WIRE_DDR</definition>
+        <argsstring></argsstring>
+        <name>AM2302_WIRE_DDR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="31" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDHT22_1a5555aa8aa95149f3a3723582bb4ceffa" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* DHT22::AM2302_WIRE_PIN</definition>
+        <argsstring></argsstring>
+        <name>AM2302_WIRE_PIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="32" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DHT22::AM2302_WIRE_DQ</definition>
+        <argsstring></argsstring>
+        <name>AM2302_WIRE_DQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="33" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDHT22_1acbca744f7ed6f46e2d060c7047b0b1a4" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DHT22::TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>TIMEOUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="35" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDHT22_1ad80f0ddc323aa1ec6702230d4a80349f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DHT22::DHT22</definition>
+        <argsstring>()</argsstring>
+        <name>DHT22</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="41" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="17" bodyend="29"/>
+        <references refid="classDHT22_1a0966fbe5db17d7ca6f1f036830e27502" compoundref="DHT22_8h" startline="30">AM2302_WIRE_PORT</references>
+        <references refid="classDHT22_1a69649c4246cd4e255a6e61961b0c948b" compoundref="DHT22_8h" startline="31">AM2302_WIRE_DDR</references>
+        <references refid="classDHT22_1a5555aa8aa95149f3a3723582bb4ceffa" compoundref="DHT22_8h" startline="32">AM2302_WIRE_PIN</references>
+        <references refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" compoundref="DHT22_8h" startline="33">AM2302_WIRE_DQ</references>
+        <references refid="classDHT22_1acbca744f7ed6f46e2d060c7047b0b1a4" compoundref="DHT22_8h" startline="35">TIMEOUT</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1a266c5c8555486bb830dc4668cd1875d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DHT22::DHT22</definition>
+        <argsstring>(volatile uint8_t &amp;Wire_PORT, volatile uint8_t &amp;Wire_DDR, volatile uint8_t &amp;Wire_PIN, uint8_t Wire_DQ)</argsstring>
+        <name>DHT22</name>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>Wire_PORT</declname>
+        </param>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>Wire_DDR</declname>
+        </param>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>Wire_PIN</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Wire_DQ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="42" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="32" bodyend="45"/>
+        <references refid="classDHT22_1a0966fbe5db17d7ca6f1f036830e27502" compoundref="DHT22_8h" startline="30">AM2302_WIRE_PORT</references>
+        <references refid="classDHT22_1a69649c4246cd4e255a6e61961b0c948b" compoundref="DHT22_8h" startline="31">AM2302_WIRE_DDR</references>
+        <references refid="classDHT22_1a5555aa8aa95149f3a3723582bb4ceffa" compoundref="DHT22_8h" startline="32">AM2302_WIRE_PIN</references>
+        <references refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" compoundref="DHT22_8h" startline="33">AM2302_WIRE_DQ</references>
+        <references refid="classDHT22_1acbca744f7ed6f46e2d060c7047b0b1a4" compoundref="DHT22_8h" startline="35">TIMEOUT</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1a51552e5b7373329a6751aeffc04a8fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t DHT22::GetTemperatureHumidity</definition>
+        <argsstring>(float *temperature, float *humidity)</argsstring>
+        <name>GetTemperatureHumidity</name>
+        <param>
+          <type>float *</type>
+          <declname>temperature</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>humidity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="45" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="47" bodyend="49"/>
+        <references refid="classDHT22_1ae8fbd3966b285fd9b7318dcad2036e93" compoundref="DHT22_8cpp" startline="91" endline="168">GetData</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1abe301571f40deb569b74e980ef2da9a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t DHT22::GetTemperature</definition>
+        <argsstring>(float *temperature)</argsstring>
+        <name>GetTemperature</name>
+        <param>
+          <type>float *</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="47" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="51" bodyend="54"/>
+        <references refid="classDHT22_1ae8fbd3966b285fd9b7318dcad2036e93" compoundref="DHT22_8cpp" startline="91" endline="168">GetData</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1acaffb8b6e2602a291d3b2e2ec5bc340c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t DHT22::GetHumidity</definition>
+        <argsstring>(float *humidity)</argsstring>
+        <name>GetHumidity</name>
+        <param>
+          <type>float *</type>
+          <declname>humidity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="49" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="56" bodyend="59"/>
+        <references refid="classDHT22_1ae8fbd3966b285fd9b7318dcad2036e93" compoundref="DHT22_8cpp" startline="91" endline="168">GetData</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1ac3f4e0757e14c5a8ea96cd4eb5e8d57c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DHT22::GetSensorStringXML</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>GetSensorStringXML</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="50" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="169" bodyend="195"/>
+        <references refid="classDHT22_1a51552e5b7373329a6751aeffc04a8fd5" compoundref="DHT22_8cpp" startline="47" endline="49">GetTemperatureHumidity</references>
+        <references refid="classDHT22_1acfa5b6640685318856f09aa84080fd76" compoundref="DHT22_8cpp" startline="61" endline="68">Reset</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1a7384e5b3512bca9692932cbc74c0d110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DHT22::GetSensorTemperatureStringXML</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>GetSensorTemperatureStringXML</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="51" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="196" bodyend="210"/>
+        <references refid="classDHT22_1a51552e5b7373329a6751aeffc04a8fd5" compoundref="DHT22_8cpp" startline="47" endline="49">GetTemperatureHumidity</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1acee19cfc832183328130ec99ce0f9854" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DHT22::GetSensorHumidityStringXML</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>GetSensorHumidityStringXML</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="52" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="212" bodyend="226"/>
+        <references refid="classDHT22_1a51552e5b7373329a6751aeffc04a8fd5" compoundref="DHT22_8cpp" startline="47" endline="49">GetTemperatureHumidity</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classDHT22_1acfa5b6640685318856f09aa84080fd76" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DHT22::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="60" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="61" bodyend="68"/>
+        <references refid="classDHT22_1a96e379a2cf2c6239253c9f706959253c" compoundref="DHT22_8h" startline="65" endline="65">AM2302_PIN_OUTPUT_MODE</references>
+        <references refid="classDHT22_1a98ca5e15fa219b57e819691e16707122" compoundref="DHT22_8h" startline="67" endline="67">AM2302_PIN_HIGH</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1acf1337337af198d3a6216f625c70cbc7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DHT22::SendRequest</definition>
+        <argsstring>(uint8_t bit)</argsstring>
+        <name>SendRequest</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="61" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="69" bodyend="90"/>
+        <references refid="classDHT22_1a312eb760672d2818f8de68c553bd5a21" compoundref="DHT22_8h" startline="66" endline="66">AM2302_PIN_LOW</references>
+        <references refid="classDHT22_1a98ca5e15fa219b57e819691e16707122" compoundref="DHT22_8h" startline="67" endline="67">AM2302_PIN_HIGH</references>
+        <references refid="classDHT22_1aae1d3f75d7a34843d3a4b533c56e474c" compoundref="DHT22_8h" startline="64" endline="64">AM2302_PIN_INPUT_MODE</references>
+        <references refid="classDHT22_1ae2f4f7c34bf80cd3f4bf0da52fa96572" compoundref="DHT22_8h" startline="68" endline="68">AM2302_HIGH_INPUT</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1ae8fbd3966b285fd9b7318dcad2036e93" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t DHT22::GetData</definition>
+        <argsstring>(float *temperature, float *humidity)</argsstring>
+        <name>GetData</name>
+        <param>
+          <type>float *</type>
+          <declname>temperature</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>humidity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="62" column="1" bodyfile="src/Sensors/DHT22.cpp" bodystart="91" bodyend="168"/>
+        <references refid="classDHT22_1acfa5b6640685318856f09aa84080fd76" compoundref="DHT22_8cpp" startline="61" endline="68">Reset</references>
+        <references refid="classDHT22_1a312eb760672d2818f8de68c553bd5a21" compoundref="DHT22_8h" startline="66" endline="66">AM2302_PIN_LOW</references>
+        <references refid="classDHT22_1a98ca5e15fa219b57e819691e16707122" compoundref="DHT22_8h" startline="67" endline="67">AM2302_PIN_HIGH</references>
+        <references refid="classDHT22_1aae1d3f75d7a34843d3a4b533c56e474c" compoundref="DHT22_8h" startline="64" endline="64">AM2302_PIN_INPUT_MODE</references>
+        <references refid="classDHT22_1ae2f4f7c34bf80cd3f4bf0da52fa96572" compoundref="DHT22_8h" startline="68" endline="68">AM2302_HIGH_INPUT</references>
+        <references refid="classDHT22_1acbca744f7ed6f46e2d060c7047b0b1a4" compoundref="DHT22_8h" startline="35">TIMEOUT</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1aae1d3f75d7a34843d3a4b533c56e474c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DHT22::AM2302_PIN_INPUT_MODE</definition>
+        <argsstring>()</argsstring>
+        <name>AM2302_PIN_INPUT_MODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="64" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="64" bodyend="64"/>
+        <references refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" compoundref="DHT22_8h" startline="33">AM2302_WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1a96e379a2cf2c6239253c9f706959253c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DHT22::AM2302_PIN_OUTPUT_MODE</definition>
+        <argsstring>()</argsstring>
+        <name>AM2302_PIN_OUTPUT_MODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="65" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="65" bodyend="65"/>
+        <references refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" compoundref="DHT22_8h" startline="33">AM2302_WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1a312eb760672d2818f8de68c553bd5a21" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DHT22::AM2302_PIN_LOW</definition>
+        <argsstring>()</argsstring>
+        <name>AM2302_PIN_LOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="66" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="66" bodyend="66"/>
+        <references refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" compoundref="DHT22_8h" startline="33">AM2302_WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1a98ca5e15fa219b57e819691e16707122" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DHT22::AM2302_PIN_HIGH</definition>
+        <argsstring>()</argsstring>
+        <name>AM2302_PIN_HIGH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="67" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="67" bodyend="67"/>
+        <references refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" compoundref="DHT22_8h" startline="33">AM2302_WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classDHT22_1ae2f4f7c34bf80cd3f4bf0da52fa96572" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DHT22::AM2302_HIGH_INPUT</definition>
+        <argsstring>()</argsstring>
+        <name>AM2302_HIGH_INPUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DHT22.h" line="68" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Sensors/DHT22.h" line="27" column="1" bodyfile="src/Sensors/DHT22.h" bodystart="27" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classDHT22_1ae2f4f7c34bf80cd3f4bf0da52fa96572" prot="private" virt="non-virtual"><scope>DHT22</scope><name>AM2302_HIGH_INPUT</name></member>
+      <member refid="classDHT22_1a98ca5e15fa219b57e819691e16707122" prot="private" virt="non-virtual"><scope>DHT22</scope><name>AM2302_PIN_HIGH</name></member>
+      <member refid="classDHT22_1aae1d3f75d7a34843d3a4b533c56e474c" prot="private" virt="non-virtual"><scope>DHT22</scope><name>AM2302_PIN_INPUT_MODE</name></member>
+      <member refid="classDHT22_1a312eb760672d2818f8de68c553bd5a21" prot="private" virt="non-virtual"><scope>DHT22</scope><name>AM2302_PIN_LOW</name></member>
+      <member refid="classDHT22_1a96e379a2cf2c6239253c9f706959253c" prot="private" virt="non-virtual"><scope>DHT22</scope><name>AM2302_PIN_OUTPUT_MODE</name></member>
+      <member refid="classDHT22_1a69649c4246cd4e255a6e61961b0c948b" prot="private" virt="non-virtual"><scope>DHT22</scope><name>AM2302_WIRE_DDR</name></member>
+      <member refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" prot="private" virt="non-virtual"><scope>DHT22</scope><name>AM2302_WIRE_DQ</name></member>
+      <member refid="classDHT22_1a5555aa8aa95149f3a3723582bb4ceffa" prot="private" virt="non-virtual"><scope>DHT22</scope><name>AM2302_WIRE_PIN</name></member>
+      <member refid="classDHT22_1a0966fbe5db17d7ca6f1f036830e27502" prot="private" virt="non-virtual"><scope>DHT22</scope><name>AM2302_WIRE_PORT</name></member>
+      <member refid="classDHT22_1ad80f0ddc323aa1ec6702230d4a80349f" prot="public" virt="non-virtual"><scope>DHT22</scope><name>DHT22</name></member>
+      <member refid="classDHT22_1a266c5c8555486bb830dc4668cd1875d4" prot="public" virt="non-virtual"><scope>DHT22</scope><name>DHT22</name></member>
+      <member refid="classDHT22_1ae8fbd3966b285fd9b7318dcad2036e93" prot="private" virt="non-virtual"><scope>DHT22</scope><name>GetData</name></member>
+      <member refid="classDHT22_1acaffb8b6e2602a291d3b2e2ec5bc340c" prot="public" virt="non-virtual"><scope>DHT22</scope><name>GetHumidity</name></member>
+      <member refid="classDHT22_1acee19cfc832183328130ec99ce0f9854" prot="public" virt="non-virtual"><scope>DHT22</scope><name>GetSensorHumidityStringXML</name></member>
+      <member refid="classDHT22_1ac3f4e0757e14c5a8ea96cd4eb5e8d57c" prot="public" virt="non-virtual"><scope>DHT22</scope><name>GetSensorStringXML</name></member>
+      <member refid="classDHT22_1a7384e5b3512bca9692932cbc74c0d110" prot="public" virt="non-virtual"><scope>DHT22</scope><name>GetSensorTemperatureStringXML</name></member>
+      <member refid="classDHT22_1abe301571f40deb569b74e980ef2da9a7" prot="public" virt="non-virtual"><scope>DHT22</scope><name>GetTemperature</name></member>
+      <member refid="classDHT22_1a51552e5b7373329a6751aeffc04a8fd5" prot="public" virt="non-virtual"><scope>DHT22</scope><name>GetTemperatureHumidity</name></member>
+      <member refid="classDHT22_1acfa5b6640685318856f09aa84080fd76" prot="private" virt="non-virtual"><scope>DHT22</scope><name>Reset</name></member>
+      <member refid="classDHT22_1acf1337337af198d3a6216f625c70cbc7" prot="private" virt="non-virtual"><scope>DHT22</scope><name>SendRequest</name></member>
+      <member refid="classDHT22_1acbca744f7ed6f46e2d060c7047b0b1a4" prot="private" virt="non-virtual"><scope>DHT22</scope><name>TIMEOUT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

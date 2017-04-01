@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classParseStrings" kind="class" language="C++" prot="public">
+    <compoundname>ParseStrings</compoundname>
+    <includes refid="ParseStrings_8h" local="no">ParseStrings.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classParseStrings_1a861e286994be25fad33c18c9be18ed12" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ParseStrings::cmdID</definition>
+        <argsstring></argsstring>
+        <name>cmdID</name>
+        <briefdescription>
+<para>Command ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="41" column="1" bodyfile="src/IO/ParseStrings.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParseStrings_1abd72bf6aef85d0c8d2bc5e145695c7f9" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ParseStrings::cmdP</definition>
+        <argsstring></argsstring>
+        <name>cmdP</name>
+        <briefdescription>
+<para>Command Property. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="47" column="1" bodyfile="src/IO/ParseStrings.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParseStrings_1a8a5bf86758a4cfaed5445aa9ad907afc" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ParseStrings::PID[36]</definition>
+        <argsstring>[36]</argsstring>
+        <name>PID</name>
+        <briefdescription>
+<para>Property ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="53" column="1" bodyfile="src/IO/ParseStrings.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParseStrings_1a89114cea60b7a37e80c799cec5bcd03d" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ParseStrings::pString[36]</definition>
+        <argsstring>[36]</argsstring>
+        <name>pString</name>
+        <briefdescription>
+<para>Property String. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="59" column="1" bodyfile="src/IO/ParseStrings.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParseStrings_1a0919816f131553dcd3706286e8bb61cc" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ParseStrings::addr[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>addr</name>
+        <briefdescription>
+<para>5 Byte address array </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="65" column="1" bodyfile="src/IO/ParseStrings.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classParseStrings_1a49f5520441d291626b4d655d20a6ab19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParseStrings::Parse</definition>
+        <argsstring>(const char *string)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Parse const character string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character string to parse </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="75" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="162" bodyend="219"/>
+        <references refid="classParseStrings_1a5d694beffe019842455b788cca9cb26a" compoundref="ParseStrings_8cpp" startline="50" endline="59">ClearAll</references>
+        <references refid="classParseStrings_1a861e286994be25fad33c18c9be18ed12" compoundref="ParseStrings_8h" startline="41">cmdID</references>
+        <references refid="classParseStrings_1abd72bf6aef85d0c8d2bc5e145695c7f9" compoundref="ParseStrings_8h" startline="47">cmdP</references>
+        <references refid="classParseStrings_1a8a5bf86758a4cfaed5445aa9ad907afc" compoundref="ParseStrings_8h" startline="53">PID</references>
+        <references refid="classParseStrings_1a89114cea60b7a37e80c799cec5bcd03d" compoundref="ParseStrings_8h" startline="59">pString</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a1a177dfb6cb057b7709710362b3e10a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParseStrings::ParseMAC</definition>
+        <argsstring>()</argsstring>
+        <name>ParseMAC</name>
+        <briefdescription>
+<para>Parse MAC address. </para>        </briefdescription>
+        <detaileddescription>
+<para>Parses MAC address from pString into the addr array </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="81" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="61" bodyend="94"/>
+        <references refid="classParseStrings_1a89114cea60b7a37e80c799cec5bcd03d" compoundref="ParseStrings_8h" startline="59">pString</references>
+        <references refid="classParseStrings_1a0919816f131553dcd3706286e8bb61cc" compoundref="ParseStrings_8h" startline="65">addr</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a7b0f8fdd77be81594f0495637de5138c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t ParseStrings::getMAC</definition>
+        <argsstring>()</argsstring>
+        <name>getMAC</name>
+        <briefdescription>
+<para>Get MAC address as uint64_t. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>MAC address as a 64 Bit unsigned integer </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="90" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="135" bodyend="148"/>
+        <references refid="classParseStrings_1a0919816f131553dcd3706286e8bb61cc" compoundref="ParseStrings_8h" startline="65">addr</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a48fbe6998c3dd4d6bd5a57644a45eb8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParseStrings::getPropertyString</definition>
+        <argsstring>(char *propString)</argsstring>
+        <name>getPropertyString</name>
+        <param>
+          <type>char *</type>
+          <declname>propString</declname>
+        </param>
+        <briefdescription>
+<para>Get Property string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">propString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="97" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="96" bodyend="100"/>
+        <references refid="classParseStrings_1a89114cea60b7a37e80c799cec5bcd03d" compoundref="ParseStrings_8h" startline="59">pString</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a6dbe145425dd08c33444e5ffd9181041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParseStrings::getPropertyIDAsMAC</definition>
+        <argsstring>(uint8_t propString[8])</argsstring>
+        <name>getPropertyIDAsMAC</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>propString</declname>
+          <array>[8]</array>
+        </param>
+        <briefdescription>
+<para>get Property ID as a MAC address array </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">propString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8 Byte Address array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="104" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="101" bodyend="132"/>
+        <references refid="classParseStrings_1a8a5bf86758a4cfaed5445aa9ad907afc" compoundref="ParseStrings_8h" startline="53">PID</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a9fbcb70ec76da019901ac4d04d8f48d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ParseStrings::getCmdID</definition>
+        <argsstring>()</argsstring>
+        <name>getCmdID</name>
+        <briefdescription>
+<para>get Command ID </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Command ID as uint8_t </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="111" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="150" bodyend="153"/>
+        <references refid="classParseStrings_1a861e286994be25fad33c18c9be18ed12" compoundref="ParseStrings_8h" startline="41">cmdID</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1abda18520c80670139930230a2524b964" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ParseStrings::getCmdProperty</definition>
+        <argsstring>()</argsstring>
+        <name>getCmdProperty</name>
+        <briefdescription>
+<para>Returns command property. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Command Property as uint8_t </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="118" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="154" bodyend="156"/>
+        <references refid="classParseStrings_1abd72bf6aef85d0c8d2bc5e145695c7f9" compoundref="ParseStrings_8h" startline="47">cmdP</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a9287dd0575737da66fa0ba2f8fdd003b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParseStrings::getPropertyID</definition>
+        <argsstring>(char *PIDString)</argsstring>
+        <name>getPropertyID</name>
+        <param>
+          <type>char *</type>
+          <declname>PIDString</declname>
+        </param>
+        <briefdescription>
+<para>Returns Property ID as character array. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">PIDString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character array of Property ID </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="125" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="157" bodyend="159"/>
+        <references refid="classParseStrings_1a8a5bf86758a4cfaed5445aa9ad907afc" compoundref="ParseStrings_8h" startline="53">PID</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a1dc6d3d8940788e397932ec456946461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParseStrings::PrintVars</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>PrintVars</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Returns Variables as string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character array of variable values </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="136" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="222" bodyend="237"/>
+        <references refid="classParseStrings_1a89114cea60b7a37e80c799cec5bcd03d" compoundref="ParseStrings_8h" startline="59">pString</references>
+        <references refid="classParseStrings_1a9fbcb70ec76da019901ac4d04d8f48d7" compoundref="ParseStrings_8cpp" startline="150" endline="153">getCmdID</references>
+        <references refid="classParseStrings_1abda18520c80670139930230a2524b964" compoundref="ParseStrings_8cpp" startline="154" endline="156">getCmdProperty</references>
+        <references refid="classParseStrings_1a8a5bf86758a4cfaed5445aa9ad907afc" compoundref="ParseStrings_8h" startline="53">PID</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a284bddb3fc4a2ecfb84a6ababce9deaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParseStrings::PrintMAC</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>PrintMAC</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Returns MAC address to string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character array of MAC address </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="143" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="239" bodyend="249"/>
+        <references refid="classParseStrings_1a8a5bf86758a4cfaed5445aa9ad907afc" compoundref="ParseStrings_8h" startline="53">PID</references>
+        <references refid="classParseStrings_1a0919816f131553dcd3706286e8bb61cc" compoundref="ParseStrings_8h" startline="65">addr</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a5d694beffe019842455b788cca9cb26a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParseStrings::ClearAll</definition>
+        <argsstring>()</argsstring>
+        <name>ClearAll</name>
+        <briefdescription>
+<para>Clears all variables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="146" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="50" bodyend="59"/>
+        <references refid="classParseStrings_1a861e286994be25fad33c18c9be18ed12" compoundref="ParseStrings_8h" startline="41">cmdID</references>
+        <references refid="classParseStrings_1abd72bf6aef85d0c8d2bc5e145695c7f9" compoundref="ParseStrings_8h" startline="47">cmdP</references>
+        <references refid="classParseStrings_1a8a5bf86758a4cfaed5445aa9ad907afc" compoundref="ParseStrings_8h" startline="53">PID</references>
+        <references refid="classParseStrings_1a89114cea60b7a37e80c799cec5bcd03d" compoundref="ParseStrings_8h" startline="59">pString</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1a58ddb6be993306d69a0bbb08285fafa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParseStrings::ParseStrings</definition>
+        <argsstring>()</argsstring>
+        <name>ParseStrings</name>
+        <briefdescription>
+<para><ref refid="classParseStrings" kindref="compound">ParseStrings</ref> standard constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>new <ref refid="classParseStrings" kindref="compound">ParseStrings</ref> object and initializes variables </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="152" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="33" bodyend="39"/>
+        <references refid="classParseStrings_1a5d694beffe019842455b788cca9cb26a" compoundref="ParseStrings_8cpp" startline="50" endline="59">ClearAll</references>
+      </memberdef>
+      <memberdef kind="function" id="classParseStrings_1ab6f9a98b85f374dd26186cb55018e4a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParseStrings::ParseStrings</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>ParseStrings</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classParseStrings" kindref="compound">ParseStrings</ref> constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character array to parse </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/ParseStrings.h" line="159" column="1" bodyfile="src/IO/ParseStrings.cpp" bodystart="40" bodyend="48"/>
+        <references refid="classParseStrings_1a49f5520441d291626b4d655d20a6ab19" compoundref="ParseStrings_8cpp" startline="162" endline="219">Parse</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classParseStrings" kindref="compound">ParseStrings</ref> class definition. </para>    </briefdescription>
+    <detaileddescription>
+<para>Defines methods for accessing the <ref refid="classParseStrings" kindref="compound">ParseStrings</ref> interface </para>    </detaileddescription>
+    <location file="src/IO/ParseStrings.h" line="35" column="1" bodyfile="src/IO/ParseStrings.h" bodystart="35" bodyend="168"/>
+    <listofallmembers>
+      <member refid="classParseStrings_1a0919816f131553dcd3706286e8bb61cc" prot="private" virt="non-virtual"><scope>ParseStrings</scope><name>addr</name></member>
+      <member refid="classParseStrings_1a5d694beffe019842455b788cca9cb26a" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>ClearAll</name></member>
+      <member refid="classParseStrings_1a861e286994be25fad33c18c9be18ed12" prot="private" virt="non-virtual"><scope>ParseStrings</scope><name>cmdID</name></member>
+      <member refid="classParseStrings_1abd72bf6aef85d0c8d2bc5e145695c7f9" prot="private" virt="non-virtual"><scope>ParseStrings</scope><name>cmdP</name></member>
+      <member refid="classParseStrings_1a9fbcb70ec76da019901ac4d04d8f48d7" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>getCmdID</name></member>
+      <member refid="classParseStrings_1abda18520c80670139930230a2524b964" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>getCmdProperty</name></member>
+      <member refid="classParseStrings_1a7b0f8fdd77be81594f0495637de5138c" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>getMAC</name></member>
+      <member refid="classParseStrings_1a9287dd0575737da66fa0ba2f8fdd003b" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>getPropertyID</name></member>
+      <member refid="classParseStrings_1a6dbe145425dd08c33444e5ffd9181041" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>getPropertyIDAsMAC</name></member>
+      <member refid="classParseStrings_1a48fbe6998c3dd4d6bd5a57644a45eb8e" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>getPropertyString</name></member>
+      <member refid="classParseStrings_1a49f5520441d291626b4d655d20a6ab19" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>Parse</name></member>
+      <member refid="classParseStrings_1a1a177dfb6cb057b7709710362b3e10a0" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>ParseMAC</name></member>
+      <member refid="classParseStrings_1a58ddb6be993306d69a0bbb08285fafa6" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>ParseStrings</name></member>
+      <member refid="classParseStrings_1ab6f9a98b85f374dd26186cb55018e4a9" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>ParseStrings</name></member>
+      <member refid="classParseStrings_1a8a5bf86758a4cfaed5445aa9ad907afc" prot="private" virt="non-virtual"><scope>ParseStrings</scope><name>PID</name></member>
+      <member refid="classParseStrings_1a284bddb3fc4a2ecfb84a6ababce9deaa" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>PrintMAC</name></member>
+      <member refid="classParseStrings_1a1dc6d3d8940788e397932ec456946461" prot="public" virt="non-virtual"><scope>ParseStrings</scope><name>PrintVars</name></member>
+      <member refid="classParseStrings_1a89114cea60b7a37e80c799cec5bcd03d" prot="private" virt="non-virtual"><scope>ParseStrings</scope><name>pString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

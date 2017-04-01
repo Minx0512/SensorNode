@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_3060d58628f782c2180a5c524137ee76" kind="dir">
+    <compoundname>src/IO/I2C-master-lib</compoundname>
+    <innerfile refid="i2c__master_8c">i2c_master.c</innerfile>
+    <innerfile refid="i2c__master_8h">i2c_master.h</innerfile>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/IO/I2C-master-lib/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,622 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="NRF24L01_8h" kind="file" language="C++">
+    <compoundname>NRF24L01.h</compoundname>
+    <includes local="yes">avr/io.h</includes>
+    <includes refid="SPI_8h" local="yes">../IO/SPI.h</includes>
+    <includes refid="USART_8h" local="yes">../IO/USART.h</includes>
+    <includes local="no">avr/pgmspace.h</includes>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="NRF24L01_8cpp" local="yes">src/Wireless/NRF24L01.cpp</includedby>
+    <incdepgraph>
+      <node id="287">
+        <label>src/Wireless/NRF24L01.h</label>
+        <link refid="NRF24L01.h"/>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+      </node>
+      <node id="289">
+        <label>../IO/SPI.h</label>
+        <link refid="SPI_8h"/>
+        <childnode refid="288" relation="include">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>avr/io.h</label>
+      </node>
+      <node id="291">
+        <label>util/delay.h</label>
+      </node>
+      <node id="292">
+        <label>string.h</label>
+      </node>
+      <node id="290">
+        <label>../IO/USART.h</label>
+        <link refid="USART_8h"/>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+        <childnode refid="292" relation="include">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>avr/pgmspace.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="295">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="294">
+        <label>src/Wireless/NRF24L01.h</label>
+        <link refid="NRF24L01.h"/>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>src/Wireless/NRF24L01.cpp</label>
+        <link refid="NRF24L01_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classNRF24L01" prot="public">NRF24L01</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" prot="public" static="no">
+        <name>NRF24L01_PORT</name>
+        <initializer>PORTB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="NRF24L01_8h" kindref="compound">NRF24L01.h</ref></para><para>Created on: Nov 14, 2016 Author: Matthias Minx</para><para>based on the Code of:</para><para>nrf24l01 lib 0x02 Copyright (C) 2011 J. Coliz <ulink url="mailto:maniacbug@ymail.com">maniacbug@ymail.com</ulink></para><para>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 2 as published by the Free Software Foundation.</para><para>References:<itemizedlist>
+<listitem><para>This library is based upon nRF24L01 avr lib by Stefan Engelke <ulink url="http://www.tinkerer.eu/AVRLib/nRF24L01">http://www.tinkerer.eu/AVRLib/nRF24L01</ulink></para></listitem><listitem><para>and arduino library 2011 by J. Coliz <ulink url="http://maniacbug.github.com/RF24">http://maniacbug.github.com/RF24</ulink></para><para>Released under GPLv3. Please refer to LICENSE file for licensing information. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="36" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1ac7a035ce38201de0975b1cd23851b9c7" prot="public" static="no">
+        <name>NRF24L01_RF24_PA_MIN</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="42" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1a60a3e4dfec7f9cdc9340ec6c396a029c" prot="public" static="no">
+        <name>NRF24L01_RF24_PA_LOW</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="43" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1a0d681bb0ea497789dce1080965c0929b" prot="public" static="no">
+        <name>NRF24L01_RF24_PA_HIGH</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="44" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1a763f9e4b22e0e2b4722746b203e68a83" prot="public" static="no">
+        <name>NRF24L01_RF24_PA_MAX</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="45" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1a71685b4e2b1a0ccdce8af86aa98ca269" prot="public" static="no">
+        <name>NRF24L01_RF24_SPEED_250KBPS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="49" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1aa0d7169d75941f10e4187369c6d99ae2" prot="public" static="no">
+        <name>NRF24L01_RF24_SPEED_1MBPS</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="50" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1ada2e60357998e59c0ccdf12d07d9d368" prot="public" static="no">
+        <name>NRF24L01_RF24_SPEED_2MBPS</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="51" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1ae806f7cbf91d5041ccaf66a823049bd1" prot="public" static="no">
+        <name>NRF24L01_RF24_CRC_DISABLED</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="55" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1a13cdf0ab8a0a4b8f8eea7a89993d7af8" prot="public" static="no">
+        <name>NRF24L01_RF24_CRC_8</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="56" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1a7efcb38c0a6cfe8b7b32c777b5e45c3f" prot="public" static="no">
+        <name>NRF24L01_RF24_CRC_16</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="57" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1ae6d0cebac69956c23e8715f4f3bbbd0e" prot="public" static="no">
+        <name>rf24_max</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(a&gt;b?a:b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="59" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" prot="public" static="no">
+        <name>rf24_min</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(a&lt;b?a:b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="60" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="NRF24L01_8h_1afccc14d10dfc21cc79adf65226f1f2e7" prot="public" static="no">
+        <name>NRF24L01_RETR</name>
+        <initializer>(0b0100 &lt;&lt; NRF24L01_REG_ARD) | (0b0111 &lt;&lt; NRF24L01_REG_ARC)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="62" column="9" bodyfile="src/Wireless/NRF24L01.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aace" prot="public" static="no">
+        <name>rf24_pa_dbm_e</name>
+        <enumvalue id="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aacea445515b775236bb9db3cb4b0b828adff" prot="public">
+          <name>RF24_PA_MIN</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aacea7d8d09f4a047b7c22655e56c98ca010c" prot="public">
+          <name>RF24_PA_LOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aaceaf00c265e162bfbef00cd5366b2796533" prot="public">
+          <name>RF24_PA_HIGH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aaceab0bfc94c4095e9495b2e49530b623d0d" prot="public">
+          <name>RF24_PA_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aacea41eb829d0c99a0bb2fbb946dab04c7b7" prot="public">
+          <name>RF24_PA_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Power Amplifier level.</para><para>For use with setPALevel() </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="75" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="enum" id="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522" prot="public" static="no">
+        <name>rf24_datarate_e</name>
+        <enumvalue id="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522afd01f3fd55247a67c0bcfd459fe17fdf" prot="public">
+          <name>RF24_1MBPS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522a53050a70cedbbf10620ba0fe2b043f1b" prot="public">
+          <name>RF24_2MBPS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522ad6a241689903e120c99b6963cb98c97c" prot="public">
+          <name>RF24_250KBPS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Data rate. How fast data moves through the air.</para><para>For use with setDataRate() </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="82" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="enum" id="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7e" prot="public" static="no">
+        <name>rf24_crclength_e</name>
+        <enumvalue id="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea77871b6e6fac61d79be7edf1a60b9cbf" prot="public">
+          <name>RF24_CRC_DISABLED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7eade0b6b3a0dd8729e2a17c49896e0a468" prot="public">
+          <name>RF24_CRC_8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea6eeb0379e23be63559106d96ada47a56" prot="public">
+          <name>RF24_CRC_16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CRC Length. How big (if any) of a CRC is included.</para><para>For use with setCRCLength() </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="89" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="27"><highlight class="preprocessor">#ifndef<sp/>NRF24L01_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;avr/io.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../IO/SPI.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../IO/USART.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/pgmspace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//CE<sp/>and<sp/>CSN<sp/>port<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>NRF24L01_DDR<sp/>DDRB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_PORT<sp/>PORTB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>NRF24L01_CE<sp/>PB1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>NRF24L01_CSN<sp/>PB0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//power<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="NRF24L01_8h_1ac7a035ce38201de0975b1cd23851b9c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_PA_MIN<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="NRF24L01_8h_1a60a3e4dfec7f9cdc9340ec6c396a029c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_PA_LOW<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="NRF24L01_8h_1a0d681bb0ea497789dce1080965c0929b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_PA_HIGH<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="NRF24L01_8h_1a763f9e4b22e0e2b4722746b203e68a83" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_PA_MAX<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//speed<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="NRF24L01_8h_1a71685b4e2b1a0ccdce8af86aa98ca269" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_SPEED_250KBPS<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="NRF24L01_8h_1aa0d7169d75941f10e4187369c6d99ae2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_SPEED_1MBPS<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="NRF24L01_8h_1ada2e60357998e59c0ccdf12d07d9d368" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_SPEED_2MBPS<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//crc<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="NRF24L01_8h_1ae806f7cbf91d5041ccaf66a823049bd1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_CRC_DISABLED<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="NRF24L01_8h_1a13cdf0ab8a0a4b8f8eea7a89993d7af8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_CRC_8<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="NRF24L01_8h_1a7efcb38c0a6cfe8b7b32c777b5e45c3f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RF24_CRC_16<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="NRF24L01_8h_1ae6d0cebac69956c23e8715f4f3bbbd0e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>rf24_max(a,b)<sp/>(a&gt;b?a:b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>rf24_min(a,b)<sp/>(a&lt;b?a:b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//auto<sp/>retransmit<sp/>delay<sp/>and<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="NRF24L01_8h_1afccc14d10dfc21cc79adf65226f1f2e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NRF24L01_RETR<sp/>(0b0100<sp/>&lt;&lt;<sp/>NRF24L01_REG_ARD)<sp/>|<sp/>(0b0111<sp/>&lt;&lt;<sp/>NRF24L01_REG_ARC)<sp/>//1500uS,<sp/>15<sp/>times</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aacea445515b775236bb9db3cb4b0b828adff" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aacea445515b775236bb9db3cb4b0b828adff" kindref="member">RF24_PA_MIN</ref><sp/>=<sp/>0,<ref refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aacea7d8d09f4a047b7c22655e56c98ca010c" kindref="member">RF24_PA_LOW</ref>,<sp/><ref refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aaceaf00c265e162bfbef00cd5366b2796533" kindref="member">RF24_PA_HIGH</ref>,<sp/><ref refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aaceab0bfc94c4095e9495b2e49530b623d0d" kindref="member">RF24_PA_MAX</ref>,<sp/><ref refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aacea41eb829d0c99a0bb2fbb946dab04c7b7" kindref="member">RF24_PA_ERROR</ref><sp/>}<sp/><ref refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aace" kindref="member">rf24_pa_dbm_e</ref><sp/>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522afd01f3fd55247a67c0bcfd459fe17fdf" kindref="member">RF24_1MBPS</ref><sp/>=<sp/>0,<sp/><ref refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522a53050a70cedbbf10620ba0fe2b043f1b" kindref="member">RF24_2MBPS</ref>,<sp/><ref refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522ad6a241689903e120c99b6963cb98c97c" kindref="member">RF24_250KBPS</ref><sp/>}<sp/><ref refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522" kindref="member">rf24_datarate_e</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7e" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea77871b6e6fac61d79be7edf1a60b9cbf" kindref="member">RF24_CRC_DISABLED</ref><sp/>=<sp/>0,<sp/><ref refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7eade0b6b3a0dd8729e2a17c49896e0a468" kindref="member">RF24_CRC_8</ref>,<sp/><ref refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea6eeb0379e23be63559106d96ada47a56" kindref="member">RF24_CRC_16</ref><sp/>}<sp/><ref refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7e" kindref="member">rf24_crclength_e</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classNRF24L01" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classNRF24L01" kindref="compound">NRF24L01</ref><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//CE<sp/>and<sp/>CSN<sp/>port<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" kindref="member">NRF24L01_DDR</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>volatile<sp/>uint8_t*<sp/>NRF24L01_PORT;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" kindref="member">NRF24L01_CE</ref>;</highlight></codeline>
+<codeline lineno="102" refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" kindref="member">NRF24L01_CSN</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classNRF24L01_1a4701641c1e8b3d082deb03f93c84d8c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="classNRF24L01_1a4701641c1e8b3d082deb03f93c84d8c7" kindref="member">spi_speed</ref>;<sp/></highlight></codeline>
+<codeline lineno="105" refid="classNRF24L01_1a082a99d802a3f2335da94e67cf8440ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a082a99d802a3f2335da94e67cf8440ea" kindref="member">p_variant</ref>;<sp/></highlight><highlight class="comment">/*<sp/>False<sp/>for<sp/>RF24L01<sp/>and<sp/>true<sp/>for<sp/>RF24L01P<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//transmission<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classNRF24L01_1a2f5e84525760899949446db94d225700" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a2f5e84525760899949446db94d225700" kindref="member">NRF24L01_CH</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//payload<sp/>lenght</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" kindref="member">NRF24L01_PAYLOAD</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//auto<sp/>ack<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classNRF24L01_1af2e0a88f330c86d0cc6c43180f70ecbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1af2e0a88f330c86d0cc6c43180f70ecbd" kindref="member">NRF24L01_ACK</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//enable<sp/>/<sp/>disable<sp/>pipe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classNRF24L01_1a10c710f3795c47ebde120ca3d975c891" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a10c710f3795c47ebde120ca3d975c891" kindref="member">NRF24L01_ENABLEDP0</ref>;<sp/></highlight><highlight class="comment">//pipe<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classNRF24L01_1a8ebd82a57efbaa5928a56ba6780740de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a8ebd82a57efbaa5928a56ba6780740de" kindref="member">NRF24L01_ENABLEDP1</ref>;<sp/></highlight><highlight class="comment">//pipe<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classNRF24L01_1aac40f597790cf3a62b382f919f1293ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1aac40f597790cf3a62b382f919f1293ce" kindref="member">NRF24L01_ENABLEDP2</ref>;<sp/></highlight><highlight class="comment">//pipe<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classNRF24L01_1aea0d090c7d6da9b137ce4ce3690535e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1aea0d090c7d6da9b137ce4ce3690535e8" kindref="member">NRF24L01_ENABLEDP3</ref>;<sp/></highlight><highlight class="comment">//pipe<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classNRF24L01_1a4f19e32ed3324724d3478b9f841a2790" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a4f19e32ed3324724d3478b9f841a2790" kindref="member">NRF24L01_ENABLEDP4</ref>;<sp/></highlight><highlight class="comment">//pipe<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classNRF24L01_1ae77cf1829f80c703e36ef57b6d23e9a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1ae77cf1829f80c703e36ef57b6d23e9a9" kindref="member">NRF24L01_ENABLEDP5</ref>;<sp/></highlight><highlight class="comment">//pipe<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//address<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" kindref="member">NRF24L01_ADDRSIZE</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" kindref="member">pipe0_reading_address</ref>[5];<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/>uint8_t<sp/>nrf24l01_addr0[5];</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/>uint8_t<sp/>nrf24l01_addr1[5];</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/>uint8_t<sp/>nrf24l01_addr2[5];</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/>uint8_t<sp/>nrf24l01_addr3[5];</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/>uint8_t<sp/>nrf24l01_addr4[5];</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/>uint8_t<sp/>nrf24l01_addr5[5];</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/>uint8_t<sp/>nrf24l01_addrtx[5];</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//power<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="classNRF24L01_1ac798ba6ce52fd4a13eb40ff274818157" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1ac798ba6ce52fd4a13eb40ff274818157" kindref="member">NRF24L01_RF24_PA</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//speed<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="classNRF24L01_1a2dc0073a56f6aca86da205dd720fd132" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a2dc0073a56f6aca86da205dd720fd132" kindref="member">NRF24L01_RF24_SPEED</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//crc<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="classNRF24L01_1af6a260dd55ee5c2f7de7cfac4e91178d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1af6a260dd55ee5c2f7de7cfac4e91178d" kindref="member">NRF24L01_RF24_CRC</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" kindref="member">dynamic_payloads_enabled</ref>;<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classNRF24L01_1ad3e6263e0afaa974637d1450b6c8cb37" kindref="member">NRF24L01</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classNRF24L01_1ad3e6263e0afaa974637d1450b6c8cb37" kindref="member">NRF24L01</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;DDR,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;PORT,<sp/>uint8_t<sp/><ref refid="main_8cpp_1af332f65aca07c44deeda884c8f6c353c" kindref="member">CE</ref>,<sp/>uint8_t<sp/><ref refid="main_8cpp_1a8df4f3a8a2035df063402ae5f0c1d2f8" kindref="member">CSN</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a2973773d1a158e1cfbf52198f248c548" kindref="member">Init</ref>();<sp/></highlight><highlight class="comment">//<sp/>begin</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1aaabd39829998b609c0dc317af4f141b2" kindref="member">startListening</ref>();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a6ad13189b732f237ac148c659ddf6b01" kindref="member">stopListening</ref>();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ab368039cf5448f0ff5d489563d530c7b" kindref="member">available</ref>();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a60ed6c6e072a1f41ca560546745ec6da" kindref="member">read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a719390c69a2e45df08379f17e3289f4c" kindref="member">write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ad64a887cae746be5ca43cf08445feed9" kindref="member">openWritingPipe</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*address);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a9b458f77f6ae6c42f330710e703dd847" kindref="member">openReadingPipe</ref>(uint8_t<sp/>number,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*address);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ae5c878a568b54ba045a99b9de377b13b" kindref="member">printDetails</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ab368039cf5448f0ff5d489563d530c7b" kindref="member">available</ref>(uint8_t*<sp/>pipe_num);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1aebd4d389685333013b4bd12662c0b411" kindref="member">rxFifoFull</ref>();</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1abaf0ed9cb5b24890631d7b8bc0e3cd82" kindref="member">powerDown</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a8e184a0a6ca30fbae69c1331a567deda" kindref="member">powerUp</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a719390c69a2e45df08379f17e3289f4c" kindref="member">write</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>multicast<sp/>);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a693f48de67c8b11ed5860dc481fcfc99" kindref="member">writeFast</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len<sp/>);</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a693f48de67c8b11ed5860dc481fcfc99" kindref="member">writeFast</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>multicast<sp/>);</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ac2c2500350c3dde0df4f09111f8f1b84" kindref="member">writeBlocking</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len,<sp/>uint32_t<sp/>timeout<sp/>);</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a4416a731de8d23cac507e8b69ec2becc" kindref="member">txStandBy</ref>();</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a4416a731de8d23cac507e8b69ec2becc" kindref="member">txStandBy</ref>(uint32_t<sp/>timeout,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>startTx<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ae0f4b84a244463e8e594d238a71140c5" kindref="member">writeAckPayload</ref>(uint8_t<sp/>pipe,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a99aae87d62d5097447305d66a0b3281d" kindref="member">isAckPayloadAvailable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ad98d10f3759d41e565397aba824d121b" kindref="member">whatHappened</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>tx_ok,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>tx_fail,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>rx_ready);</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ab1ca9025a8740bc38ad5dd7a427e2d4f" kindref="member">startFastWrite</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>multicast,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>startTx<sp/>=<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a282e44fa8d6ec7542e9d725cf048f6b2" kindref="member">startWrite</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>multicast<sp/>);</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ad0797d9c6f8ecd9619c9e48168571a01" kindref="member">reUseTX</ref>();</highlight></codeline>
+<codeline lineno="587"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" kindref="member">FlushTx</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a5e934f8f7d37245264ad16e3c360eca7" kindref="member">testCarrier</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"></highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1abf1d84ed988aa6c7925ebb712b7c7f60" kindref="member">testRPD</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="630" refid="classNRF24L01_1aaddabe35ed60f03a2fb2fb475a3cafb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1aaddabe35ed60f03a2fb2fb475a3cafb5" kindref="member">isValid</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NRF24L01_CE<sp/>!=<sp/>0xff<sp/>&amp;&amp;<sp/>NRF24L01_CSN<sp/>!=<sp/>0xff;<sp/>}</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a7214eaa3fcd3b6576d8f290e6ab71955" kindref="member">closeReadingPipe</ref>(<sp/>uint8_t<sp/>pipe<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//#if<sp/>defined<sp/>(FAILURE_HANDLING)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="659" refid="classNRF24L01_1a749f38c45c00905b3d8e8c180626bff6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a749f38c45c00905b3d8e8c180626bff6" kindref="member">failureDetected</ref>;</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//#endif</highlight></codeline>
+<codeline lineno="678"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a17752733515f67aa9f6ed3daa1ed3d1d" kindref="member">setAddressWidth</ref>(uint8_t<sp/>a_width);</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a0bb209d94b62e2a28af53179af713f3c" kindref="member">setRetries</ref>(uint8_t<sp/>delay,<sp/>uint8_t<sp/>count);</highlight></codeline>
+<codeline lineno="687"><highlight class="normal"></highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1aa8eaf9d5ed604f60a00cd79fed9edad7" kindref="member">setChannel</ref>(uint8_t<sp/>channel);</highlight></codeline>
+<codeline lineno="699"><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a6b269b519d57d54d0682a29ce9036b12" kindref="member">getChannel</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="700"><highlight class="normal"></highlight></codeline>
+<codeline lineno="713"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1abe5983a57d0d3bd77508e5345774c890" kindref="member">setPayloadSize</ref>(uint8_t<sp/>size);</highlight></codeline>
+<codeline lineno="721"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a4a7f48ca92e14baabd8be1c0831e8c2f" kindref="member">getPayloadSize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="722"><highlight class="normal"></highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a0d0cd5dd09d60e06280f378166725d64" kindref="member">getDynamicPayloadSize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"></highlight></codeline>
+<codeline lineno="754"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ae4067455572c6731211315b3900f5cbd" kindref="member">enableAckPayload</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="755"><highlight class="normal"></highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1abd060c4df7efac781ed5812a0ee19d08" kindref="member">enableDynamicPayloads</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="773"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1abf6bf0c18b2b12674cfbc150a2bdb778" kindref="member">disableDynamicPayloads</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="774"><highlight class="normal"></highlight></codeline>
+<codeline lineno="787"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1aeaa968ea74bfd2690fff331e9f115344" kindref="member">enableDynamicAck</ref>();</highlight></codeline>
+<codeline lineno="788"><highlight class="normal"></highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ad05024c9586c1dc76c2fd95d54ce6b4c" kindref="member">isPVariant</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="804"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a33b1c7dd1cad95dae57ef87bf3dce5c8" kindref="member">setAutoAck</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="805"><highlight class="normal"></highlight></codeline>
+<codeline lineno="815"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a33b1c7dd1cad95dae57ef87bf3dce5c8" kindref="member">setAutoAck</ref>(<sp/>uint8_t<sp/>pipe,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="827"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a7319961d6048e32546ad5df934bd42d8" kindref="member">setPALevel</ref><sp/>(<sp/>uint8_t<sp/>level<sp/>);</highlight></codeline>
+<codeline lineno="828"><highlight class="normal"></highlight></codeline>
+<codeline lineno="837"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a8fdb80b79100186afad90d9a2a5c79fb" kindref="member">getPALevel</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="846"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a9db0803c6d87e6ada7febea2240a7b1c" kindref="member">setDataRate</ref>(uint8_t<sp/>speed);</highlight></codeline>
+<codeline lineno="847"><highlight class="normal"></highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><ref refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522" kindref="member">rf24_datarate_e</ref><sp/><ref refid="classNRF24L01_1a6184de85c94400cde96b7f83b316efa8" kindref="member">getDataRate</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="856"><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a6081dd6dd9cdffbc1c7534ee1824201d" kindref="member">setCRCLength</ref>(uint8_t<sp/>length);</highlight></codeline>
+<codeline lineno="868"><highlight class="normal"><sp/><ref refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7e" kindref="member">rf24_crclength_e</ref><sp/><ref refid="classNRF24L01_1ac83fb86df156475aeda2ef637078fcd3" kindref="member">getCRCLength</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="869"><highlight class="normal"></highlight></codeline>
+<codeline lineno="875"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a1e997f3c946acdbe8bd622e431f80034" kindref="member">disableCRC</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="892"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ad23d4111c3a26d18db51eb72a5491dbb" kindref="member">maskIRQ</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>tx_ok,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>tx_fail,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>rx_ready);</highlight></codeline>
+<codeline lineno="905" refid="classNRF24L01_1a1feaab910ecff17805f8141fe40028e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint32_t<sp/><ref refid="classNRF24L01_1a1feaab910ecff17805f8141fe40028e7" kindref="member">txDelay</ref>;</highlight></codeline>
+<codeline lineno="906"><highlight class="normal"></highlight></codeline>
+<codeline lineno="916" refid="classNRF24L01_1abae8b8afbf747344006d6163c607be00" refkind="member"><highlight class="normal"><sp/><sp/><sp/>uint32_t<sp/><ref refid="classNRF24L01_1abae8b8afbf747344006d6163c607be00" kindref="member">csDelay</ref>;</highlight></codeline>
+<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a9b458f77f6ae6c42f330710e703dd847" kindref="member">openReadingPipe</ref>(uint8_t<sp/>number,<sp/>uint64_t<sp/>address);</highlight></codeline>
+<codeline lineno="936"><highlight class="normal"></highlight></codeline>
+<codeline lineno="949"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ad64a887cae746be5ca43cf08445feed9" kindref="member">openWritingPipe</ref>(uint64_t<sp/>address);</highlight></codeline>
+<codeline lineno="950"><highlight class="normal"></highlight></codeline>
+<codeline lineno="951"><highlight class="normal"></highlight></codeline>
+<codeline lineno="952"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint8_t<sp/>ReadReady(uint8_t*<sp/>pipe);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="953"><highlight class="normal"></highlight></codeline>
+<codeline lineno="954"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="955"><highlight class="comment"></highlight></codeline>
+<codeline lineno="956"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddresses(uint8_t*<sp/>pipe0,uint8_t*<sp/>pipe1,uint8_t*<sp/>pipe2,uint8_t*<sp/>pipe3,uint8_t*<sp/>pipe4,uint8_t*<sp/>pipe5,uint8_t*<sp/>pipeT);</highlight></codeline>
+<codeline lineno="957"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddress(uint8_t*<sp/>pipe0,uint8_t<sp/>p0,uint8_t<sp/>p1,uint8_t<sp/>p2,uint8_t<sp/>p3,uint8_t<sp/>p4);</highlight></codeline>
+<codeline lineno="958"><highlight class="comment"></highlight></codeline>
+<codeline lineno="959"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe0(uint8_t<sp/>p0,uint8_t<sp/>p1,uint8_t<sp/>p2,uint8_t<sp/>p3,uint8_t<sp/>p4);</highlight></codeline>
+<codeline lineno="960"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe1(uint8_t<sp/>p0,uint8_t<sp/>p1,uint8_t<sp/>p2,uint8_t<sp/>p3,uint8_t<sp/>p4);</highlight></codeline>
+<codeline lineno="961"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe2(uint8_t<sp/>p0,uint8_t<sp/>p1,uint8_t<sp/>p2,uint8_t<sp/>p3,uint8_t<sp/>p4);</highlight></codeline>
+<codeline lineno="962"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe3(uint8_t<sp/>p0,uint8_t<sp/>p1,uint8_t<sp/>p2,uint8_t<sp/>p3,uint8_t<sp/>p4);</highlight></codeline>
+<codeline lineno="963"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe4(uint8_t<sp/>p0,uint8_t<sp/>p1,uint8_t<sp/>p2,uint8_t<sp/>p3,uint8_t<sp/>p4);</highlight></codeline>
+<codeline lineno="964"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe5(uint8_t<sp/>p0,uint8_t<sp/>p1,uint8_t<sp/>p2,uint8_t<sp/>p3,uint8_t<sp/>p4);</highlight></codeline>
+<codeline lineno="965"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipeT(uint8_t<sp/>p0,uint8_t<sp/>p1,uint8_t<sp/>p2,uint8_t<sp/>p3,uint8_t<sp/>p4);</highlight></codeline>
+<codeline lineno="966"><highlight class="comment"></highlight></codeline>
+<codeline lineno="967"><highlight class="comment"></highlight></codeline>
+<codeline lineno="968"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe0(uint8_t*<sp/>addr);</highlight></codeline>
+<codeline lineno="969"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe1(uint8_t*<sp/>addr);</highlight></codeline>
+<codeline lineno="970"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe2(uint8_t*<sp/>addr);</highlight></codeline>
+<codeline lineno="971"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe3(uint8_t*<sp/>addr);</highlight></codeline>
+<codeline lineno="972"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe4(uint8_t*<sp/>addr);</highlight></codeline>
+<codeline lineno="973"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipe5(uint8_t*<sp/>addr);</highlight></codeline>
+<codeline lineno="974"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAddressPipeT(uint8_t*<sp/>addr);</highlight></codeline>
+<codeline lineno="975"><highlight class="comment"></highlight></codeline>
+<codeline lineno="976"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetPowerLevel(uint8_t<sp/>power);</highlight></codeline>
+<codeline lineno="977"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetDataRate(uint8_t<sp/>speed);</highlight></codeline>
+<codeline lineno="978"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetCRClength(uint8_t<sp/>crclvl);</highlight></codeline>
+<codeline lineno="979"><highlight class="comment"></highlight></codeline>
+<codeline lineno="980"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>EnableAutoAck();</highlight></codeline>
+<codeline lineno="981"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>DisableAutoAck();</highlight></codeline>
+<codeline lineno="982"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>SetAutoAck(uint8_t<sp/>ack);</highlight></codeline>
+<codeline lineno="983"><highlight class="comment"></highlight></codeline>
+<codeline lineno="984"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>EnablePipe(uint8_t<sp/>pipe);</highlight></codeline>
+<codeline lineno="985"><highlight class="comment"></highlight></codeline>
+<codeline lineno="986"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>PrintInfo(char*<sp/>string);</highlight></codeline>
+<codeline lineno="987"><highlight class="comment"></highlight></codeline>
+<codeline lineno="988"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="989" refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" refkind="member"><highlight class="normal"><ref refid="classSPI" kindref="compound">SPI</ref><sp/><ref refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" kindref="member">spi</ref>;</highlight></codeline>
+<codeline lineno="990"><highlight class="normal"></highlight></codeline>
+<codeline lineno="991"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="992"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//USART<sp/>u;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="993"><highlight class="normal"></highlight></codeline>
+<codeline lineno="994"><highlight class="normal"></highlight></codeline>
+<codeline lineno="995" refid="classNRF24L01_1ad311ef5130c99ab8ddca292adfe76603" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ad311ef5130c99ab8ddca292adfe76603" kindref="member">delay_ms</ref>(uint16_t<sp/>ms){</highlight></codeline>
+<codeline lineno="996"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint16_t<sp/>t=0;<sp/>t&lt;=ms;<sp/>t++){</highlight></codeline>
+<codeline lineno="997"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_delay_ms(1);</highlight></codeline>
+<codeline lineno="998"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="999"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="1000"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//CE<sp/>and<sp/>CSN<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1001" refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" kindref="member">CSN_HIGH</ref>(){<sp/><ref refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" kindref="member">NRF24L01_PORT</ref><sp/>|=<sp/>(1&lt;&lt;<ref refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" kindref="member">NRF24L01_CSN</ref>);}</highlight></codeline>
+<codeline lineno="1002" refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" kindref="member">CSN_LOW</ref>(){<sp/><ref refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" kindref="member">NRF24L01_PORT</ref><sp/>&amp;=<sp/>~(1&lt;&lt;<ref refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" kindref="member">NRF24L01_CSN</ref>);}</highlight></codeline>
+<codeline lineno="1003" refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" kindref="member">CE_HIGH</ref>(){<sp/><ref refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" kindref="member">NRF24L01_PORT</ref><sp/>|=<sp/><sp/>(1&lt;&lt;<ref refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" kindref="member">NRF24L01_CE</ref>);}</highlight></codeline>
+<codeline lineno="1004" refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" kindref="member">CE_LOW</ref>(){<sp/><ref refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" kindref="member">NRF24L01_PORT</ref><sp/>&amp;=<sp/>~(1&lt;&lt;<ref refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" kindref="member">NRF24L01_CE</ref>);}</highlight></codeline>
+<codeline lineno="1005"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1023"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a9766146f8b6bcab59e91e7545484c401" kindref="member">ReadRegisters</ref>(uint8_t<sp/>reg,<sp/>uint8_t*<sp/>buf,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="1024"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1031"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" kindref="member">ReadRegister</ref>(uint8_t<sp/>reg);</highlight></codeline>
+<codeline lineno="1032"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1041"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" kindref="member">WriteRegisters</ref>(uint8_t<sp/>reg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>buf,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="1042"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1050"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" kindref="member">WriteRegister</ref>(uint8_t<sp/>reg,<sp/>uint8_t<sp/>value);</highlight></codeline>
+<codeline lineno="1051"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1061"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a9abae657dc54d97b6eb63f33c83e9f59" kindref="member">WritePayload</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>writeType);</highlight></codeline>
+<codeline lineno="1062"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1072"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1ad733911b261f73964817dad526745716" kindref="member">ReadPayload</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="1073"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1079"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a83cfc941bafe563f38e183504ee8533c" kindref="member">FlushRx</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1080"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1086"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" kindref="member">getStatus</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1093"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1aceeaa16f91d7c5fd6a429a6adf678bd4" kindref="member">ToggleFeatures</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1094"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1099"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" kindref="member">spiTrans</ref>(uint8_t<sp/>cmd);</highlight></codeline>
+<codeline lineno="1100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1101" refid="classNRF24L01_1ad796eb9996a6b528534d1ac2ae2d37cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classNRF24L01_1ad796eb9996a6b528534d1ac2ae2d37cd" kindref="member">__attribute__</ref>((gnu_inline))<sp/>void<sp/>delay_us(uint16_t<sp/>delay){</highlight></codeline>
+<codeline lineno="1102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(delay--)<sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;nop&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="1103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="1104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1108"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>NRF24L01_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="src/Wireless/NRF24L01.h"/>
+  </compounddef>
+</doxygen>

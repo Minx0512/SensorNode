@@ -1,10 +1,20 @@
-/*
- * Photoresistor.cpp
+/**
+****************************************************************************
+* Project: SensorNode
+*
+* Photoresistor.cpp
+*
+* Created on: Nov 12, 2016
+*
+* Author: Matthias Minx
+*
+* Revision: 0.2
+*
+*
+****************************************************************************/
+/** \file Photoresistor.cpp
  *
- *  Created on: Nov 12, 2016
- *      Author: matthias
  */
-
 #include "Photoresistor.h"
 #include <avr/io.h>
 #include <stdio.h>
@@ -13,16 +23,16 @@
 
 Photoresistor::Photoresistor() {
 	// TODO Auto-generated constructor stub
-	SetType(0);
-	SetPort(0x00);
+	setType(0);
+	setPort(0x00);
 	Init();
 
 }
 
 Photoresistor::Photoresistor(uint8_t port) {
 	// TODO Auto-generated constructor stub
-	SetType(0);
-	SetPort(port);
+	setType(0);
+	setPort(port);
 	Init();
 
 
@@ -38,12 +48,12 @@ void Photoresistor::Init(){
 
 }
 
-void Photoresistor::SetPort(uint8_t port){
+void Photoresistor::setPort(uint8_t port){
 	this->ADPort = port;
 
 }
 
-void Photoresistor::SetType(uint8_t t){
+void Photoresistor::setType(uint8_t t){
 	this->type = t;
 
 }

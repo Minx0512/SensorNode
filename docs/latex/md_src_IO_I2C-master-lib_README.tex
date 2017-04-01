@@ -1,0 +1,118 @@
+\subsection*{Table of contents}
+
+
+\begin{DoxyEnumerate}
+\item What is this library?
+\item Contents of this library
+\item Supported devices
+\item Functions in this library 
+
+
+\end{DoxyEnumerate}
+
+\subsubsection*{1. What is this library?}
+
+This library is an I2C master library which uses the T\+WI peripheral inside the A\+VR microcontroller to establish connections using the I2C protocol 
+
+
+
+\subsubsection*{2. Contents of this library}
+
+The library contains the following files\+:
+
+
+\begin{DoxyItemize}
+\item main.\+c
+\item I2\+C\+\_\+master.\+c
+\item I2\+C\+\_\+master.\+h
+\end{DoxyItemize}
+
+\subparagraph*{main.\+c}
+
+This is a piece of example code which uses this library to read out an H\+M\+C5338L I2C magnetometer.
+
+\subparagraph*{I2\+C\+\_\+master.\+c}
+
+This file contains all the function declarations to setup and work with the T\+WI hardware peripheral inside the A\+VR.
+
+{\itshape Make sure you add this source file to your Makefile!}
+
+\subparagraph*{I2\+C\+\_\+master.\+h}
+
+This file contains the function prototypes and the definition of the Read / Write bit (0 = read, 1 = write)
+
+{\itshape This file has to be included in your source file} 
+
+
+
+\subsubsection*{3. Supported devices}
+
+Though I have only tested this library on an A\+Tmega328P it should be running on all major A\+Tmega A\+V\+Rs like\+:
+
+
+\begin{DoxyItemize}
+\item A\+Tmega644
+\item A\+Tmega32
+\item A\+Tmega16
+\item A\+Tmega328/P
+\item A\+Tmega168/P
+\item A\+Tmega88/P
+\item A\+Tmega44/P
+\item A\+Tmega8
+\end{DoxyItemize}
+
+If your device is not supported you can probably adapt this library easily to your needs by having a look at the your device\textquotesingle{}s data sheet and changing the register names appropriately
+
+The A\+Ttiny range of microcontrolles is not supported as they only provide a U\+SI peripheral which is completely different from the T\+WI peripheral used on the other controllers 
+
+
+
+\subsubsection*{4. Functions in this library}
+
+
+\begin{DoxyItemize}
+\item void i2c\+\_\+init(void)
+\item uint8\+\_\+t i2c\+\_\+start(uint8\+\_\+t address)
+\item uint8\+\_\+t i2c\+\_\+write(uint8\+\_\+t data)
+\item uint8\+\_\+t i2c\+\_\+read\+\_\+ack(void)
+\item uint8\+\_\+t i2c\+\_\+read\+\_\+nack(void)
+\item uint8\+\_\+t i2c\+\_\+transmit(uint8\+\_\+t address, uint8\+\_\+t$\ast$ data, uint16\+\_\+t length)
+\item uint8\+\_\+t i2c\+\_\+receive(uint8\+\_\+t address, uint8\+\_\+t$\ast$ data, uint16\+\_\+t length)
+\item void i2c\+\_\+stop(void)
+\end{DoxyItemize}
+
+\subparagraph*{void I2\+C\+\_\+init(void)}
+
+This function needs to be called only once to set up the correct S\+CL frequency for the bus
+
+\subparagraph*{uint8\+\_\+t I2\+C\+\_\+start(uint8\+\_\+t address)}
+
+This function needs to be called any time a connection to a new slave device should be established. The function returns 1 if an error has occurred, otherwise it returns 0.
+
+The syntax to start a operation write to a device is either\+: {\ttfamily I2\+C\+\_\+start(S\+L\+A\+V\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S+\+I2\+C\+\_\+\+W\+R\+I\+TE);} or {\ttfamily I2\+C\+\_\+start(\+S\+L\+A\+V\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S);}
+
+The syntax to start a read operation from a device is either\+: {\ttfamily I2\+C\+\_\+start(S\+L\+A\+V\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S+\+I2\+C\+\_\+\+R\+E\+AD);} or {\ttfamily I2\+C\+\_\+start(\+S\+L\+A\+V\+E\+\_\+\+R\+E\+A\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S);}
+
+\subparagraph*{uint8\+\_\+t I2\+C\+\_\+write(uint8\+\_\+t data)}
+
+This function is used to write data to the currently active device. The only parameter this function takes is the 8 bit unsigned integer to be sent. The function returns 1 if an error has occurred, otherwise it returns 0.
+
+\subparagraph*{uint8\+\_\+t I2\+C\+\_\+read\+\_\+ack(void)}
+
+This function is used to read one byte from a device and request another byte of data after the transmission is complete by sending the acknowledge bit. This function returns the received byte.
+
+\subparagraph*{uint8\+\_\+t I2\+C\+\_\+read\+\_\+nack(void)}
+
+This function is used to read one byte from a device an then not requesting another byte and therefore stopping the current transmission. This function returns the received byte.
+
+\subparagraph*{uint8\+\_\+t i2c\+\_\+transmit(uint8\+\_\+t address, uint8\+\_\+t$\ast$ data, uint16\+\_\+t length);}
+
+This function is used to transmit \mbox{[}length\mbox{]} number of bytes to an I2C device with the given I2C address from \mbox{[}data\mbox{]}. The \mbox{[}address\mbox{]} passed to this function is the 7-\/bit slave address, left shifted by one bit (i.\+e. 7-\/bit slave address is {\ttfamily 0x2F} -\/$>$ {\ttfamily (0x2F)$<$$<$1} = {\ttfamily 0x5E})
+
+\subparagraph*{uint8\+\_\+t i2c\+\_\+receive(uint8\+\_\+t address, uint8\+\_\+t$\ast$ data, uint16\+\_\+t length);}
+
+This function is used to read \mbox{[}length\mbox{]} number of bytes from the I2C device with the given I2C address into the \mbox{[}data\mbox{]}. The \mbox{[}address\mbox{]} passed to this function is the 7-\/bit slave address, left shifted by one bit (i.\+e. 7-\/bit slave address is {\ttfamily 0x2F} -\/$>$ {\ttfamily (0x2F)$<$$<$1} = {\ttfamily 0x5E})
+
+\subparagraph*{void I2\+C\+\_\+stop(void)}
+
+This function disables the T\+WI peripheral completely and therefore disconnects the device from the bus. 

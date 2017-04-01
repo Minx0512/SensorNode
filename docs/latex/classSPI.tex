@@ -1,0 +1,139 @@
+\hypertarget{classSPI}{}\section{S\+PI Class Reference}
+\label{classSPI}\index{S\+PI@{S\+PI}}
+
+
+\hyperlink{classSPI}{S\+PI} class definition.  
+
+
+
+
+{\ttfamily \#include $<$S\+P\+I.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSPI_a2ba081c29fbdecc704c6bf00b24d5205}{S\+PI} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSPI}{S\+PI} standard constructor. \end{DoxyCompactList}\item 
+\hyperlink{classSPI_a32722ff55ed030eb70b8a71fa19f2436}{S\+PI} (volatile uint8\+\_\+t \&D\+DR, uint8\+\_\+t M\+I\+SO, uint8\+\_\+t M\+O\+SI, uint8\+\_\+t S\+CK, uint8\+\_\+t SS)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSPI}{S\+PI} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classSPI_a7e28e3328e32b650ead0f7640cee6e81}{Init} ()
+\begin{DoxyCompactList}\small\item\em Initialize \hyperlink{classSPI}{S\+PI}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classSPI_ad2c97b15ee0417c355a899c28d2efa5d}{Write\+Readbyte} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write and Read one byte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classSPI_a5dca744360bf2b10d74ab512f2fb71ea}{S\+P\+I\+\_\+\+D\+DR}
+\item 
+uint8\+\_\+t \hyperlink{classSPI_a6fefdb147a2789fe10efb13f8100235c}{S\+P\+I\+\_\+\+M\+I\+SO}
+\item 
+uint8\+\_\+t \hyperlink{classSPI_a10159404dbabef20333fe73f69a3fca6}{S\+P\+I\+\_\+\+M\+O\+SI}
+\item 
+uint8\+\_\+t \hyperlink{classSPI_ad9ff914a9831b004b1f8fa5368558e01}{S\+P\+I\+\_\+\+S\+CK}
+\item 
+uint8\+\_\+t \hyperlink{classSPI_ad4cb7d5cd46647baf68bb98a0e06e2aa}{S\+P\+I\+\_\+\+SS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classSPI}{S\+PI} class definition. 
+
+Defines methods for accessing the \hyperlink{classSPI}{S\+PI} interface 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+PI@{S\+PI}!S\+PI@{S\+PI}}
+\index{S\+PI@{S\+PI}!S\+PI@{S\+PI}}
+\subsubsection[{\texorpdfstring{S\+P\+I()}{SPI()}}]{\setlength{\rightskip}{0pt plus 5cm}S\+P\+I\+::\+S\+PI (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSPI_a2ba081c29fbdecc704c6bf00b24d5205}{}\label{classSPI_a2ba081c29fbdecc704c6bf00b24d5205}
+
+
+\hyperlink{classSPI}{S\+PI} standard constructor. 
+
+new \hyperlink{classSPI}{S\+PI} object where M\+O\+SI, M\+I\+SO, S\+CK and SS are set according to the pins on the microcontroller \index{S\+PI@{S\+PI}!S\+PI@{S\+PI}}
+\index{S\+PI@{S\+PI}!S\+PI@{S\+PI}}
+\subsubsection[{\texorpdfstring{S\+P\+I(volatile uint8\+\_\+t \&\+D\+D\+R, uint8\+\_\+t M\+I\+S\+O, uint8\+\_\+t M\+O\+S\+I, uint8\+\_\+t S\+C\+K, uint8\+\_\+t S\+S)}{SPI(volatile uint8_t &DDR, uint8_t MISO, uint8_t MOSI, uint8_t SCK, uint8_t SS)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+P\+I\+::\+S\+PI (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t \&}]{D\+DR, }
+\item[{uint8\+\_\+t}]{M\+I\+SO, }
+\item[{uint8\+\_\+t}]{M\+O\+SI, }
+\item[{uint8\+\_\+t}]{S\+CK, }
+\item[{uint8\+\_\+t}]{SS}
+\end{DoxyParamCaption}
+)}\hypertarget{classSPI_a32722ff55ed030eb70b8a71fa19f2436}{}\label{classSPI_a32722ff55ed030eb70b8a71fa19f2436}
+
+
+\hyperlink{classSPI}{S\+PI} constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em D\+DR} & \\
+\hline
+\mbox{\tt in}  & {\em M\+I\+SO} & Master In Slave Out \\
+\hline
+\mbox{\tt in}  & {\em M\+O\+SI} & Master Out Slave In \\
+\hline
+\mbox{\tt in}  & {\em S\+CK} & Signal Clock \\
+\hline
+\mbox{\tt in}  & {\em SS} & Slave Select \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{S\+PI@{S\+PI}!Init@{Init}}
+\index{Init@{Init}!S\+PI@{S\+PI}}
+\subsubsection[{\texorpdfstring{Init()}{Init()}}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+::\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSPI_a7e28e3328e32b650ead0f7640cee6e81}{}\label{classSPI_a7e28e3328e32b650ead0f7640cee6e81}
+
+
+Initialize \hyperlink{classSPI}{S\+PI}. 
+
+\index{S\+PI@{S\+PI}!Write\+Readbyte@{Write\+Readbyte}}
+\index{Write\+Readbyte@{Write\+Readbyte}!S\+PI@{S\+PI}}
+\subsubsection[{\texorpdfstring{Write\+Readbyte(uint8\+\_\+t data)}{WriteReadbyte(uint8_t data)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t S\+P\+I\+::\+Write\+Readbyte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classSPI_ad2c97b15ee0417c355a899c28d2efa5d}{}\label{classSPI_ad2c97b15ee0417c355a899c28d2efa5d}
+
+
+Write and Read one byte. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & Databyte to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Byte 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{S\+PI@{S\+PI}!S\+P\+I\+\_\+\+D\+DR@{S\+P\+I\+\_\+\+D\+DR}}
+\index{S\+P\+I\+\_\+\+D\+DR@{S\+P\+I\+\_\+\+D\+DR}!S\+PI@{S\+PI}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+D\+DR}{SPI_DDR}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ S\+P\+I\+::\+S\+P\+I\+\_\+\+D\+DR\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSPI_a5dca744360bf2b10d74ab512f2fb71ea}{}\label{classSPI_a5dca744360bf2b10d74ab512f2fb71ea}
+\index{S\+PI@{S\+PI}!S\+P\+I\+\_\+\+M\+I\+SO@{S\+P\+I\+\_\+\+M\+I\+SO}}
+\index{S\+P\+I\+\_\+\+M\+I\+SO@{S\+P\+I\+\_\+\+M\+I\+SO}!S\+PI@{S\+PI}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+M\+I\+SO}{SPI_MISO}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t S\+P\+I\+::\+S\+P\+I\+\_\+\+M\+I\+SO\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSPI_a6fefdb147a2789fe10efb13f8100235c}{}\label{classSPI_a6fefdb147a2789fe10efb13f8100235c}
+\index{S\+PI@{S\+PI}!S\+P\+I\+\_\+\+M\+O\+SI@{S\+P\+I\+\_\+\+M\+O\+SI}}
+\index{S\+P\+I\+\_\+\+M\+O\+SI@{S\+P\+I\+\_\+\+M\+O\+SI}!S\+PI@{S\+PI}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+M\+O\+SI}{SPI_MOSI}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t S\+P\+I\+::\+S\+P\+I\+\_\+\+M\+O\+SI\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSPI_a10159404dbabef20333fe73f69a3fca6}{}\label{classSPI_a10159404dbabef20333fe73f69a3fca6}
+\index{S\+PI@{S\+PI}!S\+P\+I\+\_\+\+S\+CK@{S\+P\+I\+\_\+\+S\+CK}}
+\index{S\+P\+I\+\_\+\+S\+CK@{S\+P\+I\+\_\+\+S\+CK}!S\+PI@{S\+PI}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+S\+CK}{SPI_SCK}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t S\+P\+I\+::\+S\+P\+I\+\_\+\+S\+CK\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSPI_ad9ff914a9831b004b1f8fa5368558e01}{}\label{classSPI_ad9ff914a9831b004b1f8fa5368558e01}
+\index{S\+PI@{S\+PI}!S\+P\+I\+\_\+\+SS@{S\+P\+I\+\_\+\+SS}}
+\index{S\+P\+I\+\_\+\+SS@{S\+P\+I\+\_\+\+SS}!S\+PI@{S\+PI}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+SS}{SPI_SS}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t S\+P\+I\+::\+S\+P\+I\+\_\+\+SS\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSPI_ad4cb7d5cd46647baf68bb98a0e06e2aa}{}\label{classSPI_ad4cb7d5cd46647baf68bb98a0e06e2aa}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+I\+O/\hyperlink{SPI_8h}{S\+P\+I.\+h}\item 
+src/\+I\+O/\hyperlink{SPI_8cpp}{S\+P\+I.\+cpp}\end{DoxyCompactItemize}

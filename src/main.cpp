@@ -1,8 +1,24 @@
-/*
- * main.cpp
+/** \mainpage
+****************************************************************************
+* Project: SensorNode
+*
+* main.cpp
+*
+* Created on: Nov 12, 2016
+*
+* Author: Matthias Minx
+*
+* Revision: 0.2
+*
+*
+****************************************************************************
+*\section License
+*
+*
+*
+**************************************************************************/
+/** \file main.cpp
  *
- *  Created on: Nov 12, 2016
- *      Author: matthias
  */
 
 #include <avr/io.h>
@@ -22,20 +38,24 @@
 
 //#define F_CPU 16000000
 
+/*!
+ 	 \def CE
+ 	 Chip Enable (CE) for the nRF24L01+ Module
+ */
 #define CE PB1
-#define CSN PB0
+#define CSN PB0		//!< Chip Select Not (CSN) for the nRF24L01+ Module
 
 
-#define Sensor_DS18B20 1
-#define Sensor_DHT22 0
-#define Sensor_Move 1
-#define Sensor_LightVoltage 1
-#define Sensor_LightLux 0
-#define Sensor_Pressure 0
+#define Sensor_DS18B20 1 //!< is a DS18B20 temperature Sensor connected to the microcontroller?
+#define Sensor_DHT22 0	//!< is a DHT22 temperature and humidity sensor connected?
+#define Sensor_Move 1	//!< is a movement detector connected?
+#define Sensor_LightVoltage 1 	//!< is a photoresitor connected to a analog input?
+#define Sensor_LightLux 0 	//!< is a digital Lux sensor connected (I2C)?
+#define Sensor_Pressure 0 	//!< is a pressure sensor connected (I2C)?
 
-#define NRF_MainNode 1
-#define NRF_SN 0
-#define NRF_SNnum 0
+#define NRF_MainNode 1	//!< Role of the node
+#define NRF_SN 0 	//!< is Slave node?
+#define NRF_SNnum 0	//!< number of slave nodes
 
 
 #if Sensor_DHT22
@@ -48,30 +68,33 @@
 #include "Sensors/Photoresistor.h"
 #endif
 
-uint8_t sent = 0;
-uint8_t uartRX_flag = 0;
-uint8_t flagMovement = 0;
-uint8_t nrfIntFlag = 0;
+// uint8_t sent = 0;	//!< Flag
+uint8_t uartRX_flag = 0; 	//!< Flag received UART message
+uint8_t flagMovement = 0; //!< Flag for movement detected
+uint8_t nrfIntFlag = 0;		//!< Flag for incoming message from the RF module
 
-char bufferNRF[128][5];
+char bufferNRF[128][5]; //!< Buffer for received messages via nRF24L01+ module
 
 //static char* system = "<SYSTEM><VERSION>1.0||";
 
-uint8_t firstrun EEMEM;
+uint8_t EEMEM firstrun; //!<First run after reset/ reflash?
 
-const char sendSensorStr[]  = "/sensor/%s/|%s/|%s";
-const char sendSystemStr[]  = "/system/%s/|%s/|%s";
-const char getSystemStr[] = "%s|%s|%s";
-uint8_t pipeEnable EEMEM;
-uint8_t nrfChannel EEMEM;
-uint8_t nrfACK EEMEM;
-uint8_t pwrLvl EEMEM;
-uint8_t dataRate EEMEM;
-uint8_t crcLvl EEMEM;
+const char sendSensorStr[]  = "/sensor/%s/|%s/|%s"; //!< Template for sendSensor string
+const char sendSystemStr[]  = "/system/%s/|%s/|%s"; //!< Tempplate for sendSystem string
+const char getSystemStr[] = "%s|%s|%s"; 	//!< Template for getSystem string
 
-uint64_t mem_adressTx[25] EEMEM;
-uint64_t mem_adressRx[5] EEMEM;
 
+uint8_t EEMEM pipeEnable ;	//!< Store RF enabled pipes in EEPROM
+uint8_t EEMEM nrfChannel;	//!< Store RF Channel number in EEPROM
+uint8_t EEMEM nrfACK;		//!< Store RF auto acknoledge in EEPROM
+uint8_t EEMEM pwrLvl;		//!< Store RF power level in EEPROM
+uint8_t EEMEM dataRate;		/*!< Store RF data rate in EEPROM */
+uint8_t EEMEM crcLvl;		/*!< Store CRC level in EEPROM */
+
+uint64_t EEMEM mem_adressTx[25];	/*!< Array for transmit addresses */
+uint64_t EEMEM mem_adressRx[5];		/*!< Array for receive addresses */
+
+char str[RX_BUFF];		//!< Receive string Buffer
 
 #if NRF_MainNode
 
@@ -91,46 +114,44 @@ uint64_t adressTx[] = {0xA0A0A0A0A0,0xA0A0A0A0A1,0xA0A0A0A0A2,0xA0A0A0A0A3,0xA0A
 #endif
 
 
-USART uart = USART(9600);
-NRF24L01 nrf = NRF24L01(DDRB, PORTB, CE, CSN);
-ParseStrings ps = ParseStrings();
+
+
+USART uart = USART(9600); //!< Create new USART object with a baud rate of 9600
+NRF24L01 nrf = NRF24L01(DDRB, PORTB, CE, CSN); //!< Create new NRF242L01 object
+ParseStrings ps = ParseStrings(); 	//!< Create new ParseString object
 
 
 
 
 #if Sensor_DS18B20
-DS18B20 ds = DS18B20(PORTD,DDRD,PIND, PD6);
+DS18B20 ds = DS18B20(PORTD,DDRD,PIND, PD6);	//!< Create new DS18B20 object connected to pin PD6
 #endif
 #if Sensor_DHT22
-DHT22 dht22 = DHT22(PORTD,DDRD,PIND,PD7);
+DHT22 dht22 = DHT22(PORTD,DDRD,PIND,PD7); //!< Create new DHT22 object connected to pin PD7
 #endif
 #if Sensor_LightVoltage
-Photoresistor pr = Photoresistor(0x00);
+Photoresistor pr = Photoresistor(0x00); 	//!< Create new Photoresitor object connected to the analog output 0x00
 #endif
 
-char str[RX_BUFF];
 
 
-
-
+//! Delays a certain amount of milliseconds
+/*!
+  @param [in] ms Number of milliseconds to delay as unsigned integer 16 argument.
+*/
 void delay_ms(uint16_t ms){
+
 	for(uint16_t t=0; t<=ms; t++){
 		_delay_ms(1);
 	}
 }
 
 
-
-void CpyMAC(uint8_t* src, uint8_t* dest, uint8_t len){
-
-	for(uint8_t i=0;i<len;i++){
-
-		dest[i] = src[i];
-
-	}
-
-
-}
+//! Copies a MAC address from an uint8 array to a char array
+/*!
+  @param [in] nrfMAC MAC address uint8 array of the nRF24L01+ module
+  @param [out] newMAC MAC address char array of the nRF24L01+ module
+*/
 void GetNodeMAC(char* newMAC, uint8_t* nrfMAC){
 
 
@@ -139,7 +160,13 @@ void GetNodeMAC(char* newMAC, uint8_t* nrfMAC){
 
 
 }
+/*! \fn void CreateSensorMAC(char* newMAC, uint8_t* nrfMAC,char* add)
+	\brief Combine new MAC address from an uint8 MAC array and a char array to a char array
 
+  @param [in] nrfMAC MAC address uint8 array of the nRF24L01+ module
+  @param [out] newMAC MAC address char array of the sensor
+  @param [in] add Address addition
+*/
 void CreateSensorMAC(char* newMAC, uint8_t* nrfMAC,char* add){
 
 
@@ -148,6 +175,13 @@ void CreateSensorMAC(char* newMAC, uint8_t* nrfMAC,char* add){
 
 
 }
+/*! \fn void CreateSensorMAC(char* newMAC, uint64_t nrfMAC,char* add)
+  \brief Combine new MAC address from an uint64 MAC address and a char array to a char array
+
+  @param [in] nrfMAC MAC address uint64 of the nRF24L01+ module
+  @param [out] newMAC MAC address char array of the sensor
+  @param [in] add Address addition
+*/
 void CreateSensorMAC(char* newMAC, uint64_t nrfMAC,char* add){
 
 
@@ -162,6 +196,10 @@ void CreateSensorMAC(char* newMAC, uint64_t nrfMAC,char* add){
 
 }
 
+/*! \fn void SetupNRF()
+    \brief Setup RF Module
+
+*/
 void SetupNRF(){
 
 
@@ -249,15 +287,13 @@ void SetupNRF(){
 
 
 }
+/*! \fn void init_interupt()
+    \brief Initialize interrupts
 
-
-
+    Trigger INT1 on rising edge and INT0 on falling edge
+*/
 void init_interupt(){
 
-	/*
-	 * Trigger INT1 on rising edge
-	 * and INT0 on falling edge
-	 */
 
 	EICRA =  (1<<ISC10) | (1<<ISC11) | (1<<ISC01);
 
@@ -269,7 +305,11 @@ void init_interupt(){
   sei();
 }
 
-
+//! Interrupt routine for INT0
+/*!
+ *	RF module sends an interrupt if there is data in its buffer to read
+ *
+ */
 ISR(INT0_vect){
 
 	PORTD ^= (1<<PD4);
@@ -297,7 +337,11 @@ ISR(INT0_vect){
 
 
 }
-
+//! Interrupt routine for INT1
+/*!
+ *	Sets the flagMovement to 0 if the movment detector fires
+ *
+ */
 ISR(INT1_vect){
 	// set movement flag
 	flagMovement = 1;
@@ -305,7 +349,11 @@ ISR(INT1_vect){
 }
 
 
-
+//! Interrupt routine for USART_RX
+/*!
+ *	Reads the incoming message from the UART buffer
+ *
+ */
 ISR(USART_RX_vect){
 // fifo_put
 	PORTD ^= (1<<PD4);
@@ -356,36 +404,34 @@ ISR(USART_UDRE_vect){
 }
 */
 
-
-
-
-
+/*! \fn int main()
+ *  \brief Main function
+ *
+ *
+ *
+ * @return an integer 0 upon exit success
+ */
 int main(){
 
-
+	/* Define pull-ups and set output high
+	 *	Define directions for port pins
+	 */
 	DDRD |= (1<<DDD4);
-
-	PORTD |= (1<<PD4);
-
-	// Set the pullup on PD3.
-	PORTD = (1<<PORTD3);
+	PORTD |= (1<<PD4| (1<<PD3));
 
 	init_interupt();
 
-
 	uart.initUART();
 
+	delay_ms(500); /* Delay 500ms */
 
-	delay_ms(500);
-	PORTD ^= (1<<PD4);
+	PORTD ^= (1<<PD4); /* Toggle PD4*/
 
 	char buffer[350];
 //	char system[500];
 
-
-	sprintf(buffer,"\r\n########### START #############\r\n");
-
-	uart.writeString(buffer);
+	//sprintf(buffer,"\r\n########### START #############\r\n");
+	//uart.writeString(buffer);
 
 	//snprintf(buffer,1, " ");
 
@@ -524,6 +570,9 @@ int main(){
 
 					}else if(ps.getCmdProperty()==7){ // System Info
 
+						/*!
+						 * \todo System info
+						 */
 
 					//	char buf[500];
 						//sprintf(buf," ");
@@ -642,9 +691,10 @@ int main(){
 					}
 					#if Sensor_Move
 						else if(ps.getCmdProperty()==0x01){
-							/* Movement
-							 * triggered by interrupt
+							/*
+							 * Movement detector
 							 */
+
 							char mvbuffer[50];
 							char newMac[25];
 
@@ -668,7 +718,10 @@ int main(){
 						}
 					#endif
 					#if Sensor_DHT22
-						else if(ps.getCmdProperty()==0x02){ // DHT22
+						else if(ps.getCmdProperty()==0x02){
+							/*
+							 * DHT22
+							 */
 
 							char dhtBuffer[50];
 							char dhtMac[25];
@@ -689,7 +742,11 @@ int main(){
 						}
 					#endif
 					#if Sensor_LightVoltage
-						else if(ps.getCmdProperty()==0x03){ //Lightsense analog
+						else if(ps.getCmdProperty()==0x03){
+							/*
+							 * Lightsense analog
+							 *
+							 */
 
 							char prbuffer[80];
 
@@ -708,9 +765,10 @@ int main(){
 					#endif
 					#if Sensor_LightLux
 						else if(ps.getCmdProperty()==0x04){
-							/* Lightsense digital I2C
+							/*!
+							 * \brief Lightsense digital I2C
 							 *
-							 * To Do: write Code for reading I2C light sensor
+							 * \todo : write Code for reading I2C light sensor
 							 */
 							char sensorbuffer[80];
 							char lightBuffer[15];
@@ -732,6 +790,12 @@ int main(){
 					#endif
 					#if Sensor_DS18B20
 						else if(ps.getCmdProperty()==0x05){ //TempDS18B20
+							/*
+							 * DS18B20
+							 *
+							 * 	Get temperature from the DS18B20 temperature sensor
+							 *
+							 */
 
 							char dsb[120];
 							char macStr[60];
@@ -748,8 +812,11 @@ int main(){
 					#endif
 					#if Sensor_Pressure
 						else if(ps.getCmdProperty()==0x06){ //Pressure
-							/* Pressure
-							 * TO Do: write Code for reading I2C pressure sensor
+							/*!
+							 * \brief Pressure
+							 * \todo: write Code for reading I2C BMP180 sensor
+							 *
+							 * the BMP180 also returns temperature values
 							 *
 							 */
 

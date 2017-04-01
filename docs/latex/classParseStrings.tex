@@ -1,0 +1,339 @@
+\hypertarget{classParseStrings}{}\section{Parse\+Strings Class Reference}
+\label{classParseStrings}\index{Parse\+Strings@{Parse\+Strings}}
+
+
+\hyperlink{classParseStrings}{Parse\+Strings} class definition.  
+
+
+
+
+{\ttfamily \#include $<$Parse\+Strings.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classParseStrings_a49f5520441d291626b4d655d20a6ab19}{Parse} (const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Parse const character string. \end{DoxyCompactList}\item 
+void \hyperlink{classParseStrings_a1a177dfb6cb057b7709710362b3e10a0}{Parse\+M\+AC} ()
+\begin{DoxyCompactList}\small\item\em Parse M\+AC address. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classParseStrings_a7b0f8fdd77be81594f0495637de5138c}{get\+M\+AC} ()
+\begin{DoxyCompactList}\small\item\em Get M\+AC address as uint64\+\_\+t. \end{DoxyCompactList}\item 
+void \hyperlink{classParseStrings_a48fbe6998c3dd4d6bd5a57644a45eb8e}{get\+Property\+String} (char $\ast$prop\+String)
+\begin{DoxyCompactList}\small\item\em Get Property string. \end{DoxyCompactList}\item 
+void \hyperlink{classParseStrings_a6dbe145425dd08c33444e5ffd9181041}{get\+Property\+I\+D\+As\+M\+AC} (uint8\+\_\+t prop\+String\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em get Property ID as a M\+AC address array \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classParseStrings_a9fbcb70ec76da019901ac4d04d8f48d7}{get\+Cmd\+ID} ()
+\begin{DoxyCompactList}\small\item\em get Command ID \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classParseStrings_abda18520c80670139930230a2524b964}{get\+Cmd\+Property} ()
+\begin{DoxyCompactList}\small\item\em Returns command property. \end{DoxyCompactList}\item 
+void \hyperlink{classParseStrings_a9287dd0575737da66fa0ba2f8fdd003b}{get\+Property\+ID} (char $\ast$P\+I\+D\+String)
+\begin{DoxyCompactList}\small\item\em Returns Property ID as character array. \end{DoxyCompactList}\item 
+void \hyperlink{classParseStrings_a1dc6d3d8940788e397932ec456946461}{Print\+Vars} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Returns Variables as string. \end{DoxyCompactList}\item 
+void \hyperlink{classParseStrings_a284bddb3fc4a2ecfb84a6ababce9deaa}{Print\+M\+AC} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Returns M\+AC address to string. \end{DoxyCompactList}\item 
+void \hyperlink{classParseStrings_a5d694beffe019842455b788cca9cb26a}{Clear\+All} ()
+\begin{DoxyCompactList}\small\item\em Clears all variables. \end{DoxyCompactList}\item 
+\hyperlink{classParseStrings_a58ddb6be993306d69a0bbb08285fafa6}{Parse\+Strings} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classParseStrings}{Parse\+Strings} standard constructor. \end{DoxyCompactList}\item 
+\hyperlink{classParseStrings_ab6f9a98b85f374dd26186cb55018e4a9}{Parse\+Strings} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classParseStrings}{Parse\+Strings} constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{classParseStrings_a861e286994be25fad33c18c9be18ed12}{cmd\+ID}
+\begin{DoxyCompactList}\small\item\em Command ID. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classParseStrings_abd72bf6aef85d0c8d2bc5e145695c7f9}{cmdP}
+\begin{DoxyCompactList}\small\item\em Command Property. \end{DoxyCompactList}\item 
+char \hyperlink{classParseStrings_a8a5bf86758a4cfaed5445aa9ad907afc}{P\+ID} \mbox{[}36\mbox{]}
+\begin{DoxyCompactList}\small\item\em Property ID. \end{DoxyCompactList}\item 
+char \hyperlink{classParseStrings_a89114cea60b7a37e80c799cec5bcd03d}{p\+String} \mbox{[}36\mbox{]}
+\begin{DoxyCompactList}\small\item\em Property String. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classParseStrings_a0919816f131553dcd3706286e8bb61cc}{addr} \mbox{[}5\mbox{]}
+\begin{DoxyCompactList}\small\item\em 5 Byte address array \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classParseStrings}{Parse\+Strings} class definition. 
+
+Defines methods for accessing the \hyperlink{classParseStrings}{Parse\+Strings} interface 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Parse\+Strings@{Parse\+Strings}!Parse\+Strings@{Parse\+Strings}}
+\index{Parse\+Strings@{Parse\+Strings}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{Parse\+Strings()}{ParseStrings()}}]{\setlength{\rightskip}{0pt plus 5cm}Parse\+Strings\+::\+Parse\+Strings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a58ddb6be993306d69a0bbb08285fafa6}{}\label{classParseStrings_a58ddb6be993306d69a0bbb08285fafa6}
+
+
+\hyperlink{classParseStrings}{Parse\+Strings} standard constructor. 
+
+new \hyperlink{classParseStrings}{Parse\+Strings} object and initializes variables 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classParseStrings_a58ddb6be993306d69a0bbb08285fafa6_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Parse\+Strings@{Parse\+Strings}!Parse\+Strings@{Parse\+Strings}}
+\index{Parse\+Strings@{Parse\+Strings}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{Parse\+Strings(char $\ast$string)}{ParseStrings(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}Parse\+Strings\+::\+Parse\+Strings (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_ab6f9a98b85f374dd26186cb55018e4a9}{}\label{classParseStrings_ab6f9a98b85f374dd26186cb55018e4a9}
+
+
+\hyperlink{classParseStrings}{Parse\+Strings} constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & Character array to parse \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classParseStrings_ab6f9a98b85f374dd26186cb55018e4a9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Parse\+Strings@{Parse\+Strings}!Clear\+All@{Clear\+All}}
+\index{Clear\+All@{Clear\+All}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{Clear\+All()}{ClearAll()}}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\+Strings\+::\+Clear\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a5d694beffe019842455b788cca9cb26a}{}\label{classParseStrings_a5d694beffe019842455b788cca9cb26a}
+
+
+Clears all variables. 
+
+\index{Parse\+Strings@{Parse\+Strings}!get\+Cmd\+ID@{get\+Cmd\+ID}}
+\index{get\+Cmd\+ID@{get\+Cmd\+ID}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{get\+Cmd\+I\+D()}{getCmdID()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Parse\+Strings\+::get\+Cmd\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a9fbcb70ec76da019901ac4d04d8f48d7}{}\label{classParseStrings_a9fbcb70ec76da019901ac4d04d8f48d7}
+
+
+get Command ID 
+
+\begin{DoxyReturn}{Returns}
+Command ID as uint8\+\_\+t 
+\end{DoxyReturn}
+\index{Parse\+Strings@{Parse\+Strings}!get\+Cmd\+Property@{get\+Cmd\+Property}}
+\index{get\+Cmd\+Property@{get\+Cmd\+Property}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{get\+Cmd\+Property()}{getCmdProperty()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Parse\+Strings\+::get\+Cmd\+Property (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_abda18520c80670139930230a2524b964}{}\label{classParseStrings_abda18520c80670139930230a2524b964}
+
+
+Returns command property. 
+
+\begin{DoxyReturn}{Returns}
+Command Property as uint8\+\_\+t 
+\end{DoxyReturn}
+\index{Parse\+Strings@{Parse\+Strings}!get\+M\+AC@{get\+M\+AC}}
+\index{get\+M\+AC@{get\+M\+AC}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{get\+M\+A\+C()}{getMAC()}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Parse\+Strings\+::get\+M\+AC (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a7b0f8fdd77be81594f0495637de5138c}{}\label{classParseStrings_a7b0f8fdd77be81594f0495637de5138c}
+
+
+Get M\+AC address as uint64\+\_\+t. 
+
+\begin{DoxyReturn}{Returns}
+M\+AC address as a 64 Bit unsigned integer 
+\end{DoxyReturn}
+\index{Parse\+Strings@{Parse\+Strings}!get\+Property\+ID@{get\+Property\+ID}}
+\index{get\+Property\+ID@{get\+Property\+ID}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{get\+Property\+I\+D(char $\ast$\+P\+I\+D\+String)}{getPropertyID(char *PIDString)}}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\+Strings\+::get\+Property\+ID (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{P\+I\+D\+String}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a9287dd0575737da66fa0ba2f8fdd003b}{}\label{classParseStrings_a9287dd0575737da66fa0ba2f8fdd003b}
+
+
+Returns Property ID as character array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em P\+I\+D\+String} & Character array of Property ID \\
+\hline
+\end{DoxyParams}
+\index{Parse\+Strings@{Parse\+Strings}!get\+Property\+I\+D\+As\+M\+AC@{get\+Property\+I\+D\+As\+M\+AC}}
+\index{get\+Property\+I\+D\+As\+M\+AC@{get\+Property\+I\+D\+As\+M\+AC}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{get\+Property\+I\+D\+As\+M\+A\+C(uint8\+\_\+t prop\+String[8])}{getPropertyIDAsMAC(uint8_t propString[8])}}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\+Strings\+::get\+Property\+I\+D\+As\+M\+AC (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{prop\+String\mbox{[}8\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a6dbe145425dd08c33444e5ffd9181041}{}\label{classParseStrings_a6dbe145425dd08c33444e5ffd9181041}
+
+
+get Property ID as a M\+AC address array 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em prop\+String} & 8 Byte Address array \\
+\hline
+\end{DoxyParams}
+\index{Parse\+Strings@{Parse\+Strings}!get\+Property\+String@{get\+Property\+String}}
+\index{get\+Property\+String@{get\+Property\+String}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{get\+Property\+String(char $\ast$prop\+String)}{getPropertyString(char *propString)}}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\+Strings\+::get\+Property\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{prop\+String}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a48fbe6998c3dd4d6bd5a57644a45eb8e}{}\label{classParseStrings_a48fbe6998c3dd4d6bd5a57644a45eb8e}
+
+
+Get Property string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em prop\+String} & Character array \\
+\hline
+\end{DoxyParams}
+\index{Parse\+Strings@{Parse\+Strings}!Parse@{Parse}}
+\index{Parse@{Parse}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{Parse(const char $\ast$string)}{Parse(const char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\+Strings\+::\+Parse (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a49f5520441d291626b4d655d20a6ab19}{}\label{classParseStrings_a49f5520441d291626b4d655d20a6ab19}
+
+
+Parse const character string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & Character string to parse \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classParseStrings_a49f5520441d291626b4d655d20a6ab19_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Parse\+Strings@{Parse\+Strings}!Parse\+M\+AC@{Parse\+M\+AC}}
+\index{Parse\+M\+AC@{Parse\+M\+AC}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{Parse\+M\+A\+C()}{ParseMAC()}}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\+Strings\+::\+Parse\+M\+AC (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a1a177dfb6cb057b7709710362b3e10a0}{}\label{classParseStrings_a1a177dfb6cb057b7709710362b3e10a0}
+
+
+Parse M\+AC address. 
+
+Parses M\+AC address from p\+String into the addr array \index{Parse\+Strings@{Parse\+Strings}!Print\+M\+AC@{Print\+M\+AC}}
+\index{Print\+M\+AC@{Print\+M\+AC}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{Print\+M\+A\+C(char $\ast$string)}{PrintMAC(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\+Strings\+::\+Print\+M\+AC (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a284bddb3fc4a2ecfb84a6ababce9deaa}{}\label{classParseStrings_a284bddb3fc4a2ecfb84a6ababce9deaa}
+
+
+Returns M\+AC address to string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & Character array of M\+AC address \\
+\hline
+\end{DoxyParams}
+\index{Parse\+Strings@{Parse\+Strings}!Print\+Vars@{Print\+Vars}}
+\index{Print\+Vars@{Print\+Vars}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{Print\+Vars(char $\ast$string)}{PrintVars(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\+Strings\+::\+Print\+Vars (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classParseStrings_a1dc6d3d8940788e397932ec456946461}{}\label{classParseStrings_a1dc6d3d8940788e397932ec456946461}
+
+
+Returns Variables as string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & Character array of variable values \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classParseStrings_a1dc6d3d8940788e397932ec456946461_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Parse\+Strings@{Parse\+Strings}!addr@{addr}}
+\index{addr@{addr}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{addr}{addr}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Parse\+Strings\+::addr\mbox{[}5\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParseStrings_a0919816f131553dcd3706286e8bb61cc}{}\label{classParseStrings_a0919816f131553dcd3706286e8bb61cc}
+
+
+5 Byte address array 
+
+\index{Parse\+Strings@{Parse\+Strings}!cmd\+ID@{cmd\+ID}}
+\index{cmd\+ID@{cmd\+ID}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{cmd\+ID}{cmdID}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Parse\+Strings\+::cmd\+ID\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParseStrings_a861e286994be25fad33c18c9be18ed12}{}\label{classParseStrings_a861e286994be25fad33c18c9be18ed12}
+
+
+Command ID. 
+
+\index{Parse\+Strings@{Parse\+Strings}!cmdP@{cmdP}}
+\index{cmdP@{cmdP}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{cmdP}{cmdP}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Parse\+Strings\+::cmdP\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParseStrings_abd72bf6aef85d0c8d2bc5e145695c7f9}{}\label{classParseStrings_abd72bf6aef85d0c8d2bc5e145695c7f9}
+
+
+Command Property. 
+
+\index{Parse\+Strings@{Parse\+Strings}!P\+ID@{P\+ID}}
+\index{P\+ID@{P\+ID}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{P\+ID}{PID}}]{\setlength{\rightskip}{0pt plus 5cm}char Parse\+Strings\+::\+P\+ID\mbox{[}36\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParseStrings_a8a5bf86758a4cfaed5445aa9ad907afc}{}\label{classParseStrings_a8a5bf86758a4cfaed5445aa9ad907afc}
+
+
+Property ID. 
+
+\index{Parse\+Strings@{Parse\+Strings}!p\+String@{p\+String}}
+\index{p\+String@{p\+String}!Parse\+Strings@{Parse\+Strings}}
+\subsubsection[{\texorpdfstring{p\+String}{pString}}]{\setlength{\rightskip}{0pt plus 5cm}char Parse\+Strings\+::p\+String\mbox{[}36\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParseStrings_a89114cea60b7a37e80c799cec5bcd03d}{}\label{classParseStrings_a89114cea60b7a37e80c799cec5bcd03d}
+
+
+Property String. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+I\+O/\hyperlink{ParseStrings_8h}{Parse\+Strings.\+h}\item 
+src/\+I\+O/\hyperlink{ParseStrings_8cpp}{Parse\+Strings.\+cpp}\end{DoxyCompactItemize}

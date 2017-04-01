@@ -1,0 +1,51 @@
+\hypertarget{DHT22_8h}{}\section{src/\+Sensors/\+D\+H\+T22.h File Reference}
+\label{DHT22_8h}\index{src/\+Sensors/\+D\+H\+T22.\+h@{src/\+Sensors/\+D\+H\+T22.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+Include dependency graph for D\+H\+T22.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DHT22_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{DHT22_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDHT22}{D\+H\+T22}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{DHT22_8h_a802b2b582b121e4632aa9a491d503720}{F\+O\+SC}~16000000\+UL
+\item 
+\#define \hyperlink{DHT22_8h_a3a15b9e4cfa1f6668b3bc5e324af42c0}{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}~8
+\item 
+\#define \hyperlink{DHT22_8h_a9feef6e5eed237807d11af797efbbea8}{us}(num)~(num/(\hyperlink{DS18B20_8h_a3a15b9e4cfa1f6668b3bc5e324af42c0}{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}$\ast$(1/(\hyperlink{DS18B20_8h_a802b2b582b121e4632aa9a491d503720}{F\+O\+SC}/1000000.\+0))))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{D\+H\+T22.\+h@{D\+H\+T22.\+h}!F\+O\+SC@{F\+O\+SC}}
+\index{F\+O\+SC@{F\+O\+SC}!D\+H\+T22.\+h@{D\+H\+T22.\+h}}
+\subsubsection[{\texorpdfstring{F\+O\+SC}{FOSC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+O\+SC~16000000\+UL}\hypertarget{DHT22_8h_a802b2b582b121e4632aa9a491d503720}{}\label{DHT22_8h_a802b2b582b121e4632aa9a491d503720}
+\index{D\+H\+T22.\+h@{D\+H\+T22.\+h}!L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES@{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}}
+\index{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES@{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}!D\+H\+T22.\+h@{D\+H\+T22.\+h}}
+\subsubsection[{\texorpdfstring{L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}{LOOP_CYCLES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES~8}\hypertarget{DHT22_8h_a3a15b9e4cfa1f6668b3bc5e324af42c0}{}\label{DHT22_8h_a3a15b9e4cfa1f6668b3bc5e324af42c0}
+\index{D\+H\+T22.\+h@{D\+H\+T22.\+h}!us@{us}}
+\index{us@{us}!D\+H\+T22.\+h@{D\+H\+T22.\+h}}
+\subsubsection[{\texorpdfstring{us}{us}}]{\setlength{\rightskip}{0pt plus 5cm}\#define us(
+\begin{DoxyParamCaption}
+\item[{}]{num}
+\end{DoxyParamCaption}
+)~(num/({\bf L\+O\+O\+P\+\_\+\+C\+Y\+C\+L\+ES}$\ast$(1/({\bf F\+O\+SC}/1000000.\+0))))}\hypertarget{DHT22_8h_a9feef6e5eed237807d11af797efbbea8}{}\label{DHT22_8h_a9feef6e5eed237807d11af797efbbea8}

@@ -1,0 +1,118 @@
+.TH "SPI" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SPI \- \fBSPI\fP class definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SPI\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSPI\fP ()"
+.br
+.RI "\fI\fBSPI\fP standard constructor\&. \fP"
+.ti -1c
+.RI "\fBSPI\fP (volatile uint8_t &DDR, uint8_t MISO, uint8_t MOSI, uint8_t SCK, uint8_t SS)"
+.br
+.RI "\fI\fBSPI\fP constructor\&. \fP"
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "\fIInitialize \fBSPI\fP\&. \fP"
+.ti -1c
+.RI "uint8_t \fBWriteReadbyte\fP (uint8_t data)"
+.br
+.RI "\fIWrite and Read one byte\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "volatile uint8_t * \fBSPI_DDR\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBSPI_MISO\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBSPI_MOSI\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBSPI_SCK\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBSPI_SS\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSPI\fP class definition\&. 
+
+Defines methods for accessing the \fBSPI\fP interface 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SPI::SPI ()"
+
+.PP
+\fBSPI\fP standard constructor\&. new \fBSPI\fP object where MOSI, MISO, SCK and SS are set according to the pins on the microcontroller 
+.SS "SPI::SPI (volatile uint8_t & DDR, uint8_t MISO, uint8_t MOSI, uint8_t SCK, uint8_t SS)"
+
+.PP
+\fBSPI\fP constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIDDR\fP 
+.br
+\fIMISO\fP Master In Slave Out 
+.br
+\fIMOSI\fP Master Out Slave In 
+.br
+\fISCK\fP Signal Clock 
+.br
+\fISS\fP Slave Select 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void SPI::Init ()"
+
+.PP
+Initialize \fBSPI\fP\&. 
+.SS "uint8_t SPI::WriteReadbyte (uint8_t data)"
+
+.PP
+Write and Read one byte\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP Databyte to write 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Byte 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "volatile uint8_t* SPI::SPI_DDR\fC [private]\fP"
+
+.SS "uint8_t SPI::SPI_MISO\fC [private]\fP"
+
+.SS "uint8_t SPI::SPI_MOSI\fC [private]\fP"
+
+.SS "uint8_t SPI::SPI_SCK\fC [private]\fP"
+
+.SS "uint8_t SPI::SPI_SS\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

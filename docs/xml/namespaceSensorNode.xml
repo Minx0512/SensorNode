@@ -1,0 +1,673 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceSensorNode" kind="namespace" language="Python">
+    <compoundname>SensorNode</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="SensorNode_8py_1ac561cd22e18ebc8f28a3de0fd790f84d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorNode.port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="344" column="1" bodyfile="Python/SensorNode.py" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1ada87615462c1a9ae3b690316d00d0540" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorNode::conn</definition>
+        <argsstring></argsstring>
+        <name>conn</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="345" column="1" bodyfile="Python/SensorNode.py" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a653544a15782661968c67ccb4f6fbdbf" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SensorNode.out_str</definition>
+        <argsstring></argsstring>
+        <name>out_str</name>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="346" column="1" bodyfile="Python/SensorNode.py" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a37cb27925dc2a29cf8e92032d08246d7" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SensorNode.bd_addr</definition>
+        <argsstring></argsstring>
+        <name>bd_addr</name>
+        <initializer>= &apos;98:D3:31:FB:31:A6&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="347" column="1" bodyfile="Python/SensorNode.py" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a7150a62e1c3e9852c65457bbc8d81d70" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorNode.remoteSensorsEnabled</definition>
+        <argsstring></argsstring>
+        <name>remoteSensorsEnabled</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="348" column="1" bodyfile="Python/SensorNode.py" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1ae86281b81a8af8bc3b9f4bfe75af4748" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorNode.sleepmode</definition>
+        <argsstring></argsstring>
+        <name>sleepmode</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="349" column="1" bodyfile="Python/SensorNode.py" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1af39573d5009a8cac514cfb9a933ca24a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.threadLock</definition>
+        <argsstring></argsstring>
+        <name>threadLock</name>
+        <initializer>= thread.allocate_lock()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="351" column="1" bodyfile="Python/SensorNode.py" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1ae263ac2260a4d567ff23b89689d63d15" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.top</definition>
+        <argsstring></argsstring>
+        <name>top</name>
+        <initializer>= Tk()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="353" column="1" bodyfile="Python/SensorNode.py" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a90f55cfa93e86a677d8c8fa8f50e325f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.timeStr</definition>
+        <argsstring></argsstring>
+        <name>timeStr</name>
+        <initializer>= StringVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="359" column="1" bodyfile="Python/SensorNode.py" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1aa021e9235803e1ebb079307ed9df017a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.lightsMsg</definition>
+        <argsstring></argsstring>
+        <name>lightsMsg</name>
+        <initializer>= StringVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="360" column="1" bodyfile="Python/SensorNode.py" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1abd196ae1282e31f9a34e8d10b5804fe9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.lightVal</definition>
+        <argsstring></argsstring>
+        <name>lightVal</name>
+        <initializer>= DoubleVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="361" column="1" bodyfile="Python/SensorNode.py" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a731bf9524da43678f890375a99b0ead7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.menuID</definition>
+        <argsstring></argsstring>
+        <name>menuID</name>
+        <initializer>= IntVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="362" column="1" bodyfile="Python/SensorNode.py" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1aaf69467b0a3b19ad4135c0328352f5af" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.DHT22TempVal</definition>
+        <argsstring></argsstring>
+        <name>DHT22TempVal</name>
+        <initializer>= DoubleVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="363" column="1" bodyfile="Python/SensorNode.py" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a9d59de8167347540e9e21562b6239a5b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.DHT22TempUnit</definition>
+        <argsstring></argsstring>
+        <name>DHT22TempUnit</name>
+        <initializer>= StringVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="364" column="1" bodyfile="Python/SensorNode.py" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1ab98e78199a57c6784976eb167af06203" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.DHT22HumVal</definition>
+        <argsstring></argsstring>
+        <name>DHT22HumVal</name>
+        <initializer>= DoubleVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="366" column="1" bodyfile="Python/SensorNode.py" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1ac12964b10f125bd3256f2b57afb1eaff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.DHT22HumUnit</definition>
+        <argsstring></argsstring>
+        <name>DHT22HumUnit</name>
+        <initializer>= StringVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="367" column="1" bodyfile="Python/SensorNode.py" bodystart="367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a7a84ed25b4a6ec5b5008e9ebea3653dc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.sock</definition>
+        <argsstring></argsstring>
+        <name>sock</name>
+        <initializer>= BlueConnect(bd_addr,port,5.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="371" column="1" bodyfile="Python/SensorNode.py" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a6b92df85afc5b0391834474955d16592" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorNode.prevmins</definition>
+        <argsstring></argsstring>
+        <name>prevmins</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="381" column="1" bodyfile="Python/SensorNode.py" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a3f20bf0e75b6bcd88e4cf67d89bec305" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorNode.thresh</definition>
+        <argsstring></argsstring>
+        <name>thresh</name>
+        <initializer>= 360</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="382" column="1" bodyfile="Python/SensorNode.py" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a9f4ed9ab0eac0c4d97f1d35e1d86e42c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorNode.treshOut</definition>
+        <argsstring></argsstring>
+        <name>treshOut</name>
+        <initializer>= 360</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="383" column="1" bodyfile="Python/SensorNode.py" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1ae221b94a7568f6a4eec4ed916d6d9fbb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.autoLights</definition>
+        <argsstring></argsstring>
+        <name>autoLights</name>
+        <initializer>= IntVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="387" column="1" bodyfile="Python/SensorNode.py" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SensorNode_8py_1a1b858f22f067073317637d8f686e7a51" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.statusLight</definition>
+        <argsstring></argsstring>
+        <name>statusLight</name>
+        <initializer>= IntVar()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="390" column="1" bodyfile="Python/SensorNode.py" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="SensorNode_8py_1a7071f7e3398ab91418cd1096210129a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.GetTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="23" column="1" bodyfile="Python/SensorNode.py" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1ac1b36fd1dc3beec8749f75f6d3944899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.isNightTime</definition>
+        <argsstring>(lightValue)</argsstring>
+        <name>isNightTime</name>
+        <param>
+          <type>lightValue</type>
+          <defname>lightValue</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="29" column="1" bodyfile="Python/SensorNode.py" bodystart="29" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1a8414adaa25d1a17a9043d673c751c256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.SleepMode</definition>
+        <argsstring>(slpmd)</argsstring>
+        <name>SleepMode</name>
+        <param>
+          <type>slpmd</type>
+          <defname>slpmd</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="37" column="1" bodyfile="Python/SensorNode.py" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1a4b7927f47889ab334c1ce571de952088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.NoMovement</definition>
+        <argsstring>(lastmv, lightV, tIn)</argsstring>
+        <name>NoMovement</name>
+        <param>
+          <type>lastmv</type>
+          <defname>lastmv</defname>
+        </param>
+        <param>
+          <type>lightV</type>
+          <defname>lightV</defname>
+        </param>
+        <param>
+          <type>tIn</type>
+          <defname>tIn</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="40" column="1" bodyfile="Python/SensorNode.py" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1add0e17d3b4b233162ff03c9ba9acc3ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.OnMovement</definition>
+        <argsstring>(lightV, tIn, tOut, rsEneabled)</argsstring>
+        <name>OnMovement</name>
+        <param>
+          <type>lightV</type>
+          <defname>lightV</defname>
+        </param>
+        <param>
+          <type>tIn</type>
+          <defname>tIn</defname>
+        </param>
+        <param>
+          <type>tOut</type>
+          <defname>tOut</defname>
+        </param>
+        <param>
+          <type>rsEneabled</type>
+          <defname>rsEneabled</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="45" column="1" bodyfile="Python/SensorNode.py" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1a8281cee319c91445e41e2beb456b063d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.DetectMovement</definition>
+        <argsstring>(socket, tInside, tOutside, rSensorsEnabled, slpmode)</argsstring>
+        <name>DetectMovement</name>
+        <param>
+          <type>socket</type>
+          <defname>socket</defname>
+        </param>
+        <param>
+          <type>tInside</type>
+          <defname>tInside</defname>
+        </param>
+        <param>
+          <type>tOutside</type>
+          <defname>tOutside</defname>
+        </param>
+        <param>
+          <type>rSensorsEnabled</type>
+          <defname>rSensorsEnabled</defname>
+        </param>
+        <param>
+          <type>slpmode</type>
+          <defname>slpmode</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="52" column="1" bodyfile="Python/SensorNode.py" bodystart="52" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1aa3b036956df80a6daa599e1957a1cd57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.ReadSystemConfig</definition>
+        <argsstring>(socket)</argsstring>
+        <name>ReadSystemConfig</name>
+        <param>
+          <type>socket</type>
+          <defname>socket</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="112" column="1" bodyfile="Python/SensorNode.py" bodystart="112" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1a17cde606b5329ad7081ae3408e6d6032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.ReadSensorDataLight</definition>
+        <argsstring>(socket, tnum)</argsstring>
+        <name>ReadSensorDataLight</name>
+        <param>
+          <type>socket</type>
+          <defname>socket</defname>
+        </param>
+        <param>
+          <type>tnum</type>
+          <defname>tnum</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="128" column="1" bodyfile="Python/SensorNode.py" bodystart="128" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1ad5ea37debfca3a6ca63a67e1b9fe065a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.ReadSensorData</definition>
+        <argsstring>(socket, tnum)</argsstring>
+        <name>ReadSensorData</name>
+        <param>
+          <type>socket</type>
+          <defname>socket</defname>
+        </param>
+        <param>
+          <type>tnum</type>
+          <defname>tnum</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="154" column="1" bodyfile="Python/SensorNode.py" bodystart="154" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1aba7501484cafdf93d218f4001f7bf27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.SwitchON</definition>
+        <argsstring>(frame)</argsstring>
+        <name>SwitchON</name>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="190" column="1" bodyfile="Python/SensorNode.py" bodystart="190" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1a4e68f587234ab5538cf224a8dadb3372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.SwitchOFF</definition>
+        <argsstring>(frame)</argsstring>
+        <name>SwitchOFF</name>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="200" column="1" bodyfile="Python/SensorNode.py" bodystart="200" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1aee31952b7d1ad370726caed32875d4e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.LightsAutoON</definition>
+        <argsstring>(frame)</argsstring>
+        <name>LightsAutoON</name>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="210" column="1" bodyfile="Python/SensorNode.py" bodystart="210" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1a03916abb4a46a2aad0d0df685d84c57d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.LightsAutoOFF</definition>
+        <argsstring>(frame)</argsstring>
+        <name>LightsAutoOFF</name>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="218" column="1" bodyfile="Python/SensorNode.py" bodystart="218" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1a107274f5d5053c3fbd95721de6abe6f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.LightsAutoSlider</definition>
+        <argsstring>(slider)</argsstring>
+        <name>LightsAutoSlider</name>
+        <param>
+          <type>slider</type>
+          <defname>slider</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="225" column="1" bodyfile="Python/SensorNode.py" bodystart="225" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1ae26984e25b77f3e5b585c426be132ea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.SensorsMenu</definition>
+        <argsstring>(frame)</argsstring>
+        <name>SensorsMenu</name>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="234" column="1" bodyfile="Python/SensorNode.py" bodystart="234" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1ae3b811b5d3e85d5e05e233fe44af8b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.LightsMenu</definition>
+        <argsstring>(frame)</argsstring>
+        <name>LightsMenu</name>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="282" column="1" bodyfile="Python/SensorNode.py" bodystart="282" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1ac79d5de3c8c949900e790e0bdc1eb436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.SystemParamsMenu</definition>
+        <argsstring>(socket, frame)</argsstring>
+        <name>SystemParamsMenu</name>
+        <param>
+          <type>socket</type>
+          <defname>socket</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="324" column="1" bodyfile="Python/SensorNode.py" bodystart="324" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="SensorNode_8py_1a3c64dd19370abacb4a0fe7d899f94f18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.ConfigureMenu</definition>
+        <argsstring>(frame)</argsstring>
+        <name>ConfigureMenu</name>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="335" column="1" bodyfile="Python/SensorNode.py" bodystart="335" bodyend="343"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/SensorNode.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

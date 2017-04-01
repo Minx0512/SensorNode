@@ -1,0 +1,246 @@
+.TH "DS18B20" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DS18B20 \- \fBDS18B20\fP class definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DS18B20\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBReadMeasurement\fP (char *string)"
+.br
+.RI "\fITakes a Measurement per sensor on the bus\&. \fP"
+.ti -1c
+.RI "void \fBReadMeasurement2\fP (char *Macstring, char *tempStr)"
+.br
+.RI "\fITakes a Measurement per sensor on the bus\&. \fP"
+.ti -1c
+.RI "\fBDS18B20\fP ()"
+.br
+.RI "\fI\fBDS18B20\fP standard constructor\&. \fP"
+.ti -1c
+.RI "\fBDS18B20\fP (volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volatile uint8_t &Wire_PIN, uint8_t Wire_DQ)"
+.br
+.RI "\fI\fBDS18B20\fP constructor\&. \fP"
+.ti -1c
+.RI "void \fBGetMACString\fP (char *MACStringOut)"
+.br
+.RI "\fIGet MAC addresses from MACString\&. \fP"
+.ti -1c
+.RI "void \fBGetSensorStringXML\fP (char *string)"
+.br
+.RI "\fIGet xml style sensor string\&. \fP"
+.ti -1c
+.RI "void \fBGetTemperature\fP (char *MACstring, char *tempString)"
+.br
+.RI "\fIGet temperature values in one string an the MAC addresses in a seperate one\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBStartMeasurement\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBReset\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBBitIO\fP (uint8_t bit)"
+.br
+.ti -1c
+.RI "uint8_t \fBWriteByte\fP (uint8_t byte)"
+.br
+.ti -1c
+.RI "uint8_t \fBReadByte\fP (void)"
+.br
+.ti -1c
+.RI "unsigned char \fBRomSearch\fP (unsigned char diff, unsigned char *id)"
+.br
+.ti -1c
+.RI "void \fBCommand\fP (unsigned char command, unsigned char *id)"
+.br
+.ti -1c
+.RI "void \fBPIN_INPUT_MODE\fP ()"
+.br
+.ti -1c
+.RI "void \fBPIN_OUTPUT_MODE\fP ()"
+.br
+.ti -1c
+.RI "void \fBPIN_LOW\fP ()"
+.br
+.ti -1c
+.RI "void \fBPIN_HIGH\fP ()"
+.br
+.ti -1c
+.RI "\fB__attribute__\fP ((gnu_inline)) void delay_us(uint16_t delay)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "volatile uint8_t * \fBWIRE_PORT\fP"
+.br
+.RI "\fIThermometer data port\&. \fP"
+.ti -1c
+.RI "volatile uint8_t * \fBWIRE_DDR\fP"
+.br
+.RI "\fIThermometer data port\&. \fP"
+.ti -1c
+.RI "volatile uint8_t * \fBWIRE_PIN\fP"
+.br
+.RI "\fIThermometer data port\&. \fP"
+.ti -1c
+.RI "uint8_t \fBWIRE_DQ\fP"
+.br
+.RI "\fIThermometer data line\&. \fP"
+.ti -1c
+.RI "char \fBMACString\fP [120]"
+.br
+.RI "\fIMAC string of the sensor\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBDS18B20\fP class definition\&. 
+
+Defines methods for accessing the \fBDS18B20\fP interface 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DS18B20::DS18B20 ()"
+
+.PP
+\fBDS18B20\fP standard constructor\&. new \fBDS18B20\fP object and initializes variables 
+.SS "DS18B20::DS18B20 (volatile uint8_t & Wire_PORT, volatile uint8_t & Wire_DDR, volatile uint8_t & Wire_PIN, uint8_t Wire_DQ)"
+
+.PP
+\fBDS18B20\fP constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIWire_PORT\fP 
+.br
+\fIWire_DDR\fP 
+.br
+\fIWire_PIN\fP 
+.br
+\fIWire_DQ\fP Data line 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "DS18B20::__attribute__ ((gnu_inline))\fC [inline]\fP, \fC [private]\fP"
+
+.SS "uint8_t DS18B20::BitIO (uint8_t bit)\fC [private]\fP"
+
+.SS "void DS18B20::Command (unsigned char command, unsigned char * id)\fC [private]\fP"
+
+.SS "void DS18B20::GetMACString (char * MACStringOut)"
+
+.PP
+Get MAC addresses from MACString\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIMACStringOut\fP Character array of MAC addresses 
+.RE
+.PP
+
+.SS "void DS18B20::GetSensorStringXML (char * string)"
+
+.PP
+Get xml style sensor string\&. Puts out one string with MAC addresses and their temperature values 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP XML style sensor string 
+.RE
+.PP
+
+.SS "void DS18B20::GetTemperature (char * MACstring, char * tempString)"
+
+.PP
+Get temperature values in one string an the MAC addresses in a seperate one\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIMACstring\fP MAC addresses of each sensor on the bus 
+.br
+\fItempString\fP Temperature values in one string 
+.RE
+.PP
+
+.SS "void DS18B20::PIN_HIGH ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void DS18B20::PIN_INPUT_MODE ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void DS18B20::PIN_LOW ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void DS18B20::PIN_OUTPUT_MODE ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "uint8_t DS18B20::ReadByte (void)\fC [private]\fP"
+
+.SS "void DS18B20::ReadMeasurement (char * string)"
+
+.PP
+Takes a Measurement per sensor on the bus\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP String with MAC addresses and temperature values 
+.RE
+.PP
+
+.SS "void DS18B20::ReadMeasurement2 (char * Macstring, char * tempStr)"
+
+.PP
+Takes a Measurement per sensor on the bus\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIMacstring\fP MAC addresses of each sensor on the bus 
+.br
+\fItempStr\fP Temperature values in one string 
+.RE
+.PP
+
+.SS "uint8_t DS18B20::Reset ()\fC [private]\fP"
+
+.SS "unsigned char DS18B20::RomSearch (unsigned char diff, unsigned char * id)\fC [private]\fP"
+
+.SS "void DS18B20::StartMeasurement (void)\fC [private]\fP"
+
+.SS "uint8_t DS18B20::WriteByte (uint8_t byte)\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "char DS18B20::MACString[120]\fC [private]\fP"
+
+.PP
+MAC string of the sensor\&. 
+.SS "volatile uint8_t* DS18B20::WIRE_DDR\fC [private]\fP"
+
+.PP
+Thermometer data port\&. 
+.SS "uint8_t DS18B20::WIRE_DQ\fC [private]\fP"
+
+.PP
+Thermometer data line\&. 
+.SS "volatile uint8_t* DS18B20::WIRE_PIN\fC [private]\fP"
+
+.PP
+Thermometer data port\&. 
+.SS "volatile uint8_t* DS18B20::WIRE_PORT\fC [private]\fP"
+
+.PP
+Thermometer data port\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

@@ -1,0 +1,181 @@
+\hypertarget{USART_8h}{}\section{src/\+I\+O/\+U\+S\+A\+RT.h File Reference}
+\label{USART_8h}\index{src/\+I\+O/\+U\+S\+A\+R\+T.\+h@{src/\+I\+O/\+U\+S\+A\+R\+T.\+h}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+{\ttfamily \#include $<$util/delay.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for U\+S\+A\+R\+T.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{USART_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{USART_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classUSART}{U\+S\+A\+RT}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUSART}{U\+S\+A\+RT} class definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{USART_8h_a86e1ba42fdfc73a48c61a2852e2a36b6}{T\+X\+\_\+\+S\+T\+A\+RT}()~U\+C\+S\+R0B $\vert$= \+\_\+\+BV(T\+X\+E\+N0)
+\begin{DoxyCompactList}\small\item\em Enable TX. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_adb55bcafad6ea71bbaa8467729aa5eb4}{T\+X\+\_\+\+S\+T\+OP}()~U\+C\+S\+R0B \&= $\sim$\+\_\+\+BV(T\+X\+E\+N0)
+\begin{DoxyCompactList}\small\item\em Disable TX. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_a00aa27797d6c1f8f5504167981533443}{R\+X\+\_\+\+S\+T\+A\+RT}()~U\+C\+S\+R0B $\vert$= \+\_\+\+BV(R\+X\+E\+N0)
+\begin{DoxyCompactList}\small\item\em Enable RX. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_aad7758e23912a25498f8effd040c5a54}{R\+X\+\_\+\+S\+T\+OP}()~U\+C\+S\+R0B \&= $\sim$\+\_\+\+BV(R\+X\+E\+N0)
+\begin{DoxyCompactList}\small\item\em Disable RX. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_accaa1b338efc8b8e55a60bb6abd525b1}{C\+O\+M\+M\+\_\+\+S\+T\+A\+RT}()~\hyperlink{USART_8h_a86e1ba42fdfc73a48c61a2852e2a36b6}{T\+X\+\_\+\+S\+T\+A\+RT}(); \hyperlink{USART_8h_a00aa27797d6c1f8f5504167981533443}{R\+X\+\_\+\+S\+T\+A\+RT}()
+\begin{DoxyCompactList}\small\item\em Enable communications. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_a4742a15e3e609a42266a7ff536d0939a}{R\+X\+\_\+\+I\+N\+T\+EN}()~U\+C\+S\+R0B $\vert$= \+\_\+\+BV(R\+X\+C\+I\+E0)
+\begin{DoxyCompactList}\small\item\em Enable interrupt on RX complete. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_a3690d23b1d5829c9ad41032b52b44ac3}{R\+X\+\_\+\+I\+N\+T\+D\+IS}()~U\+C\+S\+R0B \&= $\sim$\+\_\+\+BV(R\+X\+C\+I\+E0)
+\begin{DoxyCompactList}\small\item\em Disable RX interrupt. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_a2b2bef2238622074dd911ae29afcf5ed}{T\+X\+\_\+\+I\+N\+T\+EN}()~U\+C\+S\+R0B $\vert$= \+\_\+\+BV(T\+X\+C\+I\+E0)
+\begin{DoxyCompactList}\small\item\em Enable interrupt on TX complete. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_a3aa180be68ea526c66d086d7fe6d9c13}{T\+X\+\_\+\+I\+N\+T\+D\+IS}()~U\+C\+S\+R0B \&= $\sim$\+\_\+\+BV(T\+X\+C\+I\+E0)
+\begin{DoxyCompactList}\small\item\em Disable TX interrupt. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_a802b2b582b121e4632aa9a491d503720}{F\+O\+SC}~16000000\+UL
+\begin{DoxyCompactList}\small\item\em C\+PU clock speed in Hz. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_a040d462ae108df7aeebed67a5ed5e6f4}{\+\_\+\+D\+A\+TA}~0x03
+\begin{DoxyCompactList}\small\item\em Number of data bits in frame = byte tranmission. \end{DoxyCompactList}\item 
+\#define \hyperlink{USART_8h_af679da36f24305cc55bc4e62a2375d2d}{R\+X\+\_\+\+B\+U\+FF}~64
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Project\+: Sensor\+Node
+
+\hyperlink{USART_8h}{U\+S\+A\+R\+T.\+h}
+
+Created on\+: Nov 12, 2016
+
+Author\+: Matthias Minx
+
+Revision\+: 0.\+2 
+
+\subsection{Macro Definition Documentation}
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!\+\_\+\+D\+A\+TA@{\+\_\+\+D\+A\+TA}}
+\index{\+\_\+\+D\+A\+TA@{\+\_\+\+D\+A\+TA}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+D\+A\+TA}{_DATA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+D\+A\+TA~0x03}\hypertarget{USART_8h_a040d462ae108df7aeebed67a5ed5e6f4}{}\label{USART_8h_a040d462ae108df7aeebed67a5ed5e6f4}
+
+
+Number of data bits in frame = byte tranmission. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!C\+O\+M\+M\+\_\+\+S\+T\+A\+RT@{C\+O\+M\+M\+\_\+\+S\+T\+A\+RT}}
+\index{C\+O\+M\+M\+\_\+\+S\+T\+A\+RT@{C\+O\+M\+M\+\_\+\+S\+T\+A\+RT}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+M\+M\+\_\+\+S\+T\+A\+RT}{COMM_START}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+M\+\_\+\+S\+T\+A\+RT(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf T\+X\+\_\+\+S\+T\+A\+RT}(); {\bf R\+X\+\_\+\+S\+T\+A\+RT}()}\hypertarget{USART_8h_accaa1b338efc8b8e55a60bb6abd525b1}{}\label{USART_8h_accaa1b338efc8b8e55a60bb6abd525b1}
+
+
+Enable communications. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!F\+O\+SC@{F\+O\+SC}}
+\index{F\+O\+SC@{F\+O\+SC}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{F\+O\+SC}{FOSC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+O\+SC~16000000\+UL}\hypertarget{USART_8h_a802b2b582b121e4632aa9a491d503720}{}\label{USART_8h_a802b2b582b121e4632aa9a491d503720}
+
+
+C\+PU clock speed in Hz. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!R\+X\+\_\+\+B\+U\+FF@{R\+X\+\_\+\+B\+U\+FF}}
+\index{R\+X\+\_\+\+B\+U\+FF@{R\+X\+\_\+\+B\+U\+FF}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{R\+X\+\_\+\+B\+U\+FF}{RX_BUFF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+X\+\_\+\+B\+U\+FF~64}\hypertarget{USART_8h_af679da36f24305cc55bc4e62a2375d2d}{}\label{USART_8h_af679da36f24305cc55bc4e62a2375d2d}
+Receive buffer \index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!R\+X\+\_\+\+I\+N\+T\+D\+IS@{R\+X\+\_\+\+I\+N\+T\+D\+IS}}
+\index{R\+X\+\_\+\+I\+N\+T\+D\+IS@{R\+X\+\_\+\+I\+N\+T\+D\+IS}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{R\+X\+\_\+\+I\+N\+T\+D\+IS}{RX_INTDIS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+X\+\_\+\+I\+N\+T\+D\+IS(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~U\+C\+S\+R0B \&= $\sim$\+\_\+\+BV(R\+X\+C\+I\+E0)}\hypertarget{USART_8h_a3690d23b1d5829c9ad41032b52b44ac3}{}\label{USART_8h_a3690d23b1d5829c9ad41032b52b44ac3}
+
+
+Disable RX interrupt. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!R\+X\+\_\+\+I\+N\+T\+EN@{R\+X\+\_\+\+I\+N\+T\+EN}}
+\index{R\+X\+\_\+\+I\+N\+T\+EN@{R\+X\+\_\+\+I\+N\+T\+EN}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{R\+X\+\_\+\+I\+N\+T\+EN}{RX_INTEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+X\+\_\+\+I\+N\+T\+EN(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~U\+C\+S\+R0B $\vert$= \+\_\+\+BV(R\+X\+C\+I\+E0)}\hypertarget{USART_8h_a4742a15e3e609a42266a7ff536d0939a}{}\label{USART_8h_a4742a15e3e609a42266a7ff536d0939a}
+
+
+Enable interrupt on RX complete. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!R\+X\+\_\+\+S\+T\+A\+RT@{R\+X\+\_\+\+S\+T\+A\+RT}}
+\index{R\+X\+\_\+\+S\+T\+A\+RT@{R\+X\+\_\+\+S\+T\+A\+RT}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{R\+X\+\_\+\+S\+T\+A\+RT}{RX_START}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+X\+\_\+\+S\+T\+A\+RT(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~U\+C\+S\+R0B $\vert$= \+\_\+\+BV(R\+X\+E\+N0)}\hypertarget{USART_8h_a00aa27797d6c1f8f5504167981533443}{}\label{USART_8h_a00aa27797d6c1f8f5504167981533443}
+
+
+Enable RX. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!R\+X\+\_\+\+S\+T\+OP@{R\+X\+\_\+\+S\+T\+OP}}
+\index{R\+X\+\_\+\+S\+T\+OP@{R\+X\+\_\+\+S\+T\+OP}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{R\+X\+\_\+\+S\+T\+OP}{RX_STOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+X\+\_\+\+S\+T\+OP(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~U\+C\+S\+R0B \&= $\sim$\+\_\+\+BV(R\+X\+E\+N0)}\hypertarget{USART_8h_aad7758e23912a25498f8effd040c5a54}{}\label{USART_8h_aad7758e23912a25498f8effd040c5a54}
+
+
+Disable RX. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!T\+X\+\_\+\+I\+N\+T\+D\+IS@{T\+X\+\_\+\+I\+N\+T\+D\+IS}}
+\index{T\+X\+\_\+\+I\+N\+T\+D\+IS@{T\+X\+\_\+\+I\+N\+T\+D\+IS}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{T\+X\+\_\+\+I\+N\+T\+D\+IS}{TX_INTDIS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+X\+\_\+\+I\+N\+T\+D\+IS(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~U\+C\+S\+R0B \&= $\sim$\+\_\+\+BV(T\+X\+C\+I\+E0)}\hypertarget{USART_8h_a3aa180be68ea526c66d086d7fe6d9c13}{}\label{USART_8h_a3aa180be68ea526c66d086d7fe6d9c13}
+
+
+Disable TX interrupt. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!T\+X\+\_\+\+I\+N\+T\+EN@{T\+X\+\_\+\+I\+N\+T\+EN}}
+\index{T\+X\+\_\+\+I\+N\+T\+EN@{T\+X\+\_\+\+I\+N\+T\+EN}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{T\+X\+\_\+\+I\+N\+T\+EN}{TX_INTEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+X\+\_\+\+I\+N\+T\+EN(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~U\+C\+S\+R0B $\vert$= \+\_\+\+BV(T\+X\+C\+I\+E0)}\hypertarget{USART_8h_a2b2bef2238622074dd911ae29afcf5ed}{}\label{USART_8h_a2b2bef2238622074dd911ae29afcf5ed}
+
+
+Enable interrupt on TX complete. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!T\+X\+\_\+\+S\+T\+A\+RT@{T\+X\+\_\+\+S\+T\+A\+RT}}
+\index{T\+X\+\_\+\+S\+T\+A\+RT@{T\+X\+\_\+\+S\+T\+A\+RT}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{T\+X\+\_\+\+S\+T\+A\+RT}{TX_START}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+X\+\_\+\+S\+T\+A\+RT(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~U\+C\+S\+R0B $\vert$= \+\_\+\+BV(T\+X\+E\+N0)}\hypertarget{USART_8h_a86e1ba42fdfc73a48c61a2852e2a36b6}{}\label{USART_8h_a86e1ba42fdfc73a48c61a2852e2a36b6}
+
+
+Enable TX. 
+
+\index{U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}!T\+X\+\_\+\+S\+T\+OP@{T\+X\+\_\+\+S\+T\+OP}}
+\index{T\+X\+\_\+\+S\+T\+OP@{T\+X\+\_\+\+S\+T\+OP}!U\+S\+A\+R\+T.\+h@{U\+S\+A\+R\+T.\+h}}
+\subsubsection[{\texorpdfstring{T\+X\+\_\+\+S\+T\+OP}{TX_STOP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+X\+\_\+\+S\+T\+OP(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~U\+C\+S\+R0B \&= $\sim$\+\_\+\+BV(T\+X\+E\+N0)}\hypertarget{USART_8h_adb55bcafad6ea71bbaa8467729aa5eb4}{}\label{USART_8h_adb55bcafad6ea71bbaa8467729aa5eb4}
+
+
+Disable TX. 
+

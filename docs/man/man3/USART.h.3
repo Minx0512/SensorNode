@@ -1,0 +1,136 @@
+.TH "src/IO/USART.h" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/IO/USART.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <avr/io\&.h>\fP
+.br
+\fC#include <util/delay\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBUSART\fP"
+.br
+.RI "\fI\fBUSART\fP class definition\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTX_START\fP()   UCSR0B |= _BV(TXEN0)"
+.br
+.RI "\fIEnable TX\&. \fP"
+.ti -1c
+.RI "#define \fBTX_STOP\fP()   UCSR0B &= ~_BV(TXEN0)"
+.br
+.RI "\fIDisable TX\&. \fP"
+.ti -1c
+.RI "#define \fBRX_START\fP()   UCSR0B |= _BV(RXEN0)"
+.br
+.RI "\fIEnable RX\&. \fP"
+.ti -1c
+.RI "#define \fBRX_STOP\fP()   UCSR0B &= ~_BV(RXEN0)"
+.br
+.RI "\fIDisable RX\&. \fP"
+.ti -1c
+.RI "#define \fBCOMM_START\fP()   \fBTX_START\fP(); \fBRX_START\fP()"
+.br
+.RI "\fIEnable communications\&. \fP"
+.ti -1c
+.RI "#define \fBRX_INTEN\fP()   UCSR0B |= _BV(RXCIE0)"
+.br
+.RI "\fIEnable interrupt on RX complete\&. \fP"
+.ti -1c
+.RI "#define \fBRX_INTDIS\fP()   UCSR0B &= ~_BV(RXCIE0)"
+.br
+.RI "\fIDisable RX interrupt\&. \fP"
+.ti -1c
+.RI "#define \fBTX_INTEN\fP()   UCSR0B |= _BV(TXCIE0)"
+.br
+.RI "\fIEnable interrupt on TX complete\&. \fP"
+.ti -1c
+.RI "#define \fBTX_INTDIS\fP()   UCSR0B &= ~_BV(TXCIE0)"
+.br
+.RI "\fIDisable TX interrupt\&. \fP"
+.ti -1c
+.RI "#define \fBFOSC\fP   16000000UL"
+.br
+.RI "\fICPU clock speed in Hz\&. \fP"
+.ti -1c
+.RI "#define \fB_DATA\fP   0x03"
+.br
+.RI "\fINumber of data bits in frame = byte tranmission\&. \fP"
+.ti -1c
+.RI "#define \fBRX_BUFF\fP   64"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Project: SensorNode
+.PP
+\fBUSART\&.h\fP
+.PP
+Created on: Nov 12, 2016
+.PP
+Author: Matthias Minx
+.PP
+Revision: 0\&.2 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define _DATA   0x03"
+
+.PP
+Number of data bits in frame = byte tranmission\&. 
+.SS "#define COMM_START()   \fBTX_START\fP(); \fBRX_START\fP()"
+
+.PP
+Enable communications\&. 
+.SS "#define FOSC   16000000UL"
+
+.PP
+CPU clock speed in Hz\&. 
+.SS "#define RX_BUFF   64"
+Receive buffer 
+.SS "#define RX_INTDIS()   UCSR0B &= ~_BV(RXCIE0)"
+
+.PP
+Disable RX interrupt\&. 
+.SS "#define RX_INTEN()   UCSR0B |= _BV(RXCIE0)"
+
+.PP
+Enable interrupt on RX complete\&. 
+.SS "#define RX_START()   UCSR0B |= _BV(RXEN0)"
+
+.PP
+Enable RX\&. 
+.SS "#define RX_STOP()   UCSR0B &= ~_BV(RXEN0)"
+
+.PP
+Disable RX\&. 
+.SS "#define TX_INTDIS()   UCSR0B &= ~_BV(TXCIE0)"
+
+.PP
+Disable TX interrupt\&. 
+.SS "#define TX_INTEN()   UCSR0B |= _BV(TXCIE0)"
+
+.PP
+Enable interrupt on TX complete\&. 
+.SS "#define TX_START()   UCSR0B |= _BV(TXEN0)"
+
+.PP
+Enable TX\&. 
+.SS "#define TX_STOP()   UCSR0B &= ~_BV(TXEN0)"
+
+.PP
+Disable TX\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

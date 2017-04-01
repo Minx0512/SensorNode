@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_7f88fbbce73adac2542bc3d3ad019d03" kind="dir">
+    <compoundname>src/Wireless</compoundname>
+    <innerfile refid="NRF24L01_8cpp">NRF24L01.cpp</innerfile>
+    <innerfile refid="NRF24L01_8h">NRF24L01.h</innerfile>
+    <innerfile refid="NRF24L01registers_8h">NRF24L01registers.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Wireless/"/>
+  </compounddef>
+</doxygen>

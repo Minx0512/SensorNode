@@ -1,0 +1,90 @@
+
+\begin{DoxyItemize}
+\item Introduction
+\item Version
+\item Integration details
+\item Driver files information
+\item Supported sensor interface
+\item Copyright
+\end{DoxyItemize}
+
+\section*{I\+N\+T\+R\+O\+D\+U\+C\+T\+I\+ON }
+
+
+\begin{DoxyItemize}
+\item This package contains the Bosch Sensortec M\+E\+MS pressure sensor driver (sensor A\+PI)
+\item The sensor driver package includes \hyperlink{bmp180_8h}{bmp180.\+h}, bmp180.\+c and bmp180\+\_\+support.\+c files
+\end{DoxyItemize}
+
+\section*{V\+E\+R\+S\+I\+ON }
+
+
+\begin{DoxyItemize}
+\item Version of bmp180 sensor driver is\+:
+\begin{DoxyItemize}
+\item bmp180.\+c -\/ V2.\+0.\+3
+\item \hyperlink{bmp180_8h}{bmp180.\+h} -\/ V2.\+2.\+2
+\item bmp180\+\_\+support.\+c -\/ V1.\+0.\+4
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\section*{I\+N\+T\+E\+G\+R\+A\+T\+I\+ON D\+E\+T\+A\+I\+LS }
+
+
+\begin{DoxyItemize}
+\item Integrate \hyperlink{bmp180_8h}{bmp180.\+h} and bmp180.\+c file in to your project.
+\item The bmp180\+\_\+support.\+c file contains only examples for A\+PI use cases, so it is not required to integrate into project.
+\end{DoxyItemize}
+
+\section*{D\+R\+I\+V\+ER F\+I\+L\+ES I\+N\+F\+O\+R\+M\+A\+T\+I\+ON }
+
+\subsection*{\hyperlink{bmp180_8h}{bmp180.\+h} }
+
+
+\begin{DoxyItemize}
+\item This header file has the register address definition, constant definitions, data type definition and supported sensor driver calls declarations.
+\end{DoxyItemize}
+
+\subsection*{bmp180.\+c }
+
+
+\begin{DoxyItemize}
+\item This file contains the implementation for the sensor driver A\+P\+Is.
+\end{DoxyItemize}
+
+\subsection*{bmp180\+\_\+support.\+c }
+
+
+\begin{DoxyItemize}
+\item This file shall be used as an user guidance, here you can find samples of
+\begin{DoxyItemize}
+\item Initialize the sensor with I2C communication
+\begin{DoxyItemize}
+\item Add your code to the I2C bus read and bus write functions.
+\begin{DoxyItemize}
+\item Return value can be chosen by yourself
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+A\+PI just passes that value to your application code
+\begin{DoxyItemize}
+\item Add your code to the delay function
+\end{DoxyItemize}
+
+Reading the sensor read out data
+
+\section*{S\+U\+P\+P\+O\+R\+T\+ED S\+E\+N\+S\+OR I\+N\+T\+E\+R\+F\+A\+CE }
+
+
+\begin{DoxyItemize}
+\item This pressure sensor driver supports I2C interface
+\end{DoxyItemize}
+
+\section*{C\+O\+P\+Y\+R\+I\+G\+HT }
+
+
+\begin{DoxyItemize}
+\item Copyright (C) 2008 -\/ 2015 Bosch Sensortec GmbH 
+\end{DoxyItemize}

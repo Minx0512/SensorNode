@@ -290,9 +290,9 @@ void NRF24L01::powerUp(void)
 
 
 /*** GetStatus ********************************************/
-uint8_t NRF24L01::GetStatus(){
+uint8_t NRF24L01::getStatus(){
 
-	return spiTrans(NRF24L01_CMD_NOP); //get status, send NOP request
+	return (spiTrans(NRF24L01_CMD_NOP)); //get status, send NOP request
 
 }
 /*** set channel ***************************************************/
@@ -302,7 +302,7 @@ void NRF24L01::setChannel(uint8_t channel){
 
 }
 uint8_t NRF24L01::getChannel(){
-  return ReadRegister(NRF24L01_REG_RF_CH);
+  return (ReadRegister(NRF24L01_REG_RF_CH));
 }
 
 /****************************************************************************/
@@ -311,7 +311,7 @@ void NRF24L01::setPayloadSize(uint8_t size){
 }
 /****************************************************************************/
 uint8_t NRF24L01::getPayloadSize(void){
-  return NRF24L01_PAYLOAD;
+  return (NRF24L01_PAYLOAD);
 }
 
 /*
@@ -528,11 +528,11 @@ void NRF24L01::openWritingPipe(uint64_t value){
 }
 
 /****************************************************************************/
-static const uint8_t child_pipe[] PROGMEM =
+static const uint8_t PROGMEM child_pipe[] =
 {
 		NRF24L01_REG_RX_ADDR_P0, NRF24L01_REG_RX_ADDR_P1, NRF24L01_REG_RX_ADDR_P2, NRF24L01_REG_RX_ADDR_P3, NRF24L01_REG_RX_ADDR_P4, NRF24L01_REG_RX_ADDR_P5
 };
-static const uint8_t child_payload_size[] PROGMEM =
+static const uint8_t PROGMEM child_payload_size[] =
 {
 		NRF24L01_REG_RX_PW_P0, NRF24L01_REG_RX_PW_P1, NRF24L01_REG_RX_PW_P2, NRF24L01_REG_RX_PW_P3, NRF24L01_REG_RX_PW_P4, NRF24L01_REG_RX_PW_P5
 };
@@ -845,7 +845,7 @@ bool NRF24L01::write(const void* buf, uint8_t len, const bool multicast){
 
 		//stop if max_retries reached or send is ok
 
-		while( !(GetStatus() & (1<<NRF24L01_REG_MAX_RT | 1<<NRF24L01_REG_TX_DS)) );
+		while( !(getStatus() & (1<<NRF24L01_REG_MAX_RT | 1<<NRF24L01_REG_TX_DS)) );
 
 		CE_LOW(); //low CE
 
@@ -877,9 +877,9 @@ bool NRF24L01::writeBlocking( const void* buf, uint8_t len, uint32_t timeout ){
 
 						  //Get the time that the payload transmission started
 
-	while( ( GetStatus()  & ( _BV(NRF24L01_REG_TX_FULL) ))) {		  //Blocking only if FIFO is full. This will loop and block until TX is successful or timeout
+	while( ( getStatus()  & ( _BV(NRF24L01_REG_TX_FULL) ))) {		  //Blocking only if FIFO is full. This will loop and block until TX is successful or timeout
 
-		if( GetStatus() & _BV(NRF24L01_REG_MAX_RT)){					  //If MAX Retries have been reached
+		if( getStatus() & _BV(NRF24L01_REG_MAX_RT)){					  //If MAX Retries have been reached
 			reUseTX();										  //Set re-transmit and clear the MAX_RT interrupt flag
 
 		}
@@ -908,9 +908,9 @@ bool NRF24L01::writeFast( const void* buf, uint8_t len, const bool multicast ){
 	//Return 0 so the user can control the retrys and set a timer or failure counter if required
 	//The radio will auto-clear everything in the FIFO as long as CE remains high
 
-	while( ( GetStatus()  & ( _BV(NRF24L01_REG_TX_FULL) ))) {			  //Blocking only if FIFO is full. This will loop and block until TX is successful or fail
+	while( ( getStatus()  & ( _BV(NRF24L01_REG_TX_FULL) ))) {			  //Blocking only if FIFO is full. This will loop and block until TX is successful or fail
 
-		if( GetStatus() & _BV(NRF24L01_REG_MAX_RT)){
+		if( getStatus() & _BV(NRF24L01_REG_MAX_RT)){
 			//reUseTX();										  //Set re-transmit
 			WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MAX_RT) );			  //Clear max retry flag
 			return 0;										  //Return 0. The previous payload has been retransmitted
@@ -964,7 +964,7 @@ bool NRF24L01::txStandBy(){
 
 
 	while( ! (ReadRegister(NRF24L01_REG_FIFO_STATUS) & _BV(NRF24L01_REG_TX_EMPTY)) ){
-		if( GetStatus() & _BV(NRF24L01_REG_MAX_RT)){
+		if( getStatus() & _BV(NRF24L01_REG_MAX_RT)){
 			WriteRegister(NRF24L01_REG_STATUS,_BV(NRF24L01_REG_MAX_RT) );
 			CE_LOW();
 			FlushTx();    //Non blocking, flush the data
@@ -1042,7 +1042,7 @@ bool NRF24L01::available(uint8_t* pipe_num){
 
     // If the caller wants the pipe number, include that
     if ( pipe_num ){
-	  uint8_t status = GetStatus();
+	  uint8_t status = getStatus();
       *pipe_num = ( status >> NRF24L01_REG_RX_P_NO ) & 0x07;
   	}
   	return 1;

@@ -1,0 +1,783 @@
+.TH "src/Sensors/BMP180_driver/bmp180.h" 3 "Mon Mar 27 2017" "Version 0.1" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Sensors/BMP180_driver/bmp180.h \- Header file for all define constants and function prototypes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBbmp180_calib_param_t\fP"
+.br
+.RI "\fIThis structure holds all device specific calibration parameters\&. \fP"
+.ti -1c
+.RI "struct \fBbmp180_t\fP"
+.br
+.RI "\fIThis structure holds \fBBMP180\fP initialization parameters\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMACHINE_32_BIT\fP"
+.br
+.RI "\fIThe following definition uses for define the data types\&. \fP"
+.in -1c
+.PP
+.RI "\fBFUNCTION DEFINITIONS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBbmp180_calc_temperature\fP(ut)   \fBbmp180_get_temperature\fP(ut)"
+.br
+.ti -1c
+.RI "#define \fBbmp180_calc_pressure\fP(up)   \fBbmp180_get_pressure\fP(up)"
+.br
+.ti -1c
+.RI "#define \fBbmp180_read_ut\fP()   bmp180_get_ut()"
+.br
+.ti -1c
+.RI "#define \fBbmp180_read_up\fP()   bmp180_get_up()"
+.br
+.ti -1c
+.RI "#define \fBbmp180_read_cal_param\fP()   bmp180_get_cal_param()"
+.br
+.ti -1c
+.RI "#define \fBsmd500_read_cal_param\fP()   smd500_get_cal_param()"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBBUS READ AND WRITE FUNCTION\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_BUS_WR_RETURN_TYPE\fP   \fBs8\fP"
+.br
+.RI "\fIDefine the calling convention of YOUR bus communication routine\&. \fP"
+.ti -1c
+.RI "#define \fBBMP180_BUS_WR_PARAM_TYPES\fP"
+.br
+.ti -1c
+.RI "#define \fBBMP180_BUS_WR_PARAM_ORDER\fP"
+.br
+.ti -1c
+.RI "#define \fBBMP180_BUS_WRITE_FUNC\fP(device_addr,  register_addr,  register_data,  write_length)   bus_write(device_addr, register_addr, register_data, write_length)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_BUS_RD_RETURN_TYPE\fP   \fBs8\fP"
+.br
+.RI "\fIlink macro between API function calls and bus read function \fP"
+.ti -1c
+.RI "#define \fBBMP180_BUS_RD_PARAM_TYPES\fP"
+.br
+.ti -1c
+.RI "#define \fBBMP180_BUS_RD_PARAM_ORDER\fP"
+.br
+.ti -1c
+.RI "#define \fBBMP180_BUS_READ_FUNC\fP(device_addr,  register_addr,  register_data,  read_length)   bus_read(device_addr, register_addr, register_data, read_length)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBBUS READ AND WRITE FUNCTION POINTERS DEFINITIONS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_WR_FUNC_PTR\fP   \fBs8\fP (*bus_write)(\fBu8\fP, \fBu8\fP, \fBu8\fP *, \fBu8\fP)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_RD_FUNC_PTR\fP   \fBs8\fP (*bus_read)(\fBu8\fP, \fBu8\fP, \fBu8\fP *, \fBu8\fP)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_MDELAY_DATA_TYPE\fP   \fBu32\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBI2C ADDRESS DEFINITION OF BMP180\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_I2C_ADDR\fP   (0xEE>>1)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBERROR CODE DEFINITIONS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBE_BMP_NULL_PTR\fP   ((\fBs8\fP)\-127)"
+.br
+.ti -1c
+.RI "#define \fBE_BMP_COMM_RES\fP   ((\fBs8\fP)\-1)"
+.br
+.ti -1c
+.RI "#define \fBE_BMP_OUT_OF_RANGE\fP   ((\fBs8\fP)\-2)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBCONSTANTS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_RETURN_FUNCTION_TYPE\fP   \fBs8\fP"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INIT_VALUE\fP   ((\fBu8\fP)0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INITIALIZE_OVERSAMP_SETTING_U8X\fP   ((\fBu8\fP)0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INITIALIZE_SW_OVERSAMP_U8X\fP   ((\fBu8\fP)0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INITIALIZE_NUMBER_OF_SAMPLES_U8X\fP   ((\fBu8\fP)1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_GEN_READ_WRITE_DATA_LENGTH\fP   ((\fBu8\fP)1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_TEMPERATURE_DATA_LENGTH\fP   ((\fBu8\fP)2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_DATA_LENGTH\fP   ((\fBu8\fP)3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SW_OVERSAMP_U8X\fP   ((\fBu8\fP)1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_OVERSAMP_SETTING_U8X\fP   ((\fBu8\fP)3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_2MS_DELAY_U8X\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_3MS_DELAY_U8X\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AVERAGE_U8X\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INVALID_DATA\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHECK_DIVISOR\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_DATA_MEASURE\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALCULATE_TRUE_PRESSURE\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALCULATE_TRUE_TEMPERATURE\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_01_BIT\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_02_BITS\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_04_BITS\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_06_BITS\fP   (6)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_08_BITS\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_11_BITS\fP   (11)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_12_BITS\fP   (12)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_13_BITS\fP   (13)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_15_BITS\fP   (15)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_16_BITS\fP   (16)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBREGISTER ADDRESS DEFINITION\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_PROM_START__ADDR\fP   (0xAA)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PROM_DATA__LEN\fP   (22)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID_REG\fP   (0xD0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_VERSION_REG\fP   (0xD1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CTRL_MEAS_REG\fP   (0xF4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ADC_OUT_MSB_REG\fP   (0xF6)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ADC_OUT_LSB_REG\fP   (0xF7)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SOFT_RESET_REG\fP   (0xE0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_T_MEASURE\fP   (0x2E)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_P_MEASURE\fP   (0x34)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_TEMP_CONVERSION_TIME\fP   (5)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PARAM_MG\fP   (3038)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PARAM_MH\fP   (\-7357)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PARAM_MI\fP   (3791)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBARRAY SIZE DEFINITIONS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_TEMPERATURE_DATA_BYTES\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_DATA_BYTES\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_TEMPERATURE_LSB_DATA\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_TEMPERATURE_MSB_DATA\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_MSB_DATA\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_LSB_DATA\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_XLSB_DATA\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_DATA_SIZE\fP   (22)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC1_MSB\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC1_LSB\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC2_MSB\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC2_LSB\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC3_MSB\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC3_LSB\fP   (5)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC4_MSB\fP   (6)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC4_LSB\fP   (7)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC5_MSB\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC5_LSB\fP   (9)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC6_MSB\fP   (10)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC6_LSB\fP   (11)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_B1_MSB\fP   (12)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_B1_LSB\fP   (13)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_B2_MSB\fP   (14)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_B2_LSB\fP   (15)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MB_MSB\fP   (16)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MB_LSB\fP   (17)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MC_MSB\fP   (18)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MC_LSB\fP   (19)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MD_MSB\fP   (20)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MD_LSB\fP   (21)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBBIT MASK, LENGTH AND POSITION FOR\fP"
+.br
+AL VERSION 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID__POS\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID__MSK\fP   (0xFF)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID__LEN\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID__REG\fP   (BMP180_CHIP_ID_REG)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ML_VERSION__POS\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ML_VERSION__LEN\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ML_VERSION__MSK\fP   (0x0F)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ML_VERSION__REG\fP   (BMP180_VERSION_REG)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AL_VERSION__POS\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AL_VERSION__LEN\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AL_VERSION__MSK\fP   (0xF0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AL_VERSION__REG\fP   (BMP180_VERSION_REG)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBGET AND SET BITSLICE FUNCTIONS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_GET_BITSLICE\fP(regvar,  bitname)   ((regvar & bitname##__MSK) >> (bitname##__POS))"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SET_BITSLICE\fP(regvar,  bitname,  val)   ((regvar & ~bitname##__MSK) | ((val<<bitname##__POS)&bitname##__MSK))"
+.br
+.in -1c
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef signed char \fBs8\fP"
+.br
+.ti -1c
+.RI "typedef signed short int \fBs16\fP"
+.br
+.ti -1c
+.RI "typedef signed int \fBs32\fP"
+.br
+.ti -1c
+.RI "typedef signed long long int \fBs64\fP"
+.br
+.ti -1c
+.RI "typedef unsigned char \fBu8\fP"
+.br
+.ti -1c
+.RI "typedef unsigned short int \fBu16\fP"
+.br
+.ti -1c
+.RI "typedef unsigned int \fBu32\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long long int \fBu64\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.PP
+.RI "\fBFUNCTION FOR INTIALIZATION\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "BMP180_RETURN_FUNCTION_TYPE \fBbmp180_init\fP (struct \fBbmp180_t\fP *bmp180)"
+.br
+.RI "\fIThis function is used for initialize the bus read and bus write functions and assign the chip id and I2C address of the \fBBMP180\fP chip id is read in the register 0xD0 bit from 0 to 7\&. \fP"
+.in -1c
+.in -1c
+.PP
+.RI "\fBFUNCTION FOR TEMPERATURE AND PRESSURE READ\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "\fBs16\fP \fBbmp180_get_temperature\fP (\fBu32\fP v_uncomp_temperature_u32)"
+.br
+.RI "\fIthis API is used to calculate the true temperature using the uncompensated temperature(ut) \fP"
+.ti -1c
+.RI "\fBs32\fP \fBbmp180_get_pressure\fP (\fBu32\fP v_uncomp_pressure_u32)"
+.br
+.RI "\fIthis API is used to calculate the true pressure using the uncompensated pressure(up) \fP"
+.in -1c
+.in -1c
+.PP
+.RI "\fBFUNCTION FOR UNCOMPENSATED PRESSURE AND TEMPERATURE\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "\fBu16\fP \fBbmp180_get_uncomp_temperature\fP (void)"
+.br
+.RI "\fIthis API is used to read the uncompensated temperature(ut) from the register \fP"
+.ti -1c
+.RI "\fBu32\fP \fBbmp180_get_uncomp_pressure\fP (void)"
+.br
+.RI "\fIthis API is used to read the uncompensated pressure(up) from the register \fP"
+.in -1c
+.in -1c
+.PP
+.RI "\fBFUNCTION FOR CALIBRATION\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "BMP180_RETURN_FUNCTION_TYPE \fBbmp180_get_calib_param\fP (void)"
+.br
+.RI "\fIthis function used for read the calibration parameter from the register \fP"
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+Header file for all define constants and function prototypes\&. 
+
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BMP180_BUS_RD_PARAM_ORDER"
+\fBValue:\fP
+.PP
+.nf
+(device_addr, \
+register_addr, register_data, read_length)
+.fi
+links the order of parameters defined in BMP180_BUS_WR_PARAM_TYPE to function calls used inside the API 
+.SS "#define BMP180_BUS_RD_PARAM_TYPES"
+\fBValue:\fP
+.PP
+.nf
+(u8,\\
+u8, u8 *, u8)
+.fi
+defines the calling parameter types of the BMP180_WR_FUNCTION 
+.SS "#define BMP180_BUS_RD_RETURN_TYPE   \fBs8\fP"
+
+.PP
+link macro between API function calls and bus read function 
+.PP
+\fBNote:\fP
+.RS 4
+The bus write function can change since this is a system dependant issue\&.
+.RE
+.PP
+If the bus_read parameter calling order is like: reg_addr, reg_data, wr_len it would be as it is here\&.
+.PP
+If the parameters are differently ordered or your communication function like I2C need to know the device address, you can change this macro accordingly\&.
+.PP
+BMP180_BUS_READ_FUNC(dev_addr, reg_addr, reg_data, wr_len)\\ bus_read(dev_addr, reg_addr, reg_data, wr_len)
+.PP
+This macro lets all API functions call YOUR communication routine in a way that equals your definition in the refer BMP180_WR_FUNC_PTR definition\&.
+.PP
+\fBNote:\fP
+.RS 4
+: this macro also includes the "MSB='1' for reading \fBBMP180\fP addresses\&.defines the return parameter type of the BMP180_WR_FUNCTION 
+.RE
+.PP
+
+.SS "#define BMP180_BUS_WR_PARAM_ORDER"
+\fBValue:\fP
+.PP
+.nf
+(device_addr, register_addr,\
+register_data, write_length)
+.fi
+links the order of parameters defined in BMP180_BUS_WR_PARAM_TYPE to function calls used inside the API 
+.SS "#define BMP180_BUS_WR_PARAM_TYPES"
+\fBValue:\fP
+.PP
+.nf
+u8, u8,\\
+u8 *, u8
+.fi
+defines the calling parameter types of the BMP180_WR_FUNCTION 
+.SS "#define BMP180_BUS_WR_RETURN_TYPE   \fBs8\fP"
+
+.PP
+Define the calling convention of YOUR bus communication routine\&. 
+.PP
+\fBNote:\fP
+.RS 4
+This includes types of parameters\&. This example shows the configuration for an \fBSPI\fP bus link\&.
+.RE
+.PP
+If your communication function looks like this:
+.PP
+write_my_bus_xy(u8 device_addr, u8 register_addr, u8 * data, u8 length);
+.PP
+The BMP180_WR_FUNC_PTR would equal:
+.PP
+BMP180_WR_FUNC_PTR s8 (* bus_write)(u8, u8, u8 *, u8)
+.PP
+Parameters can be mixed as needed refer to the refer BMP180_BUS_WRITE_FUNC macro\&. 
+.SS "#define MACHINE_32_BIT"
+
+.PP
+The following definition uses for define the data types\&. 
+.PP
+\fBNote:\fP
+.RS 4
+While porting the API please consider the following 
+.PP
+Please check the version of C standard 
+.PP
+Are you using Linux platform
+.RE
+.PP
+For the Linux platform support Please use the types\&.h for your data types definitions
+.PP
+By default it is defined as 32 bit machine configuration define your data types based on your machine/compiler/controller configuration 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef signed short int \fBs16\fP"
+used for signed 16bit 
+.SS "typedef signed int \fBs32\fP"
+used for signed 32bit 
+.SS "typedef signed long long int \fBs64\fP"
+used for signed 64bit 
+.SS "typedef signed char \fBs8\fP"
+used for signed 8bit 
+.SS "typedef unsigned short int \fBu16\fP"
+used for unsigned 16bit 
+.SS "typedef unsigned int \fBu32\fP"
+used for unsigned 32bit 
+.SS "typedef unsigned long long int \fBu64\fP"
+used for unsigned 64bit 
+.SS "typedef unsigned char \fBu8\fP"
+used for unsigned 8bit 
+.SH "Function Documentation"
+.PP 
+.SS "BMP180_RETURN_FUNCTION_TYPE bmp180_get_calib_param (void)"
+
+.PP
+this function used for read the calibration parameter from the register Parameter MSB LSB bit  AC1 0xAA 0xAB 0 to 7 AC2 0xAC 0xAD 0 to 7 AC3 0xAE 0xAF 0 to 7 AC4 0xB0 0xB1 0 to 7 AC5 0xB2 0xB3 0 to 7 AC6 0xB4 0xB5 0 to 7 B1 0xB6 0xB7 0 to 7 B2 0xB8 0xB9 0 to 7 MB 0xBA 0xBB 0 to 7 MC 0xBC 0xBD 0 to 7 MD 0xBE 0xBF 0 to 7 
+.PP
+\fBReturns:\fP
+.RS 4
+results of bus communication function 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP -> Success 
+.br
+\fI-1\fP -> Error 
+.RE
+.PP
+
+.SS "\fBs32\fP bmp180_get_pressure (\fBu32\fP v_uncomp_pressure_u32)"
+
+.PP
+this API is used to calculate the true pressure using the uncompensated pressure(up) 
+.PP
+\fBNote:\fP
+.RS 4
+For reading the up data refer : bmp180_read_up()
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIv_uncomp_pressure_u32\fP the value of uncompensated pressure
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Return the value of pressure in steps of 1\&.0 Pa 
+.RE
+.PP
+
+.SS "\fBs16\fP bmp180_get_temperature (\fBu32\fP v_uncomp_temperature_u32)"
+
+.PP
+this API is used to calculate the true temperature using the uncompensated temperature(ut) 
+.PP
+\fBNote:\fP
+.RS 4
+For reading the ut data refer : bmp180_read_ut()
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIv_uncomp_temperature_u32\fP the value of uncompensated temperature
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Return the temperature in steps of 0\&.1 deg Celsius 
+.RE
+.PP
+
+.SS "\fBu32\fP bmp180_get_uncomp_pressure (void)"
+
+.PP
+this API is used to read the uncompensated pressure(up) from the register 
+.PP
+\fBNote:\fP
+.RS 4
+0xF6(MSB) bit from 0 to 7 
+.PP
+0xF7(LSB) bit from 0 to 7 
+.PP
+0xF8(LSB) bit from 3 to 7
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+results of bus communication function 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP -> Success 
+.br
+\fI-1\fP -> Error 
+.RE
+.PP
+
+.SS "\fBu16\fP bmp180_get_uncomp_temperature (void)"
+
+.PP
+this API is used to read the uncompensated temperature(ut) from the register 
+.PP
+\fBNote:\fP
+.RS 4
+0xF6(MSB) bit from 0 to 7 
+.PP
+0xF7(LSB) bit from 0 to 7
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+results of bus communication function 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP -> Success 
+.br
+\fI-1\fP -> Error 
+.RE
+.PP
+
+.SS "BMP180_RETURN_FUNCTION_TYPE bmp180_init (struct \fBbmp180_t\fP * bmp180)"
+
+.PP
+This function is used for initialize the bus read and bus write functions and assign the chip id and I2C address of the \fBBMP180\fP chip id is read in the register 0xD0 bit from 0 to 7\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbmp180\fP structure pointer\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+While changing the parameter of the \fBbmp180_t\fP 
+.PP
+consider the following point: Changing the reference value of the parameter will changes the local copy or local reference make sure your changes will not affect the reference value of the parameter (Better case don't change the reference value of the parameter)
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+results of bus communication function 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP -> Success 
+.br
+\fI-1\fP -> Error 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

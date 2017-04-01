@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="DS18B20_8h" kind="file" language="C++">
+    <compoundname>DS18B20.h</compoundname>
+    <includes local="no">util/delay.h</includes>
+    <includes local="no">avr/io.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="DS18B20_8cpp" local="yes">src/Sensors/DS18B20.cpp</includedby>
+    <incdepgraph>
+      <node id="254">
+        <label>src/Sensors/DS18B20.h</label>
+        <link refid="DS18B20.h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+      </node>
+      <node id="257">
+        <label>stdlib.h</label>
+      </node>
+      <node id="256">
+        <label>avr/io.h</label>
+      </node>
+      <node id="255">
+        <label>util/delay.h</label>
+      </node>
+      <node id="258">
+        <label>ctype.h</label>
+      </node>
+      <node id="259">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="260">
+        <label>src/Sensors/DS18B20.h</label>
+        <link refid="DS18B20.h"/>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="262">
+        <label>src/Sensors/DS18B20.cpp</label>
+        <link refid="DS18B20_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classDS18B20" prot="public">DS18B20</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="DS18B20_8h_1a802b2b582b121e4632aa9a491d503720" prot="public" static="no">
+        <name>FOSC</name>
+        <initializer>16000000UL</initializer>
+        <briefdescription>
+<para>CPU clock speed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="32" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a3a15b9e4cfa1f6668b3bc5e324af42c0" prot="public" static="no">
+        <name>LOOP_CYCLES</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para>Number of cycles that the loop takes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="34" column="10" bodyfile="src/Sensors/DS18B20.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a9feef6e5eed237807d11af797efbbea8" prot="public" static="no">
+        <name>us</name>
+        <param><defname>num</defname></param>
+        <initializer>(num/(<ref refid="DS18B20_8h_1a3a15b9e4cfa1f6668b3bc5e324af42c0" kindref="member">LOOP_CYCLES</ref>*(1/(<ref refid="DS18B20_8h_1a802b2b582b121e4632aa9a491d503720" kindref="member">FOSC</ref>/1000000.0))))</initializer>
+        <briefdescription>
+<para>Microseconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="35" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a3d233d75d73e3baf6d9a7e30b4afed66" prot="public" static="no">
+        <name>THERM_CMD_CONVERTTEMP</name>
+        <initializer>0x44</initializer>
+        <briefdescription>
+<para>Command convert temperature. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="37" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1ac1fe271992c3ff8aea781ad1ead35f35" prot="public" static="no">
+        <name>THERM_CMD_RSCRATCHPAD</name>
+        <initializer>0xBE</initializer>
+        <briefdescription>
+<para>Command read scratchpad. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="38" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a60ff389a158dbe0258431893b27eace7" prot="public" static="no">
+        <name>THERM_CMD_WSCRATCHPAD</name>
+        <initializer>0x4E</initializer>
+        <briefdescription>
+<para>Command write scratchpad. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="39" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1af5e5caf3a5441e9497fa5362ba6ca9c4" prot="public" static="no">
+        <name>THERM_CMD_CPYSCRATCHPAD</name>
+        <initializer>0x48</initializer>
+        <briefdescription>
+<para>Command copy scratchpad. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="40" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1aade1ec30d01b81df2cbf86faa51576ca" prot="public" static="no">
+        <name>THERM_CMD_RECEEPROM</name>
+        <initializer>0xb8</initializer>
+        <briefdescription>
+<para>Command record eeprom. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="41" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a96a80bb9dee4d82e409c4c16ffa94bfd" prot="public" static="no">
+        <name>THERM_CMD_RPWRSUPPLY</name>
+        <initializer>0xb4</initializer>
+        <briefdescription>
+<para>Command reset power supply. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="42" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a5e3616625c6a8c94a1272ab066f7cdde" prot="public" static="no">
+        <name>THERM_CMD_READROM</name>
+        <initializer>0x33</initializer>
+        <briefdescription>
+<para>Command read ROM. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="44" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1ad87daf6ca3b56fb882be1b2224a9286b" prot="public" static="no">
+        <name>THERM_CMD_ALARMSEARCH</name>
+        <initializer>0xec</initializer>
+        <briefdescription>
+<para>Command alarm search. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="45" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a28d81f447ab522c61076b973ed06a2e6" prot="public" static="no">
+        <name>THERM_DECIMAL_STEPS_12BIT</name>
+        <initializer>625</initializer>
+        <briefdescription>
+<para>Decimal Steps 12 Bit: .0625. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="46" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a20a70a05486a1fa3aba1881aa90104cd" prot="public" static="no">
+        <name>MATCH_ROM</name>
+        <initializer>0x55</initializer>
+        <briefdescription>
+<para>Match Rom. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="48" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1ae5773d5b673b0c12c6615958dd2efb22" prot="public" static="no">
+        <name>SKIP_ROM</name>
+        <initializer>0xCC</initializer>
+        <briefdescription>
+<para>Skip ROM search. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="49" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1ae22115770cfd724213b05d36afcb7d8e" prot="public" static="no">
+        <name>SEARCH_ROM</name>
+        <initializer>0xF0</initializer>
+        <briefdescription>
+<para>Init ROM search. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="50" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1accfeed0bea98f3185af84c049ed64959" prot="public" static="no">
+        <name>SEARCH_FIRST</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+<para>start new search </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="52" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" prot="public" static="no">
+        <name>PRESENCE_ERR</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+<para>Presence error. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="53" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" prot="public" static="no">
+        <name>DATA_ERR</name>
+        <initializer>0xFE</initializer>
+        <briefdescription>
+<para>Data error. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="54" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" prot="public" static="no">
+        <name>LAST_DEVICE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>last device found </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="55" column="9" bodyfile="src/Sensors/DS18B20.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Project: SensorNode</para><para><ref refid="DS18B20_8h" kindref="compound">DS18B20.h</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="19"><highlight class="preprocessor">#ifndef<sp/>DS18B20_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DS18B20_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;util/delay.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctype.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;../IO/USART.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FOSC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="DS18B20_8h_1a802b2b582b121e4632aa9a491d503720" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FOSC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16000000UL<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="DS18B20_8h_1a3a15b9e4cfa1f6668b3bc5e324af42c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOOP_CYCLES<sp/><sp/>8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="DS18B20_8h_1a9feef6e5eed237807d11af797efbbea8" refkind="member"><highlight class="preprocessor">#define<sp/>us(num)<sp/>(num/(LOOP_CYCLES*(1/(FOSC/1000000.0))))<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="DS18B20_8h_1a3d233d75d73e3baf6d9a7e30b4afed66" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>THERM_CMD_CONVERTTEMP<sp/>0x44<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="DS18B20_8h_1ac1fe271992c3ff8aea781ad1ead35f35" refkind="member"><highlight class="preprocessor">#define<sp/>THERM_CMD_RSCRATCHPAD<sp/>0xBE<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="DS18B20_8h_1a60ff389a158dbe0258431893b27eace7" refkind="member"><highlight class="preprocessor">#define<sp/>THERM_CMD_WSCRATCHPAD<sp/>0x4E<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="DS18B20_8h_1af5e5caf3a5441e9497fa5362ba6ca9c4" refkind="member"><highlight class="preprocessor">#define<sp/>THERM_CMD_CPYSCRATCHPAD<sp/>0x48<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="DS18B20_8h_1aade1ec30d01b81df2cbf86faa51576ca" refkind="member"><highlight class="preprocessor">#define<sp/>THERM_CMD_RECEEPROM<sp/>0xb8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="DS18B20_8h_1a96a80bb9dee4d82e409c4c16ffa94bfd" refkind="member"><highlight class="preprocessor">#define<sp/>THERM_CMD_RPWRSUPPLY<sp/>0xb4<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="DS18B20_8h_1a5e3616625c6a8c94a1272ab066f7cdde" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>THERM_CMD_READROM<sp/>0x33<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="DS18B20_8h_1ad87daf6ca3b56fb882be1b2224a9286b" refkind="member"><highlight class="preprocessor">#define<sp/>THERM_CMD_ALARMSEARCH<sp/>0xec<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="DS18B20_8h_1a28d81f447ab522c61076b973ed06a2e6" refkind="member"><highlight class="preprocessor">#define<sp/>THERM_DECIMAL_STEPS_12BIT<sp/>625<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="DS18B20_8h_1a20a70a05486a1fa3aba1881aa90104cd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MATCH_ROM<sp/><sp/><sp/>0x55<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="DS18B20_8h_1ae5773d5b673b0c12c6615958dd2efb22" refkind="member"><highlight class="preprocessor">#define<sp/>SKIP_ROM<sp/><sp/><sp/><sp/>0xCC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="DS18B20_8h_1ae22115770cfd724213b05d36afcb7d8e" refkind="member"><highlight class="preprocessor">#define<sp/>SEARCH_ROM<sp/><sp/>0xF0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="DS18B20_8h_1accfeed0bea98f3185af84c049ed64959" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEARCH_FIRST<sp/><sp/><sp/><sp/>0xFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" refkind="member"><highlight class="preprocessor">#define<sp/>PRESENCE_ERR<sp/><sp/><sp/><sp/>0xFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" refkind="member"><highlight class="preprocessor">#define<sp/>DATA_ERR<sp/><sp/><sp/><sp/>0xFE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" refkind="member"><highlight class="preprocessor">#define<sp/>LAST_DEVICE<sp/>0x00<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"></codeline>
+<codeline lineno="65" refid="classDS18B20" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDS18B20" kindref="compound">DS18B20</ref><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classDS18B20_1a4e8d420cd118999883bde12e766bc1d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="classDS18B20_1a4e8d420cd118999883bde12e766bc1d4" kindref="member">WIRE_PORT</ref>;<sp/></highlight></codeline>
+<codeline lineno="71" refid="classDS18B20_1a06a1f548d087b8d8971dee5e94653f5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="classDS18B20_1a06a1f548d087b8d8971dee5e94653f5c" kindref="member">WIRE_DDR</ref>;<sp/></highlight></codeline>
+<codeline lineno="72" refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" kindref="member">WIRE_PIN</ref>;<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77" refid="classDS18B20_1a6884de10b175289718239bdac0b8e52e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a6884de10b175289718239bdac0b8e52e" kindref="member">MACString</ref>[120];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>USART<sp/>u;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a6340d31cea87cf473af13fc7f15f60e4" kindref="member">ReadMeasurement</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a440a17340ac61a693316550422e4ae4e" kindref="member">ReadMeasurement2</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>Macstring,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempStr<sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1afc1a4166a4d1d00baef15a9e4c59b632" kindref="member">DS18B20</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1afc1a4166a4d1d00baef15a9e4c59b632" kindref="member">DS18B20</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_PORT,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_DDR,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_PIN,uint8_t<sp/>Wire_DQ);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>therm_read_DS18B20(char*buffer);</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1af18146fd823d04f5472fb305e46f02b0" kindref="member">GetMACString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>MACStringOut);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>//!<sp/>Get<sp/>temperature<sp/>string<sp/>from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>GetTemperatureString(char*<sp/>TemperatureString);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a64a03b4a18a9d2b3faeb7943865055e9" kindref="member">GetSensorStringXML</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1ae3d50f1b5b71517d633958f54654ea55" kindref="member">GetTemperature</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>MACstring,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempString);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a817183f6ef9552d6559d58d714e5c804" kindref="member">StartMeasurement</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" kindref="member">Reset</ref>();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//uint8_t<sp/>Reset(char*<sp/>string);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" kindref="member">BitIO</ref>(uint8_t<sp/>bit);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(uint8_t<sp/>byte);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kindref="member">ReadByte</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a356e88e8a6bca4f5ffeb41180c08f91d" kindref="member">RomSearch</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>diff,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a1f03dae7ea2d07a225343eaa33d119cf" kindref="member">Command</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>command,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" kindref="member">PIN_INPUT_MODE</ref>(){<sp/>*WIRE_DDR&amp;=~(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="161" refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" kindref="member">PIN_OUTPUT_MODE</ref>(){<sp/>*WIRE_DDR|=(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="162" refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" kindref="member">PIN_LOW</ref>(){<sp/>*WIRE_PORT&amp;=~(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="163" refid="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" kindref="member">PIN_HIGH</ref>(){*WIRE_PORT|=(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" kindref="member">__attribute__</ref>((gnu_inline))<sp/>void<sp/>delay_us(uint16_t<sp/>delay){</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(delay--)<sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;nop&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DS18B20_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="src/Sensors/DS18B20.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term><anchor id="todo_1_todo000001"/>Member <ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>  ()</term></varlistentry>
+<listitem><para>System info  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000002"/>Member <ref refid="classNRF24L01_1abe5983a57d0d3bd77508e5345774c890" kindref="member">NRF24L01::setPayloadSize</ref>  (uint8_t size)</term></varlistentry>
+<listitem><para>Implement variable-sized payloads feature</para></listitem>
+</variablelist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

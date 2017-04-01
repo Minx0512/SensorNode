@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_fae119eb913a40fe8ed97cde8b98911e" kind="dir">
+    <compoundname>src/IO</compoundname>
+    <innerfile refid="ParseStrings_8cpp">ParseStrings.cpp</innerfile>
+    <innerfile refid="ParseStrings_8h">ParseStrings.h</innerfile>
+    <innerfile refid="SPI_8cpp">SPI.cpp</innerfile>
+    <innerfile refid="SPI_8h">SPI.h</innerfile>
+    <innerfile refid="USART_8cpp">USART.cpp</innerfile>
+    <innerfile refid="USART_8h">USART.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/IO/"/>
+  </compounddef>
+</doxygen>
