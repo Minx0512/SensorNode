@@ -2,6 +2,7 @@
 
 
 import SerialConnection
+import Sensors
 
 class ReadSensor:
     """provides functions for sensor reading"""
@@ -12,9 +13,52 @@ class ReadSensor:
      self.queryStr = "{0}|{1}|{2}"
      self.serialCon = SerialConnection.SerialConnection(port,baudrate)
      self.resp = ""
+     self.availableSensors = []
+    
+    def GetAvailableSensors(self,MAC):
+     """Get available sensors on a certain node"""   
+     q = self.queryStr.format(20,MAC,"Sensors")
+     self.resp = self.serialCon.ReadData(q)
+    
+       
     
     def DS18B20(self,MAC):
+     """Reads all DS18B20 sensors on one node with a certain MAC address"""
      q = self.queryStr.format(35,MAC,"DST")
      self.resp = self.serialCon.ReadData(q)
- 
+     ds = DS18B20.DS18B20(self.resp)
+     vals = ds.GetValuePair(0)
+     return vals
+
+    def DHT22(self,MAC):
+     """Reads the DHT22 sensor on a node with a certain MAC address"""   
+     q = self.queryStr.format(32,MAC,"DHT22")
+     self.resp = self.serialCon.ReadData(q)
+    
+    def Movement(self,MAC):
+     """Reads the movement detector of a certain node """   
+     q = self.queryStr.format(31,MAC,"MV")
+     self.resp = self.serialCon.ReadData(q) 
+    
+    def LightAnalog(self,MAC):
+     """ Reads the analog photoresistor on a certain node """   
+     q = self.queryStr.format(33,MAC,"Lav")
+     self.resp = self.serialCon.ReadData(q) 
+    
+    def LightDigital(self,MAC):
+     """ Reads the digital light sensor on a certain node """   
+     q = self.queryStr.format(34,MAC,"Ld")
+     self.resp = self.serialCon.ReadData(q)
+    
+    def BMP180(self,MAC):
+     """ Reads the BMP180 pressure sensor on a certain node"""
+     q = self.queryStr.format(36,MAC,"PT")
+     self.resp = self.serialCon.ReadData(q)
+     
+     
+     
+     
+     
+     
+     
      
