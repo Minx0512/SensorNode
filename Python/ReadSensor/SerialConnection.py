@@ -17,6 +17,7 @@ class SerialConnection:
      self.ser.rtscts = False     #disable hardware (RTS/CTS) flow control
      self.ser.dsrdtr = False       #disable hardware (DSR/DTR) flow control
      self.ser.writeTimeout = 0     #timeout for write
+     self.err = ""
      #print 'Starting Up Serial Monitor'
 
     def ReadData(self,queryStr):
@@ -24,7 +25,7 @@ class SerialConnection:
      try:
       self.ser.open()
      except Exception, e:
-      print "error open serial port: " + str(e)
+      self.err = self.err + "error open serial port: " + str(e)
      
      if self.ser.isOpen():
       try:
@@ -38,7 +39,7 @@ class SerialConnection:
        resp = self.ser.read_until("\\\\+end")
        self.ser.close()
       except Exception, e:
-        print "error communicating...: " + str(e) 
+       self.err = self.err + "error communicating...: " + str(e) 
      return resp
   
       
