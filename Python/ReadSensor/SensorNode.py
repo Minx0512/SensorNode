@@ -1,5 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
+
 
 #import os
 #import sys
@@ -23,16 +23,13 @@ rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 #rs.GetAvailableSensors("A0:A0:A0:A0:A0")
 
 ds =  rs.DS18B20("A0:A0:A0:A0:A0")
+for idx in range(0,ds.numEl):
+ print (ds.GetValuePair(idx))
+
+print (ds.GetAvgTemperature()) 
 
 mv = rs.Movement("A0:A0:A0:A0:A0")
-
-print mv.move
-
-for idx in range(0,ds.numEl):
- print ds.GetValuePair(idx)
-
-
-
+print (mv.move)
 
 
 

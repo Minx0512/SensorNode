@@ -1,5 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
+
 
 import re
 
@@ -14,16 +14,25 @@ class DS18B20:
     def __init__(self,responseStr,sensStr):
      self.MAC = []
      self.T = []     
+     self.unitT = "°C"
      
      self.ds = re.findall(".\/\/sensor\/{0}/\|(.*)\|/\|(.*)\|".format(sensStr),responseStr)
      if len(self.ds) > 0:
       self.ds = self.ds[0]
       self.MAC = self.ds[0].rsplit("|")
-      self.T = self.ds[1].rsplit("|")
+      self.T = [float(i) for i in self.ds[1].replace("°C","").rsplit("|")]
+      
       self.numEl = len(self.T)
          
     def GetValuePair(self,idx):
-     return [self.MAC[idx], self.T[idx]]
+     return [self.MAC[idx], self.T[idx],self.unitT]
+    
+    def GetAvgTemperature(self):
+     avrgTemp = 0.0  
+     for ti in range(0,self.numEl):
+      avrgTemp= avrgTemp+self.T[ti]
+     return avrgTemp/self.numEl     
+        
      
 class DHT22:
     def __init__(self,responseStr,sensStr):
@@ -44,7 +53,7 @@ class DHT22:
       self.err = int(self.dht[5])
      
 
-class Movment:
+class Movement:
     def __init__(self,responseStr,sensStr):
      self.move = 0     
      self.mv = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)

@@ -1,5 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
+
 
 import SerialConnection
 import Sensors.Sensors as Sensors
@@ -42,7 +42,7 @@ class ReadSensor:
      """Reads the movement detector of a certain node """   
      q = self.queryStr.format(31,MAC,"M")
      self.resp = self.serialCon.ReadData(q)
-     mv = Sensors.Movment(self.resp,"M")
+     mv = Sensors.Movement(self.resp,"M")
      return mv 
     
     def LightAnalog(self,MAC):
@@ -59,11 +59,6 @@ class ReadSensor:
      """ Reads the BMP180 pressure sensor on a certain node"""
      q = self.queryStr.format(36,MAC,"PT")
      self.resp = self.serialCon.ReadData(q)
-     
-     
-     
-     
-     
      
      
      
