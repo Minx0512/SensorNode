@@ -18,20 +18,20 @@ import Sensors.Sensors as Sensors
 rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 
 availableSensors = rs.GetAvailableSensors("A0:A0:A0:A0:A0")
-print (availableSensors.sens)
+print ("Sensors: {0}".format(availableSensors.sens))
 
 
 ds =  rs.DS18B20("A0:A0:A0:A0:A0")
 for idx in range(0,ds.numEl):
  print (ds.GetValuePair(idx))
 
-print ("{0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
+print ("DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
 
 mv = rs.Movement("A0:A0:A0:A0:A0")
-print (mv.move)
+print ("Mv: {0}".format(mv.move))
 
 light = rs.LightAnalog("A0:A0:A0:A0:A0")
-print (light.value)
+print ("Light: {0}".format(light.value))
 
 
 
