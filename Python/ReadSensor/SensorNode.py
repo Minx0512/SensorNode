@@ -18,7 +18,7 @@ import Sensors.Sensors as Sensors
 rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 
 availableSensors = rs.GetAvailableSensors("A0:A0:A0:A0:A0")
-print (availableSensors)
+print (availableSensors.sens)
 
 
 ds =  rs.DS18B20("A0:A0:A0:A0:A0")

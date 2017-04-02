@@ -5,11 +5,14 @@ import re
 
 class Sensors:
     def __init__(self,responsrStr,sensStr):
-      self.sens = []  
+      self.sens = []
+      print(responsrStr)  
       self.s = re.findall(".\/\/system\/{0}/\|(.*)\|/\|(.*)\|".format(sensStr),responsrStr)  
       if len(self.s) > 0:
        self.s = self.s[0]
-       self.sens =self.s[1].rsplit("|")
+       #print(self.s[1])
+       self.sens =[int(i,0) for i in self.s[1].rsplit("|")]
+       #print(self.sens)
 
 
 class DS18B20:
