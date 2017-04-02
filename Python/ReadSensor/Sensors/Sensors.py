@@ -36,7 +36,7 @@ class DS18B20:
      avrgTemp = 0.0  
      for ti in range(0,self.numEl):
       avrgTemp= avrgTemp+self.T[ti]
-     return avrgTemp/self.numEl     
+     return round(avrgTemp/self.numEl,3)     
         
      
 class DHT22:
