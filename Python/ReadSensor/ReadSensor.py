@@ -3,7 +3,7 @@
 
 import SerialConnection
 import Sensors.Sensors as Sensors
-from kaa.metadata.image import bmp
+
 
 
 class ReadSensor:
