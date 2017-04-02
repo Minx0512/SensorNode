@@ -15,12 +15,11 @@ import Sensors.Sensors as Sensors
 #threadLock = thread.allocate_lock()
 
 
-
-
-
 rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 
-#rs.GetAvailableSensors("A0:A0:A0:A0:A0")
+availableSensors = rs.GetAvailableSensors("A0:A0:A0:A0:A0")
+print (availableSensors)
+
 
 ds =  rs.DS18B20("A0:A0:A0:A0:A0")
 for idx in range(0,ds.numEl):

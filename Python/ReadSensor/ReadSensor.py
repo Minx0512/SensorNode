@@ -3,6 +3,7 @@
 
 import SerialConnection
 import Sensors.Sensors as Sensors
+from kaa.metadata.image import bmp
 
 
 class ReadSensor:
@@ -20,7 +21,8 @@ class ReadSensor:
      """Get available sensors on a certain node"""   
      q = self.queryStr.format(20,MAC,"Sensors")
      self.resp = self.serialCon.ReadData(q)
-    
+     sens = Sensors.Sensors(self.resp,"Sensors")
+     return sens    
        
     
     def DS18B20(self,MAC):
@@ -56,11 +58,17 @@ class ReadSensor:
      """ Reads the digital light sensor on a certain node """   
      q = self.queryStr.format(34,MAC,"Ld")
      self.resp = self.serialCon.ReadData(q)
-    
+     ld = Sensors.LightAnalog(self.resp,"Ld")
+     return ld
+ 
+ 
     def BMP180(self,MAC):
      """ Reads the BMP180 pressure sensor on a certain node"""
      q = self.queryStr.format(36,MAC,"PT")
      self.resp = self.serialCon.ReadData(q)
+     bmp = Sensors.BMP180(self.resp,"PT")
+     return bmp
+ 
      
      
      

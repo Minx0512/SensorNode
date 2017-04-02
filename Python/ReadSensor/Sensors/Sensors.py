@@ -4,9 +4,9 @@
 import re
 
 class Sensors:
-    def __init__(self,responsrStr):
+    def __init__(self,responsrStr,sensStr):
       self.sens = []  
-      self.s = re.findall(".\/\/system\/Sensors/\|(.*)\|/\|(.*)\|",responsrStr)[0]  
+      self.s = re.findall(".\/\/system\/{0}/\|(.*)\|/\|(.*)\|".format(sensStr),responsrStr)[0]  
       self.sens = self.s[1].rsplit("|")
 
 
@@ -42,7 +42,6 @@ class DHT22:
      self.unitT = ""
      self.err = 0
 
-
      self.dht = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*):(.*)\|(.*):(.*)\|(.*)\|".format(sensStr),responseStr)
      if len(self.dht) > 0:
       self.dht = self.dht[0]   
@@ -69,9 +68,30 @@ class LightAnalog:
       self.la = self.la[0]
       self.value = float(self.la[1])   
         
+class LightDigital:
+    def __init__(self,responseStr,sensStr):
+     self.value = 0.0
+     self.ld = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)
+     if len(self.ld) > 0:
+      self.ld = self.ld[0]
+      self.value = float(self.ld[1])         
         
-        
-        
+class BMP180:
+    def __init__(self,responseStr,sensStr):
+     self.P = 0.0
+     self.unitP = ""
+     self.T = 0.0
+     self.unitT = ""
+     self.err = 0  
+                
+     self.bmp = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*):(.*)\|(.*):(.*)\|(.*)\|".format(sensStr),responseStr)
+     if len(self.bmp) > 0:
+      self.bmp = self.bmp[0]   
+      self.T = float(self.bmp[3])
+      self.unitT = self.bmp[4]
+      self.P = float(self.bmp[1])
+      self.unitP = self.bmp[2]
+      self.err = int(self.bmp[5])            
         
         
              
