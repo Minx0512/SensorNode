@@ -6,7 +6,7 @@ import re
 class Sensors:
     def __init__(self,responsrStr,sensStr):
       self.sens = []
-      print(responsrStr)  
+      #print(responsrStr)  
       self.s = re.findall(".\/\/system\/{0}/\|(.*)\|/\|(.*)\|".format(sensStr),responsrStr)  
       if len(self.s) > 0:
        self.s = self.s[0]
