@@ -67,7 +67,7 @@ class LightAnalog:
      self.la = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)
      if len(self.la) > 0:
       self.la = self.la[0]
-      self.value = int(self.la[1])   
+      self.value = float(self.la[1])   
         
         
         
