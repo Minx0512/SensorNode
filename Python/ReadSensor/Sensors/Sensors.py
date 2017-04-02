@@ -14,14 +14,14 @@ class DS18B20:
     def __init__(self,responseStr,sensStr):
      self.MAC = []
      self.T = []     
-     self.unitT = "°C"
+     self.unitT = "°C".encode('utf-8').decode('unicode-escape')
      
      self.ds = re.findall(".\/\/sensor\/{0}/\|(.*)\|/\|(.*)\|".format(sensStr),responseStr)
      if len(self.ds) > 0:
       self.ds = self.ds[0]
       self.MAC = self.ds[0].rsplit("|")
-      self.T = [float(i) for i in self.ds[1].replace("°C","").rsplit("|")]
-      
+      #print (self.ds[1].replace(u'\xc2\xb0C','').rsplit("|"))
+      self.T = [float(i) for i in self.ds[1].replace(u'\xc2\xb0C','').rsplit("|")]
       self.numEl = len(self.T)
          
     def GetValuePair(self,idx):
@@ -60,5 +60,19 @@ class Movement:
      if len(self.mv) > 0:
       self.mv = self.mv[0]
       self.move = int(self.mv[1])
-     
+ 
+class LightAnalog:
+    def __init__(self,responseStr,sensStr):
+     self.value = 0.0    
+     self.la = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)
+     if len(self.la) > 0:
+      self.la = self.la[0]
+      self.value = int(self.la[1])   
+        
+        
+        
+        
+        
+        
+             
      

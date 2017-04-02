@@ -48,7 +48,9 @@ class ReadSensor:
     def LightAnalog(self,MAC):
      """ Reads the analog photoresistor on a certain node """   
      q = self.queryStr.format(33,MAC,"Lav")
-     self.resp = self.serialCon.ReadData(q) 
+     self.resp = self.serialCon.ReadData(q)
+     la = Sensors.LightAnalog(self.resp,"Lav")
+     return la 
     
     def LightDigital(self,MAC):
      """ Reads the digital light sensor on a certain node """   

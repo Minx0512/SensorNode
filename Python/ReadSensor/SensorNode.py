@@ -26,10 +26,13 @@ ds =  rs.DS18B20("A0:A0:A0:A0:A0")
 for idx in range(0,ds.numEl):
  print (ds.GetValuePair(idx))
 
-print (ds.GetAvgTemperature()) 
+print ("{0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
 
 mv = rs.Movement("A0:A0:A0:A0:A0")
 print (mv.move)
+
+light = rs.LightAnalog("A0:A0:A0:A0:A0")
+print (light.value)
 
 
 
