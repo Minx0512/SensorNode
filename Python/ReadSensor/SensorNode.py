@@ -10,28 +10,50 @@ import Sensors.Sensors as Sensors
 
 # 1. get available sensors per Node
 
+def spawnSensors(readS, nodeAdress):
+ sens = []
+ availableSensors = readS.GetAvailableSensors(nodeAdress).sens
+ print ("Sensors: {0}".format(availableSensors.sens))  
+ for s in availableSensors:
+  if s == 49:
+   mv = readS.Movement(nodeAdress)
+   sens.append(mv)
+   print ("Mv: {0}".format(mv.move))
+   
+  elif  s == 51:
+   la = readS.LightAnalog(nodeAdress)
+   print ("Light: {0}".format(light.value))
+   sens.append(la)
+  elif s == 53:
+   ds = readS.DS18B20(nodeAdress)   
+   sens.append(ds)
+   print ("DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
 
+ return sens
+ 
 
+nodeAddresses = ["A0:A0:A0:A0:A0"]
 #threadLock = thread.allocate_lock()
 
 
 rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 
-availableSensors = rs.GetAvailableSensors("A0:A0:A0:A0:A0")
-print ("Sensors: {0}".format(availableSensors.sens))
+sens = spawnSensors(rs,nodeAddresses[0])
 
 
-ds =  rs.DS18B20("A0:A0:A0:A0:A0")
-print ("DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
+#availableSensors = rs.GetAvailableSensors("A0:A0:A0:A0:A0")
+#print ("Sensors: {0}".format(availableSensors.sens))
+
+#ds =  rs.DS18B20("A0:A0:A0:A0:A0")
+#print ("DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
 #for idx in range(0,ds.numEl):
  #print (ds.GetValuePair(idx))
 
+#mv = rs.Movement("A0:A0:A0:A0:A0")
+#print ("Mv: {0}".format(mv.move))
 
-mv = rs.Movement("A0:A0:A0:A0:A0")
-print ("Mv: {0}".format(mv.move))
-
-light = rs.LightAnalog("A0:A0:A0:A0:A0")
-print ("Light: {0}".format(light.value))
+#light = rs.LightAnalog("A0:A0:A0:A0:A0")
+#print ("Light: {0}".format(light.value))
 
 
 
