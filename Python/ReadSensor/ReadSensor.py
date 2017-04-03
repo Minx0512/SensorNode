@@ -8,9 +8,9 @@ import SerialConnection
 
 class ReadSensor:
     """provides functions for sensor reading"""
-    def __init__(self, port,baudrate):
-     self.port = "/dev/ttyAMA0"
-     self.baudrate = 9600   
+    def __init__(self, prt,bdrate):
+     self.port = prt
+     self.baudrate = bdrate   
      self.nodeMAC = ""
      self.cmdID = 0
      self.pString = ""

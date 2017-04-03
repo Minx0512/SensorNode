@@ -5,20 +5,16 @@ import re
 import ReadSensor
 
 
-class Sensors(ReadSensor.ReadSensor):
+class Sensors(ReadSensor):
     def __init__(self, prt,bdrate):
-      self.sens = []
-      self.port = prt
-      self.baudrate = bdrate
+      ReadSensor.__init__(self,prt,bdrate)  
+      self.sens = []      
       #print(responsrStr)  
       self.nodeMAC = ""
       self.cmdID = "20"
-      self.pString = "Sensors"
-            
-      self.resp = ""
+      self.pString = "Sensors"            
       self.respMask = ".\/\/system\/{0}/\|(.*)\|/\|(.*)\|"
-      self.interpResp = []
-      self.availableSensors = []
+      
 
 
       #self.sens =[hex(int(i,0))[2:] for i in self.s[1].rsplit("|")]
