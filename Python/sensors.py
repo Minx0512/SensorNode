@@ -96,7 +96,7 @@ class Movement(readsensor.ReadSensor):
       
   
 class LightAnalog(readsensor.ReadSensor):
-    def __init__(self,responseStr,sensStr):
+    def __init__(self,prt,bdrate):
      readsensor.ReadSensor.__init__(self,prt,bdrate)
      self.value = 0.0
      self.nodeMAC = ""
