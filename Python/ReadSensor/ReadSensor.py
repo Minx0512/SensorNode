@@ -42,13 +42,13 @@ class ReadSensor:
      self.nodeMAC = ndAddr
          
     
-    def GetAvailableSensors(self,MAC):
-     """Get available sensors on a certain node"""   
-     q = self.queryStr.format(self.cmdIDs[0],MAC,"Sensors")
-     self.resp = self.serialCon.ReadData(q)
-     sens = Sensors.Sensors(self.resp,"Sensors")
-     return sens    
-       
+#     def GetAvailableSensors(self,MAC):
+#      """Get available sensors on a certain node"""   
+#      q = self.queryStr.format(self.cmdIDs[0],MAC,"Sensors")
+#      self.resp = self.serialCon.ReadData(q)
+#      sens = Sensors.Sensors(self.resp,"Sensors")
+#      return sens    
+#        
     
 #     def DS18B20(self,MAC):
 #      """Reads all DS18B20 sensors on one node with a certain MAC address"""
