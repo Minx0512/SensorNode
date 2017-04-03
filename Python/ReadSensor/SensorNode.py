@@ -21,7 +21,11 @@ sensor = []
 for addr in nodeAddresses:
  sensor.append(rs.spawnSensors(addr))
 
-print (sensor)
+for s in sensor:
+    i = 0
+    print ("Sensors on {1}: {0}".format(s,nodeAddresses[i]))
+    i = i+1
+
 
 #availableSensors = rs.GetAvailableSensors("A0:A0:A0:A0:A0")
 #print ("Sensors: {0}".format(availableSensors.sens))
