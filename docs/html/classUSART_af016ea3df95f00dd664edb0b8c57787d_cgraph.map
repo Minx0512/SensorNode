@@ -1,0 +1,4 @@
+<map id="USART::readString" name="USART::readString">
+<area shape="rect" id="node2" href="$classUSART.html#a42a1789b9a8805da6ed3f4f62f74a764" title="Read 1 Byte of incoming data. " alt="" coords="211,5,333,32"/>
+<area shape="rect" id="node3" href="$classUSART.html#abad4151d072782e70255f999a1451199" title="Flush USART buffer. " alt="" coords="188,56,356,83"/>
+</map>

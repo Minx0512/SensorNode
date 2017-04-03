@@ -1,0 +1,13 @@
+<map id="DS18B20::GetSensorStringXML" name="DS18B20::GetSensorStringXML">
+<area shape="rect" id="node2" href="$classDS18B20.html#a817183f6ef9552d6559d58d714e5c804" title="Sensor Initialization. " alt="" coords="264,19,457,45"/>
+<area shape="rect" id="node10" href="$classDS18B20.html#a6340d31cea87cf473af13fc7f15f60e4" title="Takes a Measurement per sensor on the bus. " alt="" coords="263,95,459,121"/>
+<area shape="rect" id="node3" href="$classDS18B20.html#a1f03dae7ea2d07a225343eaa33d119cf" title="DS18B20::Command" alt="" coords="511,5,657,32"/>
+<area shape="rect" id="node4" href="$classDS18B20.html#a890b94747fbd3ec6e45088735c7bc1fe" title="DS18B20::Reset" alt="" coords="901,56,1023,83"/>
+<area shape="rect" id="node8" href="$classDS18B20.html#a7314cb6a438ddd0c214ed409f7dd5d86" title="DS18B20::WriteByte" alt="" coords="709,56,853,83"/>
+<area shape="rect" id="node5" href="$classDS18B20.html#a8a8a45bbfe229978ea7280177b6fe18b" title="DS18B20::PIN_LOW" alt="" coords="1107,132,1253,159"/>
+<area shape="rect" id="node6" href="$classDS18B20.html#aaa611dcdffd8f02719f62c8a93c0c7c0" title="DS18B20::PIN_OUTPUT_MODE" alt="" coords="1071,31,1289,57"/>
+<area shape="rect" id="node7" href="$classDS18B20.html#abd68014bd97396c4b0365d3e1ca1f61c" title="DS18B20::PIN_INPUT_MODE" alt="" coords="1078,81,1282,108"/>
+<area shape="rect" id="node9" href="$classDS18B20.html#ac2bf79674d18e4ad00d7b41d76d411e3" title="BitIO. " alt="" coords="904,107,1020,133"/>
+<area shape="rect" id="node11" href="$classDS18B20.html#a356e88e8a6bca4f5ffeb41180c08f91d" title="DS18B20::RomSearch" alt="" coords="507,157,661,184"/>
+<area shape="rect" id="node12" href="$classDS18B20.html#aa43d0c42ebb25bbdc9b7904710652c75" title="DS18B20::ReadByte" alt="" coords="512,107,656,133"/>
+</map>

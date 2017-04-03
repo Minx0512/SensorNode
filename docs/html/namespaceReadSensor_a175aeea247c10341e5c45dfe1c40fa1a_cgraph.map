@@ -1,0 +1,5 @@
+<map id="ReadSensor.GetRemoteSensors" name="ReadSensor.GetRemoteSensors">
+<area shape="rect" id="node2" href="$namespaceBluetoothConn.html#a529bdfae6ea4b07c397c05d9bb64261c" title="BluetoothConn.SendData" alt="" coords="275,5,446,32"/>
+<area shape="rect" id="node3" href="$namespaceNodeProtocol.html#ac5f58ca531adf6529c082f28859bba09" title="NodeProtocol.NPGetSensor\lDataRemote" alt="" coords="267,57,454,98"/>
+<area shape="rect" id="node4" href="$namespaceBluetoothConn.html#a83232f3a490b3985e04a24d1b8fc981a" title="BluetoothConn.ReceiveData" alt="" coords="267,123,455,149"/>
+</map>

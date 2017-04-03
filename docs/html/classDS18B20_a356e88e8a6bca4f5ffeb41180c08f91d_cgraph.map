@@ -1,0 +1,8 @@
+<map id="DS18B20::RomSearch" name="DS18B20::RomSearch">
+<area shape="rect" id="node2" href="$classDS18B20.html#a890b94747fbd3ec6e45088735c7bc1fe" title="DS18B20::Reset" alt="" coords="400,31,521,57"/>
+<area shape="rect" id="node6" href="$classDS18B20.html#a7314cb6a438ddd0c214ed409f7dd5d86" title="DS18B20::WriteByte" alt="" coords="208,81,352,108"/>
+<area shape="rect" id="node7" href="$classDS18B20.html#ac2bf79674d18e4ad00d7b41d76d411e3" title="BitIO. " alt="" coords="403,81,519,108"/>
+<area shape="rect" id="node3" href="$classDS18B20.html#a8a8a45bbfe229978ea7280177b6fe18b" title="DS18B20::PIN_LOW" alt="" coords="605,5,752,32"/>
+<area shape="rect" id="node4" href="$classDS18B20.html#aaa611dcdffd8f02719f62c8a93c0c7c0" title="DS18B20::PIN_OUTPUT_MODE" alt="" coords="569,56,788,83"/>
+<area shape="rect" id="node5" href="$classDS18B20.html#abd68014bd97396c4b0365d3e1ca1f61c" title="DS18B20::PIN_INPUT_MODE" alt="" coords="577,107,781,133"/>
+</map>

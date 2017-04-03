@@ -1,0 +1,13 @@
+<map id="SensorNode0.DetectMovement" name="SensorNode0.DetectMovement">
+<area shape="rect" id="node2" href="$namespaceReadSensor.html#a00bcbaf1dc8b1790fb402d111fbc6e9a" title="ReadSensor.GetMovement" alt="" coords="260,165,440,191"/>
+<area shape="rect" id="node6" href="$namespaceReadSensor.html#aa339db2b21c515fb4b4f0a150fdec74e" title="ReadSensor.GetLightsense" alt="" coords="259,97,441,123"/>
+<area shape="rect" id="node8" href="$namespaceSensorNode0.html#ac43f766b9b1117ce6520080a80f7cb88" title="SensorNode0.OnMovement" alt="" coords="259,279,441,306"/>
+<area shape="rect" id="node12" href="$namespaceSensorNode0.html#a6adf2f38d28053fb7d9d8b9ef3ef7524" title="SensorNode0.NoMovement" alt="" coords="259,219,441,246"/>
+<area shape="rect" id="node3" href="$namespaceBluetoothConn.html#a529bdfae6ea4b07c397c05d9bb64261c" title="BluetoothConn.SendData" alt="" coords="498,122,669,149"/>
+<area shape="rect" id="node4" href="$namespaceNodeProtocol.html#aaa7bf240ba412b020b53151530989747" title="NodeProtocol.NPGetSensor\lDataMove" alt="" coords="490,173,677,215"/>
+<area shape="rect" id="node5" href="$namespaceBluetoothConn.html#a83232f3a490b3985e04a24d1b8fc981a" title="BluetoothConn.ReceiveData" alt="" coords="489,71,677,98"/>
+<area shape="rect" id="node7" href="$namespaceNodeProtocol.html#a3bd00c7fd33997cf6c3bd8eb7c265c3b" title="NodeProtocol.NPGetSensor\lDataLightsense" alt="" coords="490,5,677,47"/>
+<area shape="rect" id="node9" href="$namespaceReadSensor.html#ad618b907c363e25969bd9a798efcde53" title="ReadSensor.LightsOff" alt="" coords="508,239,659,266"/>
+<area shape="rect" id="node10" href="$namespaceSensorNode0.html#acebf4f2262d99cf53409e57f8018fb80" title="SensorNode0.isNightTime" alt="" coords="496,341,671,367"/>
+<area shape="rect" id="node11" href="$namespaceReadSensor.html#a491617ee15187afdef853beb4523334d" title="ReadSensor.LightsOn" alt="" coords="508,290,659,317"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ReadSensor.GetTempDHT22" name="ReadSensor.GetTempDHT22">
+<area shape="rect" id="node2" href="$namespaceBluetoothConn.html#a529bdfae6ea4b07c397c05d9bb64261c" title="BluetoothConn.SendData" alt="" coords="257,5,427,32"/>
+<area shape="rect" id="node3" href="$namespaceNodeProtocol.html#af237482548b3bfa9f568f612a3a8ddd3" title="NodeProtocol.NPGetSensor\lDataTempDHT22" alt="" coords="249,57,435,98"/>
+<area shape="rect" id="node4" href="$namespaceBluetoothConn.html#a83232f3a490b3985e04a24d1b8fc981a" title="BluetoothConn.ReceiveData" alt="" coords="248,123,436,149"/>
+</map>

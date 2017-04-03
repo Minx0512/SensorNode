@@ -1,0 +1,5 @@
+<map id="ReadSensor.GetNRFConfig" name="ReadSensor.GetNRFConfig">
+<area shape="rect" id="node2" href="$namespaceBluetoothConn.html#a529bdfae6ea4b07c397c05d9bb64261c" title="BluetoothConn.SendData" alt="" coords="260,5,431,32"/>
+<area shape="rect" id="node3" href="$namespaceNodeProtocol.html#a3957886e60fe6740ed019e33293f1eb3" title="NodeProtocol.NPGetNRGConfig" alt="" coords="239,56,452,83"/>
+<area shape="rect" id="node4" href="$namespaceBluetoothConn.html#a83232f3a490b3985e04a24d1b8fc981a" title="BluetoothConn.ReceiveData" alt="" coords="251,107,439,133"/>
+</map>

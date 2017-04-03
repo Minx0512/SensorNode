@@ -1,0 +1,6 @@
+<map id="BluetoothConn.ReadSensorData" name="BluetoothConn.ReadSensorData">
+<area shape="rect" id="node2" href="$namespaceBluetoothConn.html#ab0d988d648786cc8189040dca527bc06" title="BluetoothConn.BlueConnect" alt="" coords="266,5,453,32"/>
+<area shape="rect" id="node3" href="$namespaceBluetoothConn.html#a529bdfae6ea4b07c397c05d9bb64261c" title="BluetoothConn.SendData" alt="" coords="274,56,445,83"/>
+<area shape="rect" id="node4" href="$namespaceBluetoothConn.html#a83232f3a490b3985e04a24d1b8fc981a" title="BluetoothConn.ReceiveData" alt="" coords="265,107,453,133"/>
+<area shape="rect" id="node5" href="$namespaceBluetoothConn.html#a26df1ae079844968383f943f79611564" title="BluetoothConn.CloseConn" alt="" coords="271,157,448,184"/>
+</map>

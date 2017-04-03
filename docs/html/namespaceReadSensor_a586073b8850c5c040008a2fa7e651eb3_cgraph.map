@@ -1,0 +1,5 @@
+<map id="ReadSensor.GetHumidityDHT22" name="ReadSensor.GetHumidityDHT22">
+<area shape="rect" id="node2" href="$namespaceBluetoothConn.html#a529bdfae6ea4b07c397c05d9bb64261c" title="BluetoothConn.SendData" alt="" coords="275,5,446,32"/>
+<area shape="rect" id="node3" href="$namespaceNodeProtocol.html#aeaeb0ef0bb0b5b40be541c8fbd0138f3" title="NodeProtocol.NPGetSensor\lDataHumidityDHT22" alt="" coords="267,57,454,98"/>
+<area shape="rect" id="node4" href="$namespaceBluetoothConn.html#a83232f3a490b3985e04a24d1b8fc981a" title="BluetoothConn.ReceiveData" alt="" coords="267,123,455,149"/>
+</map>

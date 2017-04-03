@@ -1,0 +1,8 @@
+<map id="SensorNode.LightsAutoON" name="SensorNode.LightsAutoON">
+<area shape="rect" id="node2" href="$namespaceSensorNode.html#ae3b811b5d3e85d5e05e233fe44af8b95" title="SensorNode.LightsMenu" alt="" coords="233,56,399,83"/>
+<area shape="rect" id="node3" href="$namespaceSensorNode.html#aba7501484cafdf93d218f4001f7bf27d" title="SensorNode.SwitchON" alt="" coords="461,5,619,32"/>
+<area shape="rect" id="node5" href="$namespaceSensorNode.html#a4e68f587234ab5538cf224a8dadb3372" title="SensorNode.SwitchOFF" alt="" coords="458,56,622,83"/>
+<area shape="rect" id="node7" href="$namespaceSensorNode.html#a03916abb4a46a2aad0d0df685d84c57d" title="SensorNode.LightsAutoOFF" alt="" coords="447,107,633,133"/>
+<area shape="rect" id="node4" href="$namespaceReadSensor.html#a491617ee15187afdef853beb4523334d" title="ReadSensor.LightsOn" alt="" coords="681,5,832,32"/>
+<area shape="rect" id="node6" href="$namespaceReadSensor.html#ad618b907c363e25969bd9a798efcde53" title="ReadSensor.LightsOff" alt="" coords="681,56,832,83"/>
+</map>

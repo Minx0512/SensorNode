@@ -1,0 +1,5 @@
+<map id="Photoresistor::Photoresistor" name="Photoresistor::Photoresistor">
+<area shape="rect" id="node2" href="$classPhotoresistor.html#a5c3bc9e8877b54faeded1450a39552fb" title="Set Type of light detector. " alt="" coords="237,5,392,32"/>
+<area shape="rect" id="node3" href="$classPhotoresistor.html#a984cf8c9ed6a428f5b025a5ea85822da" title="Set Port of analog/digital converter. " alt="" coords="240,56,389,83"/>
+<area shape="rect" id="node4" href="$classPhotoresistor.html#afe829b4b1be3d742d789ab6b75dc0c9d" title="Initialize analog digital converter. " alt="" coords="252,107,377,133"/>
+</map>

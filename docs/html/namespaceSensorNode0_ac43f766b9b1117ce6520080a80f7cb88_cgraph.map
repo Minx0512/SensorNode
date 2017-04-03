@@ -1,0 +1,5 @@
+<map id="SensorNode0.OnMovement" name="SensorNode0.OnMovement">
+<area shape="rect" id="node2" href="$namespaceReadSensor.html#ad618b907c363e25969bd9a798efcde53" title="ReadSensor.LightsOff" alt="" coords="248,5,399,32"/>
+<area shape="rect" id="node3" href="$namespaceSensorNode0.html#acebf4f2262d99cf53409e57f8018fb80" title="SensorNode0.isNightTime" alt="" coords="236,56,411,83"/>
+<area shape="rect" id="node4" href="$namespaceReadSensor.html#a491617ee15187afdef853beb4523334d" title="ReadSensor.LightsOn" alt="" coords="248,107,399,133"/>
+</map>

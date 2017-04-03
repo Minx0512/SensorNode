@@ -1,0 +1,5 @@
+<map id="SensorNode.GetMovement" name="SensorNode.GetMovement">
+<area shape="rect" id="node2" href="$namespaceBluetoothConn.html#a529bdfae6ea4b07c397c05d9bb64261c" title="BluetoothConn.SendData" alt="" coords="242,5,413,32"/>
+<area shape="rect" id="node3" href="$namespaceNodeProtocol.html#aaa7bf240ba412b020b53151530989747" title="NodeProtocol.NPGetSensor\lDataMove" alt="" coords="234,57,421,98"/>
+<area shape="rect" id="node4" href="$namespaceBluetoothConn.html#a83232f3a490b3985e04a24d1b8fc981a" title="BluetoothConn.ReceiveData" alt="" coords="233,123,421,149"/>
+</map>

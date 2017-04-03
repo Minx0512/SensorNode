@@ -1,0 +1,17 @@
+<map id="NRF24L01::reUseTX" name="NRF24L01::reUseTX">
+<area shape="rect" id="node2" href="$classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="602,124,775,151"/>
+<area shape="rect" id="node6" href="$classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="617,175,760,201"/>
+<area shape="rect" id="node7" href="$classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="201,200,350,227"/>
+<area shape="rect" id="node16" href="$classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="199,251,352,277"/>
+<area shape="rect" id="node3" href="$classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="830,251,989,277"/>
+<area shape="rect" id="node4" href="$classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="840,301,979,328"/>
+<area shape="rect" id="node5" href="$classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="828,352,991,379"/>
+<area shape="rect" id="node8" href="$classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="599,225,779,252"/>
+<area shape="rect" id="node9" href="$classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="602,276,775,303"/>
+<area shape="rect" id="node10" href="$classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="599,327,779,353"/>
+<area shape="rect" id="node11" href="$classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="603,377,774,404"/>
+<area shape="rect" id="node12" href="$classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="603,428,774,455"/>
+<area shape="rect" id="node13" href="$classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="403,124,546,151"/>
+<area shape="rect" id="node14" href="$classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="400,175,549,201"/>
+<area shape="rect" id="node15" href="$classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="597,479,780,505"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="SensorNode.ReadSensorDataLight" name="SensorNode.ReadSensorDataLight">
+<area shape="rect" id="node2" href="$namespaceSensorNode.html#a5e804ff447fc7771e2c1454eb0425097" title="SensorNode.GetLightsense" alt="" coords="252,64,435,91"/>
+<area shape="rect" id="node3" href="$namespaceBluetoothConn.html#a529bdfae6ea4b07c397c05d9bb64261c" title="BluetoothConn.SendData" alt="" coords="491,5,662,32"/>
+<area shape="rect" id="node4" href="$namespaceNodeProtocol.html#a3bd00c7fd33997cf6c3bd8eb7c265c3b" title="NodeProtocol.NPGetSensor\lDataLightsense" alt="" coords="483,57,670,98"/>
+<area shape="rect" id="node5" href="$namespaceBluetoothConn.html#a83232f3a490b3985e04a24d1b8fc981a" title="BluetoothConn.ReceiveData" alt="" coords="483,123,671,149"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="DS18B20::StartMeasurement" name="DS18B20::StartMeasurement">
+<area shape="rect" id="node2" href="$classDS18B20.html#a1f03dae7ea2d07a225343eaa33d119cf" title="DS18B20::Command" alt="" coords="247,56,393,83"/>
+<area shape="rect" id="node3" href="$classDS18B20.html#a890b94747fbd3ec6e45088735c7bc1fe" title="DS18B20::Reset" alt="" coords="633,31,755,57"/>
+<area shape="rect" id="node7" href="$classDS18B20.html#a7314cb6a438ddd0c214ed409f7dd5d86" title="DS18B20::WriteByte" alt="" coords="441,81,585,108"/>
+<area shape="rect" id="node4" href="$classDS18B20.html#a8a8a45bbfe229978ea7280177b6fe18b" title="DS18B20::PIN_LOW" alt="" coords="839,5,985,32"/>
+<area shape="rect" id="node5" href="$classDS18B20.html#aaa611dcdffd8f02719f62c8a93c0c7c0" title="DS18B20::PIN_OUTPUT_MODE" alt="" coords="803,56,1021,83"/>
+<area shape="rect" id="node6" href="$classDS18B20.html#abd68014bd97396c4b0365d3e1ca1f61c" title="DS18B20::PIN_INPUT_MODE" alt="" coords="810,107,1014,133"/>
+<area shape="rect" id="node8" href="$classDS18B20.html#ac2bf79674d18e4ad00d7b41d76d411e3" title="BitIO. " alt="" coords="636,81,752,108"/>
+</map>
