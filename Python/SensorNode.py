@@ -6,7 +6,7 @@
 #import thread
 #import time
 #import ReadSensor
-import Sensors.Sensors as Sensors
+import Sensors
 
 # 1. get available sensors per Node
 

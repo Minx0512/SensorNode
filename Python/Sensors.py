@@ -2,7 +2,7 @@
 
 
 import re
-import ReadSensor
+import ReadSensor.ReadSensor as ReadSensor
 
 
 class Sensors(ReadSensor):
