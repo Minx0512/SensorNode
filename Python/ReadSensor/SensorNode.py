@@ -6,7 +6,7 @@
 #import thread
 #import time
 import ReadSensor
-import Sensors.Sensors as Sensors
+#import Sensors.Sensors as Sensors
 
 # 1. get available sensors per Node
 
@@ -16,8 +16,10 @@ nodeAddresses = ["A0:A0:A0:A0:A0"]
 
 
 rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
+sensor = []
 
-sensor = rs.spawnSensors(nodeAddresses[0])
+for addr in nodeAddresses:
+ sensor = append(rs.spawnSensors(addr))
 
 print (sensor)
 
