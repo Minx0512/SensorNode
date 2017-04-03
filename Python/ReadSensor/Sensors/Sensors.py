@@ -11,7 +11,7 @@ class Sensors:
       if len(self.s) > 0:
        self.s = self.s[0]
        #print(self.s[1])
-       self.sens =[int(i,0) for i in self.s[1].rsplit("|")]
+       self.sens =[hex(int(i,0))[2:] for i in self.s[1].rsplit("|")]
        #print(self.sens)
 
 
