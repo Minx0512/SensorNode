@@ -11,25 +11,25 @@ import Sensors.Sensors as Sensors
 # 1. get available sensors per Node
 
 def spawnSensors(readS, nodeAdress):
- sens = []
+ sensrs = []
  availableSensors = readS.GetAvailableSensors(nodeAdress).sens
  print ("Sensors: {0}".format(availableSensors.sens))  
  for s in availableSensors:
   if s == 49:
    mv = readS.Movement(nodeAdress)
-   sens.append(mv)
+   sensrs.append(mv)
    print ("Mv: {0}".format(mv.move))
    
   elif  s == 51:
    la = readS.LightAnalog(nodeAdress)
    print ("Light: {0}".format(light.value))
-   sens.append(la)
+   sensrs.append(la)
   elif s == 53:
    ds = readS.DS18B20(nodeAdress)   
-   sens.append(ds)
+   sensrs.append(ds)
    print ("DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
 
- return sens
+ return sensrs
  
 
 nodeAddresses = ["A0:A0:A0:A0:A0"]
