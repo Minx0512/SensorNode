@@ -23,16 +23,21 @@ sens = sensors.Sensors(port, baudrate)
 sens.SetNodeAddress(nodeAddresses[0])
 sens.Update()
 sens.InterpretResponse()
-
 print (sens)
-
 
 ds = sensors.DS18B20(port, baudrate)
 ds.SetNodeAddress(nodeAddresses[0])
 ds.Update()
 ds.InterpretResponse()
-
 print (ds)
+
+mv = sensors.Movement(port,baudrate)
+mv.SetNodeAddress(nodeAddresses[0])
+mv.Update()
+mv.InterpretResponse()
+print (mv)
+
+
 # 
 # for addr in nodeAddresses:
 #  sensor.append(rs.spawnSensors(addr))

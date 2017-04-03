@@ -35,10 +35,8 @@ class DS18B20(readsensor.ReadSensor):
      self.numEl = 0
       
     def InterpretResponse(self):
-     """Interpret response list """
-     self.interpResp     
-     self.MAC = self.interpResp[0].rsplit("|")
-      #print (self.ds[1].replace(u'\xc2\xb0C','').rsplit("|"))
+     """Interpret response list """        
+     self.MAC = self.interpResp[0].rsplit("|")     
      self.T = [float(i) for i in self.interpResp[1].replace(u'\xc2\xb0C','').rsplit("|")]
      self.numEl = len(self.T)
      
@@ -54,32 +52,46 @@ class DS18B20(readsensor.ReadSensor):
     
     def __str__(self):
         return "{0} | T: {1}{2}".format(self.nodeMAC, self.GetAvgTemperature(),self.unitT)     
-#      
-# class DHT22:
-#     def __init__(self,responseStr,sensStr):
-#      self.H = 0.0
-#      self.unitH = ""
-#      self.T = 0.0
-#      self.unitT = ""
-#      self.err = 0
-# 
-#      self.dht = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*):(.*)\|(.*):(.*)\|(.*)\|".format(sensStr),responseStr)
-#      if len(self.dht) > 0:
-#       self.dht = self.dht[0]   
-#       self.H = float(self.dht[3])
-#       self.unitH = self.dht[4]
-#       self.T = float(self.dht[1])
-#       self.unitT = self.dht[2]
-#       self.err = int(self.dht[5])
-#      
-# 
-# class Movement:
-#     def __init__(self,responseStr,sensStr):
-#      self.move = 0     
-#      self.mv = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)
-#      if len(self.mv) > 0:
-#       self.mv = self.mv[0]
-#       self.move = int(self.mv[1])
+      
+class DHT22:
+    def __init__(self,prt,bdrate):
+     readsensor.ReadSensor.__init__(self,prt,bdrate)    
+     self.H = 0.0
+     self.unitH = ""
+     self.T = 0.0
+     self.unitT = ""
+     self.err = 0
+     self.cmdID = "32"
+     self.pString = "DHT22"            
+     self.respMask = ".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*):(.*)\|(.*):(.*)\|(.*)\|" 
+     
+    def InterpretResponse(self):
+     """Interpret response list """ 
+     self.interpResp 
+     self.H = float(self.interpResp[3])
+     self.unitH = self.interpResp[4]
+     self.T = float(self.interpResp[1])
+     self.unitT = self.interpResp[2]
+     self.err = int(self.interpResp[5])
+  
+    def __str__(self):
+        return "{0} | T: {1}{2} | H: {3}{4} | err: {5}".format(self.nodeMAC, self.T,self.unitT,self.H,self.unitH,self.err)  
+ 
+class Movement:
+    def __init__(self,prt,bdrate):
+     readsensor.ReadSensor.__init__(self,prt,bdrate)
+     self.move = 0
+     self.nodeMAC = ""
+     self.cmdID = "35"
+     self.pString = "M"            
+     self.respMask = ".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|"
+     
+    def InterpretResponse(self):
+     """Interpret response list """ 
+     self.move = int(self.interpResp[1])
+     
+    def __str__(self):
+        return "{0} | M: {1}".format(self.nodeMAC, self.move)   
 #  
 # class LightAnalog:
 #     def __init__(self,responseStr,sensStr):
