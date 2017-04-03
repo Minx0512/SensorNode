@@ -19,7 +19,7 @@ nodeAddresses = ["A0:A0:A0:A0:A0"]
 
 
 
-sens = Sensors("/dev/ttyAMA0", 9600)
+sens = Sensors.Sensors("/dev/ttyAMA0", 9600)
 
 sens.SetNodeAddress(nodeAddresses[0])
 sens.Update()
