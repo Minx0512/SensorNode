@@ -19,7 +19,7 @@ rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 sensor = []
 
 for addr in nodeAddresses:
- sensor = append(rs.spawnSensors(addr))
+ sensor.append(rs.spawnSensors(addr))
 
 print (sensor)
 
