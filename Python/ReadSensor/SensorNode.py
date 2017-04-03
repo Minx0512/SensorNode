@@ -23,7 +23,7 @@ def spawnSensors(readS, nodeAdress):
   elif  s == 51:
    light = readS.LightAnalog(nodeAdress)
    print ("Light: {0}".format(light.value))
-   sensrs.append(la)
+   sensrs.append(light)
   elif s == 53:
    ds = readS.DS18B20(nodeAdress)   
    sensrs.append(ds)
