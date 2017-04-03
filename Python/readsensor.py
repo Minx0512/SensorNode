@@ -15,7 +15,7 @@ class ReadSensor:
      self.cmdID = 0
      self.pString = ""
      self.queryStr = "{0}|{1}|{2}"
-     self.serialCon = serialsonnection.SerialConnection(self.port,self.baudrate)
+     self.serialCon = serialconnection.SerialConnection(self.port,self.baudrate)
      self.resp = ""
      self.respMask = ""
      self.interpResp = []
@@ -35,7 +35,7 @@ class ReadSensor:
      q = self.queryStr.format(self.cmdID,self.nodeMAC,self.pString)
      self.resp = self.serialCon.ReadData(q)
      self.interpResp = re.findall(self.respMask.format(self.pString),self.resp)   
-     if len(interpResp) > 0:
+     if len(self.interpResp) > 0:
       self.interpResp = self.interpResp[0] 
      
     def SetNodeAddress(self, ndAddr):
