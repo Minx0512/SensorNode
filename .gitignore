@@ -9,3 +9,5 @@
 *.sym
 .dep
 
+Python/old/*
+Python/Protocol/*

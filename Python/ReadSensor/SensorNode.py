@@ -22,10 +22,10 @@ print ("Sensors: {0}".format(availableSensors.sens))
 
 
 ds =  rs.DS18B20("A0:A0:A0:A0:A0")
-for idx in range(0,ds.numEl):
- print (ds.GetValuePair(idx))
-
 print ("DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
+#for idx in range(0,ds.numEl):
+ #print (ds.GetValuePair(idx))
+
 
 mv = rs.Movement("A0:A0:A0:A0:A0")
 print ("Mv: {0}".format(mv.move))
