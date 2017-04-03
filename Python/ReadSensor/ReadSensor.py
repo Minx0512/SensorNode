@@ -76,16 +76,16 @@ class ReadSensor:
      availableSensors = self.GetAvailableSensors(nodeAdress).sens
      print ("# Sensors: {0}".format(availableSensors))  
      for s in availableSensors:
-      if s == 49:
+      if s == self.cmdIDs[1]:
        mv = self.Movement(nodeAdress)
        sensrs.append(mv)
        print ("# Mv: {0}".format(mv.move))
    
-      elif  s == 51:
+      elif  s == self.cmdIDs[3]:
        light = self.LightAnalog(nodeAdress)
        print ("# Light: {0}".format(light.value))
        sensrs.append(light)
-      elif s == 53:
+      elif s == self.cmdIDs[5]:
        ds = self.DS18B20(nodeAdress)   
        sensrs.append(ds)
        print ("# DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
