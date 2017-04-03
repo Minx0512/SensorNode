@@ -5,8 +5,8 @@
 #import sys
 #import thread
 #import time
-import ReadSensor
-#import Sensors.Sensors as Sensors
+#import ReadSensor
+import Sensors.Sensors as Sensors
 
 # 1. get available sensors per Node
 
@@ -15,31 +15,26 @@ nodeAddresses = ["A0:A0:A0:A0:A0"]
 #threadLock = thread.allocate_lock()
 
 
-rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
-sensor = []
-
-for addr in nodeAddresses:
- sensor.append(rs.spawnSensors(addr))
-
-for s in sensor:
-    i = 0
-    print ("Sensors on {1}: {0}".format(s,nodeAddresses[i]))
-    i = i+1
+#rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 
 
-#availableSensors = rs.GetAvailableSensors("A0:A0:A0:A0:A0")
-#print ("Sensors: {0}".format(availableSensors.sens))
 
-#ds =  rs.DS18B20("A0:A0:A0:A0:A0")
-#print ("DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
-#for idx in range(0,ds.numEl):
- #print (ds.GetValuePair(idx))
+sens = Sensors("/dev/ttyAMA0", 9600)
 
-#mv = rs.Movement("A0:A0:A0:A0:A0")
-#print ("Mv: {0}".format(mv.move))
+sens.SetNodeAddress(nodeAddresses[0])
+sens.Update()
+print (sens.interpResp)
 
-#light = rs.LightAnalog("A0:A0:A0:A0:A0")
-#print ("Light: {0}".format(light.value))
+# 
+# for addr in nodeAddresses:
+#  sensor.append(rs.spawnSensors(addr))
+#  
+# 
+# for s in sensor:
+#  i = 0
+#  print ("Sensor objects on {1}: {0}".format(s,nodeAddresses[i]))
+#  i = i+1
+# 
 
 
 
