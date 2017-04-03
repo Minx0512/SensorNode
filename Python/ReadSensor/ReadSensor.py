@@ -69,6 +69,26 @@ class ReadSensor:
      bmp = Sensors.BMP180(self.resp,"PT")
      return bmp
  
-     
+    def spawnSensors(self, nodeAdress):
+     print ("#######################\r\nAddress: {0}\r\n#######################".format(nodeAdress))   
+     sensrs = []
+     availableSensors = self.GetAvailableSensors(nodeAdress).sens
+     print ("# Sensors: {0}".format(availableSensors))  
+     for s in availableSensors:
+      if s == 49:
+       mv = self.Movement(nodeAdress)
+       sensrs.append(mv)
+       print ("# Mv: {0}".format(mv.move))
+   
+      elif  s == 51:
+       light = self.LightAnalog(nodeAdress)
+       print ("# Light: {0}".format(light.value))
+       sensrs.append(light)
+      elif s == 53:
+       ds = self.DS18B20(nodeAdress)   
+       sensrs.append(ds)
+       print ("# DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
+
+     return sensrs
      
      
