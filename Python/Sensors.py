@@ -2,12 +2,12 @@
 
 
 import re
-import ReadSensor
+import ReadSensor.ReadSensor as RS
 
 
-class Sensors(ReadSensor):
+class Sensors(RS):
     def __init__(self, prt,bdrate):
-      ReadSensor.__init__(self,prt,bdrate)  
+      RS.__init__(self,prt,bdrate)  
       self.sens = []      
       #print(responsrStr)  
       self.nodeMAC = ""
