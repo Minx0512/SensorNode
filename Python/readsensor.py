@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import re
-import SerialConnection
+import serialconnection
 #import Sensors.Sensors as Sensors
 
 
@@ -15,7 +15,7 @@ class ReadSensor:
      self.cmdID = 0
      self.pString = ""
      self.queryStr = "{0}|{1}|{2}"
-     self.serialCon = SerialConnection.SerialConnection(self.port,self.baudrate)
+     self.serialCon = serialsonnection.SerialConnection(self.port,self.baudrate)
      self.resp = ""
      self.respMask = ""
      self.interpResp = []

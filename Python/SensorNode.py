@@ -6,7 +6,7 @@
 #import thread
 #import time
 #import ReadSensor
-import Sensors
+import sensors
 
 # 1. get available sensors per Node
 
@@ -19,7 +19,7 @@ nodeAddresses = ["A0:A0:A0:A0:A0"]
 
 
 
-sens = Sensors.Sensors("/dev/ttyAMA0", 9600)
+sens = sensors.Sensors("/dev/ttyAMA0", 9600)
 
 sens.SetNodeAddress(nodeAddresses[0])
 sens.Update()
