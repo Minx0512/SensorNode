@@ -330,12 +330,12 @@
           <type>void</type>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Sensor Initialization. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Starts </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="150" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="71" bodyend="80"/>
+        <location file="src/Sensors/DS18B20.h" line="154" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="71" bodyend="80"/>
         <references refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" compoundref="DS18B20_8h" startline="72">WIRE_PIN</references>
         <references refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
         <references refid="classDS18B20_1a1f03dae7ea2d07a225343eaa33d119cf" compoundref="DS18B20_8cpp" startline="255" endline="269">Command</references>
@@ -354,11 +354,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="151" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="160" bodyend="182"/>
-        <references refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" compoundref="DS18B20_8h" startline="162" endline="162">PIN_LOW</references>
-        <references refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" compoundref="DS18B20_8h" startline="161" endline="161">PIN_OUTPUT_MODE</references>
+        <location file="src/Sensors/DS18B20.h" line="155" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="160" bodyend="182"/>
+        <references refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" compoundref="DS18B20_8h" startline="173" endline="173">PIN_LOW</references>
+        <references refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" compoundref="DS18B20_8h" startline="172" endline="172">PIN_OUTPUT_MODE</references>
         <references refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" compoundref="DHT22_8h" startline="23">us</references>
-        <references refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" compoundref="DS18B20_8h" startline="160" endline="160">PIN_INPUT_MODE</references>
+        <references refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" compoundref="DS18B20_8h" startline="171" endline="171">PIN_INPUT_MODE</references>
         <references refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" compoundref="DS18B20_8h" startline="72">WIRE_PIN</references>
         <references refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
       </memberdef>
@@ -372,16 +372,25 @@
           <declname>bit</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>BitIO. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="153" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="183" bodyend="200"/>
-        <references refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" compoundref="DS18B20_8h" startline="162" endline="162">PIN_LOW</references>
-        <references refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" compoundref="DS18B20_8h" startline="161" endline="161">PIN_OUTPUT_MODE</references>
+        <location file="src/Sensors/DS18B20.h" line="164" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="183" bodyend="200"/>
+        <references refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" compoundref="DS18B20_8h" startline="173" endline="173">PIN_LOW</references>
+        <references refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" compoundref="DS18B20_8h" startline="172" endline="172">PIN_OUTPUT_MODE</references>
         <references refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" compoundref="DHT22_8h" startline="23">us</references>
-        <references refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" compoundref="DS18B20_8h" startline="160" endline="160">PIN_INPUT_MODE</references>
+        <references refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" compoundref="DS18B20_8h" startline="171" endline="171">PIN_INPUT_MODE</references>
         <references refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" compoundref="DS18B20_8h" startline="72">WIRE_PIN</references>
         <references refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
       </memberdef>
@@ -400,7 +409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="154" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="201" bodyend="214"/>
+        <location file="src/Sensors/DS18B20.h" line="165" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="201" bodyend="214"/>
         <references refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" compoundref="DS18B20_8cpp" startline="183" endline="200">BitIO</references>
       </memberdef>
       <memberdef kind="function" id="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -417,7 +426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="155" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="215" bodyend="217"/>
+        <location file="src/Sensors/DS18B20.h" line="166" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="215" bodyend="217"/>
         <references refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" compoundref="DS18B20_8cpp" startline="201" endline="214">WriteByte</references>
       </memberdef>
       <memberdef kind="function" id="classDS18B20_1a356e88e8a6bca4f5ffeb41180c08f91d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -439,7 +448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="156" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="218" bodyend="254"/>
+        <location file="src/Sensors/DS18B20.h" line="167" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="218" bodyend="254"/>
         <references refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" compoundref="DS18B20_8cpp" startline="160" endline="182">Reset</references>
         <references refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" compoundref="DS18B20_8h" startline="53">PRESENCE_ERR</references>
         <references refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" compoundref="DS18B20_8cpp" startline="201" endline="214">WriteByte</references>
@@ -467,7 +476,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="157" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="255" bodyend="269"/>
+        <location file="src/Sensors/DS18B20.h" line="168" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="255" bodyend="269"/>
         <references refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" compoundref="DS18B20_8cpp" startline="160" endline="182">Reset</references>
         <references refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" compoundref="DS18B20_8cpp" startline="201" endline="214">WriteByte</references>
         <references refid="DS18B20_8h_1a20a70a05486a1fa3aba1881aa90104cd" compoundref="DS18B20_8h" startline="48">MATCH_ROM</references>
@@ -484,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="160" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="160" bodyend="160"/>
+        <location file="src/Sensors/DS18B20.h" line="171" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="171" bodyend="171"/>
         <references refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
       </memberdef>
       <memberdef kind="function" id="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -498,7 +507,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="161" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="161" bodyend="161"/>
+        <location file="src/Sensors/DS18B20.h" line="172" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="172" bodyend="172"/>
         <references refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
       </memberdef>
       <memberdef kind="function" id="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -512,7 +521,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="162" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="162" bodyend="162"/>
+        <location file="src/Sensors/DS18B20.h" line="173" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="173" bodyend="173"/>
         <references refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
       </memberdef>
       <memberdef kind="function" id="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -526,7 +535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="163" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="163" bodyend="163"/>
+        <location file="src/Sensors/DS18B20.h" line="174" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="174" bodyend="174"/>
         <references refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
       </memberdef>
       <memberdef kind="function" id="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -543,14 +552,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/DS18B20.h" line="165" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="165" bodyend="167"/>
+        <location file="src/Sensors/DS18B20.h" line="178" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="178" bodyend="180"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classDS18B20" kindref="compound">DS18B20</ref> class definition. </para>    </briefdescription>
     <detaileddescription>
 <para>Defines methods for accessing the <ref refid="classDS18B20" kindref="compound">DS18B20</ref> interface </para>    </detaileddescription>
-    <location file="src/Sensors/DS18B20.h" line="65" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="65" bodyend="169"/>
+    <location file="src/Sensors/DS18B20.h" line="65" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="65" bodyend="182"/>
     <listofallmembers>
       <member refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" prot="private" virt="non-virtual"><scope>DS18B20</scope><name>__attribute__</name></member>
       <member refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" prot="private" virt="non-virtual"><scope>DS18B20</scope><name>BitIO</name></member>

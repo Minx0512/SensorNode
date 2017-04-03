@@ -1,23 +1,4 @@
 var searchData=
 [
-  ['nrf',['nrf',['../main_8cpp.html#a4d8d5d287d7e4a27644e7c3b83bfcce2',1,'main.cpp']]],
-  ['nrf24l01_5fack',['NRF24L01_ACK',['../classNRF24L01.html#af2e0a88f330c86d0cc6c43180f70ecbd',1,'NRF24L01']]],
-  ['nrf24l01_5faddrsize',['NRF24L01_ADDRSIZE',['../classNRF24L01.html#a0b5c60487c6b715b9f17f968f7958d93',1,'NRF24L01']]],
-  ['nrf24l01_5fce',['NRF24L01_CE',['../classNRF24L01.html#a56a20345fcb667fcfc9bc1cb62d5152f',1,'NRF24L01']]],
-  ['nrf24l01_5fch',['NRF24L01_CH',['../classNRF24L01.html#a2f5e84525760899949446db94d225700',1,'NRF24L01']]],
-  ['nrf24l01_5fcsn',['NRF24L01_CSN',['../classNRF24L01.html#a4d36b61597b9919dd4a0ecdc53526020',1,'NRF24L01']]],
-  ['nrf24l01_5fddr',['NRF24L01_DDR',['../classNRF24L01.html#a42ef1a6d858a115327d0a7310aaba57c',1,'NRF24L01']]],
-  ['nrf24l01_5fenabledp0',['NRF24L01_ENABLEDP0',['../classNRF24L01.html#a10c710f3795c47ebde120ca3d975c891',1,'NRF24L01']]],
-  ['nrf24l01_5fenabledp1',['NRF24L01_ENABLEDP1',['../classNRF24L01.html#a8ebd82a57efbaa5928a56ba6780740de',1,'NRF24L01']]],
-  ['nrf24l01_5fenabledp2',['NRF24L01_ENABLEDP2',['../classNRF24L01.html#aac40f597790cf3a62b382f919f1293ce',1,'NRF24L01']]],
-  ['nrf24l01_5fenabledp3',['NRF24L01_ENABLEDP3',['../classNRF24L01.html#aea0d090c7d6da9b137ce4ce3690535e8',1,'NRF24L01']]],
-  ['nrf24l01_5fenabledp4',['NRF24L01_ENABLEDP4',['../classNRF24L01.html#a4f19e32ed3324724d3478b9f841a2790',1,'NRF24L01']]],
-  ['nrf24l01_5fenabledp5',['NRF24L01_ENABLEDP5',['../classNRF24L01.html#ae77cf1829f80c703e36ef57b6d23e9a9',1,'NRF24L01']]],
-  ['nrf24l01_5fpayload',['NRF24L01_PAYLOAD',['../classNRF24L01.html#a6f035e7c49d8ed5e1ab84242cef0e9be',1,'NRF24L01']]],
-  ['nrf24l01_5frf24_5fcrc',['NRF24L01_RF24_CRC',['../classNRF24L01.html#af6a260dd55ee5c2f7de7cfac4e91178d',1,'NRF24L01']]],
-  ['nrf24l01_5frf24_5fpa',['NRF24L01_RF24_PA',['../classNRF24L01.html#ac798ba6ce52fd4a13eb40ff274818157',1,'NRF24L01']]],
-  ['nrf24l01_5frf24_5fspeed',['NRF24L01_RF24_SPEED',['../classNRF24L01.html#a2dc0073a56f6aca86da205dd720fd132',1,'NRF24L01']]],
-  ['nrfack',['nrfACK',['../main_8cpp.html#a371b432ae65ae3f6d1cc89a0f392c0cb',1,'main.cpp']]],
-  ['nrfchannel',['nrfChannel',['../main_8cpp.html#a94f95ee5ee779c95ed60e07ae9ea5dc6',1,'main.cpp']]],
-  ['nrfintflag',['nrfIntFlag',['../main_8cpp.html#a4e92ed0235dfab5a966c53305989ecbf',1,'main.cpp']]]
+  ['h',['H',['../classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22.html#ae9fe17893df9d356384716d9f86d267a',1,'ReadSensor::Sensors::Sensors::DHT22']]]
 ];

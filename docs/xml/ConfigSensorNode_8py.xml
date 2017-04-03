@@ -8,7 +8,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">#!/usr/bin/python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1" refid="namespaceConfigSensorNode" refkind="compound"><highlight class="comment">#!/usr/bin/python</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>re</highlight></codeline>
@@ -18,12 +18,12 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>xml.dom.minidom<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>parse,<sp/>parseString</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal">bt_addr<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;98:D3:31:FB:31:A6&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="namespaceConfigSensorNode_1a2a256a51aae354ee6485d21cb86cb2fd" refkind="member"><highlight class="normal">bt_addr<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;98:D3:31:FB:31:A6&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">ConfigMACnRF(sock,pipeNum,MAC):</highlight></codeline>
+<codeline lineno="13" refid="namespaceConfigSensorNode_1adbbe226b0c37c4c20e38d3cb000ae338" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceConfigSensorNode_1adbbe226b0c37c4c20e38d3cb000ae338" kindref="member">ConfigMACnRF</ref>(sock,pipeNum,MAC):</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>PipeNr:<sp/>0-5</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>MAC:<sp/>e.g.<sp/>e0:f0:f0:f0:f0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/>sendStr<sp/>=<sp/>NPSetNRFPipe(pipeNum,MAC)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/>sendStr<sp/>=<sp/><ref refid="namespaceNodeProtocol_1a1272def8025a1b55e2d48b27e7860267" kindref="member">NPSetNRFPipe</ref>(pipeNum,MAC)</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/></highlight><highlight class="comment">#print<sp/>sendStr</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/>out_str<sp/>=<sp/>sendStr</highlight></codeline>
@@ -31,8 +31,8 @@
 <codeline lineno="21"><highlight class="normal"><sp/></highlight><highlight class="comment">#<sp/>out_str<sp/>=<sp/>ReceiveData(sock,&quot;|end&quot;)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out_str</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">ConfigBluetoothName(sock,bt_name):<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/>sendStr<sp/>=<sp/>NPSetBluetoothName(bt_name)</highlight></codeline>
+<codeline lineno="24" refid="namespaceConfigSensorNode_1a9743a906cd63f92eb92bc1bcf33cd291" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceConfigSensorNode_1a9743a906cd63f92eb92bc1bcf33cd291" kindref="member">ConfigBluetoothName</ref>(sock,bt_name):<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/>sendStr<sp/>=<sp/><ref refid="namespaceNodeProtocol_1a119cd90738517fbadbdaaaeaf652a318" kindref="member">NPSetBluetoothName</ref>(bt_name)</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/></highlight><highlight class="comment">#print<sp/>sendStr</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/>out_str<sp/>=<sp/>sendStr</highlight></codeline>
@@ -41,30 +41,30 @@
 <codeline lineno="31"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out_str</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">port<sp/>=<sp/>1<sp/></highlight></codeline>
-<codeline lineno="35"><highlight class="normal">conn=0</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">out_str<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="namespaceConfigSensorNode_1a5982a85097d3c75e147cab5f9c788eda" refkind="member"><highlight class="normal">port<sp/>=<sp/>1<sp/></highlight></codeline>
+<codeline lineno="35" refid="namespaceConfigSensorNode_1af6cc4bdac63d1aa1101a09a1b0397dff" refkind="member"><highlight class="normal">conn=0</highlight></codeline>
+<codeline lineno="36" refid="namespaceConfigSensorNode_1a342daf0f5ba11071cd0705f1c2b0b039" refkind="member"><highlight class="normal">out_str<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>conn==0:</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/>sock<sp/>=<sp/>BlueConnect(bt_addr,port,5.0)</highlight></codeline>
+<codeline lineno="39" refid="namespaceConfigSensorNode_1a355f029c49f6fbfc56463a4276debbb9" refkind="member"><highlight class="normal"><sp/><sp/>sock<sp/>=<sp/><ref refid="namespaceBluetoothConn_1ab0d988d648786cc8189040dca527bc06" kindref="member">BlueConnect</ref>(bt_addr,port,5.0)</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/>conn=1</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>ConfigBluetoothName(sock,</highlight><highlight class="stringliteral">&quot;MinxSensorNode&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/><ref refid="namespaceConfigSensorNode_1a9743a906cd63f92eb92bc1bcf33cd291" kindref="member">ConfigBluetoothName</ref>(sock,</highlight><highlight class="stringliteral">&quot;MinxSensorNode&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>ConfigMACnRF(sock,0,</highlight><highlight class="stringliteral">&quot;e0:f0:f0:f0:f0&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">#<sp/>TX_ADDR<sp/>and<sp/>RX_ADDR0<sp/>at<sp/>SensorNodeBase</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>ConfigMACnRF(sock,1,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C0&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">#<sp/>SensorNode01</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>ConfigMACnRF(sock,2,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C1&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">#<sp/>SensorNode02</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>ConfigMACnRF(sock,3,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C2&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>ConfigMACnRF(sock,4,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C3&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>ConfigMACnRF(sock,5,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C4&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/><ref refid="namespaceConfigSensorNode_1adbbe226b0c37c4c20e38d3cb000ae338" kindref="member">ConfigMACnRF</ref>(sock,0,</highlight><highlight class="stringliteral">&quot;e0:f0:f0:f0:f0&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">#<sp/>TX_ADDR<sp/>and<sp/>RX_ADDR0<sp/>at<sp/>SensorNodeBase</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/><ref refid="namespaceConfigSensorNode_1adbbe226b0c37c4c20e38d3cb000ae338" kindref="member">ConfigMACnRF</ref>(sock,1,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C0&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">#<sp/>SensorNode01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/><ref refid="namespaceConfigSensorNode_1adbbe226b0c37c4c20e38d3cb000ae338" kindref="member">ConfigMACnRF</ref>(sock,2,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C1&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">#<sp/>SensorNode02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/><ref refid="namespaceConfigSensorNode_1adbbe226b0c37c4c20e38d3cb000ae338" kindref="member">ConfigMACnRF</ref>(sock,3,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C2&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/><ref refid="namespaceConfigSensorNode_1adbbe226b0c37c4c20e38d3cb000ae338" kindref="member">ConfigMACnRF</ref>(sock,4,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C3&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/><ref refid="namespaceConfigSensorNode_1adbbe226b0c37c4c20e38d3cb000ae338" kindref="member">ConfigMACnRF</ref>(sock,5,</highlight><highlight class="stringliteral">&quot;e1:f0:f0:f0:C4&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/>CloseConn(sock)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="namespaceBluetoothConn_1a26df1ae079844968383f943f79611564" kindref="member">CloseConn</ref>(sock)</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>IOError<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>e:</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;{0}&quot;</highlight><highlight class="normal">.format(e)</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Python/ConfigSensorNode.py"/>
+    <location file="Python/old/ConfigSensorNode.py"/>
   </compounddef>
 </doxygen>

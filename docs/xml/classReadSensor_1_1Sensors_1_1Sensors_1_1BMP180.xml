@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180" kind="class" language="Python" prot="public">
+    <compoundname>ReadSensor::Sensors::Sensors::BMP180</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a3c5e2dce2dbf36b6bf58ce03fe9f9760" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.BMP180::P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="86" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a1255570ce7a030cd3b8107a7c030689d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.BMP180::unitP</definition>
+        <argsstring></argsstring>
+        <name>unitP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="87" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1afe368d14fb56949c6807490f5f98598f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.BMP180::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="88" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1aba2f27830d1c5ebb2bbd489b85a20e63" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.BMP180::unitT</definition>
+        <argsstring></argsstring>
+        <name>unitT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="89" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a628ea789c02ea34753668a4608695e06" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.BMP180::err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="90" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a876011e5f5ba316f75c74f2b1811d878" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.BMP180::bmp</definition>
+        <argsstring></argsstring>
+        <name>bmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="92" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1ab2e2524391f73ec0d30d410fadd0a652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.Sensors.Sensors.BMP180.__init__</definition>
+        <argsstring>(self, responseStr, sensStr)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>responseStr</type>
+          <defname>responseStr</defname>
+        </param>
+        <param>
+          <type>sensStr</type>
+          <defname>sensStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="85" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="85" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/ReadSensor/Sensors/Sensors.py" line="84" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="84" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1ab2e2524391f73ec0d30d410fadd0a652" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::BMP180</scope><name>__init__</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a876011e5f5ba316f75c74f2b1811d878" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::BMP180</scope><name>bmp</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a628ea789c02ea34753668a4608695e06" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::BMP180</scope><name>err</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a3c5e2dce2dbf36b6bf58ce03fe9f9760" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::BMP180</scope><name>P</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1afe368d14fb56949c6807490f5f98598f" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::BMP180</scope><name>T</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a1255570ce7a030cd3b8107a7c030689d" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::BMP180</scope><name>unitP</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1aba2f27830d1c5ebb2bbd489b85a20e63" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::BMP180</scope><name>unitT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,83 @@
+.TH "Python/old/SensorNode0.py" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Python/old/SensorNode0.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBSensorNode0\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBSensorNode0\&.isNightTime\fP (lightValue)"
+.br
+.ti -1c
+.RI "def \fBSensorNode0\&.SleepMode\fP (slpmd)"
+.br
+.ti -1c
+.RI "def \fBSensorNode0\&.NoMovement\fP (lastmv, lightVal, tIn, stateOlight)"
+.br
+.ti -1c
+.RI "def \fBSensorNode0\&.OnMovement\fP (lightVal, tIn, tOut, stateOlight, rsEneabled)"
+.br
+.ti -1c
+.RI "def \fBSensorNode0\&.DetectMovement\fP (socket, tInside, tOutside, rSensorsEnabled, slpmode)"
+.br
+.ti -1c
+.RI "def \fBSensorNode0\&.ReadSensorData\fP (socket, tnum)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBSensorNode0\&.port\fP = 1"
+.br
+.ti -1c
+.RI "int \fBSensorNode0\&.conn\fP = 0"
+.br
+.ti -1c
+.RI "string \fBSensorNode0\&.out_str\fP = ''"
+.br
+.ti -1c
+.RI "string \fBSensorNode0\&.bd_addr\fP = '98:D3:31:FB:31:A6'"
+.br
+.ti -1c
+.RI "int \fBSensorNode0\&.remoteSensorsEnabled\fP = 0"
+.br
+.ti -1c
+.RI "int \fBSensorNode0\&.sleepmode\fP = 0"
+.br
+.ti -1c
+.RI "\fBSensorNode0\&.sock\fP = BlueConnect(bd_addr,port,5\&.0)"
+.br
+.ti -1c
+.RI "int \fBSensorNode0\&.prevmins\fP = 0"
+.br
+.ti -1c
+.RI "int \fBSensorNode0\&.thresh\fP = 500"
+.br
+.ti -1c
+.RI "int \fBSensorNode0\&.treshOut\fP = 500"
+.br
+.ti -1c
+.RI "string \fBSensorNode0\&.humDHT22\fP = ''"
+.br
+.ti -1c
+.RI "string \fBSensorNode0\&.tempDHT22\fP = ''"
+.br
+.ti -1c
+.RI "\fBSensorNode0\&.threadLock\fP = thread\&.allocate_lock()"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

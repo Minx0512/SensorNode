@@ -1,0 +1,37 @@
+.TH "Python/ReadSensor/SensorNode.py" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Python/ReadSensor/SensorNode.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBReadSensor\&.SensorNode\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBReadSensor\&.SensorNode\&.rs\fP = ReadSensor\&.ReadSensor('/dev/ttyAMA0', 9600)"
+.br
+.ti -1c
+.RI "\fBReadSensor\&.SensorNode\&.availableSensors\fP = rs\&.GetAvailableSensors('A0:A0:A0:A0:A0')"
+.br
+.ti -1c
+.RI "\fBReadSensor\&.SensorNode\&.ds\fP = rs\&.DS18B20('A0:A0:A0:A0:A0')"
+.br
+.ti -1c
+.RI "\fBReadSensor\&.SensorNode\&.mv\fP = rs\&.Movement('A0:A0:A0:A0:A0')"
+.br
+.ti -1c
+.RI "\fBReadSensor\&.SensorNode\&.light\fP = rs\&.LightAnalog('A0:A0:A0:A0:A0')"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

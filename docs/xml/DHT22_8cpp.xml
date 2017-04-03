@@ -11,62 +11,62 @@
     <includes local="no">stdlib.h</includes>
     <includes local="no">ctype.h</includes>
     <incdepgraph>
-      <node id="225">
+      <node id="253">
         <label>DHT22.h</label>
         <link refid="DHT22_8h"/>
-        <childnode refid="226" relation="include">
+        <childnode refid="254" relation="include">
         </childnode>
-        <childnode refid="227" relation="include">
+        <childnode refid="255" relation="include">
         </childnode>
-        <childnode refid="228" relation="include">
+        <childnode refid="256" relation="include">
         </childnode>
-        <childnode refid="229" relation="include">
+        <childnode refid="257" relation="include">
         </childnode>
-        <childnode refid="230" relation="include">
+        <childnode refid="258" relation="include">
         </childnode>
       </node>
-      <node id="233">
+      <node id="261">
         <label>avr/interrupt.h</label>
       </node>
-      <node id="228">
+      <node id="256">
         <label>stdlib.h</label>
       </node>
-      <node id="224">
+      <node id="252">
         <label>src/Sensors/DHT22.cpp</label>
         <link refid="DHT22.cpp"/>
-        <childnode refid="225" relation="include">
+        <childnode refid="253" relation="include">
         </childnode>
-        <childnode refid="226" relation="include">
+        <childnode refid="254" relation="include">
         </childnode>
-        <childnode refid="231" relation="include">
+        <childnode refid="259" relation="include">
         </childnode>
-        <childnode refid="227" relation="include">
+        <childnode refid="255" relation="include">
         </childnode>
-        <childnode refid="232" relation="include">
+        <childnode refid="260" relation="include">
         </childnode>
-        <childnode refid="233" relation="include">
+        <childnode refid="261" relation="include">
         </childnode>
-        <childnode refid="228" relation="include">
+        <childnode refid="256" relation="include">
         </childnode>
-        <childnode refid="229" relation="include">
+        <childnode refid="257" relation="include">
         </childnode>
       </node>
-      <node id="227">
+      <node id="255">
         <label>avr/io.h</label>
       </node>
-      <node id="232">
+      <node id="260">
         <label>util/delay.h</label>
       </node>
-      <node id="231">
+      <node id="259">
         <label>string.h</label>
       </node>
-      <node id="229">
+      <node id="257">
         <label>ctype.h</label>
       </node>
-      <node id="226">
+      <node id="254">
         <label>stdio.h</label>
       </node>
-      <node id="230">
+      <node id="258">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>

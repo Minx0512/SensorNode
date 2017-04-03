@@ -8,21 +8,21 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>bluetooth</highlight></codeline>
+<codeline lineno="1" refid="namespaceBluetoothConn" refkind="compound"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>bluetooth</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">BlueConnect(MAC,port,timeOut):</highlight></codeline>
+<codeline lineno="4" refid="namespaceBluetoothConn_1ab0d988d648786cc8189040dca527bc06" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceBluetoothConn_1ab0d988d648786cc8189040dca527bc06" kindref="member">BlueConnect</ref>(MAC,port,timeOut):</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Connecting<sp/>to&quot;</highlight><highlight class="normal">,MAC</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/>socket=bluetooth.BluetoothSocket(<sp/>bluetooth.RFCOMM<sp/>)</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/>socket.connect((MAC,<sp/>port))</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/>socket.settimeout(timeOut)</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>socket</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">CloseConn(s):</highlight></codeline>
+<codeline lineno="11" refid="namespaceBluetoothConn_1a26df1ae079844968383f943f79611564" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceBluetoothConn_1a26df1ae079844968383f943f79611564" kindref="member">CloseConn</ref>(s):</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/></highlight><highlight class="comment">#print(&quot;disconnecting...&quot;)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/>s.close()</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">ReceiveData(s,endStr):</highlight></codeline>
+<codeline lineno="15" refid="namespaceBluetoothConn_1a83232f3a490b3985e04a24d1b8fc981a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceBluetoothConn_1a83232f3a490b3985e04a24d1b8fc981a" kindref="member">ReceiveData</ref>(s,endStr):</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/>out_str<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/>lE<sp/>=<sp/>len(endStr)</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/></highlight><highlight class="comment">#print<sp/>&quot;Receiving<sp/>data...&quot;,<sp/>endStr</highlight><highlight class="normal"></highlight></codeline>
@@ -38,7 +38,7 @@
 <codeline lineno="28"><highlight class="normal"><sp/></highlight><highlight class="comment">#print<sp/>out_str<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out_str[0:len(out_str)-lE]</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">SendData(s,string):</highlight></codeline>
+<codeline lineno="31" refid="namespaceBluetoothConn_1a529bdfae6ea4b07c397c05d9bb64261c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceBluetoothConn_1a529bdfae6ea4b07c397c05d9bb64261c" kindref="member">SendData</ref>(s,string):</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/></highlight><highlight class="comment">#print<sp/>&quot;Sending:<sp/>&quot;,string</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/>s.send(string)</highlight></codeline>
@@ -46,17 +46,17 @@
 <codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;IOError<sp/>Send<sp/>Data:<sp/>{0}&quot;</highlight><highlight class="normal">.format(e)</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">ReadSensorData(bd_addr,send_str):</highlight></codeline>
+<codeline lineno="39" refid="namespaceBluetoothConn_1ad64f432c5491c489f7ae16b5e5d98149" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceBluetoothConn_1ad64f432c5491c489f7ae16b5e5d98149" kindref="member">ReadSensorData</ref>(bd_addr,send_str):</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/>port<sp/>=<sp/>1<sp/></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/>conn=0</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/>out_str<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>conn==0:</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>sock<sp/>=<sp/>BlueConnect(bd_addr,port,5.0)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>sock<sp/>=<sp/><ref refid="namespaceBluetoothConn_1ab0d988d648786cc8189040dca527bc06" kindref="member">BlueConnect</ref>(bd_addr,port,5.0)</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/>conn=1</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/>SendData(sock,send_str)</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>out_str<sp/>=<sp/>ReceiveData(sock,</highlight><highlight class="stringliteral">&quot;\n|+end&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/>CloseConn(sock)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><ref refid="namespaceBluetoothConn_1a529bdfae6ea4b07c397c05d9bb64261c" kindref="member">SendData</ref>(sock,send_str)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>out_str<sp/>=<sp/><ref refid="namespaceBluetoothConn_1a83232f3a490b3985e04a24d1b8fc981a" kindref="member">ReceiveData</ref>(sock,</highlight><highlight class="stringliteral">&quot;\n|+end&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><ref refid="namespaceBluetoothConn_1a26df1ae079844968383f943f79611564" kindref="member">CloseConn</ref>(sock)</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>IOError<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>e:</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>ReadSensorData:<sp/>{0}&quot;</highlight><highlight class="normal">.format(e)</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out_str</highlight></codeline>
@@ -77,6 +77,6 @@
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Python/BluetoothConn.py"/>
+    <location file="Python/old/BluetoothConn.py"/>
   </compounddef>
 </doxygen>

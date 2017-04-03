@@ -1,0 +1,58 @@
+.TH "ConfigSensorNode" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConfigSensorNode \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBConfigMACnRF\fP (\fBsock\fP, pipeNum, MAC)"
+.br
+.ti -1c
+.RI "def \fBConfigBluetoothName\fP (\fBsock\fP, bt_name)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "string \fBbt_addr\fP = '98:D3:31:FB:31:A6'"
+.br
+.ti -1c
+.RI "int \fBport\fP = 1"
+.br
+.ti -1c
+.RI "int \fBconn\fP = 0"
+.br
+.ti -1c
+.RI "string \fBout_str\fP = ''"
+.br
+.ti -1c
+.RI "\fBsock\fP = BlueConnect(\fBbt_addr\fP,\fBport\fP,5\&.0)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def ConfigSensorNode\&.ConfigBluetoothName ( sock,  bt_name)"
+
+.SS "def ConfigSensorNode\&.ConfigMACnRF ( sock,  pipeNum,  MAC)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "string ConfigSensorNode\&.bt_addr = '98:D3:31:FB:31:A6'"
+
+.SS "int ConfigSensorNode\&.conn = 0"
+
+.SS "string ConfigSensorNode\&.out_str = ''"
+
+.SS "int ConfigSensorNode\&.port = 1"
+
+.SS "ConfigSensorNode\&.sock = BlueConnect(\fBbt_addr\fP,\fBport\fP,5\&.0)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

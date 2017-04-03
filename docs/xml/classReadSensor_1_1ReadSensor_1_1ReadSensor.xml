@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classReadSensor_1_1ReadSensor_1_1ReadSensor" kind="class" language="Python" prot="public">
+    <compoundname>ReadSensor::ReadSensor::ReadSensor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a3a0ed6c9acd4caf309f76e32762da3eb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.ReadSensor.ReadSensor::sensorMAC</definition>
+        <argsstring></argsstring>
+        <name>sensorMAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="12" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a754b9a5ba983015102db5cc6db0220c4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.ReadSensor.ReadSensor::cmdID</definition>
+        <argsstring></argsstring>
+        <name>cmdID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="13" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a887831d87c0bd60ce4e420ae005ff21b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.ReadSensor.ReadSensor::propertyString</definition>
+        <argsstring></argsstring>
+        <name>propertyString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="14" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a23b1dcdc7ca0636c9259b85206365d52" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.ReadSensor.ReadSensor::queryStr</definition>
+        <argsstring></argsstring>
+        <name>queryStr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="15" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1abd2cce4838393915a5607360e8893efd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.ReadSensor.ReadSensor::serialCon</definition>
+        <argsstring></argsstring>
+        <name>serialCon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="16" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.ReadSensor.ReadSensor::resp</definition>
+        <argsstring></argsstring>
+        <name>resp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="17" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a985eaa0e88d0eb794c078fd634a425c5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.ReadSensor.ReadSensor::availableSensors</definition>
+        <argsstring></argsstring>
+        <name>availableSensors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="18" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1ac63fc790db03ad3f967f55e822439f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.ReadSensor.ReadSensor.__init__</definition>
+        <argsstring>(self, port, baudrate)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>port</type>
+          <defname>port</defname>
+        </param>
+        <param>
+          <type>baudrate</type>
+          <defname>baudrate</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="11" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="11" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a1baee16b9594cd5e936d70ba5b2ca766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.ReadSensor.ReadSensor.GetAvailableSensors</definition>
+        <argsstring>(self, MAC)</argsstring>
+        <name>GetAvailableSensors</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>MAC</type>
+          <defname>MAC</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Get available sensors on a certain node</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="20" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="20" bodyend="27"/>
+        <references refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" compoundref="ReadSensor_8py" startline="17">ReadSensor.ReadSensor.ReadSensor.resp</references>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a4886078ef8141638fa77f74b460cc6a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.ReadSensor.ReadSensor.DS18B20</definition>
+        <argsstring>(self, MAC)</argsstring>
+        <name>DS18B20</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>MAC</type>
+          <defname>MAC</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reads all DS18B20 sensors on one node with a certain MAC address</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="28" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="28" bodyend="35"/>
+        <references refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" compoundref="ReadSensor_8py" startline="17">ReadSensor.ReadSensor.ReadSensor.resp</references>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a0fce5453956e120cf8b803f4bdf8c8f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.ReadSensor.ReadSensor.DHT22</definition>
+        <argsstring>(self, MAC)</argsstring>
+        <name>DHT22</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>MAC</type>
+          <defname>MAC</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reads the DHT22 sensor on a node with a certain MAC address</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="36" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="36" bodyend="42"/>
+        <references refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" compoundref="ReadSensor_8py" startline="17">ReadSensor.ReadSensor.ReadSensor.resp</references>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a05b0c3d365d87a9918b31ee59e653bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.ReadSensor.ReadSensor.Movement</definition>
+        <argsstring>(self, MAC)</argsstring>
+        <name>Movement</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>MAC</type>
+          <defname>MAC</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reads the movement detector of a certain node </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="43" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="43" bodyend="49"/>
+        <references refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" compoundref="ReadSensor_8py" startline="17">ReadSensor.ReadSensor.ReadSensor.resp</references>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a64bc538f36af840747f77ad04dcfb2b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.ReadSensor.ReadSensor.LightAnalog</definition>
+        <argsstring>(self, MAC)</argsstring>
+        <name>LightAnalog</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>MAC</type>
+          <defname>MAC</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reads the analog photoresistor on a certain node </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="50" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="50" bodyend="56"/>
+        <references refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" compoundref="ReadSensor_8py" startline="17">ReadSensor.ReadSensor.ReadSensor.resp</references>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1adf67c50f274add6505dee49690f1de93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.ReadSensor.ReadSensor.LightDigital</definition>
+        <argsstring>(self, MAC)</argsstring>
+        <name>LightDigital</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>MAC</type>
+          <defname>MAC</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reads the digital light sensor on a certain node </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="57" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="57" bodyend="64"/>
+        <references refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" compoundref="ReadSensor_8py" startline="17">ReadSensor.ReadSensor.ReadSensor.resp</references>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1ReadSensor_1_1ReadSensor_1abfe83fdebe959943228e1d7588d12c18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.ReadSensor.ReadSensor.BMP180</definition>
+        <argsstring>(self, MAC)</argsstring>
+        <name>BMP180</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>MAC</type>
+          <defname>MAC</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reads the BMP180 pressure sensor on a certain node</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/ReadSensor.py" line="65" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="65" bodyend="74"/>
+        <references refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" compoundref="ReadSensor_8py" startline="17">ReadSensor.ReadSensor.ReadSensor.resp</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>provides functions for sensor reading</verbatim> </para>    </detaileddescription>
+    <location file="Python/ReadSensor/ReadSensor.py" line="9" column="1" bodyfile="Python/ReadSensor/ReadSensor.py" bodystart="9" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1ac63fc790db03ad3f967f55e822439f3a" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>__init__</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a985eaa0e88d0eb794c078fd634a425c5" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>availableSensors</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1abfe83fdebe959943228e1d7588d12c18" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>BMP180</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a754b9a5ba983015102db5cc6db0220c4" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>cmdID</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a0fce5453956e120cf8b803f4bdf8c8f0" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>DHT22</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a4886078ef8141638fa77f74b460cc6a8" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>DS18B20</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a1baee16b9594cd5e936d70ba5b2ca766" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>GetAvailableSensors</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a64bc538f36af840747f77ad04dcfb2b6" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>LightAnalog</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1adf67c50f274add6505dee49690f1de93" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>LightDigital</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a05b0c3d365d87a9918b31ee59e653bc0" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>Movement</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a887831d87c0bd60ce4e420ae005ff21b" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>propertyString</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a23b1dcdc7ca0636c9259b85206365d52" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>queryStr</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>resp</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a3a0ed6c9acd4caf309f76e32762da3eb" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>sensorMAC</name></member>
+      <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1abd2cce4838393915a5607360e8893efd" prot="public" virt="non-virtual"><scope>ReadSensor::ReadSensor::ReadSensor</scope><name>serialCon</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

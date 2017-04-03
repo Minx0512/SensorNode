@@ -1,0 +1,193 @@
+\hypertarget{namespaceSensorNode0}{}\section{Sensor\+Node0 Namespace Reference}
+\label{namespaceSensorNode0}\index{Sensor\+Node0@{Sensor\+Node0}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceSensorNode0_acebf4f2262d99cf53409e57f8018fb80}{is\+Night\+Time} (light\+Value)
+\item 
+def \hyperlink{namespaceSensorNode0_af6220b8b1116262731410676440f7e3f}{Sleep\+Mode} (slpmd)
+\item 
+def \hyperlink{namespaceSensorNode0_a6adf2f38d28053fb7d9d8b9ef3ef7524}{No\+Movement} (lastmv, light\+Val, t\+In, state\+Olight)
+\item 
+def \hyperlink{namespaceSensorNode0_ac43f766b9b1117ce6520080a80f7cb88}{On\+Movement} (light\+Val, t\+In, t\+Out, state\+Olight, rs\+Eneabled)
+\item 
+def \hyperlink{namespaceSensorNode0_abfecbd15467837166bc1c24a5d5be99d}{Detect\+Movement} (socket, t\+Inside, t\+Outside, r\+Sensors\+Enabled, slpmode)
+\item 
+def \hyperlink{namespaceSensorNode0_ac9f0551e56fe21523c6070f32e6b9b14}{Read\+Sensor\+Data} (socket, tnum)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceSensorNode0_a98a0834cf9ffb42aadb98db46f82cac4}{port} = 1
+\item 
+int \hyperlink{namespaceSensorNode0_aa58109ec652b3ad7ee90acb844a55e0f}{conn} = 0
+\item 
+string \hyperlink{namespaceSensorNode0_acbfb5ad644195e6858adb96b932aa531}{out\+\_\+str} = \textquotesingle{}\textquotesingle{}
+\item 
+string \hyperlink{namespaceSensorNode0_a6bda8d693f223a3426dcc68bdb060e29}{bd\+\_\+addr} = \textquotesingle{}98\+:D3\+:31\+:\+F\+B\+:31\+:\+A6\textquotesingle{}
+\item 
+int \hyperlink{namespaceSensorNode0_ad2115f513c00e2649307834bfead90af}{remote\+Sensors\+Enabled} = 0
+\item 
+int \hyperlink{namespaceSensorNode0_a97a9f44b071f562041483214e2bccb90}{sleepmode} = 0
+\item 
+\hyperlink{namespaceSensorNode0_a6b4baa40941946967bba9f0a8b1d414b}{sock} = Blue\+Connect(\hyperlink{namespaceSensorNode0_a6bda8d693f223a3426dcc68bdb060e29}{bd\+\_\+addr},\hyperlink{namespaceSensorNode0_a98a0834cf9ffb42aadb98db46f82cac4}{port},5.\+0)
+\item 
+int \hyperlink{namespaceSensorNode0_a6cd829500b35c8860adb0de438f8ac86}{prevmins} = 0
+\item 
+int \hyperlink{namespaceSensorNode0_affd806dd0b5faa586b60d239832a60b3}{thresh} = 500
+\item 
+int \hyperlink{namespaceSensorNode0_a8b1d695d3a341a34667a220af9c25ce4}{tresh\+Out} = 500
+\item 
+string \hyperlink{namespaceSensorNode0_af0fa9a4e63f52876e95004704156b614}{hum\+D\+H\+T22} = \textquotesingle{}\textquotesingle{}
+\item 
+string \hyperlink{namespaceSensorNode0_ae6cff13e6146160841c5249c19e8e8c7}{temp\+D\+H\+T22} = \textquotesingle{}\textquotesingle{}
+\item 
+\hyperlink{namespaceSensorNode0_ac28b0dfb61cb44c2075c9f10cc918c72}{thread\+Lock} = thread.\+allocate\+\_\+lock()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Sensor\+Node0@{Sensor\+Node0}!Detect\+Movement@{Detect\+Movement}}
+\index{Detect\+Movement@{Detect\+Movement}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{Detect\+Movement(socket, t\+Inside, t\+Outside, r\+Sensors\+Enabled, slpmode)}{DetectMovement(socket, tInside, tOutside, rSensorsEnabled, slpmode)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sensor\+Node0.\+Detect\+Movement (
+\begin{DoxyParamCaption}
+\item[{}]{socket, }
+\item[{}]{t\+Inside, }
+\item[{}]{t\+Outside, }
+\item[{}]{r\+Sensors\+Enabled, }
+\item[{}]{slpmode}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceSensorNode0_abfecbd15467837166bc1c24a5d5be99d}{}\label{namespaceSensorNode0_abfecbd15467837166bc1c24a5d5be99d}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceSensorNode0_abfecbd15467837166bc1c24a5d5be99d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensor\+Node0@{Sensor\+Node0}!is\+Night\+Time@{is\+Night\+Time}}
+\index{is\+Night\+Time@{is\+Night\+Time}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{is\+Night\+Time(light\+Value)}{isNightTime(lightValue)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sensor\+Node0.\+is\+Night\+Time (
+\begin{DoxyParamCaption}
+\item[{}]{light\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceSensorNode0_acebf4f2262d99cf53409e57f8018fb80}{}\label{namespaceSensorNode0_acebf4f2262d99cf53409e57f8018fb80}
+\index{Sensor\+Node0@{Sensor\+Node0}!No\+Movement@{No\+Movement}}
+\index{No\+Movement@{No\+Movement}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{No\+Movement(lastmv, light\+Val, t\+In, state\+Olight)}{NoMovement(lastmv, lightVal, tIn, stateOlight)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sensor\+Node0.\+No\+Movement (
+\begin{DoxyParamCaption}
+\item[{}]{lastmv, }
+\item[{}]{light\+Val, }
+\item[{}]{t\+In, }
+\item[{}]{state\+Olight}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceSensorNode0_a6adf2f38d28053fb7d9d8b9ef3ef7524}{}\label{namespaceSensorNode0_a6adf2f38d28053fb7d9d8b9ef3ef7524}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceSensorNode0_a6adf2f38d28053fb7d9d8b9ef3ef7524_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensor\+Node0@{Sensor\+Node0}!On\+Movement@{On\+Movement}}
+\index{On\+Movement@{On\+Movement}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{On\+Movement(light\+Val, t\+In, t\+Out, state\+Olight, rs\+Eneabled)}{OnMovement(lightVal, tIn, tOut, stateOlight, rsEneabled)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sensor\+Node0.\+On\+Movement (
+\begin{DoxyParamCaption}
+\item[{}]{light\+Val, }
+\item[{}]{t\+In, }
+\item[{}]{t\+Out, }
+\item[{}]{state\+Olight, }
+\item[{}]{rs\+Eneabled}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceSensorNode0_ac43f766b9b1117ce6520080a80f7cb88}{}\label{namespaceSensorNode0_ac43f766b9b1117ce6520080a80f7cb88}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceSensorNode0_ac43f766b9b1117ce6520080a80f7cb88_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensor\+Node0@{Sensor\+Node0}!Read\+Sensor\+Data@{Read\+Sensor\+Data}}
+\index{Read\+Sensor\+Data@{Read\+Sensor\+Data}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{Read\+Sensor\+Data(socket, tnum)}{ReadSensorData(socket, tnum)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sensor\+Node0.\+Read\+Sensor\+Data (
+\begin{DoxyParamCaption}
+\item[{}]{socket, }
+\item[{}]{tnum}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceSensorNode0_ac9f0551e56fe21523c6070f32e6b9b14}{}\label{namespaceSensorNode0_ac9f0551e56fe21523c6070f32e6b9b14}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceSensorNode0_ac9f0551e56fe21523c6070f32e6b9b14_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensor\+Node0@{Sensor\+Node0}!Sleep\+Mode@{Sleep\+Mode}}
+\index{Sleep\+Mode@{Sleep\+Mode}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{Sleep\+Mode(slpmd)}{SleepMode(slpmd)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sensor\+Node0.\+Sleep\+Mode (
+\begin{DoxyParamCaption}
+\item[{}]{slpmd}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceSensorNode0_af6220b8b1116262731410676440f7e3f}{}\label{namespaceSensorNode0_af6220b8b1116262731410676440f7e3f}
+
+
+\subsection{Variable Documentation}
+\index{Sensor\+Node0@{Sensor\+Node0}!bd\+\_\+addr@{bd\+\_\+addr}}
+\index{bd\+\_\+addr@{bd\+\_\+addr}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{bd\+\_\+addr}{bd_addr}}]{\setlength{\rightskip}{0pt plus 5cm}string Sensor\+Node0.\+bd\+\_\+addr = \textquotesingle{}98\+:D3\+:31\+:\+F\+B\+:31\+:\+A6\textquotesingle{}}\hypertarget{namespaceSensorNode0_a6bda8d693f223a3426dcc68bdb060e29}{}\label{namespaceSensorNode0_a6bda8d693f223a3426dcc68bdb060e29}
+\index{Sensor\+Node0@{Sensor\+Node0}!conn@{conn}}
+\index{conn@{conn}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{conn}{conn}}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\+Node0.\+conn = 0}\hypertarget{namespaceSensorNode0_aa58109ec652b3ad7ee90acb844a55e0f}{}\label{namespaceSensorNode0_aa58109ec652b3ad7ee90acb844a55e0f}
+\index{Sensor\+Node0@{Sensor\+Node0}!hum\+D\+H\+T22@{hum\+D\+H\+T22}}
+\index{hum\+D\+H\+T22@{hum\+D\+H\+T22}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{hum\+D\+H\+T22}{humDHT22}}]{\setlength{\rightskip}{0pt plus 5cm}string Sensor\+Node0.\+hum\+D\+H\+T22 = \textquotesingle{}\textquotesingle{}}\hypertarget{namespaceSensorNode0_af0fa9a4e63f52876e95004704156b614}{}\label{namespaceSensorNode0_af0fa9a4e63f52876e95004704156b614}
+\index{Sensor\+Node0@{Sensor\+Node0}!out\+\_\+str@{out\+\_\+str}}
+\index{out\+\_\+str@{out\+\_\+str}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{out\+\_\+str}{out_str}}]{\setlength{\rightskip}{0pt plus 5cm}string Sensor\+Node0.\+out\+\_\+str = \textquotesingle{}\textquotesingle{}}\hypertarget{namespaceSensorNode0_acbfb5ad644195e6858adb96b932aa531}{}\label{namespaceSensorNode0_acbfb5ad644195e6858adb96b932aa531}
+\index{Sensor\+Node0@{Sensor\+Node0}!port@{port}}
+\index{port@{port}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{port}{port}}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\+Node0.\+port = 1}\hypertarget{namespaceSensorNode0_a98a0834cf9ffb42aadb98db46f82cac4}{}\label{namespaceSensorNode0_a98a0834cf9ffb42aadb98db46f82cac4}
+\index{Sensor\+Node0@{Sensor\+Node0}!prevmins@{prevmins}}
+\index{prevmins@{prevmins}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{prevmins}{prevmins}}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\+Node0.\+prevmins = 0}\hypertarget{namespaceSensorNode0_a6cd829500b35c8860adb0de438f8ac86}{}\label{namespaceSensorNode0_a6cd829500b35c8860adb0de438f8ac86}
+\index{Sensor\+Node0@{Sensor\+Node0}!remote\+Sensors\+Enabled@{remote\+Sensors\+Enabled}}
+\index{remote\+Sensors\+Enabled@{remote\+Sensors\+Enabled}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{remote\+Sensors\+Enabled}{remoteSensorsEnabled}}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\+Node0.\+remote\+Sensors\+Enabled = 0}\hypertarget{namespaceSensorNode0_ad2115f513c00e2649307834bfead90af}{}\label{namespaceSensorNode0_ad2115f513c00e2649307834bfead90af}
+\index{Sensor\+Node0@{Sensor\+Node0}!sleepmode@{sleepmode}}
+\index{sleepmode@{sleepmode}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{sleepmode}{sleepmode}}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\+Node0.\+sleepmode = 0}\hypertarget{namespaceSensorNode0_a97a9f44b071f562041483214e2bccb90}{}\label{namespaceSensorNode0_a97a9f44b071f562041483214e2bccb90}
+\index{Sensor\+Node0@{Sensor\+Node0}!sock@{sock}}
+\index{sock@{sock}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{sock}{sock}}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\+Node0.\+sock = Blue\+Connect({\bf bd\+\_\+addr},{\bf port},5.\+0)}\hypertarget{namespaceSensorNode0_a6b4baa40941946967bba9f0a8b1d414b}{}\label{namespaceSensorNode0_a6b4baa40941946967bba9f0a8b1d414b}
+\index{Sensor\+Node0@{Sensor\+Node0}!temp\+D\+H\+T22@{temp\+D\+H\+T22}}
+\index{temp\+D\+H\+T22@{temp\+D\+H\+T22}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{temp\+D\+H\+T22}{tempDHT22}}]{\setlength{\rightskip}{0pt plus 5cm}string Sensor\+Node0.\+temp\+D\+H\+T22 = \textquotesingle{}\textquotesingle{}}\hypertarget{namespaceSensorNode0_ae6cff13e6146160841c5249c19e8e8c7}{}\label{namespaceSensorNode0_ae6cff13e6146160841c5249c19e8e8c7}
+\index{Sensor\+Node0@{Sensor\+Node0}!thread\+Lock@{thread\+Lock}}
+\index{thread\+Lock@{thread\+Lock}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{thread\+Lock}{threadLock}}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\+Node0.\+thread\+Lock = thread.\+allocate\+\_\+lock()}\hypertarget{namespaceSensorNode0_ac28b0dfb61cb44c2075c9f10cc918c72}{}\label{namespaceSensorNode0_ac28b0dfb61cb44c2075c9f10cc918c72}
+\index{Sensor\+Node0@{Sensor\+Node0}!thresh@{thresh}}
+\index{thresh@{thresh}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{thresh}{thresh}}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\+Node0.\+thresh = 500}\hypertarget{namespaceSensorNode0_affd806dd0b5faa586b60d239832a60b3}{}\label{namespaceSensorNode0_affd806dd0b5faa586b60d239832a60b3}
+\index{Sensor\+Node0@{Sensor\+Node0}!tresh\+Out@{tresh\+Out}}
+\index{tresh\+Out@{tresh\+Out}!Sensor\+Node0@{Sensor\+Node0}}
+\subsubsection[{\texorpdfstring{tresh\+Out}{treshOut}}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\+Node0.\+tresh\+Out = 500}\hypertarget{namespaceSensorNode0_a8b1d695d3a341a34667a220af9c25ce4}{}\label{namespaceSensorNode0_a8b1d695d3a341a34667a220af9c25ce4}

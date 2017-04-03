@@ -3,9 +3,9 @@
   <compounddef id="namespaceNodeProtocol" kind="namespace" language="Python">
     <compoundname>NodeProtocol</compoundname>
       <sectiondef kind="func">
-      <memberdef kind="function" id="NodeProtocol_8py_1a8d8851f042a4f1450e4a081bed65af0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a119cd90738517fbadbdaaaeaf652a318" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetBluetoothName</definition>
+        <definition>def NodeProtocol.NPSetBluetoothName</definition>
         <argsstring>(name)</argsstring>
         <name>NPSetBluetoothName</name>
         <param>
@@ -18,11 +18,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="5" column="1" bodyfile="Python/NodeProtocol.py" bodystart="5" bodyend="6"/>
+        <location file="Python/old/NodeProtocol.py" line="5" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="5" bodyend="6"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1aa1c72faa4300d37075b4ce14a2cbed12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a5600e00d89fba67ea4708943e7a008fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetBluetoothPIN</definition>
+        <definition>def NodeProtocol.NPSetBluetoothPIN</definition>
         <argsstring>(pin)</argsstring>
         <name>NPSetBluetoothPIN</name>
         <param>
@@ -35,11 +35,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="7" column="1" bodyfile="Python/NodeProtocol.py" bodystart="7" bodyend="8"/>
+        <location file="Python/old/NodeProtocol.py" line="7" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="7" bodyend="8"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a12460202e6ab4a43ca7905eab5f4c34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a1272def8025a1b55e2d48b27e7860267" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetNRFPipe</definition>
+        <definition>def NodeProtocol.NPSetNRFPipe</definition>
         <argsstring>(pipeNr, mac)</argsstring>
         <name>NPSetNRFPipe</name>
         <param>
@@ -56,11 +56,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="9" column="1" bodyfile="Python/NodeProtocol.py" bodystart="9" bodyend="12"/>
+        <location file="Python/old/NodeProtocol.py" line="9" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="9" bodyend="12"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1adb4b5ad656fd1327eef05e8606e1d10e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1ab5614ccbd21609c87f3ffa0f581b0cd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetNRFPipeEnable</definition>
+        <definition>def NodeProtocol.NPSetNRFPipeEnable</definition>
         <argsstring>(pipeNr)</argsstring>
         <name>NPSetNRFPipeEnable</name>
         <param>
@@ -73,11 +73,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="13" column="1" bodyfile="Python/NodeProtocol.py" bodystart="13" bodyend="15"/>
+        <location file="Python/old/NodeProtocol.py" line="13" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="13" bodyend="15"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a9aff2d26e111cf8eb45239ebc7189ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1aa59027e38c4ca487af25a3016f2b8e98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetNRFChannel</definition>
+        <definition>def NodeProtocol.NPSetNRFChannel</definition>
         <argsstring>(chN)</argsstring>
         <name>NPSetNRFChannel</name>
         <param>
@@ -90,11 +90,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="16" column="1" bodyfile="Python/NodeProtocol.py" bodystart="16" bodyend="18"/>
+        <location file="Python/old/NodeProtocol.py" line="16" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="16" bodyend="18"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a8bc2563fa27c9001eee1f07c2956c228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1af638c01197210178a347c23c82752b14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetNRFPowerLevel</definition>
+        <definition>def NodeProtocol.NPSetNRFPowerLevel</definition>
         <argsstring>(pwrlvl)</argsstring>
         <name>NPSetNRFPowerLevel</name>
         <param>
@@ -107,11 +107,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="19" column="1" bodyfile="Python/NodeProtocol.py" bodystart="19" bodyend="21"/>
+        <location file="Python/old/NodeProtocol.py" line="19" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="19" bodyend="21"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a2f74d97131638a69fa9ef1aa2dc7efc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a2e6059cfc101ffcbceaefcdeb036a3d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetNRFDataRate</definition>
+        <definition>def NodeProtocol.NPSetNRFDataRate</definition>
         <argsstring>(datart)</argsstring>
         <name>NPSetNRFDataRate</name>
         <param>
@@ -124,11 +124,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="22" column="1" bodyfile="Python/NodeProtocol.py" bodystart="22" bodyend="24"/>
+        <location file="Python/old/NodeProtocol.py" line="22" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="22" bodyend="24"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1ab48eccede74cc8916bd89d546371bb4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a205884be3186e0ac72e9ae5208c2e282" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetNRFCRCLevel</definition>
+        <definition>def NodeProtocol.NPSetNRFCRCLevel</definition>
         <argsstring>(crclvl)</argsstring>
         <name>NPSetNRFCRCLevel</name>
         <param>
@@ -141,11 +141,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="25" column="1" bodyfile="Python/NodeProtocol.py" bodystart="25" bodyend="27"/>
+        <location file="Python/old/NodeProtocol.py" line="25" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="25" bodyend="27"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a09e95055f791e00e8ba8296ea4886a1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a51a9986c745d69cbc3b63e23acbfb94b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetNRFPayLoadSize</definition>
+        <definition>def NodeProtocol.NPSetNRFPayLoadSize</definition>
         <argsstring>(payloadsze)</argsstring>
         <name>NPSetNRFPayLoadSize</name>
         <param>
@@ -158,11 +158,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="28" column="1" bodyfile="Python/NodeProtocol.py" bodystart="28" bodyend="30"/>
+        <location file="Python/old/NodeProtocol.py" line="28" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="28" bodyend="30"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a1d847496ddde012240cf97f42106026d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1ae1ead68ada531b176fec0c78db674268" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetNRFAutoACK</definition>
+        <definition>def NodeProtocol.NPSetNRFAutoACK</definition>
         <argsstring>(endisack)</argsstring>
         <name>NPSetNRFAutoACK</name>
         <param>
@@ -175,11 +175,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="31" column="1" bodyfile="Python/NodeProtocol.py" bodystart="31" bodyend="33"/>
+        <location file="Python/old/NodeProtocol.py" line="31" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="31" bodyend="33"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a8cc54cad1c34ab9a7cdaf7f60fd8e09d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a68d6e8f5e47fa9b706284046039fefc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPSetNRFResetModule</definition>
+        <definition>def NodeProtocol.NPSetNRFResetModule</definition>
         <argsstring>()</argsstring>
         <name>NPSetNRFResetModule</name>
         <briefdescription>
@@ -188,11 +188,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="34" column="1" bodyfile="Python/NodeProtocol.py" bodystart="34" bodyend="35"/>
+        <location file="Python/old/NodeProtocol.py" line="34" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="34" bodyend="35"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a26e7fbbd344905f9b09d1477940150bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a3957886e60fe6740ed019e33293f1eb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPGetNRGConfig</definition>
+        <definition>def NodeProtocol.NPGetNRGConfig</definition>
         <argsstring>()</argsstring>
         <name>NPGetNRGConfig</name>
         <briefdescription>
@@ -201,11 +201,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="36" column="1" bodyfile="Python/NodeProtocol.py" bodystart="36" bodyend="37"/>
+        <location file="Python/old/NodeProtocol.py" line="36" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="36" bodyend="37"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1ab6ab9ff854eb7c4272c527730447aae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1af237482548b3bfa9f568f612a3a8ddd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPGetSensorDataTempDHT22</definition>
+        <definition>def NodeProtocol.NPGetSensorDataTempDHT22</definition>
         <argsstring>()</argsstring>
         <name>NPGetSensorDataTempDHT22</name>
         <briefdescription>
@@ -214,11 +214,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="38" column="1" bodyfile="Python/NodeProtocol.py" bodystart="38" bodyend="39"/>
+        <location file="Python/old/NodeProtocol.py" line="38" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="38" bodyend="39"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1aa29e445ad2a5bddbcaa9b8c3917abf77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1aeaeb0ef0bb0b5b40be541c8fbd0138f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPGetSensorDataHumidityDHT22</definition>
+        <definition>def NodeProtocol.NPGetSensorDataHumidityDHT22</definition>
         <argsstring>()</argsstring>
         <name>NPGetSensorDataHumidityDHT22</name>
         <briefdescription>
@@ -227,11 +227,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="40" column="1" bodyfile="Python/NodeProtocol.py" bodystart="40" bodyend="41"/>
+        <location file="Python/old/NodeProtocol.py" line="40" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="40" bodyend="41"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a2fd0376b1d2816a7dab7d8189d74aa1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a0f283491ca330db682d53c43f9d460da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPGetSensorDataTempHumidityDHT22</definition>
+        <definition>def NodeProtocol.NPGetSensorDataTempHumidityDHT22</definition>
         <argsstring>()</argsstring>
         <name>NPGetSensorDataTempHumidityDHT22</name>
         <briefdescription>
@@ -240,11 +240,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="42" column="1" bodyfile="Python/NodeProtocol.py" bodystart="42" bodyend="43"/>
+        <location file="Python/old/NodeProtocol.py" line="42" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="42" bodyend="43"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1af4d81bef87e5c7b290be942fccca238a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a3bd00c7fd33997cf6c3bd8eb7c265c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPGetSensorDataLightsense</definition>
+        <definition>def NodeProtocol.NPGetSensorDataLightsense</definition>
         <argsstring>()</argsstring>
         <name>NPGetSensorDataLightsense</name>
         <briefdescription>
@@ -253,11 +253,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="44" column="1" bodyfile="Python/NodeProtocol.py" bodystart="44" bodyend="45"/>
+        <location file="Python/old/NodeProtocol.py" line="44" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="44" bodyend="45"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1ac5eb2c80b1ae557ab280cb98f2de6dc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1a71ccbf330abffd4738e0c4d25a4c6d7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPGetSensorDataTempDS18B20</definition>
+        <definition>def NodeProtocol.NPGetSensorDataTempDS18B20</definition>
         <argsstring>()</argsstring>
         <name>NPGetSensorDataTempDS18B20</name>
         <briefdescription>
@@ -266,11 +266,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="46" column="1" bodyfile="Python/NodeProtocol.py" bodystart="46" bodyend="47"/>
+        <location file="Python/old/NodeProtocol.py" line="46" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="46" bodyend="47"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a0b0acc578a645f6e1842e27de782b663" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1aaa7bf240ba412b020b53151530989747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPGetSensorDataMove</definition>
+        <definition>def NodeProtocol.NPGetSensorDataMove</definition>
         <argsstring>()</argsstring>
         <name>NPGetSensorDataMove</name>
         <briefdescription>
@@ -279,11 +279,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="48" column="1" bodyfile="Python/NodeProtocol.py" bodystart="48" bodyend="50"/>
+        <location file="Python/old/NodeProtocol.py" line="48" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="48" bodyend="50"/>
       </memberdef>
-      <memberdef kind="function" id="NodeProtocol_8py_1a27ab044f28b93535ec6c533e9bfc0754" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceNodeProtocol_1ac5f58ca531adf6529c082f28859bba09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def NodeProtocol::NPGetSensorDataRemote</definition>
+        <definition>def NodeProtocol.NPGetSensorDataRemote</definition>
         <argsstring>()</argsstring>
         <name>NPGetSensorDataRemote</name>
         <briefdescription>
@@ -292,13 +292,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/NodeProtocol.py" line="51" column="1" bodyfile="Python/NodeProtocol.py" bodystart="51" bodyend="56"/>
+        <location file="Python/old/NodeProtocol.py" line="51" column="1" bodyfile="Python/old/NodeProtocol.py" bodystart="51" bodyend="56"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Python/NodeProtocol.py" line="1" column="1"/>
+    <location file="Python/old/NodeProtocol.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

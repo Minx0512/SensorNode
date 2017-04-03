@@ -1,4 +1,4 @@
-.TH "md_src_README" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "md_src_README" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,7 +21,7 @@ HEX(command id (CmdID) + command property (cmdP) )property id (PID/PVal) propert
 answers: 
 .PP
 .nf
-1 DS18B20: //sensor/DST/|%MAC0|%MAC1|\&.\&.\&.|/|%TempVal0|%TempVal1|\&.\&.\&.|\\
+1 DS18B20: //sensor/DST/|%MAC0|%MAC1|\&.\&.\&.|/|%TempVal0:%unit|%TempVal1:%unit|\&.\&.\&.|\\
 2 DHT22: //sensor/DHT/|%sensorMAC|/|%tempVal:%unit|%humVal:%unit|%errCode|\\
 3 Movement: //sensor/M/|%sensorMAC|/|(0|1)|\\
 4 LightAnalog: //sensor/Lav/|%sensorMAC|/|%d\&.%03d|\\

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['parsestrings',['ParseStrings',['../classParseStrings.html',1,'']]],
-  ['photoresistor',['Photoresistor',['../classPhotoresistor.html',1,'']]]
+  ['movement',['Movement',['../classReadSensor_1_1Sensors_1_1Sensors_1_1Movement.html',1,'ReadSensor::Sensors::Sensors']]]
 ];

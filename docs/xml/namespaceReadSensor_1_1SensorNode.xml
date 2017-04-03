@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceReadSensor_1_1SensorNode" kind="namespace" language="Python">
+    <compoundname>ReadSensor::SensorNode</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceReadSensor_1_1SensorNode_1aab4130f05e0d383004da4b2199def54d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor::SensorNode.rs</definition>
+        <argsstring></argsstring>
+        <name>rs</name>
+        <initializer>= <ref refid="classReadSensor_1_1ReadSensor_1_1ReadSensor" kindref="compound">ReadSensor.ReadSensor</ref>(&quot;/dev/ttyAMA0&quot;, 9600)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/SensorNode.py" line="18" column="1" bodyfile="Python/ReadSensor/SensorNode.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceReadSensor_1_1SensorNode_1ab825456060046c46088453e242844a67" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor::SensorNode.availableSensors</definition>
+        <argsstring></argsstring>
+        <name>availableSensors</name>
+        <initializer>= rs.GetAvailableSensors(&quot;A0:A0:A0:A0:A0&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/SensorNode.py" line="20" column="1" bodyfile="Python/ReadSensor/SensorNode.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceReadSensor_1_1SensorNode_1a8171a151bb4b0ae935ff538ce6791944" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor::SensorNode.ds</definition>
+        <argsstring></argsstring>
+        <name>ds</name>
+        <initializer>= rs.DS18B20(&quot;A0:A0:A0:A0:A0&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/SensorNode.py" line="24" column="1" bodyfile="Python/ReadSensor/SensorNode.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceReadSensor_1_1SensorNode_1a6554f3410cedc47453c44dffec450d82" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor::SensorNode.mv</definition>
+        <argsstring></argsstring>
+        <name>mv</name>
+        <initializer>= rs.Movement(&quot;A0:A0:A0:A0:A0&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/SensorNode.py" line="30" column="1" bodyfile="Python/ReadSensor/SensorNode.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceReadSensor_1_1SensorNode_1aaf373686eec11b55f9271c70d083bd70" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor::SensorNode.light</definition>
+        <argsstring></argsstring>
+        <name>light</name>
+        <initializer>= rs.LightAnalog(&quot;A0:A0:A0:A0:A0&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/SensorNode.py" line="33" column="1" bodyfile="Python/ReadSensor/SensorNode.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/ReadSensor/SensorNode.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

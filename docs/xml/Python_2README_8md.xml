@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="Python_2README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#SensorNode<sp/>Python<sp/>Scripts</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Python<sp/>scripts<sp/>to<sp/>interface<sp/>with<sp/>the<sp/>microcontroller<sp/>over<sp/>a<sp/>serial<sp/>interface.</highlight></codeline>
+    </programlisting>
+    <location file="Python/README.md"/>
+  </compounddef>
+</doxygen>

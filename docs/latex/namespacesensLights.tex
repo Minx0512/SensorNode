@@ -1,0 +1,68 @@
+\hypertarget{namespacesensLights}{}\section{sens\+Lights Namespace Reference}
+\label{namespacesensLights}\index{sens\+Lights@{sens\+Lights}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacesensLights_abac1fd1adebeaff35fb495576dbddc5b}{pr\+Thresh} = 550
+\item 
+string \hyperlink{namespacesensLights_a6e1162048c8d736a8db0351d57a8b139}{send\+\_\+str} = \char`\"{}550\textbackslash{}n\char`\"{}
+\item 
+\hyperlink{namespacesensLights_a8b0ffad4098c0b49ff9ed83c3e7a279c}{sensor\+Data} = Read\+Sensor\+Data(\char`\"{}98\+:D3\+:31\+:\+F\+B\+:31\+:\+A6\char`\"{},send\+\_\+str)
+\item 
+\hyperlink{namespacesensLights_a3039fae16cd626cac6686b09a079e832}{pr} = int(re.\+search(\char`\"{}$<$N\+S\+L19\+M51$>$(.$\ast$)$<$/N\+S\+L19\+M51$>$\char`\"{},sensor\+Data)\mbox{[}0\mbox{]})
+\item 
+\hyperlink{namespacesensLights_ac8aa58ba0e3b1d1e5e43af8368d84bde}{ds18b20} = re.\+findall(\char`\"{}$<$D\+S18\+B20$>$$<$ID$>$(.$\ast$)$<$/ID$>$$<$T$>$(.$\ast$)\textbackslash{}xc2\textbackslash{}xb0C$<$/T$>$$<$/\hyperlink{classDS18B20}{D\+S18\+B20}$>$\char`\"{},sensor\+Data)
+\item 
+\hyperlink{namespacesensLights_a332e8e9c0d25bdce1ada40499576e97d}{dht} = re.\+findall(\char`\"{}$<$D\+H\+T22$>$$<$T$>$(.$\ast$)\textbackslash{}xc2\textbackslash{}xb0C$<$/T$>$$<$H$>$(.$\ast$)\%RH$<$/H$>$$<$/\hyperlink{classDHT22}{D\+H\+T22}$>$\char`\"{},sensor\+Data)
+\item 
+\hyperlink{namespacesensLights_a2285eac93c571f3e13b7c75eb076d452}{movement} = int(re.\+search(\char`\"{}$<$mv$>$(.$\ast$)$<$/mv$>$\char`\"{},sensor\+Data).group(1))
+\item 
+\hyperlink{namespacesensLights_af4085cc84e3f4ffd4e949bc88e9fbd29}{move\+Sense\+Enabled} = int(re.\+search(\char`\"{}$<$mv\+Sen$>$(.$\ast$)$<$/mv\+Sen$>$\char`\"{},sensor\+Data).group(1))
+\item 
+bool \hyperlink{namespacesensLights_a5c2a6a5aad94452fb16ef2b595eade73}{lights} = False
+\item 
+bool \hyperlink{namespacesensLights_a8c334ce46f2ca382615e30ca82fa7a2c}{light\+Switch} = True
+\item 
+\hyperlink{namespacesensLights_a043e829ccb1ca220d4668cdd65be4988}{time} = int(re.\+search(\char`\"{}$<$time$>$(.$\ast$)$<$/time$>$\char`\"{},sensor\+Data).group(1))
+\item 
+\hyperlink{namespacesensLights_a6af9fcb7c8252a343f039e728ab218b3}{shell}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{sens\+Lights@{sens\+Lights}!dht@{dht}}
+\index{dht@{dht}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{dht}{dht}}]{\setlength{\rightskip}{0pt plus 5cm}sens\+Lights.\+dht = re.\+findall(\char`\"{}$<$D\+H\+T22$>$$<$T$>$(.$\ast$)\textbackslash{}xc2\textbackslash{}xb0C$<$/T$>$$<$H$>$(.$\ast$)\%RH$<$/H$>$$<$/{\bf D\+H\+T22}$>$\char`\"{},sensor\+Data)}\hypertarget{namespacesensLights_a332e8e9c0d25bdce1ada40499576e97d}{}\label{namespacesensLights_a332e8e9c0d25bdce1ada40499576e97d}
+\index{sens\+Lights@{sens\+Lights}!ds18b20@{ds18b20}}
+\index{ds18b20@{ds18b20}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{ds18b20}{ds18b20}}]{\setlength{\rightskip}{0pt plus 5cm}sens\+Lights.\+ds18b20 = re.\+findall(\char`\"{}$<$D\+S18\+B20$>$$<$ID$>$(.$\ast$)$<$/ID$>$$<$T$>$(.$\ast$)\textbackslash{}xc2\textbackslash{}xb0C$<$/T$>$$<$/{\bf D\+S18\+B20}$>$\char`\"{},sensor\+Data)}\hypertarget{namespacesensLights_ac8aa58ba0e3b1d1e5e43af8368d84bde}{}\label{namespacesensLights_ac8aa58ba0e3b1d1e5e43af8368d84bde}
+\index{sens\+Lights@{sens\+Lights}!lights@{lights}}
+\index{lights@{lights}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{lights}{lights}}]{\setlength{\rightskip}{0pt plus 5cm}bool sens\+Lights.\+lights = False}\hypertarget{namespacesensLights_a5c2a6a5aad94452fb16ef2b595eade73}{}\label{namespacesensLights_a5c2a6a5aad94452fb16ef2b595eade73}
+\index{sens\+Lights@{sens\+Lights}!light\+Switch@{light\+Switch}}
+\index{light\+Switch@{light\+Switch}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{light\+Switch}{lightSwitch}}]{\setlength{\rightskip}{0pt plus 5cm}bool sens\+Lights.\+light\+Switch = True}\hypertarget{namespacesensLights_a8c334ce46f2ca382615e30ca82fa7a2c}{}\label{namespacesensLights_a8c334ce46f2ca382615e30ca82fa7a2c}
+\index{sens\+Lights@{sens\+Lights}!movement@{movement}}
+\index{movement@{movement}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{movement}{movement}}]{\setlength{\rightskip}{0pt plus 5cm}sens\+Lights.\+movement = int(re.\+search(\char`\"{}$<$mv$>$(.$\ast$)$<$/mv$>$\char`\"{},sensor\+Data).group(1))}\hypertarget{namespacesensLights_a2285eac93c571f3e13b7c75eb076d452}{}\label{namespacesensLights_a2285eac93c571f3e13b7c75eb076d452}
+\index{sens\+Lights@{sens\+Lights}!move\+Sense\+Enabled@{move\+Sense\+Enabled}}
+\index{move\+Sense\+Enabled@{move\+Sense\+Enabled}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{move\+Sense\+Enabled}{moveSenseEnabled}}]{\setlength{\rightskip}{0pt plus 5cm}sens\+Lights.\+move\+Sense\+Enabled = int(re.\+search(\char`\"{}$<$mv\+Sen$>$(.$\ast$)$<$/mv\+Sen$>$\char`\"{},sensor\+Data).group(1))}\hypertarget{namespacesensLights_af4085cc84e3f4ffd4e949bc88e9fbd29}{}\label{namespacesensLights_af4085cc84e3f4ffd4e949bc88e9fbd29}
+\index{sens\+Lights@{sens\+Lights}!pr@{pr}}
+\index{pr@{pr}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{pr}{pr}}]{\setlength{\rightskip}{0pt plus 5cm}sens\+Lights.\+pr = int(re.\+search(\char`\"{}$<$N\+S\+L19\+M51$>$(.$\ast$)$<$/N\+S\+L19\+M51$>$\char`\"{},sensor\+Data)\mbox{[}0\mbox{]})}\hypertarget{namespacesensLights_a3039fae16cd626cac6686b09a079e832}{}\label{namespacesensLights_a3039fae16cd626cac6686b09a079e832}
+\index{sens\+Lights@{sens\+Lights}!pr\+Thresh@{pr\+Thresh}}
+\index{pr\+Thresh@{pr\+Thresh}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{pr\+Thresh}{prThresh}}]{\setlength{\rightskip}{0pt plus 5cm}int sens\+Lights.\+pr\+Thresh = 550}\hypertarget{namespacesensLights_abac1fd1adebeaff35fb495576dbddc5b}{}\label{namespacesensLights_abac1fd1adebeaff35fb495576dbddc5b}
+\index{sens\+Lights@{sens\+Lights}!send\+\_\+str@{send\+\_\+str}}
+\index{send\+\_\+str@{send\+\_\+str}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{send\+\_\+str}{send_str}}]{\setlength{\rightskip}{0pt plus 5cm}string sens\+Lights.\+send\+\_\+str = \char`\"{}550\textbackslash{}n\char`\"{}}\hypertarget{namespacesensLights_a6e1162048c8d736a8db0351d57a8b139}{}\label{namespacesensLights_a6e1162048c8d736a8db0351d57a8b139}
+\index{sens\+Lights@{sens\+Lights}!sensor\+Data@{sensor\+Data}}
+\index{sensor\+Data@{sensor\+Data}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{sensor\+Data}{sensorData}}]{\setlength{\rightskip}{0pt plus 5cm}sens\+Lights.\+sensor\+Data = Read\+Sensor\+Data(\char`\"{}98\+:D3\+:31\+:\+F\+B\+:31\+:\+A6\char`\"{},send\+\_\+str)}\hypertarget{namespacesensLights_a8b0ffad4098c0b49ff9ed83c3e7a279c}{}\label{namespacesensLights_a8b0ffad4098c0b49ff9ed83c3e7a279c}
+\index{sens\+Lights@{sens\+Lights}!shell@{shell}}
+\index{shell@{shell}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{shell}{shell}}]{\setlength{\rightskip}{0pt plus 5cm}sens\+Lights.\+shell}\hypertarget{namespacesensLights_a6af9fcb7c8252a343f039e728ab218b3}{}\label{namespacesensLights_a6af9fcb7c8252a343f039e728ab218b3}
+\index{sens\+Lights@{sens\+Lights}!time@{time}}
+\index{time@{time}!sens\+Lights@{sens\+Lights}}
+\subsubsection[{\texorpdfstring{time}{time}}]{\setlength{\rightskip}{0pt plus 5cm}sens\+Lights.\+time = int(re.\+search(\char`\"{}$<$time$>$(.$\ast$)$<$/time$>$\char`\"{},sensor\+Data).group(1))}\hypertarget{namespacesensLights_a043e829ccb1ca220d4668cdd65be4988}{}\label{namespacesensLights_a043e829ccb1ca220d4668cdd65be4988}

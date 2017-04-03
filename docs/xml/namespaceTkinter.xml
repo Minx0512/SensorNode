@@ -6,6 +6,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Python/SensorNode.py" line="1" column="1"/>
+    <location file="Python/old/SensorNode.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

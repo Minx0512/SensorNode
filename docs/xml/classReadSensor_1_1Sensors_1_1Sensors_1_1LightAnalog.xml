@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog" kind="class" language="Python" prot="public">
+    <compoundname>ReadSensor::Sensors::Sensors::LightAnalog</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog_1aabd7bf3d3ae2138a50cafe651a8b8da6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.LightAnalog::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="70" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog_1aa4b4becb12dc426ba3ca572940161087" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.LightAnalog::la</definition>
+        <argsstring></argsstring>
+        <name>la</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="71" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog_1a08900be881daf228243383d7d88bc144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.Sensors.Sensors.LightAnalog.__init__</definition>
+        <argsstring>(self, responseStr, sensStr)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>responseStr</type>
+          <defname>responseStr</defname>
+        </param>
+        <param>
+          <type>sensStr</type>
+          <defname>sensStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="69" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="69" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/ReadSensor/Sensors/Sensors.py" line="68" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="68" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog_1a08900be881daf228243383d7d88bc144" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::LightAnalog</scope><name>__init__</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog_1aa4b4becb12dc426ba3ca572940161087" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::LightAnalog</scope><name>la</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog_1aabd7bf3d3ae2138a50cafe651a8b8da6" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::LightAnalog</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

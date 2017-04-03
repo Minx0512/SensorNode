@@ -2720,14 +2720,14 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
     <detaileddescription>
 <para>Driver for nRF24L01(+) 2.4GHz Wireless Transceiver </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="24">
+      <node id="54">
         <label>NRF24L01</label>
         <link refid="classNRF24L01"/>
-        <childnode refid="25" relation="usage">
+        <childnode refid="55" relation="usage">
           <edgelabel>spi</edgelabel>
         </childnode>
       </node>
-      <node id="25">
+      <node id="55">
         <label>SPI</label>
         <link refid="classSPI"/>
       </node>

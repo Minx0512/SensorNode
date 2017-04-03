@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nrf24l01',['NRF24L01',['../classNRF24L01.html',1,'']]]
+  ['lightanalog',['LightAnalog',['../classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog.html',1,'ReadSensor::Sensors::Sensors']]],
+  ['lightdigital',['LightDigital',['../classReadSensor_1_1Sensors_1_1Sensors_1_1LightDigital.html',1,'ReadSensor::Sensors::Sensors']]]
 ];

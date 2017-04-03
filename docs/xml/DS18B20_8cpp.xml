@@ -11,62 +11,62 @@
     <includes local="no">ctype.h</includes>
     <includes local="no">string.h</includes>
     <incdepgraph>
-      <node id="244">
+      <node id="272">
         <label>DS18B20.h</label>
         <link refid="DS18B20_8h"/>
-        <childnode refid="245" relation="include">
+        <childnode refid="273" relation="include">
         </childnode>
-        <childnode refid="246" relation="include">
+        <childnode refid="274" relation="include">
         </childnode>
-        <childnode refid="247" relation="include">
+        <childnode refid="275" relation="include">
         </childnode>
-        <childnode refid="248" relation="include">
+        <childnode refid="276" relation="include">
         </childnode>
-        <childnode refid="249" relation="include">
+        <childnode refid="277" relation="include">
         </childnode>
       </node>
-      <node id="250">
+      <node id="278">
         <label>avr/interrupt.h</label>
       </node>
-      <node id="247">
+      <node id="275">
         <label>stdlib.h</label>
       </node>
-      <node id="243">
+      <node id="271">
         <label>src/Sensors/DS18B20.cpp</label>
         <link refid="DS18B20.cpp"/>
-        <childnode refid="244" relation="include">
+        <childnode refid="272" relation="include">
         </childnode>
-        <childnode refid="245" relation="include">
+        <childnode refid="273" relation="include">
         </childnode>
-        <childnode refid="249" relation="include">
+        <childnode refid="277" relation="include">
         </childnode>
-        <childnode refid="250" relation="include">
+        <childnode refid="278" relation="include">
         </childnode>
-        <childnode refid="251" relation="include">
+        <childnode refid="279" relation="include">
         </childnode>
-        <childnode refid="247" relation="include">
+        <childnode refid="275" relation="include">
         </childnode>
-        <childnode refid="248" relation="include">
+        <childnode refid="276" relation="include">
         </childnode>
-        <childnode refid="252" relation="include">
+        <childnode refid="280" relation="include">
         </childnode>
       </node>
-      <node id="246">
+      <node id="274">
         <label>avr/io.h</label>
       </node>
-      <node id="245">
+      <node id="273">
         <label>util/delay.h</label>
       </node>
-      <node id="252">
+      <node id="280">
         <label>string.h</label>
       </node>
-      <node id="248">
+      <node id="276">
         <label>ctype.h</label>
       </node>
-      <node id="251">
+      <node id="279">
         <label>stdio.h</label>
       </node>
-      <node id="249">
+      <node id="277">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>
@@ -270,7 +270,7 @@
 <codeline lineno="210"><highlight class="normal"></highlight></codeline>
 <codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(--i);</highlight></codeline>
 <codeline lineno="212"><highlight class="normal"></highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>byte;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(byte);</highlight></codeline>
 <codeline lineno="214"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="215" refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kindref="member">DS18B20::ReadByte</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
 <codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(<sp/>0xFF<sp/>);</highlight></codeline>

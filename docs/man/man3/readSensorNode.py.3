@@ -1,0 +1,43 @@
+.TH "Python/old/readSensorNode.py" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Python/old/readSensorNode.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBreadSensorNode\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "string \fBreadSensorNode\&.send_str\fP = '34|0|ds\\r\\n'"
+.br
+.ti -1c
+.RI "\fBreadSensorNode\&.scriptname\fP = sys\&.argv[0]"
+.br
+.ti -1c
+.RI "\fBreadSensorNode\&.val\fP = sys\&.argv\&.pop()"
+.br
+.ti -1c
+.RI "\fBreadSensorNode\&.sensorData\fP = ReadSensorData('98:D3:31:FB:31:A6',send_str)"
+.br
+.ti -1c
+.RI "\fBreadSensorNode\&.dht\fP = re\&.findall('<DHT22><T unit='(\&.*)'>(\&.*)\\|<H unit='(\&.*)'>(\&.*)\\|\\|',sensorData)"
+.br
+.ti -1c
+.RI "\fBreadSensorNode\&.mvs\fP = re\&.findall('<mv>(\&.*)\\|\\|', sensorData)"
+.br
+.ti -1c
+.RI "\fBreadSensorNode\&.m\fP = int(mvs[0])"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

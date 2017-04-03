@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceProtocol_1_1NodeProtocol" kind="namespace" language="Python">
+    <compoundname>Protocol::NodeProtocol</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceProtocol_1_1NodeProtocol_1ab6b9fa0a99c7c26f6ae326277389d9f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Protocol.NodeProtocol.DHT22</definition>
+        <argsstring>()</argsstring>
+        <name>DHT22</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/old/Protocol/NodeProtocol.py" line="7" column="1" bodyfile="Python/old/Protocol/NodeProtocol.py" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceProtocol_1_1NodeProtocol_1a332045b79c338f14510040940b4e063b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Protocol.NodeProtocol.ReadSensorDS18B20</definition>
+        <argsstring>(tt, MAC)</argsstring>
+        <name>ReadSensorDS18B20</name>
+        <param>
+          <type>tt</type>
+          <defname>tt</defname>
+        </param>
+        <param>
+          <type>MAC</type>
+          <defname>MAC</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/old/Protocol/NodeProtocol.py" line="11" column="1" bodyfile="Python/old/Protocol/NodeProtocol.py" bodystart="11" bodyend="15"/>
+        <references refid="namespaceProtocol_1_1readSerial_1a3bf2238ec608abcbe36cd529d6e936e3" compoundref="readSerial_8py" startline="25" endline="59">Protocol.readSerial.ReadData</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/old/Protocol/NodeProtocol.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

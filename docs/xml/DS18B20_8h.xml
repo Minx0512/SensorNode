@@ -10,50 +10,50 @@
     <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
     <includedby refid="DS18B20_8cpp" local="yes">src/Sensors/DS18B20.cpp</includedby>
     <incdepgraph>
-      <node id="254">
+      <node id="282">
         <label>src/Sensors/DS18B20.h</label>
         <link refid="DS18B20.h"/>
-        <childnode refid="255" relation="include">
+        <childnode refid="283" relation="include">
         </childnode>
-        <childnode refid="256" relation="include">
+        <childnode refid="284" relation="include">
         </childnode>
-        <childnode refid="257" relation="include">
+        <childnode refid="285" relation="include">
         </childnode>
-        <childnode refid="258" relation="include">
+        <childnode refid="286" relation="include">
         </childnode>
-        <childnode refid="259" relation="include">
+        <childnode refid="287" relation="include">
         </childnode>
       </node>
-      <node id="257">
+      <node id="285">
         <label>stdlib.h</label>
       </node>
-      <node id="256">
+      <node id="284">
         <label>avr/io.h</label>
       </node>
-      <node id="255">
+      <node id="283">
         <label>util/delay.h</label>
       </node>
-      <node id="258">
+      <node id="286">
         <label>ctype.h</label>
       </node>
-      <node id="259">
+      <node id="287">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="260">
+      <node id="288">
         <label>src/Sensors/DS18B20.h</label>
         <link refid="DS18B20.h"/>
-        <childnode refid="261" relation="include">
+        <childnode refid="289" relation="include">
         </childnode>
-        <childnode refid="262" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
       </node>
-      <node id="261">
+      <node id="289">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="262">
+      <node id="290">
         <label>src/Sensors/DS18B20.cpp</label>
         <link refid="DS18B20_8cpp"/>
       </node>
@@ -372,28 +372,33 @@
 <codeline lineno="147"><highlight class="normal"></highlight></codeline>
 <codeline lineno="148"><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a817183f6ef9552d6559d58d714e5c804" kindref="member">StartMeasurement</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" kindref="member">Reset</ref>();</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//uint8_t<sp/>Reset(char*<sp/>string);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" kindref="member">BitIO</ref>(uint8_t<sp/>bit);</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(uint8_t<sp/>byte);</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kindref="member">ReadByte</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a356e88e8a6bca4f5ffeb41180c08f91d" kindref="member">RomSearch</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>diff,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a1f03dae7ea2d07a225343eaa33d119cf" kindref="member">Command</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>command,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160" refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" kindref="member">PIN_INPUT_MODE</ref>(){<sp/>*WIRE_DDR&amp;=~(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
-<codeline lineno="161" refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" kindref="member">PIN_OUTPUT_MODE</ref>(){<sp/>*WIRE_DDR|=(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
-<codeline lineno="162" refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" kindref="member">PIN_LOW</ref>(){<sp/>*WIRE_PORT&amp;=~(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
-<codeline lineno="163" refid="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" kindref="member">PIN_HIGH</ref>(){*WIRE_PORT|=(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"></highlight></codeline>
-<codeline lineno="165" refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" kindref="member">__attribute__</ref>((gnu_inline))<sp/>void<sp/>delay_us(uint16_t<sp/>delay){</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(delay--)<sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;nop&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="151"></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a817183f6ef9552d6559d58d714e5c804" kindref="member">StartMeasurement</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" kindref="member">Reset</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//uint8_t<sp/>Reset(char*<sp/>string);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" kindref="member">BitIO</ref>(uint8_t<sp/>bit);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(uint8_t<sp/>byte);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kindref="member">ReadByte</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a356e88e8a6bca4f5ffeb41180c08f91d" kindref="member">RomSearch</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>diff,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a1f03dae7ea2d07a225343eaa33d119cf" kindref="member">Command</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>command,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
 <codeline lineno="170"><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DS18B20_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="171" refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" kindref="member">PIN_INPUT_MODE</ref>(){<sp/>*WIRE_DDR&amp;=~(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="172" refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" kindref="member">PIN_OUTPUT_MODE</ref>(){<sp/>*WIRE_DDR|=(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="173" refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" kindref="member">PIN_LOW</ref>(){<sp/>*WIRE_PORT&amp;=~(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="174" refid="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" kindref="member">PIN_HIGH</ref>(){*WIRE_PORT|=(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>);}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" kindref="member">__attribute__</ref>((gnu_inline))<sp/>void<sp/>delay_us(uint16_t<sp/>delay){</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(delay--)<sp/></highlight><highlight class="keyword">asm</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;nop&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DS18B20_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="src/Sensors/DS18B20.h"/>
   </compounddef>

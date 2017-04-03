@@ -1,0 +1,42 @@
+.TH "ReadSensor.SensorNode" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReadSensor.SensorNode \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBrs\fP = \fBReadSensor\&.ReadSensor\fP('/dev/ttyAMA0', 9600)"
+.br
+.ti -1c
+.RI "\fBavailableSensors\fP = rs\&.GetAvailableSensors('A0:A0:A0:A0:A0')"
+.br
+.ti -1c
+.RI "\fBds\fP = rs\&.DS18B20('A0:A0:A0:A0:A0')"
+.br
+.ti -1c
+.RI "\fBmv\fP = rs\&.Movement('A0:A0:A0:A0:A0')"
+.br
+.ti -1c
+.RI "\fBlight\fP = rs\&.LightAnalog('A0:A0:A0:A0:A0')"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "ReadSensor\&.SensorNode\&.availableSensors = rs\&.GetAvailableSensors('A0:A0:A0:A0:A0')"
+
+.SS "ReadSensor\&.SensorNode\&.ds = rs\&.DS18B20('A0:A0:A0:A0:A0')"
+
+.SS "ReadSensor\&.SensorNode\&.light = rs\&.LightAnalog('A0:A0:A0:A0:A0')"
+
+.SS "ReadSensor\&.SensorNode\&.mv = rs\&.Movement('A0:A0:A0:A0:A0')"
+
+.SS "ReadSensor\&.SensorNode\&.rs = \fBReadSensor\&.ReadSensor\fP('/dev/ttyAMA0', 9600)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

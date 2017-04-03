@@ -1,0 +1,43 @@
+\hypertarget{namespacereadSensorNode}{}\section{read\+Sensor\+Node Namespace Reference}
+\label{namespacereadSensorNode}\index{read\+Sensor\+Node@{read\+Sensor\+Node}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacereadSensorNode_af709b4a0649a2ea9861b259a849678b4}{send\+\_\+str} = \textquotesingle{}34$\vert$0$\vert$ds\textbackslash{}r\textbackslash{}n\textquotesingle{}
+\item 
+\hyperlink{namespacereadSensorNode_acade05a74d18b0ee0e6f280ad09d687f}{scriptname} = sys.\+argv\mbox{[}0\mbox{]}
+\item 
+\hyperlink{namespacereadSensorNode_a6402c2b5b9511b1753751a57999229db}{val} = sys.\+argv.\+pop()
+\item 
+\hyperlink{namespacereadSensorNode_ad6357a640d5eeb83da28688160844249}{sensor\+Data} = Read\+Sensor\+Data(\char`\"{}98\+:D3\+:31\+:\+F\+B\+:31\+:\+A6\char`\"{},send\+\_\+str)
+\item 
+\hyperlink{namespacereadSensorNode_aacb56f7a4c0fd89326dc4540e886f618}{dht} = re.\+findall(\char`\"{}$<$D\+H\+T22$>$$<$T unit=\textquotesingle{}(.$\ast$)\textquotesingle{}$>$(.$\ast$)\textbackslash{}$\vert$$<$H unit=\textquotesingle{}(.$\ast$)\textquotesingle{}$>$(.$\ast$)\textbackslash{}$\vert$\textbackslash{}$\vert$\char`\"{},sensor\+Data)
+\item 
+\hyperlink{namespacereadSensorNode_a7746a922c2180be4998ed3a6f2ea55c6}{mvs} = re.\+findall(\char`\"{}$<$mv$>$(.$\ast$)\textbackslash{}$\vert$\textbackslash{}$\vert$\char`\"{}, sensor\+Data)
+\item 
+\hyperlink{namespacereadSensorNode_a71804d993bcdc7ce54f096240e107167}{m} = int(\hyperlink{namespacereadSensorNode_a7746a922c2180be4998ed3a6f2ea55c6}{mvs}\mbox{[}0\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{read\+Sensor\+Node@{read\+Sensor\+Node}!dht@{dht}}
+\index{dht@{dht}!read\+Sensor\+Node@{read\+Sensor\+Node}}
+\subsubsection[{\texorpdfstring{dht}{dht}}]{\setlength{\rightskip}{0pt plus 5cm}read\+Sensor\+Node.\+dht = re.\+findall(\char`\"{}$<$D\+H\+T22$>$$<$T unit=\textquotesingle{}(.$\ast$)\textquotesingle{}$>$(.$\ast$)\textbackslash{}$\vert$$<$H unit=\textquotesingle{}(.$\ast$)\textquotesingle{}$>$(.$\ast$)\textbackslash{}$\vert$\textbackslash{}$\vert$\char`\"{},sensor\+Data)}\hypertarget{namespacereadSensorNode_aacb56f7a4c0fd89326dc4540e886f618}{}\label{namespacereadSensorNode_aacb56f7a4c0fd89326dc4540e886f618}
+\index{read\+Sensor\+Node@{read\+Sensor\+Node}!m@{m}}
+\index{m@{m}!read\+Sensor\+Node@{read\+Sensor\+Node}}
+\subsubsection[{\texorpdfstring{m}{m}}]{\setlength{\rightskip}{0pt plus 5cm}read\+Sensor\+Node.\+m = int({\bf mvs}\mbox{[}0\mbox{]})}\hypertarget{namespacereadSensorNode_a71804d993bcdc7ce54f096240e107167}{}\label{namespacereadSensorNode_a71804d993bcdc7ce54f096240e107167}
+\index{read\+Sensor\+Node@{read\+Sensor\+Node}!mvs@{mvs}}
+\index{mvs@{mvs}!read\+Sensor\+Node@{read\+Sensor\+Node}}
+\subsubsection[{\texorpdfstring{mvs}{mvs}}]{\setlength{\rightskip}{0pt plus 5cm}read\+Sensor\+Node.\+mvs = re.\+findall(\char`\"{}$<$mv$>$(.$\ast$)\textbackslash{}$\vert$\textbackslash{}$\vert$\char`\"{}, sensor\+Data)}\hypertarget{namespacereadSensorNode_a7746a922c2180be4998ed3a6f2ea55c6}{}\label{namespacereadSensorNode_a7746a922c2180be4998ed3a6f2ea55c6}
+\index{read\+Sensor\+Node@{read\+Sensor\+Node}!scriptname@{scriptname}}
+\index{scriptname@{scriptname}!read\+Sensor\+Node@{read\+Sensor\+Node}}
+\subsubsection[{\texorpdfstring{scriptname}{scriptname}}]{\setlength{\rightskip}{0pt plus 5cm}read\+Sensor\+Node.\+scriptname = sys.\+argv\mbox{[}0\mbox{]}}\hypertarget{namespacereadSensorNode_acade05a74d18b0ee0e6f280ad09d687f}{}\label{namespacereadSensorNode_acade05a74d18b0ee0e6f280ad09d687f}
+\index{read\+Sensor\+Node@{read\+Sensor\+Node}!send\+\_\+str@{send\+\_\+str}}
+\index{send\+\_\+str@{send\+\_\+str}!read\+Sensor\+Node@{read\+Sensor\+Node}}
+\subsubsection[{\texorpdfstring{send\+\_\+str}{send_str}}]{\setlength{\rightskip}{0pt plus 5cm}read\+Sensor\+Node.\+send\+\_\+str = \textquotesingle{}34$\vert$0$\vert$ds\textbackslash{}r\textbackslash{}n\textquotesingle{}}\hypertarget{namespacereadSensorNode_af709b4a0649a2ea9861b259a849678b4}{}\label{namespacereadSensorNode_af709b4a0649a2ea9861b259a849678b4}
+\index{read\+Sensor\+Node@{read\+Sensor\+Node}!sensor\+Data@{sensor\+Data}}
+\index{sensor\+Data@{sensor\+Data}!read\+Sensor\+Node@{read\+Sensor\+Node}}
+\subsubsection[{\texorpdfstring{sensor\+Data}{sensorData}}]{\setlength{\rightskip}{0pt plus 5cm}read\+Sensor\+Node.\+sensor\+Data = Read\+Sensor\+Data(\char`\"{}98\+:D3\+:31\+:\+F\+B\+:31\+:\+A6\char`\"{},send\+\_\+str)}\hypertarget{namespacereadSensorNode_ad6357a640d5eeb83da28688160844249}{}\label{namespacereadSensorNode_ad6357a640d5eeb83da28688160844249}
+\index{read\+Sensor\+Node@{read\+Sensor\+Node}!val@{val}}
+\index{val@{val}!read\+Sensor\+Node@{read\+Sensor\+Node}}
+\subsubsection[{\texorpdfstring{val}{val}}]{\setlength{\rightskip}{0pt plus 5cm}read\+Sensor\+Node.\+val = sys.\+argv.\+pop()}\hypertarget{namespacereadSensorNode_a6402c2b5b9511b1753751a57999229db}{}\label{namespacereadSensorNode_a6402c2b5b9511b1753751a57999229db}

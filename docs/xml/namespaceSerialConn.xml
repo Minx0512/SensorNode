@@ -3,172 +3,39 @@
   <compounddef id="namespaceSerialConn" kind="namespace" language="Python">
     <compoundname>SerialConn</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="SerialConn_8py_1abc67245ba0f55f05e9e5b026effe9a39" prot="public" static="no" mutable="no">
-        <type>string</type>
-        <definition>string SerialConn.SERIALPORT</definition>
-        <argsstring></argsstring>
-        <name>SERIALPORT</name>
-        <initializer>= &quot;/dev/ttyUSB0&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="8" column="1" bodyfile="Python/SerialConn.py" bodystart="8" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1a593e7a7237f8c15fae85a4be05908677" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int SerialConn.BAUDRATE</definition>
-        <argsstring></argsstring>
-        <name>BAUDRATE</name>
-        <initializer>= 9600</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="9" column="1" bodyfile="Python/SerialConn.py" bodystart="9" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1a55e53b967dd2b020787a575802da352c" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSerialConn_1a55e53b967dd2b020787a575802da352c" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SerialConn.ser</definition>
         <argsstring></argsstring>
         <name>ser</name>
-        <initializer>= serial.Serial(SERIALPORT, BAUDRATE)</initializer>
+        <initializer>= NewSerialCon(&quot;/dev/ttyAMA0&quot;, 9600)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SerialConn.py" line="11" column="1" bodyfile="Python/SerialConn.py" bodystart="11" bodyend="-1"/>
+        <location file="Python/old/SerialConn.py" line="19" column="1" bodyfile="Python/old/SerialConn.py" bodystart="19" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1a82f99976db59fe9a70947d45ef469b56" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSerialConn_1ae0e4c4c49ff306443cb816793cecd857" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>SerialConn.bytesize</definition>
+        <definition>SerialConn.resp</definition>
         <argsstring></argsstring>
-        <name>bytesize</name>
+        <name>resp</name>
+        <initializer>= ReadSensorDS18B20(<ref refid="namespaceSerialConn_1a55e53b967dd2b020787a575802da352c" kindref="member">ser</ref>,&quot;A0:A0:A0:A0:A0&quot;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SerialConn.py" line="12" column="1" bodyfile="Python/SerialConn.py" bodystart="12" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1ad75dec858cb967bd9da6d84890686573" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SerialConn.parity</definition>
-        <argsstring></argsstring>
-        <name>parity</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="13" column="1" bodyfile="Python/SerialConn.py" bodystart="13" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1abd64040aaeacfb9977cd399f3353e5b6" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SerialConn.stopbits</definition>
-        <argsstring></argsstring>
-        <name>stopbits</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="14" column="1" bodyfile="Python/SerialConn.py" bodystart="14" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1a09b9412a6f889492f95bc11428f76a33" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SerialConn.xonxoff</definition>
-        <argsstring></argsstring>
-        <name>xonxoff</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="18" column="1" bodyfile="Python/SerialConn.py" bodystart="18" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1a9c642af8c81c85cdb3d61401d972e2bd" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SerialConn.rtscts</definition>
-        <argsstring></argsstring>
-        <name>rtscts</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="19" column="1" bodyfile="Python/SerialConn.py" bodystart="19" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1af675e8b5fdef65b6ade16b2faa47badf" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SerialConn.dsrdtr</definition>
-        <argsstring></argsstring>
-        <name>dsrdtr</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="20" column="1" bodyfile="Python/SerialConn.py" bodystart="20" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1a97949bfcbe0993672f6733d7c5177933" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SerialConn.writeTimeout</definition>
-        <argsstring></argsstring>
-        <name>writeTimeout</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="21" column="1" bodyfile="Python/SerialConn.py" bodystart="21" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1ae37e3062a31cdbd7bd62e775c5ff756e" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int SerialConn::numberOfLine</definition>
-        <argsstring></argsstring>
-        <name>numberOfLine</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="38" column="1" bodyfile="Python/SerialConn.py" bodystart="38" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="SerialConn_8py_1a8efda176269f35d3ed78e75093d1243b" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SerialConn.response</definition>
-        <argsstring></argsstring>
-        <name>response</name>
-        <initializer>= ser.read_until(&quot;\\\\+end&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SerialConn.py" line="42" column="1" bodyfile="Python/SerialConn.py" bodystart="42" bodyend="-1"/>
+        <location file="Python/old/SerialConn.py" line="23" column="1" bodyfile="Python/old/SerialConn.py" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Python/SerialConn.py" line="1" column="1"/>
+    <location file="Python/old/SerialConn.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

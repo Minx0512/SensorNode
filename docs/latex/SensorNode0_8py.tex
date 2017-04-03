@@ -1,0 +1,51 @@
+\hypertarget{SensorNode0_8py}{}\section{Python/old/\+Sensor\+Node0.py File Reference}
+\label{SensorNode0_8py}\index{Python/old/\+Sensor\+Node0.\+py@{Python/old/\+Sensor\+Node0.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceSensorNode0}{Sensor\+Node0}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceSensorNode0_acebf4f2262d99cf53409e57f8018fb80}{Sensor\+Node0.\+is\+Night\+Time} (light\+Value)
+\item 
+def \hyperlink{namespaceSensorNode0_af6220b8b1116262731410676440f7e3f}{Sensor\+Node0.\+Sleep\+Mode} (slpmd)
+\item 
+def \hyperlink{namespaceSensorNode0_a6adf2f38d28053fb7d9d8b9ef3ef7524}{Sensor\+Node0.\+No\+Movement} (lastmv, light\+Val, t\+In, state\+Olight)
+\item 
+def \hyperlink{namespaceSensorNode0_ac43f766b9b1117ce6520080a80f7cb88}{Sensor\+Node0.\+On\+Movement} (light\+Val, t\+In, t\+Out, state\+Olight, rs\+Eneabled)
+\item 
+def \hyperlink{namespaceSensorNode0_abfecbd15467837166bc1c24a5d5be99d}{Sensor\+Node0.\+Detect\+Movement} (socket, t\+Inside, t\+Outside, r\+Sensors\+Enabled, slpmode)
+\item 
+def \hyperlink{namespaceSensorNode0_ac9f0551e56fe21523c6070f32e6b9b14}{Sensor\+Node0.\+Read\+Sensor\+Data} (socket, tnum)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceSensorNode0_a98a0834cf9ffb42aadb98db46f82cac4}{Sensor\+Node0.\+port} = 1
+\item 
+int \hyperlink{namespaceSensorNode0_aa58109ec652b3ad7ee90acb844a55e0f}{Sensor\+Node0.\+conn} = 0
+\item 
+string \hyperlink{namespaceSensorNode0_acbfb5ad644195e6858adb96b932aa531}{Sensor\+Node0.\+out\+\_\+str} = \textquotesingle{}\textquotesingle{}
+\item 
+string \hyperlink{namespaceSensorNode0_a6bda8d693f223a3426dcc68bdb060e29}{Sensor\+Node0.\+bd\+\_\+addr} = \textquotesingle{}98\+:D3\+:31\+:\+F\+B\+:31\+:\+A6\textquotesingle{}
+\item 
+int \hyperlink{namespaceSensorNode0_ad2115f513c00e2649307834bfead90af}{Sensor\+Node0.\+remote\+Sensors\+Enabled} = 0
+\item 
+int \hyperlink{namespaceSensorNode0_a97a9f44b071f562041483214e2bccb90}{Sensor\+Node0.\+sleepmode} = 0
+\item 
+\hyperlink{namespaceSensorNode0_a6b4baa40941946967bba9f0a8b1d414b}{Sensor\+Node0.\+sock} = Blue\+Connect(bd\+\_\+addr,port,5.\+0)
+\item 
+int \hyperlink{namespaceSensorNode0_a6cd829500b35c8860adb0de438f8ac86}{Sensor\+Node0.\+prevmins} = 0
+\item 
+int \hyperlink{namespaceSensorNode0_affd806dd0b5faa586b60d239832a60b3}{Sensor\+Node0.\+thresh} = 500
+\item 
+int \hyperlink{namespaceSensorNode0_a8b1d695d3a341a34667a220af9c25ce4}{Sensor\+Node0.\+tresh\+Out} = 500
+\item 
+string \hyperlink{namespaceSensorNode0_af0fa9a4e63f52876e95004704156b614}{Sensor\+Node0.\+hum\+D\+H\+T22} = \textquotesingle{}\textquotesingle{}
+\item 
+string \hyperlink{namespaceSensorNode0_ae6cff13e6146160841c5249c19e8e8c7}{Sensor\+Node0.\+temp\+D\+H\+T22} = \textquotesingle{}\textquotesingle{}
+\item 
+\hyperlink{namespaceSensorNode0_ac28b0dfb61cb44c2075c9f10cc918c72}{Sensor\+Node0.\+thread\+Lock} = thread.\+allocate\+\_\+lock()
+\end{DoxyCompactItemize}

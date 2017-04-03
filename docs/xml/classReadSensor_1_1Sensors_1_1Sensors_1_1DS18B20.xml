@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20" kind="class" language="Python" prot="public">
+    <compoundname>ReadSensor::Sensors::Sensors::DS18B20</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a586ce8e71cef560e2a1a8f2461abe3f1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DS18B20::MAC</definition>
+        <argsstring></argsstring>
+        <name>MAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="20" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1ac16de12d6071752c317827bdcb2b9462" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DS18B20::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="21" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a6e755c7e5e31b296e06e1825b6b53616" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DS18B20::unitT</definition>
+        <argsstring></argsstring>
+        <name>unitT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="22" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a261fd85fee68a5b59104c0b91462283c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DS18B20::ds</definition>
+        <argsstring></argsstring>
+        <name>ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="24" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a84998684fc37c7c7c2ec2bdf07bcdbc3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DS18B20::numEl</definition>
+        <argsstring></argsstring>
+        <name>numEl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="30" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1abd12b07478d8d6700391b478e5dc6743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.Sensors.Sensors.DS18B20.__init__</definition>
+        <argsstring>(self, responseStr, sensStr)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>responseStr</type>
+          <defname>responseStr</defname>
+        </param>
+        <param>
+          <type>sensStr</type>
+          <defname>sensStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="19" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="19" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a3de3ef1d70ebd46ed47fedf147aa2af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.Sensors.Sensors.DS18B20.GetValuePair</definition>
+        <argsstring>(self, idx)</argsstring>
+        <name>GetValuePair</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>idx</type>
+          <defname>idx</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="32" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="32" bodyend="34"/>
+        <references refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a586ce8e71cef560e2a1a8f2461abe3f1" compoundref="Sensors_8py" startline="20">ReadSensor.Sensors.Sensors.DS18B20.MAC</references>
+        <references refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1ac16de12d6071752c317827bdcb2b9462" compoundref="Sensors_8py" startline="21">ReadSensor.Sensors.Sensors.DS18B20.T</references>
+        <references refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a6e755c7e5e31b296e06e1825b6b53616" compoundref="Sensors_8py" startline="22">ReadSensor.Sensors.Sensors.DS18B20.unitT</references>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1af67413d1aaeddd08769e8720f6d55cdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.Sensors.Sensors.DS18B20.GetAvgTemperature</definition>
+        <argsstring>(self)</argsstring>
+        <name>GetAvgTemperature</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="35" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="35" bodyend="41"/>
+        <references refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a84998684fc37c7c7c2ec2bdf07bcdbc3" compoundref="Sensors_8py" startline="30">ReadSensor.Sensors.Sensors.DS18B20.numEl</references>
+        <references refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1ac16de12d6071752c317827bdcb2b9462" compoundref="Sensors_8py" startline="21">ReadSensor.Sensors.Sensors.DS18B20.T</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/ReadSensor/Sensors/Sensors.py" line="18" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="18" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1abd12b07478d8d6700391b478e5dc6743" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DS18B20</scope><name>__init__</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a261fd85fee68a5b59104c0b91462283c" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DS18B20</scope><name>ds</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1af67413d1aaeddd08769e8720f6d55cdb" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DS18B20</scope><name>GetAvgTemperature</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a3de3ef1d70ebd46ed47fedf147aa2af9" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DS18B20</scope><name>GetValuePair</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a586ce8e71cef560e2a1a8f2461abe3f1" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DS18B20</scope><name>MAC</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a84998684fc37c7c7c2ec2bdf07bcdbc3" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DS18B20</scope><name>numEl</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1ac16de12d6071752c317827bdcb2b9462" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DS18B20</scope><name>T</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a6e755c7e5e31b296e06e1825b6b53616" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DS18B20</scope><name>unitT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

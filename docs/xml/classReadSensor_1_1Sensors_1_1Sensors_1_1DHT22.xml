@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22" kind="class" language="Python" prot="public">
+    <compoundname>ReadSensor::Sensors::Sensors::DHT22</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1ae9fe17893df9d356384716d9f86d267a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DHT22::H</definition>
+        <argsstring></argsstring>
+        <name>H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="44" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a284bad74ab53470b1f545e961f55ebd9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DHT22::unitH</definition>
+        <argsstring></argsstring>
+        <name>unitH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="45" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a087acd6fb1be3705ffdebd1f47f68e14" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DHT22::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="46" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1aa8b6d62ac1d8e73b028450d233b0a9be" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DHT22::unitT</definition>
+        <argsstring></argsstring>
+        <name>unitT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="47" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1afc4c56711acfaf61daa10ebb40e06a61" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DHT22::err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="48" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a73a82cd752304cb8a532a41b1d2f49f6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.DHT22::dht</definition>
+        <argsstring></argsstring>
+        <name>dht</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="50" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a12dd37e7cb97ca611f16556f101a2d24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.Sensors.Sensors.DHT22.__init__</definition>
+        <argsstring>(self, responseStr, sensStr)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>responseStr</type>
+          <defname>responseStr</defname>
+        </param>
+        <param>
+          <type>sensStr</type>
+          <defname>sensStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="43" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="43" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/ReadSensor/Sensors/Sensors.py" line="42" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="42" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a12dd37e7cb97ca611f16556f101a2d24" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DHT22</scope><name>__init__</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a73a82cd752304cb8a532a41b1d2f49f6" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DHT22</scope><name>dht</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1afc4c56711acfaf61daa10ebb40e06a61" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DHT22</scope><name>err</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1ae9fe17893df9d356384716d9f86d267a" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DHT22</scope><name>H</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a087acd6fb1be3705ffdebd1f47f68e14" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DHT22</scope><name>T</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a284bad74ab53470b1f545e961f55ebd9" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DHT22</scope><name>unitH</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1aa8b6d62ac1d8e73b028450d233b0a9be" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::DHT22</scope><name>unitT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

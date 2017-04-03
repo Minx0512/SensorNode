@@ -4,14 +4,14 @@
     <compoundname>NRF24L01registers.h</compoundname>
     <includedby refid="NRF24L01_8cpp" local="yes">src/Wireless/NRF24L01.cpp</includedby>
     <invincdepgraph>
-      <node id="299">
+      <node id="327">
         <label>src/Wireless/NRF24L01.cpp</label>
         <link refid="NRF24L01_8cpp"/>
       </node>
-      <node id="298">
+      <node id="326">
         <label>src/Wireless/NRF24L01registers.h</label>
         <link refid="NRF24L01registers.h"/>
-        <childnode refid="299" relation="include">
+        <childnode refid="327" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

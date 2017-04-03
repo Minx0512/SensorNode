@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['sendsensorstr',['sendSensorStr',['../main_8cpp.html#ac92f70960babcaa68482b8ea681bcec8',1,'main.cpp']]],
-  ['sendsystemstr',['sendSystemStr',['../main_8cpp.html#ad5572274b88d1bfc8a5e057e1132bf90',1,'main.cpp']]],
-  ['spi',['spi',['../classNRF24L01.html#a6321af25fee367445baa6ab4840f8443',1,'NRF24L01']]],
-  ['spi_5fddr',['SPI_DDR',['../classSPI.html#a5dca744360bf2b10d74ab512f2fb71ea',1,'SPI']]],
-  ['spi_5fmiso',['SPI_MISO',['../classSPI.html#a6fefdb147a2789fe10efb13f8100235c',1,'SPI']]],
-  ['spi_5fmosi',['SPI_MOSI',['../classSPI.html#a10159404dbabef20333fe73f69a3fca6',1,'SPI']]],
-  ['spi_5fsck',['SPI_SCK',['../classSPI.html#ad9ff914a9831b004b1f8fa5368558e01',1,'SPI']]],
-  ['spi_5fspeed',['spi_speed',['../classNRF24L01.html#a4701641c1e8b3d082deb03f93c84d8c7',1,'NRF24L01']]],
-  ['spi_5fss',['SPI_SS',['../classSPI.html#ad4cb7d5cd46647baf68bb98a0e06e2aa',1,'SPI']]],
-  ['str',['str',['../main_8cpp.html#ac19b967928c4ef5b461808cbac40840c',1,'main.cpp']]]
+  ['mac',['MAC',['../classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20.html#a586ce8e71cef560e2a1a8f2461abe3f1',1,'ReadSensor::Sensors::Sensors::DS18B20']]],
+  ['macstring',['MACString',['../classDS18B20.html#a6884de10b175289718239bdac0b8e52e',1,'DS18B20']]],
+  ['mem_5fadressrx',['mem_adressRx',['../main_8cpp.html#abd46d3d3672467c73c53275003c33c17',1,'main.cpp']]],
+  ['mem_5fadresstx',['mem_adressTx',['../main_8cpp.html#ae62ba57830fc3210edf7d78311e7403e',1,'main.cpp']]],
+  ['move',['move',['../classReadSensor_1_1Sensors_1_1Sensors_1_1Movement.html#afca15a3e5b7fd64c76fb803340cff411',1,'ReadSensor::Sensors::Sensors::Movement']]],
+  ['mv',['mv',['../classReadSensor_1_1Sensors_1_1Sensors_1_1Movement.html#a7004579e8312dd94942ff029d65f7586',1,'ReadSensor.Sensors.Sensors.Movement.mv()'],['../namespaceReadSensor_1_1SensorNode.html#a6554f3410cedc47453c44dffec450d82',1,'ReadSensor.SensorNode.mv()']]]
 ];

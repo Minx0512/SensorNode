@@ -1,0 +1,34 @@
+\hypertarget{sensLights_8py}{}\section{Python/old/sens\+Lights.py File Reference}
+\label{sensLights_8py}\index{Python/old/sens\+Lights.\+py@{Python/old/sens\+Lights.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacesensLights}{sens\+Lights}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacesensLights_abac1fd1adebeaff35fb495576dbddc5b}{sens\+Lights.\+pr\+Thresh} = 550
+\item 
+string \hyperlink{namespacesensLights_a6e1162048c8d736a8db0351d57a8b139}{sens\+Lights.\+send\+\_\+str} = \char`\"{}550\textbackslash{}n\char`\"{}
+\item 
+\hyperlink{namespacesensLights_a8b0ffad4098c0b49ff9ed83c3e7a279c}{sens\+Lights.\+sensor\+Data} = Read\+Sensor\+Data(\char`\"{}98\+:D3\+:31\+:\+F\+B\+:31\+:\+A6\char`\"{},send\+\_\+str)
+\item 
+\hyperlink{namespacesensLights_a3039fae16cd626cac6686b09a079e832}{sens\+Lights.\+pr} = int(re.\+search(\char`\"{}$<$N\+S\+L19\+M51$>$(.$\ast$)$<$/N\+S\+L19\+M51$>$\char`\"{},sensor\+Data)\mbox{[}0\mbox{]})
+\item 
+\hyperlink{namespacesensLights_ac8aa58ba0e3b1d1e5e43af8368d84bde}{sens\+Lights.\+ds18b20} = re.\+findall(\char`\"{}$<$D\+S18\+B20$>$$<$ID$>$(.$\ast$)$<$/ID$>$$<$T$>$(.$\ast$)\textbackslash{}xc2\textbackslash{}xb0C$<$/T$>$$<$/\hyperlink{classDS18B20}{D\+S18\+B20}$>$\char`\"{},sensor\+Data)
+\item 
+\hyperlink{namespacesensLights_a332e8e9c0d25bdce1ada40499576e97d}{sens\+Lights.\+dht} = re.\+findall(\char`\"{}$<$D\+H\+T22$>$$<$T$>$(.$\ast$)\textbackslash{}xc2\textbackslash{}xb0C$<$/T$>$$<$H$>$(.$\ast$)\%RH$<$/H$>$$<$/\hyperlink{classDHT22}{D\+H\+T22}$>$\char`\"{},sensor\+Data)
+\item 
+\hyperlink{namespacesensLights_a2285eac93c571f3e13b7c75eb076d452}{sens\+Lights.\+movement} = int(re.\+search(\char`\"{}$<$mv$>$(.$\ast$)$<$/mv$>$\char`\"{},sensor\+Data).group(1))
+\item 
+\hyperlink{namespacesensLights_af4085cc84e3f4ffd4e949bc88e9fbd29}{sens\+Lights.\+move\+Sense\+Enabled} = int(re.\+search(\char`\"{}$<$mv\+Sen$>$(.$\ast$)$<$/mv\+Sen$>$\char`\"{},sensor\+Data).group(1))
+\item 
+bool \hyperlink{namespacesensLights_a5c2a6a5aad94452fb16ef2b595eade73}{sens\+Lights.\+lights} = False
+\item 
+bool \hyperlink{namespacesensLights_a8c334ce46f2ca382615e30ca82fa7a2c}{sens\+Lights.\+light\+Switch} = True
+\item 
+\hyperlink{namespacesensLights_a043e829ccb1ca220d4668cdd65be4988}{sens\+Lights.\+time} = int(re.\+search(\char`\"{}$<$time$>$(.$\ast$)$<$/time$>$\char`\"{},sensor\+Data).group(1))
+\item 
+\hyperlink{namespacesensLights_a6af9fcb7c8252a343f039e728ab218b3}{sens\+Lights.\+shell}
+\end{DoxyCompactItemize}

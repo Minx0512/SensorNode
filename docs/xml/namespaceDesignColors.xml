@@ -3,7 +3,7 @@
   <compounddef id="namespaceDesignColors" kind="namespace" language="Python">
     <compoundname>DesignColors</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="DesignColors_8py_1a5b302c557da5bbd6922d98db4e9aeafd" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a5b302c557da5bbd6922d98db4e9aeafd" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.APP_BAR</definition>
         <argsstring></argsstring>
@@ -15,9 +15,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="3" column="1" bodyfile="Python/DesignColors.py" bodystart="3" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="3" column="1" bodyfile="Python/old/DesignColors.py" bodystart="3" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a78a48ceae30092b74429c7b1fd3511b5" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a78a48ceae30092b74429c7b1fd3511b5" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.APP_BG</definition>
         <argsstring></argsstring>
@@ -29,9 +29,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="4" column="1" bodyfile="Python/DesignColors.py" bodystart="4" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="4" column="1" bodyfile="Python/old/DesignColors.py" bodystart="4" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a84960578bddc2ccc9c8388c264614c35" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a84960578bddc2ccc9c8388c264614c35" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.APP_DIALOG</definition>
         <argsstring></argsstring>
@@ -43,9 +43,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="5" column="1" bodyfile="Python/DesignColors.py" bodystart="5" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="5" column="1" bodyfile="Python/old/DesignColors.py" bodystart="5" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a629eeb4081780c12ff7ff7555939150f" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a629eeb4081780c12ff7ff7555939150f" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.APP_FONT_COLOR</definition>
         <argsstring></argsstring>
@@ -57,9 +57,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="6" column="1" bodyfile="Python/DesignColors.py" bodystart="6" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="6" column="1" bodyfile="Python/old/DesignColors.py" bodystart="6" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a4e1fb0b470b24be659978a50f34dd001" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a4e1fb0b470b24be659978a50f34dd001" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_BG_COLOR_ACTIVE</definition>
         <argsstring></argsstring>
@@ -71,51 +71,51 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="8" column="1" bodyfile="Python/DesignColors.py" bodystart="8" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="8" column="1" bodyfile="Python/old/DesignColors.py" bodystart="8" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a8ce3dda761694acd71549c0c7275be3e" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a8ce3dda761694acd71549c0c7275be3e" prot="public" static="no" mutable="no">
         <type></type>
         <definition>DesignColors.BUTTON_BG_COLOR_INACTIVE</definition>
         <argsstring></argsstring>
         <name>BUTTON_BG_COLOR_INACTIVE</name>
-        <initializer>= APP_BG</initializer>
+        <initializer>= <ref refid="namespaceDesignColors_1a78a48ceae30092b74429c7b1fd3511b5" kindref="member">APP_BG</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="9" column="1" bodyfile="Python/DesignColors.py" bodystart="9" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="9" column="1" bodyfile="Python/old/DesignColors.py" bodystart="9" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a0e99aab76619ef5e15f72705067d28f2" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a0e99aab76619ef5e15f72705067d28f2" prot="public" static="no" mutable="no">
         <type></type>
         <definition>DesignColors.BUTTON_BG_COLOR_HOVER</definition>
         <argsstring></argsstring>
         <name>BUTTON_BG_COLOR_HOVER</name>
-        <initializer>= APP_BG</initializer>
+        <initializer>= <ref refid="namespaceDesignColors_1a78a48ceae30092b74429c7b1fd3511b5" kindref="member">APP_BG</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="12" column="1" bodyfile="Python/DesignColors.py" bodystart="12" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="12" column="1" bodyfile="Python/old/DesignColors.py" bodystart="12" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a366ebdc756b424d0740e984b1d022134" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a366ebdc756b424d0740e984b1d022134" prot="public" static="no" mutable="no">
         <type></type>
         <definition>DesignColors.BUTTON_BG_COLOR_NORMAL</definition>
         <argsstring></argsstring>
         <name>BUTTON_BG_COLOR_NORMAL</name>
-        <initializer>= APP_BG</initializer>
+        <initializer>= <ref refid="namespaceDesignColors_1a78a48ceae30092b74429c7b1fd3511b5" kindref="member">APP_BG</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="13" column="1" bodyfile="Python/DesignColors.py" bodystart="13" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="13" column="1" bodyfile="Python/old/DesignColors.py" bodystart="13" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1af46e3f936c45d87e1caf88d9f264fe6a" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1af46e3f936c45d87e1caf88d9f264fe6a" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR</definition>
         <argsstring></argsstring>
@@ -127,23 +127,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="14" column="1" bodyfile="Python/DesignColors.py" bodystart="14" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="14" column="1" bodyfile="Python/old/DesignColors.py" bodystart="14" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a560437dc7a8bb2c6f96ba9e42e01e6df" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a560437dc7a8bb2c6f96ba9e42e01e6df" prot="public" static="no" mutable="no">
         <type></type>
         <definition>DesignColors.BUTTON_FONT_COLOR_HOVER_ACTIVE</definition>
         <argsstring></argsstring>
         <name>BUTTON_FONT_COLOR_HOVER_ACTIVE</name>
-        <initializer>= APP_BG</initializer>
+        <initializer>= <ref refid="namespaceDesignColors_1a78a48ceae30092b74429c7b1fd3511b5" kindref="member">APP_BG</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="15" column="1" bodyfile="Python/DesignColors.py" bodystart="15" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="15" column="1" bodyfile="Python/old/DesignColors.py" bodystart="15" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a61ad2f84b5395e78bb044a651eae513a" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a61ad2f84b5395e78bb044a651eae513a" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR_HOVER_INACTIVE</definition>
         <argsstring></argsstring>
@@ -155,9 +155,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="16" column="1" bodyfile="Python/DesignColors.py" bodystart="16" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="16" column="1" bodyfile="Python/old/DesignColors.py" bodystart="16" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a70532505329fa9871cb99db52738b54c" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a70532505329fa9871cb99db52738b54c" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_BG_COLOR_LIGHTS</definition>
         <argsstring></argsstring>
@@ -169,9 +169,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="18" column="1" bodyfile="Python/DesignColors.py" bodystart="18" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="18" column="1" bodyfile="Python/old/DesignColors.py" bodystart="18" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a8a4e371d50ada0c193a5afee4da7ed8f" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a8a4e371d50ada0c193a5afee4da7ed8f" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_BG_COLOR_LIGHTS_HOVER</definition>
         <argsstring></argsstring>
@@ -183,9 +183,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="19" column="1" bodyfile="Python/DesignColors.py" bodystart="19" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="19" column="1" bodyfile="Python/old/DesignColors.py" bodystart="19" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a9bcef4aac1668aa15a8cf4d2e3cdd950" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a9bcef4aac1668aa15a8cf4d2e3cdd950" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR_LIGHTS</definition>
         <argsstring></argsstring>
@@ -197,9 +197,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="21" column="1" bodyfile="Python/DesignColors.py" bodystart="21" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="21" column="1" bodyfile="Python/old/DesignColors.py" bodystart="21" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a79be88ee28771eef3075c3b71f914fde" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a79be88ee28771eef3075c3b71f914fde" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR_LIGHTS_HOVER</definition>
         <argsstring></argsstring>
@@ -211,9 +211,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="22" column="1" bodyfile="Python/DesignColors.py" bodystart="22" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="22" column="1" bodyfile="Python/old/DesignColors.py" bodystart="22" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a1755e521f53c725530392505a1082a6e" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a1755e521f53c725530392505a1082a6e" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_BG_COLOR_SENSORS</definition>
         <argsstring></argsstring>
@@ -225,9 +225,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="24" column="1" bodyfile="Python/DesignColors.py" bodystart="24" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="24" column="1" bodyfile="Python/old/DesignColors.py" bodystart="24" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1ad37f409a4c81842f5d33936d0de67ce9" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1ad37f409a4c81842f5d33936d0de67ce9" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR_SENSORS</definition>
         <argsstring></argsstring>
@@ -239,9 +239,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="25" column="1" bodyfile="Python/DesignColors.py" bodystart="25" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="25" column="1" bodyfile="Python/old/DesignColors.py" bodystart="25" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a4ca06c3cc79b8d4f53637799a95a40f0" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a4ca06c3cc79b8d4f53637799a95a40f0" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_BG_COLOR_SENSORS_HOVER</definition>
         <argsstring></argsstring>
@@ -253,9 +253,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="27" column="1" bodyfile="Python/DesignColors.py" bodystart="27" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="27" column="1" bodyfile="Python/old/DesignColors.py" bodystart="27" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a807babc40404f8ab760df5a32277b8a1" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a807babc40404f8ab760df5a32277b8a1" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR_SENSORS_HOVER</definition>
         <argsstring></argsstring>
@@ -267,9 +267,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="28" column="1" bodyfile="Python/DesignColors.py" bodystart="28" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="28" column="1" bodyfile="Python/old/DesignColors.py" bodystart="28" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a33569d0643d312e2282ef327f0179339" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a33569d0643d312e2282ef327f0179339" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_BG_COLOR_CONFIGURE</definition>
         <argsstring></argsstring>
@@ -281,9 +281,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="30" column="1" bodyfile="Python/DesignColors.py" bodystart="30" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="30" column="1" bodyfile="Python/old/DesignColors.py" bodystart="30" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a8e04a09a7ec6ea1fa3a1dd41fead1792" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a8e04a09a7ec6ea1fa3a1dd41fead1792" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR_CONFIGURE</definition>
         <argsstring></argsstring>
@@ -295,9 +295,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="31" column="1" bodyfile="Python/DesignColors.py" bodystart="31" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="31" column="1" bodyfile="Python/old/DesignColors.py" bodystart="31" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a3e85bd38c64bb5b93ae8b5b99f3181df" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a3e85bd38c64bb5b93ae8b5b99f3181df" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_BG_COLOR_CONFIGURE_HOVER</definition>
         <argsstring></argsstring>
@@ -309,9 +309,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="33" column="1" bodyfile="Python/DesignColors.py" bodystart="33" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="33" column="1" bodyfile="Python/old/DesignColors.py" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a0248738a62963aa5da01e082c3c04a48" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a0248738a62963aa5da01e082c3c04a48" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR_CONFIGURE_HOVER</definition>
         <argsstring></argsstring>
@@ -323,9 +323,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="34" column="1" bodyfile="Python/DesignColors.py" bodystart="34" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="34" column="1" bodyfile="Python/old/DesignColors.py" bodystart="34" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a5924d34438819b719af59a08f1002d90" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a5924d34438819b719af59a08f1002d90" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_BG_COLOR_SYSTEM</definition>
         <argsstring></argsstring>
@@ -337,9 +337,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="36" column="1" bodyfile="Python/DesignColors.py" bodystart="36" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="36" column="1" bodyfile="Python/old/DesignColors.py" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1abd5b7c8c991d968b7fdc9232feef7b0b" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1abd5b7c8c991d968b7fdc9232feef7b0b" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR_SYSTEM</definition>
         <argsstring></argsstring>
@@ -351,9 +351,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="37" column="1" bodyfile="Python/DesignColors.py" bodystart="37" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="37" column="1" bodyfile="Python/old/DesignColors.py" bodystart="37" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1ae1ef4f0181280dee35dc33e253d1df84" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1ae1ef4f0181280dee35dc33e253d1df84" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_BG_COLOR_SYSTEM_HOVER</definition>
         <argsstring></argsstring>
@@ -365,9 +365,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="39" column="1" bodyfile="Python/DesignColors.py" bodystart="39" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="39" column="1" bodyfile="Python/old/DesignColors.py" bodystart="39" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="DesignColors_8py_1a7b473b0f7a1e94ba117b66725bd28d78" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceDesignColors_1a7b473b0f7a1e94ba117b66725bd28d78" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string DesignColors.BUTTON_FONT_COLOR_SYSTEM_HOVER</definition>
         <argsstring></argsstring>
@@ -379,13 +379,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/DesignColors.py" line="40" column="1" bodyfile="Python/DesignColors.py" bodystart="40" bodyend="-1"/>
+        <location file="Python/old/DesignColors.py" line="40" column="1" bodyfile="Python/old/DesignColors.py" bodystart="40" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Python/DesignColors.py" line="1" column="1"/>
+    <location file="Python/old/DesignColors.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

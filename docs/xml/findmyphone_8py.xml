@@ -8,17 +8,17 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">#!/usr/bin/python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1" refid="namespacefindmyphone" refkind="compound"><highlight class="comment">#!/usr/bin/python</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>bluetooth</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal">target_name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MinxSensorNode01&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal">target_address<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="namespacefindmyphone_1aa120ec9c3e51eeeae0130cf9ce402672" refkind="member"><highlight class="normal">target_name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MinxSensorNode01&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespacefindmyphone_1a8af8877c5d59f0e0cea959d3fb0611aa" refkind="member"><highlight class="normal">target_address<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal">nearby_devices<sp/>=<sp/>bluetooth.discover_devices()</highlight></codeline>
+<codeline lineno="7" refid="namespacefindmyphone_1a866f605dd8a21d61188a281fba66808c" refkind="member"><highlight class="normal">nearby_devices<sp/>=<sp/>bluetooth.discover_devices()</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>bdaddr<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>nearby_devices:</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Address:<sp/>&quot;</highlight><highlight class="normal">,<sp/>bdaddr</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>=<sp/>bluetooth.lookup_name(<sp/>bdaddr,20<sp/>)</highlight></codeline>
+<codeline lineno="11" refid="namespacefindmyphone_1ae87ee29765ed9aaf12d3dfef515ce1a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>=<sp/>bluetooth.lookup_name(<sp/>bdaddr,20<sp/>)</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Name:<sp/>&quot;</highlight><highlight class="normal">,<sp/>t</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>target_name<sp/>==<sp/>t<sp/>:</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_address<sp/>=<sp/>bdaddr</highlight></codeline>
@@ -33,6 +33,6 @@
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Python/findmyphone.py"/>
+    <location file="Python/old/findmyphone.py"/>
   </compounddef>
 </doxygen>

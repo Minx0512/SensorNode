@@ -1,0 +1,152 @@
+.TH "ReadSensor.ReadSensor.ReadSensor" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReadSensor.ReadSensor.ReadSensor \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, port, baudrate)"
+.br
+.ti -1c
+.RI "def \fBGetAvailableSensors\fP (self, MAC)"
+.br
+.ti -1c
+.RI "def \fBDS18B20\fP (self, MAC)"
+.br
+.ti -1c
+.RI "def \fBDHT22\fP (self, MAC)"
+.br
+.ti -1c
+.RI "def \fBMovement\fP (self, MAC)"
+.br
+.ti -1c
+.RI "def \fBLightAnalog\fP (self, MAC)"
+.br
+.ti -1c
+.RI "def \fBLightDigital\fP (self, MAC)"
+.br
+.ti -1c
+.RI "def \fBBMP180\fP (self, MAC)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBsensorMAC\fP"
+.br
+.ti -1c
+.RI "\fBcmdID\fP"
+.br
+.ti -1c
+.RI "\fBpropertyString\fP"
+.br
+.ti -1c
+.RI "\fBqueryStr\fP"
+.br
+.ti -1c
+.RI "\fBserialCon\fP"
+.br
+.ti -1c
+.RI "\fBresp\fP"
+.br
+.ti -1c
+.RI "\fBavailableSensors\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+provides functions for sensor reading
+.fi
+.PP
+ 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def ReadSensor\&.ReadSensor\&.ReadSensor\&.__init__ ( self,  port,  baudrate)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "def ReadSensor\&.ReadSensor\&.ReadSensor\&.BMP180 ( self,  MAC)"
+
+.PP
+.nf
+Reads the BMP180 pressure sensor on a certain node
+.fi
+.PP
+ 
+.SS "def ReadSensor\&.ReadSensor\&.ReadSensor\&.DHT22 ( self,  MAC)"
+
+.PP
+.nf
+Reads the DHT22 sensor on a node with a certain MAC address
+.fi
+.PP
+ 
+.SS "def ReadSensor\&.ReadSensor\&.ReadSensor\&.DS18B20 ( self,  MAC)"
+
+.PP
+.nf
+Reads all DS18B20 sensors on one node with a certain MAC address
+.fi
+.PP
+ 
+.SS "def ReadSensor\&.ReadSensor\&.ReadSensor\&.GetAvailableSensors ( self,  MAC)"
+
+.PP
+.nf
+Get available sensors on a certain node
+.fi
+.PP
+ 
+.SS "def ReadSensor\&.ReadSensor\&.ReadSensor\&.LightAnalog ( self,  MAC)"
+
+.PP
+.nf
+Reads the analog photoresistor on a certain node 
+.fi
+.PP
+ 
+.SS "def ReadSensor\&.ReadSensor\&.ReadSensor\&.LightDigital ( self,  MAC)"
+
+.PP
+.nf
+Reads the digital light sensor on a certain node 
+.fi
+.PP
+ 
+.SS "def ReadSensor\&.ReadSensor\&.ReadSensor\&.Movement ( self,  MAC)"
+
+.PP
+.nf
+Reads the movement detector of a certain node 
+.fi
+.PP
+ 
+.SH "Member Data Documentation"
+.PP 
+.SS "ReadSensor\&.ReadSensor\&.ReadSensor\&.availableSensors"
+
+.SS "ReadSensor\&.ReadSensor\&.ReadSensor\&.cmdID"
+
+.SS "ReadSensor\&.ReadSensor\&.ReadSensor\&.propertyString"
+
+.SS "ReadSensor\&.ReadSensor\&.ReadSensor\&.queryStr"
+
+.SS "ReadSensor\&.ReadSensor\&.ReadSensor\&.resp"
+
+.SS "ReadSensor\&.ReadSensor\&.ReadSensor\&.sensorMAC"
+
+.SS "ReadSensor\&.ReadSensor\&.ReadSensor\&.serialCon"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

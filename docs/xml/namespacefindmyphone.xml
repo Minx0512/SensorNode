@@ -3,7 +3,7 @@
   <compounddef id="namespacefindmyphone" kind="namespace" language="Python">
     <compoundname>findmyphone</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="findmyphone_8py_1aa120ec9c3e51eeeae0130cf9ce402672" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespacefindmyphone_1aa120ec9c3e51eeeae0130cf9ce402672" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string findmyphone.target_name</definition>
         <argsstring></argsstring>
@@ -15,9 +15,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/findmyphone.py" line="4" column="1" bodyfile="Python/findmyphone.py" bodystart="4" bodyend="-1"/>
+        <location file="Python/old/findmyphone.py" line="4" column="1" bodyfile="Python/old/findmyphone.py" bodystart="4" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="findmyphone_8py_1a8af8877c5d59f0e0cea959d3fb0611aa" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespacefindmyphone_1a8af8877c5d59f0e0cea959d3fb0611aa" prot="public" static="no" mutable="no">
         <type></type>
         <definition>findmyphone.target_address</definition>
         <argsstring></argsstring>
@@ -29,9 +29,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/findmyphone.py" line="5" column="1" bodyfile="Python/findmyphone.py" bodystart="5" bodyend="-1"/>
+        <location file="Python/old/findmyphone.py" line="5" column="1" bodyfile="Python/old/findmyphone.py" bodystart="5" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="findmyphone_8py_1a866f605dd8a21d61188a281fba66808c" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespacefindmyphone_1a866f605dd8a21d61188a281fba66808c" prot="public" static="no" mutable="no">
         <type></type>
         <definition>findmyphone.nearby_devices</definition>
         <argsstring></argsstring>
@@ -43,9 +43,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/findmyphone.py" line="7" column="1" bodyfile="Python/findmyphone.py" bodystart="7" bodyend="-1"/>
+        <location file="Python/old/findmyphone.py" line="7" column="1" bodyfile="Python/old/findmyphone.py" bodystart="7" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="findmyphone_8py_1ae87ee29765ed9aaf12d3dfef515ce1a7" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespacefindmyphone_1ae87ee29765ed9aaf12d3dfef515ce1a7" prot="public" static="no" mutable="no">
         <type></type>
         <definition>findmyphone.t</definition>
         <argsstring></argsstring>
@@ -57,13 +57,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/findmyphone.py" line="11" column="1" bodyfile="Python/findmyphone.py" bodystart="11" bodyend="-1"/>
+        <location file="Python/old/findmyphone.py" line="11" column="1" bodyfile="Python/old/findmyphone.py" bodystart="11" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Python/findmyphone.py" line="1" column="1"/>
+    <location file="Python/old/findmyphone.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

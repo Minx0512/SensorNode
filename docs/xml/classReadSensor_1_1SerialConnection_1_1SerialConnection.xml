@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classReadSensor_1_1SerialConnection_1_1SerialConnection" kind="class" language="Python" prot="public">
+    <compoundname>ReadSensor::SerialConnection::SerialConnection</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classReadSensor_1_1SerialConnection_1_1SerialConnection_1a1e2d24c2fd693a56797a611a33cecd67" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.SerialConnection.SerialConnection::ser</definition>
+        <argsstring></argsstring>
+        <name>ser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/SerialConnection.py" line="9" column="1" bodyfile="Python/ReadSensor/SerialConnection.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1SerialConnection_1_1SerialConnection_1a7942e305c2383cdbae17b3303f7dfe7a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.SerialConnection.SerialConnection::err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/SerialConnection.py" line="20" column="1" bodyfile="Python/ReadSensor/SerialConnection.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadSensor_1_1SerialConnection_1_1SerialConnection_1ac1fbc3f627689d90fe96d3e5d15ba117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.SerialConnection.SerialConnection.__init__</definition>
+        <argsstring>(self, port, baudrate)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>port</type>
+          <defname>port</defname>
+        </param>
+        <param>
+          <type>baudrate</type>
+          <defname>baudrate</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/SerialConnection.py" line="8" column="1" bodyfile="Python/ReadSensor/SerialConnection.py" bodystart="8" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classReadSensor_1_1SerialConnection_1_1SerialConnection_1ae89d6b192e2aad071ff18f44818a7ac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.SerialConnection.SerialConnection.ReadData</definition>
+        <argsstring>(self, queryStr)</argsstring>
+        <name>ReadData</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>queryStr</type>
+          <defname>queryStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/SerialConnection.py" line="23" column="1" bodyfile="Python/ReadSensor/SerialConnection.py" bodystart="23" bodyend="49"/>
+        <references refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1afc4c56711acfaf61daa10ebb40e06a61" compoundref="Sensors_8py" startline="48">ReadSensor.Sensors.Sensors.DHT22.err</references>
+        <references refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a628ea789c02ea34753668a4608695e06" compoundref="Sensors_8py" startline="90">ReadSensor.Sensors.Sensors.BMP180.err</references>
+        <references refid="classReadSensor_1_1SerialConnection_1_1SerialConnection_1a7942e305c2383cdbae17b3303f7dfe7a" compoundref="SerialConnection_8py" startline="20">ReadSensor.SerialConnection.SerialConnection.err</references>
+        <references refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" compoundref="main_8cpp" startline="97">str</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Sets up a serial connection</verbatim> </para>    </detaileddescription>
+    <location file="Python/ReadSensor/SerialConnection.py" line="6" column="1" bodyfile="Python/ReadSensor/SerialConnection.py" bodystart="6" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classReadSensor_1_1SerialConnection_1_1SerialConnection_1ac1fbc3f627689d90fe96d3e5d15ba117" prot="public" virt="non-virtual"><scope>ReadSensor::SerialConnection::SerialConnection</scope><name>__init__</name></member>
+      <member refid="classReadSensor_1_1SerialConnection_1_1SerialConnection_1a7942e305c2383cdbae17b3303f7dfe7a" prot="public" virt="non-virtual"><scope>ReadSensor::SerialConnection::SerialConnection</scope><name>err</name></member>
+      <member refid="classReadSensor_1_1SerialConnection_1_1SerialConnection_1ae89d6b192e2aad071ff18f44818a7ac9" prot="public" virt="non-virtual"><scope>ReadSensor::SerialConnection::SerialConnection</scope><name>ReadData</name></member>
+      <member refid="classReadSensor_1_1SerialConnection_1_1SerialConnection_1a1e2d24c2fd693a56797a611a33cecd67" prot="public" virt="non-virtual"><scope>ReadSensor::SerialConnection::SerialConnection</scope><name>ser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

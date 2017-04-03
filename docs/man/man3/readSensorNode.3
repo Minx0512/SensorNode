@@ -1,0 +1,52 @@
+.TH "readSensorNode" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+readSensorNode \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "string \fBsend_str\fP = '34|0|ds\\r\\n'"
+.br
+.ti -1c
+.RI "\fBscriptname\fP = sys\&.argv[0]"
+.br
+.ti -1c
+.RI "\fBval\fP = sys\&.argv\&.pop()"
+.br
+.ti -1c
+.RI "\fBsensorData\fP = ReadSensorData('98:D3:31:FB:31:A6',send_str)"
+.br
+.ti -1c
+.RI "\fBdht\fP = re\&.findall('<DHT22><T unit='(\&.*)'>(\&.*)\\|<H unit='(\&.*)'>(\&.*)\\|\\|',sensorData)"
+.br
+.ti -1c
+.RI "\fBmvs\fP = re\&.findall('<mv>(\&.*)\\|\\|', sensorData)"
+.br
+.ti -1c
+.RI "\fBm\fP = int(\fBmvs\fP[0])"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "readSensorNode\&.dht = re\&.findall('<DHT22><T unit='(\&.*)'>(\&.*)\\|<H unit='(\&.*)'>(\&.*)\\|\\|',sensorData)"
+
+.SS "readSensorNode\&.m = int(\fBmvs\fP[0])"
+
+.SS "readSensorNode\&.mvs = re\&.findall('<mv>(\&.*)\\|\\|', sensorData)"
+
+.SS "readSensorNode\&.scriptname = sys\&.argv[0]"
+
+.SS "readSensorNode\&.send_str = '34|0|ds\\r\\n'"
+
+.SS "readSensorNode\&.sensorData = ReadSensorData('98:D3:31:FB:31:A6',send_str)"
+
+.SS "readSensorNode\&.val = sys\&.argv\&.pop()"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

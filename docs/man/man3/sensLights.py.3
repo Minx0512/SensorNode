@@ -1,0 +1,58 @@
+.TH "Python/old/sensLights.py" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Python/old/sensLights.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBsensLights\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBsensLights\&.prThresh\fP = 550"
+.br
+.ti -1c
+.RI "string \fBsensLights\&.send_str\fP = '550\\n'"
+.br
+.ti -1c
+.RI "\fBsensLights\&.sensorData\fP = ReadSensorData('98:D3:31:FB:31:A6',send_str)"
+.br
+.ti -1c
+.RI "\fBsensLights\&.pr\fP = int(re\&.search('<NSL19M51>(\&.*)</NSL19M51>',sensorData)[0])"
+.br
+.ti -1c
+.RI "\fBsensLights\&.ds18b20\fP = re\&.findall('<DS18B20><ID>(\&.*)</ID><T>(\&.*)\\xc2\\xb0C</T></\fBDS18B20\fP>',sensorData)"
+.br
+.ti -1c
+.RI "\fBsensLights\&.dht\fP = re\&.findall('<DHT22><T>(\&.*)\\xc2\\xb0C</T><H>(\&.*)%RH</H></\fBDHT22\fP>',sensorData)"
+.br
+.ti -1c
+.RI "\fBsensLights\&.movement\fP = int(re\&.search('<mv>(\&.*)</mv>',sensorData)\&.group(1))"
+.br
+.ti -1c
+.RI "\fBsensLights\&.moveSenseEnabled\fP = int(re\&.search('<mvSen>(\&.*)</mvSen>',sensorData)\&.group(1))"
+.br
+.ti -1c
+.RI "bool \fBsensLights\&.lights\fP = False"
+.br
+.ti -1c
+.RI "bool \fBsensLights\&.lightSwitch\fP = True"
+.br
+.ti -1c
+.RI "\fBsensLights\&.time\fP = int(re\&.search('<time>(\&.*)</time>',sensorData)\&.group(1))"
+.br
+.ti -1c
+.RI "\fBsensLights\&.shell\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

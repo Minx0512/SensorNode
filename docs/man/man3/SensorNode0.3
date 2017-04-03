@@ -1,0 +1,118 @@
+.TH "SensorNode0" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SensorNode0 \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBisNightTime\fP (lightValue)"
+.br
+.ti -1c
+.RI "def \fBSleepMode\fP (slpmd)"
+.br
+.ti -1c
+.RI "def \fBNoMovement\fP (lastmv, lightVal, tIn, stateOlight)"
+.br
+.ti -1c
+.RI "def \fBOnMovement\fP (lightVal, tIn, tOut, stateOlight, rsEneabled)"
+.br
+.ti -1c
+.RI "def \fBDetectMovement\fP (socket, tInside, tOutside, rSensorsEnabled, slpmode)"
+.br
+.ti -1c
+.RI "def \fBReadSensorData\fP (socket, tnum)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBport\fP = 1"
+.br
+.ti -1c
+.RI "int \fBconn\fP = 0"
+.br
+.ti -1c
+.RI "string \fBout_str\fP = ''"
+.br
+.ti -1c
+.RI "string \fBbd_addr\fP = '98:D3:31:FB:31:A6'"
+.br
+.ti -1c
+.RI "int \fBremoteSensorsEnabled\fP = 0"
+.br
+.ti -1c
+.RI "int \fBsleepmode\fP = 0"
+.br
+.ti -1c
+.RI "\fBsock\fP = BlueConnect(\fBbd_addr\fP,\fBport\fP,5\&.0)"
+.br
+.ti -1c
+.RI "int \fBprevmins\fP = 0"
+.br
+.ti -1c
+.RI "int \fBthresh\fP = 500"
+.br
+.ti -1c
+.RI "int \fBtreshOut\fP = 500"
+.br
+.ti -1c
+.RI "string \fBhumDHT22\fP = ''"
+.br
+.ti -1c
+.RI "string \fBtempDHT22\fP = ''"
+.br
+.ti -1c
+.RI "\fBthreadLock\fP = thread\&.allocate_lock()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def SensorNode0\&.DetectMovement ( socket,  tInside,  tOutside,  rSensorsEnabled,  slpmode)"
+
+.SS "def SensorNode0\&.isNightTime ( lightValue)"
+
+.SS "def SensorNode0\&.NoMovement ( lastmv,  lightVal,  tIn,  stateOlight)"
+
+.SS "def SensorNode0\&.OnMovement ( lightVal,  tIn,  tOut,  stateOlight,  rsEneabled)"
+
+.SS "def SensorNode0\&.ReadSensorData ( socket,  tnum)"
+
+.SS "def SensorNode0\&.SleepMode ( slpmd)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "string SensorNode0\&.bd_addr = '98:D3:31:FB:31:A6'"
+
+.SS "int SensorNode0\&.conn = 0"
+
+.SS "string SensorNode0\&.humDHT22 = ''"
+
+.SS "string SensorNode0\&.out_str = ''"
+
+.SS "int SensorNode0\&.port = 1"
+
+.SS "int SensorNode0\&.prevmins = 0"
+
+.SS "int SensorNode0\&.remoteSensorsEnabled = 0"
+
+.SS "int SensorNode0\&.sleepmode = 0"
+
+.SS "SensorNode0\&.sock = BlueConnect(\fBbd_addr\fP,\fBport\fP,5\&.0)"
+
+.SS "string SensorNode0\&.tempDHT22 = ''"
+
+.SS "SensorNode0\&.threadLock = thread\&.allocate_lock()"
+
+.SS "int SensorNode0\&.thresh = 500"
+
+.SS "int SensorNode0\&.treshOut = 500"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

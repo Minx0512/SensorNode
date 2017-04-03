@@ -7,7 +7,7 @@ var searchData=
   ['child_5fpipe',['child_pipe',['../NRF24L01_8cpp.html#abb559312d5695b2e999a6f9c1c70f43e',1,'NRF24L01.cpp']]],
   ['clearall',['ClearAll',['../classParseStrings.html#a5d694beffe019842455b788cca9cb26a',1,'ParseStrings']]],
   ['closereadingpipe',['closeReadingPipe',['../classNRF24L01.html#a7214eaa3fcd3b6576d8f290e6ab71955',1,'NRF24L01']]],
-  ['cmdid',['cmdID',['../classParseStrings.html#a861e286994be25fad33c18c9be18ed12',1,'ParseStrings']]],
+  ['cmdid',['cmdID',['../classParseStrings.html#a861e286994be25fad33c18c9be18ed12',1,'ParseStrings::cmdID()'],['../classReadSensor_1_1ReadSensor_1_1ReadSensor.html#a754b9a5ba983015102db5cc6db0220c4',1,'ReadSensor.ReadSensor.ReadSensor.cmdID()']]],
   ['cmdp',['cmdP',['../classParseStrings.html#abd72bf6aef85d0c8d2bc5e145695c7f9',1,'ParseStrings']]],
   ['comm_5fstart',['COMM_START',['../USART_8h.html#accaa1b338efc8b8e55a60bb6abd525b1',1,'USART.h']]],
   ['command',['Command',['../classDS18B20.html#a1f03dae7ea2d07a225343eaa33d119cf',1,'DS18B20']]],

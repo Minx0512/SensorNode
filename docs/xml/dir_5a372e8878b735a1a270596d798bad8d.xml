@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_5a372e8878b735a1a270596d798bad8d" kind="dir">
+    <compoundname>Python/ReadSensor</compoundname>
+    <innerdir refid="dir_3c287593e1dc82d7684ea84d261c614e">Python/ReadSensor/Sensors</innerdir>
+    <innerfile refid="____init_____8py">__init__.py</innerfile>
+    <innerfile refid="ReadSensor_8py">ReadSensor.py</innerfile>
+    <innerfile refid="SensorNode_8py">SensorNode.py</innerfile>
+    <innerfile refid="SerialConnection_8py">SerialConnection.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/ReadSensor/"/>
+  </compounddef>
+</doxygen>

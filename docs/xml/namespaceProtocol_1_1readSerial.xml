@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceProtocol_1_1readSerial" kind="namespace" language="Python">
+    <compoundname>Protocol::readSerial</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceProtocol_1_1readSerial_1a61e9988c18dd0078328775ef8c7a462d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Protocol.readSerial.NewSerialCon</definition>
+        <argsstring>(port, baudrate)</argsstring>
+        <name>NewSerialCon</name>
+        <param>
+          <type>port</type>
+          <defname>port</defname>
+        </param>
+        <param>
+          <type>baudrate</type>
+          <defname>baudrate</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/old/Protocol/readSerial.py" line="8" column="1" bodyfile="Python/old/Protocol/readSerial.py" bodystart="8" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceProtocol_1_1readSerial_1a3bf2238ec608abcbe36cd529d6e936e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Protocol.readSerial.ReadData</definition>
+        <argsstring>(ser, queryStr)</argsstring>
+        <name>ReadData</name>
+        <param>
+          <type>ser</type>
+          <defname>ser</defname>
+        </param>
+        <param>
+          <type>queryStr</type>
+          <defname>queryStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/old/Protocol/readSerial.py" line="25" column="1" bodyfile="Python/old/Protocol/readSerial.py" bodystart="25" bodyend="59"/>
+        <references refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" compoundref="main_8cpp" startline="97">str</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/old/Protocol/readSerial.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

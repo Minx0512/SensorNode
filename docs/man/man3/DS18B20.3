@@ -1,4 +1,4 @@
-.TH "DS18B20" 3 "Tue Mar 28 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "DS18B20" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,12 +47,14 @@ DS18B20 \- \fBDS18B20\fP class definition\&.
 .ti -1c
 .RI "void \fBStartMeasurement\fP (void)"
 .br
+.RI "\fISensor Initialization\&. \fP"
 .ti -1c
 .RI "uint8_t \fBReset\fP ()"
 .br
 .ti -1c
 .RI "uint8_t \fBBitIO\fP (uint8_t bit)"
 .br
+.RI "\fIBitIO\&. \fP"
 .ti -1c
 .RI "uint8_t \fBWriteByte\fP (uint8_t byte)"
 .br
@@ -139,6 +141,19 @@ Defines methods for accessing the \fBDS18B20\fP interface
 
 .SS "uint8_t DS18B20::BitIO (uint8_t bit)\fC [private]\fP"
 
+.PP
+BitIO\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbit\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
 .SS "void DS18B20::Command (unsigned char command, unsigned char * id)\fC [private]\fP"
 
 .SS "void DS18B20::GetMACString (char * MACStringOut)"
@@ -216,6 +231,8 @@ Takes a Measurement per sensor on the bus\&.
 
 .SS "void DS18B20::StartMeasurement (void)\fC [private]\fP"
 
+.PP
+Sensor Initialization\&. Starts 
 .SS "uint8_t DS18B20::WriteByte (uint8_t byte)\fC [private]\fP"
 
 .SH "Member Data Documentation"

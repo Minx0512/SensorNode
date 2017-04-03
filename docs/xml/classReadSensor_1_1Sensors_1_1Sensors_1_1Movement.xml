@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement" kind="class" language="Python" prot="public">
+    <compoundname>ReadSensor::Sensors::Sensors::Movement</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement_1afca15a3e5b7fd64c76fb803340cff411" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.Movement::move</definition>
+        <argsstring></argsstring>
+        <name>move</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="62" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement_1a7004579e8312dd94942ff029d65f7586" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.Movement::mv</definition>
+        <argsstring></argsstring>
+        <name>mv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="63" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement_1af14f8516b69837782c98961ef449597c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.Sensors.Sensors.Movement.__init__</definition>
+        <argsstring>(self, responseStr, sensStr)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>responseStr</type>
+          <defname>responseStr</defname>
+        </param>
+        <param>
+          <type>sensStr</type>
+          <defname>sensStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="61" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="61" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/ReadSensor/Sensors/Sensors.py" line="60" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="60" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement_1af14f8516b69837782c98961ef449597c" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::Movement</scope><name>__init__</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement_1afca15a3e5b7fd64c76fb803340cff411" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::Movement</scope><name>move</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement_1a7004579e8312dd94942ff029d65f7586" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::Movement</scope><name>mv</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

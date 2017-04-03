@@ -3,7 +3,7 @@
   <compounddef id="namespaceSensorNode" kind="namespace" language="Python">
     <compoundname>SensorNode</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="SensorNode_8py_1ac561cd22e18ebc8f28a3de0fd790f84d" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1ac561cd22e18ebc8f28a3de0fd790f84d" prot="public" static="no" mutable="no">
         <type>int</type>
         <definition>int SensorNode.port</definition>
         <argsstring></argsstring>
@@ -15,9 +15,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="344" column="1" bodyfile="Python/SensorNode.py" bodystart="344" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="352" column="1" bodyfile="Python/old/SensorNode.py" bodystart="352" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1ada87615462c1a9ae3b690316d00d0540" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1ada87615462c1a9ae3b690316d00d0540" prot="public" static="no" mutable="no">
         <type>int</type>
         <definition>int SensorNode::conn</definition>
         <argsstring></argsstring>
@@ -29,9 +29,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="345" column="1" bodyfile="Python/SensorNode.py" bodystart="345" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="353" column="1" bodyfile="Python/old/SensorNode.py" bodystart="353" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a653544a15782661968c67ccb4f6fbdbf" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a653544a15782661968c67ccb4f6fbdbf" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string SensorNode.out_str</definition>
         <argsstring></argsstring>
@@ -43,9 +43,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="346" column="1" bodyfile="Python/SensorNode.py" bodystart="346" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="354" column="1" bodyfile="Python/old/SensorNode.py" bodystart="354" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a37cb27925dc2a29cf8e92032d08246d7" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a37cb27925dc2a29cf8e92032d08246d7" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string SensorNode.bd_addr</definition>
         <argsstring></argsstring>
@@ -57,9 +57,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="347" column="1" bodyfile="Python/SensorNode.py" bodystart="347" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="355" column="1" bodyfile="Python/old/SensorNode.py" bodystart="355" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a7150a62e1c3e9852c65457bbc8d81d70" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a7150a62e1c3e9852c65457bbc8d81d70" prot="public" static="no" mutable="no">
         <type>int</type>
         <definition>int SensorNode.remoteSensorsEnabled</definition>
         <argsstring></argsstring>
@@ -71,9 +71,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="348" column="1" bodyfile="Python/SensorNode.py" bodystart="348" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="356" column="1" bodyfile="Python/old/SensorNode.py" bodystart="356" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1ae86281b81a8af8bc3b9f4bfe75af4748" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1ae86281b81a8af8bc3b9f4bfe75af4748" prot="public" static="no" mutable="no">
         <type>int</type>
         <definition>int SensorNode.sleepmode</definition>
         <argsstring></argsstring>
@@ -85,9 +85,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="349" column="1" bodyfile="Python/SensorNode.py" bodystart="349" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="357" column="1" bodyfile="Python/old/SensorNode.py" bodystart="357" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1af39573d5009a8cac514cfb9a933ca24a" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1af39573d5009a8cac514cfb9a933ca24a" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.threadLock</definition>
         <argsstring></argsstring>
@@ -99,9 +99,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="351" column="1" bodyfile="Python/SensorNode.py" bodystart="351" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="359" column="1" bodyfile="Python/old/SensorNode.py" bodystart="359" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1ae263ac2260a4d567ff23b89689d63d15" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1ae263ac2260a4d567ff23b89689d63d15" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.top</definition>
         <argsstring></argsstring>
@@ -113,9 +113,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="353" column="1" bodyfile="Python/SensorNode.py" bodystart="353" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="361" column="1" bodyfile="Python/old/SensorNode.py" bodystart="361" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a90f55cfa93e86a677d8c8fa8f50e325f" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a90f55cfa93e86a677d8c8fa8f50e325f" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.timeStr</definition>
         <argsstring></argsstring>
@@ -127,9 +127,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="359" column="1" bodyfile="Python/SensorNode.py" bodystart="359" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="367" column="1" bodyfile="Python/old/SensorNode.py" bodystart="367" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1aa021e9235803e1ebb079307ed9df017a" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1aa021e9235803e1ebb079307ed9df017a" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.lightsMsg</definition>
         <argsstring></argsstring>
@@ -141,9 +141,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="360" column="1" bodyfile="Python/SensorNode.py" bodystart="360" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="368" column="1" bodyfile="Python/old/SensorNode.py" bodystart="368" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1abd196ae1282e31f9a34e8d10b5804fe9" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1abd196ae1282e31f9a34e8d10b5804fe9" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.lightVal</definition>
         <argsstring></argsstring>
@@ -155,9 +155,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="361" column="1" bodyfile="Python/SensorNode.py" bodystart="361" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="369" column="1" bodyfile="Python/old/SensorNode.py" bodystart="369" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a731bf9524da43678f890375a99b0ead7" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a731bf9524da43678f890375a99b0ead7" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.menuID</definition>
         <argsstring></argsstring>
@@ -169,9 +169,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="362" column="1" bodyfile="Python/SensorNode.py" bodystart="362" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="370" column="1" bodyfile="Python/old/SensorNode.py" bodystart="370" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1aaf69467b0a3b19ad4135c0328352f5af" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1aaf69467b0a3b19ad4135c0328352f5af" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.DHT22TempVal</definition>
         <argsstring></argsstring>
@@ -183,9 +183,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="363" column="1" bodyfile="Python/SensorNode.py" bodystart="363" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="371" column="1" bodyfile="Python/old/SensorNode.py" bodystart="371" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a9d59de8167347540e9e21562b6239a5b" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a9d59de8167347540e9e21562b6239a5b" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.DHT22TempUnit</definition>
         <argsstring></argsstring>
@@ -197,9 +197,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="364" column="1" bodyfile="Python/SensorNode.py" bodystart="364" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="372" column="1" bodyfile="Python/old/SensorNode.py" bodystart="372" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1ab98e78199a57c6784976eb167af06203" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1ab98e78199a57c6784976eb167af06203" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.DHT22HumVal</definition>
         <argsstring></argsstring>
@@ -211,9 +211,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="366" column="1" bodyfile="Python/SensorNode.py" bodystart="366" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="374" column="1" bodyfile="Python/old/SensorNode.py" bodystart="374" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1ac12964b10f125bd3256f2b57afb1eaff" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1ac12964b10f125bd3256f2b57afb1eaff" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.DHT22HumUnit</definition>
         <argsstring></argsstring>
@@ -225,23 +225,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="367" column="1" bodyfile="Python/SensorNode.py" bodystart="367" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="375" column="1" bodyfile="Python/old/SensorNode.py" bodystart="375" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a7a84ed25b4a6ec5b5008e9ebea3653dc" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a7a84ed25b4a6ec5b5008e9ebea3653dc" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.sock</definition>
         <argsstring></argsstring>
         <name>sock</name>
-        <initializer>= BlueConnect(bd_addr,port,5.0)</initializer>
+        <initializer>= BlueConnect(<ref refid="namespaceSensorNode_1a37cb27925dc2a29cf8e92032d08246d7" kindref="member">bd_addr</ref>,<ref refid="namespaceSensorNode_1ac561cd22e18ebc8f28a3de0fd790f84d" kindref="member">port</ref>,5.0)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="371" column="1" bodyfile="Python/SensorNode.py" bodystart="371" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="379" column="1" bodyfile="Python/old/SensorNode.py" bodystart="379" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a6b92df85afc5b0391834474955d16592" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a6b92df85afc5b0391834474955d16592" prot="public" static="no" mutable="no">
         <type>int</type>
         <definition>int SensorNode.prevmins</definition>
         <argsstring></argsstring>
@@ -253,9 +253,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="381" column="1" bodyfile="Python/SensorNode.py" bodystart="381" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="389" column="1" bodyfile="Python/old/SensorNode.py" bodystart="389" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a3f20bf0e75b6bcd88e4cf67d89bec305" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a3f20bf0e75b6bcd88e4cf67d89bec305" prot="public" static="no" mutable="no">
         <type>int</type>
         <definition>int SensorNode.thresh</definition>
         <argsstring></argsstring>
@@ -267,9 +267,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="382" column="1" bodyfile="Python/SensorNode.py" bodystart="382" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="390" column="1" bodyfile="Python/old/SensorNode.py" bodystart="390" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a9f4ed9ab0eac0c4d97f1d35e1d86e42c" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a9f4ed9ab0eac0c4d97f1d35e1d86e42c" prot="public" static="no" mutable="no">
         <type>int</type>
         <definition>int SensorNode.treshOut</definition>
         <argsstring></argsstring>
@@ -281,9 +281,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="383" column="1" bodyfile="Python/SensorNode.py" bodystart="383" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="391" column="1" bodyfile="Python/old/SensorNode.py" bodystart="391" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1ae221b94a7568f6a4eec4ed916d6d9fbb" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1ae221b94a7568f6a4eec4ed916d6d9fbb" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.autoLights</definition>
         <argsstring></argsstring>
@@ -295,9 +295,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="387" column="1" bodyfile="Python/SensorNode.py" bodystart="387" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="395" column="1" bodyfile="Python/old/SensorNode.py" bodystart="395" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="SensorNode_8py_1a1b858f22f067073317637d8f686e7a51" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a1b858f22f067073317637d8f686e7a51" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.statusLight</definition>
         <argsstring></argsstring>
@@ -309,11 +309,71 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="390" column="1" bodyfile="Python/SensorNode.py" bodystart="390" bodyend="-1"/>
+        <location file="Python/old/SensorNode.py" line="398" column="1" bodyfile="Python/old/SensorNode.py" bodystart="398" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="SensorNode_8py_1a7071f7e3398ab91418cd1096210129a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1a683ee2ba850b73248e0e9d4e1c15c844" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.GetMovement</definition>
+        <argsstring>(sock)</argsstring>
+        <name>GetMovement</name>
+        <param>
+          <type><ref refid="namespaceSensorNode_1a7a84ed25b4a6ec5b5008e9ebea3653dc" kindref="member">sock</ref></type>
+          <defname>sock</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/old/SensorNode.py" line="21" column="1" bodyfile="Python/old/SensorNode.py" bodystart="21" bodyend="23"/>
+        <references refid="namespaceBluetoothConn_1a529bdfae6ea4b07c397c05d9bb64261c" compoundref="BluetoothConn_8py" startline="31" endline="38">BluetoothConn.SendData</references>
+        <references refid="namespaceNodeProtocol_1aaa7bf240ba412b020b53151530989747" compoundref="NodeProtocol_8py" startline="48" endline="50">NodeProtocol.NPGetSensorDataMove</references>
+        <references refid="namespaceBluetoothConn_1a83232f3a490b3985e04a24d1b8fc981a" compoundref="BluetoothConn_8py" startline="15" endline="30">BluetoothConn.ReceiveData</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSensorNode_1a8920dec9e244a89bd8d0d2b9910bec75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.GetTempHumidDHT22</definition>
+        <argsstring>(sock)</argsstring>
+        <name>GetTempHumidDHT22</name>
+        <param>
+          <type><ref refid="namespaceSensorNode_1a7a84ed25b4a6ec5b5008e9ebea3653dc" kindref="member">sock</ref></type>
+          <defname>sock</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/old/SensorNode.py" line="24" column="1" bodyfile="Python/old/SensorNode.py" bodystart="24" bodyend="26"/>
+        <references refid="namespaceBluetoothConn_1a529bdfae6ea4b07c397c05d9bb64261c" compoundref="BluetoothConn_8py" startline="31" endline="38">BluetoothConn.SendData</references>
+        <references refid="namespaceNodeProtocol_1a0f283491ca330db682d53c43f9d460da" compoundref="NodeProtocol_8py" startline="42" endline="43">NodeProtocol.NPGetSensorDataTempHumidityDHT22</references>
+        <references refid="namespaceBluetoothConn_1a83232f3a490b3985e04a24d1b8fc981a" compoundref="BluetoothConn_8py" startline="15" endline="30">BluetoothConn.ReceiveData</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSensorNode_1a5e804ff447fc7771e2c1454eb0425097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.GetLightsense</definition>
+        <argsstring>(sock)</argsstring>
+        <name>GetLightsense</name>
+        <param>
+          <type><ref refid="namespaceSensorNode_1a7a84ed25b4a6ec5b5008e9ebea3653dc" kindref="member">sock</ref></type>
+          <defname>sock</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/old/SensorNode.py" line="27" column="1" bodyfile="Python/old/SensorNode.py" bodystart="27" bodyend="30"/>
+        <references refid="namespaceBluetoothConn_1a529bdfae6ea4b07c397c05d9bb64261c" compoundref="BluetoothConn_8py" startline="31" endline="38">BluetoothConn.SendData</references>
+        <references refid="namespaceNodeProtocol_1a3bd00c7fd33997cf6c3bd8eb7c265c3b" compoundref="NodeProtocol_8py" startline="44" endline="45">NodeProtocol.NPGetSensorDataLightsense</references>
+        <references refid="namespaceBluetoothConn_1a83232f3a490b3985e04a24d1b8fc981a" compoundref="BluetoothConn_8py" startline="15" endline="30">BluetoothConn.ReceiveData</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSensorNode_1a7071f7e3398ab91418cd1096210129a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.GetTime</definition>
         <argsstring>()</argsstring>
@@ -324,9 +384,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="23" column="1" bodyfile="Python/SensorNode.py" bodystart="23" bodyend="28"/>
+        <location file="Python/old/SensorNode.py" line="31" column="1" bodyfile="Python/old/SensorNode.py" bodystart="31" bodyend="36"/>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1ac1b36fd1dc3beec8749f75f6d3944899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1ac1b36fd1dc3beec8749f75f6d3944899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.isNightTime</definition>
         <argsstring>(lightValue)</argsstring>
@@ -341,9 +401,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="29" column="1" bodyfile="Python/SensorNode.py" bodystart="29" bodyend="36"/>
+        <location file="Python/old/SensorNode.py" line="37" column="1" bodyfile="Python/old/SensorNode.py" bodystart="37" bodyend="44"/>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1a8414adaa25d1a17a9043d673c751c256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1a8414adaa25d1a17a9043d673c751c256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.SleepMode</definition>
         <argsstring>(slpmd)</argsstring>
@@ -358,9 +418,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="37" column="1" bodyfile="Python/SensorNode.py" bodystart="37" bodyend="39"/>
+        <location file="Python/old/SensorNode.py" line="45" column="1" bodyfile="Python/old/SensorNode.py" bodystart="45" bodyend="47"/>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1a4b7927f47889ab334c1ce571de952088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1a4b7927f47889ab334c1ce571de952088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.NoMovement</definition>
         <argsstring>(lastmv, lightV, tIn)</argsstring>
@@ -383,9 +443,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="40" column="1" bodyfile="Python/SensorNode.py" bodystart="40" bodyend="44"/>
+        <location file="Python/old/SensorNode.py" line="48" column="1" bodyfile="Python/old/SensorNode.py" bodystart="48" bodyend="52"/>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1add0e17d3b4b233162ff03c9ba9acc3ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1add0e17d3b4b233162ff03c9ba9acc3ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.OnMovement</definition>
         <argsstring>(lightV, tIn, tOut, rsEneabled)</argsstring>
@@ -412,9 +472,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="45" column="1" bodyfile="Python/SensorNode.py" bodystart="45" bodyend="51"/>
+        <location file="Python/old/SensorNode.py" line="53" column="1" bodyfile="Python/old/SensorNode.py" bodystart="53" bodyend="59"/>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1a8281cee319c91445e41e2beb456b063d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1a8281cee319c91445e41e2beb456b063d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.DetectMovement</definition>
         <argsstring>(socket, tInside, tOutside, rSensorsEnabled, slpmode)</argsstring>
@@ -445,9 +505,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="52" column="1" bodyfile="Python/SensorNode.py" bodystart="52" bodyend="111"/>
+        <location file="Python/old/SensorNode.py" line="60" column="1" bodyfile="Python/old/SensorNode.py" bodystart="60" bodyend="119"/>
+        <references refid="namespaceSensorNode_1a683ee2ba850b73248e0e9d4e1c15c844" compoundref="old_2SensorNode_8py" startline="21" endline="23">GetMovement</references>
+        <references refid="namespaceSensorNode_1a5e804ff447fc7771e2c1454eb0425097" compoundref="old_2SensorNode_8py" startline="27" endline="30">GetLightsense</references>
+        <references refid="namespaceSensorNode_1add0e17d3b4b233162ff03c9ba9acc3ab" compoundref="old_2SensorNode_8py" startline="53" endline="59">OnMovement</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1aa3b036956df80a6daa599e1957a1cd57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1aa3b036956df80a6daa599e1957a1cd57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.ReadSystemConfig</definition>
         <argsstring>(socket)</argsstring>
@@ -462,9 +525,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="112" column="1" bodyfile="Python/SensorNode.py" bodystart="112" bodyend="127"/>
+        <location file="Python/old/SensorNode.py" line="120" column="1" bodyfile="Python/old/SensorNode.py" bodystart="120" bodyend="135"/>
+        <references refid="namespaceReadSensor_1a50734d9db330ed93691197e79bbb860b" compoundref="old_2ReadSensor_8py" startline="23" endline="26">ReadSensor.GetNRFConfig</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1a17cde606b5329ad7081ae3408e6d6032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1a17cde606b5329ad7081ae3408e6d6032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.ReadSensorDataLight</definition>
         <argsstring>(socket, tnum)</argsstring>
@@ -483,9 +547,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="128" column="1" bodyfile="Python/SensorNode.py" bodystart="128" bodyend="153"/>
+        <location file="Python/old/SensorNode.py" line="136" column="1" bodyfile="Python/old/SensorNode.py" bodystart="136" bodyend="161"/>
+        <references refid="namespaceSensorNode_1a5e804ff447fc7771e2c1454eb0425097" compoundref="old_2SensorNode_8py" startline="27" endline="30">GetLightsense</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1ad5ea37debfca3a6ca63a67e1b9fe065a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1ad5ea37debfca3a6ca63a67e1b9fe065a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.ReadSensorData</definition>
         <argsstring>(socket, tnum)</argsstring>
@@ -504,9 +569,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="154" column="1" bodyfile="Python/SensorNode.py" bodystart="154" bodyend="189"/>
+        <location file="Python/old/SensorNode.py" line="162" column="1" bodyfile="Python/old/SensorNode.py" bodystart="162" bodyend="197"/>
+        <references refid="namespaceSensorNode_1a8920dec9e244a89bd8d0d2b9910bec75" compoundref="old_2SensorNode_8py" startline="24" endline="26">GetTempHumidDHT22</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1aba7501484cafdf93d218f4001f7bf27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1aba7501484cafdf93d218f4001f7bf27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.SwitchON</definition>
         <argsstring>(frame)</argsstring>
@@ -521,9 +587,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="190" column="1" bodyfile="Python/SensorNode.py" bodystart="190" bodyend="199"/>
+        <location file="Python/old/SensorNode.py" line="198" column="1" bodyfile="Python/old/SensorNode.py" bodystart="198" bodyend="207"/>
+        <references refid="namespaceReadSensor_1a491617ee15187afdef853beb4523334d" compoundref="old_2ReadSensor_8py" startline="77" endline="81">ReadSensor.LightsOn</references>
+        <references refid="namespaceSensorNode_1ae3b811b5d3e85d5e05e233fe44af8b95" compoundref="old_2SensorNode_8py" startline="290" endline="331">LightsMenu</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1a4e68f587234ab5538cf224a8dadb3372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1a4e68f587234ab5538cf224a8dadb3372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.SwitchOFF</definition>
         <argsstring>(frame)</argsstring>
@@ -538,9 +606,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="200" column="1" bodyfile="Python/SensorNode.py" bodystart="200" bodyend="209"/>
+        <location file="Python/old/SensorNode.py" line="208" column="1" bodyfile="Python/old/SensorNode.py" bodystart="208" bodyend="217"/>
+        <references refid="namespaceReadSensor_1ad618b907c363e25969bd9a798efcde53" compoundref="old_2ReadSensor_8py" startline="82" endline="86">ReadSensor.LightsOff</references>
+        <references refid="namespaceSensorNode_1ae3b811b5d3e85d5e05e233fe44af8b95" compoundref="old_2SensorNode_8py" startline="290" endline="331">LightsMenu</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1aee31952b7d1ad370726caed32875d4e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1aee31952b7d1ad370726caed32875d4e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.LightsAutoON</definition>
         <argsstring>(frame)</argsstring>
@@ -555,9 +625,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="210" column="1" bodyfile="Python/SensorNode.py" bodystart="210" bodyend="217"/>
+        <location file="Python/old/SensorNode.py" line="218" column="1" bodyfile="Python/old/SensorNode.py" bodystart="218" bodyend="225"/>
+        <references refid="namespaceSensorNode_1ae3b811b5d3e85d5e05e233fe44af8b95" compoundref="old_2SensorNode_8py" startline="290" endline="331">LightsMenu</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1a03916abb4a46a2aad0d0df685d84c57d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1a03916abb4a46a2aad0d0df685d84c57d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.LightsAutoOFF</definition>
         <argsstring>(frame)</argsstring>
@@ -572,9 +643,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="218" column="1" bodyfile="Python/SensorNode.py" bodystart="218" bodyend="224"/>
+        <location file="Python/old/SensorNode.py" line="226" column="1" bodyfile="Python/old/SensorNode.py" bodystart="226" bodyend="232"/>
+        <references refid="namespaceSensorNode_1ae3b811b5d3e85d5e05e233fe44af8b95" compoundref="old_2SensorNode_8py" startline="290" endline="331">LightsMenu</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1a107274f5d5053c3fbd95721de6abe6f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1a107274f5d5053c3fbd95721de6abe6f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.LightsAutoSlider</definition>
         <argsstring>(slider)</argsstring>
@@ -589,9 +661,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="225" column="1" bodyfile="Python/SensorNode.py" bodystart="225" bodyend="233"/>
+        <location file="Python/old/SensorNode.py" line="233" column="1" bodyfile="Python/old/SensorNode.py" bodystart="233" bodyend="241"/>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1ae26984e25b77f3e5b585c426be132ea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1ae26984e25b77f3e5b585c426be132ea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.SensorsMenu</definition>
         <argsstring>(frame)</argsstring>
@@ -606,9 +678,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="234" column="1" bodyfile="Python/SensorNode.py" bodystart="234" bodyend="281"/>
+        <location file="Python/old/SensorNode.py" line="242" column="1" bodyfile="Python/old/SensorNode.py" bodystart="242" bodyend="289"/>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1ae3b811b5d3e85d5e05e233fe44af8b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1ae3b811b5d3e85d5e05e233fe44af8b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.LightsMenu</definition>
         <argsstring>(frame)</argsstring>
@@ -623,9 +695,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="282" column="1" bodyfile="Python/SensorNode.py" bodystart="282" bodyend="323"/>
+        <location file="Python/old/SensorNode.py" line="290" column="1" bodyfile="Python/old/SensorNode.py" bodystart="290" bodyend="331"/>
+        <references refid="namespaceSensorNode_1aba7501484cafdf93d218f4001f7bf27d" compoundref="old_2SensorNode_8py" startline="198" endline="207">SwitchON</references>
+        <references refid="namespaceSensorNode_1a4e68f587234ab5538cf224a8dadb3372" compoundref="old_2SensorNode_8py" startline="208" endline="217">SwitchOFF</references>
+        <references refid="namespaceSensorNode_1aee31952b7d1ad370726caed32875d4e6" compoundref="old_2SensorNode_8py" startline="218" endline="225">LightsAutoON</references>
+        <references refid="namespaceSensorNode_1a03916abb4a46a2aad0d0df685d84c57d" compoundref="old_2SensorNode_8py" startline="226" endline="232">LightsAutoOFF</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1ac79d5de3c8c949900e790e0bdc1eb436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1ac79d5de3c8c949900e790e0bdc1eb436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.SystemParamsMenu</definition>
         <argsstring>(socket, frame)</argsstring>
@@ -644,9 +720,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="324" column="1" bodyfile="Python/SensorNode.py" bodystart="324" bodyend="334"/>
+        <location file="Python/old/SensorNode.py" line="332" column="1" bodyfile="Python/old/SensorNode.py" bodystart="332" bodyend="342"/>
+        <references refid="namespaceSensorNode_1aa3b036956df80a6daa599e1957a1cd57" compoundref="old_2SensorNode_8py" startline="120" endline="135">ReadSystemConfig</references>
       </memberdef>
-      <memberdef kind="function" id="SensorNode_8py_1a3c64dd19370abacb4a0fe7d899f94f18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceSensorNode_1a3c64dd19370abacb4a0fe7d899f94f18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def SensorNode.ConfigureMenu</definition>
         <argsstring>(frame)</argsstring>
@@ -661,13 +738,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="335" column="1" bodyfile="Python/SensorNode.py" bodystart="335" bodyend="343"/>
+        <location file="Python/old/SensorNode.py" line="343" column="1" bodyfile="Python/old/SensorNode.py" bodystart="343" bodyend="351"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="Python/SensorNode.py" line="1" column="1"/>
+    <location file="Python/old/SensorNode.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

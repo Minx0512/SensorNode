@@ -8,36 +8,36 @@
     <includes local="no">string.h</includes>
     <includes local="no">stdlib.h</includes>
     <incdepgraph>
-      <node id="268">
+      <node id="296">
         <label>stdlib.h</label>
       </node>
-      <node id="264">
+      <node id="292">
         <label>Photoresistor.h</label>
         <link refid="Photoresistor_8h"/>
-        <childnode refid="265" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
       </node>
-      <node id="265">
+      <node id="293">
         <label>avr/io.h</label>
       </node>
-      <node id="267">
+      <node id="295">
         <label>string.h</label>
       </node>
-      <node id="263">
+      <node id="291">
         <label>src/Sensors/Photoresistor.cpp</label>
         <link refid="Photoresistor.cpp"/>
-        <childnode refid="264" relation="include">
+        <childnode refid="292" relation="include">
         </childnode>
-        <childnode refid="265" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
-        <childnode refid="266" relation="include">
+        <childnode refid="294" relation="include">
         </childnode>
-        <childnode refid="267" relation="include">
+        <childnode refid="295" relation="include">
         </childnode>
-        <childnode refid="268" relation="include">
+        <childnode refid="296" relation="include">
         </childnode>
       </node>
-      <node id="266">
+      <node id="294">
         <label>stdio.h</label>
       </node>
     </incdepgraph>

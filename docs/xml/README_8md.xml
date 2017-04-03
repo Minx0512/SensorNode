@@ -53,7 +53,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">answers:</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
-<codeline><highlight class="normal">DS18B20:<sp/>//sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0|%TempVal1|...|\\</highlight></codeline>
+<codeline><highlight class="normal">DS18B20:<sp/>//sensor/DST/|%MAC0|%MAC1|...|/|%TempVal0:%unit|%TempVal1:%unit|...|\\</highlight></codeline>
 <codeline><highlight class="normal">DHT22:<sp/>//sensor/DHT/|%sensorMAC|/|%tempVal:%unit|%humVal:%unit|%errCode|\\</highlight></codeline>
 <codeline><highlight class="normal">Movement:<sp/>//sensor/M/|%sensorMAC|/|(0|1)|\\</highlight></codeline>
 <codeline><highlight class="normal">LightAnalog:<sp/>//sensor/Lav/|%sensorMAC|/|%d.%03d|\\</highlight></codeline>

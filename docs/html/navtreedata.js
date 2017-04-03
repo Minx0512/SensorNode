@@ -3,12 +3,20 @@ var NAVTREE =
   [ "SensorNode", "index.html", [
     [ "License", "index.html#License", null ],
     [ "SensorNode", "md_src_README.html", null ],
+    [ "README", "md_Python_README.html", null ],
     [ "Todo List", "todo.html", null ],
+    [ "Namespaces", null, [
+      [ "Namespace List", "namespaces.html", "namespaces" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
@@ -30,7 +38,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BMP180_8cpp.html",
-"classNRF24L01.html#a2f5e84525760899949446db94d225700"
+"classNRF24L01.html#a0b5c60487c6b715b9f17f968f7958d93",
+"globals_eval.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

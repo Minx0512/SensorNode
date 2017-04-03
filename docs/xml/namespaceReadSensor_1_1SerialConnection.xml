@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceReadSensor_1_1SerialConnection" kind="namespace" language="Python">
+    <compoundname>ReadSensor::SerialConnection</compoundname>
+    <innerclass refid="classReadSensor_1_1SerialConnection_1_1SerialConnection" prot="public">ReadSensor::SerialConnection::SerialConnection</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/ReadSensor/SerialConnection.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

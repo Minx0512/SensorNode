@@ -1,0 +1,99 @@
+\hypertarget{old_2SensorNode_8py}{}\section{Python/old/\+Sensor\+Node.py File Reference}
+\label{old_2SensorNode_8py}\index{Python/old/\+Sensor\+Node.\+py@{Python/old/\+Sensor\+Node.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceSensorNode}{Sensor\+Node}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceSensorNode_a683ee2ba850b73248e0e9d4e1c15c844}{Sensor\+Node.\+Get\+Movement} (sock)
+\item 
+def \hyperlink{namespaceSensorNode_a8920dec9e244a89bd8d0d2b9910bec75}{Sensor\+Node.\+Get\+Temp\+Humid\+D\+H\+T22} (sock)
+\item 
+def \hyperlink{namespaceSensorNode_a5e804ff447fc7771e2c1454eb0425097}{Sensor\+Node.\+Get\+Lightsense} (sock)
+\item 
+def \hyperlink{namespaceSensorNode_a7071f7e3398ab91418cd1096210129a0}{Sensor\+Node.\+Get\+Time} ()
+\item 
+def \hyperlink{namespaceSensorNode_ac1b36fd1dc3beec8749f75f6d3944899}{Sensor\+Node.\+is\+Night\+Time} (light\+Value)
+\item 
+def \hyperlink{namespaceSensorNode_a8414adaa25d1a17a9043d673c751c256}{Sensor\+Node.\+Sleep\+Mode} (slpmd)
+\item 
+def \hyperlink{namespaceSensorNode_a4b7927f47889ab334c1ce571de952088}{Sensor\+Node.\+No\+Movement} (lastmv, lightV, t\+In)
+\item 
+def \hyperlink{namespaceSensorNode_add0e17d3b4b233162ff03c9ba9acc3ab}{Sensor\+Node.\+On\+Movement} (lightV, t\+In, t\+Out, rs\+Eneabled)
+\item 
+def \hyperlink{namespaceSensorNode_a8281cee319c91445e41e2beb456b063d}{Sensor\+Node.\+Detect\+Movement} (socket, t\+Inside, t\+Outside, r\+Sensors\+Enabled, slpmode)
+\item 
+def \hyperlink{namespaceSensorNode_aa3b036956df80a6daa599e1957a1cd57}{Sensor\+Node.\+Read\+System\+Config} (socket)
+\item 
+def \hyperlink{namespaceSensorNode_a17cde606b5329ad7081ae3408e6d6032}{Sensor\+Node.\+Read\+Sensor\+Data\+Light} (socket, tnum)
+\item 
+def \hyperlink{namespaceSensorNode_ad5ea37debfca3a6ca63a67e1b9fe065a}{Sensor\+Node.\+Read\+Sensor\+Data} (socket, tnum)
+\item 
+def \hyperlink{namespaceSensorNode_aba7501484cafdf93d218f4001f7bf27d}{Sensor\+Node.\+Switch\+ON} (frame)
+\item 
+def \hyperlink{namespaceSensorNode_a4e68f587234ab5538cf224a8dadb3372}{Sensor\+Node.\+Switch\+O\+FF} (frame)
+\item 
+def \hyperlink{namespaceSensorNode_aee31952b7d1ad370726caed32875d4e6}{Sensor\+Node.\+Lights\+Auto\+ON} (frame)
+\item 
+def \hyperlink{namespaceSensorNode_a03916abb4a46a2aad0d0df685d84c57d}{Sensor\+Node.\+Lights\+Auto\+O\+FF} (frame)
+\item 
+def \hyperlink{namespaceSensorNode_a107274f5d5053c3fbd95721de6abe6f3}{Sensor\+Node.\+Lights\+Auto\+Slider} (slider)
+\item 
+def \hyperlink{namespaceSensorNode_ae26984e25b77f3e5b585c426be132ea8}{Sensor\+Node.\+Sensors\+Menu} (frame)
+\item 
+def \hyperlink{namespaceSensorNode_ae3b811b5d3e85d5e05e233fe44af8b95}{Sensor\+Node.\+Lights\+Menu} (frame)
+\item 
+def \hyperlink{namespaceSensorNode_ac79d5de3c8c949900e790e0bdc1eb436}{Sensor\+Node.\+System\+Params\+Menu} (socket, frame)
+\item 
+def \hyperlink{namespaceSensorNode_a3c64dd19370abacb4a0fe7d899f94f18}{Sensor\+Node.\+Configure\+Menu} (frame)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceSensorNode_ac561cd22e18ebc8f28a3de0fd790f84d}{Sensor\+Node.\+port} = 1
+\item 
+int \hyperlink{namespaceSensorNode_ada87615462c1a9ae3b690316d00d0540}{Sensor\+Node.\+conn} = 0
+\item 
+string \hyperlink{namespaceSensorNode_a653544a15782661968c67ccb4f6fbdbf}{Sensor\+Node.\+out\+\_\+str} = \textquotesingle{}\textquotesingle{}
+\item 
+string \hyperlink{namespaceSensorNode_a37cb27925dc2a29cf8e92032d08246d7}{Sensor\+Node.\+bd\+\_\+addr} = \textquotesingle{}98\+:D3\+:31\+:\+F\+B\+:31\+:\+A6\textquotesingle{}
+\item 
+int \hyperlink{namespaceSensorNode_a7150a62e1c3e9852c65457bbc8d81d70}{Sensor\+Node.\+remote\+Sensors\+Enabled} = 0
+\item 
+int \hyperlink{namespaceSensorNode_ae86281b81a8af8bc3b9f4bfe75af4748}{Sensor\+Node.\+sleepmode} = 0
+\item 
+\hyperlink{namespaceSensorNode_af39573d5009a8cac514cfb9a933ca24a}{Sensor\+Node.\+thread\+Lock} = thread.\+allocate\+\_\+lock()
+\item 
+\hyperlink{namespaceSensorNode_ae263ac2260a4d567ff23b89689d63d15}{Sensor\+Node.\+top} = Tk()
+\item 
+\hyperlink{namespaceSensorNode_a90f55cfa93e86a677d8c8fa8f50e325f}{Sensor\+Node.\+time\+Str} = String\+Var()
+\item 
+\hyperlink{namespaceSensorNode_aa021e9235803e1ebb079307ed9df017a}{Sensor\+Node.\+lights\+Msg} = String\+Var()
+\item 
+\hyperlink{namespaceSensorNode_abd196ae1282e31f9a34e8d10b5804fe9}{Sensor\+Node.\+light\+Val} = Double\+Var()
+\item 
+\hyperlink{namespaceSensorNode_a731bf9524da43678f890375a99b0ead7}{Sensor\+Node.\+menu\+ID} = Int\+Var()
+\item 
+\hyperlink{namespaceSensorNode_aaf69467b0a3b19ad4135c0328352f5af}{Sensor\+Node.\+D\+H\+T22\+Temp\+Val} = Double\+Var()
+\item 
+\hyperlink{namespaceSensorNode_a9d59de8167347540e9e21562b6239a5b}{Sensor\+Node.\+D\+H\+T22\+Temp\+Unit} = String\+Var()
+\item 
+\hyperlink{namespaceSensorNode_ab98e78199a57c6784976eb167af06203}{Sensor\+Node.\+D\+H\+T22\+Hum\+Val} = Double\+Var()
+\item 
+\hyperlink{namespaceSensorNode_ac12964b10f125bd3256f2b57afb1eaff}{Sensor\+Node.\+D\+H\+T22\+Hum\+Unit} = String\+Var()
+\item 
+\hyperlink{namespaceSensorNode_a7a84ed25b4a6ec5b5008e9ebea3653dc}{Sensor\+Node.\+sock} = Blue\+Connect(bd\+\_\+addr,port,5.\+0)
+\item 
+int \hyperlink{namespaceSensorNode_a6b92df85afc5b0391834474955d16592}{Sensor\+Node.\+prevmins} = 0
+\item 
+int \hyperlink{namespaceSensorNode_a3f20bf0e75b6bcd88e4cf67d89bec305}{Sensor\+Node.\+thresh} = 360
+\item 
+int \hyperlink{namespaceSensorNode_a9f4ed9ab0eac0c4d97f1d35e1d86e42c}{Sensor\+Node.\+tresh\+Out} = 360
+\item 
+\hyperlink{namespaceSensorNode_ae221b94a7568f6a4eec4ed916d6d9fbb}{Sensor\+Node.\+auto\+Lights} = Int\+Var()
+\item 
+\hyperlink{namespaceSensorNode_a1b858f22f067073317637d8f686e7a51}{Sensor\+Node.\+status\+Light} = Int\+Var()
+\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors" kind="class" language="Python" prot="public">
+    <compoundname>ReadSensor::Sensors::Sensors::Sensors</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors_1adb8986b5f974b88f52355bae4c331411" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.Sensors::sens</definition>
+        <argsstring></argsstring>
+        <name>sens</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="8" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors_1a3b02e5ee66fce5c7ee146305bc82137b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ReadSensor.Sensors.Sensors.Sensors::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="10" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors_1aaaf67ad41a07b64c3485ebca8bb2b656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ReadSensor.Sensors.Sensors.Sensors.__init__</definition>
+        <argsstring>(self, responsrStr, sensStr)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>responsrStr</type>
+          <defname>responsrStr</defname>
+        </param>
+        <param>
+          <type>sensStr</type>
+          <defname>sensStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/ReadSensor/Sensors/Sensors.py" line="7" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="7" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/ReadSensor/Sensors/Sensors.py" line="6" column="1" bodyfile="Python/ReadSensor/Sensors/Sensors.py" bodystart="6" bodyend="18"/>
+    <listofallmembers>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors_1aaaf67ad41a07b64c3485ebca8bb2b656" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::Sensors</scope><name>__init__</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors_1a3b02e5ee66fce5c7ee146305bc82137b" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::Sensors</scope><name>s</name></member>
+      <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors_1adb8986b5f974b88f52355bae4c331411" prot="public" virt="non-virtual"><scope>ReadSensor::Sensors::Sensors::Sensors</scope><name>sens</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
