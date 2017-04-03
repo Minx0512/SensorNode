@@ -40,7 +40,10 @@ class ReadSensor:
      
     def SetNodeAddress(self, ndAddr):
      self.nodeMAC = ndAddr
-         
+   
+    def __str__(self):
+        return "{0}".format(self.nodeMAC)
+     
     
 #     def GetAvailableSensors(self,MAC):
 #      """Get available sensors on a certain node"""   

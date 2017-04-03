@@ -14,36 +14,46 @@ class Sensors(readsensor.ReadSensor):
       self.cmdID = "20"
       self.pString = "Sensors"            
       self.respMask = ".\/\/system\/{0}/\|(.*)\|/\|(.*)\|"
-      
-
-
-      #self.sens =[hex(int(i,0))[2:] for i in self.s[1].rsplit("|")]
+    
+    def InterpretResponse(self):
+     """Interpret response list """
+     self.sens =[hex(int(i,0))[2:] for i in self.interpResp[1].rsplit("|")]
        #print(self.sens)
-
-# 
-# class DS18B20(ReadSensor.ReadSensor):
-#     def __init__(self,responseStr,sensStr):
-#      self.MAC = []
-#      self.T = []     
-#      self.unitT = "°C".encode('utf-8').decode('unicode-escape')
-#      
-#      self.ds = re.findall(".\/\/sensor\/{0}/\|(.*)\|/\|(.*)\|".format(sensStr),responseStr)
-#      if len(self.ds) > 0:
-#       self.ds = self.ds[0]
-#       self.MAC = self.ds[0].rsplit("|")
-#       #print (self.ds[1].replace(u'\xc2\xb0C','').rsplit("|"))
-#       self.T = [float(i) for i in self.ds[1].replace(u'\xc2\xb0C','').rsplit("|")]
-#       self.numEl = len(self.T)
-#          
-#     def GetValuePair(self,idx):
-#      return [self.MAC[idx], self.T[idx],self.unitT]
-#     
-#     def GetAvgTemperature(self):
-#      avrgTemp = 0.0  
-#      for ti in range(0,self.numEl):
-#       avrgTemp= avrgTemp+self.T[ti]
-#      return round(avrgTemp/self.numEl,3)     
-#         
+    def __str__(self):
+     return "{0} | {1}".format(self.nodeMAC, self.sens)
+ 
+class DS18B20(readsensor.ReadSensor):
+    def __init__(self,prt,bdrate):
+     readsensor.ReadSensor.__init__(self,prt,bdrate)  
+     self.MAC = []
+     self.T = []     
+     self.unitT = "°C".encode('utf-8').decode('unicode-escape')
+     self.nodeMAC = ""
+     self.cmdID = "35"
+     self.pString = "DST"            
+     self.respMask = ".\/\/sensor\/{0}/\|(.*)\|/\|(.*)\|" 
+     self.numEl = 0
+      
+    def InterpretResponse(self):
+     """Interpret response list """
+     self.interpResp     
+     self.MAC = self.interpResp[0].rsplit("|")
+      #print (self.ds[1].replace(u'\xc2\xb0C','').rsplit("|"))
+     self.T = [float(i) for i in self.interpResp[1].replace(u'\xc2\xb0C','').rsplit("|")]
+     self.numEl = len(self.T)
+     
+           
+    def GetValuePair(self,idx):
+     return [self.MAC[idx], self.T[idx],self.unitT]
+     
+    def GetAvgTemperature(self):
+     avrgTemp = 0.0  
+     for ti in range(0,self.numEl):
+      avrgTemp= avrgTemp+self.T[ti]
+     return round(avrgTemp/self.numEl,3)     
+    
+    def __str__(self):
+        return "{0} | T: {1}{2}".format(self.nodeMAC, self.GetAvgTemperature(),self.unitT)     
 #      
 # class DHT22:
 #     def __init__(self,responseStr,sensStr):

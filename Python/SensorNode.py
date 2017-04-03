@@ -5,7 +5,8 @@
 #import sys
 #import thread
 #import time
-#import ReadSensor
+
+
 import sensors
 
 # 1. get available sensors per Node
@@ -13,18 +14,25 @@ import sensors
 
 nodeAddresses = ["A0:A0:A0:A0:A0"]
 #threadLock = thread.allocate_lock()
+port = "/dev/ttyAMA0"
+baudrate = 9600
 
 
-#rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 
-
-
-sens = sensors.Sensors("/dev/ttyAMA0", 9600)
-
+sens = sensors.Sensors(port, baudrate)
 sens.SetNodeAddress(nodeAddresses[0])
 sens.Update()
-print (sens.interpResp)
+sens.InterpretResponse()
 
+print (sens)
+
+
+ds = sensors.DS18B20(port, baudrate)
+ds.SetNodeAddress(nodeAddresses[0])
+ds.Update()
+ds.InterpretResponse()
+
+print (ds)
 # 
 # for addr in nodeAddresses:
 #  sensor.append(rs.spawnSensors(addr))
