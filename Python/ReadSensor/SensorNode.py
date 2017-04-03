@@ -41,6 +41,7 @@ rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 
 sensor = spawnSensors(rs,nodeAddresses[0])
 
+print (sensor)
 
 #availableSensors = rs.GetAvailableSensors("A0:A0:A0:A0:A0")
 #print ("Sensors: {0}".format(availableSensors.sens))
