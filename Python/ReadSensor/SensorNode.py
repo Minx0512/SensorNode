@@ -13,7 +13,7 @@ import Sensors.Sensors as Sensors
 def spawnSensors(readS, nodeAdress):
  sensrs = []
  availableSensors = readS.GetAvailableSensors(nodeAdress).sens
- print ("Sensors: {0}".format(availableSensors.sens))  
+ print ("Sensors: {0}".format(availableSensors))  
  for s in availableSensors:
   if s == 49:
    mv = readS.Movement(nodeAdress)
@@ -38,7 +38,7 @@ nodeAddresses = ["A0:A0:A0:A0:A0"]
 
 rs = ReadSensor.ReadSensor("/dev/ttyAMA0", 9600)
 
-sens = spawnSensors(rs,nodeAddresses[0])
+sensor = spawnSensors(rs,nodeAddresses[0])
 
 
 #availableSensors = rs.GetAvailableSensors("A0:A0:A0:A0:A0")
