@@ -16,10 +16,11 @@ class ReadSensor:
      self.serialCon = SerialConnection.SerialConnection(port,baudrate)
      self.resp = ""
      self.availableSensors = []
+     self.cmdIDs = ["20","31","32","33","34","35","36"]
     
     def GetAvailableSensors(self,MAC):
      """Get available sensors on a certain node"""   
-     q = self.queryStr.format(20,MAC,"Sensors")
+     q = self.queryStr.format(self.cmdIDs[0],MAC,"Sensors")
      self.resp = self.serialCon.ReadData(q)
      sens = Sensors.Sensors(self.resp,"Sensors")
      return sens    
@@ -27,7 +28,7 @@ class ReadSensor:
     
     def DS18B20(self,MAC):
      """Reads all DS18B20 sensors on one node with a certain MAC address"""
-     q = self.queryStr.format(35,MAC,"DST")
+     q = self.queryStr.format(self.cmdIDs[5],MAC,"DST")
      self.resp = self.serialCon.ReadData(q)
      ds = Sensors.DS18B20(self.resp,"DST")
      #vals = ds.GetValuePair(0)
@@ -35,28 +36,28 @@ class ReadSensor:
 
     def DHT22(self,MAC):
      """Reads the DHT22 sensor on a node with a certain MAC address"""   
-     q = self.queryStr.format(32,MAC,"DHT22")
+     q = self.queryStr.format(self.cmdIDs[2],MAC,"DHT22")
      self.resp = self.serialCon.ReadData(q)
      dht = Sensors.DHT22(self.resp,"DHT22")
      return dht
     
     def Movement(self,MAC):
      """Reads the movement detector of a certain node """   
-     q = self.queryStr.format(31,MAC,"M")
+     q = self.queryStr.format(self.cmdIDs[1],MAC,"M")
      self.resp = self.serialCon.ReadData(q)
      mv = Sensors.Movement(self.resp,"M")
      return mv 
     
     def LightAnalog(self,MAC):
      """ Reads the analog photoresistor on a certain node """   
-     q = self.queryStr.format(33,MAC,"Lav")
+     q = self.queryStr.format(self.cmdIDs[3],MAC,"Lav")
      self.resp = self.serialCon.ReadData(q)
      la = Sensors.LightAnalog(self.resp,"Lav")
      return la 
     
     def LightDigital(self,MAC):
      """ Reads the digital light sensor on a certain node """   
-     q = self.queryStr.format(34,MAC,"Ld")
+     q = self.queryStr.format(self.cmdIDs[4],MAC,"Ld")
      self.resp = self.serialCon.ReadData(q)
      ld = Sensors.LightAnalog(self.resp,"Ld")
      return ld
@@ -64,7 +65,7 @@ class ReadSensor:
  
     def BMP180(self,MAC):
      """ Reads the BMP180 pressure sensor on a certain node"""
-     q = self.queryStr.format(36,MAC,"PT")
+     q = self.queryStr.format(self.cmdIDs[6],MAC,"PT")
      self.resp = self.serialCon.ReadData(q)
      bmp = Sensors.BMP180(self.resp,"PT")
      return bmp
