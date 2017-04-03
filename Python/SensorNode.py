@@ -37,6 +37,12 @@ mv.Update()
 mv.InterpretResponse()
 print (mv)
 
+lightA = sensors.LightAnalog(port,baudrate)
+lightA.SetNodeAddress(nodeAddresses[0])
+lightA.Update()
+lightA.InterpretResponse()
+print (lightA)
+
 
 # 
 # for addr in nodeAddresses:

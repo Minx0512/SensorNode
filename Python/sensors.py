@@ -94,15 +94,24 @@ class Movement(readsensor.ReadSensor):
         return "{0} | M: {1}".format(self.nodeMAC, self.move) 
     
       
-#  
-# class LightAnalog:
-#     def __init__(self,responseStr,sensStr):
-#      self.value = 0.0    
-#      self.la = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)
-#      if len(self.la) > 0:
-#       self.la = self.la[0]
-#       self.value = float(self.la[1])   
-#         
+  
+class LightAnalog(readsensor.ReadSensor):
+    def __init__(self,responseStr,sensStr):
+     readsensor.ReadSensor.__init__(self,prt,bdrate)
+     self.value = 0.0
+     self.nodeMAC = ""
+     self.cmdID = "31"
+     self.pString = "M"            
+     self.respMask = ".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|"
+     
+    def InterpretResponse(self):
+     """Interpret response list """ 
+     self.value = float(self.interpResp[1])   
+    
+    def __str__(self):
+     return "{0} | Light: {1}".format(self.nodeMAC, self.value)  
+ 
+     
 # class LightDigital:
 #     def __init__(self,responseStr,sensStr):
 #      self.value = 0.0
