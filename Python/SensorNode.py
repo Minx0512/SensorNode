@@ -34,8 +34,6 @@ print (ds)
 mv = sensors.Movement(port,baudrate)
 mv.SetNodeAddress(nodeAddresses[0])
 mv.Update()
-
-print(self.interpResp)
 mv.InterpretResponse()
 print (mv)
 

@@ -82,7 +82,7 @@ class Movement(readsensor.ReadSensor):
      readsensor.ReadSensor.__init__(self,prt,bdrate)
      self.move = 0
      self.nodeMAC = ""
-     self.cmdID = "35"
+     self.cmdID = "31"
      self.pString = "M"            
      self.respMask = ".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|"
      
