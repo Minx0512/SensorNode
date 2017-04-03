@@ -11,6 +11,7 @@ import Sensors.Sensors as Sensors
 # 1. get available sensors per Node
 
 def spawnSensors(readS, nodeAdress):
+ print ("Address: {0}\r\n####################".format(nodeAdress))   
  sensrs = []
  availableSensors = readS.GetAvailableSensors(nodeAdress).sens
  print ("Sensors: {0}".format(availableSensors))  
