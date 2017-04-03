@@ -10,6 +10,6 @@
 .dep
 
 Python/old/*
-*.docyfile
+*.doxyfile
 
 .gitignore
