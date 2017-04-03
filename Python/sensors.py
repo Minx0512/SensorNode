@@ -53,7 +53,7 @@ class DS18B20(readsensor.ReadSensor):
     def __str__(self):
         return "{0} | T: {1}{2}".format(self.nodeMAC, self.GetAvgTemperature(),self.unitT)     
       
-class DHT22:
+class DHT22(readsensor.ReadSensor):
     def __init__(self,prt,bdrate):
      readsensor.ReadSensor.__init__(self,prt,bdrate)    
      self.H = 0.0
@@ -77,7 +77,7 @@ class DHT22:
     def __str__(self):
         return "{0} | T: {1}{2} | H: {3}{4} | err: {5}".format(self.nodeMAC, self.T,self.unitT,self.H,self.unitH,self.err)  
  
-class Movement:
+class Movement(readsensor.ReadSensor):
     def __init__(self,prt,bdrate):
      readsensor.ReadSensor.__init__(self,prt,bdrate)
      self.move = 0
@@ -91,7 +91,9 @@ class Movement:
      self.move = int(self.interpResp[1])
      
     def __str__(self):
-        return "{0} | M: {1}".format(self.nodeMAC, self.move)   
+        return "{0} | M: {1}".format(self.nodeMAC, self.move) 
+    
+      
 #  
 # class LightAnalog:
 #     def __init__(self,responseStr,sensStr):
