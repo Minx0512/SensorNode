@@ -100,8 +100,8 @@ class LightAnalog(readsensor.ReadSensor):
      readsensor.ReadSensor.__init__(self,prt,bdrate)
      self.value = 0.0
      self.nodeMAC = ""
-     self.cmdID = "31"
-     self.pString = "M"            
+     self.cmdID = "33"
+     self.pString = "Lav"            
      self.respMask = ".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|"
      
     def InterpretResponse(self):
