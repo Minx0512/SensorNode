@@ -3,9 +3,10 @@
 
 import os
 import sys
-import thread
+
+import _thread
 import time
-import sys
+
 
 
 import sensors
@@ -17,7 +18,7 @@ class SensorNode:
  
  """
   
- threadLock = thread.allocate_lock()
+ threadLock = _thread.allocate_lock()
  nodeAddresses = ["A0:A0:A0:A0:A0"]
  port = "/dev/ttyAMA0"
  baudrate = 9600
@@ -57,7 +58,7 @@ class SensorNode:
 
  
  for sob in sens.sensorObjList:
-  thread.start_new_thread(UpdateThreads,(sensorObj))   
+  _thread.start_new_thread(UpdateThreads,(sensorObj))   
   #sob.Update()
   #sob.InterpretResponse()
   #print (sob)
