@@ -68,9 +68,9 @@
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="classUSART_1a889e2ca93527fd03811fdff317f50f39" refkind="member"><highlight class="normal"><ref refid="classUSART_1a538ccfb4c4ae821f4fd4e87afe9fd96e" kindref="member">USART::USART</ref>(uint32_t<sp/><ref refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kindref="member">baudrate</ref>){</highlight></codeline>
+<codeline lineno="40" refid="classUSART_1a889e2ca93527fd03811fdff317f50f39" refkind="member"><highlight class="normal"><ref refid="classUSART_1a538ccfb4c4ae821f4fd4e87afe9fd96e" kindref="member">USART::USART</ref>(uint32_t<sp/>baudrate){</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" kindref="member">_BAUD</ref><sp/>=<sp/><ref refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kindref="member">baudrate</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" kindref="member">_BAUD</ref><sp/>=<sp/>baudrate;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART_1acbd19517b595cf04ff087e040270904f" kindref="member">_UBRR</ref><sp/>=<sp/>(<ref refid="USART_8h_1a802b2b582b121e4632aa9a491d503720" kindref="member">FOSC</ref>/16)/<ref refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" kindref="member">_BAUD</ref><sp/>-<sp/>1;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>

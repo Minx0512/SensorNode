@@ -39,8 +39,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BMP180_8cpp.html",
-"classNRF24L01.html#a1e997f3c946acdbe8bd622e431f80034",
-"functions_a.html"
+"classNRF24L01.html#a2973773d1a158e1cfbf52198f248c548",
+"functions.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

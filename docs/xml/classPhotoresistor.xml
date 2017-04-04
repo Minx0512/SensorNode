@@ -144,7 +144,6 @@
         </inbodydescription>
         <location file="src/Sensors/Photoresistor.h" line="81" column="1" bodyfile="src/Sensors/Photoresistor.cpp" bodystart="51" bodyend="54"/>
         <references refid="classPhotoresistor_1a550c85d1df00f323cd2fb86bb3d73c15" compoundref="Photoresistor_8h" startline="38">ADPort</references>
-        <references refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" compoundref="SensorNode_8py" startline="17">SensorNode.port</references>
       </memberdef>
       <memberdef kind="function" id="classPhotoresistor_1a5c3bc9e8877b54faeded1450a39552fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

@@ -16,6 +16,9 @@ var hierarchy =
       [ "sensors.Sensors", "classsensors_1_1Sensors.html", null ]
     ] ],
     [ "serialconnection.SerialConnection", "classserialconnection_1_1SerialConnection.html", null ],
+    [ "something", null, [
+      [ "SensorNode.SensorNode", "classSensorNode_1_1SensorNode.html", null ]
+    ] ],
     [ "SPI", "classSPI.html", null ],
     [ "USART", "classUSART.html", null ]
 ];

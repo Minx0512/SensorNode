@@ -2,62 +2,21 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="namespaceSensorNode" kind="namespace" language="Python">
     <compoundname>SensorNode</compoundname>
+    <innerclass refid="classSensorNode_1_1SensorNode" prot="public">SensorNode::SensorNode</innerclass>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="namespaceSensorNode_1ac1e752b62092c1c9e27da570c73c0ce7" prot="public" static="no" mutable="no">
-        <type>list</type>
-        <definition>list SensorNode.nodeAddresses</definition>
-        <argsstring></argsstring>
-        <name>nodeAddresses</name>
-        <initializer>= [&quot;A0:A0:A0:A0:A0&quot;]</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SensorNode.py" line="15" column="1" bodyfile="Python/SensorNode.py" bodystart="15" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" prot="public" static="no" mutable="no">
-        <type>string</type>
-        <definition>string SensorNode.port</definition>
-        <argsstring></argsstring>
-        <name>port</name>
-        <initializer>= &quot;/dev/ttyAMA0&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SensorNode.py" line="17" column="1" bodyfile="Python/SensorNode.py" bodystart="17" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int SensorNode.baudrate</definition>
-        <argsstring></argsstring>
-        <name>baudrate</name>
-        <initializer>= 9600</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SensorNode.py" line="18" column="1" bodyfile="Python/SensorNode.py" bodystart="18" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="namespaceSensorNode_1a341717027383e08a67cc397e2d00a99e" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceSensorNode_1a1c06b14e3f48f507247d5b8e0e910f35" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>SensorNode.sens</definition>
+        <definition>SensorNode.app</definition>
         <argsstring></argsstring>
-        <name>sens</name>
-        <initializer>= <ref refid="classsensors_1_1Sensors" kindref="compound">sensors.Sensors</ref>(<ref refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kindref="member">port</ref>, <ref refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kindref="member">baudrate</ref>)</initializer>
+        <name>app</name>
+        <initializer>= <ref refid="classSensorNode_1_1SensorNode" kindref="compound">SensorNode</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="22" column="1" bodyfile="Python/SensorNode.py" bodystart="22" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="40" column="1" bodyfile="Python/SensorNode.py" bodystart="40" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -296,50 +296,50 @@
     <detaileddescription>
 <para><verbatim>provides functions for sensor reading</verbatim> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="93">
+      <node id="97">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
       </node>
-      <node id="94">
+      <node id="98">
         <label>sensors.BMP180</label>
         <link refid="classsensors_1_1BMP180"/>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="97" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>sensors.Sensors</label>
+        <link refid="classsensors_1_1Sensors"/>
+        <childnode refid="97" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>sensors.LightAnalog</label>
+        <link refid="classsensors_1_1LightAnalog"/>
+        <childnode refid="97" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>sensors.LightDigital</label>
+        <link refid="classsensors_1_1LightDigital"/>
+        <childnode refid="97" relation="public-inheritance">
         </childnode>
       </node>
       <node id="100">
-        <label>sensors.Sensors</label>
-        <link refid="classsensors_1_1Sensors"/>
-        <childnode refid="93" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="97">
-        <label>sensors.LightAnalog</label>
-        <link refid="classsensors_1_1LightAnalog"/>
-        <childnode refid="93" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="98">
-        <label>sensors.LightDigital</label>
-        <link refid="classsensors_1_1LightDigital"/>
-        <childnode refid="93" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="96">
         <label>sensors.DS18B20</label>
         <link refid="classsensors_1_1DS18B20"/>
-        <childnode refid="93" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="95">
-        <label>sensors.DHT22</label>
-        <link refid="classsensors_1_1DHT22"/>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="97" relation="public-inheritance">
         </childnode>
       </node>
       <node id="99">
+        <label>sensors.DHT22</label>
+        <link refid="classsensors_1_1DHT22"/>
+        <childnode refid="97" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="103">
         <label>sensors.Movement</label>
         <link refid="classsensors_1_1Movement"/>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="97" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

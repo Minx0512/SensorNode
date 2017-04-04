@@ -76,8 +76,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Python/serialconnection.py" line="23" column="1" bodyfile="Python/serialconnection.py" bodystart="23" bodyend="49"/>
-        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="156">sensors.DHT22.err</references>
-        <references refid="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" compoundref="sensors_8py" startline="232">sensors.BMP180.err</references>
+        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="125">sensors.DHT22.err</references>
+        <references refid="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" compoundref="sensors_8py" startline="201">sensors.BMP180.err</references>
         <references refid="classserialconnection_1_1SerialConnection_1a074a88ccb2c22fc8f81a98c15dfdffe4" compoundref="serialconnection_8py" startline="20">serialconnection.SerialConnection.err</references>
         <references refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" compoundref="main_8cpp" startline="97">str</references>
       </memberdef>

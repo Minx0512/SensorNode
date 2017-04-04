@@ -267,7 +267,7 @@
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART" kindref="compound">USART</ref>();</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART" kindref="compound">USART</ref>(uint32_t<sp/><ref refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kindref="member">baudrate</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART" kindref="compound">USART</ref>(uint32_t<sp/>baudrate);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"></codeline>

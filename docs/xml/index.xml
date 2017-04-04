@@ -55,21 +55,6 @@
     <member refid="classsensors_1_1DHT22_1a957aa77f0af01e9306aeb86d122969fc" kind="function"><name>InterpretResponse</name></member>
     <member refid="classsensors_1_1DHT22_1a5c20cdc8c8168efe52e9ce3ce0c3e819" kind="function"><name>__str__</name></member>
   </compound>
-  <compound refid="classsensors_1_1DS18B20" kind="class"><name>sensors::DS18B20</name>
-    <member refid="classsensors_1_1DS18B20_1a9b75c982811d488391ab52a339d58be8" kind="variable"><name>MAC</name></member>
-    <member refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" kind="variable"><name>T</name></member>
-    <member refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" kind="variable"><name>unitT</name></member>
-    <member refid="classsensors_1_1DS18B20_1a8d25c7e23f6b3e1b424dac9209538a53" kind="variable"><name>nodeMAC</name></member>
-    <member refid="classsensors_1_1DS18B20_1a8a7911c0b96b5c78d097254187f323cc" kind="variable"><name>cmdID</name></member>
-    <member refid="classsensors_1_1DS18B20_1a9edc6c09ffba98f42e5b7cad1685d564" kind="variable"><name>pString</name></member>
-    <member refid="classsensors_1_1DS18B20_1ac064c221c0d23deb28ec74e3e9bb6510" kind="variable"><name>respMask</name></member>
-    <member refid="classsensors_1_1DS18B20_1aef41d6169e461effa962dc97ade7e9ad" kind="variable"><name>numEl</name></member>
-    <member refid="classsensors_1_1DS18B20_1a1029c5b384593c8b9d9826c4f8ba95dc" kind="function"><name>__init__</name></member>
-    <member refid="classsensors_1_1DS18B20_1a95d8a3d2b0e0e4ce4090a9d6778e189e" kind="function"><name>InterpretResponse</name></member>
-    <member refid="classsensors_1_1DS18B20_1a00cce06ee0b0b920cb3df86cc5ad1902" kind="function"><name>GetValuePair</name></member>
-    <member refid="classsensors_1_1DS18B20_1abaf2d655c254d5595879e91860b545f8" kind="function"><name>GetAvgTemperature</name></member>
-    <member refid="classsensors_1_1DS18B20_1a88d7d94ab43332ceea56fa301de9c1d1" kind="function"><name>__str__</name></member>
-  </compound>
   <compound refid="classDS18B20" kind="class"><name>DS18B20</name>
     <member refid="classDS18B20_1a4e8d420cd118999883bde12e766bc1d4" kind="variable"><name>WIRE_PORT</name></member>
     <member refid="classDS18B20_1a06a1f548d087b8d8971dee5e94653f5c" kind="variable"><name>WIRE_DDR</name></member>
@@ -95,6 +80,21 @@
     <member refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" kind="function"><name>PIN_LOW</name></member>
     <member refid="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" kind="function"><name>PIN_HIGH</name></member>
     <member refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" kind="function"><name>__attribute__</name></member>
+  </compound>
+  <compound refid="classsensors_1_1DS18B20" kind="class"><name>sensors::DS18B20</name>
+    <member refid="classsensors_1_1DS18B20_1a9b75c982811d488391ab52a339d58be8" kind="variable"><name>MAC</name></member>
+    <member refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" kind="variable"><name>T</name></member>
+    <member refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" kind="variable"><name>unitT</name></member>
+    <member refid="classsensors_1_1DS18B20_1a8d25c7e23f6b3e1b424dac9209538a53" kind="variable"><name>nodeMAC</name></member>
+    <member refid="classsensors_1_1DS18B20_1a8a7911c0b96b5c78d097254187f323cc" kind="variable"><name>cmdID</name></member>
+    <member refid="classsensors_1_1DS18B20_1a9edc6c09ffba98f42e5b7cad1685d564" kind="variable"><name>pString</name></member>
+    <member refid="classsensors_1_1DS18B20_1ac064c221c0d23deb28ec74e3e9bb6510" kind="variable"><name>respMask</name></member>
+    <member refid="classsensors_1_1DS18B20_1aef41d6169e461effa962dc97ade7e9ad" kind="variable"><name>numEl</name></member>
+    <member refid="classsensors_1_1DS18B20_1a1029c5b384593c8b9d9826c4f8ba95dc" kind="function"><name>__init__</name></member>
+    <member refid="classsensors_1_1DS18B20_1a95d8a3d2b0e0e4ce4090a9d6778e189e" kind="function"><name>InterpretResponse</name></member>
+    <member refid="classsensors_1_1DS18B20_1a00cce06ee0b0b920cb3df86cc5ad1902" kind="function"><name>GetValuePair</name></member>
+    <member refid="classsensors_1_1DS18B20_1abaf2d655c254d5595879e91860b545f8" kind="function"><name>GetAvgTemperature</name></member>
+    <member refid="classsensors_1_1DS18B20_1a88d7d94ab43332ceea56fa301de9c1d1" kind="function"><name>__str__</name></member>
   </compound>
   <compound refid="classsensors_1_1LightAnalog" kind="class"><name>sensors::LightAnalog</name>
     <member refid="classsensors_1_1LightAnalog_1ab1748d35da94bc8da0afead5bded8986" kind="variable"><name>value</name></member>
@@ -275,6 +275,12 @@
     <member refid="classreadsensor_1_1ReadSensor_1a23c251ae6bc0343f275e12199c35e0d2" kind="function"><name>SetNodeAddress</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1a52daa7fe6c6dba66b99d11a3c01567ba" kind="function"><name>__str__</name></member>
   </compound>
+  <compound refid="classSensorNode_1_1SensorNode" kind="class"><name>SensorNode::SensorNode</name>
+    <member refid="classSensorNode_1_1SensorNode_1a17be4a277b9bfdd041ec006b462d497c" kind="variable"><name>nodeAddresses</name></member>
+    <member refid="classSensorNode_1_1SensorNode_1a94712cd1b0bf09fa4cd3de94ca666575" kind="variable"><name>port</name></member>
+    <member refid="classSensorNode_1_1SensorNode_1a68f7a87f1d03a2734f3f6505f801a92e" kind="variable"><name>baudrate</name></member>
+    <member refid="classSensorNode_1_1SensorNode_1ad8aec254c15c97a8b5c709480f31b2bb" kind="variable"><name>sens</name></member>
+  </compound>
   <compound refid="classsensors_1_1Sensors" kind="class"><name>sensors::Sensors</name>
     <member refid="classsensors_1_1Sensors_1a70cd97f59cdb39f1f02260551d7e5ea5" kind="variable"><name>sensorList</name></member>
     <member refid="classsensors_1_1Sensors_1a753ac6bef7233285cbf9651d5f5a5b7d" kind="variable"><name>sensorObjList</name></member>
@@ -321,10 +327,7 @@
   <compound refid="namespacereadsensor" kind="namespace"><name>readsensor</name>
   </compound>
   <compound refid="namespaceSensorNode" kind="namespace"><name>SensorNode</name>
-    <member refid="namespaceSensorNode_1ac1e752b62092c1c9e27da570c73c0ce7" kind="variable"><name>nodeAddresses</name></member>
-    <member refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kind="variable"><name>port</name></member>
-    <member refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kind="variable"><name>baudrate</name></member>
-    <member refid="namespaceSensorNode_1a341717027383e08a67cc397e2d00a99e" kind="variable"><name>sens</name></member>
+    <member refid="namespaceSensorNode_1a1c06b14e3f48f507247d5b8e0e910f35" kind="variable"><name>app</name></member>
   </compound>
   <compound refid="namespacesensors" kind="namespace"><name>sensors</name>
   </compound>

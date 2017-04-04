@@ -61,7 +61,7 @@
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="classPhotoresistor_1acfcec6e681f44e5c25ea876583f26964" refkind="member"><highlight class="normal"><ref refid="classPhotoresistor_1a2a717a2af0b5000b3971dc9e57a16e8e" kindref="member">Photoresistor::Photoresistor</ref>(uint8_t<sp/><ref refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kindref="member">port</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="32" refid="classPhotoresistor_1acfcec6e681f44e5c25ea876583f26964" refkind="member"><highlight class="normal"><ref refid="classPhotoresistor_1a2a717a2af0b5000b3971dc9e57a16e8e" kindref="member">Photoresistor::Photoresistor</ref>(uint8_t<sp/>port)<sp/>{</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>constructor<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPhotoresistor_1a5c3bc9e8877b54faeded1450a39552fb" kindref="member">setType</ref>(0);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPhotoresistor_1a984cf8c9ed6a428f5b025a5ea85822da" kindref="member">setPort</ref>(port);</highlight></codeline>
@@ -80,8 +80,8 @@
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="classPhotoresistor_1a984cf8c9ed6a428f5b025a5ea85822da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1a984cf8c9ed6a428f5b025a5ea85822da" kindref="member">Photoresistor::setPort</ref>(uint8_t<sp/><ref refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kindref="member">port</ref>){</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classPhotoresistor_1a550c85d1df00f323cd2fb86bb3d73c15" kindref="member">ADPort</ref><sp/>=<sp/><ref refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kindref="member">port</ref>;</highlight></codeline>
+<codeline lineno="51" refid="classPhotoresistor_1a984cf8c9ed6a428f5b025a5ea85822da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1a984cf8c9ed6a428f5b025a5ea85822da" kindref="member">Photoresistor::setPort</ref>(uint8_t<sp/>port){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classPhotoresistor_1a550c85d1df00f323cd2fb86bb3d73c15" kindref="member">ADPort</ref><sp/>=<sp/>port;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>

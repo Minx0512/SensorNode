@@ -13,6 +13,7 @@ var searchData=
   ['am2302_5fwire_5fdq',['AM2302_WIRE_DQ',['../classDHT22.html#a4b6de6908e5eb743dec2c254ef89782e',1,'DHT22']]],
   ['am2302_5fwire_5fpin',['AM2302_WIRE_PIN',['../classDHT22.html#a5555aa8aa95149f3a3723582bb4ceffa',1,'DHT22']]],
   ['am2302_5fwire_5fport',['AM2302_WIRE_PORT',['../classDHT22.html#a0966fbe5db17d7ca6f1f036830e27502',1,'DHT22']]],
+  ['app',['app',['../namespaceSensorNode.html#a1c06b14e3f48f507247d5b8e0e910f35',1,'SensorNode']]],
   ['available',['available',['../classNRF24L01.html#ab368039cf5448f0ff5d489563d530c7b',1,'NRF24L01::available()'],['../classNRF24L01.html#a6bfbb693418e2d60556637b6a3599d05',1,'NRF24L01::available(uint8_t *pipe_num)']]],
   ['availablesensors',['availableSensors',['../classreadsensor_1_1ReadSensor.html#ae04c9a7ad4cb4a0c68225cea810f9edd',1,'readsensor::ReadSensor']]]
 ];

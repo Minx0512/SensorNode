@@ -6,31 +6,39 @@
 #import thread
 #import time
 
+import sys
+
 
 import sensors
 
-# 1. get available sensors per Node
 
 
-nodeAddresses = ["A0:A0:A0:A0:A0"]
+class SensorNode(something):
+    
+  
+ nodeAddresses = ["A0:A0:A0:A0:A0"]
 #threadLock = thread.allocate_lock()
-port = "/dev/ttyAMA0"
-baudrate = 9600
+ port = "/dev/ttyAMA0"
+ baudrate = 9600
 
 
 
-sens = sensors.Sensors(port, baudrate)
-sens.SetNodeAddress(nodeAddresses[0])
-sens.Update()
-sens.InterpretResponse()
-print(sens)
+ sens = sensors.Sensors(port, baudrate)
+ sens.SetNodeAddress(nodeAddresses[0])
+ sens.Update()
+ sens.InterpretResponse()
+ print(sens)
 
-sens.spawnSensors()
+ sens.spawnSensors()
 
-for sob in sens.sensorObjList:
- print (sob)
+ for sob in sens.sensorObjList:
+  print (sob)
 
 
+
+if __name__ == "__main__":
+    app = SensorNode()
+    app.run()
 
 
 

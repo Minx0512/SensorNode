@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "readsensor", "namespacereadsensor.html", "namespacereadsensor" ],
+    [ "SensorNode", "namespaceSensorNode.html", "namespaceSensorNode" ],
     [ "sensors", "namespacesensors.html", "namespacesensors" ],
     [ "serialconnection", "namespaceserialconnection.html", "namespaceserialconnection" ],
     [ "BMP180", "classBMP180.html", "classBMP180" ],

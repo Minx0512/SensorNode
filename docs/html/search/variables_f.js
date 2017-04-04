@@ -2,7 +2,7 @@ var searchData=
 [
   ['sendsensorstr',['sendSensorStr',['../main_8cpp.html#ac92f70960babcaa68482b8ea681bcec8',1,'main.cpp']]],
   ['sendsystemstr',['sendSystemStr',['../main_8cpp.html#ad5572274b88d1bfc8a5e057e1132bf90',1,'main.cpp']]],
-  ['sens',['sens',['../namespaceSensorNode.html#a341717027383e08a67cc397e2d00a99e',1,'SensorNode']]],
+  ['sens',['sens',['../classSensorNode_1_1SensorNode.html#ad8aec254c15c97a8b5c709480f31b2bb',1,'SensorNode::SensorNode']]],
   ['sensorlist',['sensorList',['../classsensors_1_1Sensors.html#a70cd97f59cdb39f1f02260551d7e5ea5',1,'sensors::Sensors']]],
   ['sensorobjlist',['sensorObjList',['../classsensors_1_1Sensors.html#a753ac6bef7233285cbf9651d5f5a5b7d',1,'sensors::Sensors']]],
   ['ser',['ser',['../classserialconnection_1_1SerialConnection.html#a5b2f2670cc97ed8970dadd829f623d66',1,'serialconnection::SerialConnection']]],

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="152" column="1" bodyfile="Python/sensors.py" bodystart="152" bodyend="-1"/>
+        <location file="Python/sensors.py" line="121" column="1" bodyfile="Python/sensors.py" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1DHT22_1a9055341fda2f3628ef888a39254d1c83" prot="public" static="no" mutable="no">
         <type></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="153" column="1" bodyfile="Python/sensors.py" bodystart="153" bodyend="-1"/>
+        <location file="Python/sensors.py" line="122" column="1" bodyfile="Python/sensors.py" bodystart="122" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" prot="public" static="no" mutable="no">
         <type></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="154" column="1" bodyfile="Python/sensors.py" bodystart="154" bodyend="-1"/>
+        <location file="Python/sensors.py" line="123" column="1" bodyfile="Python/sensors.py" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" prot="public" static="no" mutable="no">
         <type></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="155" column="1" bodyfile="Python/sensors.py" bodystart="155" bodyend="-1"/>
+        <location file="Python/sensors.py" line="124" column="1" bodyfile="Python/sensors.py" bodystart="124" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" prot="public" static="no" mutable="no">
         <type></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="156" column="1" bodyfile="Python/sensors.py" bodystart="156" bodyend="-1"/>
+        <location file="Python/sensors.py" line="125" column="1" bodyfile="Python/sensors.py" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1DHT22_1a568f624009b01624445ef11fa20405f3" prot="public" static="no" mutable="no">
         <type></type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="157" column="1" bodyfile="Python/sensors.py" bodystart="157" bodyend="-1"/>
+        <location file="Python/sensors.py" line="126" column="1" bodyfile="Python/sensors.py" bodystart="126" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1DHT22_1ab06cbe8e37c2eefe567c269c573eef80" prot="public" static="no" mutable="no">
         <type></type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="158" column="1" bodyfile="Python/sensors.py" bodystart="158" bodyend="-1"/>
+        <location file="Python/sensors.py" line="127" column="1" bodyfile="Python/sensors.py" bodystart="127" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1DHT22_1a77f4bf3d94cfee52d6ffb003800ae65b" prot="public" static="no" mutable="no">
         <type></type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="159" column="1" bodyfile="Python/sensors.py" bodystart="159" bodyend="-1"/>
+        <location file="Python/sensors.py" line="128" column="1" bodyfile="Python/sensors.py" bodystart="128" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="150" column="1" bodyfile="Python/sensors.py" bodystart="150" bodyend="160"/>
+        <location file="Python/sensors.py" line="119" column="1" bodyfile="Python/sensors.py" bodystart="119" bodyend="129"/>
         <references refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" compoundref="readsensor_8py" startline="11" endline="26">readsensor.ReadSensor.__init__</references>
       </memberdef>
       <memberdef kind="function" id="classsensors_1_1DHT22_1a957aa77f0af01e9306aeb86d122969fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -151,15 +151,15 @@
 <para><verbatim>Interpret response list </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="161" column="1" bodyfile="Python/sensors.py" bodystart="161" bodyend="169"/>
+        <location file="Python/sensors.py" line="130" column="1" bodyfile="Python/sensors.py" bodystart="130" bodyend="138"/>
         <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="21">readsensor.ReadSensor.interpResp</references>
-        <references refid="classsensors_1_1DHT22_1a0f53e4181f2b2008ffe099a22631a617" compoundref="sensors_8py" startline="152">sensors.DHT22.H</references>
-        <references refid="classsensors_1_1DHT22_1a9055341fda2f3628ef888a39254d1c83" compoundref="sensors_8py" startline="153">sensors.DHT22.unitH</references>
-        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="122">sensors.DS18B20.T</references>
-        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="154">sensors.DHT22.T</references>
-        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="123">sensors.DS18B20.unitT</references>
-        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="155">sensors.DHT22.unitT</references>
-        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="156">sensors.DHT22.err</references>
+        <references refid="classsensors_1_1DHT22_1a0f53e4181f2b2008ffe099a22631a617" compoundref="sensors_8py" startline="121">sensors.DHT22.H</references>
+        <references refid="classsensors_1_1DHT22_1a9055341fda2f3628ef888a39254d1c83" compoundref="sensors_8py" startline="122">sensors.DHT22.unitH</references>
+        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="91">sensors.DS18B20.T</references>
+        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="123">sensors.DHT22.T</references>
+        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="92">sensors.DS18B20.unitT</references>
+        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="124">sensors.DHT22.unitT</references>
+        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="125">sensors.DHT22.err</references>
       </memberdef>
       <memberdef kind="function" id="classsensors_1_1DHT22_1a5c20cdc8c8168efe52e9ce3ce0c3e819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -176,15 +176,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="170" column="1" bodyfile="Python/sensors.py" bodystart="170" bodyend="171"/>
+        <location file="Python/sensors.py" line="139" column="1" bodyfile="Python/sensors.py" bodystart="139" bodyend="140"/>
         <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
-        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="122">sensors.DS18B20.T</references>
-        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="154">sensors.DHT22.T</references>
-        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="123">sensors.DS18B20.unitT</references>
-        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="155">sensors.DHT22.unitT</references>
-        <references refid="classsensors_1_1DHT22_1a0f53e4181f2b2008ffe099a22631a617" compoundref="sensors_8py" startline="152">sensors.DHT22.H</references>
-        <references refid="classsensors_1_1DHT22_1a9055341fda2f3628ef888a39254d1c83" compoundref="sensors_8py" startline="153">sensors.DHT22.unitH</references>
-        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="156">sensors.DHT22.err</references>
+        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="91">sensors.DS18B20.T</references>
+        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="123">sensors.DHT22.T</references>
+        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="92">sensors.DS18B20.unitT</references>
+        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="124">sensors.DHT22.unitT</references>
+        <references refid="classsensors_1_1DHT22_1a0f53e4181f2b2008ffe099a22631a617" compoundref="sensors_8py" startline="121">sensors.DHT22.H</references>
+        <references refid="classsensors_1_1DHT22_1a9055341fda2f3628ef888a39254d1c83" compoundref="sensors_8py" startline="122">sensors.DHT22.unitH</references>
+        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="125">sensors.DHT22.err</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -192,30 +192,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="65">
+      <node id="69">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
       </node>
-      <node id="64">
+      <node id="68">
         <label>sensors.DHT22</label>
         <link refid="classsensors_1_1DHT22"/>
-        <childnode refid="65" relation="public-inheritance">
+        <childnode refid="69" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="67">
+      <node id="71">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
       </node>
-      <node id="66">
+      <node id="70">
         <label>sensors.DHT22</label>
         <link refid="classsensors_1_1DHT22"/>
-        <childnode refid="67" relation="public-inheritance">
+        <childnode refid="71" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Python/sensors.py" line="149" column="1" bodyfile="Python/sensors.py" bodystart="149" bodyend="173"/>
+    <location file="Python/sensors.py" line="118" column="1" bodyfile="Python/sensors.py" bodystart="118" bodyend="142"/>
     <listofallmembers>
       <member refid="classsensors_1_1DHT22_1a5958701fe5dfdaf901c03926ca5ffc33" prot="public" virt="non-virtual"><scope>sensors::DHT22</scope><name>__init__</name></member>
       <member refid="classsensors_1_1DHT22_1a5c20cdc8c8168efe52e9ce3ce0c3e819" prot="public" virt="non-virtual"><scope>sensors::DHT22</scope><name>__str__</name></member>

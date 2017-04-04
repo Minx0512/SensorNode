@@ -10,8 +10,8 @@ var searchData=
   ['disablecrc',['disableCRC',['../classNRF24L01.html#a1e997f3c946acdbe8bd622e431f80034',1,'NRF24L01']]],
   ['disabledynamicpayloads',['disableDynamicPayloads',['../classNRF24L01.html#abf6bf0c18b2b12674cfbc150a2bdb778',1,'NRF24L01']]],
   ['ds',['ds',['../main_8cpp.html#af23d3ee921f59b64f27b4581ba32eba7',1,'main.cpp']]],
-  ['ds18b20',['DS18B20',['../classDS18B20.html',1,'DS18B20'],['../classDS18B20.html#afc1a4166a4d1d00baef15a9e4c59b632',1,'DS18B20::DS18B20()'],['../classDS18B20.html#afb0ce114e04bc699bc2e3c5282a31bc3',1,'DS18B20::DS18B20(volatile uint8_t &amp;Wire_PORT, volatile uint8_t &amp;Wire_DDR, volatile uint8_t &amp;Wire_PIN, uint8_t Wire_DQ)']]],
   ['ds18b20',['DS18B20',['../classsensors_1_1DS18B20.html',1,'sensors']]],
+  ['ds18b20',['DS18B20',['../classDS18B20.html',1,'DS18B20'],['../classDS18B20.html#afc1a4166a4d1d00baef15a9e4c59b632',1,'DS18B20::DS18B20()'],['../classDS18B20.html#afb0ce114e04bc699bc2e3c5282a31bc3',1,'DS18B20::DS18B20(volatile uint8_t &amp;Wire_PORT, volatile uint8_t &amp;Wire_DDR, volatile uint8_t &amp;Wire_PIN, uint8_t Wire_DQ)']]],
   ['ds18b20_2ecpp',['DS18B20.cpp',['../DS18B20_8cpp.html',1,'']]],
   ['ds18b20_2eh',['DS18B20.h',['../DS18B20_8h.html',1,'']]],
   ['dynamic_5fpayloads_5fenabled',['dynamic_payloads_enabled',['../classNRF24L01.html#ae319d1b6a3d950888d2608cc69efb07c',1,'NRF24L01']]]

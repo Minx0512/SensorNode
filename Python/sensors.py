@@ -82,43 +82,7 @@ class Sensors(readsensor.ReadSensor):
        bmp.InterpretResponse() 
        self.sensorObjList.append(bmp) 
        #print(bmp)
-       
-      
-       
-          
-          
-          
-          
-          
-          
-          
-          
-            
-        
-#   def spawnSensors(self, nodeAdress):
-#      print ("#######################\r\nAddress: {0}\r\n#######################".format(nodeAdress))   
-#      sensrs = []
-#      availableSensors = self.GetAvailableSensors(nodeAdress).sens
-#      print ("# Sensors: {0}".format(availableSensors))  
-#      for s in availableSensors:
-#       if s == self.cmdIDs[1]:
-#        mv = self.Movement(nodeAdress)
-#        sensrs.append(mv)
-#        print ("# Mv: {0}".format(mv.move))
-#    
-#       elif  s == self.cmdIDs[3]:
-#        light = self.LightAnalog(nodeAdress)
-#        print ("# Light: {0}".format(light.value))
-#        sensrs.append(light)
-#       elif s == self.cmdIDs[5]:
-#        ds = self.DS18B20(nodeAdress)   
-#        sensrs.append(ds)
-#        print ("# DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
-# 
-#      return sensrs
-#      
-#          
- 
+
  
 class DS18B20(readsensor.ReadSensor):
     def __init__(self,prt,bdrate):

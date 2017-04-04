@@ -73,7 +73,6 @@
         </inbodydescription>
         <location file="src/IO/USART.h" line="94" column="1" bodyfile="src/IO/USART.cpp" bodystart="40" bodyend="44"/>
         <references refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" compoundref="USART_8h" startline="66">_BAUD</references>
-        <references refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" compoundref="SensorNode_8py" startline="18">SensorNode.baudrate</references>
         <references refid="classUSART_1acbd19517b595cf04ff087e040270904f" compoundref="USART_8h" startline="72">_UBRR</references>
         <references refid="USART_8h_1a802b2b582b121e4632aa9a491d503720" compoundref="USART_8h" startline="45">FOSC</references>
       </memberdef>
