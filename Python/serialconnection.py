@@ -34,7 +34,7 @@ class SerialConnection:
        self.ser.flushOutput()#flush output buffer, aborting current output
        self.ser.write("{0}\r\n".format(queryStr).encode())
        #print("write data: {0}".format(queryStr))
-       time.sleep(0.125)
+       time.sleep(0.05)
        #numberOfLine = 0
        # while True:
        resp = self.ser.read_until("+end").decode('unicode-escape')

@@ -23,7 +23,7 @@ class Thread(threading.Thread):
 count = 0
 lock = threading.Lock()
 thr = []
-stp = 0
+
    
 def UpdateThreads(sensorObj):
   """  """    
