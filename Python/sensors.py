@@ -120,7 +120,7 @@ class DS18B20(readsensor.ReadSensor):
      if self.numEl>0: 
       return round(avrgTemp/self.numEl,3)     
      else: 
-      return null
+      return 0.0
       
       
     def __str__(self):
