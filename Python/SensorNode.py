@@ -9,6 +9,11 @@ import sensors
 import termios
 
 
+
+def GetTimeString():
+  return time.strftime("%B %d, %Y @ %I:%M:%S %p  ",time.localtime())
+   
+
 class Thread(threading.Thread):
     def __init__(self, t, *args):
         threading.Thread.__init__(self, target=t, args=args)
@@ -38,7 +43,7 @@ def UpdateThreads(sensorObj):
       
     else:
      # \todo :  write function for transmit value to openhab REST API 
-     print(sensorObj)
+     print ("{0} : {1}".format(GetTimeString(),sensorObj))
      for i in range(0,sensorObj.updateTime):
       time.sleep(1)
       if sensorObj.signal==0:
