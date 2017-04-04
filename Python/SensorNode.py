@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 
 
-#import os
-#import sys
-#import thread
-#import time
-
+import os
+import sys
+import thread
+import time
 import sys
 
 
@@ -16,12 +15,33 @@ class SensorNode:
  
      main code to execute
  
- """   
+ """
   
+ threadLock = thread.allocate_lock()
  nodeAddresses = ["A0:A0:A0:A0:A0"]
-#threadLock = thread.allocate_lock()
  port = "/dev/ttyAMA0"
  baudrate = 9600
+    
+ def UpdateThreads(self,sensorObj):
+  """  """    
+  
+  while 1:
+   threadLock.acquire()
+   
+   sensorObj.Update()
+   threadLock.release()
+   sensorObj.InterpretResponse()
+       
+   if sensorObj.err is not 0:    
+    sleep(5)
+   else:
+    # \todo :  write function for transmit value to openhab REST API 
+    print(sensorObj)  
+    sleep(sensorObj.updateTime)   
+         
+
+  
+
 
 
 
@@ -37,9 +57,10 @@ class SensorNode:
 
  
  for sob in sens.sensorObjList:
-  sob.Update()
-  sob.InterpretResponse()
-  print (sob)
+  thread.start_new_thread(UpdateThreads,(sensorObj))   
+  #sob.Update()
+  #sob.InterpretResponse()
+  #print (sob)
 
 
 

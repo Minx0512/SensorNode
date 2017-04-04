@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="31" column="1" bodyfile="Python/readsensor.py" bodystart="31" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="33" column="1" bodyfile="Python/readsensor.py" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -65,6 +65,32 @@
         </inbodydescription>
         <location file="Python/readsensor.py" line="14" column="1" bodyfile="Python/readsensor.py" bodystart="14" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1adb42967437e88c29257d8fa7e6dcd8e2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>readsensor.ReadSensor::updateTime</definition>
+        <argsstring></argsstring>
+        <name>updateTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/readsensor.py" line="15" column="1" bodyfile="Python/readsensor.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1abea3837d8a334bcd560117be3468e555" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>readsensor.ReadSensor::err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/readsensor.py" line="16" column="1" bodyfile="Python/readsensor.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1a3f1a8b0a95d14b00ceeb4a1d90db4146" prot="public" static="no" mutable="no">
         <type></type>
         <definition>readsensor.ReadSensor::cmdID</definition>
@@ -76,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="15" column="1" bodyfile="Python/readsensor.py" bodystart="15" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="17" column="1" bodyfile="Python/readsensor.py" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1a260848062ae91ce183d5b8a7bb4336a9" prot="public" static="no" mutable="no">
         <type></type>
@@ -89,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="16" column="1" bodyfile="Python/readsensor.py" bodystart="16" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="18" column="1" bodyfile="Python/readsensor.py" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1ac90ad89a36244ff79ec5de39250dbe65" prot="public" static="no" mutable="no">
         <type></type>
@@ -102,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="17" column="1" bodyfile="Python/readsensor.py" bodystart="17" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="19" column="1" bodyfile="Python/readsensor.py" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1ab85a47186a692e87ed91dfbd6421ac9f" prot="public" static="no" mutable="no">
         <type></type>
@@ -115,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="18" column="1" bodyfile="Python/readsensor.py" bodystart="18" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="20" column="1" bodyfile="Python/readsensor.py" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1a3bfdf8d80b9b2c6e3756546f66684543" prot="public" static="no" mutable="no">
         <type></type>
@@ -128,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="19" column="1" bodyfile="Python/readsensor.py" bodystart="19" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="21" column="1" bodyfile="Python/readsensor.py" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1a2add837e5b36f9242b3481f30be5ace9" prot="public" static="no" mutable="no">
         <type></type>
@@ -141,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="20" column="1" bodyfile="Python/readsensor.py" bodystart="20" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="22" column="1" bodyfile="Python/readsensor.py" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" prot="public" static="no" mutable="no">
         <type></type>
@@ -154,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="21" column="1" bodyfile="Python/readsensor.py" bodystart="21" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="23" column="1" bodyfile="Python/readsensor.py" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1ae04c9a7ad4cb4a0c68225cea810f9edd" prot="public" static="no" mutable="no">
         <type></type>
@@ -167,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="22" column="1" bodyfile="Python/readsensor.py" bodystart="22" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="24" column="1" bodyfile="Python/readsensor.py" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classreadsensor_1_1ReadSensor_1ab313380d075409d1fccdd2b47c958cc9" prot="public" static="no" mutable="no">
         <type></type>
@@ -180,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="23" column="1" bodyfile="Python/readsensor.py" bodystart="23" bodyend="-1"/>
+        <location file="Python/readsensor.py" line="25" column="1" bodyfile="Python/readsensor.py" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -207,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="11" column="1" bodyfile="Python/readsensor.py" bodystart="11" bodyend="26"/>
+        <location file="Python/readsensor.py" line="11" column="1" bodyfile="Python/readsensor.py" bodystart="11" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="classreadsensor_1_1ReadSensor_1af42ab8caf111db6f14d49cbcfad445c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -224,7 +250,7 @@
 <para><verbatim>Interpret response list </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="27" column="1" bodyfile="Python/readsensor.py" bodystart="27" bodyend="30"/>
+        <location file="Python/readsensor.py" line="29" column="1" bodyfile="Python/readsensor.py" bodystart="29" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="classreadsensor_1_1ReadSensor_1a9eec15e8b601b447851376a2341cbe6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -241,14 +267,14 @@
 <para><verbatim>Make new query </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="33" column="1" bodyfile="Python/readsensor.py" bodystart="33" bodyend="40"/>
+        <location file="Python/readsensor.py" line="35" column="1" bodyfile="Python/readsensor.py" bodystart="35" bodyend="42"/>
         <references refid="classParseStrings_1a861e286994be25fad33c18c9be18ed12" compoundref="ParseStrings_8h" startline="41">ParseStrings::cmdID</references>
-        <references refid="classreadsensor_1_1ReadSensor_1a3f1a8b0a95d14b00ceeb4a1d90db4146" compoundref="readsensor_8py" startline="15">readsensor.ReadSensor.cmdID</references>
+        <references refid="classreadsensor_1_1ReadSensor_1a3f1a8b0a95d14b00ceeb4a1d90db4146" compoundref="readsensor_8py" startline="17">readsensor.ReadSensor.cmdID</references>
         <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
         <references refid="classParseStrings_1a89114cea60b7a37e80c799cec5bcd03d" compoundref="ParseStrings_8h" startline="59">ParseStrings::pString</references>
-        <references refid="classreadsensor_1_1ReadSensor_1a260848062ae91ce183d5b8a7bb4336a9" compoundref="readsensor_8py" startline="16">readsensor.ReadSensor.pString</references>
-        <references refid="classreadsensor_1_1ReadSensor_1a3bfdf8d80b9b2c6e3756546f66684543" compoundref="readsensor_8py" startline="19">readsensor.ReadSensor.resp</references>
-        <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="21">readsensor.ReadSensor.interpResp</references>
+        <references refid="classreadsensor_1_1ReadSensor_1a260848062ae91ce183d5b8a7bb4336a9" compoundref="readsensor_8py" startline="18">readsensor.ReadSensor.pString</references>
+        <references refid="classreadsensor_1_1ReadSensor_1a3bfdf8d80b9b2c6e3756546f66684543" compoundref="readsensor_8py" startline="21">readsensor.ReadSensor.resp</references>
+        <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="23">readsensor.ReadSensor.interpResp</references>
       </memberdef>
       <memberdef kind="function" id="classreadsensor_1_1ReadSensor_1a23c251ae6bc0343f275e12199c35e0d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -269,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="41" column="1" bodyfile="Python/readsensor.py" bodystart="41" bodyend="43"/>
+        <location file="Python/readsensor.py" line="43" column="1" bodyfile="Python/readsensor.py" bodystart="43" bodyend="45"/>
         <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
       </memberdef>
       <memberdef kind="function" id="classreadsensor_1_1ReadSensor_1a52daa7fe6c6dba66b99d11a3c01567ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -287,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/readsensor.py" line="44" column="1" bodyfile="Python/readsensor.py" bodystart="44" bodyend="48"/>
+        <location file="Python/readsensor.py" line="46" column="1" bodyfile="Python/readsensor.py" bodystart="46" bodyend="50"/>
         <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
       </memberdef>
       </sectiondef>
@@ -343,7 +369,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="Python/readsensor.py" line="9" column="1" bodyfile="Python/readsensor.py" bodystart="9" bodyend="48"/>
+    <location file="Python/readsensor.py" line="9" column="1" bodyfile="Python/readsensor.py" bodystart="9" bodyend="50"/>
     <listofallmembers>
       <member refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>__init__</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a26862f7f2d34ceb3201cfeb7339dd21b" prot="private" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>__InterpretResponse</name></member>
@@ -352,6 +378,7 @@
       <member refid="classreadsensor_1_1ReadSensor_1a55ad7cd6f26347c571cdc03025d52449" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>baudrate</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a3f1a8b0a95d14b00ceeb4a1d90db4146" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>cmdID</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1ab313380d075409d1fccdd2b47c958cc9" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>cmdIDs</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1abea3837d8a334bcd560117be3468e555" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>err</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>interpResp</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1af42ab8caf111db6f14d49cbcfad445c3" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>InterpretResponse</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>nodeMAC</name></member>
@@ -363,6 +390,7 @@
       <member refid="classreadsensor_1_1ReadSensor_1ab85a47186a692e87ed91dfbd6421ac9f" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>serialCon</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a23c251ae6bc0343f275e12199c35e0d2" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>SetNodeAddress</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a9eec15e8b601b447851376a2341cbe6e" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>Update</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1adb42967437e88c29257d8fa7e6dcd8e2" prot="public" virt="non-virtual"><scope>readsensor::ReadSensor</scope><name>updateTime</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

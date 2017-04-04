@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="163" column="1" bodyfile="Python/sensors.py" bodystart="163" bodyend="-1"/>
+        <location file="Python/sensors.py" line="170" column="1" bodyfile="Python/sensors.py" bodystart="170" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1LightAnalog_1a010099d4873d2f96962dcdf6719364eb" prot="public" static="no" mutable="no">
         <type></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="164" column="1" bodyfile="Python/sensors.py" bodystart="164" bodyend="-1"/>
+        <location file="Python/sensors.py" line="171" column="1" bodyfile="Python/sensors.py" bodystart="171" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1LightAnalog_1ac10be263c620f3d2250f6f938d4a8742" prot="public" static="no" mutable="no">
         <type></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="165" column="1" bodyfile="Python/sensors.py" bodystart="165" bodyend="-1"/>
+        <location file="Python/sensors.py" line="172" column="1" bodyfile="Python/sensors.py" bodystart="172" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1LightAnalog_1ab478dfaacbcb2388fa2ed06394c2cb81" prot="public" static="no" mutable="no">
         <type></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="166" column="1" bodyfile="Python/sensors.py" bodystart="166" bodyend="-1"/>
+        <location file="Python/sensors.py" line="173" column="1" bodyfile="Python/sensors.py" bodystart="173" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1LightAnalog_1a6c8c998239ae4b79136e58252c631717" prot="public" static="no" mutable="no">
         <type></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="167" column="1" bodyfile="Python/sensors.py" bodystart="167" bodyend="-1"/>
+        <location file="Python/sensors.py" line="174" column="1" bodyfile="Python/sensors.py" bodystart="174" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -94,8 +94,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="161" column="1" bodyfile="Python/sensors.py" bodystart="161" bodyend="168"/>
-        <references refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" compoundref="readsensor_8py" startline="11" endline="26">readsensor.ReadSensor.__init__</references>
+        <location file="Python/sensors.py" line="168" column="1" bodyfile="Python/sensors.py" bodystart="168" bodyend="175"/>
+        <references refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" compoundref="readsensor_8py" startline="11" endline="28">readsensor.ReadSensor.__init__</references>
       </memberdef>
       <memberdef kind="function" id="classsensors_1_1LightAnalog_1acdc03ffb833d9f66e64261e1c6414e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -112,9 +112,9 @@
 <para><verbatim>Interpret response list </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="169" column="1" bodyfile="Python/sensors.py" bodystart="169" bodyend="172"/>
-        <references refid="classsensors_1_1LightAnalog_1ab1748d35da94bc8da0afead5bded8986" compoundref="sensors_8py" startline="163">sensors.LightAnalog.value</references>
-        <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="21">readsensor.ReadSensor.interpResp</references>
+        <location file="Python/sensors.py" line="176" column="1" bodyfile="Python/sensors.py" bodystart="176" bodyend="179"/>
+        <references refid="classsensors_1_1LightAnalog_1ab1748d35da94bc8da0afead5bded8986" compoundref="sensors_8py" startline="170">sensors.LightAnalog.value</references>
+        <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="23">readsensor.ReadSensor.interpResp</references>
       </memberdef>
       <memberdef kind="function" id="classsensors_1_1LightAnalog_1a9fbb4a2fd317e5229302b5d146204e43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -131,9 +131,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="173" column="1" bodyfile="Python/sensors.py" bodystart="173" bodyend="176"/>
+        <location file="Python/sensors.py" line="180" column="1" bodyfile="Python/sensors.py" bodystart="180" bodyend="183"/>
         <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
-        <references refid="classsensors_1_1LightAnalog_1ab1748d35da94bc8da0afead5bded8986" compoundref="sensors_8py" startline="163">sensors.LightAnalog.value</references>
+        <references refid="classsensors_1_1LightAnalog_1ab1748d35da94bc8da0afead5bded8986" compoundref="sensors_8py" startline="170">sensors.LightAnalog.value</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -164,7 +164,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Python/sensors.py" line="160" column="1" bodyfile="Python/sensors.py" bodystart="160" bodyend="177"/>
+    <location file="Python/sensors.py" line="167" column="1" bodyfile="Python/sensors.py" bodystart="167" bodyend="184"/>
     <listofallmembers>
       <member refid="classsensors_1_1LightAnalog_1a40c88addc7882f729ce0e3564f9096a3" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>__init__</name></member>
       <member refid="classsensors_1_1LightAnalog_1a9fbb4a2fd317e5229302b5d146204e43" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>__str__</name></member>
@@ -172,6 +172,7 @@
       <member refid="classreadsensor_1_1ReadSensor_1a55ad7cd6f26347c571cdc03025d52449" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>baudrate</name></member>
       <member refid="classsensors_1_1LightAnalog_1ac10be263c620f3d2250f6f938d4a8742" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>cmdID</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1ab313380d075409d1fccdd2b47c958cc9" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>cmdIDs</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1abea3837d8a334bcd560117be3468e555" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>err</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>interpResp</name></member>
       <member refid="classsensors_1_1LightAnalog_1acdc03ffb833d9f66e64261e1c6414e88" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>InterpretResponse</name></member>
       <member refid="classsensors_1_1LightAnalog_1a010099d4873d2f96962dcdf6719364eb" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>nodeMAC</name></member>
@@ -183,6 +184,7 @@
       <member refid="classreadsensor_1_1ReadSensor_1ab85a47186a692e87ed91dfbd6421ac9f" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>serialCon</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a23c251ae6bc0343f275e12199c35e0d2" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>SetNodeAddress</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a9eec15e8b601b447851376a2341cbe6e" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>Update</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1adb42967437e88c29257d8fa7e6dcd8e2" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>updateTime</name></member>
       <member refid="classsensors_1_1LightAnalog_1ab1748d35da94bc8da0afead5bded8986" prot="public" virt="non-virtual"><scope>sensors::LightAnalog</scope><name>value</name></member>
     </listofallmembers>
   </compounddef>

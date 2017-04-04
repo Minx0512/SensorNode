@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="197" column="1" bodyfile="Python/sensors.py" bodystart="197" bodyend="-1"/>
+        <location file="Python/sensors.py" line="204" column="1" bodyfile="Python/sensors.py" bodystart="204" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" prot="public" static="no" mutable="no">
         <type></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="198" column="1" bodyfile="Python/sensors.py" bodystart="198" bodyend="-1"/>
+        <location file="Python/sensors.py" line="205" column="1" bodyfile="Python/sensors.py" bodystart="205" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" prot="public" static="no" mutable="no">
         <type></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="199" column="1" bodyfile="Python/sensors.py" bodystart="199" bodyend="-1"/>
+        <location file="Python/sensors.py" line="206" column="1" bodyfile="Python/sensors.py" bodystart="206" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" prot="public" static="no" mutable="no">
         <type></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="200" column="1" bodyfile="Python/sensors.py" bodystart="200" bodyend="-1"/>
+        <location file="Python/sensors.py" line="207" column="1" bodyfile="Python/sensors.py" bodystart="207" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" prot="public" static="no" mutable="no">
         <type></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="201" column="1" bodyfile="Python/sensors.py" bodystart="201" bodyend="-1"/>
+        <location file="Python/sensors.py" line="208" column="1" bodyfile="Python/sensors.py" bodystart="208" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1BMP180_1ad3ff4c7dc983b1debdb38f9c660f55b9" prot="public" static="no" mutable="no">
         <type></type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="202" column="1" bodyfile="Python/sensors.py" bodystart="202" bodyend="-1"/>
+        <location file="Python/sensors.py" line="209" column="1" bodyfile="Python/sensors.py" bodystart="209" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1BMP180_1a9ab7d3dda10fdc56600acf177bb044d2" prot="public" static="no" mutable="no">
         <type></type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="203" column="1" bodyfile="Python/sensors.py" bodystart="203" bodyend="-1"/>
+        <location file="Python/sensors.py" line="210" column="1" bodyfile="Python/sensors.py" bodystart="210" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1BMP180_1a8af1eb779b2df113b788bac02d48a592" prot="public" static="no" mutable="no">
         <type></type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="204" column="1" bodyfile="Python/sensors.py" bodystart="204" bodyend="-1"/>
+        <location file="Python/sensors.py" line="211" column="1" bodyfile="Python/sensors.py" bodystart="211" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1BMP180_1a9c885621176fba2aa3760f16e7545fd7" prot="public" static="no" mutable="no">
         <type></type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="205" column="1" bodyfile="Python/sensors.py" bodystart="205" bodyend="-1"/>
+        <location file="Python/sensors.py" line="212" column="1" bodyfile="Python/sensors.py" bodystart="212" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -146,8 +146,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="195" column="1" bodyfile="Python/sensors.py" bodystart="195" bodyend="207"/>
-        <references refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" compoundref="readsensor_8py" startline="11" endline="26">readsensor.ReadSensor.__init__</references>
+        <location file="Python/sensors.py" line="202" column="1" bodyfile="Python/sensors.py" bodystart="202" bodyend="214"/>
+        <references refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" compoundref="readsensor_8py" startline="11" endline="28">readsensor.ReadSensor.__init__</references>
       </memberdef>
       <memberdef kind="function" id="classsensors_1_1BMP180_1ad249a90be7cff513ac5a9851a9968403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -164,18 +164,17 @@
 <para><verbatim>Interpret response list </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="208" column="1" bodyfile="Python/sensors.py" bodystart="208" bodyend="215"/>
-        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="91">sensors.DS18B20.T</references>
-        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="123">sensors.DHT22.T</references>
-        <references refid="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" compoundref="sensors_8py" startline="199">sensors.BMP180.T</references>
-        <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="21">readsensor.ReadSensor.interpResp</references>
-        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="92">sensors.DS18B20.unitT</references>
-        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="124">sensors.DHT22.unitT</references>
-        <references refid="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" compoundref="sensors_8py" startline="200">sensors.BMP180.unitT</references>
-        <references refid="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" compoundref="sensors_8py" startline="197">sensors.BMP180.P</references>
-        <references refid="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" compoundref="sensors_8py" startline="198">sensors.BMP180.unitP</references>
-        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="125">sensors.DHT22.err</references>
-        <references refid="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" compoundref="sensors_8py" startline="201">sensors.BMP180.err</references>
+        <location file="Python/sensors.py" line="215" column="1" bodyfile="Python/sensors.py" bodystart="215" bodyend="222"/>
+        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="98">sensors.DS18B20.T</references>
+        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="130">sensors.DHT22.T</references>
+        <references refid="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" compoundref="sensors_8py" startline="206">sensors.BMP180.T</references>
+        <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="23">readsensor.ReadSensor.interpResp</references>
+        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="99">sensors.DS18B20.unitT</references>
+        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="131">sensors.DHT22.unitT</references>
+        <references refid="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" compoundref="sensors_8py" startline="207">sensors.BMP180.unitT</references>
+        <references refid="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" compoundref="sensors_8py" startline="204">sensors.BMP180.P</references>
+        <references refid="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" compoundref="sensors_8py" startline="205">sensors.BMP180.unitP</references>
+        <references refid="classreadsensor_1_1ReadSensor_1abea3837d8a334bcd560117be3468e555" compoundref="readsensor_8py" startline="16">readsensor.ReadSensor.err</references>
       </memberdef>
       <memberdef kind="function" id="classsensors_1_1BMP180_1a5f5a28a84b1e4aac10f9ce814730c9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -192,18 +191,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="216" column="1" bodyfile="Python/sensors.py" bodystart="216" bodyend="225"/>
+        <location file="Python/sensors.py" line="223" column="1" bodyfile="Python/sensors.py" bodystart="223" bodyend="232"/>
         <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
-        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="91">sensors.DS18B20.T</references>
-        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="123">sensors.DHT22.T</references>
-        <references refid="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" compoundref="sensors_8py" startline="199">sensors.BMP180.T</references>
-        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="92">sensors.DS18B20.unitT</references>
-        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="124">sensors.DHT22.unitT</references>
-        <references refid="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" compoundref="sensors_8py" startline="200">sensors.BMP180.unitT</references>
-        <references refid="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" compoundref="sensors_8py" startline="197">sensors.BMP180.P</references>
-        <references refid="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" compoundref="sensors_8py" startline="198">sensors.BMP180.unitP</references>
-        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="125">sensors.DHT22.err</references>
-        <references refid="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" compoundref="sensors_8py" startline="201">sensors.BMP180.err</references>
+        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="98">sensors.DS18B20.T</references>
+        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="130">sensors.DHT22.T</references>
+        <references refid="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" compoundref="sensors_8py" startline="206">sensors.BMP180.T</references>
+        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="99">sensors.DS18B20.unitT</references>
+        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="131">sensors.DHT22.unitT</references>
+        <references refid="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" compoundref="sensors_8py" startline="207">sensors.BMP180.unitT</references>
+        <references refid="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" compoundref="sensors_8py" startline="204">sensors.BMP180.P</references>
+        <references refid="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" compoundref="sensors_8py" startline="205">sensors.BMP180.unitP</references>
+        <references refid="classreadsensor_1_1ReadSensor_1abea3837d8a334bcd560117be3468e555" compoundref="readsensor_8py" startline="16">readsensor.ReadSensor.err</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -234,7 +232,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Python/sensors.py" line="194" column="1" bodyfile="Python/sensors.py" bodystart="194" bodyend="225"/>
+    <location file="Python/sensors.py" line="201" column="1" bodyfile="Python/sensors.py" bodystart="201" bodyend="232"/>
     <listofallmembers>
       <member refid="classsensors_1_1BMP180_1a4818f2b88b0969dc27a026b901564035" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>__init__</name></member>
       <member refid="classsensors_1_1BMP180_1a5f5a28a84b1e4aac10f9ce814730c9b4" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>__str__</name></member>
@@ -258,6 +256,7 @@
       <member refid="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>unitP</name></member>
       <member refid="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>unitT</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a9eec15e8b601b447851376a2341cbe6e" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>Update</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1adb42967437e88c29257d8fa7e6dcd8e2" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>updateTime</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

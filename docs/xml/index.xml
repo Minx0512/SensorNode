@@ -260,6 +260,8 @@
     <member refid="classreadsensor_1_1ReadSensor_1aa5479d51839a34226df007973db5b28a" kind="variable"><name>port</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1a55ad7cd6f26347c571cdc03025d52449" kind="variable"><name>baudrate</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" kind="variable"><name>nodeMAC</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1adb42967437e88c29257d8fa7e6dcd8e2" kind="variable"><name>updateTime</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1abea3837d8a334bcd560117be3468e555" kind="variable"><name>err</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1a3f1a8b0a95d14b00ceeb4a1d90db4146" kind="variable"><name>cmdID</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1a260848062ae91ce183d5b8a7bb4336a9" kind="variable"><name>pString</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1ac90ad89a36244ff79ec5de39250dbe65" kind="variable"><name>queryStr</name></member>
@@ -276,10 +278,12 @@
     <member refid="classreadsensor_1_1ReadSensor_1a52daa7fe6c6dba66b99d11a3c01567ba" kind="function"><name>__str__</name></member>
   </compound>
   <compound refid="classSensorNode_1_1SensorNode" kind="class"><name>SensorNode::SensorNode</name>
+    <member refid="classSensorNode_1_1SensorNode_1a6453b42daae16cdc043bea6825374162" kind="variable"><name>threadLock</name></member>
     <member refid="classSensorNode_1_1SensorNode_1a17be4a277b9bfdd041ec006b462d497c" kind="variable"><name>nodeAddresses</name></member>
     <member refid="classSensorNode_1_1SensorNode_1a94712cd1b0bf09fa4cd3de94ca666575" kind="variable"><name>port</name></member>
     <member refid="classSensorNode_1_1SensorNode_1a68f7a87f1d03a2734f3f6505f801a92e" kind="variable"><name>baudrate</name></member>
     <member refid="classSensorNode_1_1SensorNode_1ad8aec254c15c97a8b5c709480f31b2bb" kind="variable"><name>sens</name></member>
+    <member refid="classSensorNode_1_1SensorNode_1ad1e6d287c777ea31608f7b81e0023c60" kind="function"><name>UpdateThreads</name></member>
   </compound>
   <compound refid="classsensors_1_1Sensors" kind="class"><name>sensors::Sensors</name>
     <member refid="classsensors_1_1Sensors_1a70cd97f59cdb39f1f02260551d7e5ea5" kind="variable"><name>sensorList</name></member>

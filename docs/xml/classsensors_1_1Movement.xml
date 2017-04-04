@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="145" column="1" bodyfile="Python/sensors.py" bodystart="145" bodyend="-1"/>
+        <location file="Python/sensors.py" line="152" column="1" bodyfile="Python/sensors.py" bodystart="152" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1Movement_1abf7c369726a2aacb0e03accdbdcfca14" prot="public" static="no" mutable="no">
         <type></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="146" column="1" bodyfile="Python/sensors.py" bodystart="146" bodyend="-1"/>
+        <location file="Python/sensors.py" line="153" column="1" bodyfile="Python/sensors.py" bodystart="153" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1Movement_1abce1eee54738c84ae71c778a4fed1af8" prot="public" static="no" mutable="no">
         <type></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="147" column="1" bodyfile="Python/sensors.py" bodystart="147" bodyend="-1"/>
+        <location file="Python/sensors.py" line="154" column="1" bodyfile="Python/sensors.py" bodystart="154" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1Movement_1a630da6fa554c8a0d816067d804c02baa" prot="public" static="no" mutable="no">
         <type></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="148" column="1" bodyfile="Python/sensors.py" bodystart="148" bodyend="-1"/>
+        <location file="Python/sensors.py" line="155" column="1" bodyfile="Python/sensors.py" bodystart="155" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classsensors_1_1Movement_1a4f97ac0c0891b427c241df101d7b36ee" prot="public" static="no" mutable="no">
         <type></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="149" column="1" bodyfile="Python/sensors.py" bodystart="149" bodyend="-1"/>
+        <location file="Python/sensors.py" line="156" column="1" bodyfile="Python/sensors.py" bodystart="156" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -94,8 +94,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="143" column="1" bodyfile="Python/sensors.py" bodystart="143" bodyend="150"/>
-        <references refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" compoundref="readsensor_8py" startline="11" endline="26">readsensor.ReadSensor.__init__</references>
+        <location file="Python/sensors.py" line="150" column="1" bodyfile="Python/sensors.py" bodystart="150" bodyend="157"/>
+        <references refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" compoundref="readsensor_8py" startline="11" endline="28">readsensor.ReadSensor.__init__</references>
       </memberdef>
       <memberdef kind="function" id="classsensors_1_1Movement_1a7cffcbdac3bee2a004fcf51366dbd0d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -112,9 +112,9 @@
 <para><verbatim>Interpret response list </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="151" column="1" bodyfile="Python/sensors.py" bodystart="151" bodyend="154"/>
-        <references refid="classsensors_1_1Movement_1a11256fb90a76350e4b908a71c72d1e99" compoundref="sensors_8py" startline="145">sensors.Movement.move</references>
-        <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="21">readsensor.ReadSensor.interpResp</references>
+        <location file="Python/sensors.py" line="158" column="1" bodyfile="Python/sensors.py" bodystart="158" bodyend="161"/>
+        <references refid="classsensors_1_1Movement_1a11256fb90a76350e4b908a71c72d1e99" compoundref="sensors_8py" startline="152">sensors.Movement.move</references>
+        <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="23">readsensor.ReadSensor.interpResp</references>
       </memberdef>
       <memberdef kind="function" id="classsensors_1_1Movement_1a9f28937de14135f50dd263d05834a535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -131,9 +131,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/sensors.py" line="155" column="1" bodyfile="Python/sensors.py" bodystart="155" bodyend="158"/>
+        <location file="Python/sensors.py" line="162" column="1" bodyfile="Python/sensors.py" bodystart="162" bodyend="165"/>
         <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
-        <references refid="classsensors_1_1Movement_1a11256fb90a76350e4b908a71c72d1e99" compoundref="sensors_8py" startline="145">sensors.Movement.move</references>
+        <references refid="classsensors_1_1Movement_1a11256fb90a76350e4b908a71c72d1e99" compoundref="sensors_8py" startline="152">sensors.Movement.move</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -164,7 +164,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Python/sensors.py" line="142" column="1" bodyfile="Python/sensors.py" bodystart="142" bodyend="160"/>
+    <location file="Python/sensors.py" line="149" column="1" bodyfile="Python/sensors.py" bodystart="149" bodyend="167"/>
     <listofallmembers>
       <member refid="classsensors_1_1Movement_1a7299348056ba424f565ffe433008411d" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>__init__</name></member>
       <member refid="classsensors_1_1Movement_1a9f28937de14135f50dd263d05834a535" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>__str__</name></member>
@@ -172,6 +172,7 @@
       <member refid="classreadsensor_1_1ReadSensor_1a55ad7cd6f26347c571cdc03025d52449" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>baudrate</name></member>
       <member refid="classsensors_1_1Movement_1abce1eee54738c84ae71c778a4fed1af8" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>cmdID</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1ab313380d075409d1fccdd2b47c958cc9" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>cmdIDs</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1abea3837d8a334bcd560117be3468e555" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>err</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>interpResp</name></member>
       <member refid="classsensors_1_1Movement_1a7cffcbdac3bee2a004fcf51366dbd0d1" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>InterpretResponse</name></member>
       <member refid="classsensors_1_1Movement_1a11256fb90a76350e4b908a71c72d1e99" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>move</name></member>
@@ -184,6 +185,7 @@
       <member refid="classreadsensor_1_1ReadSensor_1ab85a47186a692e87ed91dfbd6421ac9f" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>serialCon</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a23c251ae6bc0343f275e12199c35e0d2" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>SetNodeAddress</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a9eec15e8b601b447851376a2341cbe6e" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>Update</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1adb42967437e88c29257d8fa7e6dcd8e2" prot="public" virt="non-virtual"><scope>sensors::Movement</scope><name>updateTime</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

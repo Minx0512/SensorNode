@@ -6,9 +6,19 @@ SensorNode.SensorNode \-
 .SH SYNOPSIS
 .br
 .PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBUpdateThreads\fP (self, sensorObj)"
+.br
+.in -1c
 .SS "Static Public Attributes"
 
 .in +1c
+.ti -1c
+.RI "\fBthreadLock\fP = thread\&.allocate_lock()"
+.br
 .ti -1c
 .RI "list \fBnodeAddresses\fP = ['A0:A0:A0:A0:A0']"
 .br
@@ -33,6 +43,16 @@ SensorNode class:
 .fi
 .PP
  
+.SH "Member Function Documentation"
+.PP 
+.SS "def SensorNode\&.SensorNode\&.UpdateThreads ( self,  sensorObj)"
+
+.PP
+.nf
+
+.fi
+.PP
+ 
 .SH "Member Data Documentation"
 .PP 
 .SS "int SensorNode\&.SensorNode\&.baudrate = 9600\fC [static]\fP"
@@ -42,6 +62,8 @@ SensorNode class:
 .SS "string SensorNode\&.SensorNode\&.port = '/dev/ttyAMA0'\fC [static]\fP"
 
 .SS "SensorNode\&.SensorNode\&.sens = \fBsensors\&.Sensors\fP(\fBport\fP, \fBbaudrate\fP)\fC [static]\fP"
+
+.SS "SensorNode\&.SensorNode\&.threadLock = thread\&.allocate_lock()\fC [static]\fP"
 
 
 .SH "Author"
