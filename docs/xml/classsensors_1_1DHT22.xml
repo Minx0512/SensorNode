@@ -192,6 +192,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="67">
+        <label>readsensor.ReadSensor</label>
+        <link refid="classreadsensor_1_1ReadSensor"/>
+      </node>
+      <node id="66">
+        <label>sensors.DHT22</label>
+        <link refid="classsensors_1_1DHT22"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="69">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
@@ -200,18 +212,6 @@
         <label>sensors.DHT22</label>
         <link refid="classsensors_1_1DHT22"/>
         <childnode refid="69" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="71">
-        <label>readsensor.ReadSensor</label>
-        <link refid="classreadsensor_1_1ReadSensor"/>
-      </node>
-      <node id="70">
-        <label>sensors.DHT22</label>
-        <link refid="classsensors_1_1DHT22"/>
-        <childnode refid="71" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

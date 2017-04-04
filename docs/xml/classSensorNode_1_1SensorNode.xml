@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="classSensorNode_1_1SensorNode" kind="class" language="Python" prot="public">
     <compoundname>SensorNode::SensorNode</compoundname>
-    <basecompoundref prot="public" virt="non-virtual">something</basecompoundref>
       <sectiondef kind="public-static-attrib">
       <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1a17be4a277b9bfdd041ec006b462d497c" prot="public" static="yes" mutable="no">
         <type>list</type>
@@ -16,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="19" column="1" bodyfile="Python/SensorNode.py" bodystart="19" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="17" column="1" bodyfile="Python/SensorNode.py" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1a94712cd1b0bf09fa4cd3de94ca666575" prot="public" static="yes" mutable="no">
         <type>string</type>
@@ -30,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="21" column="1" bodyfile="Python/SensorNode.py" bodystart="21" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="19" column="1" bodyfile="Python/SensorNode.py" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1a68f7a87f1d03a2734f3f6505f801a92e" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -44,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="22" column="1" bodyfile="Python/SensorNode.py" bodystart="22" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="20" column="1" bodyfile="Python/SensorNode.py" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1ad8aec254c15c97a8b5c709480f31b2bb" prot="public" static="yes" mutable="no">
         <type></type>
@@ -58,36 +57,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="26" column="1" bodyfile="Python/SensorNode.py" bodystart="26" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="24" column="1" bodyfile="Python/SensorNode.py" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="106">
-        <label>SensorNode.SensorNode</label>
-        <link refid="classSensorNode_1_1SensorNode"/>
-        <childnode refid="107" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="107">
-        <label>something</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="108">
-        <label>SensorNode.SensorNode</label>
-        <link refid="classSensorNode_1_1SensorNode"/>
-        <childnode refid="109" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="109">
-        <label>something</label>
-      </node>
-    </collaborationgraph>
-    <location file="Python/SensorNode.py" line="16" column="1" bodyfile="Python/SensorNode.py" bodystart="16" bodyend="39"/>
+    <location file="Python/SensorNode.py" line="14" column="1" bodyfile="Python/SensorNode.py" bodystart="14" bodyend="37"/>
     <listofallmembers>
       <member refid="classSensorNode_1_1SensorNode_1a68f7a87f1d03a2734f3f6505f801a92e" prot="public" virt="non-virtual"><scope>SensorNode::SensorNode</scope><name>baudrate</name></member>
       <member refid="classSensorNode_1_1SensorNode_1a17be4a277b9bfdd041ec006b462d497c" prot="public" virt="non-virtual"><scope>SensorNode::SensorNode</scope><name>nodeAddresses</name></member>

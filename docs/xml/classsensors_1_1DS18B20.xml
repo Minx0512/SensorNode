@@ -226,6 +226,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="73">
+        <label>readsensor.ReadSensor</label>
+        <link refid="classreadsensor_1_1ReadSensor"/>
+      </node>
+      <node id="72">
+        <label>sensors.DS18B20</label>
+        <link refid="classsensors_1_1DS18B20"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="75">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
@@ -234,18 +246,6 @@
         <label>sensors.DS18B20</label>
         <link refid="classsensors_1_1DS18B20"/>
         <childnode refid="75" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="77">
-        <label>readsensor.ReadSensor</label>
-        <link refid="classreadsensor_1_1ReadSensor"/>
-      </node>
-      <node id="76">
-        <label>sensors.DS18B20</label>
-        <link refid="classsensors_1_1DS18B20"/>
-        <childnode refid="77" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

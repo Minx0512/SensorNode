@@ -22,14 +22,19 @@ class SensorNode:
 
 
  sens = sensors.Sensors(port, baudrate)
- sens.SetNodeAddress(nodeAddresses[0])
- sens.Update()
- sens.InterpretResponse()
- print(sens)
+ 
+ for nodeAddr in nodeAddresses:
+  print(nodeAddr)   
+  sens.SetNodeAddress(nodeAddr)
+  sens.Update()
+  sens.InterpretResponse()
+  print(sens)
+  sens.spawnSensors()
 
- sens.spawnSensors()
-
+ 
  for sob in sens.sensorObjList:
+  sob.Update()
+  sob.InterpretResponse()
   print (sob)
 
 

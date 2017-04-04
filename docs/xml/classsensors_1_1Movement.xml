@@ -141,6 +141,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="85">
+        <label>readsensor.ReadSensor</label>
+        <link refid="classreadsensor_1_1ReadSensor"/>
+      </node>
+      <node id="84">
+        <label>sensors.Movement</label>
+        <link refid="classsensors_1_1Movement"/>
+        <childnode refid="85" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="87">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
@@ -149,18 +161,6 @@
         <label>sensors.Movement</label>
         <link refid="classsensors_1_1Movement"/>
         <childnode refid="87" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="89">
-        <label>readsensor.ReadSensor</label>
-        <link refid="classreadsensor_1_1ReadSensor"/>
-      </node>
-      <node id="88">
-        <label>sensors.Movement</label>
-        <link refid="classsensors_1_1Movement"/>
-        <childnode refid="89" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

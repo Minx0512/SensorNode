@@ -141,6 +141,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="77">
+        <label>readsensor.ReadSensor</label>
+        <link refid="classreadsensor_1_1ReadSensor"/>
+      </node>
+      <node id="76">
+        <label>sensors.LightAnalog</label>
+        <link refid="classsensors_1_1LightAnalog"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="79">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
@@ -149,18 +161,6 @@
         <label>sensors.LightAnalog</label>
         <link refid="classsensors_1_1LightAnalog"/>
         <childnode refid="79" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="81">
-        <label>readsensor.ReadSensor</label>
-        <link refid="classreadsensor_1_1ReadSensor"/>
-      </node>
-      <node id="80">
-        <label>sensors.LightAnalog</label>
-        <link refid="classsensors_1_1LightAnalog"/>
-        <childnode refid="81" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

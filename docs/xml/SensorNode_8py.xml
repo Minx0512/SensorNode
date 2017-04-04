@@ -22,80 +22,78 @@
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sensors</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="classSensorNode_1_1SensorNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSensorNode_1_1SensorNode" kindref="compound">SensorNode</ref>(something):</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="19" refid="classSensorNode_1_1SensorNode_1a17be4a277b9bfdd041ec006b462d497c" refkind="member"><highlight class="normal"><sp/>nodeAddresses<sp/>=<sp/>[</highlight><highlight class="stringliteral">&quot;A0:A0:A0:A0:A0&quot;</highlight><highlight class="normal">]</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">#threadLock<sp/>=<sp/>thread.allocate_lock()</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="classSensorNode_1_1SensorNode_1a94712cd1b0bf09fa4cd3de94ca666575" refkind="member"><highlight class="normal"><sp/>port<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/ttyAMA0&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="classSensorNode_1_1SensorNode_1a68f7a87f1d03a2734f3f6505f801a92e" refkind="member"><highlight class="normal"><sp/>baudrate<sp/>=<sp/>9600</highlight></codeline>
+<codeline lineno="14" refid="classSensorNode_1_1SensorNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSensorNode_1_1SensorNode" kindref="compound">SensorNode</ref>:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="classSensorNode_1_1SensorNode_1a17be4a277b9bfdd041ec006b462d497c" refkind="member"><highlight class="normal"><sp/>nodeAddresses<sp/>=<sp/>[</highlight><highlight class="stringliteral">&quot;A0:A0:A0:A0:A0&quot;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">#threadLock<sp/>=<sp/>thread.allocate_lock()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classSensorNode_1_1SensorNode_1a94712cd1b0bf09fa4cd3de94ca666575" refkind="member"><highlight class="normal"><sp/>port<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/ttyAMA0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classSensorNode_1_1SensorNode_1a68f7a87f1d03a2734f3f6505f801a92e" refkind="member"><highlight class="normal"><sp/>baudrate<sp/>=<sp/>9600</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="classSensorNode_1_1SensorNode_1ad8aec254c15c97a8b5c709480f31b2bb" refkind="member"><highlight class="normal"><sp/>sens<sp/>=<sp/><ref refid="classsensors_1_1Sensors" kindref="compound">sensors.Sensors</ref>(port,<sp/>baudrate)</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/>sens.SetNodeAddress(nodeAddresses[0])</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/>sens.Update()</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/>sens.InterpretResponse()</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/>print(sens)</highlight></codeline>
+<codeline lineno="24" refid="classSensorNode_1_1SensorNode_1ad8aec254c15c97a8b5c709480f31b2bb" refkind="member"><highlight class="normal"><sp/>sens<sp/>=<sp/><ref refid="classsensors_1_1Sensors" kindref="compound">sensors.Sensors</ref>(port,<sp/>baudrate)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/>sens.SetNodeAddress(nodeAddresses[0])</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/>sens.Update()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/>sens.InterpretResponse()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/>print(sens)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/>sens.spawnSensors()</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/>sens.spawnSensors()</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>sob<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>sens.sensorObjList:</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>(sob)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>sob<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>sens.sensorObjList:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>(sob)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="40" refid="namespaceSensorNode_1a1c06b14e3f48f507247d5b8e0e910f35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>app<sp/>=<sp/><ref refid="classSensorNode_1_1SensorNode" kindref="compound">SensorNode</ref>()</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>app.run()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="namespaceSensorNode_1a1c06b14e3f48f507247d5b8e0e910f35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>app<sp/>=<sp/><ref refid="classSensorNode_1_1SensorNode" kindref="compound">SensorNode</ref>()</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ds<sp/>=<sp/>sensors.DS18B20(port,<sp/>baudrate)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ds.SetNodeAddress(nodeAddresses[0])</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ds.Update()</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ds.InterpretResponse()</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print<sp/>(ds)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">#<sp/>mv<sp/>=<sp/>sensors.Movement(port,baudrate)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">#<sp/>mv.SetNodeAddress(nodeAddresses[0])</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">#<sp/>mv.Update()</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">#<sp/>mv.InterpretResponse()</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print<sp/>(mv)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">#<sp/>lightA<sp/>=<sp/>sensors.LightAnalog(port,baudrate)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">#<sp/>lightA.SetNodeAddress(nodeAddresses[0])</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">#<sp/>lightA.Update()</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">#<sp/>lightA.InterpretResponse()</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print<sp/>(lightA)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">#<sp/>for<sp/>addr<sp/>in<sp/>nodeAddresses:</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/>sensor.append(rs.spawnSensors(addr))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">#<sp/>for<sp/>s<sp/>in<sp/>sensor:</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/>i<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/>print<sp/>(&quot;Sensor<sp/>objects<sp/>on<sp/>{1}:<sp/>{0}&quot;.format(s,nodeAddresses[i]))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/>i<sp/>=<sp/>i+1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ds<sp/>=<sp/>sensors.DS18B20(port,<sp/>baudrate)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ds.SetNodeAddress(nodeAddresses[0])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ds.Update()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ds.InterpretResponse()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print<sp/>(ds)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">#<sp/>mv<sp/>=<sp/>sensors.Movement(port,baudrate)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">#<sp/>mv.SetNodeAddress(nodeAddresses[0])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">#<sp/>mv.Update()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">#<sp/>mv.InterpretResponse()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print<sp/>(mv)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">#<sp/>lightA<sp/>=<sp/>sensors.LightAnalog(port,baudrate)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">#<sp/>lightA.SetNodeAddress(nodeAddresses[0])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">#<sp/>lightA.Update()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">#<sp/>lightA.InterpretResponse()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print<sp/>(lightA)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">#<sp/>for<sp/>addr<sp/>in<sp/>nodeAddresses:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/>sensor.append(rs.spawnSensors(addr))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">#<sp/>for<sp/>s<sp/>in<sp/>sensor:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/>i<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/>print<sp/>(&quot;Sensor<sp/>objects<sp/>on<sp/>{1}:<sp/>{0}&quot;.format(s,nodeAddresses[i]))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/>i<sp/>=<sp/>i+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">#try:<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">#<sp/>thread.start_new_thread(qDS18B20,(5*60))<sp/>#<sp/>every<sp/>5<sp/>mins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">#<sp/>thread.start_new_thread(qMovement,<sp/>(1))<sp/>#<sp/>every<sp/>second</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">#<sp/>thread.start_new_thread(qDHT22,(5))<sp/><sp/>#<sp/>every<sp/>5<sp/>mins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">#ReadSensorData(sock)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">#except<sp/>Exception,<sp/>e:</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print<sp/>&quot;{0}&quot;.format(e)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">#try:<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">#<sp/>thread.start_new_thread(qDS18B20,(5*60))<sp/>#<sp/>every<sp/>5<sp/>mins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">#<sp/>thread.start_new_thread(qMovement,<sp/>(1))<sp/>#<sp/>every<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">#<sp/>thread.start_new_thread(qDHT22,(5))<sp/><sp/>#<sp/>every<sp/>5<sp/>mins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">#ReadSensorData(sock)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">#except<sp/>Exception,<sp/>e:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print<sp/>&quot;{0}&quot;.format(e)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
     </programlisting>
     <location file="Python/SensorNode.py"/>
   </compounddef>

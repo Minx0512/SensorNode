@@ -175,26 +175,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="111">
+      <node id="107">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
       </node>
-      <node id="110">
+      <node id="106">
         <label>sensors.Sensors</label>
         <link refid="classsensors_1_1Sensors"/>
-        <childnode refid="111" relation="public-inheritance">
+        <childnode refid="107" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="113">
+      <node id="109">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
       </node>
-      <node id="112">
+      <node id="108">
         <label>sensors.Sensors</label>
         <link refid="classsensors_1_1Sensors"/>
-        <childnode refid="113" relation="public-inheritance">
+        <childnode refid="109" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

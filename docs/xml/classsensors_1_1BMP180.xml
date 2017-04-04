@@ -211,6 +211,18 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="61">
+        <label>readsensor.ReadSensor</label>
+        <link refid="classreadsensor_1_1ReadSensor"/>
+      </node>
+      <node id="60">
+        <label>sensors.BMP180</label>
+        <link refid="classsensors_1_1BMP180"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="63">
         <label>readsensor.ReadSensor</label>
         <link refid="classreadsensor_1_1ReadSensor"/>
@@ -219,18 +231,6 @@
         <label>sensors.BMP180</label>
         <link refid="classsensors_1_1BMP180"/>
         <childnode refid="63" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="65">
-        <label>readsensor.ReadSensor</label>
-        <link refid="classreadsensor_1_1ReadSensor"/>
-      </node>
-      <node id="64">
-        <label>sensors.BMP180</label>
-        <link refid="classsensors_1_1BMP180"/>
-        <childnode refid="65" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
