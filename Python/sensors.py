@@ -54,7 +54,7 @@ class Sensors(readsensor.ReadSensor):
           
        la =  LightAnalog(self.port,self.baudrate)       
        la.SetNodeAddress(self.nodeMAC) 
-       la.updateTime = 5
+       la.updateTime = 30
        #la.Update()
        #la.InterpretResponse()
        self.sensorObjList.append(la) 
@@ -64,7 +64,7 @@ class Sensors(readsensor.ReadSensor):
           
        ld =  LightDigital(self.port,self.baudrate)       
        ld.SetNodeAddress(self.nodeMAC) 
-       ld.updateTime = 2
+       ld.updateTime = 30
        #ld.Update()
        #ld.InterpretResponse()
        self.sensorObjList.append(ld) 
