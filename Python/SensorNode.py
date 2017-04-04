@@ -31,18 +31,18 @@ def UpdateThreads(sensorObj):
     sensorObj.InterpretResponse()
        
     if sensorObj.err is not 0:
-     #for i in range(0,5):
-     time.sleep(1)
-      #if stp == 1:
-      # break
+     for i in range(0,5):
+      time.sleep(1)
+      if stp == 1:
+       break
       
     else:
      # \todo :  write function for transmit value to openhab REST API 
      print(sensorObj)
-     #for i in range(0,sensorObj.updateTime):
-     time.sleep(sensorObj.updateTime)
-     # if stp==1:
-      # break       
+     for i in range(0,sensorObj.updateTime):
+      time.sleep(1)
+      if stp==1:
+       break       
     
  
     
@@ -76,7 +76,7 @@ class SensorNode:
  
  
  for sob in sens.sensorObjList:
-  print(sob)   
+  #print(sob)   
   thr.append(Thread(UpdateThreads,(sob))) 
   
     
@@ -87,7 +87,9 @@ class SensorNode:
 
 
 if __name__ == "__main__":
+    
     app = SensorNode()
-   # app.run()
+    
+   
     
 
