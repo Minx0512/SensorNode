@@ -38,7 +38,7 @@ var searchData=
   ['settype',['setType',['../classPhotoresistor.html#a5c3bc9e8877b54faeded1450a39552fb',1,'Photoresistor']]],
   ['setupnrf',['SetupNRF',['../main_8cpp.html#af3f2bf35046819f223de9b818029af1c',1,'main.cpp']]],
   ['skip_5from',['SKIP_ROM',['../DS18B20_8h.html#ae5773d5b673b0c12c6615958dd2efb22',1,'DS18B20.h']]],
-  ['spawnsensors',['spawnSensors',['../classsensors_1_1Sensors.html#a99031e3e3ce8a181ee662daef4857cc3',1,'sensors::Sensors']]],
+  ['spawnsensors',['spawnSensors',['../classsensors_1_1Sensors.html#ad5dd799765cbc7c3b422381c02b10f9b',1,'sensors::Sensors']]],
   ['spi',['SPI',['../classSPI.html',1,'SPI'],['../classNRF24L01.html#a6321af25fee367445baa6ab4840f8443',1,'NRF24L01::spi()'],['../classSPI.html#a2ba081c29fbdecc704c6bf00b24d5205',1,'SPI::SPI()'],['../classSPI.html#a32722ff55ed030eb70b8a71fa19f2436',1,'SPI::SPI(volatile uint8_t &amp;DDR, uint8_t MISO, uint8_t MOSI, uint8_t SCK, uint8_t SS)']]],
   ['spi_2ecpp',['SPI.cpp',['../SPI_8cpp.html',1,'']]],
   ['spi_2eh',['SPI.h',['../SPI_8h.html',1,'']]],

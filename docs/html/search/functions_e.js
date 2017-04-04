@@ -13,7 +13,7 @@ var searchData=
   ['setretries',['setRetries',['../classNRF24L01.html#a0bb209d94b62e2a28af53179af713f3c',1,'NRF24L01']]],
   ['settype',['setType',['../classPhotoresistor.html#a5c3bc9e8877b54faeded1450a39552fb',1,'Photoresistor']]],
   ['setupnrf',['SetupNRF',['../main_8cpp.html#af3f2bf35046819f223de9b818029af1c',1,'main.cpp']]],
-  ['spawnsensors',['spawnSensors',['../classsensors_1_1Sensors.html#a99031e3e3ce8a181ee662daef4857cc3',1,'sensors::Sensors']]],
+  ['spawnsensors',['spawnSensors',['../classsensors_1_1Sensors.html#ad5dd799765cbc7c3b422381c02b10f9b',1,'sensors::Sensors']]],
   ['spi',['SPI',['../classSPI.html#a2ba081c29fbdecc704c6bf00b24d5205',1,'SPI::SPI()'],['../classSPI.html#a32722ff55ed030eb70b8a71fa19f2436',1,'SPI::SPI(volatile uint8_t &amp;DDR, uint8_t MISO, uint8_t MOSI, uint8_t SCK, uint8_t SS)']]],
   ['spitrans',['spiTrans',['../classNRF24L01.html#ab604b1e177e4812e33ebc39287503197',1,'NRF24L01']]],
   ['startfastwrite',['startFastWrite',['../classNRF24L01.html#ab1ca9025a8740bc38ad5dd7a427e2d4f',1,'NRF24L01']]],

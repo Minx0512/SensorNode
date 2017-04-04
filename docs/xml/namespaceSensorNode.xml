@@ -59,48 +59,6 @@
         </inbodydescription>
         <location file="Python/SensorNode.py" line="22" column="1" bodyfile="Python/SensorNode.py" bodystart="22" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="namespaceSensorNode_1aaa177ea377a1a6a4ae0b9426064e940d" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SensorNode.ds</definition>
-        <argsstring></argsstring>
-        <name>ds</name>
-        <initializer>= <ref refid="classsensors_1_1DS18B20" kindref="compound">sensors.DS18B20</ref>(<ref refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kindref="member">port</ref>, <ref refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kindref="member">baudrate</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SensorNode.py" line="28" column="1" bodyfile="Python/SensorNode.py" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="namespaceSensorNode_1ad06784c1a82686d5c2d6908f088c16f6" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SensorNode.mv</definition>
-        <argsstring></argsstring>
-        <name>mv</name>
-        <initializer>= <ref refid="classsensors_1_1Movement" kindref="compound">sensors.Movement</ref>(<ref refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kindref="member">port</ref>,<ref refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kindref="member">baudrate</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SensorNode.py" line="34" column="1" bodyfile="Python/SensorNode.py" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="namespaceSensorNode_1a973908ebd2519a83b199d68f97f31a3f" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SensorNode.lightA</definition>
-        <argsstring></argsstring>
-        <name>lightA</name>
-        <initializer>= <ref refid="classsensors_1_1LightAnalog" kindref="compound">sensors.LightAnalog</ref>(<ref refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kindref="member">port</ref>,<ref refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kindref="member">baudrate</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SensorNode.py" line="40" column="1" bodyfile="Python/SensorNode.py" bodystart="40" bodyend="-1"/>
-      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>

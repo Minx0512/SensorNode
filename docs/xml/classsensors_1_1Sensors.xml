@@ -148,18 +148,14 @@
         <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
         <references refid="classsensors_1_1Sensors_1a70cd97f59cdb39f1f02260551d7e5ea5" compoundref="sensors_8py" startline="12">sensors.Sensors.sensorList</references>
       </memberdef>
-      <memberdef kind="function" id="classsensors_1_1Sensors_1a99031e3e3ce8a181ee662daef4857cc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classsensors_1_1Sensors_1ad5dd799765cbc7c3b422381c02b10f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def sensors.Sensors.spawnSensors</definition>
-        <argsstring>(self, nodeAddr)</argsstring>
+        <argsstring>(self)</argsstring>
         <name>spawnSensors</name>
         <param>
           <type>self</type>
           <defname>self</defname>
-        </param>
-        <param>
-          <type>nodeAddr</type>
-          <defname>nodeAddr</defname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -171,6 +167,7 @@
         <references refid="classsensors_1_1Sensors_1a70cd97f59cdb39f1f02260551d7e5ea5" compoundref="sensors_8py" startline="12">sensors.Sensors.sensorList</references>
         <references refid="classreadsensor_1_1ReadSensor_1aa5479d51839a34226df007973db5b28a" compoundref="readsensor_8py" startline="12">readsensor.ReadSensor.port</references>
         <references refid="classreadsensor_1_1ReadSensor_1a55ad7cd6f26347c571cdc03025d52449" compoundref="readsensor_8py" startline="13">readsensor.ReadSensor.baudrate</references>
+        <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -221,7 +218,7 @@
       <member refid="classsensors_1_1Sensors_1a753ac6bef7233285cbf9651d5f5a5b7d" prot="public" virt="non-virtual"><scope>sensors::Sensors</scope><name>sensorObjList</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1ab85a47186a692e87ed91dfbd6421ac9f" prot="public" virt="non-virtual"><scope>sensors::Sensors</scope><name>serialCon</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a23c251ae6bc0343f275e12199c35e0d2" prot="public" virt="non-virtual"><scope>sensors::Sensors</scope><name>SetNodeAddress</name></member>
-      <member refid="classsensors_1_1Sensors_1a99031e3e3ce8a181ee662daef4857cc3" prot="public" virt="non-virtual"><scope>sensors::Sensors</scope><name>spawnSensors</name></member>
+      <member refid="classsensors_1_1Sensors_1ad5dd799765cbc7c3b422381c02b10f9b" prot="public" virt="non-virtual"><scope>sensors::Sensors</scope><name>spawnSensors</name></member>
       <member refid="classreadsensor_1_1ReadSensor_1a9eec15e8b601b447851376a2341cbe6e" prot="public" virt="non-virtual"><scope>sensors::Sensors</scope><name>Update</name></member>
     </listofallmembers>
   </compounddef>

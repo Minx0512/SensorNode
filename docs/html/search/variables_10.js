@@ -1,18 +1,7 @@
 var searchData=
 [
-  ['sendsensorstr',['sendSensorStr',['../main_8cpp.html#ac92f70960babcaa68482b8ea681bcec8',1,'main.cpp']]],
-  ['sendsystemstr',['sendSystemStr',['../main_8cpp.html#ad5572274b88d1bfc8a5e057e1132bf90',1,'main.cpp']]],
-  ['sens',['sens',['../namespaceSensorNode.html#a341717027383e08a67cc397e2d00a99e',1,'SensorNode']]],
-  ['sensorlist',['sensorList',['../classsensors_1_1Sensors.html#a70cd97f59cdb39f1f02260551d7e5ea5',1,'sensors::Sensors']]],
-  ['sensorobjlist',['sensorObjList',['../classsensors_1_1Sensors.html#a753ac6bef7233285cbf9651d5f5a5b7d',1,'sensors::Sensors']]],
-  ['ser',['ser',['../classserialconnection_1_1SerialConnection.html#a5b2f2670cc97ed8970dadd829f623d66',1,'serialconnection::SerialConnection']]],
-  ['serialcon',['serialCon',['../classreadsensor_1_1ReadSensor.html#ab85a47186a692e87ed91dfbd6421ac9f',1,'readsensor::ReadSensor']]],
-  ['spi',['spi',['../classNRF24L01.html#a6321af25fee367445baa6ab4840f8443',1,'NRF24L01']]],
-  ['spi_5fddr',['SPI_DDR',['../classSPI.html#a5dca744360bf2b10d74ab512f2fb71ea',1,'SPI']]],
-  ['spi_5fmiso',['SPI_MISO',['../classSPI.html#a6fefdb147a2789fe10efb13f8100235c',1,'SPI']]],
-  ['spi_5fmosi',['SPI_MOSI',['../classSPI.html#a10159404dbabef20333fe73f69a3fca6',1,'SPI']]],
-  ['spi_5fsck',['SPI_SCK',['../classSPI.html#ad9ff914a9831b004b1f8fa5368558e01',1,'SPI']]],
-  ['spi_5fspeed',['spi_speed',['../classNRF24L01.html#a4701641c1e8b3d082deb03f93c84d8c7',1,'NRF24L01']]],
-  ['spi_5fss',['SPI_SS',['../classSPI.html#ad4cb7d5cd46647baf68bb98a0e06e2aa',1,'SPI']]],
-  ['str',['str',['../main_8cpp.html#ac19b967928c4ef5b461808cbac40840c',1,'main.cpp']]]
+  ['t',['T',['../classsensors_1_1DS18B20.html#a738644d266b4149bdd79e1a269e555ad',1,'sensors.DS18B20.T()'],['../classsensors_1_1DHT22.html#af42b72d6f11a320fe7e94a23734a109e',1,'sensors.DHT22.T()'],['../classsensors_1_1BMP180.html#a2063dc8bbcdbe07979e3faf2f6e8eb7d',1,'sensors.BMP180.T()']]],
+  ['timeout',['TIMEOUT',['../classDHT22.html#acbca744f7ed6f46e2d060c7047b0b1a4',1,'DHT22']]],
+  ['txdelay',['txDelay',['../classNRF24L01.html#a1feaab910ecff17805f8141fe40028e7',1,'NRF24L01']]],
+  ['type',['type',['../classPhotoresistor.html#a0edaea79b0038417748c103f3647bd7d',1,'Photoresistor']]]
 ];

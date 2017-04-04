@@ -1,8 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"functions.html":[5,3,0],
-"functions.html":[5,3,0,0],
-"functions_0x7e.html":[5,3,0,21],
 "functions_a.html":[5,3,0,1],
 "functions_b.html":[5,3,0,2],
 "functions_c.html":[5,3,0,3],
@@ -106,8 +103,8 @@ var NAVTREEINDEX2 =
 "namespaces.html":[4,0],
 "namespacesensors.html":[4,0,2],
 "namespacesensors.html":[5,0,1],
-"namespaceserialconnection.html":[5,0,2],
 "namespaceserialconnection.html":[4,0,3],
+"namespaceserialconnection.html":[5,0,2],
 "pages.html":[],
 "readsensor_8py.html":[6,0,0,0],
 "sensors_8py.html":[6,0,0,2],

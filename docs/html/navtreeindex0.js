@@ -169,13 +169,10 @@ var NAVTREEINDEX0 =
 "SPI_8h.html":[6,0,1,0,3],
 "SPI_8h_source.html":[6,0,1,0,3],
 "SensorNode_8py.html":[6,0,0,1],
-"SensorNode_8py.html#a1a9ff3aa5a94fc55ff0fa24862db071b":[6,0,0,1,5],
-"SensorNode_8py.html#a341717027383e08a67cc397e2d00a99e":[6,0,0,1,6],
+"SensorNode_8py.html#a1a9ff3aa5a94fc55ff0fa24862db071b":[6,0,0,1,2],
+"SensorNode_8py.html#a341717027383e08a67cc397e2d00a99e":[6,0,0,1,3],
 "SensorNode_8py.html#a50365066340e665ac5f274dfb3a7ae82":[6,0,0,1,0],
-"SensorNode_8py.html#a973908ebd2519a83b199d68f97f31a3f":[6,0,0,1,2],
-"SensorNode_8py.html#aaa177ea377a1a6a4ae0b9426064e940d":[6,0,0,1,1],
-"SensorNode_8py.html#ac1e752b62092c1c9e27da570c73c0ce7":[6,0,0,1,4],
-"SensorNode_8py.html#ad06784c1a82686d5c2d6908f088c16f6":[6,0,0,1,3],
+"SensorNode_8py.html#ac1e752b62092c1c9e27da570c73c0ce7":[6,0,0,1,1],
 "USART_8cpp.html":[6,0,1,0,4],
 "USART_8h.html":[6,0,1,0,5],
 "USART_8h.html#a00aa27797d6c1f8f5504167981533443":[6,0,1,0,5,7],
@@ -249,5 +246,8 @@ var NAVTREEINDEX0 =
 "classNRF24L01.html#a094a978ed0c7da890c90351bd945fabe":[5,0,6,68],
 "classNRF24L01.html#a0b5c60487c6b715b9f17f968f7958d93":[5,0,6,76],
 "classNRF24L01.html#a0bb209d94b62e2a28af53179af713f3c":[5,0,6,51],
-"classNRF24L01.html#a0d0cd5dd09d60e06280f378166725d64":[5,0,6,21]
+"classNRF24L01.html#a0d0cd5dd09d60e06280f378166725d64":[5,0,6,21],
+"classNRF24L01.html#a0fe37f8ff95b7c562ad1fc277890e29a":[5,0,6,33],
+"classNRF24L01.html#a10c710f3795c47ebde120ca3d975c891":[5,0,6,81],
+"classNRF24L01.html#a17752733515f67aa9f6ed3daa1ed3d1d":[5,0,6,43]
 };
