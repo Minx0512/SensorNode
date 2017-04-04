@@ -36,6 +36,7 @@ class Sensors(readsensor.ReadSensor):
        mv.Update()
        mv.InterpretResponse()
        self.sensorObjList.append(mv)
+       print(mv)
        
       elif sensor =="32":
           
@@ -44,7 +45,8 @@ class Sensors(readsensor.ReadSensor):
        dht.Update()
        dht.InterpretResponse()
        self.sensorObjList.append(dht) 
-          
+       print(dht)  
+        
       elif sensor =="33":
           
        la =  LightAnalog(self.port,self.baudrate)       
@@ -52,6 +54,7 @@ class Sensors(readsensor.ReadSensor):
        la.Update()
        la.InterpretResponse()
        self.sensorObjList.append(la) 
+       print(la)
        
       elif sensor =="34":
           
@@ -60,6 +63,7 @@ class Sensors(readsensor.ReadSensor):
        ld.Update()
        ld.InterpretResponse()
        self.sensorObjList.append(ld) 
+       print(ld)
             
       elif sensor =="35":
           
@@ -68,6 +72,7 @@ class Sensors(readsensor.ReadSensor):
        ds.Update()
        ds.InterpretResponse() 
        self.sensorObjList.append(ds) 
+       print(ds)
        
       elif sensor =="36":
           
@@ -76,6 +81,7 @@ class Sensors(readsensor.ReadSensor):
        bmp.Update()
        bmp.InterpretResponse() 
        self.sensorObjList.append(bmp) 
+       print(bmp)
        
      else:
        print (".")  
