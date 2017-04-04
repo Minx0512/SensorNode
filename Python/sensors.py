@@ -27,7 +27,7 @@ class Sensors(readsensor.ReadSensor):
  
     def spawnSensors(self):
      """ Spawn sensor objects for a given node address """
-     print(self)
+     #print(self)
      for sensor in self.sensorList:
       #print(sensor)
       if sensor == "31":

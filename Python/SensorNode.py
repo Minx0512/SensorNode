@@ -32,7 +32,7 @@ class SensorNode:
   sens.SetNodeAddress(nodeAddr)
   sens.Update()
   sens.InterpretResponse()
-  #print(sens)
+  print(sens)
   sens.spawnSensors()
 
  
