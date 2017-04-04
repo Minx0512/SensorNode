@@ -11,8 +11,6 @@ import sys
 
 import sensors
 
-
-
 class SensorNode:
     
   
@@ -38,7 +36,7 @@ class SensorNode:
 
 if __name__ == "__main__":
     app = SensorNode()
-    app.run()
+    
 
 
 
