@@ -3,14 +3,39 @@
 
 import os
 import sys
-
-import _thread
+import threading
 import time
-
-
-
 import sensors
 
+
+class Thread(threading.Thread):
+    def __init__(self, t, *args):
+        threading.Thread.__init__(self, target=t, args=args)
+        self.start()
+
+count = 0
+lock = threading.Lock()
+thr = []
+   
+def UpdateThreads(sensorObj):
+  """  """    
+  
+  while 1:
+      
+   with lock:
+    sensorObj.Update()
+   
+   sensorObj.InterpretResponse()
+       
+   if sensorObj.err is not 0:    
+    time.sleep(5)
+   else:
+    # \todo :  write function for transmit value to openhab REST API 
+    print(sensorObj)  
+    time.sleep(sensorObj.updateTime)   
+    
+ 
+    
 class SensorNode:
  """SensorNode class:
  
@@ -18,33 +43,18 @@ class SensorNode:
  
  """
   
- threadLock = _thread.allocate_lock()
+ 
  nodeAddresses = ["A0:A0:A0:A0:A0"]
  port = "/dev/ttyAMA0"
  baudrate = 9600
-    
- def UpdateThreads(self,sensorObj):
-  """  """    
-  
+ 
+ def run(self):
   while 1:
-   threadLock.acquire()
-   
-   sensorObj.Update()
-   threadLock.release()
-   sensorObj.InterpretResponse()
-       
-   if sensorObj.err is not 0:    
-    sleep(5)
-   else:
-    # \todo :  write function for transmit value to openhab REST API 
-    print(sensorObj)  
-    sleep(sensorObj.updateTime)   
-         
-
-  
-
-
-
+    try:
+     pass
+    except(KeyboardInterrupt, EOFError):
+     pass
+ 
 
  sens = sensors.Sensors(port, baudrate)
  
@@ -57,8 +67,12 @@ class SensorNode:
   sens.spawnSensors()
 
  
+ 
+ 
  for sob in sens.sensorObjList:
-  _thread.start_new_thread(UpdateThreads,(sob,))   
+  thr.append(Thread(UpdateThreads,(sob))) 
+  
+    
   #sob.Update()
   #sob.InterpretResponse()
   #print (sob)
@@ -67,16 +81,6 @@ class SensorNode:
 
 if __name__ == "__main__":
     app = SensorNode()
+    app.run()
     
 
-
-
-
-
-#try:   
-# thread.start_new_thread(qDS18B20,(5*60)) # every 5 mins
-# thread.start_new_thread(qMovement, (1)) # every second
-# thread.start_new_thread(qDHT22,(5))  # every 5 mins
-#ReadSensorData(sock)
-#except Exception, e:
-# print "{0}".format(e)     
