@@ -23,7 +23,7 @@ stp = 0
 def UpdateThreads(sensorObj):
   """  """    
   
-  while 1:
+  while sensorObj.signal:
    
     with lock:
      sensorObj.Update()
@@ -33,7 +33,7 @@ def UpdateThreads(sensorObj):
     if sensorObj.err is not 0:
      for i in range(0,5):
       time.sleep(1)
-      if stp == 1:
+      if sensorObj.signal == 0:
        break
       
     else:
@@ -41,7 +41,7 @@ def UpdateThreads(sensorObj):
      print(sensorObj)
      for i in range(0,sensorObj.updateTime):
       time.sleep(1)
-      if stp==1:
+      if sensorObj.signal==0:
        break       
     
  
@@ -80,9 +80,14 @@ class SensorNode:
   thr.append(Thread(UpdateThreads,(sob))) 
   
     
-  #sob.Update()
-  #sob.InterpretResponse()
-  #print (sob)
+ while 1:
+    
+    try:
+       pass 
+        
+    except (KeyboardInterrupt):
+     for s in sens.sensorObjList:
+      s.signal = 0            
 
 
 

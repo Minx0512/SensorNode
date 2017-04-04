@@ -14,6 +14,7 @@ class ReadSensor:
      self.nodeMAC = ""
      self.updateTime = 1
      self.err = 0
+     self.signal = 1
      self.cmdID = 0
      self.pString = ""
      self.queryStr = "{0}|{1}|{2}"
