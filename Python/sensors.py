@@ -117,8 +117,12 @@ class DS18B20(readsensor.ReadSensor):
      avrgTemp = 0.0  
      for ti in range(0,self.numEl):
       avrgTemp= avrgTemp+self.T[ti]
-     return round(avrgTemp/self.numEl,3)     
-    
+     if self.numEl>0: 
+      return round(avrgTemp/self.numEl,3)     
+     else: 
+      return null
+      
+      
     def __str__(self):
         return "{0} | T: {1}{2}".format(self.nodeMAC, self.GetAvgTemperature(),self.unitT)     
       
