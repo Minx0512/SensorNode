@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['t',['T',['../classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20.html#ac16de12d6071752c317827bdcb2b9462',1,'ReadSensor.Sensors.Sensors.DS18B20.T()'],['../classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22.html#a087acd6fb1be3705ffdebd1f47f68e14',1,'ReadSensor.Sensors.Sensors.DHT22.T()'],['../classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180.html#afe368d14fb56949c6807490f5f98598f',1,'ReadSensor.Sensors.Sensors.BMP180.T()']]],
+  ['t',['T',['../classsensors_1_1DS18B20.html#a738644d266b4149bdd79e1a269e555ad',1,'sensors.DS18B20.T()'],['../classsensors_1_1DHT22.html#af42b72d6f11a320fe7e94a23734a109e',1,'sensors.DHT22.T()'],['../classsensors_1_1BMP180.html#a2063dc8bbcdbe07979e3faf2f6e8eb7d',1,'sensors.BMP180.T()']]],
   ['testcarrier',['testCarrier',['../classNRF24L01.html#a5e934f8f7d37245264ad16e3c360eca7',1,'NRF24L01']]],
   ['testrpd',['testRPD',['../classNRF24L01.html#abf1d84ed988aa6c7925ebb712b7c7f60',1,'NRF24L01']]],
   ['therm_5fcmd_5falarmsearch',['THERM_CMD_ALARMSEARCH',['../DS18B20_8h.html#ad87daf6ca3b56fb882be1b2224a9286b',1,'DS18B20.h']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value',['value',['../classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog.html#aabd7bf3d3ae2138a50cafe651a8b8da6',1,'ReadSensor.Sensors.Sensors.LightAnalog.value()'],['../classReadSensor_1_1Sensors_1_1Sensors_1_1LightDigital.html#ab2b9606c4065e6eef00b79c9aabc5138',1,'ReadSensor.Sensors.Sensors.LightDigital.value()']]]
+  ['value',['value',['../classsensors_1_1LightAnalog.html#ab1748d35da94bc8da0afead5bded8986',1,'sensors.LightAnalog.value()'],['../classsensors_1_1LightDigital.html#ad801e3eae346e5661ce737ade49e6ac1',1,'sensors.LightDigital.value()']]]
 ];

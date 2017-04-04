@@ -6,33 +6,33 @@
     <includes local="no">avr/io.h</includes>
     <includes local="no">avr/interrupt.h</includes>
     <incdepgraph>
-      <node id="198">
+      <node id="190">
         <label>avr/interrupt.h</label>
       </node>
-      <node id="196">
+      <node id="188">
         <label>SPI.h</label>
         <link refid="SPI_8h"/>
-        <childnode refid="197" relation="include">
+        <childnode refid="189" relation="include">
         </childnode>
       </node>
-      <node id="197">
+      <node id="189">
         <label>avr/io.h</label>
       </node>
-      <node id="195">
+      <node id="187">
         <label>src/IO/SPI.cpp</label>
         <link refid="SPI.cpp"/>
-        <childnode refid="196" relation="include">
+        <childnode refid="188" relation="include">
         </childnode>
-        <childnode refid="197" relation="include">
+        <childnode refid="189" relation="include">
         </childnode>
-        <childnode refid="198" relation="include">
+        <childnode refid="190" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Project: SensorNode</para><para><ref refid="SPI_8cpp" kindref="compound">SPI.cpp</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 1 </para>    </detaileddescription>
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="SPI_8cpp" kindref="compound">SPI.cpp</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 1 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="19"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SPI_8h" kindref="compound">SPI.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>

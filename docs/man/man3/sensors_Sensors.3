@@ -1,0 +1,102 @@
+.TH "sensors.Sensors" 3 "Tue Apr 4 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sensors.Sensors \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBreadsensor\&.ReadSensor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, prt, bdrate)"
+.br
+.ti -1c
+.RI "def \fBInterpretResponse\fP (self)"
+.br
+.ti -1c
+.RI "def \fB__str__\fP (self)"
+.br
+.ti -1c
+.RI "def \fBspawnSensors\fP (self, nodeAddr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBsensorList\fP"
+.br
+.ti -1c
+.RI "\fBsensorObjList\fP"
+.br
+.ti -1c
+.RI "\fBnodeMAC\fP"
+.br
+.ti -1c
+.RI "\fBcmdID\fP"
+.br
+.ti -1c
+.RI "\fBpString\fP"
+.br
+.ti -1c
+.RI "\fBrespMask\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def sensors\&.Sensors\&.__init__ ( self,  prt,  bdrate)"
+
+.PP
+.nf
+Initialize Sensors Class 
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def sensors\&.Sensors\&.__str__ ( self)"
+
+.PP
+.nf
+Format string for print 
+.fi
+.PP
+ 
+.SS "def sensors\&.Sensors\&.InterpretResponse ( self)"
+
+.PP
+.nf
+Interpret response list 
+.fi
+.PP
+ 
+.SS "def sensors\&.Sensors\&.spawnSensors ( self,  nodeAddr)"
+
+.PP
+.nf
+Spawn sensor objects for a given node address 
+.fi
+.PP
+ 
+.SH "Member Data Documentation"
+.PP 
+.SS "sensors\&.Sensors\&.cmdID"
+
+.SS "sensors\&.Sensors\&.nodeMAC"
+
+.SS "sensors\&.Sensors\&.pString"
+
+.SS "sensors\&.Sensors\&.respMask"
+
+.SS "sensors\&.Sensors\&.sensorList"
+
+.SS "sensors\&.Sensors\&.sensorObjList"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

@@ -4,14 +4,14 @@
     <compoundname>BMP180.hpp</compoundname>
     <includedby refid="BMP180_8cpp" local="yes">src/Sensors/BMP180.cpp</includedby>
     <invincdepgraph>
-      <node id="251">
+      <node id="243">
         <label>src/Sensors/BMP180.cpp</label>
         <link refid="BMP180_8cpp"/>
       </node>
-      <node id="250">
+      <node id="242">
         <label>src/Sensors/BMP180.hpp</label>
         <link refid="BMP180.hpp"/>
-        <childnode refid="251" relation="include">
+        <childnode refid="243" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

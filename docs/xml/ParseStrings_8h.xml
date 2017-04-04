@@ -10,51 +10,51 @@
     <includedby refid="ParseStrings_8cpp" local="yes">src/IO/ParseStrings.cpp</includedby>
     <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
     <incdepgraph>
-      <node id="191">
+      <node id="183">
         <label>stdint.h</label>
       </node>
-      <node id="187">
+      <node id="179">
         <label>stdlib.h</label>
       </node>
-      <node id="188">
+      <node id="180">
         <label>string.h</label>
       </node>
-      <node id="190">
+      <node id="182">
         <label>avr/pgmspace.h</label>
       </node>
-      <node id="186">
+      <node id="178">
         <label>src/IO/ParseStrings.h</label>
         <link refid="ParseStrings.h"/>
-        <childnode refid="187" relation="include">
+        <childnode refid="179" relation="include">
         </childnode>
-        <childnode refid="188" relation="include">
+        <childnode refid="180" relation="include">
         </childnode>
-        <childnode refid="189" relation="include">
+        <childnode refid="181" relation="include">
         </childnode>
-        <childnode refid="190" relation="include">
+        <childnode refid="182" relation="include">
         </childnode>
-        <childnode refid="191" relation="include">
+        <childnode refid="183" relation="include">
         </childnode>
       </node>
-      <node id="189">
+      <node id="181">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="194">
+      <node id="186">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="193">
+      <node id="185">
         <label>src/IO/ParseStrings.cpp</label>
         <link refid="ParseStrings_8cpp"/>
       </node>
-      <node id="192">
+      <node id="184">
         <label>src/IO/ParseStrings.h</label>
         <link refid="ParseStrings.h"/>
-        <childnode refid="193" relation="include">
+        <childnode refid="185" relation="include">
         </childnode>
-        <childnode refid="194" relation="include">
+        <childnode refid="186" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -62,7 +62,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Project: SensorNode</para><para><ref refid="ParseStrings_8h" kindref="compound">ParseStrings.h</ref></para><para>Created on: 15 Dec 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="ParseStrings_8h" kindref="compound">ParseStrings.h</ref></para><para>Created on: 15 Dec 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="19"><highlight class="preprocessor">#ifndef<sp/>PARSESTRINGS_H_</highlight><highlight class="normal"></highlight></codeline>

@@ -4,13 +4,13 @@
     <compoundname>BMP180.cpp</compoundname>
     <includes refid="BMP180_8hpp" local="yes">BMP180.hpp</includes>
     <incdepgraph>
-      <node id="246">
+      <node id="238">
         <label>src/Sensors/BMP180.cpp</label>
         <link refid="BMP180.cpp"/>
-        <childnode refid="247" relation="include">
+        <childnode refid="239" relation="include">
         </childnode>
       </node>
-      <node id="247">
+      <node id="239">
         <label>BMP180.hpp</label>
         <link refid="BMP180_8hpp"/>
       </node>

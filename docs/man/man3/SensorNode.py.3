@@ -1,8 +1,8 @@
-.TH "Python/ReadSensor/SensorNode.py" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "Python/SensorNode.py" 3 "Tue Apr 4 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Python/ReadSensor/SensorNode.py \- 
+Python/SensorNode.py \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -10,26 +10,32 @@ Python/ReadSensor/SensorNode.py \-
 
 .in +1c
 .ti -1c
-.RI " \fBReadSensor\&.SensorNode\fP"
+.RI " \fBSensorNode\fP"
 .br
 .in -1c
 .SS "Variables"
 
 .in +1c
 .ti -1c
-.RI "\fBReadSensor\&.SensorNode\&.rs\fP = ReadSensor\&.ReadSensor('/dev/ttyAMA0', 9600)"
+.RI "list \fBSensorNode\&.nodeAddresses\fP = ['A0:A0:A0:A0:A0']"
 .br
 .ti -1c
-.RI "\fBReadSensor\&.SensorNode\&.availableSensors\fP = rs\&.GetAvailableSensors('A0:A0:A0:A0:A0')"
+.RI "string \fBSensorNode\&.port\fP = '/dev/ttyAMA0'"
 .br
 .ti -1c
-.RI "\fBReadSensor\&.SensorNode\&.ds\fP = rs\&.DS18B20('A0:A0:A0:A0:A0')"
+.RI "int \fBSensorNode\&.baudrate\fP = 9600"
 .br
 .ti -1c
-.RI "\fBReadSensor\&.SensorNode\&.mv\fP = rs\&.Movement('A0:A0:A0:A0:A0')"
+.RI "\fBSensorNode\&.sens\fP = \fBsensors\&.Sensors\fP(port, baudrate)"
 .br
 .ti -1c
-.RI "\fBReadSensor\&.SensorNode\&.light\fP = rs\&.LightAnalog('A0:A0:A0:A0:A0')"
+.RI "\fBSensorNode\&.ds\fP = \fBsensors\&.DS18B20\fP(port, baudrate)"
+.br
+.ti -1c
+.RI "\fBSensorNode\&.mv\fP = \fBsensors\&.Movement\fP(port,baudrate)"
+.br
+.ti -1c
+.RI "\fBSensorNode\&.lightA\fP = \fBsensors\&.LightAnalog\fP(port,baudrate)"
 .br
 .in -1c
 .SH "Author"

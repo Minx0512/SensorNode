@@ -5,14 +5,19 @@
     <member refid="classBMP180_1a8d434a3074ba607d2dbc14657ae224dd" kind="function"><name>~BMP180</name></member>
     <member refid="classBMP180_1a4a5650b6821c73b5ad9654a9765a9d82" kind="function"><name>Init</name></member>
   </compound>
-  <compound refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180" kind="class"><name>ReadSensor::Sensors::Sensors::BMP180</name>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a3c5e2dce2dbf36b6bf58ce03fe9f9760" kind="variable"><name>P</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a1255570ce7a030cd3b8107a7c030689d" kind="variable"><name>unitP</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1afe368d14fb56949c6807490f5f98598f" kind="variable"><name>T</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1aba2f27830d1c5ebb2bbd489b85a20e63" kind="variable"><name>unitT</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a628ea789c02ea34753668a4608695e06" kind="variable"><name>err</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1a876011e5f5ba316f75c74f2b1811d878" kind="variable"><name>bmp</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1BMP180_1ab2e2524391f73ec0d30d410fadd0a652" kind="function"><name>__init__</name></member>
+  <compound refid="classsensors_1_1BMP180" kind="class"><name>sensors::BMP180</name>
+    <member refid="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" kind="variable"><name>P</name></member>
+    <member refid="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" kind="variable"><name>unitP</name></member>
+    <member refid="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" kind="variable"><name>T</name></member>
+    <member refid="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" kind="variable"><name>unitT</name></member>
+    <member refid="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" kind="variable"><name>err</name></member>
+    <member refid="classsensors_1_1BMP180_1ad3ff4c7dc983b1debdb38f9c660f55b9" kind="variable"><name>nodeMAC</name></member>
+    <member refid="classsensors_1_1BMP180_1a9ab7d3dda10fdc56600acf177bb044d2" kind="variable"><name>cmdID</name></member>
+    <member refid="classsensors_1_1BMP180_1a8af1eb779b2df113b788bac02d48a592" kind="variable"><name>pString</name></member>
+    <member refid="classsensors_1_1BMP180_1a9c885621176fba2aa3760f16e7545fd7" kind="variable"><name>respMask</name></member>
+    <member refid="classsensors_1_1BMP180_1a4818f2b88b0969dc27a026b901564035" kind="function"><name>__init__</name></member>
+    <member refid="classsensors_1_1BMP180_1ad249a90be7cff513ac5a9851a9968403" kind="function"><name>InterpretResponse</name></member>
+    <member refid="classsensors_1_1BMP180_1a5f5a28a84b1e4aac10f9ce814730c9b4" kind="function"><name>__str__</name></member>
   </compound>
   <compound refid="classDHT22" kind="class"><name>DHT22</name>
     <member refid="classDHT22_1a0966fbe5db17d7ca6f1f036830e27502" kind="variable"><name>AM2302_WIRE_PORT</name></member>
@@ -37,24 +42,33 @@
     <member refid="classDHT22_1a98ca5e15fa219b57e819691e16707122" kind="function"><name>AM2302_PIN_HIGH</name></member>
     <member refid="classDHT22_1ae2f4f7c34bf80cd3f4bf0da52fa96572" kind="function"><name>AM2302_HIGH_INPUT</name></member>
   </compound>
-  <compound refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22" kind="class"><name>ReadSensor::Sensors::Sensors::DHT22</name>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1ae9fe17893df9d356384716d9f86d267a" kind="variable"><name>H</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a284bad74ab53470b1f545e961f55ebd9" kind="variable"><name>unitH</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a087acd6fb1be3705ffdebd1f47f68e14" kind="variable"><name>T</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1aa8b6d62ac1d8e73b028450d233b0a9be" kind="variable"><name>unitT</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1afc4c56711acfaf61daa10ebb40e06a61" kind="variable"><name>err</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a73a82cd752304cb8a532a41b1d2f49f6" kind="variable"><name>dht</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DHT22_1a12dd37e7cb97ca611f16556f101a2d24" kind="function"><name>__init__</name></member>
+  <compound refid="classsensors_1_1DHT22" kind="class"><name>sensors::DHT22</name>
+    <member refid="classsensors_1_1DHT22_1a0f53e4181f2b2008ffe099a22631a617" kind="variable"><name>H</name></member>
+    <member refid="classsensors_1_1DHT22_1a9055341fda2f3628ef888a39254d1c83" kind="variable"><name>unitH</name></member>
+    <member refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" kind="variable"><name>T</name></member>
+    <member refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" kind="variable"><name>unitT</name></member>
+    <member refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" kind="variable"><name>err</name></member>
+    <member refid="classsensors_1_1DHT22_1a568f624009b01624445ef11fa20405f3" kind="variable"><name>cmdID</name></member>
+    <member refid="classsensors_1_1DHT22_1ab06cbe8e37c2eefe567c269c573eef80" kind="variable"><name>pString</name></member>
+    <member refid="classsensors_1_1DHT22_1a77f4bf3d94cfee52d6ffb003800ae65b" kind="variable"><name>respMask</name></member>
+    <member refid="classsensors_1_1DHT22_1a5958701fe5dfdaf901c03926ca5ffc33" kind="function"><name>__init__</name></member>
+    <member refid="classsensors_1_1DHT22_1a957aa77f0af01e9306aeb86d122969fc" kind="function"><name>InterpretResponse</name></member>
+    <member refid="classsensors_1_1DHT22_1a5c20cdc8c8168efe52e9ce3ce0c3e819" kind="function"><name>__str__</name></member>
   </compound>
-  <compound refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20" kind="class"><name>ReadSensor::Sensors::Sensors::DS18B20</name>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a586ce8e71cef560e2a1a8f2461abe3f1" kind="variable"><name>MAC</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1ac16de12d6071752c317827bdcb2b9462" kind="variable"><name>T</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a6e755c7e5e31b296e06e1825b6b53616" kind="variable"><name>unitT</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a261fd85fee68a5b59104c0b91462283c" kind="variable"><name>ds</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a84998684fc37c7c7c2ec2bdf07bcdbc3" kind="variable"><name>numEl</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1abd12b07478d8d6700391b478e5dc6743" kind="function"><name>__init__</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1a3de3ef1d70ebd46ed47fedf147aa2af9" kind="function"><name>GetValuePair</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20_1af67413d1aaeddd08769e8720f6d55cdb" kind="function"><name>GetAvgTemperature</name></member>
+  <compound refid="classsensors_1_1DS18B20" kind="class"><name>sensors::DS18B20</name>
+    <member refid="classsensors_1_1DS18B20_1a9b75c982811d488391ab52a339d58be8" kind="variable"><name>MAC</name></member>
+    <member refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" kind="variable"><name>T</name></member>
+    <member refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" kind="variable"><name>unitT</name></member>
+    <member refid="classsensors_1_1DS18B20_1a8d25c7e23f6b3e1b424dac9209538a53" kind="variable"><name>nodeMAC</name></member>
+    <member refid="classsensors_1_1DS18B20_1a8a7911c0b96b5c78d097254187f323cc" kind="variable"><name>cmdID</name></member>
+    <member refid="classsensors_1_1DS18B20_1a9edc6c09ffba98f42e5b7cad1685d564" kind="variable"><name>pString</name></member>
+    <member refid="classsensors_1_1DS18B20_1ac064c221c0d23deb28ec74e3e9bb6510" kind="variable"><name>respMask</name></member>
+    <member refid="classsensors_1_1DS18B20_1aef41d6169e461effa962dc97ade7e9ad" kind="variable"><name>numEl</name></member>
+    <member refid="classsensors_1_1DS18B20_1a1029c5b384593c8b9d9826c4f8ba95dc" kind="function"><name>__init__</name></member>
+    <member refid="classsensors_1_1DS18B20_1a95d8a3d2b0e0e4ce4090a9d6778e189e" kind="function"><name>InterpretResponse</name></member>
+    <member refid="classsensors_1_1DS18B20_1a00cce06ee0b0b920cb3df86cc5ad1902" kind="function"><name>GetValuePair</name></member>
+    <member refid="classsensors_1_1DS18B20_1abaf2d655c254d5595879e91860b545f8" kind="function"><name>GetAvgTemperature</name></member>
+    <member refid="classsensors_1_1DS18B20_1a88d7d94ab43332ceea56fa301de9c1d1" kind="function"><name>__str__</name></member>
   </compound>
   <compound refid="classDS18B20" kind="class"><name>DS18B20</name>
     <member refid="classDS18B20_1a4e8d420cd118999883bde12e766bc1d4" kind="variable"><name>WIRE_PORT</name></member>
@@ -82,20 +96,35 @@
     <member refid="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" kind="function"><name>PIN_HIGH</name></member>
     <member refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" kind="function"><name>__attribute__</name></member>
   </compound>
-  <compound refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog" kind="class"><name>ReadSensor::Sensors::Sensors::LightAnalog</name>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog_1aabd7bf3d3ae2138a50cafe651a8b8da6" kind="variable"><name>value</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog_1aa4b4becb12dc426ba3ca572940161087" kind="variable"><name>la</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightAnalog_1a08900be881daf228243383d7d88bc144" kind="function"><name>__init__</name></member>
+  <compound refid="classsensors_1_1LightAnalog" kind="class"><name>sensors::LightAnalog</name>
+    <member refid="classsensors_1_1LightAnalog_1ab1748d35da94bc8da0afead5bded8986" kind="variable"><name>value</name></member>
+    <member refid="classsensors_1_1LightAnalog_1a010099d4873d2f96962dcdf6719364eb" kind="variable"><name>nodeMAC</name></member>
+    <member refid="classsensors_1_1LightAnalog_1ac10be263c620f3d2250f6f938d4a8742" kind="variable"><name>cmdID</name></member>
+    <member refid="classsensors_1_1LightAnalog_1ab478dfaacbcb2388fa2ed06394c2cb81" kind="variable"><name>pString</name></member>
+    <member refid="classsensors_1_1LightAnalog_1a6c8c998239ae4b79136e58252c631717" kind="variable"><name>respMask</name></member>
+    <member refid="classsensors_1_1LightAnalog_1a40c88addc7882f729ce0e3564f9096a3" kind="function"><name>__init__</name></member>
+    <member refid="classsensors_1_1LightAnalog_1acdc03ffb833d9f66e64261e1c6414e88" kind="function"><name>InterpretResponse</name></member>
+    <member refid="classsensors_1_1LightAnalog_1a9fbb4a2fd317e5229302b5d146204e43" kind="function"><name>__str__</name></member>
   </compound>
-  <compound refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightDigital" kind="class"><name>ReadSensor::Sensors::Sensors::LightDigital</name>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightDigital_1ab2b9606c4065e6eef00b79c9aabc5138" kind="variable"><name>value</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightDigital_1a4611ccb175f8fa999881e4a8a988938e" kind="variable"><name>ld</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1LightDigital_1aa42fbf9cbcc4647fd970bc6926d1d258" kind="function"><name>__init__</name></member>
+  <compound refid="classsensors_1_1LightDigital" kind="class"><name>sensors::LightDigital</name>
+    <member refid="classsensors_1_1LightDigital_1ad801e3eae346e5661ce737ade49e6ac1" kind="variable"><name>value</name></member>
+    <member refid="classsensors_1_1LightDigital_1aff8ca45bed10fa813320e1c9d9c98629" kind="variable"><name>nodeMAC</name></member>
+    <member refid="classsensors_1_1LightDigital_1a52e5f8dd9fe1ebde97aa97cbfc36f630" kind="variable"><name>cmdID</name></member>
+    <member refid="classsensors_1_1LightDigital_1a4006bea0c1d6a032afa6285c64ab3eb2" kind="variable"><name>pString</name></member>
+    <member refid="classsensors_1_1LightDigital_1a546ea9eee933df95e39666468fb110af" kind="variable"><name>respMask</name></member>
+    <member refid="classsensors_1_1LightDigital_1aea795c27407bb29a13affc59590f3d35" kind="function"><name>__init__</name></member>
+    <member refid="classsensors_1_1LightDigital_1a9c4ce46c5f389829d0c5e0bfe2a0f2b2" kind="function"><name>InterpretResponse</name></member>
+    <member refid="classsensors_1_1LightDigital_1a41c4038570137761e4f9600e487e3f6b" kind="function"><name>__str__</name></member>
   </compound>
-  <compound refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement" kind="class"><name>ReadSensor::Sensors::Sensors::Movement</name>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement_1afca15a3e5b7fd64c76fb803340cff411" kind="variable"><name>move</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement_1a7004579e8312dd94942ff029d65f7586" kind="variable"><name>mv</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Movement_1af14f8516b69837782c98961ef449597c" kind="function"><name>__init__</name></member>
+  <compound refid="classsensors_1_1Movement" kind="class"><name>sensors::Movement</name>
+    <member refid="classsensors_1_1Movement_1a11256fb90a76350e4b908a71c72d1e99" kind="variable"><name>move</name></member>
+    <member refid="classsensors_1_1Movement_1abf7c369726a2aacb0e03accdbdcfca14" kind="variable"><name>nodeMAC</name></member>
+    <member refid="classsensors_1_1Movement_1abce1eee54738c84ae71c778a4fed1af8" kind="variable"><name>cmdID</name></member>
+    <member refid="classsensors_1_1Movement_1a630da6fa554c8a0d816067d804c02baa" kind="variable"><name>pString</name></member>
+    <member refid="classsensors_1_1Movement_1a4f97ac0c0891b427c241df101d7b36ee" kind="variable"><name>respMask</name></member>
+    <member refid="classsensors_1_1Movement_1a7299348056ba424f565ffe433008411d" kind="function"><name>__init__</name></member>
+    <member refid="classsensors_1_1Movement_1a7cffcbdac3bee2a004fcf51366dbd0d1" kind="function"><name>InterpretResponse</name></member>
+    <member refid="classsensors_1_1Movement_1a9f28937de14135f50dd263d05834a535" kind="function"><name>__str__</name></member>
   </compound>
   <compound refid="classNRF24L01" kind="class"><name>NRF24L01</name>
     <member refid="classNRF24L01_1a749f38c45c00905b3d8e8c180626bff6" kind="variable"><name>failureDetected</name></member>
@@ -226,33 +255,43 @@
     <member refid="classPhotoresistor_1a5c3bc9e8877b54faeded1450a39552fb" kind="function"><name>setType</name></member>
     <member refid="classPhotoresistor_1aea81da3cce831497e50b02344bbba238" kind="function"><name>readADValue</name></member>
   </compound>
-  <compound refid="classReadSensor_1_1ReadSensor_1_1ReadSensor" kind="class"><name>ReadSensor::ReadSensor::ReadSensor</name>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a3a0ed6c9acd4caf309f76e32762da3eb" kind="variable"><name>sensorMAC</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a754b9a5ba983015102db5cc6db0220c4" kind="variable"><name>cmdID</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a887831d87c0bd60ce4e420ae005ff21b" kind="variable"><name>propertyString</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a23b1dcdc7ca0636c9259b85206365d52" kind="variable"><name>queryStr</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1abd2cce4838393915a5607360e8893efd" kind="variable"><name>serialCon</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1affaacf01b0a68018e616c2d3e99674db" kind="variable"><name>resp</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a985eaa0e88d0eb794c078fd634a425c5" kind="variable"><name>availableSensors</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1ac63fc790db03ad3f967f55e822439f3a" kind="function"><name>__init__</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a1baee16b9594cd5e936d70ba5b2ca766" kind="function"><name>GetAvailableSensors</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a4886078ef8141638fa77f74b460cc6a8" kind="function"><name>DS18B20</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a0fce5453956e120cf8b803f4bdf8c8f0" kind="function"><name>DHT22</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a05b0c3d365d87a9918b31ee59e653bc0" kind="function"><name>Movement</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1a64bc538f36af840747f77ad04dcfb2b6" kind="function"><name>LightAnalog</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1adf67c50f274add6505dee49690f1de93" kind="function"><name>LightDigital</name></member>
-    <member refid="classReadSensor_1_1ReadSensor_1_1ReadSensor_1abfe83fdebe959943228e1d7588d12c18" kind="function"><name>BMP180</name></member>
+  <compound refid="classreadsensor_1_1ReadSensor" kind="class"><name>readsensor::ReadSensor</name>
+    <member refid="classreadsensor_1_1ReadSensor_1a26862f7f2d34ceb3201cfeb7339dd21b" kind="variable"><name>__InterpretResponse</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1aa5479d51839a34226df007973db5b28a" kind="variable"><name>port</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a55ad7cd6f26347c571cdc03025d52449" kind="variable"><name>baudrate</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" kind="variable"><name>nodeMAC</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a3f1a8b0a95d14b00ceeb4a1d90db4146" kind="variable"><name>cmdID</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a260848062ae91ce183d5b8a7bb4336a9" kind="variable"><name>pString</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1ac90ad89a36244ff79ec5de39250dbe65" kind="variable"><name>queryStr</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1ab85a47186a692e87ed91dfbd6421ac9f" kind="variable"><name>serialCon</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a3bfdf8d80b9b2c6e3756546f66684543" kind="variable"><name>resp</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a2add837e5b36f9242b3481f30be5ace9" kind="variable"><name>respMask</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" kind="variable"><name>interpResp</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1ae04c9a7ad4cb4a0c68225cea810f9edd" kind="variable"><name>availableSensors</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1ab313380d075409d1fccdd2b47c958cc9" kind="variable"><name>cmdIDs</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" kind="function"><name>__init__</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1af42ab8caf111db6f14d49cbcfad445c3" kind="function"><name>InterpretResponse</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a9eec15e8b601b447851376a2341cbe6e" kind="function"><name>Update</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a23c251ae6bc0343f275e12199c35e0d2" kind="function"><name>SetNodeAddress</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a52daa7fe6c6dba66b99d11a3c01567ba" kind="function"><name>__str__</name></member>
   </compound>
-  <compound refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors" kind="class"><name>ReadSensor::Sensors::Sensors::Sensors</name>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors_1adb8986b5f974b88f52355bae4c331411" kind="variable"><name>sens</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors_1a3b02e5ee66fce5c7ee146305bc82137b" kind="variable"><name>s</name></member>
-    <member refid="classReadSensor_1_1Sensors_1_1Sensors_1_1Sensors_1aaaf67ad41a07b64c3485ebca8bb2b656" kind="function"><name>__init__</name></member>
+  <compound refid="classsensors_1_1Sensors" kind="class"><name>sensors::Sensors</name>
+    <member refid="classsensors_1_1Sensors_1a70cd97f59cdb39f1f02260551d7e5ea5" kind="variable"><name>sensorList</name></member>
+    <member refid="classsensors_1_1Sensors_1a753ac6bef7233285cbf9651d5f5a5b7d" kind="variable"><name>sensorObjList</name></member>
+    <member refid="classsensors_1_1Sensors_1ac811ff09bf218c43f563f26de95eae64" kind="variable"><name>nodeMAC</name></member>
+    <member refid="classsensors_1_1Sensors_1af71ebfb0189d41368562f0afd8add7b8" kind="variable"><name>cmdID</name></member>
+    <member refid="classsensors_1_1Sensors_1af959941df6d3f50444fb78e1cf4f3697" kind="variable"><name>pString</name></member>
+    <member refid="classsensors_1_1Sensors_1a13c3cb41e69dda2183c99a11a6cc69d5" kind="variable"><name>respMask</name></member>
+    <member refid="classsensors_1_1Sensors_1a6f66687dc0058806d12630e3459a4b39" kind="function"><name>__init__</name></member>
+    <member refid="classsensors_1_1Sensors_1ae27acc61935425a396ba555e00b9035d" kind="function"><name>InterpretResponse</name></member>
+    <member refid="classsensors_1_1Sensors_1a31172fc78a9e842c470acb6719363e5c" kind="function"><name>__str__</name></member>
+    <member refid="classsensors_1_1Sensors_1a99031e3e3ce8a181ee662daef4857cc3" kind="function"><name>spawnSensors</name></member>
   </compound>
-  <compound refid="classReadSensor_1_1SerialConnection_1_1SerialConnection" kind="class"><name>ReadSensor::SerialConnection::SerialConnection</name>
-    <member refid="classReadSensor_1_1SerialConnection_1_1SerialConnection_1a1e2d24c2fd693a56797a611a33cecd67" kind="variable"><name>ser</name></member>
-    <member refid="classReadSensor_1_1SerialConnection_1_1SerialConnection_1a7942e305c2383cdbae17b3303f7dfe7a" kind="variable"><name>err</name></member>
-    <member refid="classReadSensor_1_1SerialConnection_1_1SerialConnection_1ac1fbc3f627689d90fe96d3e5d15ba117" kind="function"><name>__init__</name></member>
-    <member refid="classReadSensor_1_1SerialConnection_1_1SerialConnection_1ae89d6b192e2aad071ff18f44818a7ac9" kind="function"><name>ReadData</name></member>
+  <compound refid="classserialconnection_1_1SerialConnection" kind="class"><name>serialconnection::SerialConnection</name>
+    <member refid="classserialconnection_1_1SerialConnection_1a5b2f2670cc97ed8970dadd829f623d66" kind="variable"><name>ser</name></member>
+    <member refid="classserialconnection_1_1SerialConnection_1a074a88ccb2c22fc8f81a98c15dfdffe4" kind="variable"><name>err</name></member>
+    <member refid="classserialconnection_1_1SerialConnection_1ad1515dd3aa20eaa90bd30534a6c43f8e" kind="function"><name>__init__</name></member>
+    <member refid="classserialconnection_1_1SerialConnection_1ad49c59c39c57ee1424e797fb667f18f5" kind="function"><name>ReadData</name></member>
   </compound>
   <compound refid="classSPI" kind="class"><name>SPI</name>
     <member refid="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" kind="variable"><name>SPI_DDR</name></member>
@@ -279,34 +318,28 @@
     <member refid="classUSART_1a42a1789b9a8805da6ed3f4f62f74a764" kind="function"><name>getByte</name></member>
     <member refid="classUSART_1a0103c87dca8c49a1fa9ec607d4d494a9" kind="function"><name>putByte</name></member>
   </compound>
-  <compound refid="namespaceReadSensor" kind="namespace"><name>ReadSensor</name>
+  <compound refid="namespacereadsensor" kind="namespace"><name>readsensor</name>
   </compound>
-  <compound refid="namespaceReadSensor_1_1ReadSensor" kind="namespace"><name>ReadSensor::ReadSensor</name>
+  <compound refid="namespaceSensorNode" kind="namespace"><name>SensorNode</name>
+    <member refid="namespaceSensorNode_1ac1e752b62092c1c9e27da570c73c0ce7" kind="variable"><name>nodeAddresses</name></member>
+    <member refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kind="variable"><name>port</name></member>
+    <member refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kind="variable"><name>baudrate</name></member>
+    <member refid="namespaceSensorNode_1a341717027383e08a67cc397e2d00a99e" kind="variable"><name>sens</name></member>
+    <member refid="namespaceSensorNode_1aaa177ea377a1a6a4ae0b9426064e940d" kind="variable"><name>ds</name></member>
+    <member refid="namespaceSensorNode_1ad06784c1a82686d5c2d6908f088c16f6" kind="variable"><name>mv</name></member>
+    <member refid="namespaceSensorNode_1a973908ebd2519a83b199d68f97f31a3f" kind="variable"><name>lightA</name></member>
   </compound>
-  <compound refid="namespaceReadSensor_1_1SensorNode" kind="namespace"><name>ReadSensor::SensorNode</name>
-    <member refid="namespaceReadSensor_1_1SensorNode_1aab4130f05e0d383004da4b2199def54d" kind="variable"><name>rs</name></member>
-    <member refid="namespaceReadSensor_1_1SensorNode_1ab825456060046c46088453e242844a67" kind="variable"><name>availableSensors</name></member>
-    <member refid="namespaceReadSensor_1_1SensorNode_1a8171a151bb4b0ae935ff538ce6791944" kind="variable"><name>ds</name></member>
-    <member refid="namespaceReadSensor_1_1SensorNode_1a6554f3410cedc47453c44dffec450d82" kind="variable"><name>mv</name></member>
-    <member refid="namespaceReadSensor_1_1SensorNode_1aaf373686eec11b55f9271c70d083bd70" kind="variable"><name>light</name></member>
+  <compound refid="namespacesensors" kind="namespace"><name>sensors</name>
   </compound>
-  <compound refid="namespaceReadSensor_1_1Sensors" kind="namespace"><name>ReadSensor::Sensors</name>
+  <compound refid="namespaceserialconnection" kind="namespace"><name>serialconnection</name>
   </compound>
-  <compound refid="namespaceReadSensor_1_1Sensors_1_1Sensors" kind="namespace"><name>ReadSensor::Sensors::Sensors</name>
-  </compound>
-  <compound refid="namespaceReadSensor_1_1SerialConnection" kind="namespace"><name>ReadSensor::SerialConnection</name>
-  </compound>
-  <compound refid="____init_____8py" kind="file"><name>__init__.py</name>
-  </compound>
-  <compound refid="Sensors_2____init_____8py" kind="file"><name>__init__.py</name>
-  </compound>
-  <compound refid="ReadSensor_8py" kind="file"><name>ReadSensor.py</name>
+  <compound refid="readsensor_8py" kind="file"><name>readsensor.py</name>
   </compound>
   <compound refid="SensorNode_8py" kind="file"><name>SensorNode.py</name>
   </compound>
-  <compound refid="Sensors_8py" kind="file"><name>Sensors.py</name>
+  <compound refid="sensors_8py" kind="file"><name>sensors.py</name>
   </compound>
-  <compound refid="SerialConnection_8py" kind="file"><name>SerialConnection.py</name>
+  <compound refid="serialconnection_8py" kind="file"><name>serialconnection.py</name>
   </compound>
   <compound refid="ParseStrings_8cpp" kind="file"><name>ParseStrings.cpp</name>
   </compound>
@@ -560,11 +593,7 @@
   </compound>
   <compound refid="dir_8669bb0c9144cb4951e4111ac38d1610" kind="dir"><name>Python</name>
   </compound>
-  <compound refid="dir_5a372e8878b735a1a270596d798bad8d" kind="dir"><name>Python/ReadSensor</name>
-  </compound>
   <compound refid="dir_afe58f6d0ef7eec69c2706509daaefe7" kind="dir"><name>src/Sensors</name>
-  </compound>
-  <compound refid="dir_3c287593e1dc82d7684ea84d261c614e" kind="dir"><name>Python/ReadSensor/Sensors</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>

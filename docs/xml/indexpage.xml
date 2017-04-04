@@ -4,7 +4,7 @@
     <compoundname>index</compoundname>
     <title>SensorNode</title>
     <detaileddescription>
-<para>Project: SensorNode</para><para><ref refid="main_8cpp" kindref="compound">main.cpp</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2</para><sect1 id="/home/matthias/Documents/Projects/SensorNode/SensorNode/src/main.cpp_1License">
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="main_8cpp" kindref="compound">main.cpp</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2</para><sect1 id="/home/matthias/Documents/Projects/SensorNode/SensorNode/src/main.cpp_1License">
 <title>License</title>
 </sect1>
     </detaileddescription>

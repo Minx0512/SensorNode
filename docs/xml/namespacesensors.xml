@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacesensors" kind="namespace" language="Python">
+    <compoundname>sensors</compoundname>
+    <innerclass refid="classsensors_1_1BMP180" prot="public">sensors::BMP180</innerclass>
+    <innerclass refid="classsensors_1_1DHT22" prot="public">sensors::DHT22</innerclass>
+    <innerclass refid="classsensors_1_1DS18B20" prot="public">sensors::DS18B20</innerclass>
+    <innerclass refid="classsensors_1_1LightAnalog" prot="public">sensors::LightAnalog</innerclass>
+    <innerclass refid="classsensors_1_1LightDigital" prot="public">sensors::LightDigital</innerclass>
+    <innerclass refid="classsensors_1_1Movement" prot="public">sensors::Movement</innerclass>
+    <innerclass refid="classsensors_1_1Sensors" prot="public">sensors::Sensors</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/sensors.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

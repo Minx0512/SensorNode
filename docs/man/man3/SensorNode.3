@@ -1,4 +1,4 @@
-.TH "SensorNode" 3 "Mon Apr 3 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "SensorNode" 3 "Tue Apr 4 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,232 +6,46 @@ SensorNode \-
 .SH SYNOPSIS
 .br
 .PP
-.SS "Functions"
-
-.in +1c
-.ti -1c
-.RI "def \fBGetMovement\fP (\fBsock\fP)"
-.br
-.ti -1c
-.RI "def \fBGetTempHumidDHT22\fP (\fBsock\fP)"
-.br
-.ti -1c
-.RI "def \fBGetLightsense\fP (\fBsock\fP)"
-.br
-.ti -1c
-.RI "def \fBGetTime\fP ()"
-.br
-.ti -1c
-.RI "def \fBisNightTime\fP (lightValue)"
-.br
-.ti -1c
-.RI "def \fBSleepMode\fP (slpmd)"
-.br
-.ti -1c
-.RI "def \fBNoMovement\fP (lastmv, lightV, tIn)"
-.br
-.ti -1c
-.RI "def \fBOnMovement\fP (lightV, tIn, tOut, rsEneabled)"
-.br
-.ti -1c
-.RI "def \fBDetectMovement\fP (socket, tInside, tOutside, rSensorsEnabled, slpmode)"
-.br
-.ti -1c
-.RI "def \fBReadSystemConfig\fP (socket)"
-.br
-.ti -1c
-.RI "def \fBReadSensorDataLight\fP (socket, tnum)"
-.br
-.ti -1c
-.RI "def \fBReadSensorData\fP (socket, tnum)"
-.br
-.ti -1c
-.RI "def \fBSwitchON\fP (frame)"
-.br
-.ti -1c
-.RI "def \fBSwitchOFF\fP (frame)"
-.br
-.ti -1c
-.RI "def \fBLightsAutoON\fP (frame)"
-.br
-.ti -1c
-.RI "def \fBLightsAutoOFF\fP (frame)"
-.br
-.ti -1c
-.RI "def \fBLightsAutoSlider\fP (slider)"
-.br
-.ti -1c
-.RI "def \fBSensorsMenu\fP (frame)"
-.br
-.ti -1c
-.RI "def \fBLightsMenu\fP (frame)"
-.br
-.ti -1c
-.RI "def \fBSystemParamsMenu\fP (socket, frame)"
-.br
-.ti -1c
-.RI "def \fBConfigureMenu\fP (frame)"
-.br
-.in -1c
 .SS "Variables"
 
 .in +1c
 .ti -1c
-.RI "int \fBport\fP = 1"
+.RI "list \fBnodeAddresses\fP = ['A0:A0:A0:A0:A0']"
 .br
 .ti -1c
-.RI "int \fBconn\fP = 0"
+.RI "string \fBport\fP = '/dev/ttyAMA0'"
 .br
 .ti -1c
-.RI "string \fBout_str\fP = ''"
+.RI "int \fBbaudrate\fP = 9600"
 .br
 .ti -1c
-.RI "string \fBbd_addr\fP = '98:D3:31:FB:31:A6'"
+.RI "\fBsens\fP = \fBsensors\&.Sensors\fP(\fBport\fP, \fBbaudrate\fP)"
 .br
 .ti -1c
-.RI "int \fBremoteSensorsEnabled\fP = 0"
+.RI "\fBds\fP = \fBsensors\&.DS18B20\fP(\fBport\fP, \fBbaudrate\fP)"
 .br
 .ti -1c
-.RI "int \fBsleepmode\fP = 0"
+.RI "\fBmv\fP = \fBsensors\&.Movement\fP(\fBport\fP,\fBbaudrate\fP)"
 .br
 .ti -1c
-.RI "\fBthreadLock\fP = thread\&.allocate_lock()"
-.br
-.ti -1c
-.RI "\fBtop\fP = Tk()"
-.br
-.ti -1c
-.RI "\fBtimeStr\fP = StringVar()"
-.br
-.ti -1c
-.RI "\fBlightsMsg\fP = StringVar()"
-.br
-.ti -1c
-.RI "\fBlightVal\fP = DoubleVar()"
-.br
-.ti -1c
-.RI "\fBmenuID\fP = IntVar()"
-.br
-.ti -1c
-.RI "\fBDHT22TempVal\fP = DoubleVar()"
-.br
-.ti -1c
-.RI "\fBDHT22TempUnit\fP = StringVar()"
-.br
-.ti -1c
-.RI "\fBDHT22HumVal\fP = DoubleVar()"
-.br
-.ti -1c
-.RI "\fBDHT22HumUnit\fP = StringVar()"
-.br
-.ti -1c
-.RI "\fBsock\fP = BlueConnect(\fBbd_addr\fP,\fBport\fP,5\&.0)"
-.br
-.ti -1c
-.RI "int \fBprevmins\fP = 0"
-.br
-.ti -1c
-.RI "int \fBthresh\fP = 360"
-.br
-.ti -1c
-.RI "int \fBtreshOut\fP = 360"
-.br
-.ti -1c
-.RI "\fBautoLights\fP = IntVar()"
-.br
-.ti -1c
-.RI "\fBstatusLight\fP = IntVar()"
+.RI "\fBlightA\fP = \fBsensors\&.LightAnalog\fP(\fBport\fP,\fBbaudrate\fP)"
 .br
 .in -1c
-.SH "Function Documentation"
-.PP 
-.SS "def SensorNode\&.ConfigureMenu ( frame)"
-
-.SS "def SensorNode\&.DetectMovement ( socket,  tInside,  tOutside,  rSensorsEnabled,  slpmode)"
-
-.SS "def SensorNode\&.GetLightsense ( sock)"
-
-.SS "def SensorNode\&.GetMovement ( sock)"
-
-.SS "def SensorNode\&.GetTempHumidDHT22 ( sock)"
-
-.SS "def SensorNode\&.GetTime ()"
-
-.SS "def SensorNode\&.isNightTime ( lightValue)"
-
-.SS "def SensorNode\&.LightsAutoOFF ( frame)"
-
-.SS "def SensorNode\&.LightsAutoON ( frame)"
-
-.SS "def SensorNode\&.LightsAutoSlider ( slider)"
-
-.SS "def SensorNode\&.LightsMenu ( frame)"
-
-.SS "def SensorNode\&.NoMovement ( lastmv,  lightV,  tIn)"
-
-.SS "def SensorNode\&.OnMovement ( lightV,  tIn,  tOut,  rsEneabled)"
-
-.SS "def SensorNode\&.ReadSensorData ( socket,  tnum)"
-
-.SS "def SensorNode\&.ReadSensorDataLight ( socket,  tnum)"
-
-.SS "def SensorNode\&.ReadSystemConfig ( socket)"
-
-.SS "def SensorNode\&.SensorsMenu ( frame)"
-
-.SS "def SensorNode\&.SleepMode ( slpmd)"
-
-.SS "def SensorNode\&.SwitchOFF ( frame)"
-
-.SS "def SensorNode\&.SwitchON ( frame)"
-
-.SS "def SensorNode\&.SystemParamsMenu ( socket,  frame)"
-
 .SH "Variable Documentation"
 .PP 
-.SS "SensorNode\&.autoLights = IntVar()"
+.SS "int SensorNode\&.baudrate = 9600"
 
-.SS "string SensorNode\&.bd_addr = '98:D3:31:FB:31:A6'"
+.SS "SensorNode\&.ds = \fBsensors\&.DS18B20\fP(\fBport\fP, \fBbaudrate\fP)"
 
-.SS "int SensorNode\&.conn = 0"
+.SS "SensorNode\&.lightA = \fBsensors\&.LightAnalog\fP(\fBport\fP,\fBbaudrate\fP)"
 
-.SS "SensorNode\&.DHT22HumUnit = StringVar()"
+.SS "SensorNode\&.mv = \fBsensors\&.Movement\fP(\fBport\fP,\fBbaudrate\fP)"
 
-.SS "SensorNode\&.DHT22HumVal = DoubleVar()"
+.SS "list SensorNode\&.nodeAddresses = ['A0:A0:A0:A0:A0']"
 
-.SS "SensorNode\&.DHT22TempUnit = StringVar()"
+.SS "string SensorNode\&.port = '/dev/ttyAMA0'"
 
-.SS "SensorNode\&.DHT22TempVal = DoubleVar()"
-
-.SS "SensorNode\&.lightsMsg = StringVar()"
-
-.SS "SensorNode\&.lightVal = DoubleVar()"
-
-.SS "SensorNode\&.menuID = IntVar()"
-
-.SS "string SensorNode\&.out_str = ''"
-
-.SS "int SensorNode\&.port = 1"
-
-.SS "int SensorNode\&.prevmins = 0"
-
-.SS "int SensorNode\&.remoteSensorsEnabled = 0"
-
-.SS "int SensorNode\&.sleepmode = 0"
-
-.SS "SensorNode\&.sock = BlueConnect(\fBbd_addr\fP,\fBport\fP,5\&.0)"
-
-.SS "SensorNode\&.statusLight = IntVar()"
-
-.SS "SensorNode\&.threadLock = thread\&.allocate_lock()"
-
-.SS "int SensorNode\&.thresh = 360"
-
-.SS "SensorNode\&.timeStr = StringVar()"
-
-.SS "SensorNode\&.top = Tk()"
-
-.SS "int SensorNode\&.treshOut = 360"
+.SS "SensorNode\&.sens = \fBsensors\&.Sensors\fP(\fBport\fP, \fBbaudrate\fP)"
 
 .SH "Author"
 .PP 

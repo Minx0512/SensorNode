@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lightanalog',['LightAnalog',['../classReadSensor_1_1ReadSensor_1_1ReadSensor.html#a64bc538f36af840747f77ad04dcfb2b6',1,'ReadSensor::ReadSensor::ReadSensor']]],
-  ['lightdigital',['LightDigital',['../classReadSensor_1_1ReadSensor_1_1ReadSensor.html#adf67c50f274add6505dee49690f1de93',1,'ReadSensor::ReadSensor::ReadSensor']]]
+  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['maskirq',['maskIRQ',['../classNRF24L01.html#ad23d4111c3a26d18db51eb72a5491dbb',1,'NRF24L01']]]
 ];

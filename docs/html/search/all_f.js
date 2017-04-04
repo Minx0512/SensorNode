@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['querystr',['queryStr',['../classReadSensor_1_1ReadSensor_1_1ReadSensor.html#a23b1dcdc7ca0636c9259b85206365d52',1,'ReadSensor::ReadSensor::ReadSensor']]]
+  ['querystr',['queryStr',['../classreadsensor_1_1ReadSensor.html#ac90ad89a36244ff79ec5de39250dbe65',1,'readsensor::ReadSensor']]]
 ];

@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classsensors_1_1BMP180" kind="class" language="Python" prot="public">
+    <compoundname>sensors::BMP180</compoundname>
+    <basecompoundref refid="classreadsensor_1_1ReadSensor" prot="public" virt="non-virtual">readsensor.ReadSensor</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensors.BMP180::P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="228" column="1" bodyfile="Python/sensors.py" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensors.BMP180::unitP</definition>
+        <argsstring></argsstring>
+        <name>unitP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="229" column="1" bodyfile="Python/sensors.py" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensors.BMP180::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="230" column="1" bodyfile="Python/sensors.py" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensors.BMP180::unitT</definition>
+        <argsstring></argsstring>
+        <name>unitT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="231" column="1" bodyfile="Python/sensors.py" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensors.BMP180::err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="232" column="1" bodyfile="Python/sensors.py" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsensors_1_1BMP180_1ad3ff4c7dc983b1debdb38f9c660f55b9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensors.BMP180::nodeMAC</definition>
+        <argsstring></argsstring>
+        <name>nodeMAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="233" column="1" bodyfile="Python/sensors.py" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsensors_1_1BMP180_1a9ab7d3dda10fdc56600acf177bb044d2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensors.BMP180::cmdID</definition>
+        <argsstring></argsstring>
+        <name>cmdID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="234" column="1" bodyfile="Python/sensors.py" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsensors_1_1BMP180_1a8af1eb779b2df113b788bac02d48a592" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensors.BMP180::pString</definition>
+        <argsstring></argsstring>
+        <name>pString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="235" column="1" bodyfile="Python/sensors.py" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsensors_1_1BMP180_1a9c885621176fba2aa3760f16e7545fd7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sensors.BMP180::respMask</definition>
+        <argsstring></argsstring>
+        <name>respMask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="236" column="1" bodyfile="Python/sensors.py" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsensors_1_1BMP180_1a4818f2b88b0969dc27a026b901564035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def sensors.BMP180.__init__</definition>
+        <argsstring>(self, prt, bdrate)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>prt</type>
+          <defname>prt</defname>
+        </param>
+        <param>
+          <type>bdrate</type>
+          <defname>bdrate</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="226" column="1" bodyfile="Python/sensors.py" bodystart="226" bodyend="238"/>
+        <references refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" compoundref="readsensor_8py" startline="11" endline="26">readsensor.ReadSensor.__init__</references>
+      </memberdef>
+      <memberdef kind="function" id="classsensors_1_1BMP180_1ad249a90be7cff513ac5a9851a9968403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def sensors.BMP180.InterpretResponse</definition>
+        <argsstring>(self)</argsstring>
+        <name>InterpretResponse</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Interpret response list </verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="239" column="1" bodyfile="Python/sensors.py" bodystart="239" bodyend="246"/>
+        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="122">sensors.DS18B20.T</references>
+        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="154">sensors.DHT22.T</references>
+        <references refid="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" compoundref="sensors_8py" startline="230">sensors.BMP180.T</references>
+        <references refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" compoundref="readsensor_8py" startline="21">readsensor.ReadSensor.interpResp</references>
+        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="123">sensors.DS18B20.unitT</references>
+        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="155">sensors.DHT22.unitT</references>
+        <references refid="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" compoundref="sensors_8py" startline="231">sensors.BMP180.unitT</references>
+        <references refid="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" compoundref="sensors_8py" startline="228">sensors.BMP180.P</references>
+        <references refid="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" compoundref="sensors_8py" startline="229">sensors.BMP180.unitP</references>
+        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="156">sensors.DHT22.err</references>
+        <references refid="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" compoundref="sensors_8py" startline="232">sensors.BMP180.err</references>
+      </memberdef>
+      <memberdef kind="function" id="classsensors_1_1BMP180_1a5f5a28a84b1e4aac10f9ce814730c9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def sensors.BMP180.__str__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__str__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/sensors.py" line="247" column="1" bodyfile="Python/sensors.py" bodystart="247" bodyend="256"/>
+        <references refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" compoundref="readsensor_8py" startline="14">readsensor.ReadSensor.nodeMAC</references>
+        <references refid="classsensors_1_1DS18B20_1a738644d266b4149bdd79e1a269e555ad" compoundref="sensors_8py" startline="122">sensors.DS18B20.T</references>
+        <references refid="classsensors_1_1DHT22_1af42b72d6f11a320fe7e94a23734a109e" compoundref="sensors_8py" startline="154">sensors.DHT22.T</references>
+        <references refid="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" compoundref="sensors_8py" startline="230">sensors.BMP180.T</references>
+        <references refid="classsensors_1_1DS18B20_1a2a93fcbbf67debf4356c6c3a9b2b58f3" compoundref="sensors_8py" startline="123">sensors.DS18B20.unitT</references>
+        <references refid="classsensors_1_1DHT22_1a9fab2812780c9f861d4bf8adc4d287d6" compoundref="sensors_8py" startline="155">sensors.DHT22.unitT</references>
+        <references refid="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" compoundref="sensors_8py" startline="231">sensors.BMP180.unitT</references>
+        <references refid="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" compoundref="sensors_8py" startline="228">sensors.BMP180.P</references>
+        <references refid="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" compoundref="sensors_8py" startline="229">sensors.BMP180.unitP</references>
+        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="156">sensors.DHT22.err</references>
+        <references refid="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" compoundref="sensors_8py" startline="232">sensors.BMP180.err</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="59">
+        <label>readsensor.ReadSensor</label>
+        <link refid="classreadsensor_1_1ReadSensor"/>
+      </node>
+      <node id="58">
+        <label>sensors.BMP180</label>
+        <link refid="classsensors_1_1BMP180"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="61">
+        <label>readsensor.ReadSensor</label>
+        <link refid="classreadsensor_1_1ReadSensor"/>
+      </node>
+      <node id="60">
+        <label>sensors.BMP180</label>
+        <link refid="classsensors_1_1BMP180"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Python/sensors.py" line="225" column="1" bodyfile="Python/sensors.py" bodystart="225" bodyend="256"/>
+    <listofallmembers>
+      <member refid="classsensors_1_1BMP180_1a4818f2b88b0969dc27a026b901564035" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>__init__</name></member>
+      <member refid="classsensors_1_1BMP180_1a5f5a28a84b1e4aac10f9ce814730c9b4" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>__str__</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1ae04c9a7ad4cb4a0c68225cea810f9edd" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>availableSensors</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1a55ad7cd6f26347c571cdc03025d52449" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>baudrate</name></member>
+      <member refid="classsensors_1_1BMP180_1a9ab7d3dda10fdc56600acf177bb044d2" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>cmdID</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1ab313380d075409d1fccdd2b47c958cc9" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>cmdIDs</name></member>
+      <member refid="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>err</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>interpResp</name></member>
+      <member refid="classsensors_1_1BMP180_1ad249a90be7cff513ac5a9851a9968403" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>InterpretResponse</name></member>
+      <member refid="classsensors_1_1BMP180_1ad3ff4c7dc983b1debdb38f9c660f55b9" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>nodeMAC</name></member>
+      <member refid="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>P</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1aa5479d51839a34226df007973db5b28a" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>port</name></member>
+      <member refid="classsensors_1_1BMP180_1a8af1eb779b2df113b788bac02d48a592" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>pString</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1ac90ad89a36244ff79ec5de39250dbe65" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>queryStr</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1a3bfdf8d80b9b2c6e3756546f66684543" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>resp</name></member>
+      <member refid="classsensors_1_1BMP180_1a9c885621176fba2aa3760f16e7545fd7" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>respMask</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1ab85a47186a692e87ed91dfbd6421ac9f" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>serialCon</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1a23c251ae6bc0343f275e12199c35e0d2" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>SetNodeAddress</name></member>
+      <member refid="classsensors_1_1BMP180_1a2063dc8bbcdbe07979e3faf2f6e8eb7d" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>T</name></member>
+      <member refid="classsensors_1_1BMP180_1a3646abe1f61aa50d15047f09588a2be1" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>unitP</name></member>
+      <member refid="classsensors_1_1BMP180_1a954ddd1f76899d7d2b05aed669abd094" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>unitT</name></member>
+      <member refid="classreadsensor_1_1ReadSensor_1a9eec15e8b601b447851376a2341cbe6e" prot="public" virt="non-virtual"><scope>sensors::BMP180</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -7,44 +7,44 @@
     <includedby refid="NRF24L01_8h" local="yes">src/Wireless/NRF24L01.h</includedby>
     <includedby refid="NRF24L01_8cpp" local="yes">src/Wireless/NRF24L01.cpp</includedby>
     <incdepgraph>
-      <node id="200">
+      <node id="192">
         <label>src/IO/SPI.h</label>
         <link refid="SPI.h"/>
-        <childnode refid="201" relation="include">
+        <childnode refid="193" relation="include">
         </childnode>
       </node>
-      <node id="201">
+      <node id="193">
         <label>avr/io.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="205">
+      <node id="197">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="204">
+      <node id="196">
         <label>src/Wireless/NRF24L01.h</label>
         <link refid="NRF24L01_8h"/>
-        <childnode refid="205" relation="include">
+        <childnode refid="197" relation="include">
         </childnode>
-        <childnode refid="206" relation="include">
+        <childnode refid="198" relation="include">
         </childnode>
       </node>
-      <node id="202">
+      <node id="194">
         <label>src/IO/SPI.h</label>
         <link refid="SPI.h"/>
-        <childnode refid="203" relation="include">
+        <childnode refid="195" relation="include">
         </childnode>
-        <childnode refid="204" relation="include">
+        <childnode refid="196" relation="include">
         </childnode>
-        <childnode refid="206" relation="include">
+        <childnode refid="198" relation="include">
         </childnode>
       </node>
-      <node id="203">
+      <node id="195">
         <label>src/IO/SPI.cpp</label>
         <link refid="SPI_8cpp"/>
       </node>
-      <node id="206">
+      <node id="198">
         <label>src/Wireless/NRF24L01.cpp</label>
         <link refid="NRF24L01_8cpp"/>
       </node>
@@ -53,7 +53,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Project: SensorNode</para><para><ref refid="SPI_8h" kindref="compound">SPI.h</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 1 </para>    </detaileddescription>
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="SPI_8h" kindref="compound">SPI.h</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 1 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="19"><highlight class="preprocessor">#ifndef<sp/>SPI_H_</highlight><highlight class="normal"></highlight></codeline>

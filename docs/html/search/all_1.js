@@ -14,5 +14,5 @@ var searchData=
   ['am2302_5fwire_5fpin',['AM2302_WIRE_PIN',['../classDHT22.html#a5555aa8aa95149f3a3723582bb4ceffa',1,'DHT22']]],
   ['am2302_5fwire_5fport',['AM2302_WIRE_PORT',['../classDHT22.html#a0966fbe5db17d7ca6f1f036830e27502',1,'DHT22']]],
   ['available',['available',['../classNRF24L01.html#ab368039cf5448f0ff5d489563d530c7b',1,'NRF24L01::available()'],['../classNRF24L01.html#a6bfbb693418e2d60556637b6a3599d05',1,'NRF24L01::available(uint8_t *pipe_num)']]],
-  ['availablesensors',['availableSensors',['../classReadSensor_1_1ReadSensor_1_1ReadSensor.html#a985eaa0e88d0eb794c078fd634a425c5',1,'ReadSensor.ReadSensor.ReadSensor.availableSensors()'],['../namespaceReadSensor_1_1SensorNode.html#ab825456060046c46088453e242844a67',1,'ReadSensor.SensorNode.availableSensors()']]]
+  ['availablesensors',['availableSensors',['../classreadsensor_1_1ReadSensor.html#ae04c9a7ad4cb4a0c68225cea810f9edd',1,'readsensor::ReadSensor']]]
 ];

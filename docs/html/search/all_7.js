@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['getavailablesensors',['GetAvailableSensors',['../classReadSensor_1_1ReadSensor_1_1ReadSensor.html#a1baee16b9594cd5e936d70ba5b2ca766',1,'ReadSensor::ReadSensor::ReadSensor']]],
-  ['getavgtemperature',['GetAvgTemperature',['../classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20.html#af67413d1aaeddd08769e8720f6d55cdb',1,'ReadSensor::Sensors::Sensors::DS18B20']]],
+  ['getavgtemperature',['GetAvgTemperature',['../classsensors_1_1DS18B20.html#abaf2d655c254d5595879e91860b545f8',1,'sensors::DS18B20']]],
   ['getbyte',['getByte',['../classUSART.html#a42a1789b9a8805da6ed3f4f62f74a764',1,'USART']]],
   ['getchannel',['getChannel',['../classNRF24L01.html#a6b269b519d57d54d0682a29ce9036b12',1,'NRF24L01']]],
   ['getcmdid',['getCmdID',['../classParseStrings.html#a9fbcb70ec76da019901ac4d04d8f48d7',1,'ParseStrings']]],
@@ -26,5 +25,5 @@ var searchData=
   ['getsystemstr',['getSystemStr',['../main_8cpp.html#a19dbb1ae18200033d3316c06ae09b7f7',1,'main.cpp']]],
   ['gettemperature',['GetTemperature',['../classDHT22.html#abe301571f40deb569b74e980ef2da9a7',1,'DHT22::GetTemperature()'],['../classDS18B20.html#ae3d50f1b5b71517d633958f54654ea55',1,'DS18B20::GetTemperature()']]],
   ['gettemperaturehumidity',['GetTemperatureHumidity',['../classDHT22.html#a51552e5b7373329a6751aeffc04a8fd5',1,'DHT22']]],
-  ['getvaluepair',['GetValuePair',['../classReadSensor_1_1Sensors_1_1Sensors_1_1DS18B20.html#a3de3ef1d70ebd46ed47fedf147aa2af9',1,'ReadSensor::Sensors::Sensors::DS18B20']]]
+  ['getvaluepair',['GetValuePair',['../classsensors_1_1DS18B20.html#a00cce06ee0b0b920cb3df86cc5ad1902',1,'sensors::DS18B20']]]
 ];

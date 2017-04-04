@@ -11,66 +11,66 @@
     <includes local="no">inttypes.h</includes>
     <includes local="no">stdio.h</includes>
     <incdepgraph>
-      <node id="178">
+      <node id="170">
         <label>stdint.h</label>
       </node>
-      <node id="181">
+      <node id="173">
         <label>stdlib.h</label>
       </node>
-      <node id="177">
+      <node id="169">
         <label>avr/io.h</label>
       </node>
-      <node id="182">
+      <node id="174">
         <label>string.h</label>
       </node>
-      <node id="179">
+      <node id="171">
         <label>avr/pgmspace.h</label>
       </node>
-      <node id="176">
+      <node id="168">
         <label>src/IO/ParseStrings.cpp</label>
         <link refid="ParseStrings.cpp"/>
-        <childnode refid="177" relation="include">
+        <childnode refid="169" relation="include">
         </childnode>
-        <childnode refid="178" relation="include">
+        <childnode refid="170" relation="include">
         </childnode>
-        <childnode refid="179" relation="include">
+        <childnode refid="171" relation="include">
         </childnode>
-        <childnode refid="180" relation="include">
+        <childnode refid="172" relation="include">
         </childnode>
-        <childnode refid="181" relation="include">
+        <childnode refid="173" relation="include">
         </childnode>
-        <childnode refid="182" relation="include">
+        <childnode refid="174" relation="include">
         </childnode>
-        <childnode refid="183" relation="include">
+        <childnode refid="175" relation="include">
         </childnode>
-        <childnode refid="184" relation="include">
+        <childnode refid="176" relation="include">
         </childnode>
       </node>
-      <node id="180">
+      <node id="172">
         <label>ParseStrings.h</label>
         <link refid="ParseStrings_8h"/>
-        <childnode refid="181" relation="include">
+        <childnode refid="173" relation="include">
         </childnode>
-        <childnode refid="182" relation="include">
+        <childnode refid="174" relation="include">
         </childnode>
-        <childnode refid="183" relation="include">
+        <childnode refid="175" relation="include">
         </childnode>
-        <childnode refid="179" relation="include">
+        <childnode refid="171" relation="include">
         </childnode>
-        <childnode refid="178" relation="include">
+        <childnode refid="170" relation="include">
         </childnode>
       </node>
-      <node id="184">
+      <node id="176">
         <label>stdio.h</label>
       </node>
-      <node id="183">
+      <node id="175">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Project: SensorNode</para><para><ref refid="ParseStrings_8cpp" kindref="compound">ParseStrings.cpp</ref></para><para>Created on: 15 Dec 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="ParseStrings_8cpp" kindref="compound">ParseStrings.cpp</ref></para><para>Created on: 15 Dec 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="20"><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>

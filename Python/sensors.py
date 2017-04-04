@@ -7,8 +7,10 @@ import readsensor
 
 class Sensors(readsensor.ReadSensor):
     def __init__(self, prt,bdrate):
+      """Initialize Sensors Class """  
       readsensor.ReadSensor.__init__(self,prt,bdrate)  
-      self.sens = []      
+      self.sensorList = []
+      self.sensorObjList = []      
       #print(responsrStr)  
       self.nodeMAC = ""
       self.cmdID = "20"
@@ -17,10 +19,101 @@ class Sensors(readsensor.ReadSensor):
     
     def InterpretResponse(self):
      """Interpret response list """
-     self.sens =[hex(int(i,0))[2:] for i in self.interpResp[1].rsplit("|")]
+     self.sensorList =[hex(int(i,0))[2:] for i in self.interpResp[1].rsplit("|")]
        #print(self.sens)
     def __str__(self):
-     return "{0} | {1}".format(self.nodeMAC, self.sens)
+     """Format string for print """   
+     return "{0} | {1}".format(self.nodeMAC, self.sensorList)
+ 
+    def spawnSensors(self):
+     """ Spawn sensor objects for a given node address """
+     for sensor in self.sensorList:
+         
+      if sensor == "31":
+          
+       mv =  sensors.Movement(self.port,self.baudrate)       
+       mv.SetNodeAddress(self.nodeMAC) 
+       mv.Update()
+       mv.InterpretResponse()
+       self.sensorObjList.append(mv)
+       
+      elif sensor =="32":
+          
+       dht =  sensors.DHT22(self.port,self.baudrate)       
+       dht.SetNodeAddress(self.nodeMAC) 
+       dht.Update()
+       dht.InterpretResponse()
+       self.sensorObjList.append(dht) 
+          
+      elif sensor =="33":
+          
+       la =  sensors.LightAnalog(self.port,self.baudrate)       
+       la.SetNodeAddress(self.nodeMAC) 
+       la.Update()
+       la.InterpretResponse()
+       self.sensorObjList.append(la) 
+       
+      elif sensor =="34":
+          
+       ld =  sensors.LightDigital(self.port,self.baudrate)       
+       ld.SetNodeAddress(self.nodeMAC) 
+       ld.Update()
+       ld.InterpretResponse()
+       self.sensorObjList.append(ld) 
+            
+      elif sensor =="35":
+          
+       ds = sensors.DS18B20(self.port,self.baudrate)
+       ds.SetNodeAddress(self.nodeMAC)
+       ds.Update()
+       ds.InterpretResponse() 
+       self.sensorObjList.append(ds) 
+       
+      elif sensor =="36":
+          
+       bmp = sensors.BMP180(self.port,self.baudrate)
+       bmp.SetNodeAddress(self.nodeMAC)
+       bmp.Update()
+       bmp.InterpretResponse() 
+       self.sensorObjList.append(bmp) 
+       
+     else:
+       print ""  
+       
+          
+          
+          
+          
+          
+          
+          
+          
+            
+        
+#   def spawnSensors(self, nodeAdress):
+#      print ("#######################\r\nAddress: {0}\r\n#######################".format(nodeAdress))   
+#      sensrs = []
+#      availableSensors = self.GetAvailableSensors(nodeAdress).sens
+#      print ("# Sensors: {0}".format(availableSensors))  
+#      for s in availableSensors:
+#       if s == self.cmdIDs[1]:
+#        mv = self.Movement(nodeAdress)
+#        sensrs.append(mv)
+#        print ("# Mv: {0}".format(mv.move))
+#    
+#       elif  s == self.cmdIDs[3]:
+#        light = self.LightAnalog(nodeAdress)
+#        print ("# Light: {0}".format(light.value))
+#        sensrs.append(light)
+#       elif s == self.cmdIDs[5]:
+#        ds = self.DS18B20(nodeAdress)   
+#        sensrs.append(ds)
+#        print ("# DS18B20: {0}{1}".format(ds.GetAvgTemperature(), ds.unitT ))
+# 
+#      return sensrs
+#      
+#          
+ 
  
 class DS18B20(readsensor.ReadSensor):
     def __init__(self,prt,bdrate):
@@ -109,34 +202,55 @@ class LightAnalog(readsensor.ReadSensor):
      self.value = float(self.interpResp[1])   
     
     def __str__(self):
-     return "{0} | Light: {1}".format(self.nodeMAC, self.value)  
+     return "{0} | Light(analog): {1}".format(self.nodeMAC, self.value)  
+ 
+      
+class LightDigital(readsensor.ReadSensor):
+    def __init__(self,prt,bdrate):
+     readsensor.ReadSensor.__init__(self,prt,bdrate)
+     self.value = 0.0
+     self.nodeMAC = ""
+     self.cmdID = "34"
+     self.pString = "Ld"            
+     self.respMask = ".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|"
+     
+    def InterpretResponse(self):
+     """Interpret response list """   
+     self.value = float(self.interpResp[1])
+              
+    def __str__(self):
+     return "{0} | Light(I2C): {1}".format(self.nodeMAC, self.value) 
+
+         
+class BMP180(readsensor.ReadSensor):
+    def __init__(self,prt,bdrate):
+     readsensor.ReadSensor.__init__(self,prt,bdrate)
+     self.P = 0.0
+     self.unitP = ""
+     self.T = 0.0
+     self.unitT = ""
+     self.err = 0  
+     self.nodeMAC = ""
+     self.cmdID = "36"
+     self.pString = "PT"            
+     self.respMask = ".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*):(.*)\|(.*):(.*)\|(.*)\|"
+     
+                 
+    def InterpretResponse(self):
+     """Interpret response list """
+     self.T = float(self.interpResp[3])
+     self.unitT = self.interpResp[4]
+     self.P = float(self.interpResp[1])
+     self.unitP = self.interpResp[2]
+     self.err = int(self.interpResp[5])
+               
+    def __str__(self):
+     return "{0} | T: {1}{2} | P: {3}{4} | err: {5}".format(self.nodeMAC, self.T,self.unitT,self.P,self.unitP,self.err)  
+        
+             
+     
  
      
-# class LightDigital:
-#     def __init__(self,responseStr,sensStr):
-#      self.value = 0.0
-#      self.ld = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*)\|".format(sensStr),responseStr)
-#      if len(self.ld) > 0:
-#       self.ld = self.ld[0]
-#       self.value = float(self.ld[1])         
-#         
-# class BMP180:
-#     def __init__(self,responseStr,sensStr):
-#      self.P = 0.0
-#      self.unitP = ""
-#      self.T = 0.0
-#      self.unitT = ""
-#      self.err = 0  
-#                 
-#      self.bmp = re.findall(".\/\/sensor\/{0}\/\|(.*)\|\/\|(.*):(.*)\|(.*):(.*)\|(.*)\|".format(sensStr),responseStr)
-#      if len(self.bmp) > 0:
-#       self.bmp = self.bmp[0]   
-#       self.T = float(self.bmp[3])
-#       self.unitT = self.bmp[4]
-#       self.P = float(self.bmp[1])
-#       self.unitP = self.bmp[2]
-#       self.err = int(self.bmp[5])            
-#         
-#         
-             
+     
+     
      

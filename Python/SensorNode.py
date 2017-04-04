@@ -23,27 +23,36 @@ sens = sensors.Sensors(port, baudrate)
 sens.SetNodeAddress(nodeAddresses[0])
 sens.Update()
 sens.InterpretResponse()
+
+sens.spawnSensors()
+
+
 print (sens)
 
-ds = sensors.DS18B20(port, baudrate)
-ds.SetNodeAddress(nodeAddresses[0])
-ds.Update()
-ds.InterpretResponse()
-print (ds)
-
-mv = sensors.Movement(port,baudrate)
-mv.SetNodeAddress(nodeAddresses[0])
-mv.Update()
-mv.InterpretResponse()
-print (mv)
-
-lightA = sensors.LightAnalog(port,baudrate)
-lightA.SetNodeAddress(nodeAddresses[0])
-lightA.Update()
-lightA.InterpretResponse()
-print (lightA)
 
 
+
+
+# 
+# ds = sensors.DS18B20(port, baudrate)
+# ds.SetNodeAddress(nodeAddresses[0])
+# ds.Update()
+# ds.InterpretResponse()
+# print (ds)
+# 
+# mv = sensors.Movement(port,baudrate)
+# mv.SetNodeAddress(nodeAddresses[0])
+# mv.Update()
+# mv.InterpretResponse()
+# print (mv)
+# 
+# lightA = sensors.LightAnalog(port,baudrate)
+# lightA.SetNodeAddress(nodeAddresses[0])
+# lightA.Update()
+# lightA.InterpretResponse()
+# print (lightA)
+#
+#
 # 
 # for addr in nodeAddresses:
 #  sensor.append(rs.spawnSensors(addr))

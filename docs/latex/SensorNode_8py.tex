@@ -1,20 +1,24 @@
-\hypertarget{SensorNode_8py}{}\section{Python/\+Read\+Sensor/\+Sensor\+Node.py File Reference}
-\label{SensorNode_8py}\index{Python/\+Read\+Sensor/\+Sensor\+Node.\+py@{Python/\+Read\+Sensor/\+Sensor\+Node.\+py}}
+\hypertarget{SensorNode_8py}{}\section{Python/\+Sensor\+Node.py File Reference}
+\label{SensorNode_8py}\index{Python/\+Sensor\+Node.\+py@{Python/\+Sensor\+Node.\+py}}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \hyperlink{namespaceReadSensor_1_1SensorNode}{Read\+Sensor.\+Sensor\+Node}
+ \hyperlink{namespaceSensorNode}{Sensor\+Node}
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{namespaceReadSensor_1_1SensorNode_aab4130f05e0d383004da4b2199def54d}{Read\+Sensor.\+Sensor\+Node.\+rs} = Read\+Sensor.\+Read\+Sensor(\char`\"{}/dev/tty\+A\+M\+A0\char`\"{}, 9600)
+list \hyperlink{namespaceSensorNode_ac1e752b62092c1c9e27da570c73c0ce7}{Sensor\+Node.\+node\+Addresses} = \mbox{[}\char`\"{}A0\+:\+A0\+:\+A0\+:\+A0\+:\+A0\char`\"{}\mbox{]}
 \item 
-\hyperlink{namespaceReadSensor_1_1SensorNode_ab825456060046c46088453e242844a67}{Read\+Sensor.\+Sensor\+Node.\+available\+Sensors} = rs.\+Get\+Available\+Sensors(\char`\"{}A0\+:\+A0\+:\+A0\+:\+A0\+:\+A0\char`\"{})
+string \hyperlink{namespaceSensorNode_a1a9ff3aa5a94fc55ff0fa24862db071b}{Sensor\+Node.\+port} = \char`\"{}/dev/tty\+A\+M\+A0\char`\"{}
 \item 
-\hyperlink{namespaceReadSensor_1_1SensorNode_a8171a151bb4b0ae935ff538ce6791944}{Read\+Sensor.\+Sensor\+Node.\+ds} = rs.\+D\+S18\+B20(\char`\"{}A0\+:\+A0\+:\+A0\+:\+A0\+:\+A0\char`\"{})
+int \hyperlink{namespaceSensorNode_a50365066340e665ac5f274dfb3a7ae82}{Sensor\+Node.\+baudrate} = 9600
 \item 
-\hyperlink{namespaceReadSensor_1_1SensorNode_a6554f3410cedc47453c44dffec450d82}{Read\+Sensor.\+Sensor\+Node.\+mv} = rs.\+Movement(\char`\"{}A0\+:\+A0\+:\+A0\+:\+A0\+:\+A0\char`\"{})
+\hyperlink{namespaceSensorNode_a341717027383e08a67cc397e2d00a99e}{Sensor\+Node.\+sens} = \hyperlink{classsensors_1_1Sensors}{sensors.\+Sensors}(port, baudrate)
 \item 
-\hyperlink{namespaceReadSensor_1_1SensorNode_aaf373686eec11b55f9271c70d083bd70}{Read\+Sensor.\+Sensor\+Node.\+light} = rs.\+Light\+Analog(\char`\"{}A0\+:\+A0\+:\+A0\+:\+A0\+:\+A0\char`\"{})
+\hyperlink{namespaceSensorNode_aaa177ea377a1a6a4ae0b9426064e940d}{Sensor\+Node.\+ds} = \hyperlink{classsensors_1_1DS18B20}{sensors.\+D\+S18\+B20}(port, baudrate)
+\item 
+\hyperlink{namespaceSensorNode_ad06784c1a82686d5c2d6908f088c16f6}{Sensor\+Node.\+mv} = \hyperlink{classsensors_1_1Movement}{sensors.\+Movement}(port,baudrate)
+\item 
+\hyperlink{namespaceSensorNode_a973908ebd2519a83b199d68f97f31a3f}{Sensor\+Node.\+lightA} = \hyperlink{classsensors_1_1LightAnalog}{sensors.\+Light\+Analog}(port,baudrate)
 \end{DoxyCompactItemize}

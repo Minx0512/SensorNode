@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacereadsensor" kind="namespace" language="Python">
+    <compoundname>readsensor</compoundname>
+    <innerclass refid="classreadsensor_1_1ReadSensor" prot="public">readsensor::ReadSensor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Python/readsensor.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

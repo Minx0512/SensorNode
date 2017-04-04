@@ -9,54 +9,54 @@
     <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
     <includedby refid="NRF24L01_8h" local="yes">src/Wireless/NRF24L01.h</includedby>
     <incdepgraph>
-      <node id="215">
+      <node id="207">
         <label>avr/io.h</label>
       </node>
-      <node id="216">
+      <node id="208">
         <label>util/delay.h</label>
       </node>
-      <node id="217">
+      <node id="209">
         <label>string.h</label>
       </node>
-      <node id="214">
+      <node id="206">
         <label>src/IO/USART.h</label>
         <link refid="USART.h"/>
-        <childnode refid="215" relation="include">
+        <childnode refid="207" relation="include">
         </childnode>
-        <childnode refid="216" relation="include">
+        <childnode refid="208" relation="include">
         </childnode>
-        <childnode refid="217" relation="include">
+        <childnode refid="209" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="220">
+      <node id="212">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="221">
+      <node id="213">
         <label>src/Wireless/NRF24L01.h</label>
         <link refid="NRF24L01_8h"/>
-        <childnode refid="220" relation="include">
+        <childnode refid="212" relation="include">
         </childnode>
-        <childnode refid="222" relation="include">
+        <childnode refid="214" relation="include">
         </childnode>
       </node>
-      <node id="218">
+      <node id="210">
         <label>src/IO/USART.h</label>
         <link refid="USART.h"/>
-        <childnode refid="219" relation="include">
+        <childnode refid="211" relation="include">
         </childnode>
-        <childnode refid="220" relation="include">
+        <childnode refid="212" relation="include">
         </childnode>
-        <childnode refid="221" relation="include">
+        <childnode refid="213" relation="include">
         </childnode>
       </node>
-      <node id="222">
+      <node id="214">
         <label>src/Wireless/NRF24L01.cpp</label>
         <link refid="NRF24L01_8cpp"/>
       </node>
-      <node id="219">
+      <node id="211">
         <label>src/IO/USART.cpp</label>
         <link refid="USART_8cpp"/>
       </node>
@@ -208,7 +208,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Project: SensorNode</para><para><ref refid="USART_8h" kindref="compound">USART.h</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="USART_8h" kindref="compound">USART.h</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="20"><highlight class="preprocessor">#ifndef<sp/>USART_H_</highlight><highlight class="normal"></highlight></codeline>
@@ -267,7 +267,7 @@
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART" kindref="compound">USART</ref>();</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART" kindref="compound">USART</ref>(uint32_t<sp/>baudrate);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART" kindref="compound">USART</ref>(uint32_t<sp/><ref refid="namespaceSensorNode_1a50365066340e665ac5f274dfb3a7ae82" kindref="member">baudrate</ref>);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"></codeline>

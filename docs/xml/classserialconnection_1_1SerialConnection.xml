@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classserialconnection_1_1SerialConnection" kind="class" language="Python" prot="public">
+    <compoundname>serialconnection::SerialConnection</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classserialconnection_1_1SerialConnection_1a5b2f2670cc97ed8970dadd829f623d66" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>serialconnection.SerialConnection::ser</definition>
+        <argsstring></argsstring>
+        <name>ser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/serialconnection.py" line="9" column="1" bodyfile="Python/serialconnection.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classserialconnection_1_1SerialConnection_1a074a88ccb2c22fc8f81a98c15dfdffe4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>serialconnection.SerialConnection::err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/serialconnection.py" line="20" column="1" bodyfile="Python/serialconnection.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classserialconnection_1_1SerialConnection_1ad1515dd3aa20eaa90bd30534a6c43f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def serialconnection.SerialConnection.__init__</definition>
+        <argsstring>(self, port, baudrate)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>port</type>
+          <defname>port</defname>
+        </param>
+        <param>
+          <type>baudrate</type>
+          <defname>baudrate</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/serialconnection.py" line="8" column="1" bodyfile="Python/serialconnection.py" bodystart="8" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classserialconnection_1_1SerialConnection_1ad49c59c39c57ee1424e797fb667f18f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def serialconnection.SerialConnection.ReadData</definition>
+        <argsstring>(self, queryStr)</argsstring>
+        <name>ReadData</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>queryStr</type>
+          <defname>queryStr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/serialconnection.py" line="23" column="1" bodyfile="Python/serialconnection.py" bodystart="23" bodyend="49"/>
+        <references refid="classsensors_1_1DHT22_1a1262c133aa610ada87b4ad2d508e8afd" compoundref="sensors_8py" startline="156">sensors.DHT22.err</references>
+        <references refid="classsensors_1_1BMP180_1ab0306517f05fca719940e5ac1e129fc3" compoundref="sensors_8py" startline="232">sensors.BMP180.err</references>
+        <references refid="classserialconnection_1_1SerialConnection_1a074a88ccb2c22fc8f81a98c15dfdffe4" compoundref="serialconnection_8py" startline="20">serialconnection.SerialConnection.err</references>
+        <references refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" compoundref="main_8cpp" startline="97">str</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Sets up a serial connection</verbatim> </para>    </detaileddescription>
+    <location file="Python/serialconnection.py" line="6" column="1" bodyfile="Python/serialconnection.py" bodystart="6" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classserialconnection_1_1SerialConnection_1ad1515dd3aa20eaa90bd30534a6c43f8e" prot="public" virt="non-virtual"><scope>serialconnection::SerialConnection</scope><name>__init__</name></member>
+      <member refid="classserialconnection_1_1SerialConnection_1a074a88ccb2c22fc8f81a98c15dfdffe4" prot="public" virt="non-virtual"><scope>serialconnection::SerialConnection</scope><name>err</name></member>
+      <member refid="classserialconnection_1_1SerialConnection_1ad49c59c39c57ee1424e797fb667f18f5" prot="public" virt="non-virtual"><scope>serialconnection::SerialConnection</scope><name>ReadData</name></member>
+      <member refid="classserialconnection_1_1SerialConnection_1a5b2f2670cc97ed8970dadd829f623d66" prot="public" virt="non-virtual"><scope>serialconnection::SerialConnection</scope><name>ser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

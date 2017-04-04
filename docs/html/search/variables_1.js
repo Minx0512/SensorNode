@@ -8,5 +8,5 @@ var searchData=
   ['am2302_5fwire_5fdq',['AM2302_WIRE_DQ',['../classDHT22.html#a4b6de6908e5eb743dec2c254ef89782e',1,'DHT22']]],
   ['am2302_5fwire_5fpin',['AM2302_WIRE_PIN',['../classDHT22.html#a5555aa8aa95149f3a3723582bb4ceffa',1,'DHT22']]],
   ['am2302_5fwire_5fport',['AM2302_WIRE_PORT',['../classDHT22.html#a0966fbe5db17d7ca6f1f036830e27502',1,'DHT22']]],
-  ['availablesensors',['availableSensors',['../classReadSensor_1_1ReadSensor_1_1ReadSensor.html#a985eaa0e88d0eb794c078fd634a425c5',1,'ReadSensor.ReadSensor.ReadSensor.availableSensors()'],['../namespaceReadSensor_1_1SensorNode.html#ab825456060046c46088453e242844a67',1,'ReadSensor.SensorNode.availableSensors()']]]
+  ['availablesensors',['availableSensors',['../classreadsensor_1_1ReadSensor.html#ae04c9a7ad4cb4a0c68225cea810f9edd',1,'readsensor::ReadSensor']]]
 ];

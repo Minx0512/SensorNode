@@ -6,30 +6,30 @@
     <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
     <includedby refid="Photoresistor_8cpp" local="yes">src/Sensors/Photoresistor.cpp</includedby>
     <incdepgraph>
-      <node id="298">
+      <node id="290">
         <label>src/Sensors/Photoresistor.h</label>
         <link refid="Photoresistor.h"/>
-        <childnode refid="299" relation="include">
+        <childnode refid="291" relation="include">
         </childnode>
       </node>
-      <node id="299">
+      <node id="291">
         <label>avr/io.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="301">
+      <node id="293">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="300">
+      <node id="292">
         <label>src/Sensors/Photoresistor.h</label>
         <link refid="Photoresistor.h"/>
-        <childnode refid="301" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
-        <childnode refid="302" relation="include">
+        <childnode refid="294" relation="include">
         </childnode>
       </node>
-      <node id="302">
+      <node id="294">
         <label>src/Sensors/Photoresistor.cpp</label>
         <link refid="Photoresistor_8cpp"/>
       </node>
@@ -38,7 +38,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Project: SensorNode</para><para><ref refid="Photoresistor_8h" kindref="compound">Photoresistor.h</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="Photoresistor_8h" kindref="compound">Photoresistor.h</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="21"><highlight class="preprocessor">#ifndef<sp/>PHOTORESISTOR_H_</highlight><highlight class="normal"></highlight></codeline>
@@ -64,7 +64,7 @@
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPhotoresistor_1a2a717a2af0b5000b3971dc9e57a16e8e" kindref="member">Photoresistor</ref>();</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPhotoresistor_1a2a717a2af0b5000b3971dc9e57a16e8e" kindref="member">Photoresistor</ref>(uint8_t<sp/>port);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPhotoresistor_1a2a717a2af0b5000b3971dc9e57a16e8e" kindref="member">Photoresistor</ref>(uint8_t<sp/><ref refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kindref="member">port</ref>);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"></codeline>
@@ -77,7 +77,7 @@
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1afe829b4b1be3d742d789ab6b75dc0c9d" kindref="member">Init</ref>();</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1a984cf8c9ed6a428f5b025a5ea85822da" kindref="member">setPort</ref>(uint8_t<sp/>port);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1a984cf8c9ed6a428f5b025a5ea85822da" kindref="member">setPort</ref>(uint8_t<sp/><ref refid="namespaceSensorNode_1a1a9ff3aa5a94fc55ff0fa24862db071b" kindref="member">port</ref>);</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1a5c3bc9e8877b54faeded1450a39552fb" kindref="member">setType</ref>(uint8_t<sp/>t);</highlight></codeline>

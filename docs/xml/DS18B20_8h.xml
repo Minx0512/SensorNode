@@ -10,50 +10,50 @@
     <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
     <includedby refid="DS18B20_8cpp" local="yes">src/Sensors/DS18B20.cpp</includedby>
     <incdepgraph>
-      <node id="282">
+      <node id="274">
         <label>src/Sensors/DS18B20.h</label>
         <link refid="DS18B20.h"/>
-        <childnode refid="283" relation="include">
+        <childnode refid="275" relation="include">
         </childnode>
-        <childnode refid="284" relation="include">
+        <childnode refid="276" relation="include">
         </childnode>
-        <childnode refid="285" relation="include">
+        <childnode refid="277" relation="include">
         </childnode>
-        <childnode refid="286" relation="include">
+        <childnode refid="278" relation="include">
         </childnode>
-        <childnode refid="287" relation="include">
+        <childnode refid="279" relation="include">
         </childnode>
       </node>
-      <node id="285">
+      <node id="277">
         <label>stdlib.h</label>
       </node>
-      <node id="284">
+      <node id="276">
         <label>avr/io.h</label>
       </node>
-      <node id="283">
+      <node id="275">
         <label>util/delay.h</label>
       </node>
-      <node id="286">
+      <node id="278">
         <label>ctype.h</label>
       </node>
-      <node id="287">
+      <node id="279">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="288">
+      <node id="280">
         <label>src/Sensors/DS18B20.h</label>
         <link refid="DS18B20.h"/>
-        <childnode refid="289" relation="include">
+        <childnode refid="281" relation="include">
         </childnode>
-        <childnode refid="290" relation="include">
+        <childnode refid="282" relation="include">
         </childnode>
       </node>
-      <node id="289">
+      <node id="281">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="290">
+      <node id="282">
         <label>src/Sensors/DS18B20.cpp</label>
         <link refid="DS18B20_8cpp"/>
       </node>
@@ -274,7 +274,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Project: SensorNode</para><para><ref refid="DS18B20_8h" kindref="compound">DS18B20.h</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="DS18B20_8h" kindref="compound">DS18B20.h</ref></para><para>Created on: Nov 12, 2016</para><para>Author: Matthias Minx</para><para>Revision: 0.2 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="19"><highlight class="preprocessor">#ifndef<sp/>DS18B20_H_</highlight><highlight class="normal"></highlight></codeline>
