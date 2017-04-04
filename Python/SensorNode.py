@@ -13,7 +13,7 @@ import sensors
 
 
 
-class SensorNode(self):
+class SensorNode:
     
   
  nodeAddresses = ["A0:A0:A0:A0:A0"]
