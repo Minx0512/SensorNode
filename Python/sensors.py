@@ -34,7 +34,7 @@ class Sensors(readsensor.ReadSensor):
           
        mv =  Movement(self.port,self.baudrate)       
        mv.SetNodeAddress(self.nodeMAC)
-       mv.updateTime = 1
+       mv.updateTime = 2
        #mv.Update()
        #mv.InterpretResponse()
        self.sensorObjList.append(mv)
