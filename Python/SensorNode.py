@@ -91,9 +91,12 @@ class SensorNode:
        pass 
         
     except (KeyboardInterrupt):
+     for t in thr:
+      t.join()  
      for s in sens.sensorObjList:
       s.signal = 0            
-
+     sleep(1)
+     sys.exit() 
 
 
 if __name__ == "__main__":
