@@ -34,8 +34,8 @@ class Sensors(readsensor.ReadSensor):
           
        mv =  Movement(self.port,self.baudrate)       
        mv.SetNodeAddress(self.nodeMAC) 
-       mv.Update()
-       mv.InterpretResponse()
+       #mv.Update()
+       #mv.InterpretResponse()
        self.sensorObjList.append(mv)
        #print(mv)
        
@@ -43,8 +43,8 @@ class Sensors(readsensor.ReadSensor):
           
        dht =  DHT22(self.port,self.baudrate)       
        dht.SetNodeAddress(self.nodeMAC) 
-       dht.Update()
-       dht.InterpretResponse()
+       #dht.Update()
+       #dht.InterpretResponse()
        self.sensorObjList.append(dht) 
        #print(dht)  
         
@@ -52,8 +52,8 @@ class Sensors(readsensor.ReadSensor):
           
        la =  LightAnalog(self.port,self.baudrate)       
        la.SetNodeAddress(self.nodeMAC) 
-       la.Update()
-       la.InterpretResponse()
+       #la.Update()
+       #la.InterpretResponse()
        self.sensorObjList.append(la) 
        #print(la)
        
@@ -61,8 +61,8 @@ class Sensors(readsensor.ReadSensor):
           
        ld =  LightDigital(self.port,self.baudrate)       
        ld.SetNodeAddress(self.nodeMAC) 
-       ld.Update()
-       ld.InterpretResponse()
+       #ld.Update()
+       #ld.InterpretResponse()
        self.sensorObjList.append(ld) 
        #print(ld)
             
@@ -70,8 +70,8 @@ class Sensors(readsensor.ReadSensor):
           
        ds = DS18B20(self.port,self.baudrate)
        ds.SetNodeAddress(self.nodeMAC)
-       ds.Update()
-       ds.InterpretResponse() 
+       #ds.Update()
+       #ds.InterpretResponse() 
        self.sensorObjList.append(ds) 
        #print(ds)
        
@@ -79,8 +79,8 @@ class Sensors(readsensor.ReadSensor):
           
        bmp = BMP180(self.port,self.baudrate)
        bmp.SetNodeAddress(self.nodeMAC)
-       bmp.Update()
-       bmp.InterpretResponse() 
+       #bmp.Update()
+       #bmp.InterpretResponse() 
        self.sensorObjList.append(bmp) 
        #print(bmp)
 
