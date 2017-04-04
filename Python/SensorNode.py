@@ -58,7 +58,7 @@ class SensorNode:
 
  
  for sob in sens.sensorObjList:
-  _thread.start_new_thread(UpdateThreads,(sob))   
+  _thread.start_new_thread(UpdateThreads,(self,sob))   
   #sob.Update()
   #sob.InterpretResponse()
   #print (sob)
