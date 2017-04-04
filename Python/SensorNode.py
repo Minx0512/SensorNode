@@ -12,7 +12,11 @@ import sys
 import sensors
 
 class SensorNode:
-    
+ """SensorNode class:
+ 
+     main code to execute
+ 
+ """   
   
  nodeAddresses = ["A0:A0:A0:A0:A0"]
 #threadLock = thread.allocate_lock()

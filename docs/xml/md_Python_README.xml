@@ -4,6 +4,6 @@
     <compoundname>md_Python_README</compoundname>
     <title>README</title>
     <detaileddescription>
-<para>Python scripts to interface with the microcontroller over a serial interface. </para>    </detaileddescription>
+<para>Python scripts to interface with the microcontroller over a serial interface.</para><para>Usage: ./SensoNode.py </para>    </detaileddescription>
   </compounddef>
 </doxygen>

@@ -10,6 +10,8 @@
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Python<sp/>scripts<sp/>to<sp/>interface<sp/>with<sp/>the<sp/>microcontroller<sp/>over<sp/>a<sp/>serial<sp/>interface.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Usage:<sp/>./SensoNode.py</highlight></codeline>
     </programlisting>
     <location file="Python/README.md"/>
   </compounddef>
