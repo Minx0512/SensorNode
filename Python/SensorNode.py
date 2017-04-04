@@ -24,11 +24,11 @@ class SensorNode:
  sens = sensors.Sensors(port, baudrate)
  
  for nodeAddr in nodeAddresses:
-  print(nodeAddr)   
+  #print(nodeAddr)   
   sens.SetNodeAddress(nodeAddr)
   sens.Update()
   sens.InterpretResponse()
-  print(sens)
+  #print(sens)
   sens.spawnSensors()
 
  
@@ -42,40 +42,6 @@ class SensorNode:
 if __name__ == "__main__":
     app = SensorNode()
     
-
-
-
-# 
-# ds = sensors.DS18B20(port, baudrate)
-# ds.SetNodeAddress(nodeAddresses[0])
-# ds.Update()
-# ds.InterpretResponse()
-# print (ds)
-# 
-# mv = sensors.Movement(port,baudrate)
-# mv.SetNodeAddress(nodeAddresses[0])
-# mv.Update()
-# mv.InterpretResponse()
-# print (mv)
-# 
-# lightA = sensors.LightAnalog(port,baudrate)
-# lightA.SetNodeAddress(nodeAddresses[0])
-# lightA.Update()
-# lightA.InterpretResponse()
-# print (lightA)
-#
-#
-# 
-# for addr in nodeAddresses:
-#  sensor.append(rs.spawnSensors(addr))
-#  
-# 
-# for s in sensor:
-#  i = 0
-#  print ("Sensor objects on {1}: {0}".format(s,nodeAddresses[i]))
-#  i = i+1
-# 
-
 
 
 
