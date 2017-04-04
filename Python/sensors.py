@@ -31,7 +31,7 @@ class Sensors(readsensor.ReadSensor):
          
       if sensor == "31":
           
-       mv =  sensors.Movement(self.port,self.baudrate)       
+       mv =  Movement(self.port,self.baudrate)       
        mv.SetNodeAddress(self.nodeMAC) 
        mv.Update()
        mv.InterpretResponse()
@@ -39,7 +39,7 @@ class Sensors(readsensor.ReadSensor):
        
       elif sensor =="32":
           
-       dht =  sensors.DHT22(self.port,self.baudrate)       
+       dht =  DHT22(self.port,self.baudrate)       
        dht.SetNodeAddress(self.nodeMAC) 
        dht.Update()
        dht.InterpretResponse()
@@ -47,7 +47,7 @@ class Sensors(readsensor.ReadSensor):
           
       elif sensor =="33":
           
-       la =  sensors.LightAnalog(self.port,self.baudrate)       
+       la =  LightAnalog(self.port,self.baudrate)       
        la.SetNodeAddress(self.nodeMAC) 
        la.Update()
        la.InterpretResponse()
@@ -55,7 +55,7 @@ class Sensors(readsensor.ReadSensor):
        
       elif sensor =="34":
           
-       ld =  sensors.LightDigital(self.port,self.baudrate)       
+       ld =  LightDigital(self.port,self.baudrate)       
        ld.SetNodeAddress(self.nodeMAC) 
        ld.Update()
        ld.InterpretResponse()
@@ -63,7 +63,7 @@ class Sensors(readsensor.ReadSensor):
             
       elif sensor =="35":
           
-       ds = sensors.DS18B20(self.port,self.baudrate)
+       ds = DS18B20(self.port,self.baudrate)
        ds.SetNodeAddress(self.nodeMAC)
        ds.Update()
        ds.InterpretResponse() 
@@ -71,14 +71,14 @@ class Sensors(readsensor.ReadSensor):
        
       elif sensor =="36":
           
-       bmp = sensors.BMP180(self.port,self.baudrate)
+       bmp = BMP180(self.port,self.baudrate)
        bmp.SetNodeAddress(self.nodeMAC)
        bmp.Update()
        bmp.InterpretResponse() 
        self.sensorObjList.append(bmp) 
        
      else:
-       print ""  
+       print (".")  
        
           
           
