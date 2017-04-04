@@ -28,7 +28,7 @@ class Sensors(readsensor.ReadSensor):
     def spawnSensors(self):
      """ Spawn sensor objects for a given node address """
      for sensor in self.sensorList:
-      print(sensor)
+      #print(sensor)
       if sensor == "31":
           
        mv =  Movement(self.port,self.baudrate)       
@@ -36,7 +36,7 @@ class Sensors(readsensor.ReadSensor):
        mv.Update()
        mv.InterpretResponse()
        self.sensorObjList.append(mv)
-       print(mv)
+       #print(mv)
        
       elif sensor =="32":
           
@@ -45,7 +45,7 @@ class Sensors(readsensor.ReadSensor):
        dht.Update()
        dht.InterpretResponse()
        self.sensorObjList.append(dht) 
-       print(dht)  
+       #print(dht)  
         
       elif sensor =="33":
           
@@ -54,7 +54,7 @@ class Sensors(readsensor.ReadSensor):
        la.Update()
        la.InterpretResponse()
        self.sensorObjList.append(la) 
-       print(la)
+       #print(la)
        
       elif sensor =="34":
           
@@ -63,7 +63,7 @@ class Sensors(readsensor.ReadSensor):
        ld.Update()
        ld.InterpretResponse()
        self.sensorObjList.append(ld) 
-       print(ld)
+       #print(ld)
             
       elif sensor =="35":
           
@@ -72,7 +72,7 @@ class Sensors(readsensor.ReadSensor):
        ds.Update()
        ds.InterpretResponse() 
        self.sensorObjList.append(ds) 
-       print(ds)
+       #print(ds)
        
       elif sensor =="36":
           
@@ -81,10 +81,9 @@ class Sensors(readsensor.ReadSensor):
        bmp.Update()
        bmp.InterpretResponse() 
        self.sensorObjList.append(bmp) 
-       print(bmp)
+       #print(bmp)
        
-     else:
-       print (".")  
+      
        
           
           

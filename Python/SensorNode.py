@@ -23,11 +23,12 @@ sens = sensors.Sensors(port, baudrate)
 sens.SetNodeAddress(nodeAddresses[0])
 sens.Update()
 sens.InterpretResponse()
+print(sens)
 
 sens.spawnSensors()
 
-
-print (sens)
+for sob in sens.sensorObjList:
+ print (sob)
 
 
 
