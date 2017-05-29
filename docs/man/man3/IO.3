@@ -1,0 +1,151 @@
+.TH "IO" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IO \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IO\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIO\fP ()"
+.br
+.ti -1c
+.RI "void \fBUSART_SetRxFlagTrue\fP ()"
+.br
+.ti -1c
+.RI "void \fBUSART_SetRxFlagFalse\fP ()"
+.br
+.ti -1c
+.RI "bool \fBUSART_GetRxFlag\fP ()"
+.br
+.ti -1c
+.RI "void \fBUSART_writeString\fP (char *\fBstr\fP)"
+.br
+.RI "\fIWrites String to interface\&. \fP"
+.ti -1c
+.RI "void \fBUSART_readString\fP (char *myString, uint8_t maxLength)"
+.br
+.RI "\fIReads incoming string\&. \fP"
+.ti -1c
+.RI "void \fBUSART_readString\fP (char *string)"
+.br
+.RI "\fIReads incoming string\&. \fP"
+.ti -1c
+.RI "void \fBUSART_Flush\fP (void)"
+.br
+.RI "\fIFlush \fBUSART\fP buffer\&. \fP"
+.ti -1c
+.RI "uint8_t \fBSPI_WriteReadbyte\fP (uint8_t data)"
+.br
+.RI "\fIWrite and Read one byte\&. \fP"
+.ti -1c
+.RI "void \fBInitInterfaces\fP (void)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSPI\fP \fBspi\fP"
+.br
+.ti -1c
+.RI "\fBUSART\fP \fBusart\fP"
+.br
+.ti -1c
+.RI "\fBI2C\fP \fBi2c\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBuartRX_flag\fP"
+.br
+.RI "\fIFlag received UART message\&. \fP"
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IO::IO ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void IO::InitInterfaces (void)"
+
+.SS "uint8_t IO::SPI_WriteReadbyte (uint8_t data)"
+
+.PP
+Write and Read one byte\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP Databyte to write 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Byte 
+.RE
+.PP
+
+.SS "void IO::USART_Flush (void)"
+
+.PP
+Flush \fBUSART\fP buffer\&. 
+.SS "bool IO::USART_GetRxFlag ()"
+
+.SS "void IO::USART_readString (char * myString, uint8_t maxLength)"
+
+.PP
+Reads incoming string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImyString\fP character array 
+.br
+\fImaxLength\fP Maximum length of string to read 
+.RE
+.PP
+
+.SS "void IO::USART_readString (char * string)"
+
+.PP
+Reads incoming string\&. Reads incoming string until a new line character 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP character array 
+.RE
+.PP
+
+.SS "void IO::USART_SetRxFlagFalse ()"
+
+.SS "void IO::USART_SetRxFlagTrue ()"
+
+.SS "void IO::USART_writeString (char * str)"
+
+.PP
+Writes String to interface\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstr\fP character array 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBI2C\fP IO::i2c\fC [private]\fP"
+
+.SS "\fBSPI\fP IO::spi\fC [private]\fP"
+
+.SS "uint8_t IO::uartRX_flag\fC [private]\fP"
+
+.PP
+Flag received UART message\&. 
+.SS "\fBUSART\fP IO::usart\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

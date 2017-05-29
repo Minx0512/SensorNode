@@ -9,6 +9,7 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
@@ -18,7 +19,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -28,9 +29,10 @@ var NAVTREE =
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
   ] ]
@@ -39,8 +41,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BMP180_8cpp.html",
-"classNRF24L01.html#a2973773d1a158e1cfbf52198f248c548",
-"dir_afe58f6d0ef7eec69c2706509daaefe7.html"
+"NRF24L01registers_8h.html#ab9dfc6927495c92ef82df6e1c98eea06",
+"classSensors_1_1DHT22.html#ac4401b7197dcaaab5b5b89a3ccedc103",
+"globals_defs_u.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

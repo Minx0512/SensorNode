@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classSensors_1_1DS18B20" kind="class" language="C++" prot="public">
+    <compoundname>Sensors::DS18B20</compoundname>
+    <includes refid="DS18B20_8h" local="no">DS18B20.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSensors_1_1DS18B20_1a6a769e836e36f4975918eb52f6e00309" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* Sensors::DS18B20::WIRE_PORT</definition>
+        <argsstring></argsstring>
+        <name>WIRE_PORT</name>
+        <briefdescription>
+<para>Thermometer data port. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="70" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensors_1_1DS18B20_1aceb52cdfb7462c8c7be8178181ae4dc5" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* Sensors::DS18B20::WIRE_DDR</definition>
+        <argsstring></argsstring>
+        <name>WIRE_DDR</name>
+        <briefdescription>
+<para>Thermometer data port. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="71" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* Sensors::DS18B20::WIRE_PIN</definition>
+        <argsstring></argsstring>
+        <name>WIRE_PIN</name>
+        <briefdescription>
+<para>Thermometer data port. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="72" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sensors::DS18B20::WIRE_DQ</definition>
+        <argsstring></argsstring>
+        <name>WIRE_DQ</name>
+        <briefdescription>
+<para>Thermometer data line. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="76" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensors_1_1DS18B20_1a7c33b18028020215b85039dd9555a6df" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Sensors::DS18B20::MACString[120]</definition>
+        <argsstring>[120]</argsstring>
+        <name>MACString</name>
+        <briefdescription>
+<para>MAC string of the sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="77" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a014be02f21c7f7b7f933fa800213695c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::ReadMeasurement</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>ReadMeasurement</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Takes a Measurement per sensor on the bus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String with MAC addresses and temperature values </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="91" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="84" bodyend="121"/>
+        <references refid="classSensors_1_1DS18B20_1a7c33b18028020215b85039dd9555a6df" compoundref="DS18B20_8h" startline="77">MACString</references>
+        <references refid="DS18B20_8h_1accfeed0bea98f3185af84c049ed64959" compoundref="DS18B20_8h" startline="52">SEARCH_FIRST</references>
+        <references refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" compoundref="DS18B20_8h" startline="55">LAST_DEVICE</references>
+        <references refid="classSensors_1_1DS18B20_1a889ad2303c61db988566cbfcfd57a9b9" compoundref="DS18B20_8cpp" startline="219" endline="255">RomSearch</references>
+        <references refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" compoundref="DS18B20_8h" startline="53">PRESENCE_ERR</references>
+        <references refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" compoundref="DS18B20_8h" startline="54">DATA_ERR</references>
+        <references refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" compoundref="DS18B20_8cpp" startline="202" endline="215">WriteByte</references>
+        <references refid="DS18B20_8h_1ac1fe271992c3ff8aea781ad1ead35f35" compoundref="DS18B20_8h" startline="38">THERM_CMD_RSCRATCHPAD</references>
+        <references refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" compoundref="DS18B20_8cpp" startline="216" endline="218">ReadByte</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a9b8098959de0977e4576093fe2346cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::ReadMeasurement2</definition>
+        <argsstring>(char *Macstring, char *tempStr)</argsstring>
+        <name>ReadMeasurement2</name>
+        <param>
+          <type>char *</type>
+          <declname>Macstring</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tempStr</declname>
+        </param>
+        <briefdescription>
+<para>Takes a Measurement per sensor on the bus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">Macstring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC addresses of each sensor on the bus </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">tempStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature values in one string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="99" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="123" bodyend="159"/>
+        <references refid="DS18B20_8h_1accfeed0bea98f3185af84c049ed64959" compoundref="DS18B20_8h" startline="52">SEARCH_FIRST</references>
+        <references refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" compoundref="DS18B20_8h" startline="55">LAST_DEVICE</references>
+        <references refid="classSensors_1_1DS18B20_1a889ad2303c61db988566cbfcfd57a9b9" compoundref="DS18B20_8cpp" startline="219" endline="255">RomSearch</references>
+        <references refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" compoundref="DS18B20_8h" startline="53">PRESENCE_ERR</references>
+        <references refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" compoundref="DS18B20_8h" startline="54">DATA_ERR</references>
+        <references refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" compoundref="DS18B20_8cpp" startline="202" endline="215">WriteByte</references>
+        <references refid="DS18B20_8h_1ac1fe271992c3ff8aea781ad1ead35f35" compoundref="DS18B20_8h" startline="38">THERM_CMD_RSCRATCHPAD</references>
+        <references refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" compoundref="DS18B20_8cpp" startline="216" endline="218">ReadByte</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1af643f9bc9d0095ec396817630aa9fa19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sensors::DS18B20::DS18B20</definition>
+        <argsstring>()</argsstring>
+        <name>DS18B20</name>
+        <briefdescription>
+<para><ref refid="classSensors_1_1DS18B20" kindref="compound">DS18B20</ref> standard constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>new <ref refid="classSensors_1_1DS18B20" kindref="compound">DS18B20</ref> object and initializes variables </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="105" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="32" bodyend="49"/>
+        <references refid="classSensors_1_1DS18B20_1a6a769e836e36f4975918eb52f6e00309" compoundref="DS18B20_8h" startline="70">WIRE_PORT</references>
+        <references refid="classSensors_1_1DS18B20_1aceb52cdfb7462c8c7be8178181ae4dc5" compoundref="DS18B20_8h" startline="71">WIRE_DDR</references>
+        <references refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" compoundref="DS18B20_8h" startline="72">WIRE_PIN</references>
+        <references refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a4beaec7604e613184572d0175361fba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sensors::DS18B20::DS18B20</definition>
+        <argsstring>(volatile uint8_t &amp;Wire_PORT, volatile uint8_t &amp;Wire_DDR, volatile uint8_t &amp;Wire_PIN, uint8_t Wire_DQ)</argsstring>
+        <name>DS18B20</name>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>Wire_PORT</declname>
+        </param>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>Wire_DDR</declname>
+        </param>
+        <param>
+          <type>volatile uint8_t &amp;</type>
+          <declname>Wire_PIN</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>Wire_DQ</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classSensors_1_1DS18B20" kindref="compound">DS18B20</ref> constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Wire_PORT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Wire_DDR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Wire_PIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Wire_DQ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data line </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="115" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="52" bodyend="70"/>
+        <references refid="classSensors_1_1DS18B20_1a6a769e836e36f4975918eb52f6e00309" compoundref="DS18B20_8h" startline="70">WIRE_PORT</references>
+        <references refid="classSensors_1_1DS18B20_1aceb52cdfb7462c8c7be8178181ae4dc5" compoundref="DS18B20_8h" startline="71">WIRE_DDR</references>
+        <references refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" compoundref="DS18B20_8h" startline="72">WIRE_PIN</references>
+        <references refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a78f6bbedbe849612f39ef6600a7b91f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::GetMACString</definition>
+        <argsstring>(char *MACStringOut)</argsstring>
+        <name>GetMACString</name>
+        <param>
+          <type>char *</type>
+          <declname>MACStringOut</declname>
+        </param>
+        <briefdescription>
+<para>Get MAC addresses from MACString. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">MACStringOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character array of MAC addresses </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="124" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="272" bodyend="274"/>
+        <references refid="classSensors_1_1DS18B20_1a7c33b18028020215b85039dd9555a6df" compoundref="DS18B20_8h" startline="77">MACString</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1aeed18c0c1d714f084dab8a74437a3c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::GetSensorStringXML</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>GetSensorStringXML</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Get xml style sensor string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Puts out one string with the temperature values <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XML style sensor string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="134" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="281" bodyend="289"/>
+        <references refid="classSensors_1_1DS18B20_1a038c0caa764736529ebaf28af9ee5321" compoundref="DS18B20_8cpp" startline="72" endline="81">StartMeasurement</references>
+        <references refid="classSensors_1_1DS18B20_1a014be02f21c7f7b7f933fa800213695c" compoundref="DS18B20_8cpp" startline="84" endline="121">ReadMeasurement</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a788dc2898e3ad1a0a17d042cf5e3dd9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::GetTemperature</definition>
+        <argsstring>(char *MACstring, char *tempString)</argsstring>
+        <name>GetTemperature</name>
+        <param>
+          <type>char *</type>
+          <declname>MACstring</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tempString</declname>
+        </param>
+        <briefdescription>
+<para>Get temperature values in one string an the MAC addresses in a seperate one. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">MACstring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAC addresses of each sensor on the bus </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">tempString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature values in one string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="142" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="290" bodyend="298"/>
+        <references refid="classSensors_1_1DS18B20_1a038c0caa764736529ebaf28af9ee5321" compoundref="DS18B20_8cpp" startline="72" endline="81">StartMeasurement</references>
+        <references refid="classSensors_1_1DS18B20_1a9b8098959de0977e4576093fe2346cbd" compoundref="DS18B20_8cpp" startline="123" endline="159">ReadMeasurement2</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a038c0caa764736529ebaf28af9ee5321" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::StartMeasurement</definition>
+        <argsstring>(void)</argsstring>
+        <name>StartMeasurement</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sensor Initialization. </para>        </briefdescription>
+        <detaileddescription>
+<para>Starts </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="154" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="72" bodyend="81"/>
+        <references refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" compoundref="DS18B20_8h" startline="72">WIRE_PIN</references>
+        <references refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
+        <references refid="classSensors_1_1DS18B20_1a14af4e7ba13a59b640d651b3abd3bedb" compoundref="DS18B20_8cpp" startline="256" endline="270">Command</references>
+        <references refid="DS18B20_8h_1a3d233d75d73e3baf6d9a7e30b4afed66" compoundref="DS18B20_8h" startline="37">THERM_CMD_CONVERTTEMP</references>
+        <references refid="classSensors_1_1DS18B20_1a6a769e836e36f4975918eb52f6e00309" compoundref="DS18B20_8h" startline="70">WIRE_PORT</references>
+        <references refid="classSensors_1_1DS18B20_1aceb52cdfb7462c8c7be8178181ae4dc5" compoundref="DS18B20_8h" startline="71">WIRE_DDR</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1abefe26ccc02fe5b8519d94a6f46729fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sensors::DS18B20::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="155" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="161" bodyend="183"/>
+        <references refid="classSensors_1_1DS18B20_1a3429705d951dec85ffafbc627bcf015f" compoundref="DS18B20_8h" startline="173" endline="173">PIN_LOW</references>
+        <references refid="classSensors_1_1DS18B20_1aaf9c80b1de14fc02dd2cfd188eddf751" compoundref="DS18B20_8h" startline="172" endline="172">PIN_OUTPUT_MODE</references>
+        <references refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" compoundref="DHT22_8h" startline="23">us</references>
+        <references refid="classSensors_1_1DS18B20_1a8bb87520d8ef3ad3639afab3fbbc39ce" compoundref="DS18B20_8h" startline="171" endline="171">PIN_INPUT_MODE</references>
+        <references refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" compoundref="DS18B20_8h" startline="72">WIRE_PIN</references>
+        <references refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sensors::DS18B20::BitIO</definition>
+        <argsstring>(uint8_t bit)</argsstring>
+        <name>BitIO</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+<para>BitIO. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="164" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="184" bodyend="201"/>
+        <references refid="classSensors_1_1DS18B20_1a3429705d951dec85ffafbc627bcf015f" compoundref="DS18B20_8h" startline="173" endline="173">PIN_LOW</references>
+        <references refid="classSensors_1_1DS18B20_1aaf9c80b1de14fc02dd2cfd188eddf751" compoundref="DS18B20_8h" startline="172" endline="172">PIN_OUTPUT_MODE</references>
+        <references refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" compoundref="DHT22_8h" startline="23">us</references>
+        <references refid="classSensors_1_1DS18B20_1a8bb87520d8ef3ad3639afab3fbbc39ce" compoundref="DS18B20_8h" startline="171" endline="171">PIN_INPUT_MODE</references>
+        <references refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" compoundref="DS18B20_8h" startline="72">WIRE_PIN</references>
+        <references refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sensors::DS18B20::WriteByte</definition>
+        <argsstring>(uint8_t byte)</argsstring>
+        <name>WriteByte</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="165" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="202" bodyend="215"/>
+        <references refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" compoundref="DS18B20_8cpp" startline="184" endline="201">BitIO</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sensors::DS18B20::ReadByte</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReadByte</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="166" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="216" bodyend="218"/>
+        <references refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" compoundref="DS18B20_8cpp" startline="202" endline="215">WriteByte</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a889ad2303c61db988566cbfcfd57a9b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char Sensors::DS18B20::RomSearch</definition>
+        <argsstring>(unsigned char diff, unsigned char *id)</argsstring>
+        <name>RomSearch</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>diff</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="167" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="219" bodyend="255"/>
+        <references refid="classSensors_1_1DS18B20_1abefe26ccc02fe5b8519d94a6f46729fb" compoundref="DS18B20_8cpp" startline="161" endline="183">Reset</references>
+        <references refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" compoundref="DS18B20_8h" startline="53">PRESENCE_ERR</references>
+        <references refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" compoundref="DS18B20_8cpp" startline="202" endline="215">WriteByte</references>
+        <references refid="DS18B20_8h_1ae22115770cfd724213b05d36afcb7d8e" compoundref="DS18B20_8h" startline="50">SEARCH_ROM</references>
+        <references refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" compoundref="DS18B20_8h" startline="55">LAST_DEVICE</references>
+        <references refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" compoundref="DS18B20_8cpp" startline="184" endline="201">BitIO</references>
+        <references refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" compoundref="DS18B20_8h" startline="54">DATA_ERR</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a14af4e7ba13a59b640d651b3abd3bedb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::Command</definition>
+        <argsstring>(unsigned char command, unsigned char *id)</argsstring>
+        <name>Command</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="168" column="1" bodyfile="src/Sensors/DS18B20.cpp" bodystart="256" bodyend="270"/>
+        <references refid="classSensors_1_1DS18B20_1abefe26ccc02fe5b8519d94a6f46729fb" compoundref="DS18B20_8cpp" startline="161" endline="183">Reset</references>
+        <references refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" compoundref="DS18B20_8cpp" startline="202" endline="215">WriteByte</references>
+        <references refid="DS18B20_8h_1a20a70a05486a1fa3aba1881aa90104cd" compoundref="DS18B20_8h" startline="48">MATCH_ROM</references>
+        <references refid="DS18B20_8h_1ae5773d5b673b0c12c6615958dd2efb22" compoundref="DS18B20_8h" startline="49">SKIP_ROM</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a8bb87520d8ef3ad3639afab3fbbc39ce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::PIN_INPUT_MODE</definition>
+        <argsstring>()</argsstring>
+        <name>PIN_INPUT_MODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="171" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="171" bodyend="171"/>
+        <references refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1aaf9c80b1de14fc02dd2cfd188eddf751" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::PIN_OUTPUT_MODE</definition>
+        <argsstring>()</argsstring>
+        <name>PIN_OUTPUT_MODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="172" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="172" bodyend="172"/>
+        <references refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a3429705d951dec85ffafbc627bcf015f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::PIN_LOW</definition>
+        <argsstring>()</argsstring>
+        <name>PIN_LOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="173" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="173" bodyend="173"/>
+        <references refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a1340454609f372341887949ca72e0951" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::DS18B20::PIN_HIGH</definition>
+        <argsstring>()</argsstring>
+        <name>PIN_HIGH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="174" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="174" bodyend="174"/>
+        <references refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" compoundref="DS18B20_8h" startline="76">WIRE_DQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1DS18B20_1a1eab0f2d40228dbf38f00f69b58e0b78" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Sensors::DS18B20::__attribute__</definition>
+        <argsstring>((gnu_inline)) void delay_us(uint16_t delay)</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(gnu_inline)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/DS18B20.h" line="178" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="178" bodyend="180"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classSensors_1_1DS18B20" kindref="compound">DS18B20</ref> class definition. </para>    </briefdescription>
+    <detaileddescription>
+<para>Defines methods for accessing the <ref refid="classSensors_1_1DS18B20" kindref="compound">DS18B20</ref> interface </para>    </detaileddescription>
+    <location file="src/Sensors/DS18B20.h" line="65" column="1" bodyfile="src/Sensors/DS18B20.h" bodystart="65" bodyend="182"/>
+    <listofallmembers>
+      <member refid="classSensors_1_1DS18B20_1a1eab0f2d40228dbf38f00f69b58e0b78" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>__attribute__</name></member>
+      <member refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>BitIO</name></member>
+      <member refid="classSensors_1_1DS18B20_1a14af4e7ba13a59b640d651b3abd3bedb" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>Command</name></member>
+      <member refid="classSensors_1_1DS18B20_1af643f9bc9d0095ec396817630aa9fa19" prot="public" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>DS18B20</name></member>
+      <member refid="classSensors_1_1DS18B20_1a4beaec7604e613184572d0175361fba7" prot="public" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>DS18B20</name></member>
+      <member refid="classSensors_1_1DS18B20_1a78f6bbedbe849612f39ef6600a7b91f3" prot="public" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>GetMACString</name></member>
+      <member refid="classSensors_1_1DS18B20_1aeed18c0c1d714f084dab8a74437a3c35" prot="public" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>GetSensorStringXML</name></member>
+      <member refid="classSensors_1_1DS18B20_1a788dc2898e3ad1a0a17d042cf5e3dd9a" prot="public" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>GetTemperature</name></member>
+      <member refid="classSensors_1_1DS18B20_1a7c33b18028020215b85039dd9555a6df" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>MACString</name></member>
+      <member refid="classSensors_1_1DS18B20_1a1340454609f372341887949ca72e0951" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>PIN_HIGH</name></member>
+      <member refid="classSensors_1_1DS18B20_1a8bb87520d8ef3ad3639afab3fbbc39ce" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>PIN_INPUT_MODE</name></member>
+      <member refid="classSensors_1_1DS18B20_1a3429705d951dec85ffafbc627bcf015f" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>PIN_LOW</name></member>
+      <member refid="classSensors_1_1DS18B20_1aaf9c80b1de14fc02dd2cfd188eddf751" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>PIN_OUTPUT_MODE</name></member>
+      <member refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>ReadByte</name></member>
+      <member refid="classSensors_1_1DS18B20_1a014be02f21c7f7b7f933fa800213695c" prot="public" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>ReadMeasurement</name></member>
+      <member refid="classSensors_1_1DS18B20_1a9b8098959de0977e4576093fe2346cbd" prot="public" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>ReadMeasurement2</name></member>
+      <member refid="classSensors_1_1DS18B20_1abefe26ccc02fe5b8519d94a6f46729fb" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>Reset</name></member>
+      <member refid="classSensors_1_1DS18B20_1a889ad2303c61db988566cbfcfd57a9b9" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>RomSearch</name></member>
+      <member refid="classSensors_1_1DS18B20_1a038c0caa764736529ebaf28af9ee5321" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>StartMeasurement</name></member>
+      <member refid="classSensors_1_1DS18B20_1aceb52cdfb7462c8c7be8178181ae4dc5" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>WIRE_DDR</name></member>
+      <member refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>WIRE_DQ</name></member>
+      <member refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>WIRE_PIN</name></member>
+      <member refid="classSensors_1_1DS18B20_1a6a769e836e36f4975918eb52f6e00309" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>WIRE_PORT</name></member>
+      <member refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" prot="private" virt="non-virtual"><scope>Sensors::DS18B20</scope><name>WriteByte</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

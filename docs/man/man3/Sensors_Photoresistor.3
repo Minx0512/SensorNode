@@ -1,0 +1,145 @@
+.TH "Sensors::Photoresistor" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Sensors::Photoresistor \- \fBPhotoresistor\fP class definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Photoresistor\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPhotoresistor\fP ()"
+.br
+.RI "\fI\fBPhotoresistor\fP standard constructor\&. \fP"
+.ti -1c
+.RI "\fBPhotoresistor\fP (uint8_t port)"
+.br
+.RI "\fI\fBPhotoresistor\fP constructor\&. \fP"
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "\fIInitialize analog digital converter\&. \fP"
+.ti -1c
+.RI "void \fBGetSensorStringXML\fP (char *string)"
+.br
+.RI "\fIGet sensor value\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetPort\fP (uint8_t port)"
+.br
+.RI "\fISet Port of analog/digital converter\&. \fP"
+.ti -1c
+.RI "void \fBsetType\fP (uint8_t t)"
+.br
+.RI "\fISet Type of light detector\&. \fP"
+.ti -1c
+.RI "uint16_t \fBreadADValue\fP ()"
+.br
+.RI "\fIReads digital value of the AD converter\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBtype\fP"
+.br
+.RI "\fILight detector type\&. \fP"
+.ti -1c
+.RI "uint8_t \fBADPort\fP"
+.br
+.RI "\fIAnalog/Digital converter port\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPhotoresistor\fP class definition\&. 
+
+Defines methods for accessing the \fBPhotoresistor\fP interface 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Sensors::Photoresistor::Photoresistor ()"
+
+.PP
+\fBPhotoresistor\fP standard constructor\&. new \fBPhotoresistor\fP object and initializes variables 
+.SS "Sensors::Photoresistor::Photoresistor (uint8_t port)"
+
+.PP
+\fBPhotoresistor\fP constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIport\fP Port number of analog/digital converter 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Sensors::Photoresistor::GetSensorStringXML (char * string)"
+
+.PP
+Get sensor value\&. Returns a character array with the average Sensor value of 1000 measurements and adds a | to the end of it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+
+.SS "void Sensors::Photoresistor::Init (void)"
+
+.PP
+Initialize analog digital converter\&. 
+.SS "uint16_t Sensors::Photoresistor::readADValue ()\fC [private]\fP"
+
+.PP
+Reads digital value of the AD converter\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Digital value of one AD conversion 
+.RE
+.PP
+
+.SS "void Sensors::Photoresistor::setPort (uint8_t port)\fC [private]\fP"
+
+.PP
+Set Port of analog/digital converter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIport\fP Port number 
+.RE
+.PP
+
+.SS "void Sensors::Photoresistor::setType (uint8_t t)\fC [private]\fP"
+
+.PP
+Set Type of light detector\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIt\fP Type number 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t Sensors::Photoresistor::ADPort\fC [private]\fP"
+
+.PP
+Analog/Digital converter port\&. 
+.SS "uint8_t Sensors::Photoresistor::type\fC [private]\fP"
+
+.PP
+Light detector type\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

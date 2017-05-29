@@ -30,13 +30,15 @@
 #include <string.h>
 #include <avr/eeprom.h>
 #include <avr/pgmspace.h>
-//#include <avr/wdt.h>
 
-#include "IO/USART.h"
+#include "IO/IO.hpp"
 #include "IO/ParseStrings.h"
 #include "Wireless/NRF24L01.h"
 
+
 //#define F_CPU 16000000
+
+
 
 /*!
  	 \def CE
@@ -47,30 +49,28 @@
 
 
 #define Sensor_DS18B20 1 //!< is a DS18B20 temperature Sensor connected to the microcontroller?
-#define Sensor_DHT22 0	//!< is a DHT22 temperature and humidity sensor connected?
+#define Sensor_DHT22 1	//!< is a DHT22 temperature and humidity sensor connected?
 #define Sensor_Move 1	//!< is a movement detector connected?
 #define Sensor_LightVoltage 1 	//!< is a photoresitor connected to a analog input?
 #define Sensor_LightLux 0 	//!< is a digital Lux sensor connected (I2C)?
-#define Sensor_Pressure 0 	//!< is a pressure sensor connected (I2C)?
+#define Sensor_BMP180 0 	//!< is a pressure sensor connected (I2C)?
 
 #define NRF_MainNode 1	//!< Role of the node
 #define NRF_SN 0 	//!< is Slave node?
 #define NRF_SNnum 0	//!< number of slave nodes
 
 
-#if Sensor_DHT22
-#include "Sensors/DHT22.h"
-#endif
-#if Sensor_DS18B20
-#include "Sensors/DS18B20.h"
-#endif
-#if Sensor_LightVoltage
-#include "Sensors/Photoresistor.h"
+#include "Sensors/Sensors.hpp"
+
+
+#ifndef RX_BUFF
+#define RX_BUFF 128
 #endif
 
+
+
 // uint8_t sent = 0;	//!< Flag
-uint8_t uartRX_flag = 0; 	//!< Flag received UART message
-uint8_t flagMovement = 0; //!< Flag for movement detected
+
 uint8_t nrfIntFlag = 0;		//!< Flag for incoming message from the RF module
 
 char bufferNRF[128][5]; //!< Buffer for received messages via nRF24L01+ module
@@ -115,23 +115,16 @@ uint64_t adressTx[] = {0xA0A0A0A0A0,0xA0A0A0A0A1,0xA0A0A0A0A2,0xA0A0A0A0A3,0xA0A
 
 
 
+IO iface = IO(); //!< Create new IOInterface object
 
-USART uart = USART(9600); //!< Create new USART object with a baud rate of 9600
-NRF24L01 nrf = NRF24L01(DDRB, PORTB, CE, CSN); //!< Create new NRF242L01 object
+
+NRF24L01 nrf = NRF24L01(&iface,DDRB, PORTB, CE, CSN); //!< Create new NRF242L01 object
+
 ParseStrings ps = ParseStrings(); 	//!< Create new ParseString object
 
 
 
-
-#if Sensor_DS18B20
-DS18B20 ds = DS18B20(PORTD,DDRD,PIND, PD6);	//!< Create new DS18B20 object connected to pin PD6
-#endif
-#if Sensor_DHT22
-DHT22 dht22 = DHT22(PORTD,DDRD,PIND,PD7); //!< Create new DHT22 object connected to pin PD7
-#endif
-#if Sensor_LightVoltage
-Photoresistor pr = Photoresistor(0x00); 	//!< Create new Photoresitor object connected to the analog output 0x00
-#endif
+Sensors::Sensors sensors = Sensors::Sensors(); //!< Create Sensors object
 
 
 
@@ -147,34 +140,6 @@ void delay_ms(uint16_t ms){
 }
 
 
-//! Copies a MAC address from an uint8 array to a char array
-/*!
-  @param [in] nrfMAC MAC address uint8 array of the nRF24L01+ module
-  @param [out] newMAC MAC address char array of the nRF24L01+ module
-*/
-void GetNodeMAC(char* newMAC, uint8_t* nrfMAC){
-
-
-	sprintf(newMAC,"%02X:%02X:%02X:%02X:%02X",nrfMAC[0],nrfMAC[1],nrfMAC[2],nrfMAC[3],nrfMAC[4]);
-
-
-
-}
-/*! \fn void CreateSensorMAC(char* newMAC, uint8_t* nrfMAC,char* add)
-	\brief Combine new MAC address from an uint8 MAC array and a char array to a char array
-
-  @param [in] nrfMAC MAC address uint8 array of the nRF24L01+ module
-  @param [out] newMAC MAC address char array of the sensor
-  @param [in] add Address addition
-*/
-void CreateSensorMAC(char* newMAC, uint8_t* nrfMAC,char* add){
-
-
-	sprintf(newMAC,"%02X:%02X:%02X:%02X:%02X%s",nrfMAC[0],nrfMAC[1],nrfMAC[2],nrfMAC[3],nrfMAC[4],add);
-
-
-
-}
 /*! \fn void CreateSensorMAC(char* newMAC, uint64_t nrfMAC,char* add)
   \brief Combine new MAC address from an uint64 MAC address and a char array to a char array
 
@@ -287,6 +252,7 @@ void SetupNRF(){
 
 
 }
+
 /*! \fn void init_interupt()
     \brief Initialize interrupts
 
@@ -311,7 +277,7 @@ void init_interupt(){
  *
  */
 ISR(INT0_vect){
-
+/*
 	PORTD ^= (1<<PD4);
 	// nrf receive
 	//uart.writeString("INT0\r\n");
@@ -334,9 +300,13 @@ ISR(INT0_vect){
 	}
 
 
+*/
+
 
 
 }
+
+
 //! Interrupt routine for INT1
 /*!
  *	Sets the flagMovement to 0 if the movment detector fires
@@ -344,8 +314,7 @@ ISR(INT0_vect){
  */
 ISR(INT1_vect){
 	// set movement flag
-	flagMovement = 1;
-
+	sensors.MV_SetMovementTrue();
 }
 
 
@@ -358,7 +327,8 @@ ISR(USART_RX_vect){
 // fifo_put
 	PORTD ^= (1<<PD4);
 	//const char* s = uart.readString();
-	uart.readString(str,RX_BUFF);
+	//uart.readString(str,RX_BUFF);
+	iface.USART_readString(str,RX_BUFF);
 
 
 char s[50];
@@ -367,15 +337,15 @@ sprintf(s," ");
 
 sprintf(s,"//input/%s/",str);
 //sprintf(str,"%s","");
-uart.writeString(s);
+//uart.writeString(s);
+
+iface.USART_writeString(s);
 
 
+iface.USART_SetRxFlagTrue();
 
-uartRX_flag = 1;
 
-
-uart.USART0_Flush();
-
+iface.USART_Flush();
 
 
 }
@@ -413,6 +383,9 @@ ISR(USART_UDRE_vect){
  */
 int main(){
 
+
+
+
 	/* Define pull-ups and set output high
 	 *	Define directions for port pins
 	 */
@@ -421,7 +394,11 @@ int main(){
 
 	init_interupt();
 
-	uart.initUART();
+
+	iface.InitInterfaces();
+
+	sensors.InitSensors();
+
 
 	delay_ms(500); /* Delay 500ms */
 
@@ -430,10 +407,13 @@ int main(){
 	char buffer[350];
 //	char system[500];
 
-	//sprintf(buffer,"\r\n########### START #############\r\n");
+	sprintf(buffer,"\r\n########### START #############\r\n");
+
+	iface.USART_writeString(buffer);
+
 	//uart.writeString(buffer);
 
-	//snprintf(buffer,1, " ");
+	sprintf(buffer, "");
 
 	SetupNRF();
 	delay_ms(500);
@@ -463,7 +443,7 @@ int main(){
 
 			}
 
-			if(uartRX_flag){
+			if(iface.USART_GetRxFlag()){
 
 
 				ps.Parse(str);
@@ -635,7 +615,8 @@ int main(){
 						#endif
 
 						sprintf(infoString,sendSystemStr,propString,nodeMac,valBuffer);
-						uart.writeString(infoString);
+
+						iface.USART_writeString(infoString);
 
 
 					}
@@ -650,13 +631,13 @@ int main(){
 						eeprom_read_block (&writeto, &mem_adressTx[cp], sizeof(mem_adressTx[cp]));
 
 
-
+/*
 						nrf.stopListening();
 						nrf.openWritingPipe(writeto);
 						nrf.openReadingPipe(1,adressRx[0]);
 
 						nrf.startListening();
-
+*/
 
 						CreateSensorMAC(nodeMac,writeto,(char*)"");
 						sprintf(valBuffer,"%s",(char*)"Sensors");
@@ -668,7 +649,7 @@ int main(){
 
 						// get node n sensors via nRF
 					//	nrf.write(infoString,sizeof(infoString));
-						uart.writeString(infoString);
+						iface.USART_writeString(infoString);
 
 
 
@@ -702,18 +683,19 @@ int main(){
 
 							CreateSensorMAC(newMac,stdMAC,(char*)":00:01:00|");
 
-							if(flagMovement){
+							if(sensors.MV_GetMovement()){
 									// movement detected
 								sprintf(mvbuffer,sendSensorStr,propString,newMac,"1|");
 
-								flagMovement = 0;
+							//	flagMovement = 0;
+								sensors.MV_SetMovementFalse();
 							}else{
 									// no movement detected
 								sprintf(mvbuffer,sendSensorStr,propString,newMac,"0|");
 
 							}
 
-							uart.writeString(mvbuffer);
+							iface.USART_writeString(mvbuffer);
 
 						}
 					#endif
@@ -729,13 +711,14 @@ int main(){
 
 
 
-							CreateSensorMAC(dhtMac,stdMACpipe0,(char*)":00:02:00|");
+							CreateSensorMAC(dhtMac,stdMAC,(char*)":00:02:00|");
 
-							dht22.GetSensorStringXML(valBuffer);
+							sensors.DHT22_GetSensorValueString(valBuffer);
+							//dht22.GetSensorStringXML(valBuffer);
 
 							sprintf(dhtBuffer,sendSensorStr,propString,dhtMac,valBuffer);
 
-							uart.writeString(dhtBuffer);
+							iface.USART_writeString(dhtBuffer);
 
 
 
@@ -751,14 +734,16 @@ int main(){
 							char prbuffer[80];
 
 							char lightBuffer[15];
-							pr.GetSensorStringXML(lightBuffer);
+
+							sensors.PR_GetSensorValueString(lightBuffer);
+							//pr.GetSensorStringXML(lightBuffer);
 							char lightMac[25];
 
 							CreateSensorMAC(lightMac,stdMAC,(char*)":00:03:00|");
 
 							sprintf(prbuffer,sendSensorStr,propString,lightMac,lightBuffer);
 
-							uart.writeString(prbuffer);
+							iface.USART_writeString(prbuffer);
 
 
 						}
@@ -782,7 +767,7 @@ int main(){
 
 							sprintf(sensorbuffer,sendSensorStr,propString,lightMac,lightBuffer);
 
-							uart.writeString(sensorbuffer);
+							iface.USART_writeString(sensorbuffer);
 
 
 
@@ -801,11 +786,13 @@ int main(){
 							char macStr[60];
 							char tempStr[30];
 
-							ds.GetSensorStringXML(tempStr);
-							ds.GetMACString(macStr);
+							sensors.DS18B20_GetMACString(macStr);
+							sensors.DS18B20_GetSensorValueString(tempStr);
+							//ds.GetSensorStringXML(tempStr);
+							//ds.GetMACString(macStr);
 							//CreateSensorMAC(macStr,stdMACpipe0,(char*)":00:05:00|");
 							sprintf(dsb,sendSensorStr,propString,macStr,tempStr);
-							uart.writeString(dsb);
+							iface.USART_writeString(dsb);
 
 
 						}
@@ -835,13 +822,12 @@ int main(){
 
 
 
-				uart.writeString((char*)"\\\\+end\r\n");
+				iface.USART_writeString((char*)"\\\\+end\r\n");
 
 				sprintf(str," ");
 
 
-
-				uartRX_flag = 0;
+				iface.USART_SetRxFlagFalse();
 
 			}
 

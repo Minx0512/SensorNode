@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceSensors" kind="namespace" language="C++">
+    <compoundname>Sensors</compoundname>
+    <innerclass refid="classSensors_1_1DHT22" prot="public">Sensors::DHT22</innerclass>
+    <innerclass refid="classSensors_1_1DS18B20" prot="public">Sensors::DS18B20</innerclass>
+    <innerclass refid="classSensors_1_1Photoresistor" prot="public">Sensors::Photoresistor</innerclass>
+    <innerclass refid="classSensors_1_1Sensors" prot="public">Sensors::Sensors</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Sensors/DHT22.cpp" line="17" column="1"/>
+  </compounddef>
+</doxygen>

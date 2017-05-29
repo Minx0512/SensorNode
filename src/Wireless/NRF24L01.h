@@ -28,9 +28,10 @@
 #define NRF24L01_H_
 
 #include "avr/io.h"
-#include "../IO/SPI.h"
-#include "../IO/USART.h"
+
 #include <avr/pgmspace.h>
+
+#include "../IO/IO.hpp"
 //CE and CSN port definitions
 //#define NRF24L01_DDR DDRB
 #define NRF24L01_PORT PORTB
@@ -95,6 +96,8 @@ typedef enum { RF24_CRC_DISABLED = 0, RF24_CRC_8, RF24_CRC_16 } rf24_crclength_e
 class NRF24L01 {
 
 
+	IO* ioInterface;
+
 	//CE and CSN port definitions
 	volatile uint8_t* NRF24L01_DDR;
 //	volatile uint8_t* NRF24L01_PORT;
@@ -148,7 +151,10 @@ public:
 
 	NRF24L01();
 
-	NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, uint8_t CSN);
+//	NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, uint8_t CSN);
+
+	NRF24L01(IO *ioInterface ,volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, uint8_t CSN);
+
 
 	/**
 	   * Begin operation of the chip
@@ -986,7 +992,7 @@ public:
 	void PrintInfo(char* string);
 
 */
-SPI spi;
+//SPI spi;
 
 private:
 	//USART u;

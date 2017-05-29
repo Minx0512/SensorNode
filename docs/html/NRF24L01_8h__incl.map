@@ -1,4 +1,6 @@
 <map id="src/Wireless/NRF24L01.h" name="src/Wireless/NRF24L01.h">
-<area shape="rect" id="node3" href="$SPI_8h.html" title="../IO/SPI.h" alt="" coords="22,80,107,107"/>
-<area shape="rect" id="node4" href="$USART_8h.html" title="../IO/USART.h" alt="" coords="131,80,241,107"/>
+<area shape="rect" id="node4" href="$IO_8hpp.html" title="../IO/IO.hpp" alt="" coords="182,80,273,107"/>
+<area shape="rect" id="node5" href="$I2C_8hpp.html" title="I2C.hpp" alt="" coords="287,155,355,181"/>
+<area shape="rect" id="node7" href="$USART_8h.html" title="USART.h" alt="" coords="171,155,249,181"/>
+<area shape="rect" id="node10" href="$SPI_8h.html" title="SPI.h" alt="" coords="76,155,131,181"/>
 </map>

@@ -3,38 +3,51 @@
   <compounddef id="Photoresistor_8h" kind="file" language="C++">
     <compoundname>Photoresistor.h</compoundname>
     <includes local="no">avr/io.h</includes>
-    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="Sensors_8hpp" local="yes">src/Sensors/Sensors.hpp</includedby>
     <includedby refid="Photoresistor_8cpp" local="yes">src/Sensors/Photoresistor.cpp</includedby>
     <incdepgraph>
-      <node id="290">
+      <node id="437">
         <label>src/Sensors/Photoresistor.h</label>
         <link refid="Photoresistor.h"/>
-        <childnode refid="291" relation="include">
+        <childnode refid="438" relation="include">
         </childnode>
       </node>
-      <node id="291">
+      <node id="438">
         <label>avr/io.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="293">
+      <node id="441">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="292">
+      <node id="439">
         <label>src/Sensors/Photoresistor.h</label>
         <link refid="Photoresistor.h"/>
-        <childnode refid="293" relation="include">
+        <childnode refid="440" relation="include">
         </childnode>
-        <childnode refid="294" relation="include">
+        <childnode refid="443" relation="include">
         </childnode>
       </node>
-      <node id="294">
+      <node id="442">
+        <label>src/Sensors/Sensors.cpp</label>
+        <link refid="Sensors_8cpp"/>
+      </node>
+      <node id="440">
+        <label>src/Sensors/Sensors.hpp</label>
+        <link refid="Sensors_8hpp"/>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
         <label>src/Sensors/Photoresistor.cpp</label>
         <link refid="Photoresistor_8cpp"/>
       </node>
     </invincdepgraph>
-    <innerclass refid="classPhotoresistor" prot="public">Photoresistor</innerclass>
+    <innerclass refid="classSensors_1_1Photoresistor" prot="public">Sensors::Photoresistor</innerclass>
+    <innernamespace refid="namespaceSensors">Sensors</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -46,14 +59,14 @@
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceSensors" kindref="compound">Sensors</ref><sp/>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"></codeline>
-<codeline lineno="33" refid="classPhotoresistor" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPhotoresistor" kindref="compound">Photoresistor</ref><sp/>{</highlight></codeline>
+<codeline lineno="33" refid="classSensors_1_1Photoresistor" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSensors_1_1Photoresistor" kindref="compound">Photoresistor</ref><sp/>{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="classPhotoresistor_1a0edaea79b0038417748c103f3647bd7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classPhotoresistor_1a0edaea79b0038417748c103f3647bd7d" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="36" refid="classSensors_1_1Photoresistor_1abdd598255c0051cbc8db8a457cd29dc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSensors_1_1Photoresistor_1abdd598255c0051cbc8db8a457cd29dc8" kindref="member">type</ref>;<sp/></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="classPhotoresistor_1a550c85d1df00f323cd2fb86bb3d73c15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classPhotoresistor_1a550c85d1df00f323cd2fb86bb3d73c15" kindref="member">ADPort</ref>;<sp/></highlight></codeline>
+<codeline lineno="38" refid="classSensors_1_1Photoresistor_1a43797415ff86174f92b44e69046e3de7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSensors_1_1Photoresistor_1a43797415ff86174f92b44e69046e3de7" kindref="member">ADPort</ref>;<sp/></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
@@ -61,37 +74,39 @@
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPhotoresistor_1a2a717a2af0b5000b3971dc9e57a16e8e" kindref="member">Photoresistor</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1Photoresistor_1a636b09df1c219714314a691bef87a6bd" kindref="member">Photoresistor</ref>();</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPhotoresistor_1a2a717a2af0b5000b3971dc9e57a16e8e" kindref="member">Photoresistor</ref>(uint8_t<sp/>port);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1Photoresistor_1a636b09df1c219714314a691bef87a6bd" kindref="member">Photoresistor</ref>(uint8_t<sp/>port);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1afa6d3901116b270855a95156f99010e4" kindref="member">GetSensorStringXML</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1afe829b4b1be3d742d789ab6b75dc0c9d" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="59"></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1Photoresistor_1a62a0993f8a84a827b843d9bcdded089e" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1Photoresistor_1a06b802026054f93a7b6659db0ffe731e" kindref="member">GetSensorStringXML</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1a984cf8c9ed6a428f5b025a5ea85822da" kindref="member">setPort</ref>(uint8_t<sp/>port);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPhotoresistor_1a5c3bc9e8877b54faeded1450a39552fb" kindref="member">setType</ref>(uint8_t<sp/>t);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="classPhotoresistor_1aea81da3cce831497e50b02344bbba238" kindref="member">readADValue</ref>();</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1Photoresistor_1a46314a8e495c2ad308fe89935b1c2574" kindref="member">setPort</ref>(uint8_t<sp/>port);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1Photoresistor_1a03306f2c1b5a7d65b46178dcc25c1c9a" kindref="member">setType</ref>(uint8_t<sp/>t);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="classSensors_1_1Photoresistor_1aaee5f77d43f8a7d3175a9bf3e635041d" kindref="member">readADValue</ref>();</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//extern<sp/>Photoresistor<sp/>photoresistor;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PHOTORESISTOR_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//extern<sp/>Photoresistor<sp/>photoresistor;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PHOTORESISTOR_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="src/Sensors/Photoresistor.h"/>
   </compounddef>

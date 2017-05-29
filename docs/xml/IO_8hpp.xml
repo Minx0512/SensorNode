@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="IO_8hpp" kind="file" language="C++">
+    <compoundname>IO.hpp</compoundname>
+    <includes refid="I2C_8hpp" local="yes">I2C.hpp</includes>
+    <includes refid="USART_8h" local="yes">USART.h</includes>
+    <includes refid="SPI_8h" local="yes">SPI.h</includes>
+    <includedby refid="IO_8cpp" local="yes">src/IO/IO.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="NRF24L01_8h" local="yes">src/Wireless/NRF24L01.h</includedby>
+    <incdepgraph>
+      <node id="285">
+        <label>src/IO/IO.hpp</label>
+        <link refid="IO.hpp"/>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="292" relation="include">
+        </childnode>
+      </node>
+      <node id="286">
+        <label>I2C.hpp</label>
+        <link refid="I2C_8hpp"/>
+        <childnode refid="287" relation="include">
+        </childnode>
+      </node>
+      <node id="292">
+        <label>SPI.h</label>
+        <link refid="SPI_8h"/>
+        <childnode refid="289" relation="include">
+        </childnode>
+      </node>
+      <node id="289">
+        <label>avr/io.h</label>
+      </node>
+      <node id="290">
+        <label>util/delay.h</label>
+      </node>
+      <node id="291">
+        <label>string.h</label>
+      </node>
+      <node id="288">
+        <label>USART.h</label>
+        <link refid="USART_8h"/>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="295">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="293">
+        <label>src/IO/IO.hpp</label>
+        <link refid="IO.hpp"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>src/Wireless/NRF24L01.h</label>
+        <link refid="NRF24L01_8h"/>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>src/IO/IO.cpp</label>
+        <link refid="IO_8cpp"/>
+      </node>
+      <node id="297">
+        <label>src/Wireless/NRF24L01.cpp</label>
+        <link refid="NRF24L01_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classIO" prot="public">IO</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="IO_8hpp" kindref="compound">IO.hpp</ref></para><para>Created on: 25 May 2017</para><para>Author: Matthias Minx</para><para>Revision: 1</para><para>License: </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="22"><highlight class="preprocessor">#ifndef<sp/>IO_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="I2C_8hpp" kindref="compound">I2C.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="USART_8h" kindref="compound">USART.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SPI_8h" kindref="compound">SPI.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//namespace<sp/>IO<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//class<sp/>SPI;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//class<sp/>USART;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classIO" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classIO" kindref="compound">IO</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classIO_1a441eb28753ed241386507df53bacdaad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSPI" kindref="compound">SPI</ref><sp/><ref refid="classIO_1a441eb28753ed241386507df53bacdaad" kindref="member">spi</ref>;</highlight></codeline>
+<codeline lineno="38" refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART" kindref="compound">USART</ref><sp/><ref refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" kindref="member">usart</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classIO_1a6dc46e51d3706946a6a13dd8c94cbf60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classI2C" kindref="compound">I2C</ref><sp/><ref refid="classIO_1a6dc46e51d3706946a6a13dd8c94cbf60" kindref="member">i2c</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classIO_1a041a386e8e27fe7486090449d2749ea2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classIO_1a041a386e8e27fe7486090449d2749ea2" kindref="member">uartRX_flag</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classIO_1a49b27a2ee79bce0de4e3ef163cbebd30" kindref="member">IO</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIO_1ad7933ecdc01630b62be377ab873fea21" kindref="member">USART_SetRxFlagTrue</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIO_1a69cddfa296c916c81cf7480c6c7f9139" kindref="member">USART_SetRxFlagFalse</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classIO_1af8171de8979d317fec0a187ba087a626" kindref="member">USART_GetRxFlag</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIO_1a240a25927946ea2994e271eb56948362" kindref="member">USART_writeString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" kindref="member">str</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIO_1a1febbd3f3b0a0a482226ee1659f2f7d1" kindref="member">USART_readString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*myString,uint8_t<sp/>maxLength);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIO_1a1febbd3f3b0a0a482226ee1659f2f7d1" kindref="member">USART_readString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIO_1a04360979dfc7e8960abb4b7659257b68" kindref="member">USART_Flush</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" kindref="member">SPI_WriteReadbyte</ref>(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIO_1add6f3bdf0120b0d63d7b48a72e8edc1e" kindref="member">InitInterfaces</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>IO_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="src/IO/IO.hpp"/>
+  </compounddef>
+</doxygen>

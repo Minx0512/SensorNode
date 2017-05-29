@@ -1,0 +1,143 @@
+.TH "Sensors::DHT22" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Sensors::DHT22 \- \fBDHT22\fP class definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DHT22\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDHT22\fP ()"
+.br
+.ti -1c
+.RI "\fBDHT22\fP (volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volatile uint8_t &Wire_PIN, uint8_t Wire_DQ)"
+.br
+.ti -1c
+.RI "int8_t \fBGetTemperatureHumidity\fP (float *temperature, float *humidity)"
+.br
+.ti -1c
+.RI "int8_t \fBGetTemperature\fP (float *temperature)"
+.br
+.ti -1c
+.RI "int8_t \fBGetHumidity\fP (float *humidity)"
+.br
+.ti -1c
+.RI "void \fBGetSensorStringXML\fP (char *string)"
+.br
+.ti -1c
+.RI "void \fBGetSensorTemperatureStringXML\fP (char *string)"
+.br
+.ti -1c
+.RI "void \fBGetSensorHumidityStringXML\fP (char *string)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBReset\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBSendRequest\fP (uint8_t bit)"
+.br
+.ti -1c
+.RI "int8_t \fBGetData\fP (float *temperature, float *humidity)"
+.br
+.ti -1c
+.RI "void \fBAM2302_PIN_INPUT_MODE\fP ()"
+.br
+.ti -1c
+.RI "void \fBAM2302_PIN_OUTPUT_MODE\fP ()"
+.br
+.ti -1c
+.RI "void \fBAM2302_PIN_LOW\fP ()"
+.br
+.ti -1c
+.RI "void \fBAM2302_PIN_HIGH\fP ()"
+.br
+.ti -1c
+.RI "bool \fBAM2302_HIGH_INPUT\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "volatile uint8_t * \fBAM2302_WIRE_PORT\fP"
+.br
+.ti -1c
+.RI "volatile uint8_t * \fBAM2302_WIRE_DDR\fP"
+.br
+.ti -1c
+.RI "volatile uint8_t * \fBAM2302_WIRE_PIN\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBAM2302_WIRE_DQ\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBTIMEOUT\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBDHT22\fP class definition\&. 
+
+Defines methods for accessing the \fBDHT22\fP interface 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Sensors::DHT22::DHT22 ()"
+
+.SS "Sensors::DHT22::DHT22 (volatile uint8_t & Wire_PORT, volatile uint8_t & Wire_DDR, volatile uint8_t & Wire_PIN, uint8_t Wire_DQ)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Sensors::DHT22::AM2302_HIGH_INPUT ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Sensors::DHT22::AM2302_PIN_HIGH ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Sensors::DHT22::AM2302_PIN_INPUT_MODE ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Sensors::DHT22::AM2302_PIN_LOW ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void Sensors::DHT22::AM2302_PIN_OUTPUT_MODE ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "int8_t Sensors::DHT22::GetData (float * temperature, float * humidity)\fC [private]\fP"
+
+.SS "int8_t Sensors::DHT22::GetHumidity (float * humidity)"
+
+.SS "void Sensors::DHT22::GetSensorHumidityStringXML (char * string)"
+
+.SS "void Sensors::DHT22::GetSensorStringXML (char * string)"
+
+.SS "void Sensors::DHT22::GetSensorTemperatureStringXML (char * string)"
+
+.SS "int8_t Sensors::DHT22::GetTemperature (float * temperature)"
+
+.SS "int8_t Sensors::DHT22::GetTemperatureHumidity (float * temperature, float * humidity)"
+
+.SS "void Sensors::DHT22::Reset ()\fC [private]\fP"
+
+.SS "uint8_t Sensors::DHT22::SendRequest (uint8_t bit)\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "volatile uint8_t* Sensors::DHT22::AM2302_WIRE_DDR\fC [private]\fP"
+
+.SS "uint8_t Sensors::DHT22::AM2302_WIRE_DQ\fC [private]\fP"
+
+.SS "volatile uint8_t* Sensors::DHT22::AM2302_WIRE_PIN\fC [private]\fP"
+
+.SS "volatile uint8_t* Sensors::DHT22::AM2302_WIRE_PORT\fC [private]\fP"
+
+.SS "uint8_t Sensors::DHT22::TIMEOUT\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

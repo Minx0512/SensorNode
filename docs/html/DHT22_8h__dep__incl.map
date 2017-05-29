@@ -1,3 +1,6 @@
 <map id="src/Sensors/DHT22.h" name="src/Sensors/DHT22.h">
-<area shape="rect" id="node2" href="$DHT22_8cpp.html" title="src/Sensors/DHT22.cpp" alt="" coords="5,80,168,107"/>
+<area shape="rect" id="node2" href="$Sensors_8hpp.html" title="src/Sensors/Sensors.hpp" alt="" coords="48,80,217,107"/>
+<area shape="rect" id="node5" href="$DHT22_8cpp.html" title="src/Sensors/DHT22.cpp" alt="" coords="242,80,405,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="5,155,103,181"/>
+<area shape="rect" id="node4" href="$Sensors_8cpp.html" title="src/Sensors/Sensors.cpp" alt="" coords="127,155,296,181"/>
 </map>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SensorNode: src/Sensors/BMP180.hpp File Reference</title>
+<title>SensorNode: src/Sensors/deactivated/BMP180.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -106,17 +106,26 @@ $(document).ready(function(){initNavTree('BMP180_8hpp.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">BMP180.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;../IO/I2C.hpp&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for BMP180.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="BMP180_8hpp__incl.png" border="0" usemap="#src_2Sensors_2deactivated_2BMP180_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="BMP180_8hpp__dep__incl.png" border="0" usemap="#src_2Sensors_2BMP180_8hppdep" alt=""/></div>
-<map name="src_2Sensors_2BMP180_8hppdep" id="src_2Sensors_2BMP180_8hppdep">
-<area shape="rect" id="node2" href="BMP180_8cpp.html" title="src/Sensors/BMP180.cpp" alt="" coords="5,80,176,107"/>
+<div class="center"><img src="BMP180_8hpp__dep__incl.png" border="0" usemap="#src_2Sensors_2deactivated_2BMP180_8hppdep" alt=""/></div>
+<map name="src_2Sensors_2deactivated_2BMP180_8hppdep" id="src_2Sensors_2deactivated_2BMP180_8hppdep">
+<area shape="rect" id="node2" href="BMP180_8cpp.html" title="src/Sensors/deactivated\l/BMP180.cpp" alt="" coords="5,95,168,136"/>
 </map>
 </div>
 </div>
@@ -124,15 +133,1466 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp180__calib__param__t.html">bmp180_calib_param_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure holds all device specific calibration parameters.  <a href="structbmp180__calib__param__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp180__t.html">bmp180_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure holds <a class="el" href="classBMP180.html">BMP180</a> initialization parameters.  <a href="structbmp180__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html">BMP180</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a41a86f515b1a9c1fdd9b74a2a307be08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a41a86f515b1a9c1fdd9b74a2a307be08">BMP180_MDELAY_DATA_TYPE</a>&#160;&#160;&#160;<a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a></td></tr>
+<tr class="separator:a41a86f515b1a9c1fdd9b74a2a307be08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">I2C ADDRESS DEFINITION OF BMP180</div></td></tr>
+<tr class="memitem:ad668cff49b7688857e73921f67fe6e1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ad668cff49b7688857e73921f67fe6e1b">BMP180_I2C_ADDR</a>&#160;&#160;&#160;(0xEE&gt;&gt;1)</td></tr>
+<tr class="separator:ad668cff49b7688857e73921f67fe6e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">ERROR CODE DEFINITIONS</div></td></tr>
+<tr class="memitem:af04a50240d8c75932bf4729fb95b89b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#af04a50240d8c75932bf4729fb95b89b8">E_BMP_NULL_PTR</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a>)-127)</td></tr>
+<tr class="separator:af04a50240d8c75932bf4729fb95b89b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf12c9360a5167e07e32e1cc76f1b19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#abaf12c9360a5167e07e32e1cc76f1b19">E_BMP_COMM_RES</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a>)-1)</td></tr>
+<tr class="separator:abaf12c9360a5167e07e32e1cc76f1b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb34c5864fd4dfefeda5f84d1d0692a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#abb34c5864fd4dfefeda5f84d1d0692a6">E_BMP_OUT_OF_RANGE</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a>)-2)</td></tr>
+<tr class="separator:abb34c5864fd4dfefeda5f84d1d0692a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">CONSTANTS</div></td></tr>
+<tr class="memitem:a0b2541dda714686ae536954aaf5c3387"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a0b2541dda714686ae536954aaf5c3387">BMP180_RETURN_FUNCTION_TYPE</a>&#160;&#160;&#160;<a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a></td></tr>
+<tr class="separator:a0b2541dda714686ae536954aaf5c3387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec91741157ae5da3b06f1b5558c9e804"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#aec91741157ae5da3b06f1b5558c9e804">BMP180_INIT_VALUE</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)0)</td></tr>
+<tr class="separator:aec91741157ae5da3b06f1b5558c9e804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9818646a9db453e41b1442eeba251e67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a9818646a9db453e41b1442eeba251e67">BMP180_INITIALIZE_OVERSAMP_SETTING_U8X</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)0)</td></tr>
+<tr class="separator:a9818646a9db453e41b1442eeba251e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1731a4d0da9c8eca1a064f79b2c828b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a1731a4d0da9c8eca1a064f79b2c828b8">BMP180_INITIALIZE_SW_OVERSAMP_U8X</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)0)</td></tr>
+<tr class="separator:a1731a4d0da9c8eca1a064f79b2c828b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9208a7578552f16452075c5a3b0fd06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ac9208a7578552f16452075c5a3b0fd06">BMP180_INITIALIZE_NUMBER_OF_SAMPLES_U8X</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)1)</td></tr>
+<tr class="separator:ac9208a7578552f16452075c5a3b0fd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe14c0103090f8d4b5976dbb3a53af2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#aefe14c0103090f8d4b5976dbb3a53af2">BMP180_GEN_READ_WRITE_DATA_LENGTH</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)1)</td></tr>
+<tr class="separator:aefe14c0103090f8d4b5976dbb3a53af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad96e88c9d3070b400ebab27712e1df79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ad96e88c9d3070b400ebab27712e1df79">BMP180_TEMPERATURE_DATA_LENGTH</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)2)</td></tr>
+<tr class="separator:ad96e88c9d3070b400ebab27712e1df79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab604fb195c734be810208debc0bfcd99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ab604fb195c734be810208debc0bfcd99">BMP180_PRESSURE_DATA_LENGTH</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)3)</td></tr>
+<tr class="separator:ab604fb195c734be810208debc0bfcd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfe583ff745c6214c47408184bde624"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a1dfe583ff745c6214c47408184bde624">BMP180_SW_OVERSAMP_U8X</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)1)</td></tr>
+<tr class="separator:a1dfe583ff745c6214c47408184bde624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af459774ee28cfb538cd08f17585ff394"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#af459774ee28cfb538cd08f17585ff394">BMP180_OVERSAMP_SETTING_U8X</a>&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)3)</td></tr>
+<tr class="separator:af459774ee28cfb538cd08f17585ff394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f92c90d7f4d60e4d3f4fe4c52e876e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a80f92c90d7f4d60e4d3f4fe4c52e876e">BMP180_2MS_DELAY_U8X</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="separator:a80f92c90d7f4d60e4d3f4fe4c52e876e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb74302845470d29a2257326095696b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#aacb74302845470d29a2257326095696b">BMP180_3MS_DELAY_U8X</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="separator:aacb74302845470d29a2257326095696b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78d0a0991a2ddbb9fbd66667ce55bd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#aa78d0a0991a2ddbb9fbd66667ce55bd1">BMP180_AVERAGE_U8X</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="separator:aa78d0a0991a2ddbb9fbd66667ce55bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819977dbbeb071c0bf62c8494f373daf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a819977dbbeb071c0bf62c8494f373daf">BMP180_INVALID_DATA</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a819977dbbeb071c0bf62c8494f373daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14bcdd0c199b6d7cb1dd01e5981d3ca1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a14bcdd0c199b6d7cb1dd01e5981d3ca1">BMP180_CHECK_DIVISOR</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a14bcdd0c199b6d7cb1dd01e5981d3ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a880654f882b7d7dc6ec8c15e47231251"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a880654f882b7d7dc6ec8c15e47231251">BMP180_DATA_MEASURE</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="separator:a880654f882b7d7dc6ec8c15e47231251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00734fa93ec7c7c04b3370f5c4e98de9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a00734fa93ec7c7c04b3370f5c4e98de9">BMP180_CALCULATE_TRUE_PRESSURE</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="separator:a00734fa93ec7c7c04b3370f5c4e98de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce1e88950bc0bd739f01b4f09678b5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#afce1e88950bc0bd739f01b4f09678b5a">BMP180_CALCULATE_TRUE_TEMPERATURE</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="separator:afce1e88950bc0bd739f01b4f09678b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef73fdc1ab45e0813a93f17e361d9b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a6ef73fdc1ab45e0813a93f17e361d9b2">BMP180_SHIFT_BIT_POSITION_BY_01_BIT</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:a6ef73fdc1ab45e0813a93f17e361d9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660d3a734e219a49617299a52bf503d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a660d3a734e219a49617299a52bf503d8">BMP180_SHIFT_BIT_POSITION_BY_02_BITS</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="separator:a660d3a734e219a49617299a52bf503d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcf00cb84a90469cd2affe034803bccc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#afcf00cb84a90469cd2affe034803bccc">BMP180_SHIFT_BIT_POSITION_BY_04_BITS</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:afcf00cb84a90469cd2affe034803bccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19129024c0e826db4e65b03017619fc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a19129024c0e826db4e65b03017619fc9">BMP180_SHIFT_BIT_POSITION_BY_06_BITS</a>&#160;&#160;&#160;(6)</td></tr>
+<tr class="separator:a19129024c0e826db4e65b03017619fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f9f6ab90b3fc35d8df2bc1f423513b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a8f9f6ab90b3fc35d8df2bc1f423513b7">BMP180_SHIFT_BIT_POSITION_BY_08_BITS</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="separator:a8f9f6ab90b3fc35d8df2bc1f423513b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97d5ce9c32107818cb1cadee7e08d6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ae97d5ce9c32107818cb1cadee7e08d6b">BMP180_SHIFT_BIT_POSITION_BY_11_BITS</a>&#160;&#160;&#160;(11)</td></tr>
+<tr class="separator:ae97d5ce9c32107818cb1cadee7e08d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae522f538b396741fe09b707f6df7ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#afae522f538b396741fe09b707f6df7ae">BMP180_SHIFT_BIT_POSITION_BY_12_BITS</a>&#160;&#160;&#160;(12)</td></tr>
+<tr class="separator:afae522f538b396741fe09b707f6df7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d12b3bf4fe21b9ab87e5ca63293a0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a39d12b3bf4fe21b9ab87e5ca63293a0a">BMP180_SHIFT_BIT_POSITION_BY_13_BITS</a>&#160;&#160;&#160;(13)</td></tr>
+<tr class="separator:a39d12b3bf4fe21b9ab87e5ca63293a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd16520470bfb7f28d9d3b09519246b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a3bd16520470bfb7f28d9d3b09519246b">BMP180_SHIFT_BIT_POSITION_BY_15_BITS</a>&#160;&#160;&#160;(15)</td></tr>
+<tr class="separator:a3bd16520470bfb7f28d9d3b09519246b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a695b4bac3f3415c84ccbe25eafae55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a5a695b4bac3f3415c84ccbe25eafae55">BMP180_SHIFT_BIT_POSITION_BY_16_BITS</a>&#160;&#160;&#160;(16)</td></tr>
+<tr class="separator:a5a695b4bac3f3415c84ccbe25eafae55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">REGISTER ADDRESS DEFINITION</div></td></tr>
+<tr class="memitem:aae9dcd153a483f9b55fee66e46e55215"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#aae9dcd153a483f9b55fee66e46e55215">BMP180_PROM_START__ADDR</a>&#160;&#160;&#160;(0xAA)</td></tr>
+<tr class="separator:aae9dcd153a483f9b55fee66e46e55215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864467e0bf3ce8f5913b772f720c666a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a864467e0bf3ce8f5913b772f720c666a">BMP180_PROM_DATA__LEN</a>&#160;&#160;&#160;(22)</td></tr>
+<tr class="separator:a864467e0bf3ce8f5913b772f720c666a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5beba6e424ba56b2dddaffaf427138a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ad5beba6e424ba56b2dddaffaf427138a">BMP180_CHIP_ID_REG</a>&#160;&#160;&#160;(0xD0)</td></tr>
+<tr class="separator:ad5beba6e424ba56b2dddaffaf427138a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66aebdbb8ff129d30b1412579a0b340c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a66aebdbb8ff129d30b1412579a0b340c">BMP180_VERSION_REG</a>&#160;&#160;&#160;(0xD1)</td></tr>
+<tr class="separator:a66aebdbb8ff129d30b1412579a0b340c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bd49ee6d3f26126c5cc01b4a5e1192"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ab2bd49ee6d3f26126c5cc01b4a5e1192">BMP180_CTRL_MEAS_REG</a>&#160;&#160;&#160;(0xF4)</td></tr>
+<tr class="separator:ab2bd49ee6d3f26126c5cc01b4a5e1192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29580a04b1219dbb55b3341bf24a4ce7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a29580a04b1219dbb55b3341bf24a4ce7">BMP180_ADC_OUT_MSB_REG</a>&#160;&#160;&#160;(0xF6)</td></tr>
+<tr class="separator:a29580a04b1219dbb55b3341bf24a4ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62dfda70d87fbbca20bb167bd4acff4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a62dfda70d87fbbca20bb167bd4acff4c">BMP180_ADC_OUT_LSB_REG</a>&#160;&#160;&#160;(0xF7)</td></tr>
+<tr class="separator:a62dfda70d87fbbca20bb167bd4acff4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae64f3da794401ea2249932fd92e396"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a2ae64f3da794401ea2249932fd92e396">BMP180_SOFT_RESET_REG</a>&#160;&#160;&#160;(0xE0)</td></tr>
+<tr class="separator:a2ae64f3da794401ea2249932fd92e396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981fc4d0873b0aa2e8e81b673b78e182"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a981fc4d0873b0aa2e8e81b673b78e182">BMP180_T_MEASURE</a>&#160;&#160;&#160;(0x2E)</td></tr>
+<tr class="separator:a981fc4d0873b0aa2e8e81b673b78e182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a750a3efd27f418b085813a55e9835659"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a750a3efd27f418b085813a55e9835659">BMP180_P_MEASURE</a>&#160;&#160;&#160;(0x34)</td></tr>
+<tr class="separator:a750a3efd27f418b085813a55e9835659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64142b951dd5038273d171e75a92bf44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a64142b951dd5038273d171e75a92bf44">BMP180_TEMP_CONVERSION_TIME</a>&#160;&#160;&#160;(5)</td></tr>
+<tr class="separator:a64142b951dd5038273d171e75a92bf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0585656c25b2652e25a1ab60f579247"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#af0585656c25b2652e25a1ab60f579247">BMP180_PARAM_MG</a>&#160;&#160;&#160;(3038)</td></tr>
+<tr class="separator:af0585656c25b2652e25a1ab60f579247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318760ad4869a9da5864ce6e202bba25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a318760ad4869a9da5864ce6e202bba25">BMP180_PARAM_MH</a>&#160;&#160;&#160;(-7357)</td></tr>
+<tr class="separator:a318760ad4869a9da5864ce6e202bba25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788f1e53260ff41658069d07c84e04c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a788f1e53260ff41658069d07c84e04c1">BMP180_PARAM_MI</a>&#160;&#160;&#160;(3791)</td></tr>
+<tr class="separator:a788f1e53260ff41658069d07c84e04c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">ARRAY SIZE DEFINITIONS</div></td></tr>
+<tr class="memitem:a5e37fe64ea4d3df3cbc74dc2252d1799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a5e37fe64ea4d3df3cbc74dc2252d1799">BMP180_TEMPERATURE_DATA_BYTES</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="separator:a5e37fe64ea4d3df3cbc74dc2252d1799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde813116043db05684aec4c882ef72b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#afde813116043db05684aec4c882ef72b">BMP180_PRESSURE_DATA_BYTES</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="separator:afde813116043db05684aec4c882ef72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c5e002d22156752dab103a84894a91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ac3c5e002d22156752dab103a84894a91">BMP180_TEMPERATURE_LSB_DATA</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:ac3c5e002d22156752dab103a84894a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318e4b8c649cb1191b1e32f812e973a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a318e4b8c649cb1191b1e32f812e973a9">BMP180_TEMPERATURE_MSB_DATA</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a318e4b8c649cb1191b1e32f812e973a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b416924b21cf8c65d07ecdc943e366"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ad6b416924b21cf8c65d07ecdc943e366">BMP180_PRESSURE_MSB_DATA</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:ad6b416924b21cf8c65d07ecdc943e366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af62c5810a7ce223732c0bfe4cdf6ac39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#af62c5810a7ce223732c0bfe4cdf6ac39">BMP180_PRESSURE_LSB_DATA</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:af62c5810a7ce223732c0bfe4cdf6ac39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5796a9889c9f6b52cdd6f6849d6e75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a2c5796a9889c9f6b52cdd6f6849d6e75">BMP180_PRESSURE_XLSB_DATA</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="separator:a2c5796a9889c9f6b52cdd6f6849d6e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45bdfa6d9d7d0cd755e19f73f2dc8b50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a45bdfa6d9d7d0cd755e19f73f2dc8b50">BMP180_CALIB_DATA_SIZE</a>&#160;&#160;&#160;(22)</td></tr>
+<tr class="separator:a45bdfa6d9d7d0cd755e19f73f2dc8b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e64257dddcc6853c0b37c7eb452431"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a39e64257dddcc6853c0b37c7eb452431">BMP180_CALIB_PARAM_AC1_MSB</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a39e64257dddcc6853c0b37c7eb452431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0dddf978225be0576d56bf325dbd65b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ac0dddf978225be0576d56bf325dbd65b">BMP180_CALIB_PARAM_AC1_LSB</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:ac0dddf978225be0576d56bf325dbd65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b13027666ff588d4e0ea25a0b7e5de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a45b13027666ff588d4e0ea25a0b7e5de">BMP180_CALIB_PARAM_AC2_MSB</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="separator:a45b13027666ff588d4e0ea25a0b7e5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c89211983078d4d29df65a90cecfd7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a44c89211983078d4d29df65a90cecfd7">BMP180_CALIB_PARAM_AC2_LSB</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="separator:a44c89211983078d4d29df65a90cecfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ba1882b02203a13e798fc610c08e8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ad7ba1882b02203a13e798fc610c08e8b">BMP180_CALIB_PARAM_AC3_MSB</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:ad7ba1882b02203a13e798fc610c08e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304cdb889839a99363936553b0ec1d0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a304cdb889839a99363936553b0ec1d0b">BMP180_CALIB_PARAM_AC3_LSB</a>&#160;&#160;&#160;(5)</td></tr>
+<tr class="separator:a304cdb889839a99363936553b0ec1d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c8ba1b4a61d5ab9d4f13b06c81ccbd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a17c8ba1b4a61d5ab9d4f13b06c81ccbd">BMP180_CALIB_PARAM_AC4_MSB</a>&#160;&#160;&#160;(6)</td></tr>
+<tr class="separator:a17c8ba1b4a61d5ab9d4f13b06c81ccbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38bba8ad36653ba3fbabff5c7c921294"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a38bba8ad36653ba3fbabff5c7c921294">BMP180_CALIB_PARAM_AC4_LSB</a>&#160;&#160;&#160;(7)</td></tr>
+<tr class="separator:a38bba8ad36653ba3fbabff5c7c921294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac973ad7edc5e8470da8001d0bef6d6fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ac973ad7edc5e8470da8001d0bef6d6fd">BMP180_CALIB_PARAM_AC5_MSB</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="separator:ac973ad7edc5e8470da8001d0bef6d6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad47bb58cca0ed07df864e6078c4e8db9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ad47bb58cca0ed07df864e6078c4e8db9">BMP180_CALIB_PARAM_AC5_LSB</a>&#160;&#160;&#160;(9)</td></tr>
+<tr class="separator:ad47bb58cca0ed07df864e6078c4e8db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14dd74542602653319571c69d5edfec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ae14dd74542602653319571c69d5edfec">BMP180_CALIB_PARAM_AC6_MSB</a>&#160;&#160;&#160;(10)</td></tr>
+<tr class="separator:ae14dd74542602653319571c69d5edfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d88f5bed7114e516780150aba8434ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a3d88f5bed7114e516780150aba8434ab">BMP180_CALIB_PARAM_AC6_LSB</a>&#160;&#160;&#160;(11)</td></tr>
+<tr class="separator:a3d88f5bed7114e516780150aba8434ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed57e0c81c090ec16a4eba681e60b63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#afed57e0c81c090ec16a4eba681e60b63">BMP180_CALIB_PARAM_B1_MSB</a>&#160;&#160;&#160;(12)</td></tr>
+<tr class="separator:afed57e0c81c090ec16a4eba681e60b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c60f2ca0d25e1bedc43511d6b15658"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#af6c60f2ca0d25e1bedc43511d6b15658">BMP180_CALIB_PARAM_B1_LSB</a>&#160;&#160;&#160;(13)</td></tr>
+<tr class="separator:af6c60f2ca0d25e1bedc43511d6b15658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b96056467ac2826714e9a95c4995f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a7b96056467ac2826714e9a95c4995f4a">BMP180_CALIB_PARAM_B2_MSB</a>&#160;&#160;&#160;(14)</td></tr>
+<tr class="separator:a7b96056467ac2826714e9a95c4995f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca62ccf1b54fc51026c96dcbba8776e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a7ca62ccf1b54fc51026c96dcbba8776e">BMP180_CALIB_PARAM_B2_LSB</a>&#160;&#160;&#160;(15)</td></tr>
+<tr class="separator:a7ca62ccf1b54fc51026c96dcbba8776e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d53ece45a69f1a924b529915f46c295"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a5d53ece45a69f1a924b529915f46c295">BMP180_CALIB_PARAM_MB_MSB</a>&#160;&#160;&#160;(16)</td></tr>
+<tr class="separator:a5d53ece45a69f1a924b529915f46c295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a133c7d4adaaf1b3947ac1faa0ed368c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a133c7d4adaaf1b3947ac1faa0ed368c9">BMP180_CALIB_PARAM_MB_LSB</a>&#160;&#160;&#160;(17)</td></tr>
+<tr class="separator:a133c7d4adaaf1b3947ac1faa0ed368c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8321b858deb498a709d4bccf89a502"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a6c8321b858deb498a709d4bccf89a502">BMP180_CALIB_PARAM_MC_MSB</a>&#160;&#160;&#160;(18)</td></tr>
+<tr class="separator:a6c8321b858deb498a709d4bccf89a502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba8f243a128c4213e02bbfaaf071741c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#aba8f243a128c4213e02bbfaaf071741c">BMP180_CALIB_PARAM_MC_LSB</a>&#160;&#160;&#160;(19)</td></tr>
+<tr class="separator:aba8f243a128c4213e02bbfaaf071741c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2dde5c9f08995ce361d7a90ddfc6a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ada2dde5c9f08995ce361d7a90ddfc6a2">BMP180_CALIB_PARAM_MD_MSB</a>&#160;&#160;&#160;(20)</td></tr>
+<tr class="separator:ada2dde5c9f08995ce361d7a90ddfc6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb56114540128ef597fb04ca7722a2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a3bb56114540128ef597fb04ca7722a2e">BMP180_CALIB_PARAM_MD_LSB</a>&#160;&#160;&#160;(21)</td></tr>
+<tr class="separator:a3bb56114540128ef597fb04ca7722a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">BIT MASK, LENGTH AND POSITION FOR</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>AL VERSION </p>
+</div></td></tr>
+<tr class="memitem:a3b56a17531818d126c7acad8067182a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a3b56a17531818d126c7acad8067182a4">BMP180_CHIP_ID__POS</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a3b56a17531818d126c7acad8067182a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168dc897ce5d32989da523d49bfa7964"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a168dc897ce5d32989da523d49bfa7964">BMP180_CHIP_ID__MSK</a>&#160;&#160;&#160;(0xFF)</td></tr>
+<tr class="separator:a168dc897ce5d32989da523d49bfa7964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e81ee53ed255cfbec05d4d781c60a16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a8e81ee53ed255cfbec05d4d781c60a16">BMP180_CHIP_ID__LEN</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="separator:a8e81ee53ed255cfbec05d4d781c60a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6125d3bc40494582fd50ebcd3f42ecd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a6125d3bc40494582fd50ebcd3f42ecd5">BMP180_CHIP_ID__REG</a>&#160;&#160;&#160;(<a class="el" href="BMP180_8hpp.html#ad5beba6e424ba56b2dddaffaf427138a">BMP180_CHIP_ID_REG</a>)</td></tr>
+<tr class="separator:a6125d3bc40494582fd50ebcd3f42ecd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a96faedb454d800d35bee00e1c72ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a74a96faedb454d800d35bee00e1c72ab">BMP180_ML_VERSION__POS</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a74a96faedb454d800d35bee00e1c72ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1632ff899bf24a8b3dddbbf3ea0c9342"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a1632ff899bf24a8b3dddbbf3ea0c9342">BMP180_ML_VERSION__LEN</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:a1632ff899bf24a8b3dddbbf3ea0c9342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b258767949daae20afe836f47070bef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a3b258767949daae20afe836f47070bef">BMP180_ML_VERSION__MSK</a>&#160;&#160;&#160;(0x0F)</td></tr>
+<tr class="separator:a3b258767949daae20afe836f47070bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa3e380b95b1d7bc681c90e4d49aca5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#aefa3e380b95b1d7bc681c90e4d49aca5">BMP180_ML_VERSION__REG</a>&#160;&#160;&#160;(<a class="el" href="BMP180_8hpp.html#a66aebdbb8ff129d30b1412579a0b340c">BMP180_VERSION_REG</a>)</td></tr>
+<tr class="separator:aefa3e380b95b1d7bc681c90e4d49aca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ecaf88098287f008b364ee7eca7d0f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a7ecaf88098287f008b364ee7eca7d0f7">BMP180_AL_VERSION__POS</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:a7ecaf88098287f008b364ee7eca7d0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfc3bf191bb3ce02ea9aa4364bc2091"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a9bfc3bf191bb3ce02ea9aa4364bc2091">BMP180_AL_VERSION__LEN</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:a9bfc3bf191bb3ce02ea9aa4364bc2091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f026640da01c5921b9a1c6743c4c23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ac0f026640da01c5921b9a1c6743c4c23">BMP180_AL_VERSION__MSK</a>&#160;&#160;&#160;(0xF0)</td></tr>
+<tr class="separator:ac0f026640da01c5921b9a1c6743c4c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e01df7b153652ae440bfbffbe72da6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a4e01df7b153652ae440bfbffbe72da6c">BMP180_AL_VERSION__REG</a>&#160;&#160;&#160;(<a class="el" href="BMP180_8hpp.html#a66aebdbb8ff129d30b1412579a0b340c">BMP180_VERSION_REG</a>)</td></tr>
+<tr class="separator:a4e01df7b153652ae440bfbffbe72da6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">GET AND SET BITSLICE FUNCTIONS</div></td></tr>
+<tr class="memitem:a26aca2ea1b03a88992a676e268c4a863"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a26aca2ea1b03a88992a676e268c4a863">BMP180_GET_BITSLICE</a>(regvar,  bitname)&#160;&#160;&#160;((regvar &amp; bitname##__MSK) &gt;&gt; (bitname##__POS))</td></tr>
+<tr class="separator:a26aca2ea1b03a88992a676e268c4a863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ad4542a757613599d835155eb8eeca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a09ad4542a757613599d835155eb8eeca">BMP180_SET_BITSLICE</a>(regvar,  bitname,  val)&#160;&#160;&#160;((regvar &amp; ~bitname##__MSK) | ((val&lt;&lt;bitname##__POS)&amp;bitname##__MSK))</td></tr>
+<tr class="separator:a09ad4542a757613599d835155eb8eeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a92c50087ca0e64fa93fc59402c55f8ca"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a></td></tr>
+<tr class="separator:a92c50087ca0e64fa93fc59402c55f8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace9d960e74685e2cd84b36132dbbf8aa"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a></td></tr>
+<tr class="separator:ace9d960e74685e2cd84b36132dbbf8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa62991928fb9fb18ff0db62a040aba"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a></td></tr>
+<tr class="separator:afaa62991928fb9fb18ff0db62a040aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7e2bcbb0b4c338f3c4f6c937cd4234"><td class="memItemLeft" align="right" valign="top">typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a></td></tr>
+<tr class="separator:a3f7e2bcbb0b4c338f3c4f6c937cd4234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e382f207c65ca13ab4ae98363aeda80"><td class="memItemLeft" align="right" valign="top">typedef int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a></td></tr>
+<tr class="separator:a9e382f207c65ca13ab4ae98363aeda80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa980e2c02ba2305e0f489d5650655425"><td class="memItemLeft" align="right" valign="top">typedef int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#aa980e2c02ba2305e0f489d5650655425">s16</a></td></tr>
+<tr class="separator:aa980e2c02ba2305e0f489d5650655425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b1af5c037e57a98884758875d3a7c4"><td class="memItemLeft" align="right" valign="top">typedef int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#ae9b1af5c037e57a98884758875d3a7c4">s32</a></td></tr>
+<tr class="separator:ae9b1af5c037e57a98884758875d3a7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350c6fc928e3bdc6c6486268ac8fb269"><td class="memItemLeft" align="right" valign="top">typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BMP180_8hpp.html#a350c6fc928e3bdc6c6486268ac8fb269">s64</a></td></tr>
+<tr class="separator:a350c6fc928e3bdc6c6486268ac8fb269"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a80f92c90d7f4d60e4d3f4fe4c52e876e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_2MS_DELAY_U8X&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aacb74302845470d29a2257326095696b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_3MS_DELAY_U8X&#160;&#160;&#160;(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a62dfda70d87fbbca20bb167bd4acff4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_ADC_OUT_LSB_REG&#160;&#160;&#160;(0xF7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a29580a04b1219dbb55b3341bf24a4ce7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_ADC_OUT_MSB_REG&#160;&#160;&#160;(0xF6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9bfc3bf191bb3ce02ea9aa4364bc2091"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_AL_VERSION__LEN&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac0f026640da01c5921b9a1c6743c4c23"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_AL_VERSION__MSK&#160;&#160;&#160;(0xF0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ecaf88098287f008b364ee7eca7d0f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_AL_VERSION__POS&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4e01df7b153652ae440bfbffbe72da6c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_AL_VERSION__REG&#160;&#160;&#160;(<a class="el" href="BMP180_8hpp.html#a66aebdbb8ff129d30b1412579a0b340c">BMP180_VERSION_REG</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa78d0a0991a2ddbb9fbd66667ce55bd1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_AVERAGE_U8X&#160;&#160;&#160;(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a00734fa93ec7c7c04b3370f5c4e98de9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALCULATE_TRUE_PRESSURE&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afce1e88950bc0bd739f01b4f09678b5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALCULATE_TRUE_TEMPERATURE&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a45bdfa6d9d7d0cd755e19f73f2dc8b50"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_DATA_SIZE&#160;&#160;&#160;(22)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac0dddf978225be0576d56bf325dbd65b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC1_LSB&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a39e64257dddcc6853c0b37c7eb452431"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC1_MSB&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a44c89211983078d4d29df65a90cecfd7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC2_LSB&#160;&#160;&#160;(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a45b13027666ff588d4e0ea25a0b7e5de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC2_MSB&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a304cdb889839a99363936553b0ec1d0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC3_LSB&#160;&#160;&#160;(5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad7ba1882b02203a13e798fc610c08e8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC3_MSB&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a38bba8ad36653ba3fbabff5c7c921294"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC4_LSB&#160;&#160;&#160;(7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a17c8ba1b4a61d5ab9d4f13b06c81ccbd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC4_MSB&#160;&#160;&#160;(6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad47bb58cca0ed07df864e6078c4e8db9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC5_LSB&#160;&#160;&#160;(9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac973ad7edc5e8470da8001d0bef6d6fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC5_MSB&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3d88f5bed7114e516780150aba8434ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC6_LSB&#160;&#160;&#160;(11)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae14dd74542602653319571c69d5edfec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_AC6_MSB&#160;&#160;&#160;(10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af6c60f2ca0d25e1bedc43511d6b15658"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_B1_LSB&#160;&#160;&#160;(13)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afed57e0c81c090ec16a4eba681e60b63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_B1_MSB&#160;&#160;&#160;(12)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ca62ccf1b54fc51026c96dcbba8776e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_B2_LSB&#160;&#160;&#160;(15)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7b96056467ac2826714e9a95c4995f4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_B2_MSB&#160;&#160;&#160;(14)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a133c7d4adaaf1b3947ac1faa0ed368c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_MB_LSB&#160;&#160;&#160;(17)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5d53ece45a69f1a924b529915f46c295"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_MB_MSB&#160;&#160;&#160;(16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aba8f243a128c4213e02bbfaaf071741c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_MC_LSB&#160;&#160;&#160;(19)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c8321b858deb498a709d4bccf89a502"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_MC_MSB&#160;&#160;&#160;(18)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3bb56114540128ef597fb04ca7722a2e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_MD_LSB&#160;&#160;&#160;(21)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ada2dde5c9f08995ce361d7a90ddfc6a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CALIB_PARAM_MD_MSB&#160;&#160;&#160;(20)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a14bcdd0c199b6d7cb1dd01e5981d3ca1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CHECK_DIVISOR&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8e81ee53ed255cfbec05d4d781c60a16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CHIP_ID__LEN&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a168dc897ce5d32989da523d49bfa7964"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CHIP_ID__MSK&#160;&#160;&#160;(0xFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3b56a17531818d126c7acad8067182a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CHIP_ID__POS&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6125d3bc40494582fd50ebcd3f42ecd5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CHIP_ID__REG&#160;&#160;&#160;(<a class="el" href="BMP180_8hpp.html#ad5beba6e424ba56b2dddaffaf427138a">BMP180_CHIP_ID_REG</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad5beba6e424ba56b2dddaffaf427138a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CHIP_ID_REG&#160;&#160;&#160;(0xD0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab2bd49ee6d3f26126c5cc01b4a5e1192"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_CTRL_MEAS_REG&#160;&#160;&#160;(0xF4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a880654f882b7d7dc6ec8c15e47231251"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_DATA_MEASURE&#160;&#160;&#160;(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aefe14c0103090f8d4b5976dbb3a53af2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_GEN_READ_WRITE_DATA_LENGTH&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a26aca2ea1b03a88992a676e268c4a863"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_GET_BITSLICE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">regvar, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">bitname&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((regvar &amp; bitname##__MSK) &gt;&gt; (bitname##__POS))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad668cff49b7688857e73921f67fe6e1b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_I2C_ADDR&#160;&#160;&#160;(0xEE&gt;&gt;1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aec91741157ae5da3b06f1b5558c9e804"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_INIT_VALUE&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac9208a7578552f16452075c5a3b0fd06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_INITIALIZE_NUMBER_OF_SAMPLES_U8X&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9818646a9db453e41b1442eeba251e67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_INITIALIZE_OVERSAMP_SETTING_U8X&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1731a4d0da9c8eca1a064f79b2c828b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_INITIALIZE_SW_OVERSAMP_U8X&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a819977dbbeb071c0bf62c8494f373daf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_INVALID_DATA&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a41a86f515b1a9c1fdd9b74a2a307be08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_MDELAY_DATA_TYPE&#160;&#160;&#160;<a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1632ff899bf24a8b3dddbbf3ea0c9342"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_ML_VERSION__LEN&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3b258767949daae20afe836f47070bef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_ML_VERSION__MSK&#160;&#160;&#160;(0x0F)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a74a96faedb454d800d35bee00e1c72ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_ML_VERSION__POS&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aefa3e380b95b1d7bc681c90e4d49aca5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_ML_VERSION__REG&#160;&#160;&#160;(<a class="el" href="BMP180_8hpp.html#a66aebdbb8ff129d30b1412579a0b340c">BMP180_VERSION_REG</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af459774ee28cfb538cd08f17585ff394"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_OVERSAMP_SETTING_U8X&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a750a3efd27f418b085813a55e9835659"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_P_MEASURE&#160;&#160;&#160;(0x34)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af0585656c25b2652e25a1ab60f579247"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PARAM_MG&#160;&#160;&#160;(3038)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a318760ad4869a9da5864ce6e202bba25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PARAM_MH&#160;&#160;&#160;(-7357)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a788f1e53260ff41658069d07c84e04c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PARAM_MI&#160;&#160;&#160;(3791)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afde813116043db05684aec4c882ef72b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PRESSURE_DATA_BYTES&#160;&#160;&#160;(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab604fb195c734be810208debc0bfcd99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PRESSURE_DATA_LENGTH&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af62c5810a7ce223732c0bfe4cdf6ac39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PRESSURE_LSB_DATA&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad6b416924b21cf8c65d07ecdc943e366"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PRESSURE_MSB_DATA&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2c5796a9889c9f6b52cdd6f6849d6e75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PRESSURE_XLSB_DATA&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a864467e0bf3ce8f5913b772f720c666a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PROM_DATA__LEN&#160;&#160;&#160;(22)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aae9dcd153a483f9b55fee66e46e55215"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_PROM_START__ADDR&#160;&#160;&#160;(0xAA)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0b2541dda714686ae536954aaf5c3387"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_RETURN_FUNCTION_TYPE&#160;&#160;&#160;<a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a09ad4542a757613599d835155eb8eeca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SET_BITSLICE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">regvar, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">bitname, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((regvar &amp; ~bitname##__MSK) | ((val&lt;&lt;bitname##__POS)&amp;bitname##__MSK))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6ef73fdc1ab45e0813a93f17e361d9b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_01_BIT&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a660d3a734e219a49617299a52bf503d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_02_BITS&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afcf00cb84a90469cd2affe034803bccc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_04_BITS&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a19129024c0e826db4e65b03017619fc9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_06_BITS&#160;&#160;&#160;(6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8f9f6ab90b3fc35d8df2bc1f423513b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_08_BITS&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae97d5ce9c32107818cb1cadee7e08d6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_11_BITS&#160;&#160;&#160;(11)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afae522f538b396741fe09b707f6df7ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_12_BITS&#160;&#160;&#160;(12)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a39d12b3bf4fe21b9ab87e5ca63293a0a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_13_BITS&#160;&#160;&#160;(13)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3bd16520470bfb7f28d9d3b09519246b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_15_BITS&#160;&#160;&#160;(15)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5a695b4bac3f3415c84ccbe25eafae55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SHIFT_BIT_POSITION_BY_16_BITS&#160;&#160;&#160;(16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2ae64f3da794401ea2249932fd92e396"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SOFT_RESET_REG&#160;&#160;&#160;(0xE0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1dfe583ff745c6214c47408184bde624"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_SW_OVERSAMP_U8X&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a981fc4d0873b0aa2e8e81b673b78e182"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_T_MEASURE&#160;&#160;&#160;(0x2E)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64142b951dd5038273d171e75a92bf44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_TEMP_CONVERSION_TIME&#160;&#160;&#160;(5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5e37fe64ea4d3df3cbc74dc2252d1799"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_TEMPERATURE_DATA_BYTES&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad96e88c9d3070b400ebab27712e1df79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_TEMPERATURE_DATA_LENGTH&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>)2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac3c5e002d22156752dab103a84894a91"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_TEMPERATURE_LSB_DATA&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a318e4b8c649cb1191b1e32f812e973a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_TEMPERATURE_MSB_DATA&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a66aebdbb8ff129d30b1412579a0b340c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP180_VERSION_REG&#160;&#160;&#160;(0xD1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abaf12c9360a5167e07e32e1cc76f1b19"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define E_BMP_COMM_RES&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a>)-1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af04a50240d8c75932bf4729fb95b89b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define E_BMP_NULL_PTR&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a>)-127)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abb34c5864fd4dfefeda5f84d1d0692a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define E_BMP_OUT_OF_RANGE&#160;&#160;&#160;((<a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a>)-2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="aa980e2c02ba2305e0f489d5650655425"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int16_t <a class="el" href="BMP180_8hpp.html#aa980e2c02ba2305e0f489d5650655425">s16</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>used for signed 16bit </p>
+
+</div>
+</div>
+<a class="anchor" id="ae9b1af5c037e57a98884758875d3a7c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int32_t <a class="el" href="BMP180_8hpp.html#ae9b1af5c037e57a98884758875d3a7c4">s32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>used for signed 32bit </p>
+
+</div>
+</div>
+<a class="anchor" id="a350c6fc928e3bdc6c6486268ac8fb269"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int64_t <a class="el" href="BMP180_8hpp.html#a350c6fc928e3bdc6c6486268ac8fb269">s64</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>used for signed 64bit </p>
+
+</div>
+</div>
+<a class="anchor" id="a9e382f207c65ca13ab4ae98363aeda80"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int8_t <a class="el" href="BMP180_8hpp.html#a9e382f207c65ca13ab4ae98363aeda80">s8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>used for signed 8bit </p>
+
+</div>
+</div>
+<a class="anchor" id="ace9d960e74685e2cd84b36132dbbf8aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint16_t <a class="el" href="BMP180_8hpp.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>used for unsigned 16bit </p>
+
+</div>
+</div>
+<a class="anchor" id="afaa62991928fb9fb18ff0db62a040aba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t <a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>used for unsigned 32bit </p>
+
+</div>
+</div>
+<a class="anchor" id="a3f7e2bcbb0b4c338f3c4f6c937cd4234"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint64_t <a class="el" href="BMP180_8hpp.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>used for unsigned 64bit </p>
+
+</div>
+</div>
+<a class="anchor" id="a92c50087ca0e64fa93fc59402c55f8ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint8_t <a class="el" href="BMP180_8hpp.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>used for unsigned 8bit </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_afe58f6d0ef7eec69c2706509daaefe7.html">Sensors</a></li><li class="navelem"><a class="el" href="BMP180_8hpp.html">BMP180.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_afe58f6d0ef7eec69c2706509daaefe7.html">Sensors</a></li><li class="navelem"><a class="el" href="dir_d267ff74786ba7faf6213aab30368589.html">deactivated</a></li><li class="navelem"><a class="el" href="BMP180_8hpp.html">BMP180.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

@@ -1,4 +1,4 @@
-.TH "bmp180_t" 3 "Mon Mar 27 2017" "Version 0.1" "SensorNode" \" -*- nroff -*-
+.TH "bmp180_t" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,7 +8,7 @@ bmp180_t \- This structure holds \fBBMP180\fP initialization parameters\&.
 .br
 .PP
 .PP
-\fC#include <bmp180\&.h>\fP
+\fC#include <BMP180\&.hpp>\fP
 .SS "Public Attributes"
 
 .in +1c
@@ -46,13 +46,7 @@ bmp180_t \- This structure holds \fBBMP180\fP initialization parameters\&.
 .RI "\fBs16\fP \fBsw_oversamp\fP"
 .br
 .ti -1c
-.RI "\fBBMP180_WR_FUNC_PTR\fP"
-.br
-.ti -1c
-.RI "\fBBMP180_RD_FUNC_PTR\fP"
-.br
-.ti -1c
-.RI "void(* \fBdelay_msec\fP )(BMP180_MDELAY_DATA_TYPE)"
+.RI "void(* \fBdelay_msec\fP )(\fBBMP180_MDELAY_DATA_TYPE\fP)"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -62,15 +56,11 @@ This structure holds \fBBMP180\fP initialization parameters\&.
 .PP 
 .SS "\fBu8\fP bmp180_t::al_version"
 al version 
-.SS "bmp180_t::BMP180_RD_FUNC_PTR"
-bus read function pointer 
-.SS "bmp180_t::BMP180_WR_FUNC_PTR"
-bus write function pointer 
 .SS "struct \fBbmp180_calib_param_t\fP bmp180_t::calib_param"
 calibration data 
 .SS "\fBu8\fP bmp180_t::chip_id"
 chip id 
-.SS "void(* bmp180_t::delay_msec) (BMP180_MDELAY_DATA_TYPE)"
+.SS "void(* bmp180_t::delay_msec) (\fBBMP180_MDELAY_DATA_TYPE\fP)"
 delay function pointer 
 .SS "\fBu8\fP bmp180_t::dev_addr"
 device address 

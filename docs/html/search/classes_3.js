@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['movement',['Movement',['../classsensors_1_1Movement.html',1,'sensors']]]
+  ['lightanalog',['LightAnalog',['../classsensors_1_1LightAnalog.html',1,'sensors']]],
+  ['lightdigital',['LightDigital',['../classsensors_1_1LightDigital.html',1,'sensors']]]
 ];

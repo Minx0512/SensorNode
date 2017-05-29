@@ -24,7 +24,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="659" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="659" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="665" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="665" bodyend="-1"/>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ae5c878a568b54ba045a99b9de377b13b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -47,7 +47,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="310" column="1"/>
+        <location file="src/Wireless/NRF24L01.h" line="316" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a6bfbb693418e2d60556637b6a3599d05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -79,11 +79,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="327" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1040" bodyend="1053"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="333" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1115" bodyend="1128"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1ab36696e7fbed789bbe5318e58d3febdf" compoundref="NRF24L01registers_8h" startline="54">NRF24L01_REG_FIFO_STATUS</references>
         <references refid="NRF24L01registers_8h_1a5272c3daa57bbd4cc20162cd19d1c498" compoundref="NRF24L01registers_8h" startline="96">NRF24L01_REG_RX_EMPTY</references>
-        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="293" endline="297">getStatus</references>
+        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="361" endline="365">getStatus</references>
         <references refid="NRF24L01registers_8h_1ab10ea02f6ce265667bf7f6fccf9cff82" compoundref="NRF24L01registers_8h" startline="88">NRF24L01_REG_RX_P_NO</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1aebd4d389685333013b4bd12662c0b411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -98,8 +98,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="332" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="958" bodyend="960"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="338" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1031" bodyend="1033"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1ab36696e7fbed789bbe5318e58d3febdf" compoundref="NRF24L01registers_8h" startline="54">NRF24L01_REG_FIFO_STATUS</references>
         <references refid="NRF24L01registers_8h_1ab529137d568b80a496896700304debe1" compoundref="NRF24L01registers_8h" startline="95">NRF24L01_REG_RX_FULL</references>
       </memberdef>
@@ -121,11 +121,11 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="350" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="267" bodyend="271"/>
-        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1004" endline="1004">CE_LOW</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="356" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="335" bodyend="339"/>
+        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1010" endline="1010">CE_LOW</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a71b3597b405d855e19ef435a215edacc" compoundref="NRF24L01registers_8h" startline="31">NRF24L01_REG_CONFIG</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a7b36b607ebb925258490887ba7a2878d" compoundref="NRF24L01registers_8h" startline="64">NRF24L01_REG_PWR_UP</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a8e184a0a6ca30fbae69c1331a567deda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -143,12 +143,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="357" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="275" bodyend="288"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="363" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="343" bodyend="356"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a71b3597b405d855e19ef435a215edacc" compoundref="NRF24L01registers_8h" startline="31">NRF24L01_REG_CONFIG</references>
         <references refid="NRF24L01registers_8h_1a7b36b607ebb925258490887ba7a2878d" compoundref="NRF24L01registers_8h" startline="64">NRF24L01_REG_PWR_UP</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
-        <references refid="classNRF24L01_1ad311ef5130c99ab8ddca292adfe76603" compoundref="NRF24L01_8h" startline="995" endline="999">delay_ms</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
+        <references refid="classNRF24L01_1ad311ef5130c99ab8ddca292adfe76603" compoundref="NRF24L01_8h" startline="1001" endline="1005">delay_ms</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1af59b3fd7aece1ae295a2e634a57d2b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -199,16 +199,16 @@ Can be used with <ref refid="classNRF24L01_1ae4067455572c6731211315b3900f5cbd" k
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="372" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="842" bodyend="864"/>
-        <references refid="classNRF24L01_1ab1ca9025a8740bc38ad5dd7a427e2d4f" compoundref="NRF24L01_8cpp" startline="934" endline="942">startFastWrite</references>
-        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="293" endline="297">getStatus</references>
+        <location file="src/Wireless/NRF24L01.h" line="378" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="915" bodyend="937"/>
+        <references refid="classNRF24L01_1ab1ca9025a8740bc38ad5dd7a427e2d4f" compoundref="NRF24L01_8cpp" startline="1007" endline="1015">startFastWrite</references>
+        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="361" endline="365">getStatus</references>
         <references refid="NRF24L01registers_8h_1ace17aac70424ae1d91ac38290a85ae86" compoundref="NRF24L01registers_8h" startline="87">NRF24L01_REG_MAX_RT</references>
         <references refid="NRF24L01registers_8h_1a42b5b404cde7ad0b3917d65caeea9b91" compoundref="NRF24L01registers_8h" startline="86">NRF24L01_REG_TX_DS</references>
-        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1004" endline="1004">CE_LOW</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1010" endline="1010">CE_LOW</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0eacea6f02e36fcc6045a073b9cf12a0" compoundref="NRF24L01registers_8h" startline="38">NRF24L01_REG_STATUS</references>
         <references refid="NRF24L01registers_8h_1ab600bb73d205bb30ee182bbdd0fe96c0" compoundref="NRF24L01registers_8h" startline="59">NRF24L01_REG_MASK_RX_DR</references>
-        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1150" endline="1154">FlushTx</references>
+        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1239" endline="1243">FlushTx</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a693f48de67c8b11ed5860dc481fcfc99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -256,7 +256,7 @@ Can be used with <ref refid="classNRF24L01_1ae4067455572c6731211315b3900f5cbd" k
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="401" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="926" bodyend="928"/>
+        <location file="src/Wireless/NRF24L01.h" line="407" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="999" bodyend="1001"/>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a094a978ed0c7da890c90351bd945fabe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -306,13 +306,13 @@ Can be used with <ref refid="classNRF24L01_1ae4067455572c6731211315b3900f5cbd" k
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="413" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="905" bodyend="925"/>
-        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="293" endline="297">getStatus</references>
+        <location file="src/Wireless/NRF24L01.h" line="419" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="978" bodyend="998"/>
+        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="361" endline="365">getStatus</references>
         <references refid="NRF24L01registers_8h_1a8370cf9c192e94451d3f113e54acc420" compoundref="NRF24L01registers_8h" startline="89">NRF24L01_REG_TX_FULL</references>
         <references refid="NRF24L01registers_8h_1ace17aac70424ae1d91ac38290a85ae86" compoundref="NRF24L01registers_8h" startline="87">NRF24L01_REG_MAX_RT</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0eacea6f02e36fcc6045a073b9cf12a0" compoundref="NRF24L01registers_8h" startline="38">NRF24L01_REG_STATUS</references>
-        <references refid="classNRF24L01_1ab1ca9025a8740bc38ad5dd7a427e2d4f" compoundref="NRF24L01_8cpp" startline="934" endline="942">startFastWrite</references>
+        <references refid="classNRF24L01_1ab1ca9025a8740bc38ad5dd7a427e2d4f" compoundref="NRF24L01_8cpp" startline="1007" endline="1015">startFastWrite</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ac2c2500350c3dde0df4f09111f8f1b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -370,12 +370,12 @@ Can be used with <ref refid="classNRF24L01_1ae4067455572c6731211315b3900f5cbd" k
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="440" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="872" bodyend="894"/>
-        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="293" endline="297">getStatus</references>
+        <location file="src/Wireless/NRF24L01.h" line="446" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="945" bodyend="967"/>
+        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="361" endline="365">getStatus</references>
         <references refid="NRF24L01registers_8h_1a8370cf9c192e94451d3f113e54acc420" compoundref="NRF24L01registers_8h" startline="89">NRF24L01_REG_TX_FULL</references>
         <references refid="NRF24L01registers_8h_1ace17aac70424ae1d91ac38290a85ae86" compoundref="NRF24L01registers_8h" startline="87">NRF24L01_REG_MAX_RT</references>
-        <references refid="classNRF24L01_1ad0797d9c6f8ecd9619c9e48168571a01" compoundref="NRF24L01_8cpp" startline="897" endline="902">reUseTX</references>
-        <references refid="classNRF24L01_1ab1ca9025a8740bc38ad5dd7a427e2d4f" compoundref="NRF24L01_8cpp" startline="934" endline="942">startFastWrite</references>
+        <references refid="classNRF24L01_1ad0797d9c6f8ecd9619c9e48168571a01" compoundref="NRF24L01_8cpp" startline="970" endline="975">reUseTX</references>
+        <references refid="classNRF24L01_1ab1ca9025a8740bc38ad5dd7a427e2d4f" compoundref="NRF24L01_8cpp" startline="1007" endline="1015">startFastWrite</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a4416a731de8d23cac507e8b69ec2becc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -398,16 +398,16 @@ Relies on built-in auto retry functionality.</para><para><programlisting><codeli
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="467" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="963" bodyend="978"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="473" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1036" bodyend="1051"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1ab36696e7fbed789bbe5318e58d3febdf" compoundref="NRF24L01registers_8h" startline="54">NRF24L01_REG_FIFO_STATUS</references>
         <references refid="NRF24L01registers_8h_1a60d624106d23fd98a17c953ba91c2979" compoundref="NRF24L01registers_8h" startline="94">NRF24L01_REG_TX_EMPTY</references>
-        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="293" endline="297">getStatus</references>
+        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="361" endline="365">getStatus</references>
         <references refid="NRF24L01registers_8h_1ace17aac70424ae1d91ac38290a85ae86" compoundref="NRF24L01registers_8h" startline="87">NRF24L01_REG_MAX_RT</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0eacea6f02e36fcc6045a073b9cf12a0" compoundref="NRF24L01registers_8h" startline="38">NRF24L01_REG_STATUS</references>
-        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1004" endline="1004">CE_LOW</references>
-        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1150" endline="1154">FlushTx</references>
+        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1010" endline="1010">CE_LOW</references>
+        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1239" endline="1243">FlushTx</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a9351f4bff2196c4f69623f636de7c6a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -446,7 +446,7 @@ Relies on built-in auto retry functionality.</para><para><programlisting><codeli
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="484" column="1"/>
+        <location file="src/Wireless/NRF24L01.h" line="490" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ae0f4b84a244463e8e594d238a71140c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -499,13 +499,13 @@ Relies on built-in auto retry functionality.</para><para><programlisting><codeli
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="503" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="666" bodyend="679"/>
-        <references refid="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" compoundref="NRF24L01_8h" startline="60">rf24_min</references>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
+        <location file="src/Wireless/NRF24L01.h" line="509" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="736" bodyend="752"/>
+        <references refid="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" compoundref="NRF24L01_8h" startline="61">rf24_min</references>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
         <references refid="NRF24L01registers_8h_1a1228e0839416abda8055b212b2905ced" compoundref="NRF24L01registers_8h" startline="120">NRF24L01_CMD_W_ACK_PAYLOAD</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a99aae87d62d5097447305d66a0b3281d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -522,8 +522,8 @@ Relies on built-in auto retry functionality.</para><para><programlisting><codeli
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="512" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="681" bodyend="683"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="518" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="754" bodyend="756"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1ab36696e7fbed789bbe5318e58d3febdf" compoundref="NRF24L01registers_8h" startline="54">NRF24L01_REG_FIFO_STATUS</references>
         <references refid="NRF24L01registers_8h_1a5272c3daa57bbd4cc20162cd19d1c498" compoundref="NRF24L01registers_8h" startline="96">NRF24L01_REG_RX_EMPTY</references>
       </memberdef>
@@ -572,8 +572,8 @@ Relies on built-in auto retry functionality.</para><para><programlisting><codeli
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="524" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="491" bodyend="500"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="530" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="559" bodyend="568"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0eacea6f02e36fcc6045a073b9cf12a0" compoundref="NRF24L01registers_8h" startline="38">NRF24L01_REG_STATUS</references>
         <references refid="NRF24L01registers_8h_1acb501a3032174ca687b876d73858bed1" compoundref="NRF24L01registers_8h" startline="85">NRF24L01_REG_RX_DR</references>
         <references refid="NRF24L01registers_8h_1a42b5b404cde7ad0b3917d65caeea9b91" compoundref="NRF24L01registers_8h" startline="86">NRF24L01_REG_TX_DS</references>
@@ -638,11 +638,11 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="549" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="934" bodyend="942"/>
-        <references refid="classNRF24L01_1a9abae657dc54d97b6eb63f33c83e9f59" compoundref="NRF24L01_8cpp" startline="1103" endline="1121">WritePayload</references>
+        <location file="src/Wireless/NRF24L01.h" line="555" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1007" bodyend="1015"/>
+        <references refid="classNRF24L01_1a9abae657dc54d97b6eb63f33c83e9f59" compoundref="NRF24L01_8cpp" startline="1186" endline="1207">WritePayload</references>
         <references refid="NRF24L01registers_8h_1a179cd9f4f11471fe0b12a78116303cd6" compoundref="NRF24L01registers_8h" startline="127">NRF24L01_CMD_W_TX_PAYLOAD_NO_ACK</references>
         <references refid="NRF24L01registers_8h_1a39d8f4753c730f1f89a815632afc68cb" compoundref="NRF24L01registers_8h" startline="119">NRF24L01_CMD_W_TX_PAYLOAD</references>
-        <references refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" compoundref="NRF24L01_8h" startline="1003" endline="1003">CE_HIGH</references>
+        <references refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" compoundref="NRF24L01_8h" startline="1009" endline="1009">CE_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a282e44fa8d6ec7542e9d725cf048f6b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -695,12 +695,12 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="570" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="946" bodyend="955"/>
-        <references refid="classNRF24L01_1a9abae657dc54d97b6eb63f33c83e9f59" compoundref="NRF24L01_8cpp" startline="1103" endline="1121">WritePayload</references>
+        <location file="src/Wireless/NRF24L01.h" line="576" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1019" bodyend="1028"/>
+        <references refid="classNRF24L01_1a9abae657dc54d97b6eb63f33c83e9f59" compoundref="NRF24L01_8cpp" startline="1186" endline="1207">WritePayload</references>
         <references refid="NRF24L01registers_8h_1a179cd9f4f11471fe0b12a78116303cd6" compoundref="NRF24L01registers_8h" startline="127">NRF24L01_CMD_W_TX_PAYLOAD_NO_ACK</references>
         <references refid="NRF24L01registers_8h_1a39d8f4753c730f1f89a815632afc68cb" compoundref="NRF24L01registers_8h" startline="119">NRF24L01_CMD_W_TX_PAYLOAD</references>
-        <references refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" compoundref="NRF24L01_8h" startline="1003" endline="1003">CE_HIGH</references>
-        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1004" endline="1004">CE_LOW</references>
+        <references refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" compoundref="NRF24L01_8h" startline="1009" endline="1009">CE_HIGH</references>
+        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1010" endline="1010">CE_LOW</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ad0797d9c6f8ecd9619c9e48168571a01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -714,14 +714,14 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="586" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="897" bodyend="902"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="592" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="970" bodyend="975"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0eacea6f02e36fcc6045a073b9cf12a0" compoundref="NRF24L01registers_8h" startline="38">NRF24L01_REG_STATUS</references>
         <references refid="NRF24L01registers_8h_1ace17aac70424ae1d91ac38290a85ae86" compoundref="NRF24L01registers_8h" startline="87">NRF24L01_REG_MAX_RT</references>
-        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1157" endline="1166">spiTrans</references>
+        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1246" endline="1256">spiTrans</references>
         <references refid="NRF24L01registers_8h_1ac0684d6c09cc47538eedbeb1babbd72c" compoundref="NRF24L01registers_8h" startline="123">NRF24L01_CMD_REUSE_TX_PL</references>
-        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1004" endline="1004">CE_LOW</references>
-        <references refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" compoundref="NRF24L01_8h" startline="1003" endline="1003">CE_HIGH</references>
+        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1010" endline="1010">CE_LOW</references>
+        <references refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" compoundref="NRF24L01_8h" startline="1009" endline="1009">CE_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -738,8 +738,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="594" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1150" bodyend="1154"/>
-        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1157" endline="1166">spiTrans</references>
+        <location file="src/Wireless/NRF24L01.h" line="600" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1239" bodyend="1243"/>
+        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1246" endline="1256">spiTrans</references>
         <references refid="NRF24L01registers_8h_1aa53de4fc4d2681362196d5e5ffbfc533" compoundref="NRF24L01registers_8h" startline="121">NRF24L01_CMD_FLUSH_TX</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a5e934f8f7d37245264ad16e3c360eca7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -757,8 +757,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="603" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="718" bodyend="720"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="609" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="791" bodyend="793"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1adf6e4361fe63bf668a1ade00a686739b" compoundref="NRF24L01registers_8h" startline="40">NRF24L01_REG_CD</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1abf1d84ed988aa6c7925ebb712b7c7f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -781,8 +781,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="622" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="722" bodyend="724"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="628" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="795" bodyend="797"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1ab9743a9a0928c8f19ad9687ae6c67150" compoundref="NRF24L01registers_8h" startline="126">RPD</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1aaddabe35ed60f03a2fb2fb475a3cafb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -797,8 +797,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="630" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="630" bodyend="630"/>
-        <references refid="classNRF24L01_1a7214eaa3fcd3b6576d8f290e6ab71955" compoundref="NRF24L01_8cpp" startline="599" endline="601">closeReadingPipe</references>
+        <location file="src/Wireless/NRF24L01.h" line="636" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="636" bodyend="636"/>
+        <references refid="classNRF24L01_1a7214eaa3fcd3b6576d8f290e6ab71955" compoundref="NRF24L01_8cpp" startline="667" endline="669">closeReadingPipe</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a7214eaa3fcd3b6576d8f290e6ab71955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -823,10 +823,10 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="637" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="599" bodyend="601"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="643" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="667" bodyend="669"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a1ece6e2d8eda4cbda7576562213fe72a" compoundref="NRF24L01registers_8h" startline="33">NRF24L01_REG_EN_RXADDR</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -846,7 +846,7 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="905" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="905" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="911" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="911" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1abae8b8afbf747344006d6163c607be00" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -859,20 +859,7 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 <para>On all devices but Linux and ATTiny, a small delay is added to the CSN toggling function</para><para>This is intended to minimise the speed of <ref refid="classSPI" kindref="compound">SPI</ref> polling due to radio commands</para><para>If using interrupts or timed requests, this can be set to 0 Default:5 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="916" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="916" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" prot="public" static="no" mutable="no">
-        <type><ref refid="classSPI" kindref="compound">SPI</ref></type>
-        <definition>SPI NRF24L01::spi</definition>
-        <argsstring></argsstring>
-        <name>spi</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="989" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="989" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="922" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="922" bodyend="-1"/>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a17752733515f67aa9f6ed3daa1ed3d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -897,10 +884,10 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="678" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="540" bodyend="550"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="684" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="608" bodyend="618"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1abbc6247e7eda358785fef00dd10c64fa" compoundref="NRF24L01registers_8h" startline="34">NRF24L01_REG_SETUP_AW</references>
-        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="123">NRF24L01_ADDRSIZE</references>
+        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="126">NRF24L01_ADDRSIZE</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a0bb209d94b62e2a28af53179af713f3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -936,8 +923,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="686" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="836" bodyend="838"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="692" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="909" bodyend="911"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1aadb3a51873ffb766f031c69e42a1915e" compoundref="NRF24L01registers_8h" startline="35">NRF24L01_REG_SETUP_RETR</references>
         <references refid="NRF24L01registers_8h_1a9a7f8857555bf77be7617738518c9daa" compoundref="NRF24L01registers_8h" startline="79">NRF24L01_REG_ARD</references>
         <references refid="NRF24L01registers_8h_1a881d6bbc61497264fad5e0209c4b1616" compoundref="NRF24L01registers_8h" startline="80">NRF24L01_REG_ARC</references>
@@ -965,10 +952,10 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="693" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="299" bodyend="303"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="699" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="367" bodyend="371"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1ad26afb4999172e98101026d993b96a4e" compoundref="NRF24L01registers_8h" startline="36">NRF24L01_REG_RF_CH</references>
-        <references refid="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" compoundref="NRF24L01_8h" startline="60">rf24_min</references>
+        <references refid="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" compoundref="NRF24L01_8h" startline="61">rf24_min</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a6b269b519d57d54d0682a29ce9036b12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -985,8 +972,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="699" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="304" bodyend="306"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="705" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="372" bodyend="374"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1ad26afb4999172e98101026d993b96a4e" compoundref="NRF24L01registers_8h" startline="36">NRF24L01_REG_RF_CH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1abe5983a57d0d3bd77508e5345774c890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1012,9 +999,9 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="713" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="309" bodyend="311"/>
-        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="109">NRF24L01_PAYLOAD</references>
-        <references refid="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" compoundref="NRF24L01_8h" startline="60">rf24_min</references>
+        <location file="src/Wireless/NRF24L01.h" line="719" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="377" bodyend="379"/>
+        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="112">NRF24L01_PAYLOAD</references>
+        <references refid="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" compoundref="NRF24L01_8h" startline="61">rf24_min</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a4a7f48ca92e14baabd8be1c0831e8c2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1032,8 +1019,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="721" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="313" bodyend="315"/>
-        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="109">NRF24L01_PAYLOAD</references>
+        <location file="src/Wireless/NRF24L01.h" line="727" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="381" bodyend="383"/>
+        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="112">NRF24L01_PAYLOAD</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a0d0cd5dd09d60e06280f378166725d64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1058,14 +1045,14 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="743" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1020" bodyend="1032"/>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
+        <location file="src/Wireless/NRF24L01.h" line="749" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1093" bodyend="1107"/>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
         <references refid="NRF24L01registers_8h_1a757b26d356c18ce1bf36777d0cd196a3" compoundref="NRF24L01registers_8h" startline="117">NRF24L01_CMD_R_RX_PL_WID</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
-        <references refid="classNRF24L01_1a83cfc941bafe563f38e183504ee8533c" compoundref="NRF24L01_8cpp" startline="1145" endline="1148">FlushRx</references>
-        <references refid="classNRF24L01_1ad311ef5130c99ab8ddca292adfe76603" compoundref="NRF24L01_8h" startline="995" endline="999">delay_ms</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
+        <references refid="classNRF24L01_1a83cfc941bafe563f38e183504ee8533c" compoundref="NRF24L01_8cpp" startline="1234" endline="1237">FlushRx</references>
+        <references refid="classNRF24L01_1ad311ef5130c99ab8ddca292adfe76603" compoundref="NRF24L01_8h" startline="1001" endline="1005">delay_ms</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ae4067455572c6731211315b3900f5cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1082,16 +1069,16 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="754" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="641" bodyend="654"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="760" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="711" bodyend="724"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0819cc8bd7ced28454f1753db8151e81" compoundref="NRF24L01registers_8h" startline="55">NRF24L01_REG_FEATURE</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1afc39ba326140b456cd4e1d1ed7b22c7b" compoundref="NRF24L01registers_8h" startline="105">NRF24L01_REG_EN_ACK_PAY</references>
         <references refid="NRF24L01registers_8h_1a2660a02a6a8bb33f4e6e8c775b8d9e45" compoundref="NRF24L01registers_8h" startline="104">NRF24L01_REG_EN_DPL</references>
         <references refid="NRF24L01registers_8h_1a7be01f5b9fe0d16b38e4957419229a64" compoundref="NRF24L01registers_8h" startline="56">NRF24L01_REG_DYNPD</references>
         <references refid="NRF24L01registers_8h_1a8d923ba49b59dc3c5d021415f9c2f42c" compoundref="NRF24L01registers_8h" startline="102">NRF24L01_REG_DPL_P1</references>
         <references refid="NRF24L01registers_8h_1a570ef36957bec872985ad9272314d6d2" compoundref="NRF24L01registers_8h" startline="103">NRF24L01_REG_DPL_P0</references>
-        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="145">dynamic_payloads_enabled</references>
+        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="148">dynamic_payloads_enabled</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1abd060c4df7efac781ed5812a0ee19d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1107,10 +1094,10 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 <para>Enable dynamically-sized payloads</para><para>This way you don&apos;t always have to send large packets just to send them once in a while. This enables dynamic payloads on ALL pipes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="763" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="611" bodyend="624"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="769" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="681" bodyend="694"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0819cc8bd7ced28454f1753db8151e81" compoundref="NRF24L01registers_8h" startline="55">NRF24L01_REG_FEATURE</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a2660a02a6a8bb33f4e6e8c775b8d9e45" compoundref="NRF24L01registers_8h" startline="104">NRF24L01_REG_EN_DPL</references>
         <references refid="NRF24L01registers_8h_1a7be01f5b9fe0d16b38e4957419229a64" compoundref="NRF24L01registers_8h" startline="56">NRF24L01_REG_DYNPD</references>
         <references refid="NRF24L01registers_8h_1a2cbdcd93473fbce53081f73c98fbd3d8" compoundref="NRF24L01registers_8h" startline="98">NRF24L01_REG_DPL_P5</references>
@@ -1119,7 +1106,7 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
         <references refid="NRF24L01registers_8h_1acef1c51f731e85855713f61866d2e2ff" compoundref="NRF24L01registers_8h" startline="101">NRF24L01_REG_DPL_P2</references>
         <references refid="NRF24L01registers_8h_1a8d923ba49b59dc3c5d021415f9c2f42c" compoundref="NRF24L01registers_8h" startline="102">NRF24L01_REG_DPL_P1</references>
         <references refid="NRF24L01registers_8h_1a570ef36957bec872985ad9272314d6d2" compoundref="NRF24L01registers_8h" startline="103">NRF24L01_REG_DPL_P0</references>
-        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="145">dynamic_payloads_enabled</references>
+        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="148">dynamic_payloads_enabled</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1abf6bf0c18b2b12674cfbc150a2bdb778" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1135,10 +1122,10 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 <para>Disable dynamically-sized payloads</para><para>This disables dynamic payloads on ALL pipes. Since Ack Payloads requires Dynamic Payloads, Ack Payloads are also disabled. If dynamic payloads are later re-enabled and ack payloads are desired then <ref refid="classNRF24L01_1ae4067455572c6731211315b3900f5cbd" kindref="member">enableAckPayload()</ref> must be called again as well. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="773" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="626" bodyend="639"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="779" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="696" bodyend="709"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0819cc8bd7ced28454f1753db8151e81" compoundref="NRF24L01registers_8h" startline="55">NRF24L01_REG_FEATURE</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a2660a02a6a8bb33f4e6e8c775b8d9e45" compoundref="NRF24L01registers_8h" startline="104">NRF24L01_REG_EN_DPL</references>
         <references refid="NRF24L01registers_8h_1afc39ba326140b456cd4e1d1ed7b22c7b" compoundref="NRF24L01registers_8h" startline="105">NRF24L01_REG_EN_ACK_PAY</references>
         <references refid="NRF24L01registers_8h_1a7be01f5b9fe0d16b38e4957419229a64" compoundref="NRF24L01registers_8h" startline="56">NRF24L01_REG_DYNPD</references>
@@ -1148,7 +1135,7 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
         <references refid="NRF24L01registers_8h_1acef1c51f731e85855713f61866d2e2ff" compoundref="NRF24L01registers_8h" startline="101">NRF24L01_REG_DPL_P2</references>
         <references refid="NRF24L01registers_8h_1a8d923ba49b59dc3c5d021415f9c2f42c" compoundref="NRF24L01registers_8h" startline="102">NRF24L01_REG_DPL_P1</references>
         <references refid="NRF24L01registers_8h_1a570ef36957bec872985ad9272314d6d2" compoundref="NRF24L01registers_8h" startline="103">NRF24L01_REG_DPL_P0</references>
-        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="145">dynamic_payloads_enabled</references>
+        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="148">dynamic_payloads_enabled</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1aeaa968ea74bfd2690fff331e9f115344" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1166,10 +1153,10 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="787" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="656" bodyend="664"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="793" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="726" bodyend="734"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0819cc8bd7ced28454f1753db8151e81" compoundref="NRF24L01registers_8h" startline="55">NRF24L01_REG_FEATURE</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a5ef3505849cb731532f2a432fd566628" compoundref="NRF24L01registers_8h" startline="106">NRF24L01_REG_EN_DYN_ACK</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ad05024c9586c1dc76c2fd95d54ce6b4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1187,8 +1174,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="795" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="695" bodyend="697"/>
-        <references refid="classNRF24L01_1a082a99d802a3f2335da94e67cf8440ea" compoundref="NRF24L01_8h" startline="105">p_variant</references>
+        <location file="src/Wireless/NRF24L01.h" line="801" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="768" bodyend="770"/>
+        <references refid="classNRF24L01_1a082a99d802a3f2335da94e67cf8440ea" compoundref="NRF24L01_8h" startline="108">p_variant</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a33b1c7dd1cad95dae57ef87bf3dce5c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1213,8 +1200,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="804" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="699" bodyend="704"/>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="810" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="772" bodyend="777"/>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a4dc0921a9e237248b4f6d51b09832a2b" compoundref="NRF24L01registers_8h" startline="32">NRF24L01_REG_EN_AA</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a79cab6f958c8d9e18273d7c4750480fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1251,10 +1238,10 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="815" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="706" bodyend="716"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="821" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="779" bodyend="789"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a4dc0921a9e237248b4f6d51b09832a2b" compoundref="NRF24L01registers_8h" startline="32">NRF24L01_REG_EN_AA</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a7319961d6048e32546ad5df934bd42d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1279,11 +1266,11 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="827" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="726" bodyend="738"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="833" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="799" bodyend="811"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a7344c4ea38d1f2296b9163c02e17bd8d" compoundref="NRF24L01registers_8h" startline="37">NRF24L01_REG_RF_SETUP</references>
-        <references refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aaceab0bfc94c4095e9495b2e49530b623d0d" compoundref="NRF24L01_8h" startline="75">RF24_PA_MAX</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aaceab0bfc94c4095e9495b2e49530b623d0d" compoundref="NRF24L01_8h" startline="76">RF24_PA_MAX</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a8fdb80b79100186afad90d9a2a5c79fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1300,8 +1287,8 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="837" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="740" bodyend="743"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="843" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="813" bodyend="816"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a7344c4ea38d1f2296b9163c02e17bd8d" compoundref="NRF24L01registers_8h" startline="37">NRF24L01_REG_RF_SETUP</references>
         <references refid="NRF24L01registers_8h_1ab9dfc6927495c92ef82df6e1c98eea06" compoundref="NRF24L01registers_8h" startline="109">NRF24L01_REG_RF_PWR_LOW</references>
         <references refid="NRF24L01registers_8h_1aaca2342ed7eb4da1691c4d647a9adb39" compoundref="NRF24L01registers_8h" startline="110">NRF24L01_REG_RF_PWR_HIGH</references>
@@ -1331,15 +1318,15 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="846" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="745" bodyend="778"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="852" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="818" bodyend="851"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a7344c4ea38d1f2296b9163c02e17bd8d" compoundref="NRF24L01registers_8h" startline="37">NRF24L01_REG_RF_SETUP</references>
         <references refid="NRF24L01registers_8h_1a5860d87932a33fac92398f92cbcb9f23" compoundref="NRF24L01registers_8h" startline="107">NRF24L01_REG_RF_DR_LOW</references>
         <references refid="NRF24L01registers_8h_1a897e8493a10b6d8f60fdd1284c02479f" compoundref="NRF24L01registers_8h" startline="108">NRF24L01_REG_RF_DR_HIGH</references>
-        <references refid="classNRF24L01_1a1feaab910ecff17805f8141fe40028e7" compoundref="NRF24L01_8h" startline="905">txDelay</references>
-        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522ad6a241689903e120c99b6963cb98c97c" compoundref="NRF24L01_8h" startline="82">RF24_250KBPS</references>
-        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522a53050a70cedbbf10620ba0fe2b043f1b" compoundref="NRF24L01_8h" startline="82">RF24_2MBPS</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1a1feaab910ecff17805f8141fe40028e7" compoundref="NRF24L01_8h" startline="911">txDelay</references>
+        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522ad6a241689903e120c99b6963cb98c97c" compoundref="NRF24L01_8h" startline="83">RF24_250KBPS</references>
+        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522a53050a70cedbbf10620ba0fe2b043f1b" compoundref="NRF24L01_8h" startline="83">RF24_2MBPS</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a6184de85c94400cde96b7f83b316efa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522" kindref="member">rf24_datarate_e</ref></type>
@@ -1356,14 +1343,14 @@ For single noAck writes see: <simplesect kind="see"><para><ref refid="classNRF24
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="855" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="781" bodyend="798"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="861" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="854" bodyend="871"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a7344c4ea38d1f2296b9163c02e17bd8d" compoundref="NRF24L01registers_8h" startline="37">NRF24L01_REG_RF_SETUP</references>
         <references refid="NRF24L01registers_8h_1a5860d87932a33fac92398f92cbcb9f23" compoundref="NRF24L01registers_8h" startline="107">NRF24L01_REG_RF_DR_LOW</references>
         <references refid="NRF24L01registers_8h_1a897e8493a10b6d8f60fdd1284c02479f" compoundref="NRF24L01registers_8h" startline="108">NRF24L01_REG_RF_DR_HIGH</references>
-        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522ad6a241689903e120c99b6963cb98c97c" compoundref="NRF24L01_8h" startline="82">RF24_250KBPS</references>
-        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522a53050a70cedbbf10620ba0fe2b043f1b" compoundref="NRF24L01_8h" startline="82">RF24_2MBPS</references>
-        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522afd01f3fd55247a67c0bcfd459fe17fdf" compoundref="NRF24L01_8h" startline="82">RF24_1MBPS</references>
+        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522ad6a241689903e120c99b6963cb98c97c" compoundref="NRF24L01_8h" startline="83">RF24_250KBPS</references>
+        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522a53050a70cedbbf10620ba0fe2b043f1b" compoundref="NRF24L01_8h" startline="83">RF24_2MBPS</references>
+        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522afd01f3fd55247a67c0bcfd459fe17fdf" compoundref="NRF24L01_8h" startline="83">RF24_1MBPS</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a6081dd6dd9cdffbc1c7534ee1824201d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1389,14 +1376,14 @@ CRC checking cannot be disabled if auto-ack is enabled <parameterlist kind="para
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="862" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="800" bodyend="813"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="868" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="873" bodyend="886"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a71b3597b405d855e19ef435a215edacc" compoundref="NRF24L01registers_8h" startline="31">NRF24L01_REG_CONFIG</references>
         <references refid="NRF24L01registers_8h_1a6eba0160227b56161ff3d8971c17dac9" compoundref="NRF24L01registers_8h" startline="63">NRF24L01_REG_CRCO</references>
         <references refid="NRF24L01registers_8h_1a13e595f734f122da3feea0f8c42748db" compoundref="NRF24L01registers_8h" startline="62">NRF24L01_REG_EN_CRC</references>
-        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea77871b6e6fac61d79be7edf1a60b9cbf" compoundref="NRF24L01_8h" startline="89">RF24_CRC_DISABLED</references>
-        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7eade0b6b3a0dd8729e2a17c49896e0a468" compoundref="NRF24L01_8h" startline="89">RF24_CRC_8</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea77871b6e6fac61d79be7edf1a60b9cbf" compoundref="NRF24L01_8h" startline="90">RF24_CRC_DISABLED</references>
+        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7eade0b6b3a0dd8729e2a17c49896e0a468" compoundref="NRF24L01_8h" startline="90">RF24_CRC_8</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ac83fb86df156475aeda2ef637078fcd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7e" kindref="member">rf24_crclength_e</ref></type>
@@ -1414,15 +1401,15 @@ CRC checking cannot be disabled if auto-ack is enabled <simplesect kind="return"
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="868" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="815" bodyend="829"/>
-        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea77871b6e6fac61d79be7edf1a60b9cbf" compoundref="NRF24L01_8h" startline="89">RF24_CRC_DISABLED</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="874" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="888" bodyend="902"/>
+        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea77871b6e6fac61d79be7edf1a60b9cbf" compoundref="NRF24L01_8h" startline="90">RF24_CRC_DISABLED</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a71b3597b405d855e19ef435a215edacc" compoundref="NRF24L01registers_8h" startline="31">NRF24L01_REG_CONFIG</references>
         <references refid="NRF24L01registers_8h_1a6eba0160227b56161ff3d8971c17dac9" compoundref="NRF24L01registers_8h" startline="63">NRF24L01_REG_CRCO</references>
         <references refid="NRF24L01registers_8h_1a13e595f734f122da3feea0f8c42748db" compoundref="NRF24L01registers_8h" startline="62">NRF24L01_REG_EN_CRC</references>
         <references refid="NRF24L01registers_8h_1a4dc0921a9e237248b4f6d51b09832a2b" compoundref="NRF24L01registers_8h" startline="32">NRF24L01_REG_EN_AA</references>
-        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea6eeb0379e23be63559106d96ada47a56" compoundref="NRF24L01_8h" startline="89">RF24_CRC_16</references>
-        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7eade0b6b3a0dd8729e2a17c49896e0a468" compoundref="NRF24L01_8h" startline="89">RF24_CRC_8</references>
+        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7ea6eeb0379e23be63559106d96ada47a56" compoundref="NRF24L01_8h" startline="90">RF24_CRC_16</references>
+        <references refid="NRF24L01_8h_1adbe00719f3f835c82bd007081d040a7eade0b6b3a0dd8729e2a17c49896e0a468" compoundref="NRF24L01_8h" startline="90">RF24_CRC_8</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a1e997f3c946acdbe8bd622e431f80034" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1439,11 +1426,11 @@ CRC checking cannot be disabled if auto-ack is enabled <simplesect kind="return"
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="875" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="831" bodyend="834"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="881" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="904" bodyend="907"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a71b3597b405d855e19ef435a215edacc" compoundref="NRF24L01registers_8h" startline="31">NRF24L01_REG_CONFIG</references>
         <references refid="NRF24L01registers_8h_1a13e595f734f122da3feea0f8c42748db" compoundref="NRF24L01registers_8h" startline="62">NRF24L01_REG_EN_CRC</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ad23d4111c3a26d18db51eb72a5491dbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1517,13 +1504,13 @@ return 1;
 </verbatim></para><para>} </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="892" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1009" bodyend="1017"/>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="898" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1082" bodyend="1090"/>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a71b3597b405d855e19ef435a215edacc" compoundref="NRF24L01registers_8h" startline="31">NRF24L01_REG_CONFIG</references>
         <references refid="NRF24L01registers_8h_1ac16635ddd6f66d55990cfc526dedbc1a" compoundref="NRF24L01registers_8h" startline="61">NRF24L01_REG_MASK_MAX_RT</references>
         <references refid="NRF24L01registers_8h_1a2e080fce62016b92e7d42519e17e1259" compoundref="NRF24L01registers_8h" startline="60">NRF24L01_REG_MASK_TX_DS</references>
         <references refid="NRF24L01registers_8h_1ab600bb73d205bb30ee182bbdd0fe96c0" compoundref="NRF24L01registers_8h" startline="59">NRF24L01_REG_MASK_RX_DR</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a02c91592a6c762c1a4e86252f8958bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1564,16 +1551,16 @@ return 1;
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="935" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="575" bodyend="597"/>
-        <references refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" compoundref="NRF24L01_8h" startline="125">pipe0_reading_address</references>
-        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="123">NRF24L01_ADDRSIZE</references>
-        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1091" endline="1100">WriteRegisters</references>
-        <references refid="NRF24L01_8cpp_1abb559312d5695b2e999a6f9c1c70f43e" compoundref="NRF24L01_8cpp" startline="531">child_pipe</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
-        <references refid="NRF24L01_8cpp_1a7f2a8ffadcb84a16a11236e320dec823" compoundref="NRF24L01_8cpp" startline="535">child_payload_size</references>
-        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="109">NRF24L01_PAYLOAD</references>
+        <location file="src/Wireless/NRF24L01.h" line="941" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="643" bodyend="665"/>
+        <references refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" compoundref="NRF24L01_8h" startline="128">pipe0_reading_address</references>
+        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="126">NRF24L01_ADDRSIZE</references>
+        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1172" endline="1183">WriteRegisters</references>
+        <references refid="NRF24L01_8cpp_1abb559312d5695b2e999a6f9c1c70f43e" compoundref="NRF24L01_8cpp" startline="599">child_pipe</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
+        <references refid="NRF24L01_8cpp_1a7f2a8ffadcb84a16a11236e320dec823" compoundref="NRF24L01_8cpp" startline="603">child_payload_size</references>
+        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="112">NRF24L01_PAYLOAD</references>
         <references refid="NRF24L01registers_8h_1a1ece6e2d8eda4cbda7576562213fe72a" compoundref="NRF24L01registers_8h" startline="33">NRF24L01_REG_EN_RXADDR</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a0fe37f8ff95b7c562ad1fc277890e29a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1600,14 +1587,14 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="949" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="517" bodyend="528"/>
-        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1091" endline="1100">WriteRegisters</references>
+        <location file="src/Wireless/NRF24L01.h" line="955" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="585" bodyend="596"/>
+        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1172" endline="1183">WriteRegisters</references>
         <references refid="NRF24L01registers_8h_1afcaaf2d19fb6b9ebd0b122d173c13b88" compoundref="NRF24L01registers_8h" startline="41">NRF24L01_REG_RX_ADDR_P0</references>
-        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="123">NRF24L01_ADDRSIZE</references>
+        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="126">NRF24L01_ADDRSIZE</references>
         <references refid="NRF24L01registers_8h_1abbc9a49c2fa8649b95faaca41dda30a0" compoundref="NRF24L01registers_8h" startline="47">NRF24L01_REG_TX_ADDR</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1ae87408247e1b981750056d2b07817982" compoundref="NRF24L01registers_8h" startline="48">NRF24L01_REG_RX_PW_P0</references>
-        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="109">NRF24L01_PAYLOAD</references>
+        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="112">NRF24L01_PAYLOAD</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ad311ef5130c99ab8ddca292adfe76603" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1624,7 +1611,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="995" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="995" bodyend="999"/>
+        <location file="src/Wireless/NRF24L01.h" line="1001" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1001" bodyend="1005"/>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1637,9 +1624,9 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1001" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1001" bodyend="1001"/>
-        <references refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" compoundref="NRF24L01_8h" startline="36">NRF24L01_PORT</references>
-        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="102">NRF24L01_CSN</references>
+        <location file="src/Wireless/NRF24L01.h" line="1007" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1007" bodyend="1007"/>
+        <references refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" compoundref="NRF24L01_8h" startline="37">NRF24L01_PORT</references>
+        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="105">NRF24L01_CSN</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1652,9 +1639,9 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1002" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1002" bodyend="1002"/>
-        <references refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" compoundref="NRF24L01_8h" startline="36">NRF24L01_PORT</references>
-        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="102">NRF24L01_CSN</references>
+        <location file="src/Wireless/NRF24L01.h" line="1008" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1008" bodyend="1008"/>
+        <references refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" compoundref="NRF24L01_8h" startline="37">NRF24L01_PORT</references>
+        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="105">NRF24L01_CSN</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1667,9 +1654,9 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1003" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1003" bodyend="1003"/>
-        <references refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" compoundref="NRF24L01_8h" startline="36">NRF24L01_PORT</references>
-        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="101">NRF24L01_CE</references>
+        <location file="src/Wireless/NRF24L01.h" line="1009" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1009" bodyend="1009"/>
+        <references refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" compoundref="NRF24L01_8h" startline="37">NRF24L01_PORT</references>
+        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="104">NRF24L01_CE</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1682,19 +1669,19 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1004" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1004" bodyend="1004"/>
-        <references refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" compoundref="NRF24L01_8h" startline="36">NRF24L01_PORT</references>
-        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="101">NRF24L01_CE</references>
-        <references refid="classNRF24L01_1a9766146f8b6bcab59e91e7545484c401" compoundref="NRF24L01_8cpp" startline="1067" endline="1078">ReadRegisters</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
-        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1091" endline="1100">WriteRegisters</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
-        <references refid="classNRF24L01_1a9abae657dc54d97b6eb63f33c83e9f59" compoundref="NRF24L01_8cpp" startline="1103" endline="1121">WritePayload</references>
-        <references refid="classNRF24L01_1ad733911b261f73964817dad526745716" compoundref="NRF24L01_8cpp" startline="1123" endline="1141">ReadPayload</references>
-        <references refid="classNRF24L01_1a83cfc941bafe563f38e183504ee8533c" compoundref="NRF24L01_8cpp" startline="1145" endline="1148">FlushRx</references>
-        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="293" endline="297">getStatus</references>
-        <references refid="classNRF24L01_1aceeaa16f91d7c5fd6a429a6adf678bd4" compoundref="NRF24L01_8cpp" startline="604" endline="609">ToggleFeatures</references>
-        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1157" endline="1166">spiTrans</references>
+        <location file="src/Wireless/NRF24L01.h" line="1010" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1010" bodyend="1010"/>
+        <references refid="NRF24L01_8h_1aaaa13b2c8dc446b73ab64c28c9fa776a" compoundref="NRF24L01_8h" startline="37">NRF24L01_PORT</references>
+        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="104">NRF24L01_CE</references>
+        <references refid="classNRF24L01_1a9766146f8b6bcab59e91e7545484c401" compoundref="NRF24L01_8cpp" startline="1144" endline="1157">ReadRegisters</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
+        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1172" endline="1183">WriteRegisters</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
+        <references refid="classNRF24L01_1a9abae657dc54d97b6eb63f33c83e9f59" compoundref="NRF24L01_8cpp" startline="1186" endline="1207">WritePayload</references>
+        <references refid="classNRF24L01_1ad733911b261f73964817dad526745716" compoundref="NRF24L01_8cpp" startline="1209" endline="1230">ReadPayload</references>
+        <references refid="classNRF24L01_1a83cfc941bafe563f38e183504ee8533c" compoundref="NRF24L01_8cpp" startline="1234" endline="1237">FlushRx</references>
+        <references refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" compoundref="NRF24L01_8cpp" startline="361" endline="365">getStatus</references>
+        <references refid="classNRF24L01_1aceeaa16f91d7c5fd6a429a6adf678bd4" compoundref="NRF24L01_8cpp" startline="672" endline="679">ToggleFeatures</references>
+        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1246" endline="1256">spiTrans</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1746,14 +1733,14 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1023" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1067" bodyend="1078"/>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
+        <location file="src/Wireless/NRF24L01.h" line="1029" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1144" bodyend="1157"/>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
         <references refid="NRF24L01registers_8h_1a2a1311d2c31503729e5cd0051c45dfe3" compoundref="NRF24L01registers_8h" startline="113">NRF24L01_CMD_R_REGISTER</references>
         <references refid="NRF24L01registers_8h_1a3b71c0d117789380e37fda6090b35d60" compoundref="NRF24L01registers_8h" startline="115">NRF24L01_CMD_REGISTER_MASK</references>
         <references refid="NRF24L01registers_8h_1a34038777861e0c105a76ec3d46cfd2d9" compoundref="NRF24L01registers_8h" startline="124">NRF24L01_CMD_NOP</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1779,14 +1766,14 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1031" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1056" bodyend="1064"/>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
+        <location file="src/Wireless/NRF24L01.h" line="1037" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1131" bodyend="1141"/>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
         <references refid="NRF24L01registers_8h_1a2a1311d2c31503729e5cd0051c45dfe3" compoundref="NRF24L01registers_8h" startline="113">NRF24L01_CMD_R_REGISTER</references>
         <references refid="NRF24L01registers_8h_1a3b71c0d117789380e37fda6090b35d60" compoundref="NRF24L01registers_8h" startline="115">NRF24L01_CMD_REGISTER_MASK</references>
         <references refid="NRF24L01registers_8h_1a34038777861e0c105a76ec3d46cfd2d9" compoundref="NRF24L01registers_8h" startline="124">NRF24L01_CMD_NOP</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1834,13 +1821,13 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1041" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1091" bodyend="1100"/>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
+        <location file="src/Wireless/NRF24L01.h" line="1047" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1172" bodyend="1183"/>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
         <references refid="NRF24L01registers_8h_1aafb2cf802c07e6e69817126c120081a6" compoundref="NRF24L01registers_8h" startline="114">NRF24L01_CMD_W_REGISTER</references>
         <references refid="NRF24L01registers_8h_1a3b71c0d117789380e37fda6090b35d60" compoundref="NRF24L01registers_8h" startline="115">NRF24L01_CMD_REGISTER_MASK</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1877,13 +1864,13 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1050" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1081" bodyend="1088"/>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
+        <location file="src/Wireless/NRF24L01.h" line="1056" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1160" bodyend="1169"/>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
         <references refid="NRF24L01registers_8h_1aafb2cf802c07e6e69817126c120081a6" compoundref="NRF24L01registers_8h" startline="114">NRF24L01_CMD_W_REGISTER</references>
         <references refid="NRF24L01registers_8h_1a3b71c0d117789380e37fda6090b35d60" compoundref="NRF24L01registers_8h" startline="115">NRF24L01_CMD_REGISTER_MASK</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a9abae657dc54d97b6eb63f33c83e9f59" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1924,14 +1911,14 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1061" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1103" bodyend="1121"/>
-        <references refid="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" compoundref="NRF24L01_8h" startline="60">rf24_min</references>
-        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="109">NRF24L01_PAYLOAD</references>
-        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="145">dynamic_payloads_enabled</references>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
+        <location file="src/Wireless/NRF24L01.h" line="1067" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1186" bodyend="1207"/>
+        <references refid="NRF24L01_8h_1a803c01bff6ebb264fb8b4438eb65f098" compoundref="NRF24L01_8h" startline="61">rf24_min</references>
+        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="112">NRF24L01_PAYLOAD</references>
+        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="148">dynamic_payloads_enabled</references>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ad733911b261f73964817dad526745716" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1968,14 +1955,14 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1072" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1123" bodyend="1141"/>
-        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="109">NRF24L01_PAYLOAD</references>
-        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="145">dynamic_payloads_enabled</references>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
+        <location file="src/Wireless/NRF24L01.h" line="1078" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1209" bodyend="1230"/>
+        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="112">NRF24L01_PAYLOAD</references>
+        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="148">dynamic_payloads_enabled</references>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
         <references refid="NRF24L01registers_8h_1a9283a0e899f8995bfc12a5e0e042621a" compoundref="NRF24L01registers_8h" startline="118">NRF24L01_CMD_R_RX_PAYLOAD</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a83cfc941bafe563f38e183504ee8533c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -1992,8 +1979,8 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1079" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1145" bodyend="1148"/>
-        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1157" endline="1166">spiTrans</references>
+        <location file="src/Wireless/NRF24L01.h" line="1085" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1234" bodyend="1237"/>
+        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1246" endline="1256">spiTrans</references>
         <references refid="NRF24L01registers_8h_1aaa0ea814597af9ac6b572b4c85212abe" compoundref="NRF24L01registers_8h" startline="122">NRF24L01_CMD_FLUSH_RX</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2011,8 +1998,8 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1086" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="293" bodyend="297"/>
-        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1157" endline="1166">spiTrans</references>
+        <location file="src/Wireless/NRF24L01.h" line="1092" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="361" bodyend="365"/>
+        <references refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" compoundref="NRF24L01_8cpp" startline="1246" endline="1256">spiTrans</references>
         <references refid="NRF24L01registers_8h_1a34038777861e0c105a76ec3d46cfd2d9" compoundref="NRF24L01registers_8h" startline="124">NRF24L01_CMD_NOP</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1aceeaa16f91d7c5fd6a429a6adf678bd4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2029,12 +2016,12 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 <para>Turn on or off the special features of the chip</para><para>The chip has certain &apos;features&apos; which are only available when the &apos;features&apos; are enabled. See the datasheet for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1093" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="604" bodyend="609"/>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
+        <location file="src/Wireless/NRF24L01.h" line="1099" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="672" bodyend="679"/>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
         <references refid="NRF24L01registers_8h_1a3959f22104bcca5fdb7411658d2f8312" compoundref="NRF24L01registers_8h" startline="116">NRF24L01_CMD_ACTIVATE</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -2051,11 +2038,11 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 <para>Built in spi transfer function to simplify repeating code repeating code </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1099" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1157" bodyend="1166"/>
-        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1002" endline="1002">CSN_LOW</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="79" endline="83">SPI::WriteReadbyte</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
+        <location file="src/Wireless/NRF24L01.h" line="1105" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1246" bodyend="1256"/>
+        <references refid="classNRF24L01_1acffaad2c6b5e3713f7fe6af22d4553ef" compoundref="NRF24L01_8h" startline="1008" endline="1008">CSN_LOW</references>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" compoundref="IO_8cpp" startline="94" endline="98">IO::SPI_WriteReadbyte</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ad796eb9996a6b528534d1ac2ae2d37cd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -2071,10 +2058,23 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="1101" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1101" bodyend="1103"/>
+        <location file="src/Wireless/NRF24L01.h" line="1107" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="1107" bodyend="1109"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" prot="private" static="no" mutable="no">
+        <type><ref refid="classIO" kindref="compound">IO</ref> *</type>
+        <definition>IO* NRF24L01::ioInterface</definition>
+        <argsstring></argsstring>
+        <name>ioInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Wireless/NRF24L01.h" line="99" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" prot="private" static="no" mutable="no">
         <type>uint8_t *</type>
         <definition>volatile uint8_t* NRF24L01::NRF24L01_DDR</definition>
@@ -2086,7 +2086,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="99" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="99" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="102" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2099,7 +2099,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="101" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="101" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="104" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2112,7 +2112,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="102" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="102" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="105" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a4701641c1e8b3d082deb03f93c84d8c7" prot="private" static="no" mutable="no">
         <type>uint16_t</type>
@@ -2125,7 +2125,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 <para><ref refid="classSPI" kindref="compound">SPI</ref> Bus Speed </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="104" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="104" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="107" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a082a99d802a3f2335da94e67cf8440ea" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -2138,7 +2138,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="105" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="105" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="108" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a2f5e84525760899949446db94d225700" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2151,7 +2151,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="107" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="107" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="110" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2164,7 +2164,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="109" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="109" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="112" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1af2e0a88f330c86d0cc6c43180f70ecbd" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2177,7 +2177,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="111" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="111" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="114" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a10c710f3795c47ebde120ca3d975c891" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2190,7 +2190,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="115" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="115" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="118" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="118" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a8ebd82a57efbaa5928a56ba6780740de" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2203,7 +2203,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="116" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="116" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="119" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="119" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1aac40f597790cf3a62b382f919f1293ce" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2216,7 +2216,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="117" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="117" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="120" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1aea0d090c7d6da9b137ce4ce3690535e8" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2229,7 +2229,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="118" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="118" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="121" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a4f19e32ed3324724d3478b9f841a2790" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2242,7 +2242,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="119" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="119" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="122" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1ae77cf1829f80c703e36ef57b6d23e9a9" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2255,7 +2255,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="120" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="120" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="123" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2268,7 +2268,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="123" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="123" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="126" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="126" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2281,7 +2281,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 <para>Last address set on pipe 0 for reading. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="125" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="125" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="128" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1ac798ba6ce52fd4a13eb40ff274818157" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2294,7 +2294,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="136" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="136" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="139" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1a2dc0073a56f6aca86da205dd720fd132" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2307,7 +2307,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="139" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="139" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="142" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="142" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1af6a260dd55ee5c2f7de7cfac4e91178d" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -2320,7 +2320,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="143" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="143" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="146" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="146" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -2333,7 +2333,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 <para>Whether dynamic payloads are enabled. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="145" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="145" bodyend="-1"/>
+        <location file="src/Wireless/NRF24L01.h" line="148" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="148" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -2348,20 +2348,24 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="149" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="37" bodyend="97"/>
-        <references refid="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" compoundref="NRF24L01_8h" startline="99">NRF24L01_DDR</references>
-        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="101">NRF24L01_CE</references>
-        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="102">NRF24L01_CSN</references>
-        <references refid="classNRF24L01_1aa8eaf9d5ed604f60a00cd79fed9edad7" compoundref="NRF24L01_8cpp" startline="299" endline="303">setChannel</references>
-        <references refid="classNRF24L01_1abe5983a57d0d3bd77508e5345774c890" compoundref="NRF24L01_8cpp" startline="309" endline="311">setPayloadSize</references>
-        <references refid="classNRF24L01_1a33b1c7dd1cad95dae57ef87bf3dce5c8" compoundref="NRF24L01_8cpp" startline="699" endline="704">setAutoAck</references>
-        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="123">NRF24L01_ADDRSIZE</references>
+        <location file="src/Wireless/NRF24L01.h" line="152" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="36" bodyend="96"/>
+        <references refid="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" compoundref="NRF24L01_8h" startline="102">NRF24L01_DDR</references>
+        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="104">NRF24L01_CE</references>
+        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="105">NRF24L01_CSN</references>
+        <references refid="classNRF24L01_1aa8eaf9d5ed604f60a00cd79fed9edad7" compoundref="NRF24L01_8cpp" startline="367" endline="371">setChannel</references>
+        <references refid="classNRF24L01_1abe5983a57d0d3bd77508e5345774c890" compoundref="NRF24L01_8cpp" startline="377" endline="379">setPayloadSize</references>
+        <references refid="classNRF24L01_1a33b1c7dd1cad95dae57ef87bf3dce5c8" compoundref="NRF24L01_8cpp" startline="772" endline="777">setAutoAck</references>
+        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="126">NRF24L01_ADDRSIZE</references>
       </memberdef>
-      <memberdef kind="function" id="classNRF24L01_1a8e2cc2ca751ff3bd4ea351bd2fcea93e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classNRF24L01_1a8e8e6754c34cf6e6fed554a6e26c8a4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>NRF24L01::NRF24L01</definition>
-        <argsstring>(volatile uint8_t &amp;DDR, volatile uint8_t &amp;PORT, uint8_t CE, uint8_t CSN)</argsstring>
+        <argsstring>(IO *ioInterface, volatile uint8_t &amp;DDR, volatile uint8_t &amp;PORT, uint8_t CE, uint8_t CSN)</argsstring>
         <name>NRF24L01</name>
+        <param>
+          <type><ref refid="classIO" kindref="compound">IO</ref> *</type>
+          <declname>ioInterface</declname>
+        </param>
         <param>
           <type>volatile uint8_t &amp;</type>
           <declname>DDR</declname>
@@ -2384,33 +2388,35 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="151" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="99" bodyend="157"/>
-        <references refid="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" compoundref="NRF24L01_8h" startline="99">NRF24L01_DDR</references>
-        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="101">NRF24L01_CE</references>
-        <references refid="main_8cpp_1af332f65aca07c44deeda884c8f6c353c" compoundref="main_8cpp" startline="45">CE</references>
-        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="102">NRF24L01_CSN</references>
-        <references refid="main_8cpp_1a8df4f3a8a2035df063402ae5f0c1d2f8" compoundref="main_8cpp" startline="46">CSN</references>
-        <references refid="classNRF24L01_1a1feaab910ecff17805f8141fe40028e7" compoundref="NRF24L01_8h" startline="905">txDelay</references>
-        <references refid="classNRF24L01_1a4701641c1e8b3d082deb03f93c84d8c7" compoundref="NRF24L01_8h" startline="104">spi_speed</references>
-        <references refid="classNRF24L01_1a749f38c45c00905b3d8e8c180626bff6" compoundref="NRF24L01_8h" startline="659">failureDetected</references>
-        <references refid="classNRF24L01_1a2f5e84525760899949446db94d225700" compoundref="NRF24L01_8h" startline="107">NRF24L01_CH</references>
-        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="109">NRF24L01_PAYLOAD</references>
-        <references refid="classNRF24L01_1af2e0a88f330c86d0cc6c43180f70ecbd" compoundref="NRF24L01_8h" startline="111">NRF24L01_ACK</references>
-        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="145">dynamic_payloads_enabled</references>
-        <references refid="classNRF24L01_1a10c710f3795c47ebde120ca3d975c891" compoundref="NRF24L01_8h" startline="115">NRF24L01_ENABLEDP0</references>
-        <references refid="classNRF24L01_1a8ebd82a57efbaa5928a56ba6780740de" compoundref="NRF24L01_8h" startline="116">NRF24L01_ENABLEDP1</references>
-        <references refid="classNRF24L01_1aac40f597790cf3a62b382f919f1293ce" compoundref="NRF24L01_8h" startline="117">NRF24L01_ENABLEDP2</references>
-        <references refid="classNRF24L01_1aea0d090c7d6da9b137ce4ce3690535e8" compoundref="NRF24L01_8h" startline="118">NRF24L01_ENABLEDP3</references>
-        <references refid="classNRF24L01_1a4f19e32ed3324724d3478b9f841a2790" compoundref="NRF24L01_8h" startline="119">NRF24L01_ENABLEDP4</references>
-        <references refid="classNRF24L01_1ae77cf1829f80c703e36ef57b6d23e9a9" compoundref="NRF24L01_8h" startline="120">NRF24L01_ENABLEDP5</references>
-        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="123">NRF24L01_ADDRSIZE</references>
-        <references refid="classNRF24L01_1ac798ba6ce52fd4a13eb40ff274818157" compoundref="NRF24L01_8h" startline="136">NRF24L01_RF24_PA</references>
-        <references refid="NRF24L01_8h_1ac7a035ce38201de0975b1cd23851b9c7" compoundref="NRF24L01_8h" startline="42">NRF24L01_RF24_PA_MIN</references>
-        <references refid="classNRF24L01_1a2dc0073a56f6aca86da205dd720fd132" compoundref="NRF24L01_8h" startline="139">NRF24L01_RF24_SPEED</references>
-        <references refid="NRF24L01_8h_1aa0d7169d75941f10e4187369c6d99ae2" compoundref="NRF24L01_8h" startline="50">NRF24L01_RF24_SPEED_1MBPS</references>
-        <references refid="classNRF24L01_1af6a260dd55ee5c2f7de7cfac4e91178d" compoundref="NRF24L01_8h" startline="143">NRF24L01_RF24_CRC</references>
-        <references refid="NRF24L01_8h_1a7efcb38c0a6cfe8b7b32c777b5e45c3f" compoundref="NRF24L01_8h" startline="57">NRF24L01_RF24_CRC_16</references>
-        <references refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" compoundref="NRF24L01_8h" startline="125">pipe0_reading_address</references>
+        <location file="src/Wireless/NRF24L01.h" line="156" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="99" bodyend="161"/>
+        <references refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" compoundref="NRF24L01_8h" startline="99">ioInterface</references>
+        <references refid="main_8cpp_1a5de78d73e194146ea0df32a969c98cc0" compoundref="main_8cpp" startline="118">iface</references>
+        <references refid="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" compoundref="NRF24L01_8h" startline="102">NRF24L01_DDR</references>
+        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="104">NRF24L01_CE</references>
+        <references refid="main_8cpp_1af332f65aca07c44deeda884c8f6c353c" compoundref="main_8cpp" startline="47">CE</references>
+        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="105">NRF24L01_CSN</references>
+        <references refid="main_8cpp_1a8df4f3a8a2035df063402ae5f0c1d2f8" compoundref="main_8cpp" startline="48">CSN</references>
+        <references refid="classNRF24L01_1a1feaab910ecff17805f8141fe40028e7" compoundref="NRF24L01_8h" startline="911">txDelay</references>
+        <references refid="classNRF24L01_1a4701641c1e8b3d082deb03f93c84d8c7" compoundref="NRF24L01_8h" startline="107">spi_speed</references>
+        <references refid="classNRF24L01_1a749f38c45c00905b3d8e8c180626bff6" compoundref="NRF24L01_8h" startline="665">failureDetected</references>
+        <references refid="classNRF24L01_1a2f5e84525760899949446db94d225700" compoundref="NRF24L01_8h" startline="110">NRF24L01_CH</references>
+        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="112">NRF24L01_PAYLOAD</references>
+        <references refid="classNRF24L01_1af2e0a88f330c86d0cc6c43180f70ecbd" compoundref="NRF24L01_8h" startline="114">NRF24L01_ACK</references>
+        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="148">dynamic_payloads_enabled</references>
+        <references refid="classNRF24L01_1a10c710f3795c47ebde120ca3d975c891" compoundref="NRF24L01_8h" startline="118">NRF24L01_ENABLEDP0</references>
+        <references refid="classNRF24L01_1a8ebd82a57efbaa5928a56ba6780740de" compoundref="NRF24L01_8h" startline="119">NRF24L01_ENABLEDP1</references>
+        <references refid="classNRF24L01_1aac40f597790cf3a62b382f919f1293ce" compoundref="NRF24L01_8h" startline="120">NRF24L01_ENABLEDP2</references>
+        <references refid="classNRF24L01_1aea0d090c7d6da9b137ce4ce3690535e8" compoundref="NRF24L01_8h" startline="121">NRF24L01_ENABLEDP3</references>
+        <references refid="classNRF24L01_1a4f19e32ed3324724d3478b9f841a2790" compoundref="NRF24L01_8h" startline="122">NRF24L01_ENABLEDP4</references>
+        <references refid="classNRF24L01_1ae77cf1829f80c703e36ef57b6d23e9a9" compoundref="NRF24L01_8h" startline="123">NRF24L01_ENABLEDP5</references>
+        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="126">NRF24L01_ADDRSIZE</references>
+        <references refid="classNRF24L01_1ac798ba6ce52fd4a13eb40ff274818157" compoundref="NRF24L01_8h" startline="139">NRF24L01_RF24_PA</references>
+        <references refid="NRF24L01_8h_1ac7a035ce38201de0975b1cd23851b9c7" compoundref="NRF24L01_8h" startline="43">NRF24L01_RF24_PA_MIN</references>
+        <references refid="classNRF24L01_1a2dc0073a56f6aca86da205dd720fd132" compoundref="NRF24L01_8h" startline="142">NRF24L01_RF24_SPEED</references>
+        <references refid="NRF24L01_8h_1aa0d7169d75941f10e4187369c6d99ae2" compoundref="NRF24L01_8h" startline="51">NRF24L01_RF24_SPEED_1MBPS</references>
+        <references refid="classNRF24L01_1af6a260dd55ee5c2f7de7cfac4e91178d" compoundref="NRF24L01_8h" startline="146">NRF24L01_RF24_CRC</references>
+        <references refid="NRF24L01_8h_1a7efcb38c0a6cfe8b7b32c777b5e45c3f" compoundref="NRF24L01_8h" startline="58">NRF24L01_RF24_CRC_16</references>
+        <references refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" compoundref="NRF24L01_8h" startline="128">pipe0_reading_address</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a2973773d1a158e1cfbf52198f248c548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2424,37 +2430,35 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="159" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="159" bodyend="218"/>
-        <references refid="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" compoundref="NRF24L01_8h" startline="99">NRF24L01_DDR</references>
-        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="102">NRF24L01_CSN</references>
-        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="101">NRF24L01_CE</references>
-        <references refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" compoundref="NRF24L01_8h" startline="989">spi</references>
-        <references refid="classSPI_1a7e28e3328e32b650ead0f7640cee6e81" compoundref="SPI_8cpp" startline="61" endline="77">SPI::Init</references>
-        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1004" endline="1004">CE_LOW</references>
-        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1001" endline="1001">CSN_HIGH</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="165" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="224" bodyend="286"/>
+        <references refid="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" compoundref="NRF24L01_8h" startline="102">NRF24L01_DDR</references>
+        <references refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" compoundref="NRF24L01_8h" startline="105">NRF24L01_CSN</references>
+        <references refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" compoundref="NRF24L01_8h" startline="104">NRF24L01_CE</references>
+        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1010" endline="1010">CE_LOW</references>
+        <references refid="classNRF24L01_1a958fa3e8a0457c0c655b9652ee9dbad4" compoundref="NRF24L01_8h" startline="1007" endline="1007">CSN_HIGH</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a71b3597b405d855e19ef435a215edacc" compoundref="NRF24L01registers_8h" startline="31">NRF24L01_REG_CONFIG</references>
-        <references refid="classNRF24L01_1a0bb209d94b62e2a28af53179af713f3c" compoundref="NRF24L01_8cpp" startline="836" endline="838">setRetries</references>
-        <references refid="classNRF24L01_1a7319961d6048e32546ad5df934bd42d8" compoundref="NRF24L01_8cpp" startline="726" endline="738">setPALevel</references>
-        <references refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aaceab0bfc94c4095e9495b2e49530b623d0d" compoundref="NRF24L01_8h" startline="75">RF24_PA_MAX</references>
-        <references refid="classNRF24L01_1a9db0803c6d87e6ada7febea2240a7b1c" compoundref="NRF24L01_8cpp" startline="745" endline="778">setDataRate</references>
-        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522ad6a241689903e120c99b6963cb98c97c" compoundref="NRF24L01_8h" startline="82">RF24_250KBPS</references>
-        <references refid="classNRF24L01_1a082a99d802a3f2335da94e67cf8440ea" compoundref="NRF24L01_8h" startline="105">p_variant</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a0bb209d94b62e2a28af53179af713f3c" compoundref="NRF24L01_8cpp" startline="909" endline="911">setRetries</references>
+        <references refid="classNRF24L01_1a7319961d6048e32546ad5df934bd42d8" compoundref="NRF24L01_8cpp" startline="799" endline="811">setPALevel</references>
+        <references refid="NRF24L01_8h_1a1e4cd0bea93e6b43422855fb0120aaceab0bfc94c4095e9495b2e49530b623d0d" compoundref="NRF24L01_8h" startline="76">RF24_PA_MAX</references>
+        <references refid="classNRF24L01_1a9db0803c6d87e6ada7febea2240a7b1c" compoundref="NRF24L01_8cpp" startline="818" endline="851">setDataRate</references>
+        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522ad6a241689903e120c99b6963cb98c97c" compoundref="NRF24L01_8h" startline="83">RF24_250KBPS</references>
+        <references refid="classNRF24L01_1a082a99d802a3f2335da94e67cf8440ea" compoundref="NRF24L01_8h" startline="108">p_variant</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a7344c4ea38d1f2296b9163c02e17bd8d" compoundref="NRF24L01registers_8h" startline="37">NRF24L01_REG_RF_SETUP</references>
-        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522afd01f3fd55247a67c0bcfd459fe17fdf" compoundref="NRF24L01_8h" startline="82">RF24_1MBPS</references>
-        <references refid="classNRF24L01_1aceeaa16f91d7c5fd6a429a6adf678bd4" compoundref="NRF24L01_8cpp" startline="604" endline="609">ToggleFeatures</references>
+        <references refid="NRF24L01_8h_1a82745de4aa1251b7561564b3ed1d6522afd01f3fd55247a67c0bcfd459fe17fdf" compoundref="NRF24L01_8h" startline="83">RF24_1MBPS</references>
+        <references refid="classNRF24L01_1aceeaa16f91d7c5fd6a429a6adf678bd4" compoundref="NRF24L01_8cpp" startline="672" endline="679">ToggleFeatures</references>
         <references refid="NRF24L01registers_8h_1a0819cc8bd7ced28454f1753db8151e81" compoundref="NRF24L01registers_8h" startline="55">NRF24L01_REG_FEATURE</references>
         <references refid="NRF24L01registers_8h_1a7be01f5b9fe0d16b38e4957419229a64" compoundref="NRF24L01registers_8h" startline="56">NRF24L01_REG_DYNPD</references>
-        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="145">dynamic_payloads_enabled</references>
+        <references refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" compoundref="NRF24L01_8h" startline="148">dynamic_payloads_enabled</references>
         <references refid="NRF24L01registers_8h_1a0eacea6f02e36fcc6045a073b9cf12a0" compoundref="NRF24L01registers_8h" startline="38">NRF24L01_REG_STATUS</references>
         <references refid="NRF24L01registers_8h_1ab600bb73d205bb30ee182bbdd0fe96c0" compoundref="NRF24L01registers_8h" startline="59">NRF24L01_REG_MASK_RX_DR</references>
         <references refid="NRF24L01registers_8h_1a2e080fce62016b92e7d42519e17e1259" compoundref="NRF24L01registers_8h" startline="60">NRF24L01_REG_MASK_TX_DS</references>
         <references refid="NRF24L01registers_8h_1ac16635ddd6f66d55990cfc526dedbc1a" compoundref="NRF24L01registers_8h" startline="61">NRF24L01_REG_MASK_MAX_RT</references>
-        <references refid="classNRF24L01_1aa8eaf9d5ed604f60a00cd79fed9edad7" compoundref="NRF24L01_8cpp" startline="299" endline="303">setChannel</references>
-        <references refid="classNRF24L01_1a83cfc941bafe563f38e183504ee8533c" compoundref="NRF24L01_8cpp" startline="1145" endline="1148">FlushRx</references>
-        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1150" endline="1154">FlushTx</references>
-        <references refid="classNRF24L01_1a8e184a0a6ca30fbae69c1331a567deda" compoundref="NRF24L01_8cpp" startline="275" endline="288">powerUp</references>
+        <references refid="classNRF24L01_1aa8eaf9d5ed604f60a00cd79fed9edad7" compoundref="NRF24L01_8cpp" startline="367" endline="371">setChannel</references>
+        <references refid="classNRF24L01_1a83cfc941bafe563f38e183504ee8533c" compoundref="NRF24L01_8cpp" startline="1234" endline="1237">FlushRx</references>
+        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1239" endline="1243">FlushTx</references>
+        <references refid="classNRF24L01_1a8e184a0a6ca30fbae69c1331a567deda" compoundref="NRF24L01_8cpp" startline="343" endline="356">powerUp</references>
         <references refid="NRF24L01registers_8h_1aad6c994677c334acb830274b1d955495" compoundref="NRF24L01registers_8h" startline="65">NRF24L01_REG_PRIM_RX</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1aaabd39829998b609c0dc317af4f141b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2475,25 +2479,25 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="175" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="220" bodyend="242"/>
-        <references refid="classNRF24L01_1a8e184a0a6ca30fbae69c1331a567deda" compoundref="NRF24L01_8cpp" startline="275" endline="288">powerUp</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="181" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="288" bodyend="310"/>
+        <references refid="classNRF24L01_1a8e184a0a6ca30fbae69c1331a567deda" compoundref="NRF24L01_8cpp" startline="343" endline="356">powerUp</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a71b3597b405d855e19ef435a215edacc" compoundref="NRF24L01registers_8h" startline="31">NRF24L01_REG_CONFIG</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1aad6c994677c334acb830274b1d955495" compoundref="NRF24L01registers_8h" startline="65">NRF24L01_REG_PRIM_RX</references>
         <references refid="NRF24L01registers_8h_1a0eacea6f02e36fcc6045a073b9cf12a0" compoundref="NRF24L01registers_8h" startline="38">NRF24L01_REG_STATUS</references>
         <references refid="NRF24L01registers_8h_1ab600bb73d205bb30ee182bbdd0fe96c0" compoundref="NRF24L01registers_8h" startline="59">NRF24L01_REG_MASK_RX_DR</references>
         <references refid="NRF24L01registers_8h_1a2e080fce62016b92e7d42519e17e1259" compoundref="NRF24L01registers_8h" startline="60">NRF24L01_REG_MASK_TX_DS</references>
         <references refid="NRF24L01registers_8h_1ac16635ddd6f66d55990cfc526dedbc1a" compoundref="NRF24L01registers_8h" startline="61">NRF24L01_REG_MASK_MAX_RT</references>
-        <references refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" compoundref="NRF24L01_8h" startline="1003" endline="1003">CE_HIGH</references>
-        <references refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" compoundref="NRF24L01_8h" startline="125">pipe0_reading_address</references>
-        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1091" endline="1100">WriteRegisters</references>
+        <references refid="classNRF24L01_1a85274c10cbe6317796a209913bfb0253" compoundref="NRF24L01_8h" startline="1009" endline="1009">CE_HIGH</references>
+        <references refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" compoundref="NRF24L01_8h" startline="128">pipe0_reading_address</references>
+        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1172" endline="1183">WriteRegisters</references>
         <references refid="NRF24L01registers_8h_1afcaaf2d19fb6b9ebd0b122d173c13b88" compoundref="NRF24L01registers_8h" startline="41">NRF24L01_REG_RX_ADDR_P0</references>
-        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="123">NRF24L01_ADDRSIZE</references>
-        <references refid="classNRF24L01_1a7214eaa3fcd3b6576d8f290e6ab71955" compoundref="NRF24L01_8cpp" startline="599" endline="601">closeReadingPipe</references>
+        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="126">NRF24L01_ADDRSIZE</references>
+        <references refid="classNRF24L01_1a7214eaa3fcd3b6576d8f290e6ab71955" compoundref="NRF24L01_8cpp" startline="667" endline="669">closeReadingPipe</references>
         <references refid="NRF24L01registers_8h_1a0819cc8bd7ced28454f1753db8151e81" compoundref="NRF24L01registers_8h" startline="55">NRF24L01_REG_FEATURE</references>
         <references refid="NRF24L01registers_8h_1a4dc0921a9e237248b4f6d51b09832a2b" compoundref="NRF24L01registers_8h" startline="32">NRF24L01_REG_EN_AA</references>
-        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1150" endline="1154">FlushTx</references>
+        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1239" endline="1243">FlushTx</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a6ad13189b732f237ac148c659ddf6b01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2508,14 +2512,14 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="185" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="247" bodyend="264"/>
-        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1004" endline="1004">CE_LOW</references>
-        <references refid="classNRF24L01_1a1feaab910ecff17805f8141fe40028e7" compoundref="NRF24L01_8h" startline="905">txDelay</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="191" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="315" bodyend="332"/>
+        <references refid="classNRF24L01_1aa5e261363986c590c90e7cb2adc2d75d" compoundref="NRF24L01_8h" startline="1010" endline="1010">CE_LOW</references>
+        <references refid="classNRF24L01_1a1feaab910ecff17805f8141fe40028e7" compoundref="NRF24L01_8h" startline="911">txDelay</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
         <references refid="NRF24L01registers_8h_1a0819cc8bd7ced28454f1753db8151e81" compoundref="NRF24L01registers_8h" startline="55">NRF24L01_REG_FEATURE</references>
         <references refid="NRF24L01registers_8h_1a4dc0921a9e237248b4f6d51b09832a2b" compoundref="NRF24L01registers_8h" startline="32">NRF24L01_REG_EN_AA</references>
-        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1150" endline="1154">FlushTx</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1ab40eeb5ca2337c5f15992f29ee3b5b18" compoundref="NRF24L01_8cpp" startline="1239" endline="1243">FlushTx</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a71b3597b405d855e19ef435a215edacc" compoundref="NRF24L01registers_8h" startline="31">NRF24L01_REG_CONFIG</references>
         <references refid="NRF24L01registers_8h_1aad6c994677c334acb830274b1d955495" compoundref="NRF24L01registers_8h" startline="65">NRF24L01_REG_PRIM_RX</references>
         <references refid="NRF24L01registers_8h_1a1ece6e2d8eda4cbda7576562213fe72a" compoundref="NRF24L01registers_8h" startline="33">NRF24L01_REG_EN_RXADDR</references>
@@ -2535,7 +2539,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="195" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1035" bodyend="1037"/>
+        <location file="src/Wireless/NRF24L01.h" line="201" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="1110" bodyend="1112"/>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a60ed6c6e072a1f41ca560546745ec6da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2575,9 +2579,9 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="210" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="685" bodyend="693"/>
-        <references refid="classNRF24L01_1ad733911b261f73964817dad526745716" compoundref="NRF24L01_8cpp" startline="1123" endline="1141">ReadPayload</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <location file="src/Wireless/NRF24L01.h" line="216" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="758" bodyend="766"/>
+        <references refid="classNRF24L01_1ad733911b261f73964817dad526745716" compoundref="NRF24L01_8cpp" startline="1209" endline="1230">ReadPayload</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1a0eacea6f02e36fcc6045a073b9cf12a0" compoundref="NRF24L01registers_8h" startline="38">NRF24L01_REG_STATUS</references>
         <references refid="NRF24L01registers_8h_1acb501a3032174ca687b876d73858bed1" compoundref="NRF24L01registers_8h" startline="85">NRF24L01_REG_RX_DR</references>
         <references refid="NRF24L01registers_8h_1ace17aac70424ae1d91ac38290a85ae86" compoundref="NRF24L01registers_8h" startline="87">NRF24L01_REG_MAX_RT</references>
@@ -2620,7 +2624,7 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="234" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="866" bodyend="868"/>
+        <location file="src/Wireless/NRF24L01.h" line="240" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="939" bodyend="941"/>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1ad64a887cae746be5ca43cf08445feed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2652,14 +2656,14 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="259" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="503" bodyend="514"/>
-        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1091" endline="1100">WriteRegisters</references>
+        <location file="src/Wireless/NRF24L01.h" line="265" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="571" bodyend="582"/>
+        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1172" endline="1183">WriteRegisters</references>
         <references refid="NRF24L01registers_8h_1afcaaf2d19fb6b9ebd0b122d173c13b88" compoundref="NRF24L01registers_8h" startline="41">NRF24L01_REG_RX_ADDR_P0</references>
-        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="123">NRF24L01_ADDRSIZE</references>
+        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="126">NRF24L01_ADDRSIZE</references>
         <references refid="NRF24L01registers_8h_1abbc9a49c2fa8649b95faaca41dda30a0" compoundref="NRF24L01registers_8h" startline="47">NRF24L01_REG_TX_ADDR</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
         <references refid="NRF24L01registers_8h_1ae87408247e1b981750056d2b07817982" compoundref="NRF24L01registers_8h" startline="48">NRF24L01_REG_RX_PW_P0</references>
-        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="109">NRF24L01_PAYLOAD</references>
+        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="112">NRF24L01_PAYLOAD</references>
       </memberdef>
       <memberdef kind="function" id="classNRF24L01_1a9b458f77f6ae6c42f330710e703dd847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2703,16 +2707,16 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Wireless/NRF24L01.h" line="287" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="552" bodyend="574"/>
-        <references refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" compoundref="NRF24L01_8h" startline="125">pipe0_reading_address</references>
-        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="123">NRF24L01_ADDRSIZE</references>
-        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1091" endline="1100">WriteRegisters</references>
-        <references refid="NRF24L01_8cpp_1abb559312d5695b2e999a6f9c1c70f43e" compoundref="NRF24L01_8cpp" startline="531">child_pipe</references>
-        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1081" endline="1088">WriteRegister</references>
-        <references refid="NRF24L01_8cpp_1a7f2a8ffadcb84a16a11236e320dec823" compoundref="NRF24L01_8cpp" startline="535">child_payload_size</references>
-        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="109">NRF24L01_PAYLOAD</references>
+        <location file="src/Wireless/NRF24L01.h" line="293" column="1" bodyfile="src/Wireless/NRF24L01.cpp" bodystart="620" bodyend="642"/>
+        <references refid="classNRF24L01_1af836ff0a915587aa40b5eabe4101ea4c" compoundref="NRF24L01_8h" startline="128">pipe0_reading_address</references>
+        <references refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" compoundref="NRF24L01_8h" startline="126">NRF24L01_ADDRSIZE</references>
+        <references refid="classNRF24L01_1ac7d69c51eca87f16fa3a30b5e8aa85cb" compoundref="NRF24L01_8cpp" startline="1172" endline="1183">WriteRegisters</references>
+        <references refid="NRF24L01_8cpp_1abb559312d5695b2e999a6f9c1c70f43e" compoundref="NRF24L01_8cpp" startline="599">child_pipe</references>
+        <references refid="classNRF24L01_1abfaaa54aff7ce60c4c844dd540c47af5" compoundref="NRF24L01_8cpp" startline="1160" endline="1169">WriteRegister</references>
+        <references refid="NRF24L01_8cpp_1a7f2a8ffadcb84a16a11236e320dec823" compoundref="NRF24L01_8cpp" startline="603">child_payload_size</references>
+        <references refid="classNRF24L01_1a6f035e7c49d8ed5e1ab84242cef0e9be" compoundref="NRF24L01_8h" startline="112">NRF24L01_PAYLOAD</references>
         <references refid="NRF24L01registers_8h_1a1ece6e2d8eda4cbda7576562213fe72a" compoundref="NRF24L01registers_8h" startline="33">NRF24L01_REG_EN_RXADDR</references>
-        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1056" endline="1064">ReadRegister</references>
+        <references refid="classNRF24L01_1a6fc7da02296e9f91908e89438ba67901" compoundref="NRF24L01_8cpp" startline="1131" endline="1141">ReadRegister</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -2720,19 +2724,40 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
     <detaileddescription>
 <para>Driver for nRF24L01(+) 2.4GHz Wireless Transceiver </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="89">
+      <node id="133">
         <label>NRF24L01</label>
         <link refid="classNRF24L01"/>
-        <childnode refid="90" relation="usage">
+        <childnode refid="134" relation="usage">
+          <edgelabel>ioInterface</edgelabel>
+        </childnode>
+      </node>
+      <node id="134">
+        <label>IO</label>
+        <link refid="classIO"/>
+        <childnode refid="135" relation="usage">
+          <edgelabel>usart</edgelabel>
+        </childnode>
+        <childnode refid="136" relation="usage">
+          <edgelabel>i2c</edgelabel>
+        </childnode>
+        <childnode refid="137" relation="usage">
           <edgelabel>spi</edgelabel>
         </childnode>
       </node>
-      <node id="90">
+      <node id="136">
+        <label>I2C</label>
+        <link refid="classI2C"/>
+      </node>
+      <node id="137">
         <label>SPI</label>
         <link refid="classSPI"/>
       </node>
+      <node id="135">
+        <label>USART</label>
+        <link refid="classUSART"/>
+      </node>
     </collaborationgraph>
-    <location file="src/Wireless/NRF24L01.h" line="95" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="95" bodyend="1108"/>
+    <location file="src/Wireless/NRF24L01.h" line="96" column="1" bodyfile="src/Wireless/NRF24L01.h" bodystart="96" bodyend="1114"/>
     <listofallmembers>
       <member refid="classNRF24L01_1ad796eb9996a6b528534d1ac2ae2d37cd" prot="private" virt="non-virtual"><scope>NRF24L01</scope><name>__attribute__</name></member>
       <member refid="classNRF24L01_1ab368039cf5448f0ff5d489563d530c7b" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>available</name></member>
@@ -2761,12 +2786,13 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
       <member refid="classNRF24L01_1a4a7f48ca92e14baabd8be1c0831e8c2f" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>getPayloadSize</name></member>
       <member refid="classNRF24L01_1a95faa729cb8245516e9eb0248c6d9b0f" prot="private" virt="non-virtual"><scope>NRF24L01</scope><name>getStatus</name></member>
       <member refid="classNRF24L01_1a2973773d1a158e1cfbf52198f248c548" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>Init</name></member>
+      <member refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" prot="private" virt="non-virtual"><scope>NRF24L01</scope><name>ioInterface</name></member>
       <member refid="classNRF24L01_1a99aae87d62d5097447305d66a0b3281d" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>isAckPayloadAvailable</name></member>
       <member refid="classNRF24L01_1ad05024c9586c1dc76c2fd95d54ce6b4c" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>isPVariant</name></member>
       <member refid="classNRF24L01_1aaddabe35ed60f03a2fb2fb475a3cafb5" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>isValid</name></member>
       <member refid="classNRF24L01_1ad23d4111c3a26d18db51eb72a5491dbb" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>maskIRQ</name></member>
       <member refid="classNRF24L01_1ad3e6263e0afaa974637d1450b6c8cb37" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>NRF24L01</name></member>
-      <member refid="classNRF24L01_1a8e2cc2ca751ff3bd4ea351bd2fcea93e" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>NRF24L01</name></member>
+      <member refid="classNRF24L01_1a8e8e6754c34cf6e6fed554a6e26c8a4b" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>NRF24L01</name></member>
       <member refid="classNRF24L01_1af2e0a88f330c86d0cc6c43180f70ecbd" prot="private" virt="non-virtual"><scope>NRF24L01</scope><name>NRF24L01_ACK</name></member>
       <member refid="classNRF24L01_1a0b5c60487c6b715b9f17f968f7958d93" prot="private" virt="non-virtual"><scope>NRF24L01</scope><name>NRF24L01_ADDRSIZE</name></member>
       <member refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" prot="private" virt="non-virtual"><scope>NRF24L01</scope><name>NRF24L01_CE</name></member>
@@ -2807,7 +2833,6 @@ Addresses are 40-bit hex values, e.g.:</para><para><programlisting><codeline><hi
       <member refid="classNRF24L01_1a7319961d6048e32546ad5df934bd42d8" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>setPALevel</name></member>
       <member refid="classNRF24L01_1abe5983a57d0d3bd77508e5345774c890" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>setPayloadSize</name></member>
       <member refid="classNRF24L01_1a0bb209d94b62e2a28af53179af713f3c" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>setRetries</name></member>
-      <member refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>spi</name></member>
       <member refid="classNRF24L01_1a4701641c1e8b3d082deb03f93c84d8c7" prot="private" virt="non-virtual"><scope>NRF24L01</scope><name>spi_speed</name></member>
       <member refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" prot="private" virt="non-virtual"><scope>NRF24L01</scope><name>spiTrans</name></member>
       <member refid="classNRF24L01_1ab1ca9025a8740bc38ad5dd7a427e2d4f" prot="public" virt="non-virtual"><scope>NRF24L01</scope><name>startFastWrite</name></member>

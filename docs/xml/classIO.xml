@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classIO" kind="class" language="C++" prot="public">
+    <compoundname>IO</compoundname>
+    <includes refid="IO_8hpp" local="no">IO.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classIO_1a441eb28753ed241386507df53bacdaad" prot="private" static="no" mutable="no">
+        <type><ref refid="classSPI" kindref="compound">SPI</ref></type>
+        <definition>SPI IO::spi</definition>
+        <argsstring></argsstring>
+        <name>spi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="37" column="1" bodyfile="src/IO/IO.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classIO_1a15d36e6764d393254ad99f8d7ec25f51" prot="private" static="no" mutable="no">
+        <type><ref refid="classUSART" kindref="compound">USART</ref></type>
+        <definition>USART IO::usart</definition>
+        <argsstring></argsstring>
+        <name>usart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="38" column="1" bodyfile="src/IO/IO.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classIO_1a6dc46e51d3706946a6a13dd8c94cbf60" prot="private" static="no" mutable="no">
+        <type><ref refid="classI2C" kindref="compound">I2C</ref></type>
+        <definition>I2C IO::i2c</definition>
+        <argsstring></argsstring>
+        <name>i2c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="39" column="1" bodyfile="src/IO/IO.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classIO_1a041a386e8e27fe7486090449d2749ea2" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t IO::uartRX_flag</definition>
+        <argsstring></argsstring>
+        <name>uartRX_flag</name>
+        <briefdescription>
+<para>Flag received UART message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="41" column="1" bodyfile="src/IO/IO.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classIO_1a49b27a2ee79bce0de4e3ef163cbebd30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IO::IO</definition>
+        <argsstring>()</argsstring>
+        <name>IO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="50" column="1" bodyfile="src/IO/IO.cpp" bodystart="30" bodyend="40"/>
+        <references refid="classIO_1a441eb28753ed241386507df53bacdaad" compoundref="IO_8hpp" startline="37">spi</references>
+        <references refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" compoundref="IO_8hpp" startline="38">usart</references>
+        <references refid="classIO_1a6dc46e51d3706946a6a13dd8c94cbf60" compoundref="IO_8hpp" startline="39">i2c</references>
+      </memberdef>
+      <memberdef kind="function" id="classIO_1ad7933ecdc01630b62be377ab873fea21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IO::USART_SetRxFlagTrue</definition>
+        <argsstring>()</argsstring>
+        <name>USART_SetRxFlagTrue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="52" column="1" bodyfile="src/IO/IO.cpp" bodystart="43" bodyend="45"/>
+        <references refid="classIO_1a041a386e8e27fe7486090449d2749ea2" compoundref="IO_8hpp" startline="41">uartRX_flag</references>
+      </memberdef>
+      <memberdef kind="function" id="classIO_1a69cddfa296c916c81cf7480c6c7f9139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IO::USART_SetRxFlagFalse</definition>
+        <argsstring>()</argsstring>
+        <name>USART_SetRxFlagFalse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="54" column="1" bodyfile="src/IO/IO.cpp" bodystart="47" bodyend="49"/>
+        <references refid="classIO_1a041a386e8e27fe7486090449d2749ea2" compoundref="IO_8hpp" startline="41">uartRX_flag</references>
+      </memberdef>
+      <memberdef kind="function" id="classIO_1af8171de8979d317fec0a187ba087a626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IO::USART_GetRxFlag</definition>
+        <argsstring>()</argsstring>
+        <name>USART_GetRxFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="56" column="1" bodyfile="src/IO/IO.cpp" bodystart="51" bodyend="53"/>
+        <references refid="classIO_1a041a386e8e27fe7486090449d2749ea2" compoundref="IO_8hpp" startline="41">uartRX_flag</references>
+      </memberdef>
+      <memberdef kind="function" id="classIO_1a240a25927946ea2994e271eb56948362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IO::USART_writeString</definition>
+        <argsstring>(char *str)</argsstring>
+        <name>USART_writeString</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Writes String to interface. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="63" column="1" bodyfile="src/IO/IO.cpp" bodystart="71" bodyend="74"/>
+        <references refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" compoundref="IO_8hpp" startline="38">usart</references>
+        <references refid="classUSART_1a249b0d6967ead56f39448d4954835a27" compoundref="USART_8cpp" startline="106" endline="112">USART::writeString</references>
+      </memberdef>
+      <memberdef kind="function" id="classIO_1a1febbd3f3b0a0a482226ee1659f2f7d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IO::USART_readString</definition>
+        <argsstring>(char *myString, uint8_t maxLength)</argsstring>
+        <name>USART_readString</name>
+        <param>
+          <type>char *</type>
+          <declname>myString</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>maxLength</declname>
+        </param>
+        <briefdescription>
+<para>Reads incoming string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">myString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character array </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">maxLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum length of string to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="71" column="1" bodyfile="src/IO/IO.cpp" bodystart="80" bodyend="88"/>
+        <references refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" compoundref="IO_8hpp" startline="38">usart</references>
+        <references refid="classUSART_1a7e56b380e59b576bbac13e60ca9ba829" compoundref="USART_8cpp" startline="115" endline="128">USART::readString</references>
+      </memberdef>
+      <memberdef kind="function" id="classIO_1a00d8980cbb7e31f0583a65305dacff9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IO::USART_readString</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>USART_readString</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Reads incoming string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Reads incoming string until a new line character <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="78" column="1" bodyfile="src/IO/IO.cpp" bodystart="76" bodyend="78"/>
+        <references refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" compoundref="IO_8hpp" startline="38">usart</references>
+        <references refid="classUSART_1a7e56b380e59b576bbac13e60ca9ba829" compoundref="USART_8cpp" startline="115" endline="128">USART::readString</references>
+      </memberdef>
+      <memberdef kind="function" id="classIO_1a04360979dfc7e8960abb4b7659257b68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IO::USART_Flush</definition>
+        <argsstring>(void)</argsstring>
+        <name>USART_Flush</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Flush <ref refid="classUSART" kindref="compound">USART</ref> buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="84" column="1" bodyfile="src/IO/IO.cpp" bodystart="90" bodyend="92"/>
+        <references refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" compoundref="IO_8hpp" startline="38">usart</references>
+        <references refid="classUSART_1abad4151d072782e70255f999a1451199" compoundref="USART_8cpp" startline="97" endline="100">USART::USART0_Flush</references>
+      </memberdef>
+      <memberdef kind="function" id="classIO_1acf88aa0feccc7ba9526c232d36e368b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t IO::SPI_WriteReadbyte</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>SPI_WriteReadbyte</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Write and Read one byte. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Databyte to write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Byte </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="92" column="1" bodyfile="src/IO/IO.cpp" bodystart="94" bodyend="98"/>
+        <references refid="classIO_1a441eb28753ed241386507df53bacdaad" compoundref="IO_8hpp" startline="37">spi</references>
+        <references refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" compoundref="SPI_8cpp" startline="82" endline="86">SPI::WriteReadbyte</references>
+      </memberdef>
+      <memberdef kind="function" id="classIO_1add6f3bdf0120b0d63d7b48a72e8edc1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IO::InitInterfaces</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitInterfaces</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/IO.hpp" line="97" column="1" bodyfile="src/IO/IO.cpp" bodystart="56" bodyend="68"/>
+        <references refid="classIO_1a441eb28753ed241386507df53bacdaad" compoundref="IO_8hpp" startline="37">spi</references>
+        <references refid="classSPI_1a7e28e3328e32b650ead0f7640cee6e81" compoundref="SPI_8cpp" startline="64" endline="80">SPI::Init</references>
+        <references refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" compoundref="IO_8hpp" startline="38">usart</references>
+        <references refid="classUSART_1a5f8bbc3788153e13d94ece254f8ee2e7" compoundref="USART_8cpp" startline="47" endline="72">USART::initUART</references>
+        <references refid="classIO_1a6dc46e51d3706946a6a13dd8c94cbf60" compoundref="IO_8hpp" startline="39">i2c</references>
+        <references refid="classI2C_1ab6cd0165be5e59dfe57976f1ae4325ec" compoundref="I2C_8cpp" startline="37" endline="40">I2C::Init</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="116">
+        <label>IO</label>
+        <link refid="classIO"/>
+        <childnode refid="117" relation="usage">
+          <edgelabel>usart</edgelabel>
+        </childnode>
+        <childnode refid="118" relation="usage">
+          <edgelabel>i2c</edgelabel>
+        </childnode>
+        <childnode refid="119" relation="usage">
+          <edgelabel>spi</edgelabel>
+        </childnode>
+      </node>
+      <node id="118">
+        <label>I2C</label>
+        <link refid="classI2C"/>
+      </node>
+      <node id="119">
+        <label>SPI</label>
+        <link refid="classSPI"/>
+      </node>
+      <node id="117">
+        <label>USART</label>
+        <link refid="classUSART"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/IO/IO.hpp" line="34" column="1" bodyfile="src/IO/IO.hpp" bodystart="34" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classIO_1a6dc46e51d3706946a6a13dd8c94cbf60" prot="private" virt="non-virtual"><scope>IO</scope><name>i2c</name></member>
+      <member refid="classIO_1add6f3bdf0120b0d63d7b48a72e8edc1e" prot="public" virt="non-virtual"><scope>IO</scope><name>InitInterfaces</name></member>
+      <member refid="classIO_1a49b27a2ee79bce0de4e3ef163cbebd30" prot="public" virt="non-virtual"><scope>IO</scope><name>IO</name></member>
+      <member refid="classIO_1a441eb28753ed241386507df53bacdaad" prot="private" virt="non-virtual"><scope>IO</scope><name>spi</name></member>
+      <member refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" prot="public" virt="non-virtual"><scope>IO</scope><name>SPI_WriteReadbyte</name></member>
+      <member refid="classIO_1a041a386e8e27fe7486090449d2749ea2" prot="private" virt="non-virtual"><scope>IO</scope><name>uartRX_flag</name></member>
+      <member refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" prot="private" virt="non-virtual"><scope>IO</scope><name>usart</name></member>
+      <member refid="classIO_1a04360979dfc7e8960abb4b7659257b68" prot="public" virt="non-virtual"><scope>IO</scope><name>USART_Flush</name></member>
+      <member refid="classIO_1af8171de8979d317fec0a187ba087a626" prot="public" virt="non-virtual"><scope>IO</scope><name>USART_GetRxFlag</name></member>
+      <member refid="classIO_1a1febbd3f3b0a0a482226ee1659f2f7d1" prot="public" virt="non-virtual"><scope>IO</scope><name>USART_readString</name></member>
+      <member refid="classIO_1a00d8980cbb7e31f0583a65305dacff9e" prot="public" virt="non-virtual"><scope>IO</scope><name>USART_readString</name></member>
+      <member refid="classIO_1a69cddfa296c916c81cf7480c6c7f9139" prot="public" virt="non-virtual"><scope>IO</scope><name>USART_SetRxFlagFalse</name></member>
+      <member refid="classIO_1ad7933ecdc01630b62be377ab873fea21" prot="public" virt="non-virtual"><scope>IO</scope><name>USART_SetRxFlagTrue</name></member>
+      <member refid="classIO_1a240a25927946ea2994e271eb56948362" prot="public" virt="non-virtual"><scope>IO</scope><name>USART_writeString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

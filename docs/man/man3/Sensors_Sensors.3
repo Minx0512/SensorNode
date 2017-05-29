@@ -1,0 +1,153 @@
+.TH "Sensors::Sensors" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Sensors::Sensors \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Sensors\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSensors\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitSensors\fP (void)"
+.br
+.ti -1c
+.RI "void \fBMV_SetMovementTrue\fP ()"
+.br
+.RI "\fISet movement flag\&. \fP"
+.ti -1c
+.RI "void \fBMV_SetMovementFalse\fP ()"
+.br
+.RI "\fISet movement flag\&. \fP"
+.ti -1c
+.RI "bool \fBMV_GetMovement\fP ()"
+.br
+.RI "\fIGet movement\&. \fP"
+.ti -1c
+.RI "void \fBPR_GetSensorValueString\fP (char *string)"
+.br
+.RI "\fIGet sensor value\&. \fP"
+.ti -1c
+.RI "void \fBDHT22_GetSensorValueString\fP (char *string)"
+.br
+.RI "\fIGet sensor value\&. \fP"
+.ti -1c
+.RI "void \fBDS18B20_GetMACString\fP (char *MACStringOut)"
+.br
+.RI "\fIGet MAC addresses from MACString\&. \fP"
+.ti -1c
+.RI "void \fBDS18B20_GetSensorValueString\fP (char *string)"
+.br
+.RI "\fIGet xml style sensor string\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDHT22\fP \fBdht22\fP"
+.br
+.ti -1c
+.RI "\fBDS18B20\fP \fBds18b20\fP"
+.br
+.ti -1c
+.RI "\fBPhotoresistor\fP \fBpr\fP"
+.br
+.ti -1c
+.RI "bool \fBmovement\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Sensors::Sensors::Sensors ()"
+< Create new \fBDS18B20\fP object connected to pin PD6
+.PP
+< Create new \fBDHT22\fP object connected to pin PD7
+.PP
+< Create new Photoresitor object connected to the analog output 0x00 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Sensors::Sensors::DHT22_GetSensorValueString (char * string)"
+
+.PP
+Get sensor value\&. Returns a character array with the average Sensor value of 1000 measurements and adds a | to the end of it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+
+.SS "void Sensors::Sensors::DS18B20_GetMACString (char * MACStringOut)"
+
+.PP
+Get MAC addresses from MACString\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIMACStringOut\fP Character array of MAC addresses 
+.RE
+.PP
+
+.SS "void Sensors::Sensors::DS18B20_GetSensorValueString (char * string)"
+
+.PP
+Get xml style sensor string\&. Puts out one string with the temperature values 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP XML style sensor string 
+.RE
+.PP
+
+.SS "void Sensors::Sensors::InitSensors (void)"
+
+.SS "bool Sensors::Sensors::MV_GetMovement ()"
+
+.PP
+Get movement\&. Returns true or false depending if movement was detected or not\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "void Sensors::Sensors::MV_SetMovementFalse ()"
+
+.PP
+Set movement flag\&. Reset movement flag to false\&.\&. 
+.SS "void Sensors::Sensors::MV_SetMovementTrue ()"
+
+.PP
+Set movement flag\&. Set movement flag to true 
+.SS "void Sensors::Sensors::PR_GetSensorValueString (char * string)"
+
+.PP
+Get sensor value\&. Returns a character array with the average Sensor value of 1000 measurements and adds a | to the end of it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDHT22\fP Sensors::Sensors::dht22\fC [private]\fP"
+
+.SS "\fBDS18B20\fP Sensors::Sensors::ds18b20\fC [private]\fP"
+
+.SS "bool Sensors::Sensors::movement\fC [private]\fP"
+
+.SS "\fBPhotoresistor\fP Sensors::Sensors::pr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

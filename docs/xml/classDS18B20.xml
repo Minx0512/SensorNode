@@ -266,7 +266,7 @@
         <briefdescription>
 <para>Get xml style sensor string. </para>        </briefdescription>
         <detaileddescription>
-<para>Puts out one string with MAC addresses and their temperature values <parameterlist kind="param"><parameteritem>
+<para>Puts out one string with the temperature values <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="out">string</parametername>
 </parameternamelist>

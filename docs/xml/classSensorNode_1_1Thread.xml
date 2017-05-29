@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classSensorNode_1_1Thread" kind="class" language="Python" prot="public">
+    <compoundname>SensorNode::Thread</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Thread</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSensorNode_1_1Thread_1aa4c8b015e0df8e9df49892e89fdf13dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.Thread.__init__</definition>
+        <argsstring>(self, t, args)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="19" column="1" bodyfile="Python/SensorNode.py" bodystart="19" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="168">
+        <label>SensorNode.Thread</label>
+        <link refid="classSensorNode_1_1Thread"/>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>threading::Thread</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="170">
+        <label>SensorNode.Thread</label>
+        <link refid="classSensorNode_1_1Thread"/>
+        <childnode refid="171" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>threading::Thread</label>
+      </node>
+    </collaborationgraph>
+    <location file="Python/SensorNode.py" line="18" column="1" bodyfile="Python/SensorNode.py" bodystart="18" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classSensorNode_1_1Thread_1aa4c8b015e0df8e9df49892e89fdf13dd" prot="public" virt="non-virtual"><scope>SensorNode::Thread</scope><name>__init__</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

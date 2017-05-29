@@ -3,48 +3,62 @@
   <compounddef id="SPI_8h" kind="file" language="C++">
     <compoundname>SPI.h</compoundname>
     <includes local="no">avr/io.h</includes>
+    <includedby refid="IO_8hpp" local="yes">src/IO/IO.hpp</includedby>
+    <includedby refid="IO_8cpp" local="yes">src/IO/IO.cpp</includedby>
     <includedby refid="SPI_8cpp" local="yes">src/IO/SPI.cpp</includedby>
-    <includedby refid="NRF24L01_8h" local="yes">src/Wireless/NRF24L01.h</includedby>
-    <includedby refid="NRF24L01_8cpp" local="yes">src/Wireless/NRF24L01.cpp</includedby>
     <incdepgraph>
-      <node id="192">
+      <node id="322">
         <label>src/IO/SPI.h</label>
         <link refid="SPI.h"/>
-        <childnode refid="193" relation="include">
+        <childnode refid="323" relation="include">
         </childnode>
       </node>
-      <node id="193">
+      <node id="323">
         <label>avr/io.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="197">
+      <node id="327">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="196">
+      <node id="325">
+        <label>src/IO/IO.hpp</label>
+        <link refid="IO_8hpp"/>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+      </node>
+      <node id="328">
         <label>src/Wireless/NRF24L01.h</label>
         <link refid="NRF24L01_8h"/>
-        <childnode refid="197" relation="include">
+        <childnode refid="327" relation="include">
         </childnode>
-        <childnode refid="198" relation="include">
+        <childnode refid="329" relation="include">
         </childnode>
       </node>
-      <node id="194">
+      <node id="324">
         <label>src/IO/SPI.h</label>
         <link refid="SPI.h"/>
-        <childnode refid="195" relation="include">
+        <childnode refid="325" relation="include">
         </childnode>
-        <childnode refid="196" relation="include">
+        <childnode refid="326" relation="include">
         </childnode>
-        <childnode refid="198" relation="include">
+        <childnode refid="330" relation="include">
         </childnode>
       </node>
-      <node id="195">
+      <node id="326">
+        <label>src/IO/IO.cpp</label>
+        <link refid="IO_8cpp"/>
+      </node>
+      <node id="330">
         <label>src/IO/SPI.cpp</label>
         <link refid="SPI_8cpp"/>
       </node>
-      <node id="198">
+      <node id="329">
         <label>src/Wireless/NRF24L01.cpp</label>
         <link refid="NRF24L01_8cpp"/>
       </node>
@@ -62,50 +76,53 @@
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"></codeline>
-<codeline lineno="31" refid="classSPI" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSPI" kindref="compound">SPI</ref><sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//namespace<sp/>SPI<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"></codeline>
+<codeline lineno="32" refid="classSPI" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSPI" kindref="compound">SPI</ref><sp/>{</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//spi<sp/>ports</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" kindref="member">SPI_DDR</ref>;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//volatile<sp/>uint8_t*<sp/>SPI_PORT;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="classSPI_1a6fefdb147a2789fe10efb13f8100235c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1a6fefdb147a2789fe10efb13f8100235c" kindref="member">SPI_MISO</ref>;</highlight></codeline>
-<codeline lineno="38" refid="classSPI_1a10159404dbabef20333fe73f69a3fca6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1a10159404dbabef20333fe73f69a3fca6" kindref="member">SPI_MOSI</ref>;</highlight></codeline>
-<codeline lineno="39" refid="classSPI_1ad9ff914a9831b004b1f8fa5368558e01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1ad9ff914a9831b004b1f8fa5368558e01" kindref="member">SPI_SCK</ref>;</highlight></codeline>
-<codeline lineno="40" refid="classSPI_1ad4cb7d5cd46647baf68bb98a0e06e2aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1ad4cb7d5cd46647baf68bb98a0e06e2aa" kindref="member">SPI_SS</ref>;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//spi<sp/>ports</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="classSPI_1a5dca744360bf2b10d74ab512f2fb71ea" kindref="member">SPI_DDR</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//volatile<sp/>uint8_t*<sp/>SPI_PORT;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classSPI_1a6fefdb147a2789fe10efb13f8100235c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1a6fefdb147a2789fe10efb13f8100235c" kindref="member">SPI_MISO</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classSPI_1a10159404dbabef20333fe73f69a3fca6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1a10159404dbabef20333fe73f69a3fca6" kindref="member">SPI_MOSI</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classSPI_1ad9ff914a9831b004b1f8fa5368558e01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1ad9ff914a9831b004b1f8fa5368558e01" kindref="member">SPI_SCK</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classSPI_1ad4cb7d5cd46647baf68bb98a0e06e2aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1ad4cb7d5cd46647baf68bb98a0e06e2aa" kindref="member">SPI_SS</ref>;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSPI_1a2ba081c29fbdecc704c6bf00b24d5205" kindref="member">SPI</ref>();</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSPI_1a2ba081c29fbdecc704c6bf00b24d5205" kindref="member">SPI</ref>();</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSPI_1a2ba081c29fbdecc704c6bf00b24d5205" kindref="member">SPI</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;DDR,uint8_t<sp/>MISO,<sp/>uint8_t<sp/>MOSI,uint8_t<sp/>SCK,uint8_t<sp/>SS);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSPI_1a7e28e3328e32b650ead0f7640cee6e81" kindref="member">Init</ref>();</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" kindref="member">WriteReadbyte</ref>(uint8_t<sp/>data);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSPI_1a2ba081c29fbdecc704c6bf00b24d5205" kindref="member">SPI</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;DDR,uint8_t<sp/>MISO,<sp/>uint8_t<sp/>MOSI,uint8_t<sp/>SCK,uint8_t<sp/>SS);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSPI_1a7e28e3328e32b650ead0f7640cee6e81" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" kindref="member">WriteReadbyte</ref>(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SPI_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SPI_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="src/IO/SPI.h"/>
   </compounddef>

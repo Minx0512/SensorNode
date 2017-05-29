@@ -13,6 +13,8 @@ class ReadSensor:
      self.baudrate = bdrate   
      self.nodeMAC = ""
      self.updateTime = 1
+     self.dataValues = []
+     self.itemNames = []
      self.err = 0
      self.signal = 1
      self.cmdID = 0
@@ -23,7 +25,7 @@ class ReadSensor:
      self.respMask = ""
      self.interpResp = []
      self.availableSensors = []
-     self.cmdIDs = ["20","31","32","33","34","35","36"]
+     #self.cmdIDs = ["20","31","32","33","34","35","36"]
      self.__InterpretResponse()
     
     

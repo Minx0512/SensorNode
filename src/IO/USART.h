@@ -50,6 +50,9 @@
 
 #define RX_BUFF			64	/*!< Receive buffer */
 
+
+//namespace USART {
+
 //! USART class definition
 /*!
  * Defines methods for accessing  the USART interface
@@ -177,5 +180,7 @@ private:
 
 };
 //extern USART uart;
+//}
+
 
 #endif /* USART_H_ */

@@ -4,7 +4,7 @@
     <compoundname>md_src_README</compoundname>
     <title>SensorNode</title>
     <detaileddescription>
-<para>A little private project for a sensor node based on the ATmega328P. The main node is connected to the serial interface of a Raspberry Pi on which an openHab server is running. A nRF24L01+ Transceiver module on the SPI-bus of the ATmega328P serves for communication to other nodes. The main node has 2x <ref refid="classDS18B20" kindref="compound">DS18B20</ref> temperature sensors, 1 motion sensor and 1 resistive light sensor connected to it.</para><para>The sensor nodes Wireless addresses can be configured via a python script.</para><para><blockquote><para>Code is not yet ready &lt; </para></blockquote></para><para>Communications protocoll between the raspberry pi and the main sensor node:</para><para>example request: 0x31|A0:A0:A0:A0:A0|DHT22</para><para><table rows="16" cols="4"><row>
+<para>A little private project for a sensor node based on the ATmega328P. The main node is connected to the serial interface of a Raspberry Pi on which an openHab server is running. A nRF24L01+ Transceiver module on the SPI-bus of the ATmega328P serves for communication to other nodes. The main node has 2x DS18B20 temperature sensors, 1 motion sensor and 1 resistive light sensor connected to it.</para><para>The sensor nodes Wireless addresses can be configured via a python script.</para><para><blockquote><para>Code is not yet ready &lt; </para></blockquote></para><para>Communications protocoll between the raspberry pi and the main sensor node:</para><para>example request: 0x31|A0:A0:A0:A0:A0|DHT22</para><para><table rows="16" cols="4"><row>
 <entry thead="yes"><para></para></entry><entry thead="yes"><para>HEX(command id (CmdID) + command property (cmdP) )</para></entry><entry thead="yes"><para>property id (PID/PVal) </para></entry><entry thead="yes"><para>property string (pString)  </para></entry></row>
 <row>
 <entry thead="no"><para>nRF24L01 Channel </para></entry><entry thead="no"><para>0x10 + 0x01 </para></entry><entry thead="no"><para>ChannelID: (0-125) 10 </para></entry><entry thead="no"><para>&quot;&quot; </para></entry></row>
@@ -21,13 +21,13 @@
 <row>
 <entry thead="no"><para>nRF24L01 SystemInfo</para></entry><entry thead="no"><para>0x10 + 0x07 </para></entry><entry thead="no"><para>0 </para></entry><entry thead="no"><para>&quot;&quot; </para></entry></row>
 <row>
-<entry thead="no"><para>GetSensorInfos availableSensors on current node</para></entry><entry thead="no"><para>0x20 + 0x00 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>Sensors </para></entry></row>
+<entry thead="no"><para>GetSensorInfos availableSensors on current node</para></entry><entry thead="no"><para>0x20 + 0x00 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para><ref refid="namespaceSensors" kindref="compound">Sensors</ref> </para></entry></row>
 <row>
-<entry thead="no"><para>GetSensorInfos availableSensors on connected node n</para></entry><entry thead="no"><para>0x20 + 0x01 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>Sensors </para></entry></row>
+<entry thead="no"><para>GetSensorInfos availableSensors on connected node n</para></entry><entry thead="no"><para>0x20 + 0x01 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para><ref refid="namespaceSensors" kindref="compound">Sensors</ref> </para></entry></row>
 <row>
 <entry thead="no"><para>GetSensorData Movement</para></entry><entry thead="no"><para>0x30 + 0x01 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>Mv </para></entry></row>
 <row>
-<entry thead="no"><para>GetSensorData <ref refid="classDHT22" kindref="compound">DHT22</ref> </para></entry><entry thead="no"><para>0x30 + 0x02 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para><ref refid="classDHT22" kindref="compound">DHT22</ref> </para></entry></row>
+<entry thead="no"><para>GetSensorData DHT22 </para></entry><entry thead="no"><para>0x30 + 0x02 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>DHT22 </para></entry></row>
 <row>
 <entry thead="no"><para>GetSensorData LightSense</para></entry><entry thead="no"><para>0x30 + 0x03 </para></entry><entry thead="no"><para>MAC </para></entry><entry thead="no"><para>La </para></entry></row>
 <row>
@@ -42,13 +42,13 @@
 <row>
 <entry thead="no"><para>Light on analog Port </para></entry><entry thead="no"><para>Lap </para></entry></row>
 <row>
-<entry thead="no"><para>Light digital (I2C) in Lux </para></entry><entry thead="no"><para>Ldx </para></entry></row>
+<entry thead="no"><para>Light digital (<ref refid="classI2C" kindref="compound">I2C</ref>) in Lux </para></entry><entry thead="no"><para>Ldx </para></entry></row>
 <row>
 <entry thead="no"><para>TempDS (1-Wire)</para></entry><entry thead="no"><para>TDS </para></entry></row>
 <row>
 <entry thead="no"><para>TempHumDHT22 (1-Wire)</para></entry><entry thead="no"><para>DHT </para></entry></row>
 <row>
-<entry thead="no"><para>Pressure (I2C)</para></entry><entry thead="no"><para>PT </para></entry></row>
+<entry thead="no"><para>Pressure (<ref refid="classI2C" kindref="compound">I2C</ref>)</para></entry><entry thead="no"><para>PT </para></entry></row>
 <row>
 <entry thead="no"><para>Movement </para></entry><entry thead="no"><para>M </para></entry></row>
 </table>

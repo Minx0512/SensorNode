@@ -54,7 +54,7 @@
 #define	DATA_ERR	0xFE				//!< Data error
 #define LAST_DEVICE	0x00				//!< last device found
 
-
+namespace Sensors {
 
 
 //! DS18B20 class definition
@@ -128,7 +128,7 @@ public:
 
 	//! Get xml style sensor string
 	/*!
-	 * Puts out one string with MAC addresses and their temperature values
+	 * Puts out one string with the temperature values
 	 * @param[out] string XML style sensor string
 	 */
 	void GetSensorStringXML(char* string);
@@ -180,5 +180,7 @@ private:
 		  }
 
 };
+
+}
 
 #endif /* DS18B20_H_ */

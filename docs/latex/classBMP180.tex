@@ -4,21 +4,60 @@
 
 {\ttfamily \#include $<$B\+M\+P180.\+hpp$>$}
 
+
+
+Collaboration diagram for B\+M\+P180\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classBMP180__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classBMP180_a8c3e89c7ea65e49c0001a43af07b7c35}{B\+M\+P180} ()
 \item 
-virtual \hyperlink{classBMP180_a8d434a3074ba607d2dbc14657ae224dd}{$\sim$\+B\+M\+P180} ()
+\hyperlink{classBMP180_a124111338db49a31f3f716ebe657a83b}{B\+M\+P180} (\hyperlink{classI2C}{I2C} \&)
 \item 
-void \hyperlink{classBMP180_a4a5650b6821c73b5ad9654a9765a9d82}{Init} ()
+\hyperlink{BMP180_8hpp_a0b2541dda714686ae536954aaf5c3387}{B\+M\+P180\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} \hyperlink{classBMP180_aa7171a079dc6e99158839fd5fe3d40cd}{Init} ()
+\item 
+void \hyperlink{classBMP180_a27de00d6188de674c1973a7181287f6f}{Get\+Temperature} ()
+\item 
+void \hyperlink{classBMP180_aee70a553dc17d04696c8a5cc7458f2dd}{Get\+Pressure} ()
+\item 
+void \hyperlink{classBMP180_a804923af8373a2faffc72f01da637bf8}{Get\+Temp\+Pressure} ()
+\item 
+void \hyperlink{classBMP180_adcef92ebb205aad908b4f93a54fd313f}{Get\+Temp\+Pressure\+String} (char $\ast$temp\+Pres\+Str)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BMP180_8hpp_a0b2541dda714686ae536954aaf5c3387}{B\+M\+P180\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} \hyperlink{classBMP180_abb79348f8b34037cd2a8edbb68b6062c}{Get\+Calibration\+Param} ()
+\begin{DoxyCompactList}\small\item\em this function used for read the calibration parameter from the register \end{DoxyCompactList}\item 
+\hyperlink{BMP180_8hpp_aa980e2c02ba2305e0f489d5650655425}{s16} \hyperlink{classBMP180_acaf2a12c4a90f0023eda1115639fd203}{Get\+Temperature} (\hyperlink{BMP180_8hpp_afaa62991928fb9fb18ff0db62a040aba}{u32} val\+\_\+uncomp\+\_\+temp\+\_\+u32)
+\begin{DoxyCompactList}\small\item\em this A\+PI is used to calculate the true temperature using the uncompensated temperature(ut) \end{DoxyCompactList}\item 
+\hyperlink{BMP180_8hpp_ae9b1af5c037e57a98884758875d3a7c4}{s32} \hyperlink{classBMP180_a2e2dcaced0cf3693329857c8ddc8ec32}{Get\+Pressure} (\hyperlink{BMP180_8hpp_afaa62991928fb9fb18ff0db62a040aba}{u32} val\+\_\+uncomp\+\_\+pressure\+\_\+u32)
+\begin{DoxyCompactList}\small\item\em this A\+PI is used to calculate the true pressure using the uncompensated pressure(up) \end{DoxyCompactList}\item 
+\hyperlink{BMP180_8hpp_ace9d960e74685e2cd84b36132dbbf8aa}{u16} \hyperlink{classBMP180_a4aeb21cd2930e32319bc5e033cc543a0}{Getuncomp\+Temperature} (void)
+\begin{DoxyCompactList}\small\item\em this A\+PI is used to read the uncompensated temperature(ut) from the register \end{DoxyCompactList}\item 
+\hyperlink{BMP180_8hpp_afaa62991928fb9fb18ff0db62a040aba}{u32} \hyperlink{classBMP180_ab24151206af58316d6f3c2f1c99286bd}{Getuncomp\+Pressure} (void)
+\begin{DoxyCompactList}\small\item\em this A\+PI is used to read the uncompensated pressure(up) from the register \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classI2C}{I2C} \hyperlink{classBMP180_a641b7fde5e8202d5fc05ee8197e64338}{i2c}
+\item 
+int32\+\_\+t \hyperlink{classBMP180_af1ffd1d5faf651b0ab03011112e8822c}{temperature}
+\item 
+int32\+\_\+t \hyperlink{classBMP180_a981e771ad28cb9cf1d789f33b45a9521}{pressure}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static struct \hyperlink{structbmp180__t}{bmp180\+\_\+t} $\ast$ \hyperlink{classBMP180_a309219d172cffdc7b8f3c667666acfb3}{p\+\_\+bmp180}
 \end{DoxyCompactItemize}
 
-
-\subsection{Detailed Description}
-\hyperlink{BMP180_8hpp}{B\+M\+P180.\+hpp}
-
-Created on\+: 27 Mar 2017 Author\+: Matthias Minx 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{B\+M\+P180@{B\+M\+P180}!B\+M\+P180@{B\+M\+P180}}
@@ -28,26 +67,258 @@ Created on\+: 27 Mar 2017 Author\+: Matthias Minx
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBMP180_a8c3e89c7ea65e49c0001a43af07b7c35}{}\label{classBMP180_a8c3e89c7ea65e49c0001a43af07b7c35}
-\index{B\+M\+P180@{B\+M\+P180}!````~B\+M\+P180@{$\sim$\+B\+M\+P180}}
-\index{````~B\+M\+P180@{$\sim$\+B\+M\+P180}!B\+M\+P180@{B\+M\+P180}}
-\subsubsection[{\texorpdfstring{$\sim$\+B\+M\+P180()}{~BMP180()}}]{\setlength{\rightskip}{0pt plus 5cm}B\+M\+P180\+::$\sim$\+B\+M\+P180 (
+\hyperlink{BMP180_8cpp}{B\+M\+P180.\+cpp}
+
+Created on\+: 27 Mar 2017 Author\+: matthias \index{B\+M\+P180@{B\+M\+P180}!B\+M\+P180@{B\+M\+P180}}
+\index{B\+M\+P180@{B\+M\+P180}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{B\+M\+P180(\+I2\+C \&)}{BMP180(I2C &)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+M\+P180\+::\+B\+M\+P180 (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf I2C} \&}]{i2c\+Interface}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classBMP180_a8d434a3074ba607d2dbc14657ae224dd}{}\label{classBMP180_a8d434a3074ba607d2dbc14657ae224dd}
+)}\hypertarget{classBMP180_a124111338db49a31f3f716ebe657a83b}{}\label{classBMP180_a124111338db49a31f3f716ebe657a83b}
 
 
 \subsection{Member Function Documentation}
-\index{B\+M\+P180@{B\+M\+P180}!Init@{Init}}
-\index{Init@{Init}!B\+M\+P180@{B\+M\+P180}}
-\subsubsection[{\texorpdfstring{Init()}{Init()}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P180\+::\+Init (
+\index{B\+M\+P180@{B\+M\+P180}!Get\+Calibration\+Param@{Get\+Calibration\+Param}}
+\index{Get\+Calibration\+Param@{Get\+Calibration\+Param}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Get\+Calibration\+Param()}{GetCalibrationParam()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+M\+P180\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} B\+M\+P180\+::\+Get\+Calibration\+Param (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classBMP180_a4a5650b6821c73b5ad9654a9765a9d82}{}\label{classBMP180_a4a5650b6821c73b5ad9654a9765a9d82}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBMP180_abb79348f8b34037cd2a8edbb68b6062c}{}\label{classBMP180_abb79348f8b34037cd2a8edbb68b6062c}
+
+
+this function used for read the calibration parameter from the register 
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*4{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Parameter }&{\bf M\+SB }&{\bf L\+SB }&{\bf bit  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Parameter }&{\bf M\+SB }&{\bf L\+SB }&{\bf bit  }\\\cline{1-4}
+\endhead
+A\+C1 &0x\+AA &0x\+AB &0 to 7 \\\cline{1-4}
+A\+C2 &0x\+AC &0x\+AD &0 to 7 \\\cline{1-4}
+A\+C3 &0x\+AE &0x\+AF &0 to 7 \\\cline{1-4}
+A\+C4 &0x\+B0 &0x\+B1 &0 to 7 \\\cline{1-4}
+A\+C5 &0x\+B2 &0x\+B3 &0 to 7 \\\cline{1-4}
+A\+C6 &0x\+B4 &0x\+B5 &0 to 7 \\\cline{1-4}
+B1 &0x\+B6 &0x\+B7 &0 to 7 \\\cline{1-4}
+B2 &0x\+B8 &0x\+B9 &0 to 7 \\\cline{1-4}
+MB &0x\+BA &0x\+BB &0 to 7 \\\cline{1-4}
+MC &0x\+BC &0x\+BD &0 to 7 \\\cline{1-4}
+MD &0x\+BE &0x\+BF &0 to 7 \\\cline{1-4}
+\end{longtabu}
+
+
+\begin{DoxyReturn}{Returns}
+results of bus communication function 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/$>$ Success \\
+\hline
+{\em -\/1} & -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBMP180_abb79348f8b34037cd2a8edbb68b6062c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{B\+M\+P180@{B\+M\+P180}!Get\+Pressure@{Get\+Pressure}}
+\index{Get\+Pressure@{Get\+Pressure}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Get\+Pressure(u32 val\+\_\+uncomp\+\_\+pressure\+\_\+u32)}{GetPressure(u32 val_uncomp_pressure_u32)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32} B\+M\+P180\+::\+Get\+Pressure (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{val\+\_\+uncomp\+\_\+pressure\+\_\+u32}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBMP180_a2e2dcaced0cf3693329857c8ddc8ec32}{}\label{classBMP180_a2e2dcaced0cf3693329857c8ddc8ec32}
+
+
+this A\+PI is used to calculate the true pressure using the uncompensated pressure(up) 
+
+\begin{DoxyNote}{Note}
+For reading the up data refer \+: bmp180\+\_\+read\+\_\+up()
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+uncomp\+\_\+pressure\+\_\+u32} & the value of uncompensated pressure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the value of pressure in steps of 1.\+0 Pa 
+\end{DoxyReturn}
+\index{B\+M\+P180@{B\+M\+P180}!Get\+Pressure@{Get\+Pressure}}
+\index{Get\+Pressure@{Get\+Pressure}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Get\+Pressure()}{GetPressure()}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P180\+::\+Get\+Pressure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBMP180_aee70a553dc17d04696c8a5cc7458f2dd}{}\label{classBMP180_aee70a553dc17d04696c8a5cc7458f2dd}
+\index{B\+M\+P180@{B\+M\+P180}!Get\+Temperature@{Get\+Temperature}}
+\index{Get\+Temperature@{Get\+Temperature}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Get\+Temperature(u32 val\+\_\+uncomp\+\_\+temp\+\_\+u32)}{GetTemperature(u32 val_uncomp_temp_u32)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s16} B\+M\+P180\+::\+Get\+Temperature (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{val\+\_\+uncomp\+\_\+temp\+\_\+u32}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBMP180_acaf2a12c4a90f0023eda1115639fd203}{}\label{classBMP180_acaf2a12c4a90f0023eda1115639fd203}
+
+
+this A\+PI is used to calculate the true temperature using the uncompensated temperature(ut) 
+
+\begin{DoxyNote}{Note}
+For reading the ut data refer \+: bmp180\+\_\+read\+\_\+ut()
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+uncomp\+\_\+temperature\+\_\+u32} & the value of uncompensated temperature\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the temperature in steps of 0.\+1 deg Celsius 
+\end{DoxyReturn}
+\index{B\+M\+P180@{B\+M\+P180}!Get\+Temperature@{Get\+Temperature}}
+\index{Get\+Temperature@{Get\+Temperature}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Get\+Temperature()}{GetTemperature()}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P180\+::\+Get\+Temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBMP180_a27de00d6188de674c1973a7181287f6f}{}\label{classBMP180_a27de00d6188de674c1973a7181287f6f}
+init and calibrate \index{B\+M\+P180@{B\+M\+P180}!Get\+Temp\+Pressure@{Get\+Temp\+Pressure}}
+\index{Get\+Temp\+Pressure@{Get\+Temp\+Pressure}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Get\+Temp\+Pressure()}{GetTempPressure()}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P180\+::\+Get\+Temp\+Pressure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBMP180_a804923af8373a2faffc72f01da637bf8}{}\label{classBMP180_a804923af8373a2faffc72f01da637bf8}
+\index{B\+M\+P180@{B\+M\+P180}!Get\+Temp\+Pressure\+String@{Get\+Temp\+Pressure\+String}}
+\index{Get\+Temp\+Pressure\+String@{Get\+Temp\+Pressure\+String}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Get\+Temp\+Pressure\+String(char $\ast$temp\+Pres\+Str)}{GetTempPressureString(char *tempPresStr)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P180\+::\+Get\+Temp\+Pressure\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{temp\+Pres\+Str}
+\end{DoxyParamCaption}
+)}\hypertarget{classBMP180_adcef92ebb205aad908b4f93a54fd313f}{}\label{classBMP180_adcef92ebb205aad908b4f93a54fd313f}
+\index{B\+M\+P180@{B\+M\+P180}!Getuncomp\+Pressure@{Getuncomp\+Pressure}}
+\index{Getuncomp\+Pressure@{Getuncomp\+Pressure}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Getuncomp\+Pressure(void)}{GetuncompPressure(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} B\+M\+P180\+::\+Getuncomp\+Pressure (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBMP180_ab24151206af58316d6f3c2f1c99286bd}{}\label{classBMP180_ab24151206af58316d6f3c2f1c99286bd}
+
+
+this A\+PI is used to read the uncompensated pressure(up) from the register 
+
+\begin{DoxyNote}{Note}
+0x\+F6(M\+SB) bit from 0 to 7 
+
+0x\+F7(L\+SB) bit from 0 to 7 
+
+0x\+F8(L\+SB) bit from 3 to 7
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+results of bus communication function 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/$>$ Success \\
+\hline
+{\em -\/1} & -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBMP180_ab24151206af58316d6f3c2f1c99286bd_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{B\+M\+P180@{B\+M\+P180}!Getuncomp\+Temperature@{Getuncomp\+Temperature}}
+\index{Getuncomp\+Temperature@{Getuncomp\+Temperature}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Getuncomp\+Temperature(void)}{GetuncompTemperature(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} B\+M\+P180\+::\+Getuncomp\+Temperature (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBMP180_a4aeb21cd2930e32319bc5e033cc543a0}{}\label{classBMP180_a4aeb21cd2930e32319bc5e033cc543a0}
+
+
+this A\+PI is used to read the uncompensated temperature(ut) from the register 
+
+\begin{DoxyNote}{Note}
+0x\+F6(M\+SB) bit from 0 to 7 
+
+0x\+F7(L\+SB) bit from 0 to 7
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+results of bus communication function 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/$>$ Success \\
+\hline
+{\em -\/1} & -\/$>$ Error \\
+\hline
+\end{DoxyRetVals}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBMP180_a4aeb21cd2930e32319bc5e033cc543a0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{B\+M\+P180@{B\+M\+P180}!Init@{Init}}
+\index{Init@{Init}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{Init()}{Init()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+M\+P180\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} B\+M\+P180\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBMP180_aa7171a079dc6e99158839fd5fe3d40cd}{}\label{classBMP180_aa7171a079dc6e99158839fd5fe3d40cd}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBMP180_aa7171a079dc6e99158839fd5fe3d40cd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{B\+M\+P180@{B\+M\+P180}!i2c@{i2c}}
+\index{i2c@{i2c}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{i2c}{i2c}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I2C} B\+M\+P180\+::i2c\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBMP180_a641b7fde5e8202d5fc05ee8197e64338}{}\label{classBMP180_a641b7fde5e8202d5fc05ee8197e64338}
+\index{B\+M\+P180@{B\+M\+P180}!p\+\_\+bmp180@{p\+\_\+bmp180}}
+\index{p\+\_\+bmp180@{p\+\_\+bmp180}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{p\+\_\+bmp180}{p_bmp180}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf bmp180\+\_\+t}$\ast$ B\+M\+P180\+::p\+\_\+bmp180\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classBMP180_a309219d172cffdc7b8f3c667666acfb3}{}\label{classBMP180_a309219d172cffdc7b8f3c667666acfb3}
+\index{B\+M\+P180@{B\+M\+P180}!pressure@{pressure}}
+\index{pressure@{pressure}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{pressure}{pressure}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t B\+M\+P180\+::pressure\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBMP180_a981e771ad28cb9cf1d789f33b45a9521}{}\label{classBMP180_a981e771ad28cb9cf1d789f33b45a9521}
+\index{B\+M\+P180@{B\+M\+P180}!temperature@{temperature}}
+\index{temperature@{temperature}!B\+M\+P180@{B\+M\+P180}}
+\subsubsection[{\texorpdfstring{temperature}{temperature}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t B\+M\+P180\+::temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBMP180_af1ffd1d5faf651b0ab03011112e8822c}{}\label{classBMP180_af1ffd1d5faf651b0ab03011112e8822c}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Sensors/\hyperlink{BMP180_8hpp}{B\+M\+P180.\+hpp}\item 
-src/\+Sensors/\hyperlink{BMP180_8cpp}{B\+M\+P180.\+cpp}\end{DoxyCompactItemize}
+src/\+Sensors/deactivated/\hyperlink{BMP180_8hpp}{B\+M\+P180.\+hpp}\item 
+src/\+Sensors/deactivated/\hyperlink{BMP180_8cpp}{B\+M\+P180.\+cpp}\end{DoxyCompactItemize}

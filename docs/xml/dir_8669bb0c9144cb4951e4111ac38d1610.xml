@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="dir_8669bb0c9144cb4951e4111ac38d1610" kind="dir">
     <compoundname>Python</compoundname>
+    <innerfile refid="openhab_8py">openhab.py</innerfile>
     <innerfile refid="readsensor_8py">readsensor.py</innerfile>
     <innerfile refid="SensorNode_8py">SensorNode.py</innerfile>
     <innerfile refid="sensors_8py">sensors.py</innerfile>

@@ -9,12 +9,12 @@
 {\ttfamily \#include $<$string.\+h$>$}\\*
 {\ttfamily \#include $<$avr/eeprom.\+h$>$}\\*
 {\ttfamily \#include $<$avr/pgmspace.\+h$>$}\\*
-{\ttfamily \#include \char`\"{}I\+O/\+U\+S\+A\+R\+T.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+O/\+I\+O.\+hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}I\+O/\+Parse\+Strings.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}Wireless/\+N\+R\+F24\+L01.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}Sensors/\+D\+S18\+B20.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}Sensors/\+Photoresistor.\+h\char`\"{}}\\*
-Include dependency graph for main.\+cpp\+:\nopagebreak
+{\ttfamily \#include \char`\"{}Sensors/\+Sensors.\+hpp\char`\"{}}\\*
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,17 +29,17 @@ Include dependency graph for main.\+cpp\+:\nopagebreak
 \#define \hyperlink{main_8cpp_a8df4f3a8a2035df063402ae5f0c1d2f8}{C\+SN}~P\+B0
 \begin{DoxyCompactList}\small\item\em Chip Select Not (C\+SN) for the n\+R\+F24\+L01+ Module. \end{DoxyCompactList}\item 
 \#define \hyperlink{main_8cpp_a70d2f38065e15ec8ca4c5144e8365815}{Sensor\+\_\+\+D\+S18\+B20}~1
-\begin{DoxyCompactList}\small\item\em is a \hyperlink{classDS18B20}{D\+S18\+B20} temperature Sensor connected to the microcontroller? \end{DoxyCompactList}\item 
-\#define \hyperlink{main_8cpp_adecd7bcd3e5fd9d8aff20435fa31780d}{Sensor\+\_\+\+D\+H\+T22}~0
-\begin{DoxyCompactList}\small\item\em is a \hyperlink{classDHT22}{D\+H\+T22} temperature and humidity sensor connected? \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em is a D\+S18\+B20 temperature Sensor connected to the microcontroller? \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8cpp_adecd7bcd3e5fd9d8aff20435fa31780d}{Sensor\+\_\+\+D\+H\+T22}~1
+\begin{DoxyCompactList}\small\item\em is a D\+H\+T22 temperature and humidity sensor connected? \end{DoxyCompactList}\item 
 \#define \hyperlink{main_8cpp_a836c5fd677da287d2c5fc1b8f8be283e}{Sensor\+\_\+\+Move}~1
 \begin{DoxyCompactList}\small\item\em is a movement detector connected? \end{DoxyCompactList}\item 
 \#define \hyperlink{main_8cpp_a1302e578dfa4674d460a42d440c505a1}{Sensor\+\_\+\+Light\+Voltage}~1
 \begin{DoxyCompactList}\small\item\em is a photoresitor connected to a analog input? \end{DoxyCompactList}\item 
 \#define \hyperlink{main_8cpp_a684578846dbea988173b03a4ccf32bc7}{Sensor\+\_\+\+Light\+Lux}~0
-\begin{DoxyCompactList}\small\item\em is a digital Lux sensor connected (I2C)? \end{DoxyCompactList}\item 
-\#define \hyperlink{main_8cpp_a8bf6bf97515b582db8d0e241724566a2}{Sensor\+\_\+\+Pressure}~0
-\begin{DoxyCompactList}\small\item\em is a pressure sensor connected (I2C)? \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em is a digital Lux sensor connected (\hyperlink{classI2C}{I2C})? \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8cpp_aa27be0fec96d7213097669ffc7687167}{Sensor\+\_\+\+B\+M\+P180}~0
+\begin{DoxyCompactList}\small\item\em is a pressure sensor connected (\hyperlink{classI2C}{I2C})? \end{DoxyCompactList}\item 
 \#define \hyperlink{main_8cpp_a73f3f710edd90106325c0c427e712e60}{N\+R\+F\+\_\+\+Main\+Node}~1
 \begin{DoxyCompactList}\small\item\em Role of the node. \end{DoxyCompactList}\item 
 \#define \hyperlink{main_8cpp_ade828ec827ef9a6dd7199e6ef25ad134}{N\+R\+F\+\_\+\+SN}~0
@@ -51,10 +51,6 @@ Include dependency graph for main.\+cpp\+:\nopagebreak
 \item 
 void \hyperlink{main_8cpp_aa0dce6d249d81fb85b082273270ba710}{delay\+\_\+ms} (uint16\+\_\+t ms)
 \begin{DoxyCompactList}\small\item\em Delays a certain amount of milliseconds. \end{DoxyCompactList}\item 
-void \hyperlink{main_8cpp_a0cb304e3b4343bd171a793e59ebd5606}{Get\+Node\+M\+AC} (char $\ast$new\+M\+AC, uint8\+\_\+t $\ast$nrf\+M\+AC)
-\begin{DoxyCompactList}\small\item\em Copies a M\+AC address from an uint8 array to a char array. \end{DoxyCompactList}\item 
-void \hyperlink{main_8cpp_af46bdd771d27528209de39fb63e15b46}{Create\+Sensor\+M\+AC} (char $\ast$new\+M\+AC, uint8\+\_\+t $\ast$nrf\+M\+AC, char $\ast$add)
-\begin{DoxyCompactList}\small\item\em Combine new M\+AC address from an uint8 M\+AC array and a char array to a char array. \end{DoxyCompactList}\item 
 void \hyperlink{main_8cpp_a87e8f767c8e0f0b39062d3b566a97829}{Create\+Sensor\+M\+AC} (char $\ast$new\+M\+AC, uint64\+\_\+t nrf\+M\+AC, char $\ast$add)
 \begin{DoxyCompactList}\small\item\em Combine new M\+AC address from an uint64 M\+AC address and a char array to a char array. \end{DoxyCompactList}\item 
 void \hyperlink{main_8cpp_af3f2bf35046819f223de9b818029af1c}{Setup\+N\+RF} ()
@@ -72,10 +68,6 @@ int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-uint8\+\_\+t \hyperlink{main_8cpp_a8529b711d50e5de54deba7c6b1863d14}{uart\+R\+X\+\_\+flag} = 0
-\begin{DoxyCompactList}\small\item\em Flag received U\+A\+RT message. \end{DoxyCompactList}\item 
-uint8\+\_\+t \hyperlink{main_8cpp_a439ad8ea3b3cc83e6ca8c7625bad49f9}{flag\+Movement} = 0
-\begin{DoxyCompactList}\small\item\em Flag for movement detected. \end{DoxyCompactList}\item 
 uint8\+\_\+t \hyperlink{main_8cpp_a4e92ed0235dfab5a966c53305989ecbf}{nrf\+Int\+Flag} = 0
 \begin{DoxyCompactList}\small\item\em Flag for incoming message from the RF module. \end{DoxyCompactList}\item 
 char \hyperlink{main_8cpp_a557ea16c17e1a3f7a39f32181dc5d531}{buffer\+N\+RF} \mbox{[}128\mbox{]}\mbox{[}5\mbox{]}
@@ -110,16 +102,14 @@ uint64\+\_\+t \hyperlink{main_8cpp_a1b027732838bd645cecfd35415ecb8c6}{adress\+Rx
 \item 
 uint64\+\_\+t \hyperlink{main_8cpp_aa7192a06e3de8d14ce4345527faaf536}{adress\+Tx} \mbox{[}$\,$\mbox{]} = \{0x\+B0\+B0\+B0\+B0\+B0,0x\+B0\+B0\+B0\+B0\+C0,0x\+B0\+B0\+B0\+B0\+D0,0x\+B0\+B0\+B0\+B0\+E0,0x\+B0\+B0\+B0\+B0\+F0\}
 \item 
-\hyperlink{classUSART}{U\+S\+A\+RT} \hyperlink{main_8cpp_a4b0f6407730ca2581db1526feda70ea6}{uart} = \hyperlink{classUSART}{U\+S\+A\+RT}(9600)
-\begin{DoxyCompactList}\small\item\em Create new \hyperlink{classUSART}{U\+S\+A\+RT} object with a baud rate of 9600. \end{DoxyCompactList}\item 
-\hyperlink{classNRF24L01}{N\+R\+F24\+L01} \hyperlink{main_8cpp_a4d8d5d287d7e4a27644e7c3b83bfcce2}{nrf} = \hyperlink{classNRF24L01}{N\+R\+F24\+L01}(D\+D\+RB, P\+O\+R\+TB, \hyperlink{main_8cpp_af332f65aca07c44deeda884c8f6c353c}{CE}, \hyperlink{main_8cpp_a8df4f3a8a2035df063402ae5f0c1d2f8}{C\+SN})
+\hyperlink{classIO}{IO} \hyperlink{main_8cpp_a5de78d73e194146ea0df32a969c98cc0}{iface} = \hyperlink{classIO}{IO}()
+\begin{DoxyCompactList}\small\item\em Create new I\+O\+Interface object. \end{DoxyCompactList}\item 
+\hyperlink{classNRF24L01}{N\+R\+F24\+L01} \hyperlink{main_8cpp_a4d8d5d287d7e4a27644e7c3b83bfcce2}{nrf} = \hyperlink{classNRF24L01}{N\+R\+F24\+L01}(\&\hyperlink{main_8cpp_a5de78d73e194146ea0df32a969c98cc0}{iface},D\+D\+RB, P\+O\+R\+TB, \hyperlink{main_8cpp_af332f65aca07c44deeda884c8f6c353c}{CE}, \hyperlink{main_8cpp_a8df4f3a8a2035df063402ae5f0c1d2f8}{C\+SN})
 \begin{DoxyCompactList}\small\item\em Create new N\+R\+F242\+L01 object. \end{DoxyCompactList}\item 
 \hyperlink{classParseStrings}{Parse\+Strings} \hyperlink{main_8cpp_aebe9772f1bc160f5bd6e36ec6d174343}{ps} = \hyperlink{classParseStrings}{Parse\+Strings}()
 \begin{DoxyCompactList}\small\item\em Create new Parse\+String object. \end{DoxyCompactList}\item 
-\hyperlink{classDS18B20}{D\+S18\+B20} \hyperlink{main_8cpp_af23d3ee921f59b64f27b4581ba32eba7}{ds} = \hyperlink{classDS18B20}{D\+S18\+B20}(P\+O\+R\+TD,D\+D\+RD,P\+I\+ND, P\+D6)
-\begin{DoxyCompactList}\small\item\em Create new \hyperlink{classDS18B20}{D\+S18\+B20} object connected to pin P\+D6. \end{DoxyCompactList}\item 
-\hyperlink{classPhotoresistor}{Photoresistor} \hyperlink{main_8cpp_a56be6db06a776b7b88ce899534d45d67}{pr} = \hyperlink{classPhotoresistor}{Photoresistor}(0x00)
-\begin{DoxyCompactList}\small\item\em Create new Photoresitor object connected to the analog output 0x00. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{classSensors_1_1Sensors}{Sensors\+::\+Sensors} \hyperlink{main_8cpp_afae4fba1d9f2de817408b211c6c8b67c}{sensors} = \hyperlink{classSensors_1_1Sensors}{Sensors\+::\+Sensors}()
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{namespaceSensors}{Sensors} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
@@ -154,26 +144,33 @@ is Slave node?
 
 number of slave nodes 
 
+\index{main.\+cpp@{main.\+cpp}!Sensor\+\_\+\+B\+M\+P180@{Sensor\+\_\+\+B\+M\+P180}}
+\index{Sensor\+\_\+\+B\+M\+P180@{Sensor\+\_\+\+B\+M\+P180}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{Sensor\+\_\+\+B\+M\+P180}{Sensor_BMP180}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sensor\+\_\+\+B\+M\+P180~0}\hypertarget{main_8cpp_aa27be0fec96d7213097669ffc7687167}{}\label{main_8cpp_aa27be0fec96d7213097669ffc7687167}
+
+
+is a pressure sensor connected (\hyperlink{classI2C}{I2C})? 
+
 \index{main.\+cpp@{main.\+cpp}!Sensor\+\_\+\+D\+H\+T22@{Sensor\+\_\+\+D\+H\+T22}}
 \index{Sensor\+\_\+\+D\+H\+T22@{Sensor\+\_\+\+D\+H\+T22}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{Sensor\+\_\+\+D\+H\+T22}{Sensor_DHT22}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sensor\+\_\+\+D\+H\+T22~0}\hypertarget{main_8cpp_adecd7bcd3e5fd9d8aff20435fa31780d}{}\label{main_8cpp_adecd7bcd3e5fd9d8aff20435fa31780d}
+\subsubsection[{\texorpdfstring{Sensor\+\_\+\+D\+H\+T22}{Sensor_DHT22}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sensor\+\_\+\+D\+H\+T22~1}\hypertarget{main_8cpp_adecd7bcd3e5fd9d8aff20435fa31780d}{}\label{main_8cpp_adecd7bcd3e5fd9d8aff20435fa31780d}
 
 
-is a \hyperlink{classDHT22}{D\+H\+T22} temperature and humidity sensor connected? 
+is a D\+H\+T22 temperature and humidity sensor connected? 
 
 \index{main.\+cpp@{main.\+cpp}!Sensor\+\_\+\+D\+S18\+B20@{Sensor\+\_\+\+D\+S18\+B20}}
 \index{Sensor\+\_\+\+D\+S18\+B20@{Sensor\+\_\+\+D\+S18\+B20}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{Sensor\+\_\+\+D\+S18\+B20}{Sensor_DS18B20}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sensor\+\_\+\+D\+S18\+B20~1}\hypertarget{main_8cpp_a70d2f38065e15ec8ca4c5144e8365815}{}\label{main_8cpp_a70d2f38065e15ec8ca4c5144e8365815}
 
 
-is a \hyperlink{classDS18B20}{D\+S18\+B20} temperature Sensor connected to the microcontroller? 
+is a D\+S18\+B20 temperature Sensor connected to the microcontroller? 
 
 \index{main.\+cpp@{main.\+cpp}!Sensor\+\_\+\+Light\+Lux@{Sensor\+\_\+\+Light\+Lux}}
 \index{Sensor\+\_\+\+Light\+Lux@{Sensor\+\_\+\+Light\+Lux}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{Sensor\+\_\+\+Light\+Lux}{Sensor_LightLux}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sensor\+\_\+\+Light\+Lux~0}\hypertarget{main_8cpp_a684578846dbea988173b03a4ccf32bc7}{}\label{main_8cpp_a684578846dbea988173b03a4ccf32bc7}
 
 
-is a digital Lux sensor connected (I2C)? 
+is a digital Lux sensor connected (\hyperlink{classI2C}{I2C})? 
 
 \index{main.\+cpp@{main.\+cpp}!Sensor\+\_\+\+Light\+Voltage@{Sensor\+\_\+\+Light\+Voltage}}
 \index{Sensor\+\_\+\+Light\+Voltage@{Sensor\+\_\+\+Light\+Voltage}!main.\+cpp@{main.\+cpp}}
@@ -189,38 +186,9 @@ is a photoresitor connected to a analog input?
 
 is a movement detector connected? 
 
-\index{main.\+cpp@{main.\+cpp}!Sensor\+\_\+\+Pressure@{Sensor\+\_\+\+Pressure}}
-\index{Sensor\+\_\+\+Pressure@{Sensor\+\_\+\+Pressure}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{Sensor\+\_\+\+Pressure}{Sensor_Pressure}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sensor\+\_\+\+Pressure~0}\hypertarget{main_8cpp_a8bf6bf97515b582db8d0e241724566a2}{}\label{main_8cpp_a8bf6bf97515b582db8d0e241724566a2}
-
-
-is a pressure sensor connected (I2C)? 
-
 
 
 \subsection{Function Documentation}
-\index{main.\+cpp@{main.\+cpp}!Create\+Sensor\+M\+AC@{Create\+Sensor\+M\+AC}}
-\index{Create\+Sensor\+M\+AC@{Create\+Sensor\+M\+AC}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{Create\+Sensor\+M\+A\+C(char $\ast$new\+M\+A\+C, uint8\+\_\+t $\ast$nrf\+M\+A\+C, char $\ast$add)}{CreateSensorMAC(char *newMAC, uint8_t *nrfMAC, char *add)}}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Sensor\+M\+AC (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{new\+M\+AC, }
-\item[{uint8\+\_\+t $\ast$}]{nrf\+M\+AC, }
-\item[{char $\ast$}]{add}
-\end{DoxyParamCaption}
-)}\hypertarget{main_8cpp_af46bdd771d27528209de39fb63e15b46}{}\label{main_8cpp_af46bdd771d27528209de39fb63e15b46}
-
-
-Combine new M\+AC address from an uint8 M\+AC array and a char array to a char array. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em nrf\+M\+AC} & M\+AC address uint8 array of the n\+R\+F24\+L01+ module \\
-\hline
-\mbox{\tt out}  & {\em new\+M\+AC} & M\+AC address char array of the sensor \\
-\hline
-\mbox{\tt in}  & {\em add} & Address addition \\
-\hline
-\end{DoxyParams}
 \index{main.\+cpp@{main.\+cpp}!Create\+Sensor\+M\+AC@{Create\+Sensor\+M\+AC}}
 \index{Create\+Sensor\+M\+AC@{Create\+Sensor\+M\+AC}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{Create\+Sensor\+M\+A\+C(char $\ast$new\+M\+A\+C, uint64\+\_\+t nrf\+M\+A\+C, char $\ast$add)}{CreateSensorMAC(char *newMAC, uint64_t nrfMAC, char *add)}}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Sensor\+M\+AC (
@@ -259,25 +227,6 @@ Delays a certain amount of milliseconds.
 \mbox{\tt in}  & {\em ms} & Number of milliseconds to delay as unsigned integer 16 argument. \\
 \hline
 \end{DoxyParams}
-\index{main.\+cpp@{main.\+cpp}!Get\+Node\+M\+AC@{Get\+Node\+M\+AC}}
-\index{Get\+Node\+M\+AC@{Get\+Node\+M\+AC}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{Get\+Node\+M\+A\+C(char $\ast$new\+M\+A\+C, uint8\+\_\+t $\ast$nrf\+M\+A\+C)}{GetNodeMAC(char *newMAC, uint8_t *nrfMAC)}}]{\setlength{\rightskip}{0pt plus 5cm}void Get\+Node\+M\+AC (
-\begin{DoxyParamCaption}
-\item[{char $\ast$}]{new\+M\+AC, }
-\item[{uint8\+\_\+t $\ast$}]{nrf\+M\+AC}
-\end{DoxyParamCaption}
-)}\hypertarget{main_8cpp_a0cb304e3b4343bd171a793e59ebd5606}{}\label{main_8cpp_a0cb304e3b4343bd171a793e59ebd5606}
-
-
-Copies a M\+AC address from an uint8 array to a char array. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em nrf\+M\+AC} & M\+AC address uint8 array of the n\+R\+F24\+L01+ module \\
-\hline
-\mbox{\tt out}  & {\em new\+M\+AC} & M\+AC address char array of the n\+R\+F24\+L01+ module \\
-\hline
-\end{DoxyParams}
 \index{main.\+cpp@{main.\+cpp}!init\+\_\+interupt@{init\+\_\+interupt}}
 \index{init\+\_\+interupt@{init\+\_\+interupt}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{init\+\_\+interupt()}{init_interupt()}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+interupt (
@@ -300,18 +249,7 @@ Trigger I\+N\+T1 on rising edge and I\+N\+T0 on falling edge \index{main.\+cpp@{
 
 Interrupt routine for I\+N\+T0. 
 
-RF module sends an interrupt if there is data in its buffer to read 
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{main_8cpp_afea150fcd685610cb9f7672fce361e53_cgraph}
-\end{center}
-\end{figure}
-
-
-\index{main.\+cpp@{main.\+cpp}!I\+SR@{I\+SR}}
+RF module sends an interrupt if there is data in its buffer to read \index{main.\+cpp@{main.\+cpp}!I\+SR@{I\+SR}}
 \index{I\+SR@{I\+SR}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{I\+S\+R(\+I\+N\+T1\+\_\+vect)}{ISR(INT1_vect)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
 \begin{DoxyParamCaption}
@@ -322,7 +260,18 @@ Here is the call graph for this function\+:\nopagebreak
 
 Interrupt routine for I\+N\+T1. 
 
-Sets the flag\+Movement to 0 if the movment detector fires \index{main.\+cpp@{main.\+cpp}!I\+SR@{I\+SR}}
+Sets the flag\+Movement to 0 if the movment detector fires 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{main_8cpp_a22acfb428840c6d9aa212764589cf6c6_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{main.\+cpp@{main.\+cpp}!I\+SR@{I\+SR}}
 \index{I\+SR@{I\+SR}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{I\+S\+R(\+U\+S\+A\+R\+T\+\_\+\+R\+X\+\_\+vect)}{ISR(USART_RX_vect)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+SR (
 \begin{DoxyParamCaption}
@@ -415,26 +364,12 @@ Buffer for received messages via n\+R\+F24\+L01+ module.
 Store C\+RC level in E\+E\+P\+R\+OM \index{main.\+cpp@{main.\+cpp}!data\+Rate@{data\+Rate}}
 \index{data\+Rate@{data\+Rate}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{data\+Rate}{dataRate}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t E\+E\+M\+EM data\+Rate}\hypertarget{main_8cpp_a02938b341e80cec9fb0c90ca7087a355}{}\label{main_8cpp_a02938b341e80cec9fb0c90ca7087a355}
-Store RF data rate in E\+E\+P\+R\+OM \index{main.\+cpp@{main.\+cpp}!ds@{ds}}
-\index{ds@{ds}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{ds}{ds}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+S18\+B20} ds = {\bf D\+S18\+B20}(P\+O\+R\+TD,D\+D\+RD,P\+I\+ND, P\+D6)}\hypertarget{main_8cpp_af23d3ee921f59b64f27b4581ba32eba7}{}\label{main_8cpp_af23d3ee921f59b64f27b4581ba32eba7}
-
-
-Create new \hyperlink{classDS18B20}{D\+S18\+B20} object connected to pin P\+D6. 
-
-\index{main.\+cpp@{main.\+cpp}!firstrun@{firstrun}}
+Store RF data rate in E\+E\+P\+R\+OM \index{main.\+cpp@{main.\+cpp}!firstrun@{firstrun}}
 \index{firstrun@{firstrun}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{firstrun}{firstrun}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t E\+E\+M\+EM firstrun}\hypertarget{main_8cpp_a61b4f384283b1a2ea53ac795896b6a53}{}\label{main_8cpp_a61b4f384283b1a2ea53ac795896b6a53}
 
 
 First run after reset/ reflash? 
-
-\index{main.\+cpp@{main.\+cpp}!flag\+Movement@{flag\+Movement}}
-\index{flag\+Movement@{flag\+Movement}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{flag\+Movement}{flagMovement}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t flag\+Movement = 0}\hypertarget{main_8cpp_a439ad8ea3b3cc83e6ca8c7625bad49f9}{}\label{main_8cpp_a439ad8ea3b3cc83e6ca8c7625bad49f9}
-
-
-Flag for movement detected. 
 
 \index{main.\+cpp@{main.\+cpp}!get\+System\+Str@{get\+System\+Str}}
 \index{get\+System\+Str@{get\+System\+Str}!main.\+cpp@{main.\+cpp}}
@@ -442,6 +377,13 @@ Flag for movement detected.
 
 
 Template for get\+System string. 
+
+\index{main.\+cpp@{main.\+cpp}!iface@{iface}}
+\index{iface@{iface}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{iface}{iface}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IO} iface = {\bf IO}()}\hypertarget{main_8cpp_a5de78d73e194146ea0df32a969c98cc0}{}\label{main_8cpp_a5de78d73e194146ea0df32a969c98cc0}
+
+
+Create new I\+O\+Interface object. 
 
 \index{main.\+cpp@{main.\+cpp}!mem\+\_\+adress\+Rx@{mem\+\_\+adress\+Rx}}
 \index{mem\+\_\+adress\+Rx@{mem\+\_\+adress\+Rx}!main.\+cpp@{main.\+cpp}}
@@ -451,7 +393,7 @@ Array for receive addresses \index{main.\+cpp@{main.\+cpp}!mem\+\_\+adress\+Tx@{
 \subsubsection[{\texorpdfstring{mem\+\_\+adress\+Tx}{mem_adressTx}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t E\+E\+M\+EM mem\+\_\+adress\+Tx\mbox{[}25\mbox{]}}\hypertarget{main_8cpp_ae62ba57830fc3210edf7d78311e7403e}{}\label{main_8cpp_ae62ba57830fc3210edf7d78311e7403e}
 Array for transmit addresses \index{main.\+cpp@{main.\+cpp}!nrf@{nrf}}
 \index{nrf@{nrf}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{nrf}{nrf}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+R\+F24\+L01} nrf = {\bf N\+R\+F24\+L01}(D\+D\+RB, P\+O\+R\+TB, {\bf CE}, {\bf C\+SN})}\hypertarget{main_8cpp_a4d8d5d287d7e4a27644e7c3b83bfcce2}{}\label{main_8cpp_a4d8d5d287d7e4a27644e7c3b83bfcce2}
+\subsubsection[{\texorpdfstring{nrf}{nrf}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+R\+F24\+L01} nrf = {\bf N\+R\+F24\+L01}(\&{\bf iface},D\+D\+RB, P\+O\+R\+TB, {\bf CE}, {\bf C\+SN})}\hypertarget{main_8cpp_a4d8d5d287d7e4a27644e7c3b83bfcce2}{}\label{main_8cpp_a4d8d5d287d7e4a27644e7c3b83bfcce2}
 
 
 Create new N\+R\+F242\+L01 object. 
@@ -484,13 +426,6 @@ Flag for incoming message from the RF module.
 
 Store RF enabled pipes in E\+E\+P\+R\+OM. 
 
-\index{main.\+cpp@{main.\+cpp}!pr@{pr}}
-\index{pr@{pr}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{pr}{pr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photoresistor} pr = {\bf Photoresistor}(0x00)}\hypertarget{main_8cpp_a56be6db06a776b7b88ce899534d45d67}{}\label{main_8cpp_a56be6db06a776b7b88ce899534d45d67}
-
-
-Create new Photoresitor object connected to the analog output 0x00. 
-
 \index{main.\+cpp@{main.\+cpp}!ps@{ps}}
 \index{ps@{ps}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{ps}{ps}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parse\+Strings} ps = {\bf Parse\+Strings}()}\hypertarget{main_8cpp_aebe9772f1bc160f5bd6e36ec6d174343}{}\label{main_8cpp_aebe9772f1bc160f5bd6e36ec6d174343}
@@ -519,24 +454,17 @@ Template for send\+Sensor string.
 
 Tempplate for send\+System string. 
 
+\index{main.\+cpp@{main.\+cpp}!sensors@{sensors}}
+\index{sensors@{sensors}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{sensors}{sensors}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sensors\+::\+Sensors} sensors = {\bf Sensors\+::\+Sensors}()}\hypertarget{main_8cpp_afae4fba1d9f2de817408b211c6c8b67c}{}\label{main_8cpp_afae4fba1d9f2de817408b211c6c8b67c}
+
+
+Create \hyperlink{namespaceSensors}{Sensors} object. 
+
 \index{main.\+cpp@{main.\+cpp}!str@{str}}
 \index{str@{str}!main.\+cpp@{main.\+cpp}}
 \subsubsection[{\texorpdfstring{str}{str}}]{\setlength{\rightskip}{0pt plus 5cm}char str\mbox{[}{\bf R\+X\+\_\+\+B\+U\+FF}\mbox{]}}\hypertarget{main_8cpp_ac19b967928c4ef5b461808cbac40840c}{}\label{main_8cpp_ac19b967928c4ef5b461808cbac40840c}
 
 
 Receive string Buffer. 
-
-\index{main.\+cpp@{main.\+cpp}!uart@{uart}}
-\index{uart@{uart}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{uart}{uart}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+A\+RT} uart = {\bf U\+S\+A\+RT}(9600)}\hypertarget{main_8cpp_a4b0f6407730ca2581db1526feda70ea6}{}\label{main_8cpp_a4b0f6407730ca2581db1526feda70ea6}
-
-
-Create new \hyperlink{classUSART}{U\+S\+A\+RT} object with a baud rate of 9600. 
-
-\index{main.\+cpp@{main.\+cpp}!uart\+R\+X\+\_\+flag@{uart\+R\+X\+\_\+flag}}
-\index{uart\+R\+X\+\_\+flag@{uart\+R\+X\+\_\+flag}!main.\+cpp@{main.\+cpp}}
-\subsubsection[{\texorpdfstring{uart\+R\+X\+\_\+flag}{uartRX_flag}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t uart\+R\+X\+\_\+flag = 0}\hypertarget{main_8cpp_a8529b711d50e5de54deba7c6b1863d14}{}\label{main_8cpp_a8529b711d50e5de54deba7c6b1863d14}
-
-
-Flag received U\+A\+RT message. 
 

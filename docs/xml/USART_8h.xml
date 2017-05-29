@@ -5,58 +5,72 @@
     <includes local="no">avr/io.h</includes>
     <includes local="no">util/delay.h</includes>
     <includes local="no">string.h</includes>
+    <includedby refid="IO_8hpp" local="yes">src/IO/IO.hpp</includedby>
+    <includedby refid="IO_8cpp" local="yes">src/IO/IO.cpp</includedby>
     <includedby refid="USART_8cpp" local="yes">src/IO/USART.cpp</includedby>
-    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
-    <includedby refid="NRF24L01_8h" local="yes">src/Wireless/NRF24L01.h</includedby>
     <incdepgraph>
-      <node id="207">
+      <node id="339">
         <label>avr/io.h</label>
       </node>
-      <node id="208">
+      <node id="340">
         <label>util/delay.h</label>
       </node>
-      <node id="209">
+      <node id="341">
         <label>string.h</label>
       </node>
-      <node id="206">
+      <node id="338">
         <label>src/IO/USART.h</label>
         <link refid="USART.h"/>
-        <childnode refid="207" relation="include">
+        <childnode refid="339" relation="include">
         </childnode>
-        <childnode refid="208" relation="include">
+        <childnode refid="340" relation="include">
         </childnode>
-        <childnode refid="209" relation="include">
+        <childnode refid="341" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="212">
+      <node id="345">
         <label>src/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="213">
+      <node id="343">
+        <label>src/IO/IO.hpp</label>
+        <link refid="IO_8hpp"/>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+      </node>
+      <node id="346">
         <label>src/Wireless/NRF24L01.h</label>
         <link refid="NRF24L01_8h"/>
-        <childnode refid="212" relation="include">
+        <childnode refid="345" relation="include">
         </childnode>
-        <childnode refid="214" relation="include">
+        <childnode refid="347" relation="include">
         </childnode>
       </node>
-      <node id="210">
+      <node id="344">
+        <label>src/IO/IO.cpp</label>
+        <link refid="IO_8cpp"/>
+      </node>
+      <node id="342">
         <label>src/IO/USART.h</label>
         <link refid="USART.h"/>
-        <childnode refid="211" relation="include">
+        <childnode refid="343" relation="include">
         </childnode>
-        <childnode refid="212" relation="include">
+        <childnode refid="344" relation="include">
         </childnode>
-        <childnode refid="213" relation="include">
+        <childnode refid="348" relation="include">
         </childnode>
       </node>
-      <node id="214">
+      <node id="347">
         <label>src/Wireless/NRF24L01.cpp</label>
         <link refid="NRF24L01_8cpp"/>
       </node>
-      <node id="211">
+      <node id="348">
         <label>src/IO/USART.cpp</label>
         <link refid="USART_8cpp"/>
       </node>
@@ -243,87 +257,91 @@
 <codeline lineno="49"><highlight class="preprocessor">//#define<sp/>_UBRR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(FOSC/16)/_BAUD<sp/>-<sp/>1<sp/><sp/><sp/><sp/><sp/>//<sp/>Used<sp/>for<sp/>UBRRL<sp/>and<sp/>UBRRH</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51" refid="USART_8h_1af679da36f24305cc55bc4e62a2375d2d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RX_BUFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64<sp/><sp/></highlight></codeline>
-<codeline lineno="53"><highlight class="preprocessor"></highlight></codeline>
-<codeline lineno="58" refid="classUSART" refkind="compound"><highlight class="preprocessor">class<sp/>USART<sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Settings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>long<sp/><sp/><sp/><sp/>FOSC;</highlight></codeline>
-<codeline lineno="63"><highlight class="comment"></highlight></codeline>
-<codeline lineno="66" refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" kindref="member">_BAUD</ref>;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>int<sp/>_DATA;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Number<sp/>of<sp/>data<sp/>bits<sp/>in<sp/>frame<sp/>=<sp/>byte<sp/>tranmission</highlight></codeline>
-<codeline lineno="69"><highlight class="comment"></highlight></codeline>
-<codeline lineno="72" refid="classUSART_1acbd19517b595cf04ff087e040270904f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classUSART_1acbd19517b595cf04ff087e040270904f" kindref="member">_UBRR</ref>;<sp/></highlight><highlight class="comment">//<sp/>Used<sp/>for<sp/>UBRRL<sp/>and<sp/>UBRRH</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint8_t<sp/>RX_BUFF;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor">//namespace<sp/>USART<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"></codeline>
+<codeline lineno="61" refid="classUSART" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classUSART" kindref="compound">USART</ref><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Settings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>long<sp/><sp/><sp/><sp/>FOSC;</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"></highlight></codeline>
+<codeline lineno="69" refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" kindref="member">_BAUD</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>int<sp/>_DATA;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Number<sp/>of<sp/>data<sp/>bits<sp/>in<sp/>frame<sp/>=<sp/>byte<sp/>tranmission</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"></highlight></codeline>
+<codeline lineno="75" refid="classUSART_1acbd19517b595cf04ff087e040270904f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classUSART_1acbd19517b595cf04ff087e040270904f" kindref="member">_UBRR</ref>;<sp/></highlight><highlight class="comment">//<sp/>Used<sp/>for<sp/>UBRRL<sp/>and<sp/>UBRRH</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint8_t<sp/>RX_BUFF;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART" kindref="compound">USART</ref>();</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART" kindref="compound">USART</ref>(uint32_t<sp/>baudrate);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeString(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" kindref="member">str</ref>);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>readString(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readString(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>myString[],uint8_t<sp/>maxLength);</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readString(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initUART(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134"></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>USART0_Flush(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART_1a538ccfb4c4ae821f4fd4e87afe9fd96e" kindref="member">USART</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classUSART_1a538ccfb4c4ae821f4fd4e87afe9fd96e" kindref="member">USART</ref>(uint32_t<sp/>baudrate);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUSART_1a249b0d6967ead56f39448d4954835a27" kindref="member">writeString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" kindref="member">str</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classUSART_1a7e56b380e59b576bbac13e60ca9ba829" kindref="member">readString</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUSART_1a7e56b380e59b576bbac13e60ca9ba829" kindref="member">readString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>myString[],uint8_t<sp/>maxLength);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUSART_1a7e56b380e59b576bbac13e60ca9ba829" kindref="member">readString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUSART_1a5f8bbc3788153e13d94ece254f8ee2e7" kindref="member">initUART</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUSART_1abad4151d072782e70255f999a1451199" kindref="member">USART0_Flush</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>getByte(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>putByte(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classUSART_1a42a1789b9a8805da6ed3f4f62f74a764" kindref="member">getByte</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUSART_1a0103c87dca8c49a1fa9ec607d4d494a9" kindref="member">putByte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data);</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Useful<sp/>macros<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>TX_START(){UCSR0B<sp/>|=<sp/>_BV(TXEN0);}<sp/>//<sp/>Enable<sp/>TX</highlight></codeline>
-<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>TX_STOP(){UCSR0B<sp/>&amp;=<sp/>~_BV(TXEN0);}<sp/>//<sp/>Disable<sp/>TX</highlight></codeline>
-<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>RX_START(){UCSR0B<sp/>|=<sp/>_BV(RXEN0);}<sp/><sp/>//<sp/>Enable<sp/>RX</highlight></codeline>
-<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>RX_STOP(){UCSR0B<sp/>&amp;=<sp/>~_BV(RXEN0);}<sp/><sp/>//<sp/>Disable<sp/>RX</highlight></codeline>
-<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>COMM_START(){TX_START();<sp/>RX_START();}<sp/><sp/>//<sp/>Enable<sp/>communications</highlight></codeline>
-<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Interrupt<sp/>macros;<sp/>Remember<sp/>to<sp/>set<sp/>the<sp/>GIE<sp/>bit<sp/>in<sp/>SREG<sp/>before<sp/>using<sp/>(see<sp/>datasheet)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="171"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>RX_INTEN(){UCSR0B<sp/>|=<sp/>_BV(RXCIE0);}<sp/>//<sp/>Enable<sp/>interrupt<sp/>on<sp/>RX<sp/>complete</highlight></codeline>
-<codeline lineno="172"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>RX_INTDIS(){UCSR0B<sp/>&amp;=<sp/>~_BV(RXCIE0);}<sp/><sp/><sp/>//<sp/>Disable<sp/>RX<sp/>interrupt</highlight></codeline>
-<codeline lineno="173"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>TX_INTEN(){UCSR0B<sp/>|=<sp/>_BV(TXCIE0);}<sp/>//<sp/>Enable<sp/>interrupt<sp/>on<sp/>TX<sp/>complete</highlight></codeline>
-<codeline lineno="174"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>TX_INTDIS(){UCSR0B<sp/>&amp;=<sp/>~_BV(TXCIE0);}<sp/><sp/><sp/>//<sp/>Disable<sp/>TX<sp/>interrupt</highlight></codeline>
-<codeline lineno="175"><highlight class="comment"></highlight></codeline>
-<codeline lineno="176"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"></highlight></codeline>
-<codeline lineno="178"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">//extern<sp/>USART<sp/>uart;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Useful<sp/>macros<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>TX_START(){UCSR0B<sp/>|=<sp/>_BV(TXEN0);}<sp/>//<sp/>Enable<sp/>TX</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>TX_STOP(){UCSR0B<sp/>&amp;=<sp/>~_BV(TXEN0);}<sp/>//<sp/>Disable<sp/>TX</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>RX_START(){UCSR0B<sp/>|=<sp/>_BV(RXEN0);}<sp/><sp/>//<sp/>Enable<sp/>RX</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>RX_STOP(){UCSR0B<sp/>&amp;=<sp/>~_BV(RXEN0);}<sp/><sp/>//<sp/>Disable<sp/>RX</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>COMM_START(){TX_START();<sp/>RX_START();}<sp/><sp/>//<sp/>Enable<sp/>communications</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Interrupt<sp/>macros;<sp/>Remember<sp/>to<sp/>set<sp/>the<sp/>GIE<sp/>bit<sp/>in<sp/>SREG<sp/>before<sp/>using<sp/>(see<sp/>datasheet)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>RX_INTEN(){UCSR0B<sp/>|=<sp/>_BV(RXCIE0);}<sp/>//<sp/>Enable<sp/>interrupt<sp/>on<sp/>RX<sp/>complete</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>RX_INTDIS(){UCSR0B<sp/>&amp;=<sp/>~_BV(RXCIE0);}<sp/><sp/><sp/>//<sp/>Disable<sp/>RX<sp/>interrupt</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>TX_INTEN(){UCSR0B<sp/>|=<sp/>_BV(TXCIE0);}<sp/>//<sp/>Enable<sp/>interrupt<sp/>on<sp/>TX<sp/>complete</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>TX_INTDIS(){UCSR0B<sp/>&amp;=<sp/>~_BV(TXCIE0);}<sp/><sp/><sp/>//<sp/>Disable<sp/>TX<sp/>interrupt</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"></highlight></codeline>
+<codeline lineno="179"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>USART_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">//extern<sp/>USART<sp/>uart;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>USART_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="src/IO/USART.h"/>
   </compounddef>

@@ -1,0 +1,468 @@
+\hypertarget{classSensors_1_1DS18B20}{}\section{Sensors\+:\+:D\+S18\+B20 Class Reference}
+\label{classSensors_1_1DS18B20}\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+
+
+\hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} class definition.  
+
+
+
+
+{\ttfamily \#include $<$D\+S18\+B20.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSensors_1_1DS18B20_a014be02f21c7f7b7f933fa800213695c}{Read\+Measurement} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Takes a Measurement per sensor on the bus. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1DS18B20_a9b8098959de0977e4576093fe2346cbd}{Read\+Measurement2} (char $\ast$Macstring, char $\ast$temp\+Str)
+\begin{DoxyCompactList}\small\item\em Takes a Measurement per sensor on the bus. \end{DoxyCompactList}\item 
+\hyperlink{classSensors_1_1DS18B20_af643f9bc9d0095ec396817630aa9fa19}{D\+S18\+B20} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} standard constructor. \end{DoxyCompactList}\item 
+\hyperlink{classSensors_1_1DS18B20_a4beaec7604e613184572d0175361fba7}{D\+S18\+B20} (volatile uint8\+\_\+t \&Wire\+\_\+\+P\+O\+RT, volatile uint8\+\_\+t \&Wire\+\_\+\+D\+DR, volatile uint8\+\_\+t \&Wire\+\_\+\+P\+IN, uint8\+\_\+t Wire\+\_\+\+DQ)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1DS18B20_a78f6bbedbe849612f39ef6600a7b91f3}{Get\+M\+A\+C\+String} (char $\ast$M\+A\+C\+String\+Out)
+\begin{DoxyCompactList}\small\item\em Get M\+AC addresses from M\+A\+C\+String. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1DS18B20_aeed18c0c1d714f084dab8a74437a3c35}{Get\+Sensor\+String\+X\+ML} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Get xml style sensor string. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1DS18B20_a788dc2898e3ad1a0a17d042cf5e3dd9a}{Get\+Temperature} (char $\ast$M\+A\+Cstring, char $\ast$temp\+String)
+\begin{DoxyCompactList}\small\item\em Get temperature values in one string an the M\+AC addresses in a seperate one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSensors_1_1DS18B20_a038c0caa764736529ebaf28af9ee5321}{Start\+Measurement} (void)
+\begin{DoxyCompactList}\small\item\em Sensor Initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1DS18B20_abefe26ccc02fe5b8519d94a6f46729fb}{Reset} ()
+\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1DS18B20_a56a1466a1d2f1abf713e516e2e6839f8}{Bit\+IO} (uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Bit\+IO. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1DS18B20_adb4e81dac45643fcee9410be3218c4f9}{Write\+Byte} (uint8\+\_\+t byte)
+\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1DS18B20_af8ade017aba66c9fa52872c7aa68107f}{Read\+Byte} (void)
+\item 
+unsigned char \hyperlink{classSensors_1_1DS18B20_a889ad2303c61db988566cbfcfd57a9b9}{Rom\+Search} (unsigned char diff, unsigned char $\ast$id)
+\item 
+void \hyperlink{classSensors_1_1DS18B20_a14af4e7ba13a59b640d651b3abd3bedb}{Command} (unsigned char command, unsigned char $\ast$id)
+\item 
+void \hyperlink{classSensors_1_1DS18B20_a8bb87520d8ef3ad3639afab3fbbc39ce}{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE} ()
+\item 
+void \hyperlink{classSensors_1_1DS18B20_aaf9c80b1de14fc02dd2cfd188eddf751}{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE} ()
+\item 
+void \hyperlink{classSensors_1_1DS18B20_a3429705d951dec85ffafbc627bcf015f}{P\+I\+N\+\_\+\+L\+OW} ()
+\item 
+void \hyperlink{classSensors_1_1DS18B20_a1340454609f372341887949ca72e0951}{P\+I\+N\+\_\+\+H\+I\+GH} ()
+\item 
+\hyperlink{classSensors_1_1DS18B20_a1eab0f2d40228dbf38f00f69b58e0b78}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((gnu\+\_\+inline)) void delay\+\_\+us(uint16\+\_\+t delay)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classSensors_1_1DS18B20_a6a769e836e36f4975918eb52f6e00309}{W\+I\+R\+E\+\_\+\+P\+O\+RT}
+\begin{DoxyCompactList}\small\item\em Thermometer data port. \end{DoxyCompactList}\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classSensors_1_1DS18B20_aceb52cdfb7462c8c7be8178181ae4dc5}{W\+I\+R\+E\+\_\+\+D\+DR}
+\begin{DoxyCompactList}\small\item\em Thermometer data port. \end{DoxyCompactList}\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classSensors_1_1DS18B20_ada7da2f14ca56ef0598caedd5c96ea7a}{W\+I\+R\+E\+\_\+\+P\+IN}
+\begin{DoxyCompactList}\small\item\em Thermometer data port. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1DS18B20_a10fe94bdfb9a37a86d34925534a4547c}{W\+I\+R\+E\+\_\+\+DQ}
+\begin{DoxyCompactList}\small\item\em Thermometer data line. \end{DoxyCompactList}\item 
+char \hyperlink{classSensors_1_1DS18B20_a7c33b18028020215b85039dd9555a6df}{M\+A\+C\+String} \mbox{[}120\mbox{]}
+\begin{DoxyCompactList}\small\item\em M\+AC string of the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} class definition. 
+
+Defines methods for accessing the \hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} interface 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!D\+S18\+B20@{D\+S18\+B20}}
+\index{D\+S18\+B20@{D\+S18\+B20}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{D\+S18\+B20()}{DS18B20()}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::\+D\+S18\+B20\+::\+D\+S18\+B20 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DS18B20_af643f9bc9d0095ec396817630aa9fa19}{}\label{classSensors_1_1DS18B20_af643f9bc9d0095ec396817630aa9fa19}
+
+
+\hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} standard constructor. 
+
+new \hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} object and initializes variables \index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!D\+S18\+B20@{D\+S18\+B20}}
+\index{D\+S18\+B20@{D\+S18\+B20}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{D\+S18\+B20(volatile uint8\+\_\+t \&\+Wire\+\_\+\+P\+O\+R\+T, volatile uint8\+\_\+t \&\+Wire\+\_\+\+D\+D\+R, volatile uint8\+\_\+t \&\+Wire\+\_\+\+P\+I\+N, uint8\+\_\+t Wire\+\_\+\+D\+Q)}{DS18B20(volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volatile uint8_t &Wire_PIN, uint8_t Wire_DQ)}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::\+D\+S18\+B20\+::\+D\+S18\+B20 (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t \&}]{Wire\+\_\+\+P\+O\+RT, }
+\item[{volatile uint8\+\_\+t \&}]{Wire\+\_\+\+D\+DR, }
+\item[{volatile uint8\+\_\+t \&}]{Wire\+\_\+\+P\+IN, }
+\item[{uint8\+\_\+t}]{Wire\+\_\+\+DQ}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DS18B20_a4beaec7604e613184572d0175361fba7}{}\label{classSensors_1_1DS18B20_a4beaec7604e613184572d0175361fba7}
+
+
+\hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Wire\+\_\+\+P\+O\+RT} & \\
+\hline
+\mbox{\tt in}  & {\em Wire\+\_\+\+D\+DR} & \\
+\hline
+\mbox{\tt in}  & {\em Wire\+\_\+\+P\+IN} & \\
+\hline
+\mbox{\tt in}  & {\em Wire\+\_\+\+DQ} & Data line \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+((gnu\+\_\+inline)) void delay\+\_\+us(uint16\+\_\+t delay)}{__attribute__((gnu_inline)) void delay_us(uint16_t delay)}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::\+D\+S18\+B20\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(gnu\+\_\+inline)}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a1eab0f2d40228dbf38f00f69b58e0b78}{}\label{classSensors_1_1DS18B20_a1eab0f2d40228dbf38f00f69b58e0b78}
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Bit\+IO@{Bit\+IO}}
+\index{Bit\+IO@{Bit\+IO}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Bit\+I\+O(uint8\+\_\+t bit)}{BitIO(uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+D\+S18\+B20\+::\+Bit\+IO (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a56a1466a1d2f1abf713e516e2e6839f8}{}\label{classSensors_1_1DS18B20_a56a1466a1d2f1abf713e516e2e6839f8}
+
+
+Bit\+IO. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em bit} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_a56a1466a1d2f1abf713e516e2e6839f8_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Command@{Command}}
+\index{Command@{Command}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Command(unsigned char command, unsigned char $\ast$id)}{Command(unsigned char command, unsigned char *id)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+Command (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{command, }
+\item[{unsigned char $\ast$}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a14af4e7ba13a59b640d651b3abd3bedb}{}\label{classSensors_1_1DS18B20_a14af4e7ba13a59b640d651b3abd3bedb}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_a14af4e7ba13a59b640d651b3abd3bedb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Get\+M\+A\+C\+String@{Get\+M\+A\+C\+String}}
+\index{Get\+M\+A\+C\+String@{Get\+M\+A\+C\+String}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Get\+M\+A\+C\+String(char $\ast$\+M\+A\+C\+String\+Out)}{GetMACString(char *MACStringOut)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+Get\+M\+A\+C\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{M\+A\+C\+String\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DS18B20_a78f6bbedbe849612f39ef6600a7b91f3}{}\label{classSensors_1_1DS18B20_a78f6bbedbe849612f39ef6600a7b91f3}
+
+
+Get M\+AC addresses from M\+A\+C\+String. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em M\+A\+C\+String\+Out} & Character array of M\+AC addresses \\
+\hline
+\end{DoxyParams}
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Get\+Sensor\+String\+X\+ML@{Get\+Sensor\+String\+X\+ML}}
+\index{Get\+Sensor\+String\+X\+ML@{Get\+Sensor\+String\+X\+ML}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Get\+Sensor\+String\+X\+M\+L(char $\ast$string)}{GetSensorStringXML(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+Get\+Sensor\+String\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DS18B20_aeed18c0c1d714f084dab8a74437a3c35}{}\label{classSensors_1_1DS18B20_aeed18c0c1d714f084dab8a74437a3c35}
+
+
+Get xml style sensor string. 
+
+Puts out one string with the temperature values 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & X\+ML style sensor string \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_aeed18c0c1d714f084dab8a74437a3c35_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Get\+Temperature@{Get\+Temperature}}
+\index{Get\+Temperature@{Get\+Temperature}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Get\+Temperature(char $\ast$\+M\+A\+Cstring, char $\ast$temp\+String)}{GetTemperature(char *MACstring, char *tempString)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+Get\+Temperature (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{M\+A\+Cstring, }
+\item[{char $\ast$}]{temp\+String}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DS18B20_a788dc2898e3ad1a0a17d042cf5e3dd9a}{}\label{classSensors_1_1DS18B20_a788dc2898e3ad1a0a17d042cf5e3dd9a}
+
+
+Get temperature values in one string an the M\+AC addresses in a seperate one. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em M\+A\+Cstring} & M\+AC addresses of each sensor on the bus \\
+\hline
+\mbox{\tt out}  & {\em temp\+String} & Temperature values in one string \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_a788dc2898e3ad1a0a17d042cf5e3dd9a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!P\+I\+N\+\_\+\+H\+I\+GH@{P\+I\+N\+\_\+\+H\+I\+GH}}
+\index{P\+I\+N\+\_\+\+H\+I\+GH@{P\+I\+N\+\_\+\+H\+I\+GH}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+\+H\+I\+G\+H()}{PIN_HIGH()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+P\+I\+N\+\_\+\+H\+I\+GH (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a1340454609f372341887949ca72e0951}{}\label{classSensors_1_1DS18B20_a1340454609f372341887949ca72e0951}
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE@{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE}}
+\index{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE@{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+D\+E()}{PIN_INPUT_MODE()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a8bb87520d8ef3ad3639afab3fbbc39ce}{}\label{classSensors_1_1DS18B20_a8bb87520d8ef3ad3639afab3fbbc39ce}
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!P\+I\+N\+\_\+\+L\+OW@{P\+I\+N\+\_\+\+L\+OW}}
+\index{P\+I\+N\+\_\+\+L\+OW@{P\+I\+N\+\_\+\+L\+OW}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+\+L\+O\+W()}{PIN_LOW()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+P\+I\+N\+\_\+\+L\+OW (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a3429705d951dec85ffafbc627bcf015f}{}\label{classSensors_1_1DS18B20_a3429705d951dec85ffafbc627bcf015f}
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE@{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE}}
+\index{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE@{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+D\+E()}{PIN_OUTPUT_MODE()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_aaf9c80b1de14fc02dd2cfd188eddf751}{}\label{classSensors_1_1DS18B20_aaf9c80b1de14fc02dd2cfd188eddf751}
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Read\+Byte@{Read\+Byte}}
+\index{Read\+Byte@{Read\+Byte}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Read\+Byte(void)}{ReadByte(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+D\+S18\+B20\+::\+Read\+Byte (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_af8ade017aba66c9fa52872c7aa68107f}{}\label{classSensors_1_1DS18B20_af8ade017aba66c9fa52872c7aa68107f}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_af8ade017aba66c9fa52872c7aa68107f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Read\+Measurement@{Read\+Measurement}}
+\index{Read\+Measurement@{Read\+Measurement}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Read\+Measurement(char $\ast$string)}{ReadMeasurement(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+Read\+Measurement (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DS18B20_a014be02f21c7f7b7f933fa800213695c}{}\label{classSensors_1_1DS18B20_a014be02f21c7f7b7f933fa800213695c}
+
+
+Takes a Measurement per sensor on the bus. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & String with M\+AC addresses and temperature values \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_a014be02f21c7f7b7f933fa800213695c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Read\+Measurement2@{Read\+Measurement2}}
+\index{Read\+Measurement2@{Read\+Measurement2}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Read\+Measurement2(char $\ast$\+Macstring, char $\ast$temp\+Str)}{ReadMeasurement2(char *Macstring, char *tempStr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+Read\+Measurement2 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{Macstring, }
+\item[{char $\ast$}]{temp\+Str}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DS18B20_a9b8098959de0977e4576093fe2346cbd}{}\label{classSensors_1_1DS18B20_a9b8098959de0977e4576093fe2346cbd}
+
+
+Takes a Measurement per sensor on the bus. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em Macstring} & M\+AC addresses of each sensor on the bus \\
+\hline
+\mbox{\tt out}  & {\em temp\+Str} & Temperature values in one string \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_a9b8098959de0977e4576093fe2346cbd_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Reset@{Reset}}
+\index{Reset@{Reset}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Reset()}{Reset()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+D\+S18\+B20\+::\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_abefe26ccc02fe5b8519d94a6f46729fb}{}\label{classSensors_1_1DS18B20_abefe26ccc02fe5b8519d94a6f46729fb}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_abefe26ccc02fe5b8519d94a6f46729fb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Rom\+Search@{Rom\+Search}}
+\index{Rom\+Search@{Rom\+Search}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Rom\+Search(unsigned char diff, unsigned char $\ast$id)}{RomSearch(unsigned char diff, unsigned char *id)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Sensors\+::\+D\+S18\+B20\+::\+Rom\+Search (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{diff, }
+\item[{unsigned char $\ast$}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a889ad2303c61db988566cbfcfd57a9b9}{}\label{classSensors_1_1DS18B20_a889ad2303c61db988566cbfcfd57a9b9}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_a889ad2303c61db988566cbfcfd57a9b9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Start\+Measurement@{Start\+Measurement}}
+\index{Start\+Measurement@{Start\+Measurement}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Start\+Measurement(void)}{StartMeasurement(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+S18\+B20\+::\+Start\+Measurement (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a038c0caa764736529ebaf28af9ee5321}{}\label{classSensors_1_1DS18B20_a038c0caa764736529ebaf28af9ee5321}
+
+
+Sensor Initialization. 
+
+Starts 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_a038c0caa764736529ebaf28af9ee5321_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!Write\+Byte@{Write\+Byte}}
+\index{Write\+Byte@{Write\+Byte}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{Write\+Byte(uint8\+\_\+t byte)}{WriteByte(uint8_t byte)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+D\+S18\+B20\+::\+Write\+Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_adb4e81dac45643fcee9410be3218c4f9}{}\label{classSensors_1_1DS18B20_adb4e81dac45643fcee9410be3218c4f9}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DS18B20_adb4e81dac45643fcee9410be3218c4f9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!M\+A\+C\+String@{M\+A\+C\+String}}
+\index{M\+A\+C\+String@{M\+A\+C\+String}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{M\+A\+C\+String}{MACString}}]{\setlength{\rightskip}{0pt plus 5cm}char Sensors\+::\+D\+S18\+B20\+::\+M\+A\+C\+String\mbox{[}120\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a7c33b18028020215b85039dd9555a6df}{}\label{classSensors_1_1DS18B20_a7c33b18028020215b85039dd9555a6df}
+
+
+M\+AC string of the sensor. 
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!W\+I\+R\+E\+\_\+\+D\+DR@{W\+I\+R\+E\+\_\+\+D\+DR}}
+\index{W\+I\+R\+E\+\_\+\+D\+DR@{W\+I\+R\+E\+\_\+\+D\+DR}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{W\+I\+R\+E\+\_\+\+D\+DR}{WIRE_DDR}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ Sensors\+::\+D\+S18\+B20\+::\+W\+I\+R\+E\+\_\+\+D\+DR\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_aceb52cdfb7462c8c7be8178181ae4dc5}{}\label{classSensors_1_1DS18B20_aceb52cdfb7462c8c7be8178181ae4dc5}
+
+
+Thermometer data port. 
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!W\+I\+R\+E\+\_\+\+DQ@{W\+I\+R\+E\+\_\+\+DQ}}
+\index{W\+I\+R\+E\+\_\+\+DQ@{W\+I\+R\+E\+\_\+\+DQ}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{W\+I\+R\+E\+\_\+\+DQ}{WIRE_DQ}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+D\+S18\+B20\+::\+W\+I\+R\+E\+\_\+\+DQ\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a10fe94bdfb9a37a86d34925534a4547c}{}\label{classSensors_1_1DS18B20_a10fe94bdfb9a37a86d34925534a4547c}
+
+
+Thermometer data line. 
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!W\+I\+R\+E\+\_\+\+P\+IN@{W\+I\+R\+E\+\_\+\+P\+IN}}
+\index{W\+I\+R\+E\+\_\+\+P\+IN@{W\+I\+R\+E\+\_\+\+P\+IN}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{W\+I\+R\+E\+\_\+\+P\+IN}{WIRE_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ Sensors\+::\+D\+S18\+B20\+::\+W\+I\+R\+E\+\_\+\+P\+IN\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_ada7da2f14ca56ef0598caedd5c96ea7a}{}\label{classSensors_1_1DS18B20_ada7da2f14ca56ef0598caedd5c96ea7a}
+
+
+Thermometer data port. 
+
+\index{Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}!W\+I\+R\+E\+\_\+\+P\+O\+RT@{W\+I\+R\+E\+\_\+\+P\+O\+RT}}
+\index{W\+I\+R\+E\+\_\+\+P\+O\+RT@{W\+I\+R\+E\+\_\+\+P\+O\+RT}!Sensors\+::\+D\+S18\+B20@{Sensors\+::\+D\+S18\+B20}}
+\subsubsection[{\texorpdfstring{W\+I\+R\+E\+\_\+\+P\+O\+RT}{WIRE_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ Sensors\+::\+D\+S18\+B20\+::\+W\+I\+R\+E\+\_\+\+P\+O\+RT\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DS18B20_a6a769e836e36f4975918eb52f6e00309}{}\label{classSensors_1_1DS18B20_a6a769e836e36f4975918eb52f6e00309}
+
+
+Thermometer data port. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sensors/\hyperlink{DS18B20_8h}{D\+S18\+B20.\+h}\item 
+src/\+Sensors/\hyperlink{DS18B20_8cpp}{D\+S18\+B20.\+cpp}\end{DoxyCompactItemize}

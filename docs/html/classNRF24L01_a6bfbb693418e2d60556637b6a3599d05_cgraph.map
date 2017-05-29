@@ -1,8 +1,9 @@
 <map id="NRF24L01::available" name="NRF24L01::available">
 <area shape="rect" id="node2" href="$classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="395,31,568,57"/>
-<area shape="rect" id="node6" href="$classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="197,81,347,108"/>
+<area shape="rect" id="node7" href="$classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="197,81,347,108"/>
 <area shape="rect" id="node3" href="$classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="618,5,777,32"/>
-<area shape="rect" id="node4" href="$classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="628,56,767,83"/>
-<area shape="rect" id="node5" href="$classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="616,107,779,133"/>
-<area shape="rect" id="node7" href="$classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="410,81,553,108"/>
+<area shape="rect" id="node4" href="$classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="617,56,777,83"/>
+<area shape="rect" id="node6" href="$classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="616,107,779,133"/>
+<area shape="rect" id="node5" href="$classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="827,56,965,83"/>
+<area shape="rect" id="node8" href="$classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="410,81,553,108"/>
 </map>

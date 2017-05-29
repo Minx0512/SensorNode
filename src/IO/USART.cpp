@@ -22,18 +22,17 @@
 #include <string.h>
 #include <avr/interrupt.h>
 
+//namespace USART {
 
-USART::USART(){
+USART::USART() : _BAUD(9600) {
 
 
 	//FOSC =16000000UL;
-	_BAUD =	9600;					// Baud rate (9600 is default)
+	//_BAUD =	9600;					// Baud rate (9600 is default)
 //	_DATA = 0x03;					// Number of data bits in frame = byte tranmission
 	_UBRR = (FOSC/16)/_BAUD - 1;	// Used for UBRRL and UBRRH
 
 //	RX_BUFF=10;
-
-
 
 }
 
@@ -172,5 +171,4 @@ void USART::readString(char* string){
 }
 
 
-
-
+//}

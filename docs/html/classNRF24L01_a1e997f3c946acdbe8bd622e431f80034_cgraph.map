@@ -1,7 +1,8 @@
 <map id="NRF24L01::disableCRC" name="NRF24L01::disableCRC">
 <area shape="rect" id="node2" href="$classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="217,31,391,57"/>
-<area shape="rect" id="node6" href="$classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="217,81,391,108"/>
+<area shape="rect" id="node7" href="$classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="217,81,391,108"/>
 <area shape="rect" id="node3" href="$classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="441,5,599,32"/>
-<area shape="rect" id="node4" href="$classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="451,56,589,83"/>
-<area shape="rect" id="node5" href="$classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="439,107,601,133"/>
+<area shape="rect" id="node4" href="$classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="440,56,600,83"/>
+<area shape="rect" id="node6" href="$classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="439,107,601,133"/>
+<area shape="rect" id="node5" href="$classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="649,56,788,83"/>
 </map>

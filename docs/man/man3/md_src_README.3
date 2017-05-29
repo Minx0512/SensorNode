@@ -1,9 +1,9 @@
-.TH "md_src_README" 3 "Tue Apr 4 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "md_src_README" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 md_src_README \- \fBSensorNode\fP 
-A little private project for a sensor node based on the ATmega328P\&. The main node is connected to the serial interface of a Raspberry Pi on which an openHab server is running\&. A nRF24L01+ Transceiver module on the SPI-bus of the ATmega328P serves for communication to other nodes\&. The main node has 2x \fBDS18B20\fP temperature sensors, 1 motion sensor and 1 resistive light sensor connected to it\&.
+A little private project for a sensor node based on the ATmega328P\&. The main node is connected to the serial interface of a Raspberry Pi on which an openHab server is running\&. A nRF24L01+ Transceiver module on the SPI-bus of the ATmega328P serves for communication to other nodes\&. The main node has 2x DS18B20 temperature sensors, 1 motion sensor and 1 resistive light sensor connected to it\&.
 .PP
 The sensor nodes Wireless addresses can be configured via a python script\&.
 .PP
@@ -16,7 +16,7 @@ Communications protocoll between the raspberry pi and the main sensor node:
 .PP
 example request: 0x31|A0:A0:A0:A0:A0|DHT22
 .PP
-HEX(command id (CmdID) + command property (cmdP) )property id (PID/PVal) property string (pString)  nRF24L01 Channel 0x10 + 0x01 ChannelID: (0-125) 10 '' nRF24L01 PowerLvl0x10 + 0x02 PwrLvlVal: (1-4) 4 '' nRF24L01 DataRate0x10 + 0x03 DataRteVal: (1-3) 2 '' nRF24L01 CRCLevel0x10 + 0x04 CRCLvlVal: (1-3) 3 '' nRF24L01 PayloadSize0x10 + 0x05 payloadSzVal: 16 '' nRF24L01 ResetModule0x10 + 0x06 0 '' nRF24L01 SystemInfo0x10 + 0x07 0 '' GetSensorInfos availableSensors on current node0x20 + 0x00 MAC Sensors GetSensorInfos availableSensors on connected node n0x20 + 0x01 MAC Sensors GetSensorData Movement0x30 + 0x01 MAC Mv GetSensorData \fBDHT22\fP 0x30 + 0x02 MAC \fBDHT22\fP GetSensorData LightSense0x30 + 0x03 MAC La GetSensorData LightSense0x30 + 0x04 MAC Ld GetSensorData TempDS18B200x30 + 0x05 MAC TDS GetSensorData Pressure0x30 + 0x06 MAC PT Light on analog Port Lap Light digital (I2C) in Lux Ldx TempDS (1-Wire)TDS TempHumDHT22 (1-Wire)DHT Pressure (I2C)PT Movement M 
+HEX(command id (CmdID) + command property (cmdP) )property id (PID/PVal) property string (pString)  nRF24L01 Channel 0x10 + 0x01 ChannelID: (0-125) 10 '' nRF24L01 PowerLvl0x10 + 0x02 PwrLvlVal: (1-4) 4 '' nRF24L01 DataRate0x10 + 0x03 DataRteVal: (1-3) 2 '' nRF24L01 CRCLevel0x10 + 0x04 CRCLvlVal: (1-3) 3 '' nRF24L01 PayloadSize0x10 + 0x05 payloadSzVal: 16 '' nRF24L01 ResetModule0x10 + 0x06 0 '' nRF24L01 SystemInfo0x10 + 0x07 0 '' GetSensorInfos availableSensors on current node0x20 + 0x00 MAC \fBSensors\fP GetSensorInfos availableSensors on connected node n0x20 + 0x01 MAC \fBSensors\fP GetSensorData Movement0x30 + 0x01 MAC Mv GetSensorData DHT22 0x30 + 0x02 MAC DHT22 GetSensorData LightSense0x30 + 0x03 MAC La GetSensorData LightSense0x30 + 0x04 MAC Ld GetSensorData TempDS18B200x30 + 0x05 MAC TDS GetSensorData Pressure0x30 + 0x06 MAC PT Light on analog Port Lap Light digital (\fBI2C\fP) in Lux Ldx TempDS (1-Wire)TDS TempHumDHT22 (1-Wire)DHT Pressure (\fBI2C\fP)PT Movement M 
 .PP
 answers: 
 .PP

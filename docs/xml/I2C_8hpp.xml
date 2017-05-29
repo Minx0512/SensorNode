@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="I2C_8hpp" kind="file" language="C++">
+    <compoundname>I2C.hpp</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includedby refid="I2C_8cpp" local="yes">src/IO/I2C.cpp</includedby>
+    <includedby refid="IO_8hpp" local="yes">src/IO/IO.hpp</includedby>
+    <includedby refid="IO_8cpp" local="yes">src/IO/IO.cpp</includedby>
+    <incdepgraph>
+      <node id="266">
+        <label>src/IO/I2C.hpp</label>
+        <link refid="I2C.hpp"/>
+        <childnode refid="267" relation="include">
+        </childnode>
+      </node>
+      <node id="267">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="272">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="270">
+        <label>src/IO/IO.hpp</label>
+        <link refid="IO_8hpp"/>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+      </node>
+      <node id="273">
+        <label>src/Wireless/NRF24L01.h</label>
+        <link refid="NRF24L01_8h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>src/IO/I2C.hpp</label>
+        <link refid="I2C.hpp"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="271" relation="include">
+        </childnode>
+      </node>
+      <node id="271">
+        <label>src/IO/IO.cpp</label>
+        <link refid="IO_8cpp"/>
+      </node>
+      <node id="269">
+        <label>src/IO/I2C.cpp</label>
+        <link refid="I2C_8cpp"/>
+      </node>
+      <node id="274">
+        <label>src/Wireless/NRF24L01.cpp</label>
+        <link refid="NRF24L01_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classI2C" prot="public">I2C</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="I2C_8hpp_1a43bafb28b29491ec7f871319b5a3b2f8" prot="public" static="no">
+        <name>F_CPU</name>
+        <initializer>16000000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="28" column="9" bodyfile="src/IO/I2C.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="I2C_8hpp_1ab5c0fbe837494c5f9130a5914854250d" prot="public" static="no">
+        <name>I2C_READ</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="31" column="9" bodyfile="src/IO/I2C.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="I2C_8hpp_1a9536bf85bced4f4e549a82fb18eb6140" prot="public" static="no">
+        <name>I2C_WRITE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="32" column="9" bodyfile="src/IO/I2C.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="I2C_8hpp_1a7a1c522bed64982971384489ee477bd3" prot="public" static="no">
+        <name>F_SCL</name>
+        <initializer>100000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="35" column="9" bodyfile="src/IO/I2C.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="I2C_8hpp_1a8507c36fb931358ebca2bb6896c0bc09" prot="public" static="no">
+        <name>Prescaler</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="36" column="9" bodyfile="src/IO/I2C.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="I2C_8hpp_1a290b430572cf8d6c32b9e84171ce7143" prot="public" static="no">
+        <name>TWBR_val</name>
+        <initializer>((((<ref refid="I2C_8hpp_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref> / <ref refid="I2C_8hpp_1a7a1c522bed64982971384489ee477bd3" kindref="member">F_SCL</ref>) / <ref refid="I2C_8hpp_1a8507c36fb931358ebca2bb6896c0bc09" kindref="member">Prescaler</ref>) - 16 ) / 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="37" column="9" bodyfile="src/IO/I2C.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Project: <ref refid="namespaceSensorNode" kindref="compound">SensorNode</ref></para><para><ref refid="I2C_8hpp" kindref="compound">I2C.hpp</ref></para><para>Created on: 28 Apr 2017</para><para>Author: Matthias Minx</para><para>Revision:</para><para>License: </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="22"><highlight class="preprocessor">#ifndef<sp/>I2C_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/><sp/>F_CPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="I2C_8hpp_1a43bafb28b29491ec7f871319b5a3b2f8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>F_CPU<sp/>16000000UL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="I2C_8hpp_1ab5c0fbe837494c5f9130a5914854250d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_READ<sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="I2C_8hpp_1a9536bf85bced4f4e549a82fb18eb6140" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_WRITE<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="I2C_8hpp_1a7a1c522bed64982971384489ee477bd3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>F_SCL<sp/>100000UL<sp/>//<sp/>SCL<sp/>frequency</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="I2C_8hpp_1a8507c36fb931358ebca2bb6896c0bc09" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Prescaler<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="I2C_8hpp_1a290b430572cf8d6c32b9e84171ce7143" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TWBR_val<sp/>((((F_CPU<sp/>/<sp/>F_SCL)<sp/>/<sp/>Prescaler)<sp/>-<sp/>16<sp/>)<sp/>/<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classI2C" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classI2C" kindref="compound">I2C</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classI2C_1a7a9a84fccdacb3346ff97d6f3e158850" kindref="member">I2C</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classI2C_1ab6cd0165be5e59dfe57976f1ae4325ec" kindref="member">Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classI2C_1a2d89860048673ed968d218a749080916" kindref="member">Start</ref>(uint8_t<sp/>address);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classI2C_1aa18dde601c811e06dda1be29c139dd83" kindref="member">Write</ref>(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classI2C_1aa538a5b392f83063c3d484ec35cf1bcd" kindref="member">Read_ack</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classI2C_1af40aac783e94fcfcd1f9c8cbfe1eeb37" kindref="member">Read_nack</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classI2C_1a9eb58b51adaedc941abf120c4df3c481" kindref="member">Transmit</ref>(uint8_t<sp/>address,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classI2C_1ad0c64a4e373b4015647a11c298af4d47" kindref="member">Receive</ref>(uint8_t<sp/>address,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classI2C_1a4f7e7e3bb2527b721f370ec88011b401" kindref="member">WriteReg</ref>(uint8_t<sp/>devaddr,<sp/>uint8_t<sp/>regaddr,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classI2C_1aee4e012db3dc019536ad3da5632cc04a" kindref="member">ReadReg</ref>(uint8_t<sp/>devaddr,<sp/>uint8_t<sp/>regaddr,<sp/>uint8_t*<sp/>data,<sp/>uint16_t<sp/>length);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classI2C_1a5d3e0b1de395932284e2e010a0160b5f" kindref="member">Stop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>I2C_HPP_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="src/IO/I2C.hpp"/>
+  </compounddef>
+</doxygen>

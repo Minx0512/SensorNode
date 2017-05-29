@@ -1,16 +1,17 @@
 <map id="NRF24L01::powerDown" name="NRF24L01::powerDown">
 <area shape="rect" id="node2" href="$classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="216,282,365,309"/>
-<area shape="rect" id="node7" href="$classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="615,80,789,106"/>
-<area shape="rect" id="node9" href="$classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="615,130,789,157"/>
+<area shape="rect" id="node8" href="$classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="615,80,789,106"/>
+<area shape="rect" id="node10" href="$classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="615,130,789,157"/>
 <area shape="rect" id="node3" href="$classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="612,333,792,360"/>
-<area shape="rect" id="node8" href="$classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="612,384,792,410"/>
-<area shape="rect" id="node10" href="$classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="617,181,787,208"/>
-<area shape="rect" id="node11" href="$classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="617,232,787,258"/>
-<area shape="rect" id="node12" href="$classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="417,333,559,360"/>
-<area shape="rect" id="node13" href="$classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="631,282,773,309"/>
-<area shape="rect" id="node14" href="$classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="413,384,563,410"/>
-<area shape="rect" id="node15" href="$classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="611,434,793,461"/>
+<area shape="rect" id="node9" href="$classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="612,384,792,410"/>
+<area shape="rect" id="node11" href="$classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="617,181,787,208"/>
+<area shape="rect" id="node12" href="$classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="617,232,787,258"/>
+<area shape="rect" id="node13" href="$classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="417,333,559,360"/>
+<area shape="rect" id="node14" href="$classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="631,282,773,309"/>
+<area shape="rect" id="node15" href="$classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="413,384,563,410"/>
+<area shape="rect" id="node16" href="$classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="611,434,793,461"/>
 <area shape="rect" id="node4" href="$classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="843,257,1002,284"/>
-<area shape="rect" id="node5" href="$classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="853,308,992,334"/>
-<area shape="rect" id="node6" href="$classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="841,206,1004,233"/>
+<area shape="rect" id="node5" href="$classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="843,308,1003,334"/>
+<area shape="rect" id="node7" href="$classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="841,206,1004,233"/>
+<area shape="rect" id="node6" href="$classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1052,308,1191,334"/>
 </map>

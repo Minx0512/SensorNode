@@ -9,9 +9,10 @@ var classreadsensor_1_1ReadSensor =
     [ "availableSensors", "classreadsensor_1_1ReadSensor.html#ae04c9a7ad4cb4a0c68225cea810f9edd", null ],
     [ "baudrate", "classreadsensor_1_1ReadSensor.html#a55ad7cd6f26347c571cdc03025d52449", null ],
     [ "cmdID", "classreadsensor_1_1ReadSensor.html#a3f1a8b0a95d14b00ceeb4a1d90db4146", null ],
-    [ "cmdIDs", "classreadsensor_1_1ReadSensor.html#ab313380d075409d1fccdd2b47c958cc9", null ],
+    [ "dataValues", "classreadsensor_1_1ReadSensor.html#aee72f840d408cc229fe805996b62f0a1", null ],
     [ "err", "classreadsensor_1_1ReadSensor.html#abea3837d8a334bcd560117be3468e555", null ],
     [ "interpResp", "classreadsensor_1_1ReadSensor.html#aa9c0ba1400248735f49ccf7f4d7fcbec", null ],
+    [ "itemNames", "classreadsensor_1_1ReadSensor.html#a3a7da988d173549fed3f6c4f8dd48713", null ],
     [ "nodeMAC", "classreadsensor_1_1ReadSensor.html#aca28301a80b828d13f180b3560acd929", null ],
     [ "port", "classreadsensor_1_1ReadSensor.html#aa5479d51839a34226df007973db5b28a", null ],
     [ "pString", "classreadsensor_1_1ReadSensor.html#a260848062ae91ce183d5b8a7bb4336a9", null ],
@@ -19,5 +20,6 @@ var classreadsensor_1_1ReadSensor =
     [ "resp", "classreadsensor_1_1ReadSensor.html#a3bfdf8d80b9b2c6e3756546f66684543", null ],
     [ "respMask", "classreadsensor_1_1ReadSensor.html#a2add837e5b36f9242b3481f30be5ace9", null ],
     [ "serialCon", "classreadsensor_1_1ReadSensor.html#ab85a47186a692e87ed91dfbd6421ac9f", null ],
+    [ "signal", "classreadsensor_1_1ReadSensor.html#a1e626c0e06fbf1b266d9bb39c363196c", null ],
     [ "updateTime", "classreadsensor_1_1ReadSensor.html#adb42967437e88c29257d8fa7e6dcd8e2", null ]
 ];

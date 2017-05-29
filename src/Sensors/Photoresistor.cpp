@@ -21,11 +21,13 @@
 #include <string.h>
 #include <stdlib.h>
 
+namespace Sensors {
+
 Photoresistor::Photoresistor() {
 	// TODO Auto-generated constructor stub
 	setType(0);
 	setPort(0x00);
-	Init();
+	//Init();
 
 }
 
@@ -33,7 +35,7 @@ Photoresistor::Photoresistor(uint8_t port) {
 	// TODO Auto-generated constructor stub
 	setType(0);
 	setPort(port);
-	Init();
+	//Init();
 
 
 }
@@ -64,7 +66,7 @@ uint16_t Photoresistor::readADValue(){
 		ADCSRA |= (1<<ADSC);
 		while(ADCSRA & (1<<ADSC));
 		value = ADCW;
-		return value;
+		return (value);
 }
 
 
@@ -81,10 +83,12 @@ void Photoresistor::GetSensorStringXML(char* string){
 	char str[10];
 	dtostrf(valueL,4,3,str);
 
-	sprintf(string,"%s|",str);
+	sprintf(string,"%s",str);
 
 
 
+
+}
 
 }
 

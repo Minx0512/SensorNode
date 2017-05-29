@@ -101,7 +101,7 @@
         </inbodydescription>
         <location file="src/Sensors/Photoresistor.h" line="65" column="1" bodyfile="src/Sensors/Photoresistor.cpp" bodystart="71" bodyend="89"/>
         <references refid="classPhotoresistor_1aea81da3cce831497e50b02344bbba238" compoundref="Photoresistor_8cpp" startline="62" endline="68">readADValue</references>
-        <references refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" compoundref="main_8cpp" startline="97">str</references>
+        <references refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" compoundref="main_8cpp" startline="131">str</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

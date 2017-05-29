@@ -1,4 +1,4 @@
-.TH "src/Sensors/DHT22.h" 3 "Tue Apr 4 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "src/Sensors/DHT22.h" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,7 +21,15 @@ src/Sensors/DHT22.h \-
 
 .in +1c
 .ti -1c
-.RI "class \fBDHT22\fP"
+.RI "class \fBSensors::DHT22\fP"
+.br
+.RI "\fI\fBDHT22\fP class definition\&. \fP"
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBSensors\fP"
 .br
 .in -1c
 .SS "Macros"
@@ -40,7 +48,9 @@ src/Sensors/DHT22.h \-
 .SH "Macro Definition Documentation"
 .PP 
 .SS "#define FOSC   16000000UL"
-
+\fBDHT22\&.h\fP
+.PP
+Created on: Nov 12, 2016 Author: matthias 
 .SS "#define LOOP_CYCLES   8"
 
 .SS "#define us(num)   (num/(\fBLOOP_CYCLES\fP*(1/(\fBFOSC\fP/1000000\&.0))))"

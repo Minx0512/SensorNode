@@ -10,7 +10,7 @@ Collaboration diagram for N\+R\+F24\+L01\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=144pt]{classNRF24L01__coll__graph}
+\includegraphics[width=233pt]{classNRF24L01__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -18,7 +18,7 @@ Collaboration diagram for N\+R\+F24\+L01\+:\nopagebreak
 \item 
 \hyperlink{classNRF24L01_ad3e6263e0afaa974637d1450b6c8cb37}{N\+R\+F24\+L01} ()
 \item 
-\hyperlink{classNRF24L01_a8e2cc2ca751ff3bd4ea351bd2fcea93e}{N\+R\+F24\+L01} (volatile uint8\+\_\+t \&D\+DR, volatile uint8\+\_\+t \&P\+O\+RT, uint8\+\_\+t \hyperlink{main_8cpp_af332f65aca07c44deeda884c8f6c353c}{CE}, uint8\+\_\+t \hyperlink{main_8cpp_a8df4f3a8a2035df063402ae5f0c1d2f8}{C\+SN})
+\hyperlink{classNRF24L01_a8e8e6754c34cf6e6fed554a6e26c8a4b}{N\+R\+F24\+L01} (\hyperlink{classIO}{IO} $\ast$\hyperlink{classNRF24L01_ae1eea9f32346ecf60ffbf5224d338359}{io\+Interface}, volatile uint8\+\_\+t \&D\+DR, volatile uint8\+\_\+t \&P\+O\+RT, uint8\+\_\+t \hyperlink{main_8cpp_af332f65aca07c44deeda884c8f6c353c}{CE}, uint8\+\_\+t \hyperlink{main_8cpp_a8df4f3a8a2035df063402ae5f0c1d2f8}{C\+SN})
 \item 
 bool \hyperlink{classNRF24L01_a2973773d1a158e1cfbf52198f248c548}{Init} ()
 \item 
@@ -65,6 +65,8 @@ uint8\+\_\+t \hyperlink{classNRF24L01_ab604b1e177e4812e33ebc39287503197}{spi\+Tr
 \end{Indent}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIO}{IO} $\ast$ \hyperlink{classNRF24L01_ae1eea9f32346ecf60ffbf5224d338359}{io\+Interface}
 \item 
 volatile uint8\+\_\+t $\ast$ \hyperlink{classNRF24L01_a42ef1a6d858a115327d0a7310aaba57c}{N\+R\+F24\+L01\+\_\+\+D\+DR}
 \item 
@@ -164,8 +166,6 @@ uint32\+\_\+t \hyperlink{classNRF24L01_a1feaab910ecff17805f8141fe40028e7}{tx\+De
 \item 
 uint32\+\_\+t \hyperlink{classNRF24L01_abae8b8afbf747344006d6163c607be00}{cs\+Delay}
 \item 
-\hyperlink{classSPI}{S\+PI} \hyperlink{classNRF24L01_a6321af25fee367445baa6ab4840f8443}{spi}
-\item 
 void \hyperlink{classNRF24L01_a17752733515f67aa9f6ed3daa1ed3d1d}{set\+Address\+Width} (uint8\+\_\+t a\+\_\+width)
 \item 
 void \hyperlink{classNRF24L01_a0bb209d94b62e2a28af53179af713f3c}{set\+Retries} (uint8\+\_\+t delay, uint8\+\_\+t count)
@@ -250,14 +250,15 @@ Here is the call graph for this function\+:\nopagebreak
 
 \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
 \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
-\subsubsection[{\texorpdfstring{N\+R\+F24\+L01(volatile uint8\+\_\+t \&\+D\+D\+R, volatile uint8\+\_\+t \&\+P\+O\+R\+T, uint8\+\_\+t C\+E, uint8\+\_\+t C\+S\+N)}{NRF24L01(volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, uint8_t CSN)}}]{\setlength{\rightskip}{0pt plus 5cm}N\+R\+F24\+L01\+::\+N\+R\+F24\+L01 (
+\subsubsection[{\texorpdfstring{N\+R\+F24\+L01(\+I\+O $\ast$io\+Interface, volatile uint8\+\_\+t \&\+D\+D\+R, volatile uint8\+\_\+t \&\+P\+O\+R\+T, uint8\+\_\+t C\+E, uint8\+\_\+t C\+S\+N)}{NRF24L01(IO *ioInterface, volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t CE, uint8_t CSN)}}]{\setlength{\rightskip}{0pt plus 5cm}N\+R\+F24\+L01\+::\+N\+R\+F24\+L01 (
 \begin{DoxyParamCaption}
+\item[{{\bf IO} $\ast$}]{io\+Interface, }
 \item[{volatile uint8\+\_\+t \&}]{D\+DR, }
 \item[{volatile uint8\+\_\+t \&}]{P\+O\+RT, }
 \item[{uint8\+\_\+t}]{CE, }
 \item[{uint8\+\_\+t}]{C\+SN}
 \end{DoxyParamCaption}
-)}\hypertarget{classNRF24L01_a8e2cc2ca751ff3bd4ea351bd2fcea93e}{}\label{classNRF24L01_a8e2cc2ca751ff3bd4ea351bd2fcea93e}
+)}\hypertarget{classNRF24L01_a8e8e6754c34cf6e6fed554a6e26c8a4b}{}\label{classNRF24L01_a8e8e6754c34cf6e6fed554a6e26c8a4b}
 
 
 \subsection{Member Function Documentation}
@@ -729,7 +730,7 @@ Here is the call graph for this function\+:\nopagebreak
 \index{Init@{Init}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
 \subsubsection[{\texorpdfstring{Init()}{Init()}}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+R\+F24\+L01\+::\+Init (
 \begin{DoxyParamCaption}
-{}
+\item[{void}]{}
 \end{DoxyParamCaption}
 )}\hypertarget{classNRF24L01_a2973773d1a158e1cfbf52198f248c548}{}\label{classNRF24L01_a2973773d1a158e1cfbf52198f248c548}
 Begin operation of the chip
@@ -1543,7 +1544,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=345pt]{classNRF24L01_ab604b1e177e4812e33ebc39287503197_cgraph}
+\includegraphics[width=350pt]{classNRF24L01_ab604b1e177e4812e33ebc39287503197_cgraph}
 \end{center}
 \end{figure}
 
@@ -2274,7 +2275,10 @@ Usage\+: (Failure handling must be enabled per above)
   report\_failure();                    \textcolor{comment}{// Blink leds, send a message, etc. to indicate failure}
 \}
 \end{DoxyCode}
- \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+A\+CK@{N\+R\+F24\+L01\+\_\+\+A\+CK}}
+ \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!io\+Interface@{io\+Interface}}
+\index{io\+Interface@{io\+Interface}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
+\subsubsection[{\texorpdfstring{io\+Interface}{ioInterface}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IO}$\ast$ N\+R\+F24\+L01\+::io\+Interface\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_ae1eea9f32346ecf60ffbf5224d338359}{}\label{classNRF24L01_ae1eea9f32346ecf60ffbf5224d338359}
+\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+A\+CK@{N\+R\+F24\+L01\+\_\+\+A\+CK}}
 \index{N\+R\+F24\+L01\+\_\+\+A\+CK@{N\+R\+F24\+L01\+\_\+\+A\+CK}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
 \subsubsection[{\texorpdfstring{N\+R\+F24\+L01\+\_\+\+A\+CK}{NRF24L01_ACK}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::\+N\+R\+F24\+L01\+\_\+\+A\+CK\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_af2e0a88f330c86d0cc6c43180f70ecbd}{}\label{classNRF24L01_af2e0a88f330c86d0cc6c43180f70ecbd}
 \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!N\+R\+F24\+L01\+\_\+\+A\+D\+D\+R\+S\+I\+ZE@{N\+R\+F24\+L01\+\_\+\+A\+D\+D\+R\+S\+I\+ZE}}
@@ -2328,10 +2332,7 @@ Usage\+: (Failure handling must be enabled per above)
 \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!pipe0\+\_\+reading\+\_\+address@{pipe0\+\_\+reading\+\_\+address}}
 \index{pipe0\+\_\+reading\+\_\+address@{pipe0\+\_\+reading\+\_\+address}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
 \subsubsection[{\texorpdfstring{pipe0\+\_\+reading\+\_\+address}{pipe0_reading_address}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t N\+R\+F24\+L01\+::pipe0\+\_\+reading\+\_\+address\mbox{[}5\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_af836ff0a915587aa40b5eabe4101ea4c}{}\label{classNRF24L01_af836ff0a915587aa40b5eabe4101ea4c}
-Last address set on pipe 0 for reading. \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!spi@{spi}}
-\index{spi@{spi}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
-\subsubsection[{\texorpdfstring{spi}{spi}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+PI} N\+R\+F24\+L01\+::spi}\hypertarget{classNRF24L01_a6321af25fee367445baa6ab4840f8443}{}\label{classNRF24L01_a6321af25fee367445baa6ab4840f8443}
-\index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!spi\+\_\+speed@{spi\+\_\+speed}}
+Last address set on pipe 0 for reading. \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!spi\+\_\+speed@{spi\+\_\+speed}}
 \index{spi\+\_\+speed@{spi\+\_\+speed}!N\+R\+F24\+L01@{N\+R\+F24\+L01}}
 \subsubsection[{\texorpdfstring{spi\+\_\+speed}{spi_speed}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t N\+R\+F24\+L01\+::spi\+\_\+speed\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classNRF24L01_a4701641c1e8b3d082deb03f93c84d8c7}{}\label{classNRF24L01_a4701641c1e8b3d082deb03f93c84d8c7}
 \hyperlink{classSPI}{S\+PI} Bus Speed \index{N\+R\+F24\+L01@{N\+R\+F24\+L01}!tx\+Delay@{tx\+Delay}}

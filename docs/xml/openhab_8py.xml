@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="openhab_8py" kind="file" language="Python">
+    <compoundname>openhab.py</compoundname>
+    <innerclass refid="classopenhab_1_1OpenHab" prot="public">openhab::OpenHab</innerclass>
+    <innernamespace refid="namespaceopenhab">openhab</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceopenhab" refkind="compound"><highlight class="comment">#!/usr/bin/python3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ssl</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>urllib</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>urllib.request</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classopenhab_1_1OpenHab" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopenhab_1_1OpenHab" kindref="compound">OpenHab</ref>:</highlight></codeline>
+<codeline lineno="11" refid="classopenhab_1_1OpenHab_1a020bd5e4eadf27e4f6f7dadcd5ed96c3" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopenhab_1_1OpenHab_1a020bd5e4eadf27e4f6f7dadcd5ed96c3" kindref="member">__init__</ref>(self,<sp/>hst):</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;<sp/>Initialize<sp/>Openhab<sp/>Class<sp/>&quot;&quot;&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13" refid="classopenhab_1_1OpenHab_1a826d2f891c8b4a75abc3d0addfe2791f" refkind="member"><highlight class="normal"><sp/><sp/>self.<ref refid="classopenhab_1_1OpenHab_1a826d2f891c8b4a75abc3d0addfe2791f" kindref="member">host</ref><sp/>=<sp/>hst<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="classopenhab_1_1OpenHab_1a19e269f9557250b74388ec3ace6d180b" refkind="member"><highlight class="normal"><sp/><sp/>self.<ref refid="classopenhab_1_1OpenHab_1a19e269f9557250b74388ec3ace6d180b" kindref="member">https_sslv3_handler</ref><sp/>=<sp/>urllib.request.HTTPSHandler(context=ssl.SSLContext(ssl.PROTOCOL_SSLv23))</highlight></codeline>
+<codeline lineno="15" refid="classopenhab_1_1OpenHab_1a8fd99a4690e6c0748f7d841d0b235db6" refkind="member"><highlight class="normal"><sp/><sp/>self.<ref refid="classopenhab_1_1OpenHab_1a8fd99a4690e6c0748f7d841d0b235db6" kindref="member">opener</ref><sp/>=<sp/>urllib.request.build_opener(self.<ref refid="classopenhab_1_1OpenHab_1a19e269f9557250b74388ec3ace6d180b" kindref="member">https_sslv3_handler</ref>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>urllib.request.install_opener(self.<ref refid="classopenhab_1_1OpenHab_1a8fd99a4690e6c0748f7d841d0b235db6" kindref="member">opener</ref>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="classopenhab_1_1OpenHab_1a78d35fd46b7acd379efdfea36739ee82" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopenhab_1_1OpenHab_1a78d35fd46b7acd379efdfea36739ee82" kindref="member">checkAllItemsExist</ref>(self):</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/>resp<sp/>=<sp/>self.opener.open(itemurl)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>except(HTTPError):</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">#data<sp/>=<sp/>resp.read().decode(&apos;utf-8&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#print(data)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="classopenhab_1_1OpenHab_1a3c933fe83061e7a84e8b6ba945707efe" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopenhab_1_1OpenHab_1a3c933fe83061e7a84e8b6ba945707efe" kindref="member">putDataInItem</ref>(self,data,itemName):</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;<sp/>Put<sp/>data<sp/>to<sp/>openhab<sp/>item<sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>mask<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&apos;/usr/bin/curl<sp/>-k<sp/>--header<sp/>&quot;Content-Type:<sp/>text/plain&quot;<sp/>--request<sp/>PUT<sp/>--data<sp/>&quot;{1}&quot;<sp/>{0}/rest/items/{2}/state&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>statement<sp/>=<sp/>mask.format(self.<ref refid="classopenhab_1_1OpenHab_1a826d2f891c8b4a75abc3d0addfe2791f" kindref="member">host</ref>,data<sp/>,itemName)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#print(statement)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#r<sp/>=<sp/>os.system(statement)<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="Python/openhab.py"/>
+  </compounddef>
+</doxygen>

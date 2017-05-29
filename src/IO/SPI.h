@@ -22,6 +22,7 @@
 
 #include <avr/io.h>
 
+//namespace SPI {
 
 //! SPI class definition
 /*!
@@ -88,5 +89,7 @@ private:
 
 
 };
+
+//}
 
 #endif /* SPI_H_ */

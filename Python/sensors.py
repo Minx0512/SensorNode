@@ -34,7 +34,7 @@ class Sensors(readsensor.ReadSensor):
           
        mv =  Movement(self.port,self.baudrate)       
        mv.SetNodeAddress(self.nodeMAC)
-       mv.updateTime = 2
+       mv.updateTime = 1
        #mv.Update()
        #mv.InterpretResponse()
        self.sensorObjList.append(mv)
@@ -108,6 +108,7 @@ class DS18B20(readsensor.ReadSensor):
      self.MAC = self.interpResp[0].rsplit("|")     
      self.T = [float(i) for i in self.interpResp[1].replace(u'\xc2\xb0C','').rsplit("|")]
      self.numEl = len(self.T)
+     
      
            
     def GetValuePair(self,idx):

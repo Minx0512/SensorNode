@@ -1,0 +1,313 @@
+\hypertarget{classSensors_1_1DHT22}{}\section{Sensors\+:\+:D\+H\+T22 Class Reference}
+\label{classSensors_1_1DHT22}\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+
+
+\hyperlink{classSensors_1_1DHT22}{D\+H\+T22} class definition.  
+
+
+
+
+{\ttfamily \#include $<$D\+H\+T22.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSensors_1_1DHT22_aea0dffd84011c7e41e7a9741ba94ba77}{D\+H\+T22} ()
+\item 
+\hyperlink{classSensors_1_1DHT22_a3eedb9d60ca7bf7775b55f48f5f686be}{D\+H\+T22} (volatile uint8\+\_\+t \&Wire\+\_\+\+P\+O\+RT, volatile uint8\+\_\+t \&Wire\+\_\+\+D\+DR, volatile uint8\+\_\+t \&Wire\+\_\+\+P\+IN, uint8\+\_\+t Wire\+\_\+\+DQ)
+\item 
+int8\+\_\+t \hyperlink{classSensors_1_1DHT22_a19d8f961fc57ca65d26c7ed2e814dfe6}{Get\+Temperature\+Humidity} (float $\ast$temperature, float $\ast$humidity)
+\item 
+int8\+\_\+t \hyperlink{classSensors_1_1DHT22_ac4401b7197dcaaab5b5b89a3ccedc103}{Get\+Temperature} (float $\ast$temperature)
+\item 
+int8\+\_\+t \hyperlink{classSensors_1_1DHT22_a98c4c72a0f831bb8f3142081f8a1b685}{Get\+Humidity} (float $\ast$humidity)
+\item 
+void \hyperlink{classSensors_1_1DHT22_a7f720c4ef52d3143142a5b7454ba0129}{Get\+Sensor\+String\+X\+ML} (char $\ast$string)
+\item 
+void \hyperlink{classSensors_1_1DHT22_ac3673871317c9d57f99d032bca544dd7}{Get\+Sensor\+Temperature\+String\+X\+ML} (char $\ast$string)
+\item 
+void \hyperlink{classSensors_1_1DHT22_aa3424d261995128db6f8ae9ecd5cbea7}{Get\+Sensor\+Humidity\+String\+X\+ML} (char $\ast$string)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSensors_1_1DHT22_a538ecec2af343da8ff6170df36728931}{Reset} ()
+\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1DHT22_aa6b9b0e30a17d8744d01a49572e42cfe}{Send\+Request} (uint8\+\_\+t bit)
+\item 
+int8\+\_\+t \hyperlink{classSensors_1_1DHT22_a1a336900a0f16363f64076efcc318e68}{Get\+Data} (float $\ast$temperature, float $\ast$humidity)
+\item 
+void \hyperlink{classSensors_1_1DHT22_a3defb05766f77f5d6c5b3ea84ca003cc}{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE} ()
+\item 
+void \hyperlink{classSensors_1_1DHT22_ae9558ae6f38495024ea3f482ebface5c}{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE} ()
+\item 
+void \hyperlink{classSensors_1_1DHT22_a57831c26af2a7eb68ad03189b0de8708}{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+L\+OW} ()
+\item 
+void \hyperlink{classSensors_1_1DHT22_aa60e4bd1cd75740bb59b6f485002c65a}{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+H\+I\+GH} ()
+\item 
+bool \hyperlink{classSensors_1_1DHT22_a6c0e691ca8e80a3fcdf32ae8fdd930e3}{A\+M2302\+\_\+\+H\+I\+G\+H\+\_\+\+I\+N\+P\+UT} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classSensors_1_1DHT22_a715f00b8b520dc18e0297e16209f474f}{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+O\+RT}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classSensors_1_1DHT22_aac53ea2cdcee5bb0724ed9f627bc83a3}{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+D\+DR}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classSensors_1_1DHT22_a5c1f031275dbd5c220dede4ce8f83700}{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+IN}
+\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1DHT22_ad581ecb7a40bf65ef4a443ff89c79c7d}{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+DQ}
+\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1DHT22_ad3a2e38a8a6dafe6afd0d7474cc2f42f}{T\+I\+M\+E\+O\+UT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classSensors_1_1DHT22}{D\+H\+T22} class definition. 
+
+Defines methods for accessing the \hyperlink{classSensors_1_1DHT22}{D\+H\+T22} interface 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!D\+H\+T22@{D\+H\+T22}}
+\index{D\+H\+T22@{D\+H\+T22}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{D\+H\+T22()}{DHT22()}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::\+D\+H\+T22\+::\+D\+H\+T22 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DHT22_aea0dffd84011c7e41e7a9741ba94ba77}{}\label{classSensors_1_1DHT22_aea0dffd84011c7e41e7a9741ba94ba77}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!D\+H\+T22@{D\+H\+T22}}
+\index{D\+H\+T22@{D\+H\+T22}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{D\+H\+T22(volatile uint8\+\_\+t \&\+Wire\+\_\+\+P\+O\+R\+T, volatile uint8\+\_\+t \&\+Wire\+\_\+\+D\+D\+R, volatile uint8\+\_\+t \&\+Wire\+\_\+\+P\+I\+N, uint8\+\_\+t Wire\+\_\+\+D\+Q)}{DHT22(volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volatile uint8_t &Wire_PIN, uint8_t Wire_DQ)}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::\+D\+H\+T22\+::\+D\+H\+T22 (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t \&}]{Wire\+\_\+\+P\+O\+RT, }
+\item[{volatile uint8\+\_\+t \&}]{Wire\+\_\+\+D\+DR, }
+\item[{volatile uint8\+\_\+t \&}]{Wire\+\_\+\+P\+IN, }
+\item[{uint8\+\_\+t}]{Wire\+\_\+\+DQ}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DHT22_a3eedb9d60ca7bf7775b55f48f5f686be}{}\label{classSensors_1_1DHT22_a3eedb9d60ca7bf7775b55f48f5f686be}
+
+
+\subsection{Member Function Documentation}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!A\+M2302\+\_\+\+H\+I\+G\+H\+\_\+\+I\+N\+P\+UT@{A\+M2302\+\_\+\+H\+I\+G\+H\+\_\+\+I\+N\+P\+UT}}
+\index{A\+M2302\+\_\+\+H\+I\+G\+H\+\_\+\+I\+N\+P\+UT@{A\+M2302\+\_\+\+H\+I\+G\+H\+\_\+\+I\+N\+P\+UT}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{A\+M2302\+\_\+\+H\+I\+G\+H\+\_\+\+I\+N\+P\+U\+T()}{AM2302_HIGH_INPUT()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sensors\+::\+D\+H\+T22\+::\+A\+M2302\+\_\+\+H\+I\+G\+H\+\_\+\+I\+N\+P\+UT (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_a6c0e691ca8e80a3fcdf32ae8fdd930e3}{}\label{classSensors_1_1DHT22_a6c0e691ca8e80a3fcdf32ae8fdd930e3}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!A\+M2302\+\_\+\+P\+I\+N\+\_\+\+H\+I\+GH@{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+H\+I\+GH}}
+\index{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+H\+I\+GH@{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+H\+I\+GH}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+H\+I\+G\+H()}{AM2302_PIN_HIGH()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+H\+T22\+::\+A\+M2302\+\_\+\+P\+I\+N\+\_\+\+H\+I\+GH (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_aa60e4bd1cd75740bb59b6f485002c65a}{}\label{classSensors_1_1DHT22_aa60e4bd1cd75740bb59b6f485002c65a}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!A\+M2302\+\_\+\+P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE@{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE}}
+\index{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE@{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+D\+E()}{AM2302_PIN_INPUT_MODE()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+H\+T22\+::\+A\+M2302\+\_\+\+P\+I\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+O\+DE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_a3defb05766f77f5d6c5b3ea84ca003cc}{}\label{classSensors_1_1DHT22_a3defb05766f77f5d6c5b3ea84ca003cc}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!A\+M2302\+\_\+\+P\+I\+N\+\_\+\+L\+OW@{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+L\+OW}}
+\index{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+L\+OW@{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+L\+OW}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+L\+O\+W()}{AM2302_PIN_LOW()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+H\+T22\+::\+A\+M2302\+\_\+\+P\+I\+N\+\_\+\+L\+OW (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_a57831c26af2a7eb68ad03189b0de8708}{}\label{classSensors_1_1DHT22_a57831c26af2a7eb68ad03189b0de8708}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!A\+M2302\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE@{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE}}
+\index{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE@{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{A\+M2302\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+D\+E()}{AM2302_PIN_OUTPUT_MODE()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+H\+T22\+::\+A\+M2302\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+O\+DE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_ae9558ae6f38495024ea3f482ebface5c}{}\label{classSensors_1_1DHT22_ae9558ae6f38495024ea3f482ebface5c}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{Get\+Data(float $\ast$temperature, float $\ast$humidity)}{GetData(float *temperature, float *humidity)}}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t Sensors\+::\+D\+H\+T22\+::\+Get\+Data (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{temperature, }
+\item[{float $\ast$}]{humidity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_a1a336900a0f16363f64076efcc318e68}{}\label{classSensors_1_1DHT22_a1a336900a0f16363f64076efcc318e68}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DHT22_a1a336900a0f16363f64076efcc318e68_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!Get\+Humidity@{Get\+Humidity}}
+\index{Get\+Humidity@{Get\+Humidity}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{Get\+Humidity(float $\ast$humidity)}{GetHumidity(float *humidity)}}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t Sensors\+::\+D\+H\+T22\+::\+Get\+Humidity (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{humidity}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DHT22_a98c4c72a0f831bb8f3142081f8a1b685}{}\label{classSensors_1_1DHT22_a98c4c72a0f831bb8f3142081f8a1b685}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DHT22_a98c4c72a0f831bb8f3142081f8a1b685_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!Get\+Sensor\+Humidity\+String\+X\+ML@{Get\+Sensor\+Humidity\+String\+X\+ML}}
+\index{Get\+Sensor\+Humidity\+String\+X\+ML@{Get\+Sensor\+Humidity\+String\+X\+ML}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{Get\+Sensor\+Humidity\+String\+X\+M\+L(char $\ast$string)}{GetSensorHumidityStringXML(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+H\+T22\+::\+Get\+Sensor\+Humidity\+String\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DHT22_aa3424d261995128db6f8ae9ecd5cbea7}{}\label{classSensors_1_1DHT22_aa3424d261995128db6f8ae9ecd5cbea7}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DHT22_aa3424d261995128db6f8ae9ecd5cbea7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!Get\+Sensor\+String\+X\+ML@{Get\+Sensor\+String\+X\+ML}}
+\index{Get\+Sensor\+String\+X\+ML@{Get\+Sensor\+String\+X\+ML}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{Get\+Sensor\+String\+X\+M\+L(char $\ast$string)}{GetSensorStringXML(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+H\+T22\+::\+Get\+Sensor\+String\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DHT22_a7f720c4ef52d3143142a5b7454ba0129}{}\label{classSensors_1_1DHT22_a7f720c4ef52d3143142a5b7454ba0129}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DHT22_a7f720c4ef52d3143142a5b7454ba0129_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!Get\+Sensor\+Temperature\+String\+X\+ML@{Get\+Sensor\+Temperature\+String\+X\+ML}}
+\index{Get\+Sensor\+Temperature\+String\+X\+ML@{Get\+Sensor\+Temperature\+String\+X\+ML}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{Get\+Sensor\+Temperature\+String\+X\+M\+L(char $\ast$string)}{GetSensorTemperatureStringXML(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+H\+T22\+::\+Get\+Sensor\+Temperature\+String\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DHT22_ac3673871317c9d57f99d032bca544dd7}{}\label{classSensors_1_1DHT22_ac3673871317c9d57f99d032bca544dd7}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DHT22_ac3673871317c9d57f99d032bca544dd7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!Get\+Temperature@{Get\+Temperature}}
+\index{Get\+Temperature@{Get\+Temperature}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{Get\+Temperature(float $\ast$temperature)}{GetTemperature(float *temperature)}}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t Sensors\+::\+D\+H\+T22\+::\+Get\+Temperature (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{temperature}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DHT22_ac4401b7197dcaaab5b5b89a3ccedc103}{}\label{classSensors_1_1DHT22_ac4401b7197dcaaab5b5b89a3ccedc103}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DHT22_ac4401b7197dcaaab5b5b89a3ccedc103_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!Get\+Temperature\+Humidity@{Get\+Temperature\+Humidity}}
+\index{Get\+Temperature\+Humidity@{Get\+Temperature\+Humidity}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{Get\+Temperature\+Humidity(float $\ast$temperature, float $\ast$humidity)}{GetTemperatureHumidity(float *temperature, float *humidity)}}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t Sensors\+::\+D\+H\+T22\+::\+Get\+Temperature\+Humidity (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{temperature, }
+\item[{float $\ast$}]{humidity}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1DHT22_a19d8f961fc57ca65d26c7ed2e814dfe6}{}\label{classSensors_1_1DHT22_a19d8f961fc57ca65d26c7ed2e814dfe6}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DHT22_a19d8f961fc57ca65d26c7ed2e814dfe6_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!Reset@{Reset}}
+\index{Reset@{Reset}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{Reset()}{Reset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+D\+H\+T22\+::\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_a538ecec2af343da8ff6170df36728931}{}\label{classSensors_1_1DHT22_a538ecec2af343da8ff6170df36728931}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DHT22_a538ecec2af343da8ff6170df36728931_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!Send\+Request@{Send\+Request}}
+\index{Send\+Request@{Send\+Request}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{Send\+Request(uint8\+\_\+t bit)}{SendRequest(uint8_t bit)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+D\+H\+T22\+::\+Send\+Request (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{bit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_aa6b9b0e30a17d8744d01a49572e42cfe}{}\label{classSensors_1_1DHT22_aa6b9b0e30a17d8744d01a49572e42cfe}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1DHT22_aa6b9b0e30a17d8744d01a49572e42cfe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+D\+DR@{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+D\+DR}}
+\index{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+D\+DR@{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+D\+DR}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+D\+DR}{AM2302_WIRE_DDR}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ Sensors\+::\+D\+H\+T22\+::\+A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+D\+DR\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_aac53ea2cdcee5bb0724ed9f627bc83a3}{}\label{classSensors_1_1DHT22_aac53ea2cdcee5bb0724ed9f627bc83a3}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+DQ@{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+DQ}}
+\index{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+DQ@{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+DQ}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+DQ}{AM2302_WIRE_DQ}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+D\+H\+T22\+::\+A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+DQ\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_ad581ecb7a40bf65ef4a443ff89c79c7d}{}\label{classSensors_1_1DHT22_ad581ecb7a40bf65ef4a443ff89c79c7d}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+IN@{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+IN}}
+\index{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+IN@{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+IN}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+IN}{AM2302_WIRE_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ Sensors\+::\+D\+H\+T22\+::\+A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+IN\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_a5c1f031275dbd5c220dede4ce8f83700}{}\label{classSensors_1_1DHT22_a5c1f031275dbd5c220dede4ce8f83700}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+O\+RT@{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+O\+RT}}
+\index{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+O\+RT@{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+O\+RT}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+O\+RT}{AM2302_WIRE_PORT}}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ Sensors\+::\+D\+H\+T22\+::\+A\+M2302\+\_\+\+W\+I\+R\+E\+\_\+\+P\+O\+RT\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_a715f00b8b520dc18e0297e16209f474f}{}\label{classSensors_1_1DHT22_a715f00b8b520dc18e0297e16209f474f}
+\index{Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}!T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}}
+\index{T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}!Sensors\+::\+D\+H\+T22@{Sensors\+::\+D\+H\+T22}}
+\subsubsection[{\texorpdfstring{T\+I\+M\+E\+O\+UT}{TIMEOUT}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+D\+H\+T22\+::\+T\+I\+M\+E\+O\+UT\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1DHT22_ad3a2e38a8a6dafe6afd0d7474cc2f42f}{}\label{classSensors_1_1DHT22_ad3a2e38a8a6dafe6afd0d7474cc2f42f}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sensors/\hyperlink{DHT22_8h}{D\+H\+T22.\+h}\item 
+src/\+Sensors/\hyperlink{DHT22_8cpp}{D\+H\+T22.\+cpp}\end{DoxyCompactItemize}

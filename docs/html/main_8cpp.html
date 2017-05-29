@@ -122,22 +122,25 @@ $(document).ready(function(){initNavTree('main_8cpp.html','');});
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;avr/eeprom.h&gt;</code><br />
 <code>#include &lt;avr/pgmspace.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="USART_8h_source.html">IO/USART.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IO_8hpp_source.html">IO/IO.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ParseStrings_8h_source.html">IO/ParseStrings.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="NRF24L01_8h_source.html">Wireless/NRF24L01.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="DS18B20_8h_source.html">Sensors/DS18B20.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Photoresistor_8h_source.html">Sensors/Photoresistor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Sensors_8hpp_source.html">Sensors/Sensors.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#src_2main_8cpp" alt=""/></div>
 <map name="src_2main_8cpp" id="src_2main_8cpp">
-<area shape="rect" id="node11" href="USART_8h.html" title="IO/USART.h" alt="" coords="860,155,957,181"/>
-<area shape="rect" id="node12" href="ParseStrings_8h.html" title="IO/ParseStrings.h" alt="" coords="365,80,492,107"/>
-<area shape="rect" id="node14" href="NRF24L01_8h.html" title="Wireless/NRF24L01.h" alt="" coords="957,80,1108,107"/>
-<area shape="rect" id="node16" href="DS18B20_8h.html" title="Sensors/DS18B20.h" alt="" coords="741,80,882,107"/>
-<area shape="rect" id="node18" href="Photoresistor_8h.html" title="Sensors/Photoresistor.h" alt="" coords="1243,80,1406,107"/>
-<area shape="rect" id="node15" href="SPI_8h.html" title="../IO/SPI.h" alt="" coords="1033,155,1118,181"/>
+<area shape="rect" id="node11" href="IO_8hpp.html" title="IO/IO.hpp" alt="" coords="100,155,179,181"/>
+<area shape="rect" id="node15" href="ParseStrings_8h.html" title="IO/ParseStrings.h" alt="" coords="748,80,875,107"/>
+<area shape="rect" id="node17" href="NRF24L01_8h.html" title="Wireless/NRF24L01.h" alt="" coords="285,80,436,107"/>
+<area shape="rect" id="node18" href="Sensors_8hpp.html" title="Sensors/Sensors.hpp" alt="" coords="378,155,525,181"/>
+<area shape="rect" id="node12" href="I2C_8hpp.html" title="I2C.hpp" alt="" coords="553,229,621,256"/>
+<area shape="rect" id="node13" href="USART_8h.html" title="USART.h" alt="" coords="100,229,179,256"/>
+<area shape="rect" id="node14" href="SPI_8h.html" title="SPI.h" alt="" coords="21,229,76,256"/>
+<area shape="rect" id="node19" href="DHT22_8h.html" title="DHT22.h" alt="" coords="646,229,721,256"/>
+<area shape="rect" id="node21" href="DS18B20_8h.html" title="DS18B20.h" alt="" coords="440,229,529,256"/>
+<area shape="rect" id="node22" href="Photoresistor_8h.html" title="Photoresistor.h" alt="" coords="305,229,416,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -149,10 +152,10 @@ Macros</h2></td></tr>
 <tr class="memdesc:a8df4f3a8a2035df063402ae5f0c1d2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip Select Not (CSN) for the nRF24L01+ Module.  <a href="#a8df4f3a8a2035df063402ae5f0c1d2f8">More...</a><br /></td></tr>
 <tr class="separator:a8df4f3a8a2035df063402ae5f0c1d2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70d2f38065e15ec8ca4c5144e8365815"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a70d2f38065e15ec8ca4c5144e8365815">Sensor_DS18B20</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:a70d2f38065e15ec8ca4c5144e8365815"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a <a class="el" href="classDS18B20.html" title="DS18B20 class definition. ">DS18B20</a> temperature Sensor connected to the microcontroller?  <a href="#a70d2f38065e15ec8ca4c5144e8365815">More...</a><br /></td></tr>
+<tr class="memdesc:a70d2f38065e15ec8ca4c5144e8365815"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a DS18B20 temperature Sensor connected to the microcontroller?  <a href="#a70d2f38065e15ec8ca4c5144e8365815">More...</a><br /></td></tr>
 <tr class="separator:a70d2f38065e15ec8ca4c5144e8365815"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adecd7bcd3e5fd9d8aff20435fa31780d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#adecd7bcd3e5fd9d8aff20435fa31780d">Sensor_DHT22</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:adecd7bcd3e5fd9d8aff20435fa31780d"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a <a class="el" href="classDHT22.html">DHT22</a> temperature and humidity sensor connected?  <a href="#adecd7bcd3e5fd9d8aff20435fa31780d">More...</a><br /></td></tr>
+<tr class="memitem:adecd7bcd3e5fd9d8aff20435fa31780d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#adecd7bcd3e5fd9d8aff20435fa31780d">Sensor_DHT22</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:adecd7bcd3e5fd9d8aff20435fa31780d"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a DHT22 temperature and humidity sensor connected?  <a href="#adecd7bcd3e5fd9d8aff20435fa31780d">More...</a><br /></td></tr>
 <tr class="separator:adecd7bcd3e5fd9d8aff20435fa31780d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a836c5fd677da287d2c5fc1b8f8be283e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a836c5fd677da287d2c5fc1b8f8be283e">Sensor_Move</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:a836c5fd677da287d2c5fc1b8f8be283e"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a movement detector connected?  <a href="#a836c5fd677da287d2c5fc1b8f8be283e">More...</a><br /></td></tr>
@@ -161,11 +164,11 @@ Macros</h2></td></tr>
 <tr class="memdesc:a1302e578dfa4674d460a42d440c505a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a photoresitor connected to a analog input?  <a href="#a1302e578dfa4674d460a42d440c505a1">More...</a><br /></td></tr>
 <tr class="separator:a1302e578dfa4674d460a42d440c505a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a684578846dbea988173b03a4ccf32bc7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a684578846dbea988173b03a4ccf32bc7">Sensor_LightLux</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:a684578846dbea988173b03a4ccf32bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a digital Lux sensor connected (I2C)?  <a href="#a684578846dbea988173b03a4ccf32bc7">More...</a><br /></td></tr>
+<tr class="memdesc:a684578846dbea988173b03a4ccf32bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a digital Lux sensor connected (<a class="el" href="classI2C.html">I2C</a>)?  <a href="#a684578846dbea988173b03a4ccf32bc7">More...</a><br /></td></tr>
 <tr class="separator:a684578846dbea988173b03a4ccf32bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bf6bf97515b582db8d0e241724566a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8bf6bf97515b582db8d0e241724566a2">Sensor_Pressure</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:a8bf6bf97515b582db8d0e241724566a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a pressure sensor connected (I2C)?  <a href="#a8bf6bf97515b582db8d0e241724566a2">More...</a><br /></td></tr>
-<tr class="separator:a8bf6bf97515b582db8d0e241724566a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27be0fec96d7213097669ffc7687167"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa27be0fec96d7213097669ffc7687167">Sensor_BMP180</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:aa27be0fec96d7213097669ffc7687167"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a pressure sensor connected (<a class="el" href="classI2C.html">I2C</a>)?  <a href="#aa27be0fec96d7213097669ffc7687167">More...</a><br /></td></tr>
+<tr class="separator:aa27be0fec96d7213097669ffc7687167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f3f710edd90106325c0c427e712e60"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a73f3f710edd90106325c0c427e712e60">NRF_MainNode</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:a73f3f710edd90106325c0c427e712e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Role of the node.  <a href="#a73f3f710edd90106325c0c427e712e60">More...</a><br /></td></tr>
 <tr class="separator:a73f3f710edd90106325c0c427e712e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,12 +184,6 @@ Functions</h2></td></tr>
 <tr class="memitem:aa0dce6d249d81fb85b082273270ba710"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa0dce6d249d81fb85b082273270ba710">delay_ms</a> (uint16_t ms)</td></tr>
 <tr class="memdesc:aa0dce6d249d81fb85b082273270ba710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delays a certain amount of milliseconds.  <a href="#aa0dce6d249d81fb85b082273270ba710">More...</a><br /></td></tr>
 <tr class="separator:aa0dce6d249d81fb85b082273270ba710"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cb304e3b4343bd171a793e59ebd5606"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0cb304e3b4343bd171a793e59ebd5606">GetNodeMAC</a> (char *newMAC, uint8_t *nrfMAC)</td></tr>
-<tr class="memdesc:a0cb304e3b4343bd171a793e59ebd5606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a MAC address from an uint8 array to a char array.  <a href="#a0cb304e3b4343bd171a793e59ebd5606">More...</a><br /></td></tr>
-<tr class="separator:a0cb304e3b4343bd171a793e59ebd5606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af46bdd771d27528209de39fb63e15b46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af46bdd771d27528209de39fb63e15b46">CreateSensorMAC</a> (char *newMAC, uint8_t *nrfMAC, char *add)</td></tr>
-<tr class="memdesc:af46bdd771d27528209de39fb63e15b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine new MAC address from an uint8 MAC array and a char array to a char array.  <a href="#af46bdd771d27528209de39fb63e15b46">More...</a><br /></td></tr>
-<tr class="separator:af46bdd771d27528209de39fb63e15b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e8f767c8e0f0b39062d3b566a97829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a87e8f767c8e0f0b39062d3b566a97829">CreateSensorMAC</a> (char *newMAC, uint64_t nrfMAC, char *add)</td></tr>
 <tr class="memdesc:a87e8f767c8e0f0b39062d3b566a97829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine new MAC address from an uint64 MAC address and a char array to a char array.  <a href="#a87e8f767c8e0f0b39062d3b566a97829">More...</a><br /></td></tr>
 <tr class="separator:a87e8f767c8e0f0b39062d3b566a97829"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,12 +208,6 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a8529b711d50e5de54deba7c6b1863d14"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8529b711d50e5de54deba7c6b1863d14">uartRX_flag</a> = 0</td></tr>
-<tr class="memdesc:a8529b711d50e5de54deba7c6b1863d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag received UART message.  <a href="#a8529b711d50e5de54deba7c6b1863d14">More...</a><br /></td></tr>
-<tr class="separator:a8529b711d50e5de54deba7c6b1863d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a439ad8ea3b3cc83e6ca8c7625bad49f9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a439ad8ea3b3cc83e6ca8c7625bad49f9">flagMovement</a> = 0</td></tr>
-<tr class="memdesc:a439ad8ea3b3cc83e6ca8c7625bad49f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for movement detected.  <a href="#a439ad8ea3b3cc83e6ca8c7625bad49f9">More...</a><br /></td></tr>
-<tr class="separator:a439ad8ea3b3cc83e6ca8c7625bad49f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e92ed0235dfab5a966c53305989ecbf"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4e92ed0235dfab5a966c53305989ecbf">nrfIntFlag</a> = 0</td></tr>
 <tr class="memdesc:a4e92ed0235dfab5a966c53305989ecbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for incoming message from the RF module.  <a href="#a4e92ed0235dfab5a966c53305989ecbf">More...</a><br /></td></tr>
 <tr class="separator:a4e92ed0235dfab5a966c53305989ecbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,21 +253,18 @@ Variables</h2></td></tr>
 <tr class="separator:a1b027732838bd645cecfd35415ecb8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7192a06e3de8d14ce4345527faaf536"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa7192a06e3de8d14ce4345527faaf536">adressTx</a> [] = {0xB0B0B0B0B0,0xB0B0B0B0C0,0xB0B0B0B0D0,0xB0B0B0B0E0,0xB0B0B0B0F0}</td></tr>
 <tr class="separator:aa7192a06e3de8d14ce4345527faaf536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b0f6407730ca2581db1526feda70ea6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUSART.html">USART</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4b0f6407730ca2581db1526feda70ea6">uart</a> = <a class="el" href="classUSART.html">USART</a>(9600)</td></tr>
-<tr class="memdesc:a4b0f6407730ca2581db1526feda70ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="classUSART.html" title="USART class definition. ">USART</a> object with a baud rate of 9600.  <a href="#a4b0f6407730ca2581db1526feda70ea6">More...</a><br /></td></tr>
-<tr class="separator:a4b0f6407730ca2581db1526feda70ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8d5d287d7e4a27644e7c3b83bfcce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNRF24L01.html">NRF24L01</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4d8d5d287d7e4a27644e7c3b83bfcce2">nrf</a> = <a class="el" href="classNRF24L01.html">NRF24L01</a>(DDRB, PORTB, <a class="el" href="main_8cpp.html#af332f65aca07c44deeda884c8f6c353c">CE</a>, <a class="el" href="main_8cpp.html#a8df4f3a8a2035df063402ae5f0c1d2f8">CSN</a>)</td></tr>
+<tr class="memitem:a5de78d73e194146ea0df32a969c98cc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIO.html">IO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5de78d73e194146ea0df32a969c98cc0">iface</a> = <a class="el" href="classIO.html">IO</a>()</td></tr>
+<tr class="memdesc:a5de78d73e194146ea0df32a969c98cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new IOInterface object.  <a href="#a5de78d73e194146ea0df32a969c98cc0">More...</a><br /></td></tr>
+<tr class="separator:a5de78d73e194146ea0df32a969c98cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8d5d287d7e4a27644e7c3b83bfcce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNRF24L01.html">NRF24L01</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4d8d5d287d7e4a27644e7c3b83bfcce2">nrf</a> = <a class="el" href="classNRF24L01.html">NRF24L01</a>(&amp;<a class="el" href="main_8cpp.html#a5de78d73e194146ea0df32a969c98cc0">iface</a>,DDRB, PORTB, <a class="el" href="main_8cpp.html#af332f65aca07c44deeda884c8f6c353c">CE</a>, <a class="el" href="main_8cpp.html#a8df4f3a8a2035df063402ae5f0c1d2f8">CSN</a>)</td></tr>
 <tr class="memdesc:a4d8d5d287d7e4a27644e7c3b83bfcce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new NRF242L01 object.  <a href="#a4d8d5d287d7e4a27644e7c3b83bfcce2">More...</a><br /></td></tr>
 <tr class="separator:a4d8d5d287d7e4a27644e7c3b83bfcce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe9772f1bc160f5bd6e36ec6d174343"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classParseStrings.html">ParseStrings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aebe9772f1bc160f5bd6e36ec6d174343">ps</a> = <a class="el" href="classParseStrings.html">ParseStrings</a>()</td></tr>
 <tr class="memdesc:aebe9772f1bc160f5bd6e36ec6d174343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new ParseString object.  <a href="#aebe9772f1bc160f5bd6e36ec6d174343">More...</a><br /></td></tr>
 <tr class="separator:aebe9772f1bc160f5bd6e36ec6d174343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af23d3ee921f59b64f27b4581ba32eba7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDS18B20.html">DS18B20</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af23d3ee921f59b64f27b4581ba32eba7">ds</a> = <a class="el" href="classDS18B20.html">DS18B20</a>(PORTD,DDRD,PIND, PD6)</td></tr>
-<tr class="memdesc:af23d3ee921f59b64f27b4581ba32eba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="classDS18B20.html" title="DS18B20 class definition. ">DS18B20</a> object connected to pin PD6.  <a href="#af23d3ee921f59b64f27b4581ba32eba7">More...</a><br /></td></tr>
-<tr class="separator:af23d3ee921f59b64f27b4581ba32eba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56be6db06a776b7b88ce899534d45d67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPhotoresistor.html">Photoresistor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a56be6db06a776b7b88ce899534d45d67">pr</a> = <a class="el" href="classPhotoresistor.html">Photoresistor</a>(0x00)</td></tr>
-<tr class="memdesc:a56be6db06a776b7b88ce899534d45d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new Photoresitor object connected to the analog output 0x00.  <a href="#a56be6db06a776b7b88ce899534d45d67">More...</a><br /></td></tr>
-<tr class="separator:a56be6db06a776b7b88ce899534d45d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae4fba1d9f2de817408b211c6c8b67c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSensors_1_1Sensors.html">Sensors::Sensors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afae4fba1d9f2de817408b211c6c8b67c">sensors</a> = <a class="el" href="classSensors_1_1Sensors.html">Sensors::Sensors</a>()</td></tr>
+<tr class="memdesc:afae4fba1d9f2de817408b211c6c8b67c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create <a class="el" href="namespaceSensors.html">Sensors</a> object.  <a href="#afae4fba1d9f2de817408b211c6c8b67c">More...</a><br /></td></tr>
+<tr class="separator:afae4fba1d9f2de817408b211c6c8b67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="af332f65aca07c44deeda884c8f6c353c"></a>
@@ -348,17 +336,31 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa27be0fec96d7213097669ffc7687167"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Sensor_BMP180&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>is a pressure sensor connected (<a class="el" href="classI2C.html">I2C</a>)? </p>
+
+</div>
+</div>
 <a class="anchor" id="adecd7bcd3e5fd9d8aff20435fa31780d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define Sensor_DHT22&#160;&#160;&#160;0</td>
+          <td class="memname">#define Sensor_DHT22&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>is a <a class="el" href="classDHT22.html">DHT22</a> temperature and humidity sensor connected? </p>
+<p>is a DHT22 temperature and humidity sensor connected? </p>
 
 </div>
 </div>
@@ -372,7 +374,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>is a <a class="el" href="classDS18B20.html" title="DS18B20 class definition. ">DS18B20</a> temperature Sensor connected to the microcontroller? </p>
+<p>is a DS18B20 temperature Sensor connected to the microcontroller? </p>
 
 </div>
 </div>
@@ -386,7 +388,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>is a digital Lux sensor connected (I2C)? </p>
+<p>is a digital Lux sensor connected (<a class="el" href="classI2C.html">I2C</a>)? </p>
 
 </div>
 </div>
@@ -418,63 +420,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8bf6bf97515b582db8d0e241724566a2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define Sensor_Pressure&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>is a pressure sensor connected (I2C)? </p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="af46bdd771d27528209de39fb63e15b46"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CreateSensorMAC </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>newMAC</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>nrfMAC</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>add</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Combine new MAC address from an uint8 MAC array and a char array to a char array. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nrfMAC</td><td>MAC address uint8 array of the nRF24L01+ module </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">newMAC</td><td>MAC address char array of the sensor </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">add</td><td>Address addition </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a87e8f767c8e0f0b39062d3b566a97829"></a>
 <div class="memitem">
 <div class="memproto">
@@ -541,41 +487,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0cb304e3b4343bd171a793e59ebd5606"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GetNodeMAC </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>newMAC</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>nrfMAC</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Copies a MAC address from an uint8 array to a char array. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nrfMAC</td><td>MAC address uint8 array of the nRF24L01+ module </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">newMAC</td><td>MAC address char array of the nRF24L01+ module </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="ab6a58c0a49a7211a1bc6185a6f1f605b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -611,23 +522,6 @@ Variables</h2></td></tr>
 <p>Interrupt routine for INT0. </p>
 <p>RF module sends an interrupt if there is data in its buffer to read </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="main_8cpp_afea150fcd685610cb9f7672fce361e53_cgraph.png" border="0" usemap="#main_8cpp_afea150fcd685610cb9f7672fce361e53_cgraph" alt=""/></div>
-<map name="main_8cpp_afea150fcd685610cb9f7672fce361e53_cgraph" id="main_8cpp_afea150fcd685610cb9f7672fce361e53_cgraph">
-<area shape="rect" id="node2" href="classNRF24L01.html#ad98d10f3759d41e565397aba824d121b" title="NRF24L01::whatHappened" alt="" coords="99,31,279,57"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#ab368039cf5448f0ff5d489563d530c7b" title="NRF24L01::available" alt="" coords="117,132,261,159"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#a60ed6c6e072a1f41ca560546745ec6da" title="NRF24L01::read" alt="" coords="129,81,248,108"/>
-<area shape="rect" id="node3" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="327,31,500,57"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="550,5,709,32"/>
-<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="560,56,699,83"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="548,107,711,133"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="328,81,499,108"/>
-</map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a22acfb428840c6d9aa212764589cf6c6"></a>
@@ -646,6 +540,16 @@ Here is the call graph for this function:</div>
 
 <p>Interrupt routine for INT1. </p>
 <p>Sets the flagMovement to 0 if the movment detector fires </p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a22acfb428840c6d9aa212764589cf6c6_cgraph.png" border="0" usemap="#main_8cpp_a22acfb428840c6d9aa212764589cf6c6_cgraph" alt=""/></div>
+<map name="main_8cpp_a22acfb428840c6d9aa212764589cf6c6_cgraph" id="main_8cpp_a22acfb428840c6d9aa212764589cf6c6_cgraph">
+<area shape="rect" id="node2" href="classSensors_1_1Sensors.html#adf426a126fdf97ab46e8816bea9fc38a" title="Set movement flag. " alt="" coords="99,5,253,47"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -671,11 +575,15 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a09ce999e15ad60b8a3f07d08af1946f9_cgraph.png" border="0" usemap="#main_8cpp_a09ce999e15ad60b8a3f07d08af1946f9_cgraph" alt=""/></div>
 <map name="main_8cpp_a09ce999e15ad60b8a3f07d08af1946f9_cgraph" id="main_8cpp_a09ce999e15ad60b8a3f07d08af1946f9_cgraph">
-<area shape="rect" id="node2" href="classUSART.html#a7e56b380e59b576bbac13e60ca9ba829" title="Reads incoming string. " alt="" coords="115,5,250,32"/>
-<area shape="rect" id="node4" href="classUSART.html#a249b0d6967ead56f39448d4954835a27" title="Writes String to interface. " alt="" coords="113,56,252,83"/>
-<area shape="rect" id="node6" href="classUSART.html#abad4151d072782e70255f999a1451199" title="Flush USART buffer. " alt="" coords="99,107,267,133"/>
-<area shape="rect" id="node3" href="classUSART.html#a42a1789b9a8805da6ed3f4f62f74a764" title="Read 1 Byte of incoming data. " alt="" coords="315,5,436,32"/>
-<area shape="rect" id="node5" href="classUSART.html#a0103c87dca8c49a1fa9ec607d4d494a9" title="Send Byte via the USART interface. " alt="" coords="315,56,436,83"/>
+<area shape="rect" id="node2" href="classIO.html#a1febbd3f3b0a0a482226ee1659f2f7d1" title="Reads incoming string. " alt="" coords="113,5,269,32"/>
+<area shape="rect" id="node5" href="classIO.html#a240a25927946ea2994e271eb56948362" title="Writes String to interface. " alt="" coords="112,56,271,83"/>
+<area shape="rect" id="node8" href="classIO.html#ad7933ecdc01630b62be377ab873fea21" title="IO::USART_SetRxFlagTrue" alt="" coords="99,107,284,133"/>
+<area shape="rect" id="node9" href="classIO.html#a04360979dfc7e8960abb4b7659257b68" title="Flush USART buffer. " alt="" coords="127,157,256,184"/>
+<area shape="rect" id="node3" href="classUSART.html#a7e56b380e59b576bbac13e60ca9ba829" title="Reads incoming string. " alt="" coords="349,5,483,32"/>
+<area shape="rect" id="node4" href="classUSART.html#a42a1789b9a8805da6ed3f4f62f74a764" title="Read 1 Byte of incoming data. " alt="" coords="548,5,669,32"/>
+<area shape="rect" id="node6" href="classUSART.html#a249b0d6967ead56f39448d4954835a27" title="Writes String to interface. " alt="" coords="347,56,485,83"/>
+<area shape="rect" id="node7" href="classUSART.html#a0103c87dca8c49a1fa9ec607d4d494a9" title="Send Byte via the USART interface. " alt="" coords="548,56,669,83"/>
+<area shape="rect" id="node10" href="classUSART.html#abad4151d072782e70255f999a1451199" title="Flush USART buffer. " alt="" coords="332,157,500,184"/>
 </map>
 </div>
 </p>
@@ -704,55 +612,55 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
 <map name="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#ab6a58c0a49a7211a1bc6185a6f1f605b" title="Initialize interrupts. " alt="" coords="164,571,253,597"/>
-<area shape="rect" id="node3" href="classUSART.html#a5f8bbc3788153e13d94ece254f8ee2e7" title="Initialize USART interface. " alt="" coords="143,621,274,648"/>
-<area shape="rect" id="node4" href="main_8cpp.html#aa0dce6d249d81fb85b082273270ba710" title="Delays a certain amount of milliseconds. " alt="" coords="169,672,248,699"/>
-<area shape="rect" id="node5" href="main_8cpp.html#af3f2bf35046819f223de9b818029af1c" title="Setup RF Module. " alt="" coords="167,723,251,749"/>
-<area shape="rect" id="node24" href="classNRF24L01.html#ad64a887cae746be5ca43cf08445feed9" title="NRF24L01::openWritingPipe" alt="" coords="377,951,565,977"/>
-<area shape="rect" id="node25" href="classNRF24L01.html#a9b458f77f6ae6c42f330710e703dd847" title="NRF24L01::openReadingPipe" alt="" coords="649,1179,844,1205"/>
-<area shape="rect" id="node26" href="classNRF24L01.html#aaabd39829998b609c0dc317af4f141b2" title="NRF24L01::startListening" alt="" coords="385,799,556,825"/>
-<area shape="rect" id="node29" href="classParseStrings.html#a49f5520441d291626b4d655d20a6ab19" title="Parse const character string. " alt="" coords="139,1039,278,1065"/>
-<area shape="rect" id="node31" href="classParseStrings.html#a9fbcb70ec76da019901ac4d04d8f48d7" title="get Command ID " alt="" coords="126,1089,291,1116"/>
-<area shape="rect" id="node32" href="classParseStrings.html#a9287dd0575737da66fa0ba2f8fdd003b" title="Returns Property ID as character array. " alt="" coords="115,1140,302,1167"/>
-<area shape="rect" id="node33" href="classParseStrings.html#abda18520c80670139930230a2524b964" title="Returns command property. " alt="" coords="109,1191,309,1217"/>
-<area shape="rect" id="node34" href="classParseStrings.html#a1a177dfb6cb057b7709710362b3e10a0" title="Parse MAC address. " alt="" coords="124,1241,293,1268"/>
-<area shape="rect" id="node35" href="classParseStrings.html#a7b0f8fdd77be81594f0495637de5138c" title="Get MAC address as uint64_t. " alt="" coords="132,1292,285,1319"/>
-<area shape="rect" id="node36" href="classParseStrings.html#a48fbe6998c3dd4d6bd5a57644a45eb8e" title="Get Property string. " alt="" coords="123,1343,295,1385"/>
-<area shape="rect" id="node37" href="main_8cpp.html#af46bdd771d27528209de39fb63e15b46" title="Combine new MAC address from an uint8 MAC array and a char array to a char array. ..." alt="" coords="143,1409,275,1436"/>
-<area shape="rect" id="node38" href="classUSART.html#a249b0d6967ead56f39448d4954835a27" title="Writes String to interface. " alt="" coords="139,1460,278,1487"/>
-<area shape="rect" id="node40" href="classNRF24L01.html#a6ad13189b732f237ac148c659ddf6b01" title="NRF24L01::stopListening" alt="" coords="385,849,556,876"/>
-<area shape="rect" id="node41" href="classParseStrings.html#a6dbe145425dd08c33444e5ffd9181041" title="get Property ID as a MAC address array " alt="" coords="123,1511,295,1553"/>
-<area shape="rect" id="node42" href="classDHT22.html#ac3f4e0757e14c5a8ea96cd4eb5e8d57c" title="DHT22::GetSensorStringXML" alt="" coords="111,1577,306,1604"/>
-<area shape="rect" id="node45" href="classPhotoresistor.html#afa6d3901116b270855a95156f99010e4" title="Get sensor value. " alt="" coords="124,1629,293,1670"/>
-<area shape="rect" id="node47" href="classDS18B20.html#a64a03b4a18a9d2b3faeb7943865055e9" title="Get xml style sensor string. " alt="" coords="104,1695,313,1721"/>
-<area shape="rect" id="node50" href="classDS18B20.html#af18146fd823d04f5472fb305e46f02b0" title="Get MAC addresses from MACString. " alt="" coords="123,1745,294,1772"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a2973773d1a158e1cfbf52198f248c548" title="NRF24L01::Init" alt="" coords="415,368,526,395"/>
-<area shape="rect" id="node15" href="classNRF24L01.html#a7319961d6048e32546ad5df934bd42d8" title="NRF24L01::setPALevel" alt="" coords="667,317,827,344"/>
-<area shape="rect" id="node16" href="classNRF24L01.html#a9db0803c6d87e6ada7febea2240a7b1c" title="NRF24L01::setDataRate" alt="" coords="663,419,830,445"/>
-<area shape="rect" id="node17" href="classNRF24L01.html#aa8eaf9d5ed604f60a00cd79fed9edad7" title="NRF24L01::setChannel" alt="" coords="667,64,826,91"/>
-<area shape="rect" id="node20" href="classNRF24L01.html#a6081dd6dd9cdffbc1c7534ee1824201d" title="NRF24L01::setCRCLength" alt="" coords="657,571,837,597"/>
-<area shape="rect" id="node21" href="classNRF24L01.html#a33b1c7dd1cad95dae57ef87bf3dce5c8" title="NRF24L01::setAutoAck" alt="" coords="390,64,551,91"/>
-<area shape="rect" id="node22" href="classNRF24L01.html#ae4067455572c6731211315b3900f5cbd" title="NRF24L01::enableAckPayload" alt="" coords="646,723,847,749"/>
-<area shape="rect" id="node23" href="classNRF24L01.html#abd060c4df7efac781ed5812a0ee19d08" title="NRF24L01::enableDynamicPayloads" alt="" coords="628,520,865,547"/>
-<area shape="rect" id="node7" href="classSPI.html#a7e28e3328e32b650ead0f7640cee6e81" title="Initialize SPI. " alt="" coords="711,368,782,395"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="672,875,821,901"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="918,621,1091,648"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="1144,571,1307,597"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="918,571,1091,597"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="913,520,1096,547"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#a0bb209d94b62e2a28af53179af713f3c" title="NRF24L01::setRetries" alt="" coords="670,267,823,293"/>
-<area shape="rect" id="node18" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="677,773,817,800"/>
-<area shape="rect" id="node19" href="classNRF24L01.html#a8e184a0a6ca30fbae69c1331a567deda" title="NRF24L01::powerUp" alt="" coords="674,469,819,496"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="915,1179,1095,1205"/>
-<area shape="rect" id="node27" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="670,976,823,1003"/>
-<area shape="rect" id="node28" href="classNRF24L01.html#a7214eaa3fcd3b6576d8f290e6ab71955" title="NRF24L01::closeReadingPipe" alt="" coords="647,824,846,851"/>
-<area shape="rect" id="node30" href="classParseStrings.html#a5d694beffe019842455b788cca9cb26a" title="Clears all variables. " alt="" coords="395,1052,546,1079"/>
-<area shape="rect" id="node39" href="classUSART.html#a0103c87dca8c49a1fa9ec607d4d494a9" title="Send Byte via the USART interface. " alt="" coords="410,1460,531,1487"/>
-<area shape="rect" id="node43" href="classDHT22.html#a51552e5b7373329a6751aeffc04a8fd5" title="DHT22::GetTemperatureHumidity" alt="" coords="361,1531,580,1557"/>
-<area shape="rect" id="node44" href="classDHT22.html#acfa5b6640685318856f09aa84080fd76" title="DHT22::Reset" alt="" coords="417,1581,524,1608"/>
-<area shape="rect" id="node46" href="classPhotoresistor.html#aea81da3cce831497e50b02344bbba238" title="Reads digital value of the AD converter. " alt="" coords="379,1636,563,1663"/>
-<area shape="rect" id="node48" href="classDS18B20.html#a817183f6ef9552d6559d58d714e5c804" title="Sensor Initialization. " alt="" coords="374,1691,567,1717"/>
-<area shape="rect" id="node49" href="classDS18B20.html#a6340d31cea87cf473af13fc7f15f60e4" title="Takes a Measurement per sensor on the bus. " alt="" coords="373,1741,569,1768"/>
+<area shape="rect" id="node2" href="main_8cpp.html#ab6a58c0a49a7211a1bc6185a6f1f605b" title="Initialize interrupts. " alt="" coords="159,183,249,209"/>
+<area shape="rect" id="node3" href="classIO.html#add6f3bdf0120b0d63d7b48a72e8edc1e" title="IO::InitInterfaces" alt="" coords="144,233,264,260"/>
+<area shape="rect" id="node7" href="classSensors_1_1Sensors.html#a266e3c68574f125f214528c267723a3d" title="Sensors::Sensors::InitSensors" alt="" coords="104,385,304,412"/>
+<area shape="rect" id="node8" href="main_8cpp.html#aa0dce6d249d81fb85b082273270ba710" title="Delays a certain amount of milliseconds. " alt="" coords="165,436,243,463"/>
+<area shape="rect" id="node9" href="classIO.html#a240a25927946ea2994e271eb56948362" title="Writes String to interface. " alt="" coords="125,487,283,513"/>
+<area shape="rect" id="node12" href="main_8cpp.html#af3f2bf35046819f223de9b818029af1c" title="Setup RF Module. " alt="" coords="162,537,246,564"/>
+<area shape="rect" id="node33" href="classIO.html#af8171de8979d317fec0a187ba087a626" title="IO::USART_GetRxFlag" alt="" coords="124,588,284,615"/>
+<area shape="rect" id="node34" href="classParseStrings.html#a49f5520441d291626b4d655d20a6ab19" title="Parse const character string. " alt="" coords="135,639,273,665"/>
+<area shape="rect" id="node36" href="classParseStrings.html#a9fbcb70ec76da019901ac4d04d8f48d7" title="get Command ID " alt="" coords="121,689,287,716"/>
+<area shape="rect" id="node37" href="classParseStrings.html#a9287dd0575737da66fa0ba2f8fdd003b" title="Returns Property ID as character array. " alt="" coords="111,740,297,767"/>
+<area shape="rect" id="node38" href="classParseStrings.html#abda18520c80670139930230a2524b964" title="Returns command property. " alt="" coords="104,791,304,817"/>
+<area shape="rect" id="node39" href="classParseStrings.html#a1a177dfb6cb057b7709710362b3e10a0" title="Parse MAC address. " alt="" coords="119,841,289,868"/>
+<area shape="rect" id="node40" href="classParseStrings.html#a7b0f8fdd77be81594f0495637de5138c" title="Get MAC address as uint64_t. " alt="" coords="127,892,281,919"/>
+<area shape="rect" id="node41" href="classParseStrings.html#a48fbe6998c3dd4d6bd5a57644a45eb8e" title="Get Property string. " alt="" coords="118,943,290,985"/>
+<area shape="rect" id="node42" href="main_8cpp.html#a87e8f767c8e0f0b39062d3b566a97829" title="Combine new MAC address from an uint64 MAC address and a char array to a char array. " alt="" coords="138,1009,270,1036"/>
+<area shape="rect" id="node43" href="classParseStrings.html#a6dbe145425dd08c33444e5ffd9181041" title="get Property ID as a MAC address array " alt="" coords="118,1061,290,1102"/>
+<area shape="rect" id="node44" href="classSensors_1_1Sensors.html#ac4150d860e2182a70aeb1bbbba371f03" title="Get movement. " alt="" coords="127,1126,281,1167"/>
+<area shape="rect" id="node45" href="classSensors_1_1Sensors.html#a17bd8b2ff819fce13ecfbfbd4f74c0ab" title="Set movement flag. " alt="" coords="127,1191,281,1233"/>
+<area shape="rect" id="node46" href="classSensors_1_1Sensors.html#a633a1ff54564aa6f02093556c0a6b642" title="Get sensor value. " alt="" coords="116,1257,292,1298"/>
+<area shape="rect" id="node47" href="classSensors_1_1Sensors.html#a4881149a3a797fad4b58e1fea10e8d39" title="Get sensor value. " alt="" coords="125,1322,283,1363"/>
+<area shape="rect" id="node48" href="classSensors_1_1Sensors.html#af888700f7df3903e91f4aaf4a5c46007" title="Get MAC addresses from MACString. " alt="" coords="109,1387,299,1429"/>
+<area shape="rect" id="node49" href="classSensors_1_1Sensors.html#ae55034345130ef7b24d1f0cc3718c655" title="Get xml style sensor string. " alt="" coords="109,1453,299,1494"/>
+<area shape="rect" id="node50" href="classIO.html#a69cddfa296c916c81cf7480c6c7f9139" title="IO::USART_SetRxFlagFalse" alt="" coords="109,1519,299,1545"/>
+<area shape="rect" id="node4" href="classSPI.html#a7e28e3328e32b650ead0f7640cee6e81" title="Initialize SPI. " alt="" coords="411,132,481,159"/>
+<area shape="rect" id="node5" href="classUSART.html#a5f8bbc3788153e13d94ece254f8ee2e7" title="Initialize USART interface. " alt="" coords="381,183,511,209"/>
+<area shape="rect" id="node6" href="classI2C.html#ab6cd0165be5e59dfe57976f1ae4325ec" title="I2C::Init" alt="" coords="411,233,481,260"/>
+<area shape="rect" id="node10" href="classUSART.html#a249b0d6967ead56f39448d4954835a27" title="Writes String to interface. " alt="" coords="377,284,515,311"/>
+<area shape="rect" id="node11" href="classUSART.html#a0103c87dca8c49a1fa9ec607d4d494a9" title="Send Byte via the USART interface. " alt="" coords="646,5,767,32"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#a2973773d1a158e1cfbf52198f248c548" title="NRF24L01::Init" alt="" coords="391,487,501,513"/>
+<area shape="rect" id="node21" href="classNRF24L01.html#a7319961d6048e32546ad5df934bd42d8" title="NRF24L01::setPALevel" alt="" coords="627,512,787,539"/>
+<area shape="rect" id="node22" href="classNRF24L01.html#a9db0803c6d87e6ada7febea2240a7b1c" title="NRF24L01::setDataRate" alt="" coords="623,765,790,792"/>
+<area shape="rect" id="node23" href="classNRF24L01.html#aa8eaf9d5ed604f60a00cd79fed9edad7" title="NRF24L01::setChannel" alt="" coords="627,208,786,235"/>
+<area shape="rect" id="node26" href="classNRF24L01.html#a6081dd6dd9cdffbc1c7534ee1824201d" title="NRF24L01::setCRCLength" alt="" coords="617,867,797,893"/>
+<area shape="rect" id="node27" href="classNRF24L01.html#a33b1c7dd1cad95dae57ef87bf3dce5c8" title="NRF24L01::setAutoAck" alt="" coords="365,335,527,361"/>
+<area shape="rect" id="node28" href="classNRF24L01.html#ae4067455572c6731211315b3900f5cbd" title="NRF24L01::enableAckPayload" alt="" coords="606,968,807,995"/>
+<area shape="rect" id="node29" href="classNRF24L01.html#abd060c4df7efac781ed5812a0ee19d08" title="NRF24L01::enableDynamicPayloads" alt="" coords="588,1019,825,1045"/>
+<area shape="rect" id="node30" href="classNRF24L01.html#ad64a887cae746be5ca43cf08445feed9" title="NRF24L01::openWritingPipe" alt="" coords="352,385,540,412"/>
+<area shape="rect" id="node31" href="classNRF24L01.html#a9b458f77f6ae6c42f330710e703dd847" title="NRF24L01::openReadingPipe" alt="" coords="609,816,804,843"/>
+<area shape="rect" id="node32" href="classNRF24L01.html#aaabd39829998b609c0dc317af4f141b2" title="NRF24L01::startListening" alt="" coords="361,639,531,665"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="632,360,781,387"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="878,765,1051,792"/>
+<area shape="rect" id="node16" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="1104,411,1267,437"/>
+<area shape="rect" id="node17" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="878,512,1051,539"/>
+<area shape="rect" id="node18" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="893,360,1036,387"/>
+<area shape="rect" id="node19" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="873,309,1056,336"/>
+<area shape="rect" id="node20" href="classNRF24L01.html#a0bb209d94b62e2a28af53179af713f3c" title="NRF24L01::setRetries" alt="" coords="630,461,783,488"/>
+<area shape="rect" id="node24" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="637,664,777,691"/>
+<area shape="rect" id="node25" href="classNRF24L01.html#a8e184a0a6ca30fbae69c1331a567deda" title="NRF24L01::powerUp" alt="" coords="634,613,779,640"/>
+<area shape="rect" id="node35" href="classParseStrings.html#a5d694beffe019842455b788cca9cb26a" title="Clears all variables. " alt="" coords="371,943,521,969"/>
 </map>
 </div>
 </p>
@@ -779,37 +687,37 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_af3f2bf35046819f223de9b818029af1c_cgraph.png" border="0" usemap="#main_8cpp_af3f2bf35046819f223de9b818029af1c_cgraph" alt=""/></div>
 <map name="main_8cpp_af3f2bf35046819f223de9b818029af1c_cgraph" id="main_8cpp_af3f2bf35046819f223de9b818029af1c_cgraph">
-<area shape="rect" id="node2" href="classNRF24L01.html#a2973773d1a158e1cfbf52198f248c548" title="NRF24L01::Init" alt="" coords="167,645,278,671"/>
-<area shape="rect" id="node19" href="classNRF24L01.html#a7319961d6048e32546ad5df934bd42d8" title="NRF24L01::setPALevel" alt="" coords="395,769,555,795"/>
-<area shape="rect" id="node20" href="classNRF24L01.html#a9db0803c6d87e6ada7febea2240a7b1c" title="NRF24L01::setDataRate" alt="" coords="391,819,558,846"/>
-<area shape="rect" id="node21" href="classNRF24L01.html#aa8eaf9d5ed604f60a00cd79fed9edad7" title="NRF24L01::setChannel" alt="" coords="395,718,554,745"/>
-<area shape="rect" id="node25" href="classNRF24L01.html#a6081dd6dd9cdffbc1c7534ee1824201d" title="NRF24L01::setCRCLength" alt="" coords="385,921,565,947"/>
-<area shape="rect" id="node26" href="classNRF24L01.html#a33b1c7dd1cad95dae57ef87bf3dce5c8" title="NRF24L01::setAutoAck" alt="" coords="142,379,303,406"/>
+<area shape="rect" id="node2" href="classNRF24L01.html#a2973773d1a158e1cfbf52198f248c548" title="NRF24L01::Init" alt="" coords="167,515,278,542"/>
+<area shape="rect" id="node19" href="classNRF24L01.html#a7319961d6048e32546ad5df934bd42d8" title="NRF24L01::setPALevel" alt="" coords="395,870,555,897"/>
+<area shape="rect" id="node20" href="classNRF24L01.html#a9db0803c6d87e6ada7febea2240a7b1c" title="NRF24L01::setDataRate" alt="" coords="391,971,558,998"/>
+<area shape="rect" id="node21" href="classNRF24L01.html#aa8eaf9d5ed604f60a00cd79fed9edad7" title="NRF24L01::setChannel" alt="" coords="395,566,554,593"/>
+<area shape="rect" id="node25" href="classNRF24L01.html#a6081dd6dd9cdffbc1c7534ee1824201d" title="NRF24L01::setCRCLength" alt="" coords="385,1123,565,1150"/>
+<area shape="rect" id="node26" href="classNRF24L01.html#a33b1c7dd1cad95dae57ef87bf3dce5c8" title="NRF24L01::setAutoAck" alt="" coords="142,819,303,846"/>
 <area shape="rect" id="node27" href="classNRF24L01.html#ae4067455572c6731211315b3900f5cbd" title="NRF24L01::enableAckPayload" alt="" coords="374,1174,575,1201"/>
 <area shape="rect" id="node28" href="classNRF24L01.html#abd060c4df7efac781ed5812a0ee19d08" title="NRF24L01::enableDynamicPayloads" alt="" coords="356,1225,593,1251"/>
-<area shape="rect" id="node29" href="classNRF24L01.html#ad64a887cae746be5ca43cf08445feed9" title="NRF24L01::openWritingPipe" alt="" coords="381,262,569,289"/>
-<area shape="rect" id="node30" href="classNRF24L01.html#a9b458f77f6ae6c42f330710e703dd847" title="NRF24L01::openReadingPipe" alt="" coords="377,465,572,491"/>
-<area shape="rect" id="node31" href="classNRF24L01.html#aaabd39829998b609c0dc317af4f141b2" title="NRF24L01::startListening" alt="" coords="137,990,308,1017"/>
-<area shape="rect" id="node3" href="classSPI.html#a7e28e3328e32b650ead0f7640cee6e81" title="Initialize SPI. " alt="" coords="439,515,510,542"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="400,211,549,238"/>
+<area shape="rect" id="node29" href="classNRF24L01.html#ad64a887cae746be5ca43cf08445feed9" title="NRF24L01::openWritingPipe" alt="" coords="381,313,569,339"/>
+<area shape="rect" id="node30" href="classNRF24L01.html#a9b458f77f6ae6c42f330710e703dd847" title="NRF24L01::openReadingPipe" alt="" coords="377,617,572,643"/>
+<area shape="rect" id="node31" href="classNRF24L01.html#aaabd39829998b609c0dc317af4f141b2" title="NRF24L01::startListening" alt="" coords="137,757,308,783"/>
+<area shape="rect" id="node3" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="400,211,549,238"/>
 <area shape="rect" id="node8" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="1100,262,1263,289"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="645,845,818,871"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="645,711,818,738"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="645,858,818,885"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="645,667,818,694"/>
 <area shape="rect" id="node14" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="660,465,803,491"/>
-<area shape="rect" id="node17" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="869,262,1052,289"/>
-<area shape="rect" id="node18" href="classNRF24L01.html#a0bb209d94b62e2a28af53179af713f3c" title="NRF24L01::setRetries" alt="" coords="398,667,551,694"/>
-<area shape="rect" id="node22" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="405,617,545,643"/>
-<area shape="rect" id="node23" href="classNRF24L01.html#a8e184a0a6ca30fbae69c1331a567deda" title="NRF24L01::powerUp" alt="" coords="402,1073,547,1099"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="871,313,1051,339"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="641,515,821,542"/>
+<area shape="rect" id="node17" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="869,161,1052,187"/>
+<area shape="rect" id="node18" href="classNRF24L01.html#a0bb209d94b62e2a28af53179af713f3c" title="NRF24L01::setRetries" alt="" coords="398,515,551,542"/>
+<area shape="rect" id="node22" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="405,414,545,441"/>
+<area shape="rect" id="node23" href="classNRF24L01.html#a8e184a0a6ca30fbae69c1331a567deda" title="NRF24L01::powerUp" alt="" coords="402,667,547,694"/>
+<area shape="rect" id="node4" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="871,313,1051,339"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="641,566,821,593"/>
 <area shape="rect" id="node12" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="875,363,1046,390"/>
 <area shape="rect" id="node13" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="875,414,1046,441"/>
 <area shape="rect" id="node15" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="889,465,1032,491"/>
 <area shape="rect" id="node16" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="657,363,806,390"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="1102,414,1261,441"/>
-<area shape="rect" id="node7" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1112,465,1251,491"/>
-<area shape="rect" id="node24" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="657,1073,806,1099"/>
-<area shape="rect" id="node32" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="398,1123,551,1150"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="1102,414,1261,441"/>
+<area shape="rect" id="node6" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="1101,465,1261,491"/>
+<area shape="rect" id="node7" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1311,465,1449,491"/>
+<area shape="rect" id="node24" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="657,617,806,643"/>
+<area shape="rect" id="node32" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="398,921,551,947"/>
 <area shape="rect" id="node33" href="classNRF24L01.html#a7214eaa3fcd3b6576d8f290e6ab71955" title="NRF24L01::closeReadingPipe" alt="" coords="375,1022,574,1049"/>
 </map>
 </div>
@@ -884,20 +792,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="af23d3ee921f59b64f27b4581ba32eba7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classDS18B20.html">DS18B20</a> ds = <a class="el" href="classDS18B20.html">DS18B20</a>(PORTD,DDRD,PIND, PD6)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create new <a class="el" href="classDS18B20.html" title="DS18B20 class definition. ">DS18B20</a> object connected to pin PD6. </p>
-
-</div>
-</div>
 <a class="anchor" id="a61b4f384283b1a2ea53ac795896b6a53"></a>
 <div class="memitem">
 <div class="memproto">
@@ -912,20 +806,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a439ad8ea3b3cc83e6ca8c7625bad49f9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t flagMovement = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Flag for movement detected. </p>
-
-</div>
-</div>
 <a class="anchor" id="a19dbb1ae18200033d3316c06ae09b7f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -937,6 +817,20 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Template for getSystem string. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5de78d73e194146ea0df32a969c98cc0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIO.html">IO</a> iface = <a class="el" href="classIO.html">IO</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create new IOInterface object. </p>
 
 </div>
 </div>
@@ -971,7 +865,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classNRF24L01.html">NRF24L01</a> nrf = <a class="el" href="classNRF24L01.html">NRF24L01</a>(DDRB, PORTB, <a class="el" href="main_8cpp.html#af332f65aca07c44deeda884c8f6c353c">CE</a>, <a class="el" href="main_8cpp.html#a8df4f3a8a2035df063402ae5f0c1d2f8">CSN</a>)</td>
+          <td class="memname"><a class="el" href="classNRF24L01.html">NRF24L01</a> nrf = <a class="el" href="classNRF24L01.html">NRF24L01</a>(&amp;<a class="el" href="main_8cpp.html#a5de78d73e194146ea0df32a969c98cc0">iface</a>,DDRB, PORTB, <a class="el" href="main_8cpp.html#af332f65aca07c44deeda884c8f6c353c">CE</a>, <a class="el" href="main_8cpp.html#a8df4f3a8a2035df063402ae5f0c1d2f8">CSN</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1036,20 +930,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a56be6db06a776b7b88ce899534d45d67"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classPhotoresistor.html">Photoresistor</a> pr = <a class="el" href="classPhotoresistor.html">Photoresistor</a>(0x00)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create new Photoresitor object connected to the analog output 0x00. </p>
-
-</div>
-</div>
 <a class="anchor" id="aebe9772f1bc160f5bd6e36ec6d174343"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1106,6 +986,20 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="afae4fba1d9f2de817408b211c6c8b67c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSensors_1_1Sensors.html">Sensors::Sensors</a> sensors = <a class="el" href="classSensors_1_1Sensors.html">Sensors::Sensors</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create <a class="el" href="namespaceSensors.html">Sensors</a> object. </p>
+
+</div>
+</div>
 <a class="anchor" id="ac19b967928c4ef5b461808cbac40840c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1117,34 +1011,6 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Receive string Buffer. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4b0f6407730ca2581db1526feda70ea6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classUSART.html">USART</a> uart = <a class="el" href="classUSART.html">USART</a>(9600)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create new <a class="el" href="classUSART.html" title="USART class definition. ">USART</a> object with a baud rate of 9600. </p>
-
-</div>
-</div>
-<a class="anchor" id="a8529b711d50e5de54deba7c6b1863d14"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t uartRX_flag = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Flag received UART message. </p>
 
 </div>
 </div>

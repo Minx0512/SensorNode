@@ -1,9 +1,22 @@
 var searchData=
 [
-  ['uart',['uart',['../main_8cpp.html#a4b0f6407730ca2581db1526feda70ea6',1,'main.cpp']]],
-  ['uartrx_5fflag',['uartRX_flag',['../main_8cpp.html#a8529b711d50e5de54deba7c6b1863d14',1,'main.cpp']]],
-  ['unith',['unitH',['../classsensors_1_1DHT22.html#a9055341fda2f3628ef888a39254d1c83',1,'sensors::DHT22']]],
-  ['unitp',['unitP',['../classsensors_1_1BMP180.html#a3646abe1f61aa50d15047f09588a2be1',1,'sensors::BMP180']]],
-  ['unitt',['unitT',['../classsensors_1_1DS18B20.html#a2a93fcbbf67debf4356c6c3a9b2b58f3',1,'sensors.DS18B20.unitT()'],['../classsensors_1_1DHT22.html#a9fab2812780c9f861d4bf8adc4d287d6',1,'sensors.DHT22.unitT()'],['../classsensors_1_1BMP180.html#a954ddd1f76899d7d2b05aed669abd094',1,'sensors.BMP180.unitT()']]],
-  ['updatetime',['updateTime',['../classreadsensor_1_1ReadSensor.html#adb42967437e88c29257d8fa7e6dcd8e2',1,'readsensor::ReadSensor']]]
+  ['sendsensorstr',['sendSensorStr',['../main_8cpp.html#ac92f70960babcaa68482b8ea681bcec8',1,'main.cpp']]],
+  ['sendsystemstr',['sendSystemStr',['../main_8cpp.html#ad5572274b88d1bfc8a5e057e1132bf90',1,'main.cpp']]],
+  ['sens',['sens',['../classSensorNode_1_1SensorNode.html#ad8aec254c15c97a8b5c709480f31b2bb',1,'SensorNode::SensorNode']]],
+  ['sensorlist',['sensorList',['../classsensors_1_1Sensors.html#a70cd97f59cdb39f1f02260551d7e5ea5',1,'sensors::Sensors']]],
+  ['sensorobjlist',['sensorObjList',['../classsensors_1_1Sensors.html#a753ac6bef7233285cbf9651d5f5a5b7d',1,'sensors::Sensors']]],
+  ['sensors',['sensors',['../main_8cpp.html#afae4fba1d9f2de817408b211c6c8b67c',1,'main.cpp']]],
+  ['sensortype',['sensortype',['../structbmp180__t.html#a9b9ced8e0fdb8fb0ab04a875e4d46f38',1,'bmp180_t']]],
+  ['ser',['ser',['../classserialconnection_1_1SerialConnection.html#a5b2f2670cc97ed8970dadd829f623d66',1,'serialconnection::SerialConnection']]],
+  ['serialcon',['serialCon',['../classreadsensor_1_1ReadSensor.html#ab85a47186a692e87ed91dfbd6421ac9f',1,'readsensor::ReadSensor']]],
+  ['signal',['signal',['../classreadsensor_1_1ReadSensor.html#a1e626c0e06fbf1b266d9bb39c363196c',1,'readsensor.ReadSensor.signal()'],['../classSensorNode_1_1SensorNode.html#a983f7af590b412918b4e0113af0388d3',1,'SensorNode.SensorNode.signal()']]],
+  ['spi',['spi',['../classIO.html#a441eb28753ed241386507df53bacdaad',1,'IO']]],
+  ['spi_5fddr',['SPI_DDR',['../classSPI.html#a5dca744360bf2b10d74ab512f2fb71ea',1,'SPI']]],
+  ['spi_5fmiso',['SPI_MISO',['../classSPI.html#a6fefdb147a2789fe10efb13f8100235c',1,'SPI']]],
+  ['spi_5fmosi',['SPI_MOSI',['../classSPI.html#a10159404dbabef20333fe73f69a3fca6',1,'SPI']]],
+  ['spi_5fsck',['SPI_SCK',['../classSPI.html#ad9ff914a9831b004b1f8fa5368558e01',1,'SPI']]],
+  ['spi_5fspeed',['spi_speed',['../classNRF24L01.html#a4701641c1e8b3d082deb03f93c84d8c7',1,'NRF24L01']]],
+  ['spi_5fss',['SPI_SS',['../classSPI.html#ad4cb7d5cd46647baf68bb98a0e06e2aa',1,'SPI']]],
+  ['str',['str',['../main_8cpp.html#ac19b967928c4ef5b461808cbac40840c',1,'main.cpp']]],
+  ['sw_5foversamp',['sw_oversamp',['../structbmp180__t.html#a0bda5ec8f08249ee69f2e4a14df59f6e',1,'bmp180_t']]]
 ];

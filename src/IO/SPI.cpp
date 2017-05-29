@@ -24,6 +24,9 @@
 /*!
  *
  */
+
+//namespace SPI {
+
 SPI::SPI() {
 
 
@@ -83,3 +86,4 @@ uint8_t SPI::WriteReadbyte(uint8_t data) {
 }
 
 
+//}

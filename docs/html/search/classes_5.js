@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['parsestrings',['ParseStrings',['../classParseStrings.html',1,'']]],
-  ['photoresistor',['Photoresistor',['../classPhotoresistor.html',1,'']]]
+  ['nrf24l01',['NRF24L01',['../classNRF24L01.html',1,'']]]
 ];

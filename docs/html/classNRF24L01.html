@@ -122,7 +122,10 @@ Collaboration diagram for NRF24L01:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNRF24L01__coll__graph.png" border="0" usemap="#NRF24L01_coll__map" alt="Collaboration graph"/></div>
 <map name="NRF24L01_coll__map" id="NRF24L01_coll__map">
-<area shape="rect" id="node2" href="classSPI.html" title="SPI class definition. " alt="" coords="26,5,70,32"/>
+<area shape="rect" id="node2" href="classIO.html" title="IO" alt="" coords="100,95,139,121"/>
+<area shape="rect" id="node3" href="classUSART.html" title="USART class definition. " alt="" coords="5,5,73,32"/>
+<area shape="rect" id="node4" href="classI2C.html" title="I2C" alt="" coords="98,5,141,32"/>
+<area shape="rect" id="node5" href="classSPI.html" title="SPI class definition. " alt="" coords="165,5,209,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -130,8 +133,8 @@ Collaboration diagram for NRF24L01:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad3e6263e0afaa974637d1450b6c8cb37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#ad3e6263e0afaa974637d1450b6c8cb37">NRF24L01</a> ()</td></tr>
 <tr class="separator:ad3e6263e0afaa974637d1450b6c8cb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e2cc2ca751ff3bd4ea351bd2fcea93e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#a8e2cc2ca751ff3bd4ea351bd2fcea93e">NRF24L01</a> (volatile uint8_t &amp;DDR, volatile uint8_t &amp;PORT, uint8_t <a class="el" href="main_8cpp.html#af332f65aca07c44deeda884c8f6c353c">CE</a>, uint8_t <a class="el" href="main_8cpp.html#a8df4f3a8a2035df063402ae5f0c1d2f8">CSN</a>)</td></tr>
-<tr class="separator:a8e2cc2ca751ff3bd4ea351bd2fcea93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8e6754c34cf6e6fed554a6e26c8a4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#a8e8e6754c34cf6e6fed554a6e26c8a4b">NRF24L01</a> (<a class="el" href="classIO.html">IO</a> *<a class="el" href="classNRF24L01.html#ae1eea9f32346ecf60ffbf5224d338359">ioInterface</a>, volatile uint8_t &amp;DDR, volatile uint8_t &amp;PORT, uint8_t <a class="el" href="main_8cpp.html#af332f65aca07c44deeda884c8f6c353c">CE</a>, uint8_t <a class="el" href="main_8cpp.html#a8df4f3a8a2035df063402ae5f0c1d2f8">CSN</a>)</td></tr>
+<tr class="separator:a8e8e6754c34cf6e6fed554a6e26c8a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2973773d1a158e1cfbf52198f248c548"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#a2973773d1a158e1cfbf52198f248c548">Init</a> ()</td></tr>
 <tr class="separator:a2973773d1a158e1cfbf52198f248c548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaabd39829998b609c0dc317af4f141b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#aaabd39829998b609c0dc317af4f141b2">startListening</a> ()</td></tr>
@@ -179,6 +182,8 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ae1eea9f32346ecf60ffbf5224d338359"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIO.html">IO</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#ae1eea9f32346ecf60ffbf5224d338359">ioInterface</a></td></tr>
+<tr class="separator:ae1eea9f32346ecf60ffbf5224d338359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ef1a6d858a115327d0a7310aaba57c"><td class="memItemLeft" align="right" valign="top">volatile uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#a42ef1a6d858a115327d0a7310aaba57c">NRF24L01_DDR</a></td></tr>
 <tr class="separator:a42ef1a6d858a115327d0a7310aaba57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56a20345fcb667fcfc9bc1cb62d5152f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#a56a20345fcb667fcfc9bc1cb62d5152f">NRF24L01_CE</a></td></tr>
@@ -279,8 +284,6 @@ Optional Configurators</h2></td></tr>
 <tr class="separator:a1feaab910ecff17805f8141fe40028e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abae8b8afbf747344006d6163c607be00"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#abae8b8afbf747344006d6163c607be00">csDelay</a></td></tr>
 <tr class="separator:abae8b8afbf747344006d6163c607be00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6321af25fee367445baa6ab4840f8443"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSPI.html">SPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#a6321af25fee367445baa6ab4840f8443">spi</a></td></tr>
-<tr class="separator:a6321af25fee367445baa6ab4840f8443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17752733515f67aa9f6ed3daa1ed3d1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#a17752733515f67aa9f6ed3daa1ed3d1d">setAddressWidth</a> (uint8_t a_width)</td></tr>
 <tr class="separator:a17752733515f67aa9f6ed3daa1ed3d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bb209d94b62e2a28af53179af713f3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNRF24L01.html#a0bb209d94b62e2a28af53179af713f3c">setRetries</a> (uint8_t delay, uint8_t count)</td></tr>
@@ -362,25 +365,32 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ad3e6263e0afaa974637d1450b6c8cb37_cgraph.png" border="0" usemap="#classNRF24L01_ad3e6263e0afaa974637d1450b6c8cb37_cgraph" alt=""/></div>
 <map name="classNRF24L01_ad3e6263e0afaa974637d1450b6c8cb37_cgraph" id="classNRF24L01_ad3e6263e0afaa974637d1450b6c8cb37_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#aa8eaf9d5ed604f60a00cd79fed9edad7" title="NRF24L01::setChannel" alt="" coords="222,5,381,32"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#abe5983a57d0d3bd77508e5345774c890" title="NRF24L01::setPayloadSize" alt="" coords="209,56,393,83"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#a33b1c7dd1cad95dae57ef87bf3dce5c8" title="NRF24L01::setAutoAck" alt="" coords="221,107,382,133"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#abe5983a57d0d3bd77508e5345774c890" title="NRF24L01::setPayloadSize" alt="" coords="209,56,393,83"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#a33b1c7dd1cad95dae57ef87bf3dce5c8" title="NRF24L01::setAutoAck" alt="" coords="221,107,382,133"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="441,56,615,83"/>
 <area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="665,5,823,32"/>
-<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="675,56,813,83"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="663,107,825,133"/>
+<area shape="rect" id="node5" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="664,56,824,83"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="663,107,825,133"/>
+<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="873,56,1012,83"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a8e2cc2ca751ff3bd4ea351bd2fcea93e"></a>
+<a class="anchor" id="a8e8e6754c34cf6e6fed554a6e26c8a4b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">NRF24L01::NRF24L01 </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="classIO.html">IO</a> *&#160;</td>
+          <td class="paramname"><em>ioInterface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">volatile uint8_t &amp;&#160;</td>
           <td class="paramname"><em>DDR</em>, </td>
         </tr>
@@ -482,11 +492,12 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a6bfbb693418e2d60556637b6a3599d05_cgraph.png" border="0" usemap="#classNRF24L01_a6bfbb693418e2d60556637b6a3599d05_cgraph" alt=""/></div>
 <map name="classNRF24L01_a6bfbb693418e2d60556637b6a3599d05_cgraph" id="classNRF24L01_a6bfbb693418e2d60556637b6a3599d05_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="395,31,568,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="197,81,347,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="197,81,347,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="618,5,777,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="628,56,767,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="616,107,779,133"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="410,81,553,108"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="617,56,777,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="616,107,779,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="827,56,965,83"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="410,81,553,108"/>
 </map>
 </div>
 </p>
@@ -543,18 +554,19 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_aa5e261363986c590c90e7cb2adc2d75d_cgraph.png" border="0" usemap="#classNRF24L01_aa5e261363986c590c90e7cb2adc2d75d_cgraph" alt=""/></div>
 <map name="classNRF24L01_aa5e261363986c590c90e7cb2adc2d75d_cgraph" id="classNRF24L01_aa5e261363986c590c90e7cb2adc2d75d_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="401,5,581,32"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="405,56,578,83"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="401,107,581,133"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="405,157,578,184"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="406,208,577,235"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="406,259,577,285"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="206,360,349,387"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="420,309,563,336"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="203,411,352,437"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="400,360,583,387"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="405,56,578,83"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="401,107,581,133"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="405,157,578,184"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="406,208,577,235"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="406,259,577,285"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="206,360,349,387"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="420,309,563,336"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="203,411,352,437"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="400,360,583,387"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="633,132,791,159"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="643,183,781,209"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="631,233,793,260"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="632,183,792,209"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="631,233,793,260"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="841,183,980,209"/>
 </map>
 </div>
 </p>
@@ -587,10 +599,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a7214eaa3fcd3b6576d8f290e6ab71955_cgraph.png" border="0" usemap="#classNRF24L01_a7214eaa3fcd3b6576d8f290e6ab71955_cgraph" alt=""/></div>
 <map name="classNRF24L01_a7214eaa3fcd3b6576d8f290e6ab71955_cgraph" id="classNRF24L01_a7214eaa3fcd3b6576d8f290e6ab71955_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="252,31,425,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="252,81,425,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="252,81,425,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="475,5,634,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="485,56,624,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="473,107,636,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="475,56,635,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="473,107,636,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="684,56,823,83"/>
 </map>
 </div>
 </p>
@@ -689,10 +702,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a1e997f3c946acdbe8bd622e431f80034_cgraph.png" border="0" usemap="#classNRF24L01_a1e997f3c946acdbe8bd622e431f80034_cgraph" alt=""/></div>
 <map name="classNRF24L01_a1e997f3c946acdbe8bd622e431f80034_cgraph" id="classNRF24L01_a1e997f3c946acdbe8bd622e431f80034_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="217,31,391,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="217,81,391,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="217,81,391,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="441,5,599,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="451,56,589,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="439,107,601,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="440,56,600,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="439,107,601,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="649,56,788,83"/>
 </map>
 </div>
 </p>
@@ -721,10 +735,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_abf6bf0c18b2b12674cfbc150a2bdb778_cgraph.png" border="0" usemap="#classNRF24L01_abf6bf0c18b2b12674cfbc150a2bdb778_cgraph" alt=""/></div>
 <map name="classNRF24L01_abf6bf0c18b2b12674cfbc150a2bdb778_cgraph" id="classNRF24L01_abf6bf0c18b2b12674cfbc150a2bdb778_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="240,31,413,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="240,81,413,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="240,81,413,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="463,5,622,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="473,56,612,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="461,107,624,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="463,56,623,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="461,107,624,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="672,56,811,83"/>
 </map>
 </div>
 </p>
@@ -754,10 +769,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ae4067455572c6731211315b3900f5cbd_cgraph.png" border="0" usemap="#classNRF24L01_ae4067455572c6731211315b3900f5cbd_cgraph" alt=""/></div>
 <map name="classNRF24L01_ae4067455572c6731211315b3900f5cbd_cgraph" id="classNRF24L01_ae4067455572c6731211315b3900f5cbd_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="255,31,428,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="255,81,428,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="255,81,428,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="478,5,637,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="488,56,627,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="476,107,639,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="477,56,637,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="476,107,639,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="687,56,825,83"/>
 </map>
 </div>
 </p>
@@ -787,10 +803,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_aeaa968ea74bfd2690fff331e9f115344_cgraph.png" border="0" usemap="#classNRF24L01_aeaa968ea74bfd2690fff331e9f115344_cgraph" alt=""/></div>
 <map name="classNRF24L01_aeaa968ea74bfd2690fff331e9f115344_cgraph" id="classNRF24L01_aeaa968ea74bfd2690fff331e9f115344_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="260,31,433,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="260,81,433,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="260,81,433,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="483,5,642,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="493,56,632,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="481,107,644,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="483,56,643,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="481,107,644,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="692,56,831,83"/>
 </map>
 </div>
 </p>
@@ -819,10 +836,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_abd060c4df7efac781ed5812a0ee19d08_cgraph.png" border="0" usemap="#classNRF24L01_abd060c4df7efac781ed5812a0ee19d08_cgraph" alt=""/></div>
 <map name="classNRF24L01_abd060c4df7efac781ed5812a0ee19d08_cgraph" id="classNRF24L01_abd060c4df7efac781ed5812a0ee19d08_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="291,31,464,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="291,81,464,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="291,81,464,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="514,5,673,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="524,56,663,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="512,107,675,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="513,56,673,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="512,107,675,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="723,56,861,83"/>
 </map>
 </div>
 </p>
@@ -860,8 +878,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a83cfc941bafe563f38e183504ee8533c_cgraph" id="classNRF24L01_a83cfc941bafe563f38e183504ee8533c_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="196,56,339,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="389,5,547,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="399,56,537,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="387,107,549,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="388,56,548,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="387,107,549,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="597,56,736,83"/>
 </map>
 </div>
 </p>
@@ -891,8 +910,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_ab40eeb5ca2337c5f15992f29ee3b5b18_cgraph" id="classNRF24L01_ab40eeb5ca2337c5f15992f29ee3b5b18_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="193,56,336,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="386,5,545,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="396,56,535,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="384,107,547,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="385,56,545,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="384,107,547,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="595,56,733,83"/>
 </map>
 </div>
 </p>
@@ -922,8 +942,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a6b269b519d57d54d0682a29ce9036b12_cgraph" id="classNRF24L01_a6b269b519d57d54d0682a29ce9036b12_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="212,56,385,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="435,5,594,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="445,56,584,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="433,107,596,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="435,56,595,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="433,107,596,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="644,56,783,83"/>
 </map>
 </div>
 </p>
@@ -953,8 +974,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_ac83fb86df156475aeda2ef637078fcd3_cgraph" id="classNRF24L01_ac83fb86df156475aeda2ef637078fcd3_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="233,56,407,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="457,5,615,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="467,56,605,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="455,107,617,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="456,56,616,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="455,107,617,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="665,56,804,83"/>
 </map>
 </div>
 </p>
@@ -984,8 +1006,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a6184de85c94400cde96b7f83b316efa8_cgraph" id="classNRF24L01_a6184de85c94400cde96b7f83b316efa8_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="220,56,393,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="443,5,602,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="453,56,592,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="441,107,604,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="443,56,603,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="441,107,604,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="652,56,791,83"/>
 </map>
 </div>
 </p>
@@ -1016,11 +1039,12 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a0d0cd5dd09d60e06280f378166725d64_cgraph.png" border="0" usemap="#classNRF24L01_a0d0cd5dd09d60e06280f378166725d64_cgraph" alt=""/></div>
 <map name="classNRF24L01_a0d0cd5dd09d60e06280f378166725d64_cgraph" id="classNRF24L01_a0d0cd5dd09d60e06280f378166725d64_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="679,5,838,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="689,81,828,108"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="677,132,840,159"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="293,43,435,69"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="289,195,439,221"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="487,43,629,69"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="679,81,839,108"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="677,132,840,159"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="293,43,435,69"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="289,195,439,221"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="888,81,1027,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="487,43,629,69"/>
 </map>
 </div>
 </p>
@@ -1051,8 +1075,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a8fdb80b79100186afad90d9a2a5c79fb_cgraph" id="classNRF24L01_a8fdb80b79100186afad90d9a2a5c79fb_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="213,56,387,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="437,5,595,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="447,56,585,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="435,107,597,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="436,56,596,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="435,107,597,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="645,56,784,83"/>
 </map>
 </div>
 </p>
@@ -1109,8 +1134,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a95faa729cb8245516e9eb0248c6d9b0f_cgraph" id="classNRF24L01_a95faa729cb8245516e9eb0248c6d9b0f_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="203,56,345,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="395,5,554,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="405,56,544,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="393,107,556,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="395,56,555,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="393,107,556,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="604,56,743,83"/>
 </map>
 </div>
 </p>
@@ -1124,6 +1150,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool NRF24L01::Init </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1136,28 +1163,28 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNRF24L01_a2973773d1a158e1cfbf52198f248c548_cgraph.png" border="0" usemap="#classNRF24L01_a2973773d1a158e1cfbf52198f248c548_cgraph" alt=""/></div>
 <map name="classNRF24L01_a2973773d1a158e1cfbf52198f248c548_cgraph" id="classNRF24L01_a2973773d1a158e1cfbf52198f248c548_cgraph">
-<area shape="rect" id="node2" href="classSPI.html#a7e28e3328e32b650ead0f7640cee6e81" title="Initialize SPI. " alt="" coords="212,5,283,32"/>
-<area shape="rect" id="node3" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="173,411,322,437"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="831,461,993,488"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="379,208,552,235"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="379,157,552,184"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="394,563,537,589"/>
-<area shape="rect" id="node16" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="600,613,783,640"/>
-<area shape="rect" id="node17" href="classNRF24L01.html#a0bb209d94b62e2a28af53179af713f3c" title="NRF24L01::setRetries" alt="" coords="171,208,324,235"/>
-<area shape="rect" id="node18" href="classNRF24L01.html#a7319961d6048e32546ad5df934bd42d8" title="NRF24L01::setPALevel" alt="" coords="167,309,327,336"/>
-<area shape="rect" id="node19" href="classNRF24L01.html#a9db0803c6d87e6ada7febea2240a7b1c" title="NRF24L01::setDataRate" alt="" coords="164,259,331,285"/>
-<area shape="rect" id="node20" href="classNRF24L01.html#aa8eaf9d5ed604f60a00cd79fed9edad7" title="NRF24L01::setChannel" alt="" coords="168,56,327,83"/>
-<area shape="rect" id="node21" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="395,613,535,640"/>
-<area shape="rect" id="node22" href="classNRF24L01.html#a8e184a0a6ca30fbae69c1331a567deda" title="NRF24L01::powerUp" alt="" coords="175,157,320,184"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="601,411,781,437"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="601,259,781,285"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="606,309,777,336"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="606,360,777,387"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="620,563,763,589"/>
-<area shape="rect" id="node15" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="391,512,540,539"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="833,309,991,336"/>
-<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="843,360,981,387"/>
-<area shape="rect" id="node23" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="391,107,540,133"/>
+<area shape="rect" id="node2" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="173,259,322,285"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="831,360,993,387"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="379,512,552,539"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="379,461,552,488"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="394,56,537,83"/>
+<area shape="rect" id="node16" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="600,461,783,488"/>
+<area shape="rect" id="node17" href="classNRF24L01.html#a0bb209d94b62e2a28af53179af713f3c" title="NRF24L01::setRetries" alt="" coords="171,411,324,437"/>
+<area shape="rect" id="node18" href="classNRF24L01.html#a7319961d6048e32546ad5df934bd42d8" title="NRF24L01::setPALevel" alt="" coords="167,512,327,539"/>
+<area shape="rect" id="node19" href="classNRF24L01.html#a9db0803c6d87e6ada7febea2240a7b1c" title="NRF24L01::setDataRate" alt="" coords="164,461,331,488"/>
+<area shape="rect" id="node20" href="classNRF24L01.html#aa8eaf9d5ed604f60a00cd79fed9edad7" title="NRF24L01::setChannel" alt="" coords="168,309,327,336"/>
+<area shape="rect" id="node21" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="395,5,535,32"/>
+<area shape="rect" id="node22" href="classNRF24L01.html#a8e184a0a6ca30fbae69c1331a567deda" title="NRF24L01::powerUp" alt="" coords="175,563,320,589"/>
+<area shape="rect" id="node3" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="601,309,781,336"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="601,360,781,387"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="606,208,777,235"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="606,259,777,285"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="620,56,763,83"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="391,107,540,133"/>
+<area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="833,233,991,260"/>
+<area shape="rect" id="node5" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="832,309,992,336"/>
+<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1041,309,1180,336"/>
+<area shape="rect" id="node23" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="391,563,540,589"/>
 </map>
 </div>
 </p>
@@ -1188,8 +1215,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a99aae87d62d5097447305d66a0b3281d_cgraph" id="classNRF24L01_a99aae87d62d5097447305d66a0b3281d_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="280,56,453,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="503,5,662,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="513,56,652,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="501,107,664,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="503,56,663,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="501,107,664,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="712,56,851,83"/>
 </map>
 </div>
 </p>
@@ -1244,10 +1272,11 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_aaddabe35ed60f03a2fb2fb475a3cafb5_cgraph" id="classNRF24L01_aaddabe35ed60f03a2fb2fb475a3cafb5_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a7214eaa3fcd3b6576d8f290e6ab71955" title="NRF24L01::closeReadingPipe" alt="" coords="185,56,384,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="432,31,605,57"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="432,81,605,108"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="432,81,605,108"/>
 <area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="655,5,814,32"/>
-<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="665,56,804,83"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="653,107,816,133"/>
+<area shape="rect" id="node5" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="655,56,815,83"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="653,107,816,133"/>
+<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="864,56,1003,83"/>
 </map>
 </div>
 </p>
@@ -1321,10 +1350,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ad23d4111c3a26d18db51eb72a5491dbb_cgraph.png" border="0" usemap="#classNRF24L01_ad23d4111c3a26d18db51eb72a5491dbb_cgraph" alt=""/></div>
 <map name="classNRF24L01_ad23d4111c3a26d18db51eb72a5491dbb_cgraph" id="classNRF24L01_ad23d4111c3a26d18db51eb72a5491dbb_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="203,31,376,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="203,81,376,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="203,81,376,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="426,5,585,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="436,56,575,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="424,107,587,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="425,56,585,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="424,107,587,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="635,56,773,83"/>
 </map>
 </div>
 </p>
@@ -1377,11 +1407,12 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a9b458f77f6ae6c42f330710e703dd847_cgraph.png" border="0" usemap="#classNRF24L01_a9b458f77f6ae6c42f330710e703dd847_cgraph" alt=""/></div>
 <map name="classNRF24L01_a9b458f77f6ae6c42f330710e703dd847_cgraph" id="classNRF24L01_a9b458f77f6ae6c42f330710e703dd847_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="248,5,428,32"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="251,56,425,83"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="251,107,425,133"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="251,56,425,83"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="251,107,425,133"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="478,5,637,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="488,56,627,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="476,107,639,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="477,56,637,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="476,107,639,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="687,56,825,83"/>
 </map>
 </div>
 </p>
@@ -1429,11 +1460,12 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a02c91592a6c762c1a4e86252f8958bd6_cgraph.png" border="0" usemap="#classNRF24L01_a02c91592a6c762c1a4e86252f8958bd6_cgraph" alt=""/></div>
 <map name="classNRF24L01_a02c91592a6c762c1a4e86252f8958bd6_cgraph" id="classNRF24L01_a02c91592a6c762c1a4e86252f8958bd6_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="248,5,428,32"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="251,56,425,83"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="251,107,425,133"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="251,56,425,83"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="251,107,425,133"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="478,5,637,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="488,56,627,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="476,107,639,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="477,56,637,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="476,107,639,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="687,56,825,83"/>
 </map>
 </div>
 </p>
@@ -1470,10 +1502,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ad64a887cae746be5ca43cf08445feed9_cgraph.png" border="0" usemap="#classNRF24L01_ad64a887cae746be5ca43cf08445feed9_cgraph" alt=""/></div>
 <map name="classNRF24L01_ad64a887cae746be5ca43cf08445feed9_cgraph" id="classNRF24L01_ad64a887cae746be5ca43cf08445feed9_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="241,31,421,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="245,81,418,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="245,81,418,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="471,5,630,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="481,56,620,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="469,107,632,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="471,56,631,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="469,107,632,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="680,56,819,83"/>
 </map>
 </div>
 </p>
@@ -1508,10 +1541,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a0fe37f8ff95b7c562ad1fc277890e29a_cgraph.png" border="0" usemap="#classNRF24L01_a0fe37f8ff95b7c562ad1fc277890e29a_cgraph" alt=""/></div>
 <map name="classNRF24L01_a0fe37f8ff95b7c562ad1fc277890e29a_cgraph" id="classNRF24L01_a0fe37f8ff95b7c562ad1fc277890e29a_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="241,31,421,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="245,81,418,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="245,81,418,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="471,5,630,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="481,56,620,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="469,107,632,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="471,56,631,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="469,107,632,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="680,56,819,83"/>
 </map>
 </div>
 </p>
@@ -1541,19 +1575,20 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82_cgraph.png" border="0" usemap="#classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82_cgraph" alt=""/></div>
 <map name="classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82_cgraph" id="classNRF24L01_abaf0ed9cb5b24890631d7b8bc0e3cd82_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="216,282,365,309"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="615,80,789,106"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="615,130,789,157"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="615,80,789,106"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="615,130,789,157"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="612,333,792,360"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="612,384,792,410"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="617,181,787,208"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="617,232,787,258"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="417,333,559,360"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="631,282,773,309"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="413,384,563,410"/>
-<area shape="rect" id="node15" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="611,434,793,461"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="612,384,792,410"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="617,181,787,208"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="617,232,787,258"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="417,333,559,360"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="631,282,773,309"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="413,384,563,410"/>
+<area shape="rect" id="node16" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="611,434,793,461"/>
 <area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="843,257,1002,284"/>
-<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="853,308,992,334"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="841,206,1004,233"/>
+<area shape="rect" id="node5" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="843,308,1003,334"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="841,206,1004,233"/>
+<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1052,308,1191,334"/>
 </map>
 </div>
 </p>
@@ -1582,11 +1617,12 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a8e184a0a6ca30fbae69c1331a567deda_cgraph.png" border="0" usemap="#classNRF24L01_a8e184a0a6ca30fbae69c1331a567deda_cgraph" alt=""/></div>
 <map name="classNRF24L01_a8e184a0a6ca30fbae69c1331a567deda_cgraph" id="classNRF24L01_a8e184a0a6ca30fbae69c1331a567deda_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="199,81,372,108"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="199,31,372,57"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="211,132,360,159"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="199,31,372,57"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="211,132,360,159"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="422,5,581,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="432,56,571,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="420,107,583,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="421,56,581,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="420,107,583,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="631,56,769,83"/>
 </map>
 </div>
 </p>
@@ -1650,10 +1686,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da_cgraph.png" border="0" usemap="#classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da_cgraph" alt=""/></div>
 <map name="classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da_cgraph" id="classNRF24L01_a60ed6c6e072a1f41ca560546745ec6da_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="173,31,344,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="172,81,345,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="172,81,345,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="395,5,554,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="405,56,544,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="393,107,556,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="395,56,555,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="393,107,556,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="604,56,743,83"/>
 </map>
 </div>
 </p>
@@ -1708,8 +1745,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ad733911b261f73964817dad526745716_cgraph.png" border="0" usemap="#classNRF24L01_ad733911b261f73964817dad526745716_cgraph" alt=""/></div>
 <map name="classNRF24L01_ad733911b261f73964817dad526745716_cgraph" id="classNRF24L01_ad733911b261f73964817dad526745716_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="226,5,385,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="236,56,375,83"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="224,107,387,133"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="225,56,385,83"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="224,107,387,133"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="435,56,573,83"/>
 </map>
 </div>
 </p>
@@ -1752,8 +1790,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a6fc7da02296e9f91908e89438ba67901_cgraph.png" border="0" usemap="#classNRF24L01_a6fc7da02296e9f91908e89438ba67901_cgraph" alt=""/></div>
 <map name="classNRF24L01_a6fc7da02296e9f91908e89438ba67901_cgraph" id="classNRF24L01_a6fc7da02296e9f91908e89438ba67901_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="229,5,387,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="239,56,377,83"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="227,107,389,133"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="228,56,388,83"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="227,107,389,133"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="437,56,576,83"/>
 </map>
 </div>
 </p>
@@ -1814,8 +1853,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a9766146f8b6bcab59e91e7545484c401_cgraph.png" border="0" usemap="#classNRF24L01_a9766146f8b6bcab59e91e7545484c401_cgraph" alt=""/></div>
 <map name="classNRF24L01_a9766146f8b6bcab59e91e7545484c401_cgraph" id="classNRF24L01_a9766146f8b6bcab59e91e7545484c401_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="235,5,394,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="245,56,384,83"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="233,107,396,133"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="235,56,395,83"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="233,107,396,133"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="444,56,583,83"/>
 </map>
 </div>
 </p>
@@ -1844,20 +1884,21 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ad0797d9c6f8ecd9619c9e48168571a01_cgraph.png" border="0" usemap="#classNRF24L01_ad0797d9c6f8ecd9619c9e48168571a01_cgraph" alt=""/></div>
 <map name="classNRF24L01_ad0797d9c6f8ecd9619c9e48168571a01_cgraph" id="classNRF24L01_ad0797d9c6f8ecd9619c9e48168571a01_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="602,124,775,151"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="617,175,760,201"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="201,200,350,227"/>
-<area shape="rect" id="node16" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="199,251,352,277"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="617,175,760,201"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="201,200,350,227"/>
+<area shape="rect" id="node17" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="199,251,352,277"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="830,251,989,277"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="840,301,979,328"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="828,352,991,379"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="599,225,779,252"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="602,276,775,303"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="599,327,779,353"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="603,377,774,404"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="603,428,774,455"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="403,124,546,151"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="400,175,549,201"/>
-<area shape="rect" id="node15" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="597,479,780,505"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="829,301,989,328"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="828,352,991,379"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1039,301,1177,328"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="599,225,779,252"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="602,276,775,303"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="599,327,779,353"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="603,377,774,404"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="603,428,774,455"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="403,124,546,151"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="400,175,549,201"/>
+<area shape="rect" id="node16" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="597,479,780,505"/>
 </map>
 </div>
 </p>
@@ -1885,8 +1926,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_aebd4d389685333013b4bd12662c0b411_cgraph" id="classNRF24L01_aebd4d389685333013b4bd12662c0b411_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="200,56,373,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="423,5,582,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="433,56,572,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="421,107,584,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="423,56,583,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="421,107,584,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="632,56,771,83"/>
 </map>
 </div>
 </p>
@@ -1921,8 +1963,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a17752733515f67aa9f6ed3daa1ed3d1d_cgraph" id="classNRF24L01_a17752733515f67aa9f6ed3daa1ed3d1d_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="247,56,420,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="470,5,629,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="480,56,619,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="468,107,631,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="469,56,629,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="468,107,631,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="679,56,817,83"/>
 </map>
 </div>
 </p>
@@ -1958,8 +2001,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8_cgraph" id="classNRF24L01_a33b1c7dd1cad95dae57ef87bf3dce5c8_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="215,56,388,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="438,5,597,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="448,56,587,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="436,107,599,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="437,56,597,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="436,107,599,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="647,56,785,83"/>
 </map>
 </div>
 </p>
@@ -2005,10 +2049,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a79cab6f958c8d9e18273d7c4750480fd_cgraph.png" border="0" usemap="#classNRF24L01_a79cab6f958c8d9e18273d7c4750480fd_cgraph" alt=""/></div>
 <map name="classNRF24L01_a79cab6f958c8d9e18273d7c4750480fd_cgraph" id="classNRF24L01_a79cab6f958c8d9e18273d7c4750480fd_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="215,31,388,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="215,81,388,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="215,81,388,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="438,5,597,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="448,56,587,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="436,107,599,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="437,56,597,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="436,107,599,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="647,56,785,83"/>
 </map>
 </div>
 </p>
@@ -2043,8 +2088,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_aa8eaf9d5ed604f60a00cd79fed9edad7_cgraph" id="classNRF24L01_aa8eaf9d5ed604f60a00cd79fed9edad7_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="212,56,385,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="435,5,594,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="445,56,584,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="433,107,596,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="435,56,595,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="433,107,596,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="644,56,783,83"/>
 </map>
 </div>
 </p>
@@ -2078,10 +2124,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a6081dd6dd9cdffbc1c7534ee1824201d_cgraph.png" border="0" usemap="#classNRF24L01_a6081dd6dd9cdffbc1c7534ee1824201d_cgraph" alt=""/></div>
 <map name="classNRF24L01_a6081dd6dd9cdffbc1c7534ee1824201d_cgraph" id="classNRF24L01_a6081dd6dd9cdffbc1c7534ee1824201d_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="233,31,407,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="233,81,407,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="233,81,407,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="457,5,615,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="467,56,605,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="455,107,617,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="456,56,616,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="455,107,617,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="665,56,804,83"/>
 </map>
 </div>
 </p>
@@ -2117,10 +2164,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a9db0803c6d87e6ada7febea2240a7b1c_cgraph.png" border="0" usemap="#classNRF24L01_a9db0803c6d87e6ada7febea2240a7b1c_cgraph" alt=""/></div>
 <map name="classNRF24L01_a9db0803c6d87e6ada7febea2240a7b1c_cgraph" id="classNRF24L01_a9db0803c6d87e6ada7febea2240a7b1c_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="220,31,393,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="220,81,393,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="220,81,393,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="443,5,602,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="453,56,592,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="441,107,604,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="443,56,603,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="441,107,604,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="652,56,791,83"/>
 </map>
 </div>
 </p>
@@ -2156,10 +2204,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a7319961d6048e32546ad5df934bd42d8_cgraph.png" border="0" usemap="#classNRF24L01_a7319961d6048e32546ad5df934bd42d8_cgraph" alt=""/></div>
 <map name="classNRF24L01_a7319961d6048e32546ad5df934bd42d8_cgraph" id="classNRF24L01_a7319961d6048e32546ad5df934bd42d8_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="213,31,387,57"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="213,81,387,108"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="213,81,387,108"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="437,5,595,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="447,56,585,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="435,107,597,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="436,56,596,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="435,107,597,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="645,56,784,83"/>
 </map>
 </div>
 </p>
@@ -2230,8 +2279,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a0bb209d94b62e2a28af53179af713f3c_cgraph" id="classNRF24L01_a0bb209d94b62e2a28af53179af713f3c_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="207,56,380,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="430,5,589,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="440,56,579,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="428,107,591,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="429,56,589,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="428,107,591,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="639,56,777,83"/>
 </map>
 </div>
 </p>
@@ -2267,8 +2317,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ab604b1e177e4812e33ebc39287503197_cgraph.png" border="0" usemap="#classNRF24L01_ab604b1e177e4812e33ebc39287503197_cgraph" alt=""/></div>
 <map name="classNRF24L01_ab604b1e177e4812e33ebc39287503197_cgraph" id="classNRF24L01_ab604b1e177e4812e33ebc39287503197_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="198,5,357,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="208,56,347,83"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="196,107,359,133"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="197,56,357,83"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="196,107,359,133"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="407,56,545,83"/>
 </map>
 </div>
 </p>
@@ -2339,10 +2390,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ab1ca9025a8740bc38ad5dd7a427e2d4f_cgraph.png" border="0" usemap="#classNRF24L01_ab1ca9025a8740bc38ad5dd7a427e2d4f_cgraph" alt=""/></div>
 <map name="classNRF24L01_ab1ca9025a8740bc38ad5dd7a427e2d4f_cgraph" id="classNRF24L01_ab1ca9025a8740bc38ad5dd7a427e2d4f_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="229,56,400,83"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="238,107,391,133"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="238,107,391,133"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="450,5,609,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="460,56,599,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="448,107,611,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="449,56,609,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="448,107,611,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="659,56,797,83"/>
 </map>
 </div>
 </p>
@@ -2376,16 +2428,17 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_aaabd39829998b609c0dc317af4f141b2_cgraph" id="classNRF24L01_aaabd39829998b609c0dc317af4f141b2_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a8e184a0a6ca30fbae69c1331a567deda" title="NRF24L01::powerUp" alt="" coords="251,165,396,191"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="474,114,647,141"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="474,63,647,90"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="247,266,400,293"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="471,13,651,39"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#a7214eaa3fcd3b6576d8f290e6ab71955" title="NRF24L01::closeReadingPipe" alt="" coords="224,63,423,90"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="253,215,393,242"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="486,165,635,191"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="474,63,647,90"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="247,266,400,293"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="471,13,651,39"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#a7214eaa3fcd3b6576d8f290e6ab71955" title="NRF24L01::closeReadingPipe" alt="" coords="224,63,423,90"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="253,215,393,242"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#ad311ef5130c99ab8ddca292adfe76603" title="NRF24L01::delay_ms" alt="" coords="486,165,635,191"/>
 <area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="701,38,859,65"/>
-<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="711,89,849,115"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="699,139,861,166"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="489,215,632,242"/>
+<area shape="rect" id="node5" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="700,89,860,115"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="699,139,861,166"/>
+<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="909,89,1048,115"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="489,215,632,242"/>
 </map>
 </div>
 </p>
@@ -2448,20 +2501,21 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2_cgraph.png" border="0" usemap="#classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2_cgraph" alt=""/></div>
 <map name="classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2_cgraph" id="classNRF24L01_a282e44fa8d6ec7542e9d725cf048f6b2_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="609,5,779,32"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="204,259,357,285"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="206,208,355,235"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="204,259,357,285"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="206,208,355,235"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="835,132,994,159"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="845,183,984,209"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="833,233,996,260"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="604,107,784,133"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="607,157,781,184"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="604,208,784,235"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="607,259,781,285"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="609,309,779,336"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="409,360,551,387"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="623,360,765,387"/>
-<area shape="rect" id="node15" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="405,411,555,437"/>
-<area shape="rect" id="node16" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="603,56,785,83"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="835,183,995,209"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="833,233,996,260"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1044,183,1183,209"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="604,107,784,133"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="607,157,781,184"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="604,208,784,235"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="607,259,781,285"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="609,309,779,336"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="409,360,551,387"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="623,360,765,387"/>
+<area shape="rect" id="node16" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="405,411,555,437"/>
+<area shape="rect" id="node17" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="603,56,785,83"/>
 </map>
 </div>
 </p>
@@ -2489,20 +2543,21 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a6ad13189b732f237ac148c659ddf6b01_cgraph.png" border="0" usemap="#classNRF24L01_a6ad13189b732f237ac148c659ddf6b01_cgraph" alt=""/></div>
 <map name="classNRF24L01_a6ad13189b732f237ac148c659ddf6b01_cgraph" id="classNRF24L01_a6ad13189b732f237ac148c659ddf6b01_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="224,234,373,261"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="623,386,797,413"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="623,437,797,463"/>
-<area shape="rect" id="node16" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="229,57,369,83"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="623,386,797,413"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="623,437,797,463"/>
+<area shape="rect" id="node17" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="229,57,369,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="620,183,800,210"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="620,234,800,261"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="625,285,795,311"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="625,335,795,362"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="425,133,567,159"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="639,133,781,159"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="421,82,571,109"/>
-<area shape="rect" id="node15" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="619,82,801,109"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="620,234,800,261"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="625,285,795,311"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="625,335,795,362"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="425,133,567,159"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="639,133,781,159"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="421,82,571,109"/>
+<area shape="rect" id="node16" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="619,82,801,109"/>
 <area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="851,209,1010,235"/>
-<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="861,259,1000,286"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="849,310,1012,337"/>
+<area shape="rect" id="node5" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="851,259,1011,286"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="849,310,1012,337"/>
+<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1060,259,1199,286"/>
 </map>
 </div>
 </p>
@@ -2533,8 +2588,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_a5e934f8f7d37245264ad16e3c360eca7_cgraph" id="classNRF24L01_a5e934f8f7d37245264ad16e3c360eca7_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="208,56,381,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="431,5,590,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="441,56,580,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="429,107,592,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="431,56,591,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="429,107,592,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="640,56,779,83"/>
 </map>
 </div>
 </p>
@@ -2565,8 +2621,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_abf1d84ed988aa6c7925ebb712b7c7f60_cgraph" id="classNRF24L01_abf1d84ed988aa6c7925ebb712b7c7f60_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="197,56,371,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="421,5,579,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="431,56,569,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="419,107,581,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="420,56,580,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="419,107,581,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="629,56,768,83"/>
 </map>
 </div>
 </p>
@@ -2603,8 +2660,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_aceeaa16f91d7c5fd6a429a6adf678bd4_cgraph.png" border="0" usemap="#classNRF24L01_aceeaa16f91d7c5fd6a429a6adf678bd4_cgraph" alt=""/></div>
 <map name="classNRF24L01_aceeaa16f91d7c5fd6a429a6adf678bd4_cgraph" id="classNRF24L01_aceeaa16f91d7c5fd6a429a6adf678bd4_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="238,5,397,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="248,56,387,83"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="236,107,399,133"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="237,56,397,83"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="236,107,399,133"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="447,56,585,83"/>
 </map>
 </div>
 </p>
@@ -2635,20 +2693,21 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a4416a731de8d23cac507e8b69ec2becc_cgraph.png" border="0" usemap="#classNRF24L01_a4416a731de8d23cac507e8b69ec2becc_cgraph" alt=""/></div>
 <map name="classNRF24L01_a4416a731de8d23cac507e8b69ec2becc_cgraph" id="classNRF24L01_a4416a731de8d23cac507e8b69ec2becc_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="607,5,781,32"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="405,461,555,488"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="607,56,781,83"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="208,233,357,260"/>
-<area shape="rect" id="node16" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="213,448,353,475"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="405,461,555,488"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="607,56,781,83"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="208,233,357,260"/>
+<area shape="rect" id="node17" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="213,448,353,475"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="835,233,994,260"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="845,132,984,159"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="833,183,996,209"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="623,360,765,387"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="604,259,784,285"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="604,309,784,336"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="609,107,779,133"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="609,157,779,184"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="409,411,551,437"/>
-<area shape="rect" id="node15" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="603,208,785,235"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="835,132,995,159"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="833,183,996,209"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1044,132,1183,159"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="623,360,765,387"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="604,259,784,285"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="604,309,784,336"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="609,107,779,133"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="609,157,779,184"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="409,411,551,437"/>
+<area shape="rect" id="node16" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="603,208,785,235"/>
 </map>
 </div>
 </p>
@@ -2736,8 +2795,9 @@ Here is the call graph for this function:</div>
 <map name="classNRF24L01_ad98d10f3759d41e565397aba824d121b_cgraph" id="classNRF24L01_ad98d10f3759d41e565397aba824d121b_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="233,56,407,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="457,5,615,32"/>
-<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="467,56,605,83"/>
-<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="455,107,617,133"/>
+<area shape="rect" id="node4" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="456,56,616,83"/>
+<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="455,107,617,133"/>
+<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="665,56,804,83"/>
 </map>
 </div>
 </p>
@@ -2833,22 +2893,23 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_af59b3fd7aece1ae295a2e634a57d2b02_cgraph.png" border="0" usemap="#classNRF24L01_af59b3fd7aece1ae295a2e634a57d2b02_cgraph" alt=""/></div>
 <map name="classNRF24L01_af59b3fd7aece1ae295a2e634a57d2b02_cgraph" id="classNRF24L01_af59b3fd7aece1ae295a2e634a57d2b02_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#ab1ca9025a8740bc38ad5dd7a427e2d4f" title="NRF24L01::startFastWrite" alt="" coords="372,5,548,32"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="385,512,535,539"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="175,309,324,336"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="601,411,774,437"/>
-<area shape="rect" id="node18" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="179,563,319,589"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="385,512,535,539"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="175,309,324,336"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="601,411,774,437"/>
+<area shape="rect" id="node19" href="classNRF24L01.html#ab40eeb5ca2337c5f15992f29ee3b5b18" title="NRF24L01::FlushTx" alt="" coords="179,563,319,589"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="602,56,773,83"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="611,5,764,32"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="611,5,764,32"/>
 <area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="829,233,987,260"/>
-<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="839,284,977,311"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="827,183,989,209"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="616,360,759,387"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="597,259,777,285"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="601,309,774,336"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="597,107,777,133"/>
-<area shape="rect" id="node15" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="602,157,773,184"/>
-<area shape="rect" id="node16" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="389,411,531,437"/>
-<area shape="rect" id="node17" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="596,208,779,235"/>
+<area shape="rect" id="node5" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="828,284,988,311"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="827,183,989,209"/>
+<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1037,284,1176,311"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="616,360,759,387"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="597,259,777,285"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="601,309,774,336"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="597,107,777,133"/>
+<area shape="rect" id="node16" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="602,157,773,184"/>
+<area shape="rect" id="node17" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="389,411,531,437"/>
+<area shape="rect" id="node18" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="596,208,779,235"/>
 </map>
 </div>
 </p>
@@ -2908,8 +2969,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ae0f4b84a244463e8e594d238a71140c5_cgraph.png" border="0" usemap="#classNRF24L01_ae0f4b84a244463e8e594d238a71140c5_cgraph" alt=""/></div>
 <map name="classNRF24L01_ae0f4b84a244463e8e594d238a71140c5_cgraph" id="classNRF24L01_ae0f4b84a244463e8e594d238a71140c5_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="246,5,405,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="256,56,395,83"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="244,107,407,133"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="245,56,405,83"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="244,107,407,133"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="455,56,593,83"/>
 </map>
 </div>
 </p>
@@ -2968,22 +3030,23 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84_cgraph.png" border="0" usemap="#classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84_cgraph" alt=""/></div>
 <map name="classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84_cgraph" id="classNRF24L01_ac2c2500350c3dde0df4f09111f8f1b84_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="649,5,799,32"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#ad0797d9c6f8ecd9619c9e48168571a01" title="NRF24L01::reUseTX" alt="" coords="239,424,385,451"/>
-<area shape="rect" id="node18" href="classNRF24L01.html#ab1ca9025a8740bc38ad5dd7a427e2d4f" title="NRF24L01::startFastWrite" alt="" coords="224,588,400,615"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#ad0797d9c6f8ecd9619c9e48168571a01" title="NRF24L01::reUseTX" alt="" coords="239,424,385,451"/>
+<area shape="rect" id="node19" href="classNRF24L01.html#ab1ca9025a8740bc38ad5dd7a427e2d4f" title="NRF24L01::startFastWrite" alt="" coords="224,588,400,615"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="867,157,1009,184"/>
 <area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="1079,284,1238,311"/>
-<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1089,335,1228,361"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="1077,385,1240,412"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="851,461,1025,488"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="450,309,599,336"/>
-<area shape="rect" id="node17" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="448,588,601,615"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="848,309,1028,336"/>
-<area shape="rect" id="node11" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="851,360,1025,387"/>
-<area shape="rect" id="node12" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="848,411,1028,437"/>
-<area shape="rect" id="node13" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="853,512,1023,539"/>
-<area shape="rect" id="node14" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="853,208,1023,235"/>
-<area shape="rect" id="node15" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="653,107,795,133"/>
-<area shape="rect" id="node16" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="847,259,1029,285"/>
+<area shape="rect" id="node5" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="1079,335,1239,361"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="1077,385,1240,412"/>
+<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="1288,335,1427,361"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="851,461,1025,488"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#aa5e261363986c590c90e7cb2adc2d75d" title="NRF24L01::CE_LOW" alt="" coords="450,309,599,336"/>
+<area shape="rect" id="node18" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="448,588,601,615"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#a9766146f8b6bcab59e91e7545484c401" title="NRF24L01::ReadRegisters" alt="" coords="848,309,1028,336"/>
+<area shape="rect" id="node12" href="classNRF24L01.html#a6fc7da02296e9f91908e89438ba67901" title="NRF24L01::ReadRegister" alt="" coords="851,360,1025,387"/>
+<area shape="rect" id="node13" href="classNRF24L01.html#ac7d69c51eca87f16fa3a30b5e8aa85cb" title="NRF24L01::WriteRegisters" alt="" coords="848,411,1028,437"/>
+<area shape="rect" id="node14" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="853,512,1023,539"/>
+<area shape="rect" id="node15" href="classNRF24L01.html#ad733911b261f73964817dad526745716" title="NRF24L01::ReadPayload" alt="" coords="853,208,1023,235"/>
+<area shape="rect" id="node16" href="classNRF24L01.html#a83cfc941bafe563f38e183504ee8533c" title="NRF24L01::FlushRx" alt="" coords="653,107,795,133"/>
+<area shape="rect" id="node17" href="classNRF24L01.html#aceeaa16f91d7c5fd6a429a6adf678bd4" title="NRF24L01::ToggleFeatures" alt="" coords="847,259,1029,285"/>
 </map>
 </div>
 </p>
@@ -3079,14 +3142,15 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a094a978ed0c7da890c90351bd945fabe_cgraph.png" border="0" usemap="#classNRF24L01_a094a978ed0c7da890c90351bd945fabe_cgraph" alt=""/></div>
 <map name="classNRF24L01_a094a978ed0c7da890c90351bd945fabe_cgraph" id="classNRF24L01_a094a978ed0c7da890c90351bd945fabe_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="213,157,363,184"/>
-<area shape="rect" id="node7" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="424,107,597,133"/>
-<area shape="rect" id="node8" href="classNRF24L01.html#ab1ca9025a8740bc38ad5dd7a427e2d4f" title="NRF24L01::startFastWrite" alt="" coords="200,56,376,83"/>
+<area shape="rect" id="node8" href="classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="424,107,597,133"/>
+<area shape="rect" id="node9" href="classNRF24L01.html#ab1ca9025a8740bc38ad5dd7a427e2d4f" title="NRF24L01::startFastWrite" alt="" coords="200,56,376,83"/>
 <area shape="rect" id="node3" href="classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="439,157,582,184"/>
 <area shape="rect" id="node4" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="647,56,806,83"/>
-<area shape="rect" id="node5" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="657,107,796,133"/>
-<area shape="rect" id="node6" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="645,157,808,184"/>
-<area shape="rect" id="node9" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="425,5,596,32"/>
-<area shape="rect" id="node10" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="434,56,587,83"/>
+<area shape="rect" id="node5" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="647,107,807,133"/>
+<area shape="rect" id="node7" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="645,157,808,184"/>
+<area shape="rect" id="node6" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="856,107,995,133"/>
+<area shape="rect" id="node10" href="classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="425,5,596,32"/>
+<area shape="rect" id="node11" href="classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="434,56,587,83"/>
 </map>
 </div>
 </p>
@@ -3147,8 +3211,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_a9abae657dc54d97b6eb63f33c83e9f59_cgraph.png" border="0" usemap="#classNRF24L01_a9abae657dc54d97b6eb63f33c83e9f59_cgraph" alt=""/></div>
 <map name="classNRF24L01_a9abae657dc54d97b6eb63f33c83e9f59_cgraph" id="classNRF24L01_a9abae657dc54d97b6eb63f33c83e9f59_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="226,5,385,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="236,56,375,83"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="224,107,387,133"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="225,56,385,83"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="224,107,387,133"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="435,56,573,83"/>
 </map>
 </div>
 </p>
@@ -3202,8 +3267,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_abfaaa54aff7ce60c4c844dd540c47af5_cgraph.png" border="0" usemap="#classNRF24L01_abfaaa54aff7ce60c4c844dd540c47af5_cgraph" alt=""/></div>
 <map name="classNRF24L01_abfaaa54aff7ce60c4c844dd540c47af5_cgraph" id="classNRF24L01_abfaaa54aff7ce60c4c844dd540c47af5_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="229,5,387,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="239,56,377,83"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="227,107,389,133"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="228,56,388,83"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="227,107,389,133"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="437,56,576,83"/>
 </map>
 </div>
 </p>
@@ -3264,8 +3330,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classNRF24L01_ac7d69c51eca87f16fa3a30b5e8aa85cb_cgraph.png" border="0" usemap="#classNRF24L01_ac7d69c51eca87f16fa3a30b5e8aa85cb_cgraph" alt=""/></div>
 <map name="classNRF24L01_ac7d69c51eca87f16fa3a30b5e8aa85cb_cgraph" id="classNRF24L01_ac7d69c51eca87f16fa3a30b5e8aa85cb_cgraph">
 <area shape="rect" id="node2" href="classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="235,5,394,32"/>
-<area shape="rect" id="node3" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="245,56,384,83"/>
-<area shape="rect" id="node4" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="233,107,396,133"/>
+<area shape="rect" id="node3" href="classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="235,56,395,83"/>
+<area shape="rect" id="node5" href="classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="233,107,396,133"/>
+<area shape="rect" id="node4" href="classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="444,56,583,83"/>
 </map>
 </div>
 </p>
@@ -3321,6 +3388,26 @@ Here is the call graph for this function:</div>
 <p>Enable error detection by un-commenting #define FAILURE_HANDLING in RF24_config.h If a failure has been detected, it usually indicates a hardware issue. By default the library will cease operation when a failure is detected. This should allow advanced users to detect and resolve intermittent hardware issues.</p>
 <p>In most cases, the radio must be re-enabled via radio.begin(); and the appropriate settings applied after a failure occurs, if wanting to re-enable the device immediately.</p>
 <p>Usage: (Failure handling must be enabled per above) </p><div class="fragment"><div class="line"><span class="keywordflow">if</span>(radio.failureDetected){</div><div class="line">  radio.begin();                       <span class="comment">// Attempt to re-configure the radio with defaults</span></div><div class="line">  radio.failureDetected = 0;           <span class="comment">// Reset the detection value</span></div><div class="line"> radio.openWritingPipe(addresses[1]); <span class="comment">// Re-configure pipe addresses</span></div><div class="line">  radio.openReadingPipe(1,addresses[0]);</div><div class="line">  report_failure();                    <span class="comment">// Blink leds, send a message, etc. to indicate failure</span></div><div class="line">}</div></div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ae1eea9f32346ecf60ffbf5224d338359"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIO.html">IO</a>* NRF24L01::ioInterface</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a class="anchor" id="af2e0a88f330c86d0cc6c43180f70ecbd"></a>
@@ -3681,18 +3768,6 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <p>Last address set on pipe 0 for reading. </p>
-
-</div>
-</div>
-<a class="anchor" id="a6321af25fee367445baa6ab4840f8443"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSPI.html">SPI</a> NRF24L01::spi</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

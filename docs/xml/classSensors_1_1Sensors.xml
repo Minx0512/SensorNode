@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classSensors_1_1Sensors" kind="class" language="C++" prot="public">
+    <compoundname>Sensors::Sensors</compoundname>
+    <includes refid="Sensors_8hpp" local="no">Sensors.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSensors_1_1Sensors_1a314fc192a99b64c4679670dcc815eee6" prot="private" static="no" mutable="no">
+        <type><ref refid="classSensors_1_1DHT22" kindref="compound">DHT22</ref></type>
+        <definition>DHT22 Sensors::Sensors::dht22</definition>
+        <argsstring></argsstring>
+        <name>dht22</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="43" column="1" bodyfile="src/Sensors/Sensors.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensors_1_1Sensors_1a5636b26f9866b438dd8a5b939f415146" prot="private" static="no" mutable="no">
+        <type><ref refid="classSensors_1_1DS18B20" kindref="compound">DS18B20</ref></type>
+        <definition>DS18B20 Sensors::Sensors::ds18b20</definition>
+        <argsstring></argsstring>
+        <name>ds18b20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="45" column="1" bodyfile="src/Sensors/Sensors.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensors_1_1Sensors_1a6f8be7ead5ea5f1d116273510879c7cf" prot="private" static="no" mutable="no">
+        <type><ref refid="classSensors_1_1Photoresistor" kindref="compound">Photoresistor</ref></type>
+        <definition>Photoresistor Sensors::Sensors::pr</definition>
+        <argsstring></argsstring>
+        <name>pr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="47" column="1" bodyfile="src/Sensors/Sensors.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensors_1_1Sensors_1a04531cb6b01facf58e40cc4263e0904f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Sensors::Sensors::movement</definition>
+        <argsstring></argsstring>
+        <name>movement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="49" column="1" bodyfile="src/Sensors/Sensors.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSensors_1_1Sensors_1ac30fb5f0365448e41bb452884d7a3a83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sensors::Sensors::Sensors</definition>
+        <argsstring>()</argsstring>
+        <name>Sensors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Create new <ref refid="classSensors_1_1DS18B20" kindref="compound">DS18B20</ref> object connected to pin PD6</para><para>&lt; Create new <ref refid="classSensors_1_1DHT22" kindref="compound">DHT22</ref> object connected to pin PD7</para><para>&lt; Create new Photoresitor object connected to the analog output 0x00 </para>        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="57" column="1" bodyfile="src/Sensors/Sensors.cpp" bodystart="26" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Sensors_1a266e3c68574f125f214528c267723a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Sensors::InitSensors</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitSensors</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="59" column="1" bodyfile="src/Sensors/Sensors.cpp" bodystart="43" bodyend="56"/>
+        <references refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" compoundref="main_8cpp" startline="97">str</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Sensors_1adf426a126fdf97ab46e8816bea9fc38a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Sensors::MV_SetMovementTrue</definition>
+        <argsstring>()</argsstring>
+        <name>MV_SetMovementTrue</name>
+        <briefdescription>
+<para>Set movement flag. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set movement flag to true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="65" column="1" bodyfile="src/Sensors/Sensors.cpp" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Sensors_1a17bd8b2ff819fce13ecfbfbd4f74c0ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Sensors::MV_SetMovementFalse</definition>
+        <argsstring>()</argsstring>
+        <name>MV_SetMovementFalse</name>
+        <briefdescription>
+<para>Set movement flag. </para>        </briefdescription>
+        <detaileddescription>
+<para>Reset movement flag to false.. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="71" column="1" bodyfile="src/Sensors/Sensors.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Sensors_1ac4150d860e2182a70aeb1bbbba371f03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Sensors::Sensors::MV_GetMovement</definition>
+        <argsstring>()</argsstring>
+        <name>MV_GetMovement</name>
+        <briefdescription>
+<para>Get movement. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns true or false depending if movement was detected or not. <simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="78" column="1" bodyfile="src/Sensors/Sensors.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Sensors_1a4881149a3a797fad4b58e1fea10e8d39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Sensors::PR_GetSensorValueString</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>PR_GetSensorValueString</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Get sensor value. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns a character array with the average Sensor value of 1000 measurements and adds a | to the end of it. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="87" column="1" bodyfile="src/Sensors/Sensors.cpp" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Sensors_1a633a1ff54564aa6f02093556c0a6b642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Sensors::DHT22_GetSensorValueString</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>DHT22_GetSensorValueString</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Get sensor value. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns a character array with the average Sensor value of 1000 measurements and adds a | to the end of it. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="95" column="1" bodyfile="src/Sensors/Sensors.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Sensors_1af888700f7df3903e91f4aaf4a5c46007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Sensors::DS18B20_GetMACString</definition>
+        <argsstring>(char *MACStringOut)</argsstring>
+        <name>DS18B20_GetMACString</name>
+        <param>
+          <type>char *</type>
+          <declname>MACStringOut</declname>
+        </param>
+        <briefdescription>
+<para>Get MAC addresses from MACString. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">MACStringOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character array of MAC addresses </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="102" column="1" bodyfile="src/Sensors/Sensors.cpp" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Sensors_1ae55034345130ef7b24d1f0cc3718c655" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Sensors::DS18B20_GetSensorValueString</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>DS18B20_GetSensorValueString</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Get xml style sensor string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Puts out one string with the temperature values <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XML style sensor string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Sensors.hpp" line="111" column="1" bodyfile="src/Sensors/Sensors.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="162">
+        <label>Sensors::Photoresistor</label>
+        <link refid="classSensors_1_1Photoresistor"/>
+      </node>
+      <node id="161">
+        <label>Sensors::DHT22</label>
+        <link refid="classSensors_1_1DHT22"/>
+      </node>
+      <node id="160">
+        <label>Sensors::Sensors</label>
+        <link refid="classSensors_1_1Sensors"/>
+        <childnode refid="161" relation="usage">
+          <edgelabel>dht22</edgelabel>
+        </childnode>
+        <childnode refid="162" relation="usage">
+          <edgelabel>pr</edgelabel>
+        </childnode>
+        <childnode refid="163" relation="usage">
+          <edgelabel>ds18b20</edgelabel>
+        </childnode>
+      </node>
+      <node id="163">
+        <label>Sensors::DS18B20</label>
+        <link refid="classSensors_1_1DS18B20"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Sensors/Sensors.hpp" line="39" column="1" bodyfile="src/Sensors/Sensors.hpp" bodystart="39" bodyend="121"/>
+    <listofallmembers>
+      <member refid="classSensors_1_1Sensors_1a314fc192a99b64c4679670dcc815eee6" prot="private" virt="non-virtual"><scope>Sensors::Sensors</scope><name>dht22</name></member>
+      <member refid="classSensors_1_1Sensors_1a633a1ff54564aa6f02093556c0a6b642" prot="public" virt="non-virtual"><scope>Sensors::Sensors</scope><name>DHT22_GetSensorValueString</name></member>
+      <member refid="classSensors_1_1Sensors_1a5636b26f9866b438dd8a5b939f415146" prot="private" virt="non-virtual"><scope>Sensors::Sensors</scope><name>ds18b20</name></member>
+      <member refid="classSensors_1_1Sensors_1af888700f7df3903e91f4aaf4a5c46007" prot="public" virt="non-virtual"><scope>Sensors::Sensors</scope><name>DS18B20_GetMACString</name></member>
+      <member refid="classSensors_1_1Sensors_1ae55034345130ef7b24d1f0cc3718c655" prot="public" virt="non-virtual"><scope>Sensors::Sensors</scope><name>DS18B20_GetSensorValueString</name></member>
+      <member refid="classSensors_1_1Sensors_1a266e3c68574f125f214528c267723a3d" prot="public" virt="non-virtual"><scope>Sensors::Sensors</scope><name>InitSensors</name></member>
+      <member refid="classSensors_1_1Sensors_1a04531cb6b01facf58e40cc4263e0904f" prot="private" virt="non-virtual"><scope>Sensors::Sensors</scope><name>movement</name></member>
+      <member refid="classSensors_1_1Sensors_1ac4150d860e2182a70aeb1bbbba371f03" prot="public" virt="non-virtual"><scope>Sensors::Sensors</scope><name>MV_GetMovement</name></member>
+      <member refid="classSensors_1_1Sensors_1a17bd8b2ff819fce13ecfbfbd4f74c0ab" prot="public" virt="non-virtual"><scope>Sensors::Sensors</scope><name>MV_SetMovementFalse</name></member>
+      <member refid="classSensors_1_1Sensors_1adf426a126fdf97ab46e8816bea9fc38a" prot="public" virt="non-virtual"><scope>Sensors::Sensors</scope><name>MV_SetMovementTrue</name></member>
+      <member refid="classSensors_1_1Sensors_1a6f8be7ead5ea5f1d116273510879c7cf" prot="private" virt="non-virtual"><scope>Sensors::Sensors</scope><name>pr</name></member>
+      <member refid="classSensors_1_1Sensors_1a4881149a3a797fad4b58e1fea10e8d39" prot="public" virt="non-virtual"><scope>Sensors::Sensors</scope><name>PR_GetSensorValueString</name></member>
+      <member refid="classSensors_1_1Sensors_1ac30fb5f0365448e41bb452884d7a3a83" prot="public" virt="non-virtual"><scope>Sensors::Sensors</scope><name>Sensors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,7 +1,7 @@
 var classNRF24L01 =
 [
     [ "NRF24L01", "classNRF24L01.html#ad3e6263e0afaa974637d1450b6c8cb37", null ],
-    [ "NRF24L01", "classNRF24L01.html#a8e2cc2ca751ff3bd4ea351bd2fcea93e", null ],
+    [ "NRF24L01", "classNRF24L01.html#a8e8e6754c34cf6e6fed554a6e26c8a4b", null ],
     [ "__attribute__", "classNRF24L01.html#ad796eb9996a6b528534d1ac2ae2d37cd", null ],
     [ "available", "classNRF24L01.html#ab368039cf5448f0ff5d489563d530c7b", null ],
     [ "available", "classNRF24L01.html#a6bfbb693418e2d60556637b6a3599d05", null ],
@@ -75,6 +75,7 @@ var classNRF24L01 =
     [ "csDelay", "classNRF24L01.html#abae8b8afbf747344006d6163c607be00", null ],
     [ "dynamic_payloads_enabled", "classNRF24L01.html#ae319d1b6a3d950888d2608cc69efb07c", null ],
     [ "failureDetected", "classNRF24L01.html#a749f38c45c00905b3d8e8c180626bff6", null ],
+    [ "ioInterface", "classNRF24L01.html#ae1eea9f32346ecf60ffbf5224d338359", null ],
     [ "NRF24L01_ACK", "classNRF24L01.html#af2e0a88f330c86d0cc6c43180f70ecbd", null ],
     [ "NRF24L01_ADDRSIZE", "classNRF24L01.html#a0b5c60487c6b715b9f17f968f7958d93", null ],
     [ "NRF24L01_CE", "classNRF24L01.html#a56a20345fcb667fcfc9bc1cb62d5152f", null ],
@@ -93,7 +94,6 @@ var classNRF24L01 =
     [ "NRF24L01_RF24_SPEED", "classNRF24L01.html#a2dc0073a56f6aca86da205dd720fd132", null ],
     [ "p_variant", "classNRF24L01.html#a082a99d802a3f2335da94e67cf8440ea", null ],
     [ "pipe0_reading_address", "classNRF24L01.html#af836ff0a915587aa40b5eabe4101ea4c", null ],
-    [ "spi", "classNRF24L01.html#a6321af25fee367445baa6ab4840f8443", null ],
     [ "spi_speed", "classNRF24L01.html#a4701641c1e8b3d082deb03f93c84d8c7", null ],
     [ "txDelay", "classNRF24L01.html#a1feaab910ecff17805f8141fe40028e7", null ]
 ];

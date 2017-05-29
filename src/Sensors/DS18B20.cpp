@@ -27,6 +27,7 @@
 
 //#include "../IO/USART.h"
 
+namespace Sensors {
 
 DS18B20::DS18B20() {
 
@@ -196,7 +197,7 @@ uint8_t DS18B20::BitIO(uint8_t bit){
 		 delay_us(us(60));
 		 PIN_INPUT_MODE();
 		sei();
-	return (bit)
+	return (bit);
 }
 uint8_t DS18B20::WriteByte(uint8_t byte){
 	uint8_t i=8, j;
@@ -213,14 +214,14 @@ uint8_t DS18B20::WriteByte(uint8_t byte){
 	return (byte);
 }
 uint8_t DS18B20::ReadByte(void){
-	 return WriteByte( 0xFF );
+	 return (WriteByte( 0xFF ));
 }
 unsigned char DS18B20::RomSearch(unsigned char diff, unsigned char *id){
 	unsigned char i, j, next_diff;
 	unsigned char b;
 
 	  if( Reset() )
-	    return PRESENCE_ERR;			// error, no device found
+	    return (PRESENCE_ERR);			// error, no device found
 	  WriteByte( SEARCH_ROM );			// ROM search command
 	  next_diff = LAST_DEVICE;			// unchanged on last device
 	  i = 8 * 8;					// 8 bytes
@@ -230,7 +231,7 @@ unsigned char DS18B20::RomSearch(unsigned char diff, unsigned char *id){
 	      b = BitIO( 1 );			// read bit
 	      if( BitIO( 1 ) ){			// read complement bit
 		if( b )					// 11
-		  return DATA_ERR;			// data error
+		  return (DATA_ERR);			// data error
 	      }else{
 		if( !b ){				// 00 = 2 devices
 		  if( diff > i ||
@@ -248,7 +249,7 @@ unsigned char DS18B20::RomSearch(unsigned char diff, unsigned char *id){
 	    }while( --j );
 	    id++;					// next byte
 	  }while( i );
-	  return next_diff;				// to continue search
+	  return (next_diff);				// to continue search
 
 
 }
@@ -296,3 +297,4 @@ void DS18B20::GetTemperature(char* MACstring,char* tempString){
 
 }
 
+}

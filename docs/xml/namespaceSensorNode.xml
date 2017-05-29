@@ -3,7 +3,50 @@
   <compounddef id="namespaceSensorNode" kind="namespace" language="Python">
     <compoundname>SensorNode</compoundname>
     <innerclass refid="classSensorNode_1_1SensorNode" prot="public">SensorNode::SensorNode</innerclass>
+    <innerclass refid="classSensorNode_1_1Thread" prot="public">SensorNode::Thread</innerclass>
       <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceSensorNode_1a3016284326d74dfe31b9e2ecfa7fa6df" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorNode.count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="24" column="1" bodyfile="Python/SensorNode.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceSensorNode_1a07847a51e8fc73f94d1b5244eabe2926" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SensorNode.lock</definition>
+        <argsstring></argsstring>
+        <name>lock</name>
+        <initializer>= threading.Lock()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="25" column="1" bodyfile="Python/SensorNode.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceSensorNode_1a972db98176c0c5ca50407768608addd0" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list SensorNode.thr</definition>
+        <argsstring></argsstring>
+        <name>thr</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="26" column="1" bodyfile="Python/SensorNode.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="namespaceSensorNode_1a1c06b14e3f48f507247d5b8e0e910f35" prot="public" static="no" mutable="no">
         <type></type>
         <definition>SensorNode.app</definition>
@@ -16,7 +59,40 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="67" column="1" bodyfile="Python/SensorNode.py" bodystart="67" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="109" column="1" bodyfile="Python/SensorNode.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceSensorNode_1a9ef694aa75e06b802a3ad5f0ef476f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.GetTimeString</definition>
+        <argsstring>()</argsstring>
+        <name>GetTimeString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="14" column="1" bodyfile="Python/SensorNode.py" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSensorNode_1a12355791e34f3144948a5a6f35a3b2b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def SensorNode.UpdateThreads</definition>
+        <argsstring>(sensorObj)</argsstring>
+        <name>UpdateThreads</name>
+        <param>
+          <type>sensorObj</type>
+          <defname>sensorObj</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim></verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Python/SensorNode.py" line="30" column="1" bodyfile="Python/SensorNode.py" bodystart="30" bodyend="58"/>
+        <references refid="namespaceSensorNode_1a9ef694aa75e06b802a3ad5f0ef476f6f" compoundref="SensorNode_8py" startline="14" endline="17">GetTimeString</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

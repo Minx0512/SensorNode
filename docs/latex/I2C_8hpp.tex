@@ -1,0 +1,71 @@
+\hypertarget{I2C_8hpp}{}\section{src/\+I\+O/\+I2C.hpp File Reference}
+\label{I2C_8hpp}\index{src/\+I\+O/\+I2\+C.\+hpp@{src/\+I\+O/\+I2\+C.\+hpp}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+Include dependency graph for I2\+C.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{I2C_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{I2C_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classI2C}{I2C}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{I2C_8hpp_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+C\+PU}~16000000\+UL
+\item 
+\#define \hyperlink{I2C_8hpp_ab5c0fbe837494c5f9130a5914854250d}{I2\+C\+\_\+\+R\+E\+AD}~0x01
+\item 
+\#define \hyperlink{I2C_8hpp_a9536bf85bced4f4e549a82fb18eb6140}{I2\+C\+\_\+\+W\+R\+I\+TE}~0x00
+\item 
+\#define \hyperlink{I2C_8hpp_a7a1c522bed64982971384489ee477bd3}{F\+\_\+\+S\+CL}~100000\+UL
+\item 
+\#define \hyperlink{I2C_8hpp_a8507c36fb931358ebca2bb6896c0bc09}{Prescaler}~1
+\item 
+\#define \hyperlink{I2C_8hpp_a290b430572cf8d6c32b9e84171ce7143}{T\+W\+B\+R\+\_\+val}~((((\hyperlink{I2C_8hpp_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+C\+PU} / \hyperlink{I2C_8hpp_a7a1c522bed64982971384489ee477bd3}{F\+\_\+\+S\+CL}) / \hyperlink{I2C_8hpp_a8507c36fb931358ebca2bb6896c0bc09}{Prescaler}) -\/ 16 ) / 2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Project\+: \hyperlink{namespaceSensorNode}{Sensor\+Node}
+
+\hyperlink{I2C_8hpp}{I2\+C.\+hpp}
+
+Created on\+: 28 Apr 2017
+
+Author\+: Matthias Minx
+
+Revision\+:
+
+License\+: 
+
+\subsection{Macro Definition Documentation}
+\index{I2\+C.\+hpp@{I2\+C.\+hpp}!F\+\_\+\+C\+PU@{F\+\_\+\+C\+PU}}
+\index{F\+\_\+\+C\+PU@{F\+\_\+\+C\+PU}!I2\+C.\+hpp@{I2\+C.\+hpp}}
+\subsubsection[{\texorpdfstring{F\+\_\+\+C\+PU}{F_CPU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+\_\+\+C\+PU~16000000\+UL}\hypertarget{I2C_8hpp_a43bafb28b29491ec7f871319b5a3b2f8}{}\label{I2C_8hpp_a43bafb28b29491ec7f871319b5a3b2f8}
+\index{I2\+C.\+hpp@{I2\+C.\+hpp}!F\+\_\+\+S\+CL@{F\+\_\+\+S\+CL}}
+\index{F\+\_\+\+S\+CL@{F\+\_\+\+S\+CL}!I2\+C.\+hpp@{I2\+C.\+hpp}}
+\subsubsection[{\texorpdfstring{F\+\_\+\+S\+CL}{F_SCL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+\_\+\+S\+CL~100000\+UL}\hypertarget{I2C_8hpp_a7a1c522bed64982971384489ee477bd3}{}\label{I2C_8hpp_a7a1c522bed64982971384489ee477bd3}
+\index{I2\+C.\+hpp@{I2\+C.\+hpp}!I2\+C\+\_\+\+R\+E\+AD@{I2\+C\+\_\+\+R\+E\+AD}}
+\index{I2\+C\+\_\+\+R\+E\+AD@{I2\+C\+\_\+\+R\+E\+AD}!I2\+C.\+hpp@{I2\+C.\+hpp}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+R\+E\+AD}{I2C_READ}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+R\+E\+AD~0x01}\hypertarget{I2C_8hpp_ab5c0fbe837494c5f9130a5914854250d}{}\label{I2C_8hpp_ab5c0fbe837494c5f9130a5914854250d}
+\index{I2\+C.\+hpp@{I2\+C.\+hpp}!I2\+C\+\_\+\+W\+R\+I\+TE@{I2\+C\+\_\+\+W\+R\+I\+TE}}
+\index{I2\+C\+\_\+\+W\+R\+I\+TE@{I2\+C\+\_\+\+W\+R\+I\+TE}!I2\+C.\+hpp@{I2\+C.\+hpp}}
+\subsubsection[{\texorpdfstring{I2\+C\+\_\+\+W\+R\+I\+TE}{I2C_WRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+W\+R\+I\+TE~0x00}\hypertarget{I2C_8hpp_a9536bf85bced4f4e549a82fb18eb6140}{}\label{I2C_8hpp_a9536bf85bced4f4e549a82fb18eb6140}
+\index{I2\+C.\+hpp@{I2\+C.\+hpp}!Prescaler@{Prescaler}}
+\index{Prescaler@{Prescaler}!I2\+C.\+hpp@{I2\+C.\+hpp}}
+\subsubsection[{\texorpdfstring{Prescaler}{Prescaler}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Prescaler~1}\hypertarget{I2C_8hpp_a8507c36fb931358ebca2bb6896c0bc09}{}\label{I2C_8hpp_a8507c36fb931358ebca2bb6896c0bc09}
+\index{I2\+C.\+hpp@{I2\+C.\+hpp}!T\+W\+B\+R\+\_\+val@{T\+W\+B\+R\+\_\+val}}
+\index{T\+W\+B\+R\+\_\+val@{T\+W\+B\+R\+\_\+val}!I2\+C.\+hpp@{I2\+C.\+hpp}}
+\subsubsection[{\texorpdfstring{T\+W\+B\+R\+\_\+val}{TWBR_val}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+B\+R\+\_\+val~(((({\bf F\+\_\+\+C\+PU} / {\bf F\+\_\+\+S\+CL}) / {\bf Prescaler}) -\/ 16 ) / 2)}\hypertarget{I2C_8hpp_a290b430572cf8d6c32b9e84171ce7143}{}\label{I2C_8hpp_a290b430572cf8d6c32b9e84171ce7143}

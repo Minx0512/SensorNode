@@ -12,7 +12,7 @@ class SerialConnection:
      self.ser.stopbits = serial.STOPBITS_ONE #number of stop bits
      #ser.timeout = None          #block read
      #ser.timeout = 0             #non-block read
-     self.ser.timeout = 2              #timeout block read
+     self.ser.timeout = 0.4              #timeout block read
      self.ser.xonxoff = False     #disable software flow control
      self.ser.rtscts = False     #disable hardware (RTS/CTS) flow control
      self.ser.dsrdtr = False       #disable hardware (DSR/DTR) flow control
@@ -34,7 +34,7 @@ class SerialConnection:
        self.ser.flushOutput()#flush output buffer, aborting current output
        self.ser.write("{0}\r\n".format(queryStr).encode())
        #print("write data: {0}".format(queryStr))
-       time.sleep(0.05)
+       time.sleep(0.015)
        #numberOfLine = 0
        # while True:
        resp = self.ser.read_until("+end").decode('unicode-escape')

@@ -1,4 +1,4 @@
-.TH "NRF24L01" 3 "Tue Apr 4 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "NRF24L01" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ NRF24L01 \-
 .RI "\fBNRF24L01\fP ()"
 .br
 .ti -1c
-.RI "\fBNRF24L01\fP (volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t \fBCE\fP, uint8_t \fBCSN\fP)"
+.RI "\fBNRF24L01\fP (\fBIO\fP *\fBioInterface\fP, volatile uint8_t &DDR, volatile uint8_t &PORT, uint8_t \fBCE\fP, uint8_t \fBCSN\fP)"
 .br
 .ti -1c
 .RI "bool \fBInit\fP ()"
@@ -89,6 +89,9 @@ Protected methods that address the chip directly\&. Regular users cannot ever ca
 .SS "Private Attributes"
 
 .in +1c
+.ti -1c
+.RI "\fBIO\fP * \fBioInterface\fP"
+.br
 .ti -1c
 .RI "volatile uint8_t * \fBNRF24L01_DDR\fP"
 .br
@@ -233,9 +236,6 @@ Protected methods that address the chip directly\&. Regular users cannot ever ca
 .RI "uint32_t \fBcsDelay\fP"
 .br
 .ti -1c
-.RI "\fBSPI\fP \fBspi\fP"
-.br
-.ti -1c
 .RI "void \fBsetAddressWidth\fP (uint8_t a_width)"
 .br
 .ti -1c
@@ -330,7 +330,7 @@ Driver for nRF24L01(+) 2\&.4GHz Wireless Transceiver
 .PP 
 .SS "NRF24L01::NRF24L01 ()"
 
-.SS "NRF24L01::NRF24L01 (volatile uint8_t & DDR, volatile uint8_t & PORT, uint8_t CE, uint8_t CSN)"
+.SS "NRF24L01::NRF24L01 (\fBIO\fP * ioInterface, volatile uint8_t & DDR, volatile uint8_t & PORT, uint8_t CE, uint8_t CSN)"
 
 .SH "Member Function Documentation"
 .PP 
@@ -559,7 +559,7 @@ Current value of status register
 .RE
 .PP
 
-.SS "bool NRF24L01::Init ()"
+.SS "bool NRF24L01::Init (void)"
 Begin operation of the chip
 .PP
 Call this in setup(), before calling any other methods\&. 
@@ -1563,6 +1563,8 @@ if(radio\&.failureDetected){
 .fi
 .PP
  
+.SS "\fBIO\fP* NRF24L01::ioInterface\fC [private]\fP"
+
 .SS "uint8_t NRF24L01::NRF24L01_ACK\fC [private]\fP"
 
 .SS "uint8_t NRF24L01::NRF24L01_ADDRSIZE\fC [private]\fP"
@@ -1599,8 +1601,6 @@ if(radio\&.failureDetected){
 
 .SS "uint8_t NRF24L01::pipe0_reading_address[5]\fC [private]\fP"
 Last address set on pipe 0 for reading\&. 
-.SS "\fBSPI\fP NRF24L01::spi"
-
 .SS "uint16_t NRF24L01::spi_speed\fC [private]\fP"
 \fBSPI\fP Bus Speed 
 .SS "uint32_t NRF24L01::txDelay"

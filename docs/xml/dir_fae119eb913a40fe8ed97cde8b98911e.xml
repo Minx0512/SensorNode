@@ -2,6 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="dir_fae119eb913a40fe8ed97cde8b98911e" kind="dir">
     <compoundname>src/IO</compoundname>
+    <innerfile refid="I2C_8cpp">I2C.cpp</innerfile>
+    <innerfile refid="I2C_8hpp">I2C.hpp</innerfile>
+    <innerfile refid="IO_8cpp">IO.cpp</innerfile>
+    <innerfile refid="IO_8hpp">IO.hpp</innerfile>
     <innerfile refid="ParseStrings_8cpp">ParseStrings.cpp</innerfile>
     <innerfile refid="ParseStrings_8h">ParseStrings.h</innerfile>
     <innerfile refid="SPI_8cpp">SPI.cpp</innerfile>

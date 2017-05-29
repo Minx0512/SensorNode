@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classI2C" kind="class" language="C++" prot="public">
+    <compoundname>I2C</compoundname>
+    <includes refid="I2C_8hpp" local="no">I2C.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classI2C_1a7a9a84fccdacb3346ff97d6f3e158850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>I2C::I2C</definition>
+        <argsstring>()</argsstring>
+        <name>I2C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="49" column="1" bodyfile="src/IO/I2C.cpp" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1ab6cd0165be5e59dfe57976f1ae4325ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void I2C::Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="52" column="1" bodyfile="src/IO/I2C.cpp" bodystart="37" bodyend="40"/>
+        <references refid="I2C_8hpp_1a290b430572cf8d6c32b9e84171ce7143" compoundref="I2C_8hpp" startline="37">TWBR_val</references>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1a2d89860048673ed968d218a749080916" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t I2C::Start</definition>
+        <argsstring>(uint8_t address)</argsstring>
+        <name>Start</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="53" column="1" bodyfile="src/IO/I2C.cpp" bodystart="42" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1aa18dde601c811e06dda1be29c139dd83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t I2C::Write</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="54" column="1" bodyfile="src/IO/I2C.cpp" bodystart="68" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1aa538a5b392f83063c3d484ec35cf1bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t I2C::Read_ack</definition>
+        <argsstring>(void)</argsstring>
+        <name>Read_ack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="55" column="1" bodyfile="src/IO/I2C.cpp" bodystart="80" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1af40aac783e94fcfcd1f9c8cbfe1eeb37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t I2C::Read_nack</definition>
+        <argsstring>(void)</argsstring>
+        <name>Read_nack</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="56" column="1" bodyfile="src/IO/I2C.cpp" bodystart="90" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1a9eb58b51adaedc941abf120c4df3c481" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t I2C::Transmit</definition>
+        <argsstring>(uint8_t address, uint8_t *data, uint16_t length)</argsstring>
+        <name>Transmit</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="57" column="1" bodyfile="src/IO/I2C.cpp" bodystart="100" bodyend="112"/>
+        <references refid="classI2C_1a2d89860048673ed968d218a749080916" compoundref="I2C_8cpp" startline="42" endline="66">Start</references>
+        <references refid="I2C_8hpp_1a9536bf85bced4f4e549a82fb18eb6140" compoundref="I2C_8hpp" startline="32">I2C_WRITE</references>
+        <references refid="classI2C_1aa18dde601c811e06dda1be29c139dd83" compoundref="I2C_8cpp" startline="68" endline="79">Write</references>
+        <references refid="classI2C_1a5d3e0b1de395932284e2e010a0160b5f" compoundref="I2C_8cpp" startline="164" endline="168">Stop</references>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1ad0c64a4e373b4015647a11c298af4d47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t I2C::Receive</definition>
+        <argsstring>(uint8_t address, uint8_t *data, uint16_t length)</argsstring>
+        <name>Receive</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="58" column="1" bodyfile="src/IO/I2C.cpp" bodystart="114" bodyend="128"/>
+        <references refid="classI2C_1a2d89860048673ed968d218a749080916" compoundref="I2C_8cpp" startline="42" endline="66">Start</references>
+        <references refid="I2C_8hpp_1ab5c0fbe837494c5f9130a5914854250d" compoundref="I2C_8hpp" startline="31">I2C_READ</references>
+        <references refid="classI2C_1aa538a5b392f83063c3d484ec35cf1bcd" compoundref="I2C_8cpp" startline="80" endline="88">Read_ack</references>
+        <references refid="classI2C_1af40aac783e94fcfcd1f9c8cbfe1eeb37" compoundref="I2C_8cpp" startline="90" endline="98">Read_nack</references>
+        <references refid="classI2C_1a5d3e0b1de395932284e2e010a0160b5f" compoundref="I2C_8cpp" startline="164" endline="168">Stop</references>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1a4f7e7e3bb2527b721f370ec88011b401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t I2C::WriteReg</definition>
+        <argsstring>(uint8_t devaddr, uint8_t regaddr, uint8_t *data, uint16_t length)</argsstring>
+        <name>WriteReg</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>devaddr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>regaddr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="59" column="1" bodyfile="src/IO/I2C.cpp" bodystart="130" bodyend="144"/>
+        <references refid="classI2C_1a2d89860048673ed968d218a749080916" compoundref="I2C_8cpp" startline="42" endline="66">Start</references>
+        <references refid="classI2C_1aa18dde601c811e06dda1be29c139dd83" compoundref="I2C_8cpp" startline="68" endline="79">Write</references>
+        <references refid="classI2C_1a5d3e0b1de395932284e2e010a0160b5f" compoundref="I2C_8cpp" startline="164" endline="168">Stop</references>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1aee4e012db3dc019536ad3da5632cc04a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t I2C::ReadReg</definition>
+        <argsstring>(uint8_t devaddr, uint8_t regaddr, uint8_t *data, uint16_t length)</argsstring>
+        <name>ReadReg</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>devaddr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>regaddr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="60" column="1" bodyfile="src/IO/I2C.cpp" bodystart="146" bodyend="163"/>
+        <references refid="classI2C_1a2d89860048673ed968d218a749080916" compoundref="I2C_8cpp" startline="42" endline="66">Start</references>
+        <references refid="classI2C_1aa18dde601c811e06dda1be29c139dd83" compoundref="I2C_8cpp" startline="68" endline="79">Write</references>
+        <references refid="classI2C_1aa538a5b392f83063c3d484ec35cf1bcd" compoundref="I2C_8cpp" startline="80" endline="88">Read_ack</references>
+        <references refid="classI2C_1af40aac783e94fcfcd1f9c8cbfe1eeb37" compoundref="I2C_8cpp" startline="90" endline="98">Read_nack</references>
+        <references refid="classI2C_1a5d3e0b1de395932284e2e010a0160b5f" compoundref="I2C_8cpp" startline="164" endline="168">Stop</references>
+      </memberdef>
+      <memberdef kind="function" id="classI2C_1a5d3e0b1de395932284e2e010a0160b5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void I2C::Stop</definition>
+        <argsstring>(void)</argsstring>
+        <name>Stop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/IO/I2C.hpp" line="61" column="1" bodyfile="src/IO/I2C.cpp" bodystart="164" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/IO/I2C.hpp" line="42" column="1" bodyfile="src/IO/I2C.hpp" bodystart="42" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classI2C_1a7a9a84fccdacb3346ff97d6f3e158850" prot="public" virt="non-virtual"><scope>I2C</scope><name>I2C</name></member>
+      <member refid="classI2C_1ab6cd0165be5e59dfe57976f1ae4325ec" prot="public" virt="non-virtual"><scope>I2C</scope><name>Init</name></member>
+      <member refid="classI2C_1aa538a5b392f83063c3d484ec35cf1bcd" prot="public" virt="non-virtual"><scope>I2C</scope><name>Read_ack</name></member>
+      <member refid="classI2C_1af40aac783e94fcfcd1f9c8cbfe1eeb37" prot="public" virt="non-virtual"><scope>I2C</scope><name>Read_nack</name></member>
+      <member refid="classI2C_1aee4e012db3dc019536ad3da5632cc04a" prot="public" virt="non-virtual"><scope>I2C</scope><name>ReadReg</name></member>
+      <member refid="classI2C_1ad0c64a4e373b4015647a11c298af4d47" prot="public" virt="non-virtual"><scope>I2C</scope><name>Receive</name></member>
+      <member refid="classI2C_1a2d89860048673ed968d218a749080916" prot="public" virt="non-virtual"><scope>I2C</scope><name>Start</name></member>
+      <member refid="classI2C_1a5d3e0b1de395932284e2e010a0160b5f" prot="public" virt="non-virtual"><scope>I2C</scope><name>Stop</name></member>
+      <member refid="classI2C_1a9eb58b51adaedc941abf120c4df3c481" prot="public" virt="non-virtual"><scope>I2C</scope><name>Transmit</name></member>
+      <member refid="classI2C_1aa18dde601c811e06dda1be29c139dd83" prot="public" virt="non-virtual"><scope>I2C</scope><name>Write</name></member>
+      <member refid="classI2C_1a4f7e7e3bb2527b721f370ec88011b401" prot="public" virt="non-virtual"><scope>I2C</scope><name>WriteReg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

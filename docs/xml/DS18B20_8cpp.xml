@@ -11,65 +11,66 @@
     <includes local="no">ctype.h</includes>
     <includes local="no">string.h</includes>
     <incdepgraph>
-      <node id="264">
+      <node id="409">
         <label>DS18B20.h</label>
         <link refid="DS18B20_8h"/>
-        <childnode refid="265" relation="include">
+        <childnode refid="410" relation="include">
         </childnode>
-        <childnode refid="266" relation="include">
+        <childnode refid="411" relation="include">
         </childnode>
-        <childnode refid="267" relation="include">
+        <childnode refid="412" relation="include">
         </childnode>
-        <childnode refid="268" relation="include">
+        <childnode refid="413" relation="include">
         </childnode>
-        <childnode refid="269" relation="include">
+        <childnode refid="414" relation="include">
         </childnode>
       </node>
-      <node id="270">
+      <node id="415">
         <label>avr/interrupt.h</label>
       </node>
-      <node id="267">
+      <node id="412">
         <label>stdlib.h</label>
       </node>
-      <node id="263">
+      <node id="408">
         <label>src/Sensors/DS18B20.cpp</label>
         <link refid="DS18B20.cpp"/>
-        <childnode refid="264" relation="include">
+        <childnode refid="409" relation="include">
         </childnode>
-        <childnode refid="265" relation="include">
+        <childnode refid="410" relation="include">
         </childnode>
-        <childnode refid="269" relation="include">
+        <childnode refid="414" relation="include">
         </childnode>
-        <childnode refid="270" relation="include">
+        <childnode refid="415" relation="include">
         </childnode>
-        <childnode refid="271" relation="include">
+        <childnode refid="416" relation="include">
         </childnode>
-        <childnode refid="267" relation="include">
+        <childnode refid="412" relation="include">
         </childnode>
-        <childnode refid="268" relation="include">
+        <childnode refid="413" relation="include">
         </childnode>
-        <childnode refid="272" relation="include">
+        <childnode refid="417" relation="include">
         </childnode>
       </node>
-      <node id="266">
+      <node id="411">
         <label>avr/io.h</label>
       </node>
-      <node id="265">
+      <node id="410">
         <label>util/delay.h</label>
       </node>
-      <node id="272">
+      <node id="417">
         <label>string.h</label>
       </node>
-      <node id="268">
+      <node id="413">
         <label>ctype.h</label>
       </node>
-      <node id="271">
+      <node id="416">
         <label>stdio.h</label>
       </node>
-      <node id="269">
+      <node id="414">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>
+    <innernamespace refid="namespaceSensors">Sensors</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -87,275 +88,277 @@
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;../IO/USART.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="classDS18B20_1afc1a4166a4d1d00baef15a9e4c59b632" refkind="member"><highlight class="normal"><ref refid="classDS18B20_1afc1a4166a4d1d00baef15a9e4c59b632" kindref="member">DS18B20::DS18B20</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceSensors" kindref="compound">Sensors</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classSensors_1_1DS18B20_1af643f9bc9d0095ec396817630aa9fa19" refkind="member"><highlight class="normal"><ref refid="classSensors_1_1DS18B20_1af643f9bc9d0095ec396817630aa9fa19" kindref="member">DS18B20::DS18B20</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a4e8d420cd118999883bde12e766bc1d4" kindref="member">WIRE_PORT</ref><sp/>=<sp/>&amp;PORTB;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a06a1f548d087b8d8971dee5e94653f5c" kindref="member">WIRE_DDR</ref><sp/>=<sp/>&amp;DDRB;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" kindref="member">WIRE_PIN</ref><sp/>=<sp/>&amp;PINB;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref><sp/><sp/>=<sp/>PB0;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a6a769e836e36f4975918eb52f6e00309" kindref="member">WIRE_PORT</ref><sp/>=<sp/>&amp;PORTB;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1aceb52cdfb7462c8c7be8178181ae4dc5" kindref="member">WIRE_DDR</ref><sp/>=<sp/>&amp;DDRB;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" kindref="member">WIRE_PIN</ref><sp/>=<sp/>&amp;PINB;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" kindref="member">WIRE_DQ</ref><sp/><sp/>=<sp/>PB0;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//u<sp/>=<sp/>USART();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//u<sp/>=<sp/>USART();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="classDS18B20_1afb0ce114e04bc699bc2e3c5282a31bc3" refkind="member"><highlight class="normal"><ref refid="classDS18B20_1afc1a4166a4d1d00baef15a9e4c59b632" kindref="member">DS18B20::DS18B20</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_PORT,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_DDR,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_PIN,uint8_t<sp/>Wire_DQ){</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classSensors_1_1DS18B20_1a4beaec7604e613184572d0175361fba7" refkind="member"><highlight class="normal"><ref refid="classSensors_1_1DS18B20_1af643f9bc9d0095ec396817630aa9fa19" kindref="member">DS18B20::DS18B20</ref>(</highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_PORT,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_DDR,<sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;Wire_PIN,uint8_t<sp/>Wire_DQ){</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a4e8d420cd118999883bde12e766bc1d4" kindref="member">WIRE_PORT</ref><sp/>=<sp/>&amp;Wire_PORT;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a06a1f548d087b8d8971dee5e94653f5c" kindref="member">WIRE_DDR</ref><sp/>=<sp/>&amp;Wire_DDR;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" kindref="member">WIRE_PIN</ref><sp/>=<sp/>&amp;Wire_PIN;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref><sp/><sp/>=<sp/>Wire_DQ;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>u<sp/>=<sp/>USART();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a6a769e836e36f4975918eb52f6e00309" kindref="member">WIRE_PORT</ref><sp/>=<sp/>&amp;Wire_PORT;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1aceb52cdfb7462c8c7be8178181ae4dc5" kindref="member">WIRE_DDR</ref><sp/>=<sp/>&amp;Wire_DDR;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" kindref="member">WIRE_PIN</ref><sp/>=<sp/>&amp;Wire_PIN;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" kindref="member">WIRE_DQ</ref><sp/><sp/>=<sp/>Wire_DQ;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>u<sp/>=<sp/>USART();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71" refid="classDS18B20_1a817183f6ef9552d6559d58d714e5c804" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a817183f6ef9552d6559d58d714e5c804" kindref="member">DS18B20::StartMeasurement</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>){</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>*<ref refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" kindref="member">WIRE_PIN</ref><sp/>&amp;<sp/>1&lt;&lt;<sp/><ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>){</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a1f03dae7ea2d07a225343eaa33d119cf" kindref="member">Command</ref>(<sp/><ref refid="DS18B20_8h_1a3d233d75d73e3baf6d9a7e30b4afed66" kindref="member">THERM_CMD_CONVERTTEMP</ref>,<sp/>NULL<sp/>);</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classDS18B20_1a4e8d420cd118999883bde12e766bc1d4" kindref="member">WIRE_PORT</ref><sp/>|=<sp/>1&lt;&lt;<sp/><ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classDS18B20_1a06a1f548d087b8d8971dee5e94653f5c" kindref="member">WIRE_DDR</ref><sp/>|=<sp/>1&lt;&lt;<sp/><ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>parasite<sp/>power<sp/>on</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classSensors_1_1DS18B20_1a038c0caa764736529ebaf28af9ee5321" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1DS18B20_1a038c0caa764736529ebaf28af9ee5321" kindref="member">DS18B20::StartMeasurement</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>*<ref refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" kindref="member">WIRE_PIN</ref><sp/>&amp;<sp/>1&lt;&lt;<sp/><ref refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" kindref="member">WIRE_DQ</ref>){</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a14af4e7ba13a59b640d651b3abd3bedb" kindref="member">Command</ref>(<sp/><ref refid="DS18B20_8h_1a3d233d75d73e3baf6d9a7e30b4afed66" kindref="member">THERM_CMD_CONVERTTEMP</ref>,<sp/>NULL<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classSensors_1_1DS18B20_1a6a769e836e36f4975918eb52f6e00309" kindref="member">WIRE_PORT</ref><sp/>|=<sp/>1&lt;&lt;<sp/><ref refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" kindref="member">WIRE_DQ</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classSensors_1_1DS18B20_1aceb52cdfb7462c8c7be8178181ae4dc5" kindref="member">WIRE_DDR</ref><sp/>|=<sp/>1&lt;&lt;<sp/><ref refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" kindref="member">WIRE_DQ</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>parasite<sp/>power<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83" refid="classDS18B20_1a6340d31cea87cf473af13fc7f15f60e4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a6340d31cea87cf473af13fc7f15f60e4" kindref="member">DS18B20::ReadMeasurement</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempStr<sp/>){</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[8],<sp/>diff;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(tempStr,</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(<ref refid="classDS18B20_1a6884de10b175289718239bdac0b8e52e" kindref="member">MACString</ref>,</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//unsigned<sp/>char<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>diff<sp/>=<sp/><ref refid="DS18B20_8h_1accfeed0bea98f3185af84c049ed64959" kindref="member">SEARCH_FIRST</ref>;<sp/>diff<sp/>!=<sp/><ref refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" kindref="member">LAST_DEVICE</ref>;<sp/>){</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diff<sp/>=<sp/><ref refid="classDS18B20_1a356e88e8a6bca4f5ffeb41180c08f91d" kindref="member">RomSearch</ref>(<sp/>diff,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>==<sp/><ref refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" kindref="member">PRESENCE_ERR</ref><sp/>){</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(tempStr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>0x00|&quot;</highlight><highlight class="normal"><sp/>);<sp/></highlight><highlight class="comment">//<sp/>No<sp/>sensor<sp/>found</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>==<sp/><ref refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" kindref="member">DATA_ERR</ref><sp/>){</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(tempStr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>0x10|&quot;</highlight><highlight class="normal"><sp/>);<sp/></highlight><highlight class="comment">//<sp/>Bus<sp/>Error</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x28<sp/>||<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x10<sp/>){<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temperature<sp/>sensor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/><ref refid="classDS18B20_1a6884de10b175289718239bdac0b8e52e" kindref="member">MACString</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X|&quot;</highlight><highlight class="normal">,<ref refid="classDS18B20_1a6884de10b175289718239bdac0b8e52e" kindref="member">MACString</ref>,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[1],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[2],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[3],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[4],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[5],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[6],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[7]<sp/>);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1ac1fe271992c3ff8aea781ad1ead35f35" kindref="member">THERM_CMD_RSCRATCHPAD</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>command</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/><ref refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kindref="member">ReadByte</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>low<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<ref refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kindref="member">ReadByte</ref>()<sp/>&lt;&lt;<sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>high<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temp-=0x20;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x10<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>9<sp/>-&gt;<sp/>12<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>&lt;&lt;=<sp/>3;</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>sprintf(<sp/>string,<sp/>&quot;<sp/><sp/>%04X<sp/>=<sp/>&quot;,<sp/>temp<sp/>);<sp/><sp/>//<sp/>hex<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/>tempStr,<sp/></highlight><highlight class="stringliteral">&quot;%s%d.%01d°C|&quot;</highlight><highlight class="normal">,tempStr,<sp/>temp<sp/>&gt;&gt;<sp/>4,<sp/>(temp<sp/>&lt;&lt;<sp/>12)<sp/>/<sp/>6553<sp/>);<sp/></highlight><highlight class="comment">//<sp/>0.1C</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classSensors_1_1DS18B20_1a014be02f21c7f7b7f933fa800213695c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1DS18B20_1a014be02f21c7f7b7f933fa800213695c" kindref="member">DS18B20::ReadMeasurement</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempStr<sp/>){</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[8],<sp/>diff;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(tempStr,</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(<ref refid="classSensors_1_1DS18B20_1a7c33b18028020215b85039dd9555a6df" kindref="member">MACString</ref>,</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//unsigned<sp/>char<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>diff<sp/>=<sp/><ref refid="DS18B20_8h_1accfeed0bea98f3185af84c049ed64959" kindref="member">SEARCH_FIRST</ref>;<sp/>diff<sp/>!=<sp/><ref refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" kindref="member">LAST_DEVICE</ref>;<sp/>){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diff<sp/>=<sp/><ref refid="classSensors_1_1DS18B20_1a889ad2303c61db988566cbfcfd57a9b9" kindref="member">RomSearch</ref>(<sp/>diff,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>==<sp/><ref refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" kindref="member">PRESENCE_ERR</ref><sp/>){</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(tempStr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>0x00|&quot;</highlight><highlight class="normal"><sp/>);<sp/></highlight><highlight class="comment">//<sp/>No<sp/>sensor<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>==<sp/><ref refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" kindref="member">DATA_ERR</ref><sp/>){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(tempStr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>0x10|&quot;</highlight><highlight class="normal"><sp/>);<sp/></highlight><highlight class="comment">//<sp/>Bus<sp/>Error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x28<sp/>||<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x10<sp/>){<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temperature<sp/>sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/><ref refid="classSensors_1_1DS18B20_1a7c33b18028020215b85039dd9555a6df" kindref="member">MACString</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%s%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X|&quot;</highlight><highlight class="normal">,<ref refid="classSensors_1_1DS18B20_1a7c33b18028020215b85039dd9555a6df" kindref="member">MACString</ref>,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[1],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[2],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[3],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[4],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[5],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[6],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[7]<sp/>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1ac1fe271992c3ff8aea781ad1ead35f35" kindref="member">THERM_CMD_RSCRATCHPAD</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/><ref refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" kindref="member">ReadByte</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>low<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<ref refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" kindref="member">ReadByte</ref>()<sp/>&lt;&lt;<sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>high<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temp-=0x20;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x10<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>9<sp/>-&gt;<sp/>12<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>&lt;&lt;=<sp/>3;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>sprintf(<sp/>string,<sp/>&quot;<sp/><sp/>%04X<sp/>=<sp/>&quot;,<sp/>temp<sp/>);<sp/><sp/>//<sp/>hex<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/>tempStr,<sp/></highlight><highlight class="stringliteral">&quot;%s%d.%01d°C|&quot;</highlight><highlight class="normal">,tempStr,<sp/>temp<sp/>&gt;&gt;<sp/>4,<sp/>(temp<sp/>&lt;&lt;<sp/>12)<sp/>/<sp/>6553<sp/>);<sp/></highlight><highlight class="comment">//<sp/>0.1C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122" refid="classDS18B20_1a440a17340ac61a693316550422e4ae4e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a440a17340ac61a693316550422e4ae4e" kindref="member">DS18B20::ReadMeasurement2</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>Macstring,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempStr<sp/>){</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[8],<sp/>diff;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(Macstring,(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(tempStr,(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//unsigned<sp/>char<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>diff<sp/>=<sp/><ref refid="DS18B20_8h_1accfeed0bea98f3185af84c049ed64959" kindref="member">SEARCH_FIRST</ref>;<sp/>diff<sp/>!=<sp/><ref refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" kindref="member">LAST_DEVICE</ref>;<sp/>){</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diff<sp/>=<sp/><ref refid="classDS18B20_1a356e88e8a6bca4f5ffeb41180c08f91d" kindref="member">RomSearch</ref>(<sp/>diff,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>==<sp/><ref refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" kindref="member">PRESENCE_ERR</ref><sp/>){</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(Macstring,<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>Sensor<sp/>found.&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>==<sp/><ref refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" kindref="member">DATA_ERR</ref><sp/>){</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(Macstring,<sp/></highlight><highlight class="stringliteral">&quot;Bus<sp/>Error.&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x28<sp/>||<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x10<sp/>){<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temperature<sp/>sensor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/>Macstring,<sp/></highlight><highlight class="stringliteral">&quot;%s%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X|&quot;</highlight><highlight class="normal">,Macstring,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[1],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[2],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[3],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[4],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[5],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[6],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[7]<sp/>);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1ac1fe271992c3ff8aea781ad1ead35f35" kindref="member">THERM_CMD_RSCRATCHPAD</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>command</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/><ref refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kindref="member">ReadByte</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>low<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<ref refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kindref="member">ReadByte</ref>()<sp/>&lt;&lt;<sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>high<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temp-=0x20;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x10<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>9<sp/>-&gt;<sp/>12<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>&lt;&lt;=<sp/>3;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>sprintf(<sp/>string,<sp/>&quot;<sp/><sp/>%04X<sp/>=<sp/>&quot;,<sp/>temp<sp/>);<sp/><sp/>//<sp/>hex<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/>tempStr,<sp/></highlight><highlight class="stringliteral">&quot;%s%d.%01d°C|&quot;</highlight><highlight class="normal">,tempStr,<sp/>temp<sp/>&gt;&gt;<sp/>4,<sp/>(temp<sp/>&lt;&lt;<sp/>12)<sp/>/<sp/>6553<sp/>);<sp/></highlight><highlight class="comment">//<sp/>0.1C</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classSensors_1_1DS18B20_1a9b8098959de0977e4576093fe2346cbd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1DS18B20_1a9b8098959de0977e4576093fe2346cbd" kindref="member">DS18B20::ReadMeasurement2</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>Macstring,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempStr<sp/>){</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[8],<sp/>diff;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(Macstring,(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(tempStr,(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//unsigned<sp/>char<sp/>i;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>diff<sp/>=<sp/><ref refid="DS18B20_8h_1accfeed0bea98f3185af84c049ed64959" kindref="member">SEARCH_FIRST</ref>;<sp/>diff<sp/>!=<sp/><ref refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" kindref="member">LAST_DEVICE</ref>;<sp/>){</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diff<sp/>=<sp/><ref refid="classSensors_1_1DS18B20_1a889ad2303c61db988566cbfcfd57a9b9" kindref="member">RomSearch</ref>(<sp/>diff,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>==<sp/><ref refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" kindref="member">PRESENCE_ERR</ref><sp/>){</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(Macstring,<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>Sensor<sp/>found.&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>==<sp/><ref refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" kindref="member">DATA_ERR</ref><sp/>){</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(Macstring,<sp/></highlight><highlight class="stringliteral">&quot;Bus<sp/>Error.&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x28<sp/>||<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x10<sp/>){<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temperature<sp/>sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/>Macstring,<sp/></highlight><highlight class="stringliteral">&quot;%s%02X:%02X:%02X:%02X:%02X:%02X:%02X:%02X|&quot;</highlight><highlight class="normal">,Macstring,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[1],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[2],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[3],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[4],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[5],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[6],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[7]<sp/>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1ac1fe271992c3ff8aea781ad1ead35f35" kindref="member">THERM_CMD_RSCRATCHPAD</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/><ref refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" kindref="member">ReadByte</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>low<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>|=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<ref refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" kindref="member">ReadByte</ref>()<sp/>&lt;&lt;<sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>high<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>temp-=0x20;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[0]<sp/>==<sp/>0x10<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>9<sp/>-&gt;<sp/>12<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>&lt;&lt;=<sp/>3;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>sprintf(<sp/>string,<sp/>&quot;<sp/><sp/>%04X<sp/>=<sp/>&quot;,<sp/>temp<sp/>);<sp/><sp/>//<sp/>hex<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/>tempStr,<sp/></highlight><highlight class="stringliteral">&quot;%s%d.%01d°C|&quot;</highlight><highlight class="normal">,tempStr,<sp/>temp<sp/>&gt;&gt;<sp/>4,<sp/>(temp<sp/>&lt;&lt;<sp/>12)<sp/>/<sp/>6553<sp/>);<sp/></highlight><highlight class="comment">//<sp/>0.1C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160" refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" kindref="member">DS18B20::Reset</ref>(){</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>i;</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Pull<sp/>line<sp/>low<sp/>and<sp/>wait<sp/>for<sp/>480uS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" kindref="member">PIN_LOW</ref>();</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" kindref="member">PIN_OUTPUT_MODE</ref>();</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(480));</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>cli();</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Release<sp/>line<sp/>and<sp/>wait<sp/>for<sp/>60uS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" kindref="member">PIN_INPUT_MODE</ref>();</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(60));</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Store<sp/>line<sp/>value<sp/>and<sp/>wait<sp/>until<sp/>the<sp/>completion<sp/>of<sp/>480uS<sp/>period</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>i=(*<ref refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" kindref="member">WIRE_PIN</ref><sp/>&amp;<sp/>(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>));</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>sei();</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(420));</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>the<sp/>value<sp/>read<sp/>from<sp/>the<sp/>presence<sp/>pulse<sp/>(0=OK,<sp/>1=WRONG)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(*<ref refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" kindref="member">WIRE_PIN</ref><sp/>&amp;<sp/>(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>))<sp/>==<sp/>0<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>short<sp/>circuit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="classSensors_1_1DS18B20_1abefe26ccc02fe5b8519d94a6f46729fb" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="classSensors_1_1DS18B20_1abefe26ccc02fe5b8519d94a6f46729fb" kindref="member">DS18B20::Reset</ref>(){</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>i;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Pull<sp/>line<sp/>low<sp/>and<sp/>wait<sp/>for<sp/>480uS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a3429705d951dec85ffafbc627bcf015f" kindref="member">PIN_LOW</ref>();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1aaf9c80b1de14fc02dd2cfd188eddf751" kindref="member">PIN_OUTPUT_MODE</ref>();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(480));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>cli();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Release<sp/>line<sp/>and<sp/>wait<sp/>for<sp/>60uS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a8bb87520d8ef3ad3639afab3fbbc39ce" kindref="member">PIN_INPUT_MODE</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(60));</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Store<sp/>line<sp/>value<sp/>and<sp/>wait<sp/>until<sp/>the<sp/>completion<sp/>of<sp/>480uS<sp/>period</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>i=(*<ref refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" kindref="member">WIRE_PIN</ref><sp/>&amp;<sp/>(1&lt;&lt;<ref refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" kindref="member">WIRE_DQ</ref>));</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>sei();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(420));</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>the<sp/>value<sp/>read<sp/>from<sp/>the<sp/>presence<sp/>pulse<sp/>(0=OK,<sp/>1=WRONG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(*<ref refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" kindref="member">WIRE_PIN</ref><sp/>&amp;<sp/>(1&lt;&lt;<ref refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" kindref="member">WIRE_DQ</ref>))<sp/>==<sp/>0<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>short<sp/>circuit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"></highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(i);</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight></codeline>
-<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="183" refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" kindref="member">DS18B20::BitIO</ref>(uint8_t<sp/>bit){</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Pull<sp/>line<sp/>low<sp/>for<sp/>1uS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cli();</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" kindref="member">PIN_LOW</ref>();</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" kindref="member">PIN_OUTPUT_MODE</ref>();</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(1));</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"></highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>we<sp/>want<sp/>to<sp/>write<sp/>1,<sp/>release<sp/>the<sp/>line<sp/>(if<sp/>not<sp/>will<sp/>keep<sp/>low)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bit)<sp/><ref refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" kindref="member">PIN_INPUT_MODE</ref>();</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay_us(15);</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(*<ref refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" kindref="member">WIRE_PIN</ref><sp/>&amp;<sp/>(1&lt;&lt;<ref refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kindref="member">WIRE_DQ</ref>))<sp/>==<sp/>0<sp/>)</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit=0;</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Wait<sp/>for<sp/>60uS<sp/>and<sp/>release<sp/>the<sp/>line</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(60));</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" kindref="member">PIN_INPUT_MODE</ref>();</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sei();</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(bit)</highlight></codeline>
-<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="201" refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">DS18B20::WriteByte</ref>(uint8_t<sp/>byte){</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>i=8,<sp/>j;</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"></highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Write<sp/>actual<sp/>bit<sp/>and<sp/>shift<sp/>one<sp/>position<sp/>right<sp/>to<sp/>make<sp/>the<sp/>next<sp/>bit<sp/>ready</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j<sp/>=<sp/><ref refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" kindref="member">BitIO</ref>(byte&amp;1);</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte&gt;&gt;=1;</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(j)</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>|=<sp/>0x80;</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"></highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(--i);</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"></highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(byte);</highlight></codeline>
-<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="215" refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kindref="member">DS18B20::ReadByte</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(<sp/>0xFF<sp/>);</highlight></codeline>
-<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="218" refid="classDS18B20_1a356e88e8a6bca4f5ffeb41180c08f91d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a356e88e8a6bca4f5ffeb41180c08f91d" kindref="member">DS18B20::RomSearch</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>diff,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">){</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>next_diff;</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"></highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" kindref="member">Reset</ref>()<sp/>)</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" kindref="member">PRESENCE_ERR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>error,<sp/>no<sp/>device<sp/>found</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1ae22115770cfd724213b05d36afcb7d8e" kindref="member">SEARCH_ROM</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ROM<sp/>search<sp/>command</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>next_diff<sp/>=<sp/><ref refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" kindref="member">LAST_DEVICE</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>unchanged<sp/>on<sp/>last<sp/>device</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>8<sp/>*<sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j<sp/>=<sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" kindref="member">BitIO</ref>(<sp/>1<sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" kindref="member">BitIO</ref>(<sp/>1<sp/>)<sp/>){<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>complement<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>b<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>11</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" kindref="member">DATA_ERR</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>data<sp/>error</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!b<sp/>){<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00<sp/>=<sp/>2<sp/>devices</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>&gt;<sp/>i<sp/>||</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&amp;<sp/>1)<sp/>&amp;&amp;<sp/>diff<sp/>!=<sp/>i)<sp/>){</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_diff<sp/>=<sp/>i;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next<sp/>pass<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" kindref="member">BitIO</ref>(<sp/>b<sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&gt;&gt;=<sp/>1;</highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>b<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>store<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>|=<sp/>0x80;</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i--;</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>--j<sp/>);</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>i<sp/>);</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>next_diff;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>continue<sp/>search</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(i);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184" refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" kindref="member">DS18B20::BitIO</ref>(uint8_t<sp/>bit){</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Pull<sp/>line<sp/>low<sp/>for<sp/>1uS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cli();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a3429705d951dec85ffafbc627bcf015f" kindref="member">PIN_LOW</ref>();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1aaf9c80b1de14fc02dd2cfd188eddf751" kindref="member">PIN_OUTPUT_MODE</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(1));</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>we<sp/>want<sp/>to<sp/>write<sp/>1,<sp/>release<sp/>the<sp/>line<sp/>(if<sp/>not<sp/>will<sp/>keep<sp/>low)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bit)<sp/><ref refid="classSensors_1_1DS18B20_1a8bb87520d8ef3ad3639afab3fbbc39ce" kindref="member">PIN_INPUT_MODE</ref>();</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay_us(15);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(*<ref refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" kindref="member">WIRE_PIN</ref><sp/>&amp;<sp/>(1&lt;&lt;<ref refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" kindref="member">WIRE_DQ</ref>))<sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit=0;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Wait<sp/>for<sp/>60uS<sp/>and<sp/>release<sp/>the<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay_us(<ref refid="DHT22_8h_1a9feef6e5eed237807d11af797efbbea8" kindref="member">us</ref>(60));</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a8bb87520d8ef3ad3639afab3fbbc39ce" kindref="member">PIN_INPUT_MODE</ref>();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sei();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(bit);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202" refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kindref="member">DS18B20::WriteByte</ref>(uint8_t<sp/>byte){</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>i=8,<sp/>j;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Write<sp/>actual<sp/>bit<sp/>and<sp/>shift<sp/>one<sp/>position<sp/>right<sp/>to<sp/>make<sp/>the<sp/>next<sp/>bit<sp/>ready</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j<sp/>=<sp/><ref refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" kindref="member">BitIO</ref>(byte&amp;1);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte&gt;&gt;=1;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(j)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>|=<sp/>0x80;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(--i);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(byte);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216" refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" kindref="member">DS18B20::ReadByte</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kindref="member">WriteByte</ref>(<sp/>0xFF<sp/>));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219" refid="classSensors_1_1DS18B20_1a889ad2303c61db988566cbfcfd57a9b9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1DS18B20_1a889ad2303c61db988566cbfcfd57a9b9" kindref="member">DS18B20::RomSearch</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>diff,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>next_diff;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="classSensors_1_1DS18B20_1abefe26ccc02fe5b8519d94a6f46729fb" kindref="member">Reset</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="DS18B20_8h_1a4daa975e080ccafa8db3ed7b46f35567" kindref="member">PRESENCE_ERR</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>error,<sp/>no<sp/>device<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1ae22115770cfd724213b05d36afcb7d8e" kindref="member">SEARCH_ROM</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ROM<sp/>search<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>next_diff<sp/>=<sp/><ref refid="DS18B20_8h_1a42de6aa1135578f9ed5abd25930b1ad5" kindref="member">LAST_DEVICE</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>unchanged<sp/>on<sp/>last<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>8<sp/>*<sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j<sp/>=<sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" kindref="member">BitIO</ref>(<sp/>1<sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" kindref="member">BitIO</ref>(<sp/>1<sp/>)<sp/>){<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>complement<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>b<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="DS18B20_8h_1a1ed8ed33743473a38141862212eeb93f" kindref="member">DATA_ERR</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>data<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!b<sp/>){<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00<sp/>=<sp/>2<sp/>devices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>diff<sp/>&gt;<sp/>i<sp/>||</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&amp;<sp/>1)<sp/>&amp;&amp;<sp/>diff<sp/>!=<sp/>i)<sp/>){</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_diff<sp/>=<sp/>i;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next<sp/>pass<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" kindref="member">BitIO</ref>(<sp/>b<sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&gt;&gt;=<sp/>1;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>b<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>store<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>|=<sp/>0x80;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i--;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>--j<sp/>);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>next<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(next_diff);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>continue<sp/>search</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="253"><highlight class="normal"></highlight></codeline>
-<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="255" refid="classDS18B20_1a1f03dae7ea2d07a225343eaa33d119cf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a1f03dae7ea2d07a225343eaa33d119cf" kindref="member">DS18B20::Command</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>command,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>){</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" kindref="member">Reset</ref>();</highlight></codeline>
-<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>){</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1a20a70a05486a1fa3aba1881aa90104cd" kindref="member">MATCH_ROM</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>a<sp/>single<sp/>device</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>8;</highlight></codeline>
-<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(<sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++;</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>--i<sp/>);</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1ae5773d5b673b0c12c6615958dd2efb22" kindref="member">SKIP_ROM</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>all<sp/>devices</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kindref="member">WriteByte</ref>(<sp/>command<sp/>);</highlight></codeline>
-<codeline lineno="269"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"></highlight></codeline>
-<codeline lineno="271" refid="classDS18B20_1af18146fd823d04f5472fb305e46f02b0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1af18146fd823d04f5472fb305e46f02b0" kindref="member">DS18B20::GetMACString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>MACStringOut){</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(MACStringOut,</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<ref refid="classDS18B20_1a6884de10b175289718239bdac0b8e52e" kindref="member">MACString</ref>);</highlight></codeline>
-<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="275"><highlight class="comment">void<sp/>DS18B20::GetTemperatureString(char*<sp/>TemperatureString){</highlight></codeline>
-<codeline lineno="276"><highlight class="comment"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="256" refid="classSensors_1_1DS18B20_1a14af4e7ba13a59b640d651b3abd3bedb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1DS18B20_1a14af4e7ba13a59b640d651b3abd3bedb" kindref="member">DS18B20::Command</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>command,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1abefe26ccc02fe5b8519d94a6f46729fb" kindref="member">Reset</ref>();</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1a20a70a05486a1fa3aba1881aa90104cd" kindref="member">MATCH_ROM</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>a<sp/>single<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kindref="member">WriteByte</ref>(<sp/>*</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">++;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>--i<sp/>);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kindref="member">WriteByte</ref>(<sp/><ref refid="DS18B20_8h_1ae5773d5b673b0c12c6615958dd2efb22" kindref="member">SKIP_ROM</ref><sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>all<sp/>devices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kindref="member">WriteByte</ref>(<sp/>command<sp/>);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="classSensors_1_1DS18B20_1a78f6bbedbe849612f39ef6600a7b91f3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1DS18B20_1a78f6bbedbe849612f39ef6600a7b91f3" kindref="member">DS18B20::GetMACString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>MACStringOut){</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(MACStringOut,</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<ref refid="classSensors_1_1DS18B20_1a7c33b18028020215b85039dd9555a6df" kindref="member">MACString</ref>);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="276"><highlight class="comment">void<sp/>DS18B20::GetTemperatureString(char*<sp/>TemperatureString){</highlight></codeline>
 <codeline lineno="277"><highlight class="comment"></highlight></codeline>
-<codeline lineno="278"><highlight class="comment">}</highlight></codeline>
-<codeline lineno="279"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="280" refid="classDS18B20_1a64a03b4a18a9d2b3faeb7943865055e9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1a64a03b4a18a9d2b3faeb7943865055e9" kindref="member">DS18B20::GetSensorStringXML</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">){</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"></highlight></codeline>
-<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//char<sp/>str[255];</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a817183f6ef9552d6559d58d714e5c804" kindref="member">StartMeasurement</ref>();</highlight></codeline>
-<codeline lineno="284"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ReadMeasurement(str);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="285"><highlight class="normal"></highlight><highlight class="comment">//_delay_ms(2000);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a6340d31cea87cf473af13fc7f15f60e4" kindref="member">ReadMeasurement</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"></highlight></codeline>
-<codeline lineno="288"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="289" refid="classDS18B20_1ae3d50f1b5b71517d633958f54654ea55" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDS18B20_1ae3d50f1b5b71517d633958f54654ea55" kindref="member">DS18B20::GetTemperature</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>MACstring,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempString){</highlight></codeline>
-<codeline lineno="290"><highlight class="normal"></highlight></codeline>
-<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//char<sp/>str[255];</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a817183f6ef9552d6559d58d714e5c804" kindref="member">StartMeasurement</ref>();</highlight></codeline>
-<codeline lineno="293"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ReadMeasurement(str);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="294"><highlight class="normal"></highlight><highlight class="comment">//_delay_ms(2000);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDS18B20_1a440a17340ac61a693316550422e4ae4e" kindref="member">ReadMeasurement2</ref>(<sp/>MACstring,<sp/>tempString);</highlight></codeline>
-<codeline lineno="296"><highlight class="normal"></highlight></codeline>
-<codeline lineno="297"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="comment"></highlight></codeline>
+<codeline lineno="279"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="280"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="classSensors_1_1DS18B20_1aeed18c0c1d714f084dab8a74437a3c35" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1DS18B20_1aeed18c0c1d714f084dab8a74437a3c35" kindref="member">DS18B20::GetSensorStringXML</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//char<sp/>str[255];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a038c0caa764736529ebaf28af9ee5321" kindref="member">StartMeasurement</ref>();</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ReadMeasurement(str);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="comment">//_delay_ms(2000);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a014be02f21c7f7b7f933fa800213695c" kindref="member">ReadMeasurement</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="290" refid="classSensors_1_1DS18B20_1a788dc2898e3ad1a0a17d042cf5e3dd9a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSensors_1_1DS18B20_1a788dc2898e3ad1a0a17d042cf5e3dd9a" kindref="member">DS18B20::GetTemperature</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>MACstring,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tempString){</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//char<sp/>str[255];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a038c0caa764736529ebaf28af9ee5321" kindref="member">StartMeasurement</ref>();</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ReadMeasurement(str);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="comment">//_delay_ms(2000);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSensors_1_1DS18B20_1a9b8098959de0977e4576093fe2346cbd" kindref="member">ReadMeasurement2</ref>(<sp/>MACstring,<sp/>tempString);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/Sensors/DS18B20.cpp"/>
   </compounddef>

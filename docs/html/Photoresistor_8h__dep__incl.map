@@ -1,4 +1,6 @@
 <map id="src/Sensors/Photoresistor.h" name="src/Sensors/Photoresistor.h">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node3" href="$Photoresistor_8cpp.html" title="src/Sensors/Photoresistor.cpp" alt="" coords="127,80,325,107"/>
+<area shape="rect" id="node2" href="$Sensors_8hpp.html" title="src/Sensors/Sensors.hpp" alt="" coords="48,80,217,107"/>
+<area shape="rect" id="node5" href="$Photoresistor_8cpp.html" title="src/Sensors/Photoresistor.cpp" alt="" coords="241,80,440,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="5,155,103,181"/>
+<area shape="rect" id="node4" href="$Sensors_8cpp.html" title="src/Sensors/Sensors.cpp" alt="" coords="127,155,296,181"/>
 </map>

@@ -1,0 +1,262 @@
+\hypertarget{classIO}{}\section{IO Class Reference}
+\label{classIO}\index{IO@{IO}}
+
+
+{\ttfamily \#include $<$I\+O.\+hpp$>$}
+
+
+
+Collaboration diagram for IO\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classIO__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIO_a49b27a2ee79bce0de4e3ef163cbebd30}{IO} ()
+\item 
+void \hyperlink{classIO_ad7933ecdc01630b62be377ab873fea21}{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+True} ()
+\item 
+void \hyperlink{classIO_a69cddfa296c916c81cf7480c6c7f9139}{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+False} ()
+\item 
+bool \hyperlink{classIO_af8171de8979d317fec0a187ba087a626}{U\+S\+A\+R\+T\+\_\+\+Get\+Rx\+Flag} ()
+\item 
+void \hyperlink{classIO_a240a25927946ea2994e271eb56948362}{U\+S\+A\+R\+T\+\_\+write\+String} (char $\ast$\hyperlink{main_8cpp_ac19b967928c4ef5b461808cbac40840c}{str})
+\begin{DoxyCompactList}\small\item\em Writes String to interface. \end{DoxyCompactList}\item 
+void \hyperlink{classIO_a1febbd3f3b0a0a482226ee1659f2f7d1}{U\+S\+A\+R\+T\+\_\+read\+String} (char $\ast$my\+String, uint8\+\_\+t max\+Length)
+\begin{DoxyCompactList}\small\item\em Reads incoming string. \end{DoxyCompactList}\item 
+void \hyperlink{classIO_a00d8980cbb7e31f0583a65305dacff9e}{U\+S\+A\+R\+T\+\_\+read\+String} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Reads incoming string. \end{DoxyCompactList}\item 
+void \hyperlink{classIO_a04360979dfc7e8960abb4b7659257b68}{U\+S\+A\+R\+T\+\_\+\+Flush} (void)
+\begin{DoxyCompactList}\small\item\em Flush \hyperlink{classUSART}{U\+S\+A\+RT} buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classIO_acf88aa0feccc7ba9526c232d36e368b2}{S\+P\+I\+\_\+\+Write\+Readbyte} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write and Read one byte. \end{DoxyCompactList}\item 
+void \hyperlink{classIO_add6f3bdf0120b0d63d7b48a72e8edc1e}{Init\+Interfaces} (void)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSPI}{S\+PI} \hyperlink{classIO_a441eb28753ed241386507df53bacdaad}{spi}
+\item 
+\hyperlink{classUSART}{U\+S\+A\+RT} \hyperlink{classIO_a15d36e6764d393254ad99f8d7ec25f51}{usart}
+\item 
+\hyperlink{classI2C}{I2C} \hyperlink{classIO_a6dc46e51d3706946a6a13dd8c94cbf60}{i2c}
+\item 
+uint8\+\_\+t \hyperlink{classIO_a041a386e8e27fe7486090449d2749ea2}{uart\+R\+X\+\_\+flag}
+\begin{DoxyCompactList}\small\item\em Flag received U\+A\+RT message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{IO@{IO}!IO@{IO}}
+\index{IO@{IO}!IO@{IO}}
+\subsubsection[{\texorpdfstring{I\+O()}{IO()}}]{\setlength{\rightskip}{0pt plus 5cm}I\+O\+::\+IO (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_a49b27a2ee79bce0de4e3ef163cbebd30}{}\label{classIO_a49b27a2ee79bce0de4e3ef163cbebd30}
+
+
+\subsection{Member Function Documentation}
+\index{IO@{IO}!Init\+Interfaces@{Init\+Interfaces}}
+\index{Init\+Interfaces@{Init\+Interfaces}!IO@{IO}}
+\subsubsection[{\texorpdfstring{Init\+Interfaces(void)}{InitInterfaces(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+::\+Init\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_add6f3bdf0120b0d63d7b48a72e8edc1e}{}\label{classIO_add6f3bdf0120b0d63d7b48a72e8edc1e}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classIO_add6f3bdf0120b0d63d7b48a72e8edc1e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{IO@{IO}!S\+P\+I\+\_\+\+Write\+Readbyte@{S\+P\+I\+\_\+\+Write\+Readbyte}}
+\index{S\+P\+I\+\_\+\+Write\+Readbyte@{S\+P\+I\+\_\+\+Write\+Readbyte}!IO@{IO}}
+\subsubsection[{\texorpdfstring{S\+P\+I\+\_\+\+Write\+Readbyte(uint8\+\_\+t data)}{SPI_WriteReadbyte(uint8_t data)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I\+O\+::\+S\+P\+I\+\_\+\+Write\+Readbyte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_acf88aa0feccc7ba9526c232d36e368b2}{}\label{classIO_acf88aa0feccc7ba9526c232d36e368b2}
+
+
+Write and Read one byte. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & Databyte to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Byte 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classIO_acf88aa0feccc7ba9526c232d36e368b2_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{IO@{IO}!U\+S\+A\+R\+T\+\_\+\+Flush@{U\+S\+A\+R\+T\+\_\+\+Flush}}
+\index{U\+S\+A\+R\+T\+\_\+\+Flush@{U\+S\+A\+R\+T\+\_\+\+Flush}!IO@{IO}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T\+\_\+\+Flush(void)}{USART_Flush(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+::\+U\+S\+A\+R\+T\+\_\+\+Flush (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_a04360979dfc7e8960abb4b7659257b68}{}\label{classIO_a04360979dfc7e8960abb4b7659257b68}
+
+
+Flush \hyperlink{classUSART}{U\+S\+A\+RT} buffer. 
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classIO_a04360979dfc7e8960abb4b7659257b68_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{IO@{IO}!U\+S\+A\+R\+T\+\_\+\+Get\+Rx\+Flag@{U\+S\+A\+R\+T\+\_\+\+Get\+Rx\+Flag}}
+\index{U\+S\+A\+R\+T\+\_\+\+Get\+Rx\+Flag@{U\+S\+A\+R\+T\+\_\+\+Get\+Rx\+Flag}!IO@{IO}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T\+\_\+\+Get\+Rx\+Flag()}{USART_GetRxFlag()}}]{\setlength{\rightskip}{0pt plus 5cm}bool I\+O\+::\+U\+S\+A\+R\+T\+\_\+\+Get\+Rx\+Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_af8171de8979d317fec0a187ba087a626}{}\label{classIO_af8171de8979d317fec0a187ba087a626}
+\index{IO@{IO}!U\+S\+A\+R\+T\+\_\+read\+String@{U\+S\+A\+R\+T\+\_\+read\+String}}
+\index{U\+S\+A\+R\+T\+\_\+read\+String@{U\+S\+A\+R\+T\+\_\+read\+String}!IO@{IO}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T\+\_\+read\+String(char $\ast$my\+String, uint8\+\_\+t max\+Length)}{USART_readString(char *myString, uint8_t maxLength)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+::\+U\+S\+A\+R\+T\+\_\+read\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{my\+String, }
+\item[{uint8\+\_\+t}]{max\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_a1febbd3f3b0a0a482226ee1659f2f7d1}{}\label{classIO_a1febbd3f3b0a0a482226ee1659f2f7d1}
+
+
+Reads incoming string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em my\+String} & character array \\
+\hline
+\mbox{\tt in}  & {\em max\+Length} & Maximum length of string to read \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classIO_a1febbd3f3b0a0a482226ee1659f2f7d1_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{IO@{IO}!U\+S\+A\+R\+T\+\_\+read\+String@{U\+S\+A\+R\+T\+\_\+read\+String}}
+\index{U\+S\+A\+R\+T\+\_\+read\+String@{U\+S\+A\+R\+T\+\_\+read\+String}!IO@{IO}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T\+\_\+read\+String(char $\ast$string)}{USART_readString(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+::\+U\+S\+A\+R\+T\+\_\+read\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_a00d8980cbb7e31f0583a65305dacff9e}{}\label{classIO_a00d8980cbb7e31f0583a65305dacff9e}
+
+
+Reads incoming string. 
+
+Reads incoming string until a new line character 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & character array \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classIO_a00d8980cbb7e31f0583a65305dacff9e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{IO@{IO}!U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+False@{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+False}}
+\index{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+False@{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+False}!IO@{IO}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+False()}{USART_SetRxFlagFalse()}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+::\+U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+False (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_a69cddfa296c916c81cf7480c6c7f9139}{}\label{classIO_a69cddfa296c916c81cf7480c6c7f9139}
+\index{IO@{IO}!U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+True@{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+True}}
+\index{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+True@{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+True}!IO@{IO}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+True()}{USART_SetRxFlagTrue()}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+::\+U\+S\+A\+R\+T\+\_\+\+Set\+Rx\+Flag\+True (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_ad7933ecdc01630b62be377ab873fea21}{}\label{classIO_ad7933ecdc01630b62be377ab873fea21}
+\index{IO@{IO}!U\+S\+A\+R\+T\+\_\+write\+String@{U\+S\+A\+R\+T\+\_\+write\+String}}
+\index{U\+S\+A\+R\+T\+\_\+write\+String@{U\+S\+A\+R\+T\+\_\+write\+String}!IO@{IO}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T\+\_\+write\+String(char $\ast$str)}{USART_writeString(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+::\+U\+S\+A\+R\+T\+\_\+write\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{classIO_a240a25927946ea2994e271eb56948362}{}\label{classIO_a240a25927946ea2994e271eb56948362}
+
+
+Writes String to interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & character array \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classIO_a240a25927946ea2994e271eb56948362_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{IO@{IO}!i2c@{i2c}}
+\index{i2c@{i2c}!IO@{IO}}
+\subsubsection[{\texorpdfstring{i2c}{i2c}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I2C} I\+O\+::i2c\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classIO_a6dc46e51d3706946a6a13dd8c94cbf60}{}\label{classIO_a6dc46e51d3706946a6a13dd8c94cbf60}
+\index{IO@{IO}!spi@{spi}}
+\index{spi@{spi}!IO@{IO}}
+\subsubsection[{\texorpdfstring{spi}{spi}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+PI} I\+O\+::spi\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classIO_a441eb28753ed241386507df53bacdaad}{}\label{classIO_a441eb28753ed241386507df53bacdaad}
+\index{IO@{IO}!uart\+R\+X\+\_\+flag@{uart\+R\+X\+\_\+flag}}
+\index{uart\+R\+X\+\_\+flag@{uart\+R\+X\+\_\+flag}!IO@{IO}}
+\subsubsection[{\texorpdfstring{uart\+R\+X\+\_\+flag}{uartRX_flag}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I\+O\+::uart\+R\+X\+\_\+flag\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classIO_a041a386e8e27fe7486090449d2749ea2}{}\label{classIO_a041a386e8e27fe7486090449d2749ea2}
+
+
+Flag received U\+A\+RT message. 
+
+\index{IO@{IO}!usart@{usart}}
+\index{usart@{usart}!IO@{IO}}
+\subsubsection[{\texorpdfstring{usart}{usart}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+A\+RT} I\+O\+::usart\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classIO_a15d36e6764d393254ad99f8d7ec25f51}{}\label{classIO_a15d36e6764d393254ad99f8d7ec25f51}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+I\+O/\hyperlink{IO_8hpp}{I\+O.\+hpp}\item 
+src/\+I\+O/\hyperlink{IO_8cpp}{I\+O.\+cpp}\end{DoxyCompactItemize}

@@ -3,20 +3,6 @@
   <compounddef id="classSensorNode_1_1SensorNode" kind="class" language="Python" prot="public">
     <compoundname>SensorNode::SensorNode</compoundname>
       <sectiondef kind="public-static-attrib">
-      <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1a6453b42daae16cdc043bea6825374162" prot="public" static="yes" mutable="no">
-        <type></type>
-        <definition>SensorNode.SensorNode::threadLock</definition>
-        <argsstring></argsstring>
-        <name>threadLock</name>
-        <initializer>= thread.allocate_lock()</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Python/SensorNode.py" line="21" column="1" bodyfile="Python/SensorNode.py" bodystart="21" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1a17be4a277b9bfdd041ec006b462d497c" prot="public" static="yes" mutable="no">
         <type>list</type>
         <definition>list SensorNode.SensorNode::nodeAddresses</definition>
@@ -29,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="22" column="1" bodyfile="Python/SensorNode.py" bodystart="22" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="67" column="1" bodyfile="Python/SensorNode.py" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1a94712cd1b0bf09fa4cd3de94ca666575" prot="public" static="yes" mutable="no">
         <type>string</type>
@@ -43,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="23" column="1" bodyfile="Python/SensorNode.py" bodystart="23" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="68" column="1" bodyfile="Python/SensorNode.py" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1a68f7a87f1d03a2734f3f6505f801a92e" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -57,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="24" column="1" bodyfile="Python/SensorNode.py" bodystart="24" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="69" column="1" bodyfile="Python/SensorNode.py" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1ad8aec254c15c97a8b5c709480f31b2bb" prot="public" static="yes" mutable="no">
         <type></type>
@@ -71,30 +57,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="48" column="1" bodyfile="Python/SensorNode.py" bodystart="48" bodyend="-1"/>
+        <location file="Python/SensorNode.py" line="75" column="1" bodyfile="Python/SensorNode.py" bodystart="75" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="classSensorNode_1_1SensorNode_1ad1e6d287c777ea31608f7b81e0023c60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def SensorNode.SensorNode.UpdateThreads</definition>
-        <argsstring>(self, sensorObj)</argsstring>
-        <name>UpdateThreads</name>
-        <param>
-          <type>self</type>
-          <defname>self</defname>
-        </param>
-        <param>
-          <type>sensorObj</type>
-          <defname>sensorObj</defname>
-        </param>
+      <memberdef kind="variable" id="classSensorNode_1_1SensorNode_1a983f7af590b412918b4e0113af0388d3" prot="public" static="yes" mutable="no">
+        <type></type>
+        <definition>SensorNode.SensorNode::signal</definition>
+        <argsstring></argsstring>
+        <name>signal</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim></verbatim> </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Python/SensorNode.py" line="26" column="1" bodyfile="Python/SensorNode.py" bodystart="26" bodyend="47"/>
+        <location file="Python/SensorNode.py" line="102" column="1" bodyfile="Python/SensorNode.py" bodystart="102" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -103,14 +79,13 @@
 <para><verbatim>SensorNode class:
 
     main code to execute</verbatim> </para>    </detaileddescription>
-    <location file="Python/SensorNode.py" line="13" column="1" bodyfile="Python/SensorNode.py" bodystart="13" bodyend="66"/>
+    <location file="Python/SensorNode.py" line="59" column="1" bodyfile="Python/SensorNode.py" bodystart="59" bodyend="107"/>
     <listofallmembers>
       <member refid="classSensorNode_1_1SensorNode_1a68f7a87f1d03a2734f3f6505f801a92e" prot="public" virt="non-virtual"><scope>SensorNode::SensorNode</scope><name>baudrate</name></member>
       <member refid="classSensorNode_1_1SensorNode_1a17be4a277b9bfdd041ec006b462d497c" prot="public" virt="non-virtual"><scope>SensorNode::SensorNode</scope><name>nodeAddresses</name></member>
       <member refid="classSensorNode_1_1SensorNode_1a94712cd1b0bf09fa4cd3de94ca666575" prot="public" virt="non-virtual"><scope>SensorNode::SensorNode</scope><name>port</name></member>
       <member refid="classSensorNode_1_1SensorNode_1ad8aec254c15c97a8b5c709480f31b2bb" prot="public" virt="non-virtual"><scope>SensorNode::SensorNode</scope><name>sens</name></member>
-      <member refid="classSensorNode_1_1SensorNode_1a6453b42daae16cdc043bea6825374162" prot="public" virt="non-virtual"><scope>SensorNode::SensorNode</scope><name>threadLock</name></member>
-      <member refid="classSensorNode_1_1SensorNode_1ad1e6d287c777ea31608f7b81e0023c60" prot="public" virt="non-virtual"><scope>SensorNode::SensorNode</scope><name>UpdateThreads</name></member>
+      <member refid="classSensorNode_1_1SensorNode_1a983f7af590b412918b4e0113af0388d3" prot="public" virt="non-virtual"><scope>SensorNode::SensorNode</scope><name>signal</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

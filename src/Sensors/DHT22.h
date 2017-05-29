@@ -1,8 +1,8 @@
-/*
+/**
  * DHT22.h
  *
  *  Created on: Nov 12, 2016
- *      Author: matthias
+ *  Author: matthias
  */
 
 #ifndef DHT22_H_
@@ -22,8 +22,13 @@
 #define LOOP_CYCLES  8  //Number of cycles that the loop takes
 #define us(num) (num/(LOOP_CYCLES*(1/(FOSC/1000000.0))))
 
+namespace Sensors {
 
-
+//! DHT22 class definition
+/*!
+ * Defines methods for accessing  the DHT22 interface
+ *
+ */
 class DHT22 {
 
 /* Thermometer Connections (At your choice) */
@@ -70,5 +75,7 @@ private:
 
 
 };
+
+}
 
 #endif /* DHT22_H_ */

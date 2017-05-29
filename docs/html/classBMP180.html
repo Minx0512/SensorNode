@@ -109,6 +109,9 @@ $(document).ready(function(){initNavTree('classBMP180.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classBMP180-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BMP180 Class Reference</div>  </div>
@@ -116,20 +119,67 @@ $(document).ready(function(){initNavTree('classBMP180.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="BMP180_8hpp_source.html">BMP180.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for BMP180:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBMP180__coll__graph.png" border="0" usemap="#BMP180_coll__map" alt="Collaboration graph"/></div>
+<map name="BMP180_coll__map" id="BMP180_coll__map">
+<area shape="rect" id="node2" href="structbmp180__t.html" title="This structure holds BMP180 initialization parameters. " alt="" coords="44,95,123,121"/>
+<area shape="rect" id="node3" href="structbmp180__calib__param__t.html" title="This structure holds all device specific calibration parameters. " alt="" coords="5,5,161,32"/>
+<area shape="rect" id="node4" href="classI2C.html" title="I2C" alt="" coords="158,95,201,121"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c3e89c7ea65e49c0001a43af07b7c35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a8c3e89c7ea65e49c0001a43af07b7c35">BMP180</a> ()</td></tr>
 <tr class="separator:a8c3e89c7ea65e49c0001a43af07b7c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d434a3074ba607d2dbc14657ae224dd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a8d434a3074ba607d2dbc14657ae224dd">~BMP180</a> ()</td></tr>
-<tr class="separator:a8d434a3074ba607d2dbc14657ae224dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a5650b6821c73b5ad9654a9765a9d82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a4a5650b6821c73b5ad9654a9765a9d82">Init</a> ()</td></tr>
-<tr class="separator:a4a5650b6821c73b5ad9654a9765a9d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a124111338db49a31f3f716ebe657a83b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a124111338db49a31f3f716ebe657a83b">BMP180</a> (<a class="el" href="classI2C.html">I2C</a> &amp;)</td></tr>
+<tr class="separator:a124111338db49a31f3f716ebe657a83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7171a079dc6e99158839fd5fe3d40cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BMP180_8hpp.html#a0b2541dda714686ae536954aaf5c3387">BMP180_RETURN_FUNCTION_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#aa7171a079dc6e99158839fd5fe3d40cd">Init</a> ()</td></tr>
+<tr class="separator:aa7171a079dc6e99158839fd5fe3d40cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27de00d6188de674c1973a7181287f6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a27de00d6188de674c1973a7181287f6f">GetTemperature</a> ()</td></tr>
+<tr class="separator:a27de00d6188de674c1973a7181287f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee70a553dc17d04696c8a5cc7458f2dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#aee70a553dc17d04696c8a5cc7458f2dd">GetPressure</a> ()</td></tr>
+<tr class="separator:aee70a553dc17d04696c8a5cc7458f2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804923af8373a2faffc72f01da637bf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a804923af8373a2faffc72f01da637bf8">GetTempPressure</a> ()</td></tr>
+<tr class="separator:a804923af8373a2faffc72f01da637bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcef92ebb205aad908b4f93a54fd313f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#adcef92ebb205aad908b4f93a54fd313f">GetTempPressureString</a> (char *tempPresStr)</td></tr>
+<tr class="separator:adcef92ebb205aad908b4f93a54fd313f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:abb79348f8b34037cd2a8edbb68b6062c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BMP180_8hpp.html#a0b2541dda714686ae536954aaf5c3387">BMP180_RETURN_FUNCTION_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#abb79348f8b34037cd2a8edbb68b6062c">GetCalibrationParam</a> ()</td></tr>
+<tr class="memdesc:abb79348f8b34037cd2a8edbb68b6062c"><td class="mdescLeft">&#160;</td><td class="mdescRight">this function used for read the calibration parameter from the register  <a href="#abb79348f8b34037cd2a8edbb68b6062c">More...</a><br /></td></tr>
+<tr class="separator:abb79348f8b34037cd2a8edbb68b6062c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaf2a12c4a90f0023eda1115639fd203"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BMP180_8hpp.html#aa980e2c02ba2305e0f489d5650655425">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#acaf2a12c4a90f0023eda1115639fd203">GetTemperature</a> (<a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> val_uncomp_temp_u32)</td></tr>
+<tr class="memdesc:acaf2a12c4a90f0023eda1115639fd203"><td class="mdescLeft">&#160;</td><td class="mdescRight">this API is used to calculate the true temperature using the uncompensated temperature(ut)  <a href="#acaf2a12c4a90f0023eda1115639fd203">More...</a><br /></td></tr>
+<tr class="separator:acaf2a12c4a90f0023eda1115639fd203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e2dcaced0cf3693329857c8ddc8ec32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BMP180_8hpp.html#ae9b1af5c037e57a98884758875d3a7c4">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a2e2dcaced0cf3693329857c8ddc8ec32">GetPressure</a> (<a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> val_uncomp_pressure_u32)</td></tr>
+<tr class="memdesc:a2e2dcaced0cf3693329857c8ddc8ec32"><td class="mdescLeft">&#160;</td><td class="mdescRight">this API is used to calculate the true pressure using the uncompensated pressure(up)  <a href="#a2e2dcaced0cf3693329857c8ddc8ec32">More...</a><br /></td></tr>
+<tr class="separator:a2e2dcaced0cf3693329857c8ddc8ec32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aeb21cd2930e32319bc5e033cc543a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BMP180_8hpp.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a4aeb21cd2930e32319bc5e033cc543a0">GetuncompTemperature</a> (void)</td></tr>
+<tr class="memdesc:a4aeb21cd2930e32319bc5e033cc543a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">this API is used to read the uncompensated temperature(ut) from the register  <a href="#a4aeb21cd2930e32319bc5e033cc543a0">More...</a><br /></td></tr>
+<tr class="separator:a4aeb21cd2930e32319bc5e033cc543a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24151206af58316d6f3c2f1c99286bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#ab24151206af58316d6f3c2f1c99286bd">GetuncompPressure</a> (void)</td></tr>
+<tr class="memdesc:ab24151206af58316d6f3c2f1c99286bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">this API is used to read the uncompensated pressure(up) from the register  <a href="#ab24151206af58316d6f3c2f1c99286bd">More...</a><br /></td></tr>
+<tr class="separator:ab24151206af58316d6f3c2f1c99286bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a641b7fde5e8202d5fc05ee8197e64338"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classI2C.html">I2C</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a641b7fde5e8202d5fc05ee8197e64338">i2c</a></td></tr>
+<tr class="separator:a641b7fde5e8202d5fc05ee8197e64338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ffd1d5faf651b0ab03011112e8822c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#af1ffd1d5faf651b0ab03011112e8822c">temperature</a></td></tr>
+<tr class="separator:af1ffd1d5faf651b0ab03011112e8822c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981e771ad28cb9cf1d789f33b45a9521"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a981e771ad28cb9cf1d789f33b45a9521">pressure</a></td></tr>
+<tr class="separator:a981e771ad28cb9cf1d789f33b45a9521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a309219d172cffdc7b8f3c667666acfb3"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structbmp180__t.html">bmp180_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBMP180.html#a309219d172cffdc7b8f3c667666acfb3">p_bmp180</a></td></tr>
+<tr class="separator:a309219d172cffdc7b8f3c667666acfb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="BMP180_8hpp.html">BMP180.hpp</a></p>
-<p>Created on: 27 Mar 2017 Author: Matthias Minx </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8c3e89c7ea65e49c0001a43af07b7c35"></a>
 <div class="memitem">
 <div class="memproto">
@@ -142,10 +192,29 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p><a class="el" href="BMP180_8cpp.html">BMP180.cpp</a></p>
+<p>Created on: 27 Mar 2017 Author: matthias </p>
 
 </div>
 </div>
-<a class="anchor" id="a8d434a3074ba607d2dbc14657ae224dd"></a>
+<a class="anchor" id="a124111338db49a31f3f716ebe657a83b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BMP180::BMP180 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classI2C.html">I2C</a> &amp;&#160;</td>
+          <td class="paramname"><em>i2cInterface</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="abb79348f8b34037cd2a8edbb68b6062c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -153,7 +222,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">BMP180::~BMP180 </td>
+          <td class="memname"><a class="el" href="BMP180_8hpp.html#a0b2541dda714686ae536954aaf5c3387">BMP180_RETURN_FUNCTION_TYPE</a> BMP180::GetCalibrationParam </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -161,20 +230,104 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>this function used for read the calibration parameter from the register </p>
+<table class="doxtable">
+<tr>
+<th>Parameter </th><th>MSB </th><th>LSB </th><th>bit  </th></tr>
+<tr>
+<td>AC1 </td><td>0xAA </td><td>0xAB </td><td>0 to 7 </td></tr>
+<tr>
+<td>AC2 </td><td>0xAC </td><td>0xAD </td><td>0 to 7 </td></tr>
+<tr>
+<td>AC3 </td><td>0xAE </td><td>0xAF </td><td>0 to 7 </td></tr>
+<tr>
+<td>AC4 </td><td>0xB0 </td><td>0xB1 </td><td>0 to 7 </td></tr>
+<tr>
+<td>AC5 </td><td>0xB2 </td><td>0xB3 </td><td>0 to 7 </td></tr>
+<tr>
+<td>AC6 </td><td>0xB4 </td><td>0xB5 </td><td>0 to 7 </td></tr>
+<tr>
+<td>B1 </td><td>0xB6 </td><td>0xB7 </td><td>0 to 7 </td></tr>
+<tr>
+<td>B2 </td><td>0xB8 </td><td>0xB9 </td><td>0 to 7 </td></tr>
+<tr>
+<td>MB </td><td>0xBA </td><td>0xBB </td><td>0 to 7 </td></tr>
+<tr>
+<td>MC </td><td>0xBC </td><td>0xBD </td><td>0 to 7 </td></tr>
+<tr>
+<td>MD </td><td>0xBE </td><td>0xBF </td><td>0 to 7 </td></tr>
+</table>
+<dl class="section return"><dt>Returns</dt><dd>results of bus communication function </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>-&gt; Success </td></tr>
+    <tr><td class="paramname">-1</td><td>-&gt; Error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBMP180_abb79348f8b34037cd2a8edbb68b6062c_cgraph.png" border="0" usemap="#classBMP180_abb79348f8b34037cd2a8edbb68b6062c_cgraph" alt=""/></div>
+<map name="classBMP180_abb79348f8b34037cd2a8edbb68b6062c_cgraph" id="classBMP180_abb79348f8b34037cd2a8edbb68b6062c_cgraph">
+<area shape="rect" id="node2" href="classI2C.html#aee4e012db3dc019536ad3da5632cc04a" title="I2C::ReadReg" alt="" coords="255,107,361,133"/>
+<area shape="rect" id="node3" href="classI2C.html#a2d89860048673ed968d218a749080916" title="I2C::Start" alt="" coords="429,5,507,32"/>
+<area shape="rect" id="node4" href="classI2C.html#aa18dde601c811e06dda1be29c139dd83" title="I2C::Write" alt="" coords="427,56,509,83"/>
+<area shape="rect" id="node5" href="classI2C.html#aa538a5b392f83063c3d484ec35cf1bcd" title="I2C::Read_ack" alt="" coords="413,107,523,133"/>
+<area shape="rect" id="node6" href="classI2C.html#af40aac783e94fcfcd1f9c8cbfe1eeb37" title="I2C::Read_nack" alt="" coords="409,157,527,184"/>
+<area shape="rect" id="node7" href="classI2C.html#a5d3e0b1de395932284e2e010a0160b5f" title="I2C::Stop" alt="" coords="429,208,507,235"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4a5650b6821c73b5ad9654a9765a9d82"></a>
+<a class="anchor" id="a2e2dcaced0cf3693329857c8ddc8ec32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="BMP180_8hpp.html#ae9b1af5c037e57a98884758875d3a7c4">s32</a> BMP180::GetPressure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td>
+          <td class="paramname"><em>val_uncomp_pressure_u32</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this API is used to calculate the true pressure using the uncompensated pressure(up) </p>
+<dl class="section note"><dt>Note</dt><dd>For reading the up data refer : bmp180_read_up()</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v_uncomp_pressure_u32</td><td>the value of uncompensated pressure</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the value of pressure in steps of 1.0 Pa </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aee70a553dc17d04696c8a5cc7458f2dd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void BMP180::Init </td>
+          <td class="memname">void BMP180::GetPressure </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -184,9 +337,311 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="acaf2a12c4a90f0023eda1115639fd203"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="BMP180_8hpp.html#aa980e2c02ba2305e0f489d5650655425">s16</a> BMP180::GetTemperature </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td>
+          <td class="paramname"><em>val_uncomp_temp_u32</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this API is used to calculate the true temperature using the uncompensated temperature(ut) </p>
+<dl class="section note"><dt>Note</dt><dd>For reading the ut data refer : bmp180_read_ut()</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v_uncomp_temperature_u32</td><td>the value of uncompensated temperature</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the temperature in steps of 0.1 deg Celsius </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a27de00d6188de674c1973a7181287f6f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BMP180::GetTemperature </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>init and calibrate </p>
+
+</div>
+</div>
+<a class="anchor" id="a804923af8373a2faffc72f01da637bf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BMP180::GetTempPressure </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adcef92ebb205aad908b4f93a54fd313f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BMP180::GetTempPressureString </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>tempPresStr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab24151206af58316d6f3c2f1c99286bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="BMP180_8hpp.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> BMP180::GetuncompPressure </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this API is used to read the uncompensated pressure(up) from the register </p>
+<dl class="section note"><dt>Note</dt><dd>0xF6(MSB) bit from 0 to 7 </dd>
+<dd>
+0xF7(LSB) bit from 0 to 7 </dd>
+<dd>
+0xF8(LSB) bit from 3 to 7</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>results of bus communication function </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>-&gt; Success </td></tr>
+    <tr><td class="paramname">-1</td><td>-&gt; Error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBMP180_ab24151206af58316d6f3c2f1c99286bd_cgraph.png" border="0" usemap="#classBMP180_ab24151206af58316d6f3c2f1c99286bd_cgraph" alt=""/></div>
+<map name="classBMP180_ab24151206af58316d6f3c2f1c99286bd_cgraph" id="classBMP180_ab24151206af58316d6f3c2f1c99286bd_cgraph">
+<area shape="rect" id="node2" href="classI2C.html#a4f7e7e3bb2527b721f370ec88011b401" title="I2C::WriteReg" alt="" coords="252,56,359,83"/>
+<area shape="rect" id="node6" href="classI2C.html#aee4e012db3dc019536ad3da5632cc04a" title="I2C::ReadReg" alt="" coords="252,107,359,133"/>
+<area shape="rect" id="node3" href="classI2C.html#a2d89860048673ed968d218a749080916" title="I2C::Start" alt="" coords="426,5,505,32"/>
+<area shape="rect" id="node4" href="classI2C.html#aa18dde601c811e06dda1be29c139dd83" title="I2C::Write" alt="" coords="424,56,507,83"/>
+<area shape="rect" id="node5" href="classI2C.html#a5d3e0b1de395932284e2e010a0160b5f" title="I2C::Stop" alt="" coords="426,107,505,133"/>
+<area shape="rect" id="node7" href="classI2C.html#aa538a5b392f83063c3d484ec35cf1bcd" title="I2C::Read_ack" alt="" coords="410,208,521,235"/>
+<area shape="rect" id="node8" href="classI2C.html#af40aac783e94fcfcd1f9c8cbfe1eeb37" title="I2C::Read_nack" alt="" coords="407,157,524,184"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4aeb21cd2930e32319bc5e033cc543a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="BMP180_8hpp.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> BMP180::GetuncompTemperature </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this API is used to read the uncompensated temperature(ut) from the register </p>
+<dl class="section note"><dt>Note</dt><dd>0xF6(MSB) bit from 0 to 7 </dd>
+<dd>
+0xF7(LSB) bit from 0 to 7</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>results of bus communication function </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>-&gt; Success </td></tr>
+    <tr><td class="paramname">-1</td><td>-&gt; Error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBMP180_a4aeb21cd2930e32319bc5e033cc543a0_cgraph.png" border="0" usemap="#classBMP180_a4aeb21cd2930e32319bc5e033cc543a0_cgraph" alt=""/></div>
+<map name="classBMP180_a4aeb21cd2930e32319bc5e033cc543a0_cgraph" id="classBMP180_a4aeb21cd2930e32319bc5e033cc543a0_cgraph">
+<area shape="rect" id="node2" href="classI2C.html#a4f7e7e3bb2527b721f370ec88011b401" title="I2C::WriteReg" alt="" coords="273,56,380,83"/>
+<area shape="rect" id="node6" href="classI2C.html#aee4e012db3dc019536ad3da5632cc04a" title="I2C::ReadReg" alt="" coords="273,107,380,133"/>
+<area shape="rect" id="node3" href="classI2C.html#a2d89860048673ed968d218a749080916" title="I2C::Start" alt="" coords="447,5,526,32"/>
+<area shape="rect" id="node4" href="classI2C.html#aa18dde601c811e06dda1be29c139dd83" title="I2C::Write" alt="" coords="445,56,528,83"/>
+<area shape="rect" id="node5" href="classI2C.html#a5d3e0b1de395932284e2e010a0160b5f" title="I2C::Stop" alt="" coords="447,107,526,133"/>
+<area shape="rect" id="node7" href="classI2C.html#aa538a5b392f83063c3d484ec35cf1bcd" title="I2C::Read_ack" alt="" coords="431,208,542,235"/>
+<area shape="rect" id="node8" href="classI2C.html#af40aac783e94fcfcd1f9c8cbfe1eeb37" title="I2C::Read_nack" alt="" coords="428,157,545,184"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7171a079dc6e99158839fd5fe3d40cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="BMP180_8hpp.html#a0b2541dda714686ae536954aaf5c3387">BMP180_RETURN_FUNCTION_TYPE</a> BMP180::Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBMP180_aa7171a079dc6e99158839fd5fe3d40cd_cgraph.png" border="0" usemap="#classBMP180_aa7171a079dc6e99158839fd5fe3d40cd_cgraph" alt=""/></div>
+<map name="classBMP180_aa7171a079dc6e99158839fd5fe3d40cd_cgraph" id="classBMP180_aa7171a079dc6e99158839fd5fe3d40cd_cgraph">
+<area shape="rect" id="node2" href="classI2C.html#aee4e012db3dc019536ad3da5632cc04a" title="I2C::ReadReg" alt="" coords="401,107,508,133"/>
+<area shape="rect" id="node8" href="classBMP180.html#abb79348f8b34037cd2a8edbb68b6062c" title="this function used for read the calibration parameter from the register " alt="" coords="152,132,353,159"/>
+<area shape="rect" id="node3" href="classI2C.html#a2d89860048673ed968d218a749080916" title="I2C::Start" alt="" coords="575,5,654,32"/>
+<area shape="rect" id="node4" href="classI2C.html#aa18dde601c811e06dda1be29c139dd83" title="I2C::Write" alt="" coords="573,56,656,83"/>
+<area shape="rect" id="node5" href="classI2C.html#aa538a5b392f83063c3d484ec35cf1bcd" title="I2C::Read_ack" alt="" coords="559,107,670,133"/>
+<area shape="rect" id="node6" href="classI2C.html#af40aac783e94fcfcd1f9c8cbfe1eeb37" title="I2C::Read_nack" alt="" coords="556,157,673,184"/>
+<area shape="rect" id="node7" href="classI2C.html#a5d3e0b1de395932284e2e010a0160b5f" title="I2C::Stop" alt="" coords="575,208,654,235"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a641b7fde5e8202d5fc05ee8197e64338"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classI2C.html">I2C</a> BMP180::i2c</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a309219d172cffdc7b8f3c667666acfb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structbmp180__t.html">bmp180_t</a>* BMP180::p_bmp180</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a981e771ad28cb9cf1d789f33b45a9521"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t BMP180::pressure</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af1ffd1d5faf651b0ab03011112e8822c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t BMP180::temperature</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/Sensors/<a class="el" href="BMP180_8hpp_source.html">BMP180.hpp</a></li>
-<li>src/Sensors/<a class="el" href="BMP180_8cpp.html">BMP180.cpp</a></li>
+<li>src/Sensors/deactivated/<a class="el" href="BMP180_8hpp_source.html">BMP180.hpp</a></li>
+<li>src/Sensors/deactivated/<a class="el" href="BMP180_8cpp.html">BMP180.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

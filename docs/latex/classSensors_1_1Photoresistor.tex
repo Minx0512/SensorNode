@@ -1,0 +1,205 @@
+\hypertarget{classSensors_1_1Photoresistor}{}\section{Sensors\+:\+:Photoresistor Class Reference}
+\label{classSensors_1_1Photoresistor}\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+
+
+\hyperlink{classSensors_1_1Photoresistor}{Photoresistor} class definition.  
+
+
+
+
+{\ttfamily \#include $<$Photoresistor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSensors_1_1Photoresistor_a636b09df1c219714314a691bef87a6bd}{Photoresistor} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSensors_1_1Photoresistor}{Photoresistor} standard constructor. \end{DoxyCompactList}\item 
+\hyperlink{classSensors_1_1Photoresistor_a53ca472fb36f5ce8b9e199ddcc1ea188}{Photoresistor} (uint8\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSensors_1_1Photoresistor}{Photoresistor} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1Photoresistor_a62a0993f8a84a827b843d9bcdded089e}{Init} ()
+\begin{DoxyCompactList}\small\item\em Initialize analog digital converter. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1Photoresistor_a06b802026054f93a7b6659db0ffe731e}{Get\+Sensor\+String\+X\+ML} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Get sensor value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSensors_1_1Photoresistor_a46314a8e495c2ad308fe89935b1c2574}{set\+Port} (uint8\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Set Port of analog/digital converter. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1Photoresistor_a03306f2c1b5a7d65b46178dcc25c1c9a}{set\+Type} (uint8\+\_\+t t)
+\begin{DoxyCompactList}\small\item\em Set Type of light detector. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{classSensors_1_1Photoresistor_aaee5f77d43f8a7d3175a9bf3e635041d}{read\+A\+D\+Value} ()
+\begin{DoxyCompactList}\small\item\em Reads digital value of the AD converter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1Photoresistor_abdd598255c0051cbc8db8a457cd29dc8}{type}
+\begin{DoxyCompactList}\small\item\em Light detector type. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classSensors_1_1Photoresistor_a43797415ff86174f92b44e69046e3de7}{A\+D\+Port}
+\begin{DoxyCompactList}\small\item\em Analog/\+Digital converter port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classSensors_1_1Photoresistor}{Photoresistor} class definition. 
+
+Defines methods for accessing the \hyperlink{classSensors_1_1Photoresistor}{Photoresistor} interface 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}!Photoresistor@{Photoresistor}}
+\index{Photoresistor@{Photoresistor}!Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+\subsubsection[{\texorpdfstring{Photoresistor()}{Photoresistor()}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::\+Photoresistor\+::\+Photoresistor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Photoresistor_a636b09df1c219714314a691bef87a6bd}{}\label{classSensors_1_1Photoresistor_a636b09df1c219714314a691bef87a6bd}
+
+
+\hyperlink{classSensors_1_1Photoresistor}{Photoresistor} standard constructor. 
+
+new \hyperlink{classSensors_1_1Photoresistor}{Photoresistor} object and initializes variables 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classSensors_1_1Photoresistor_a636b09df1c219714314a691bef87a6bd_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}!Photoresistor@{Photoresistor}}
+\index{Photoresistor@{Photoresistor}!Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+\subsubsection[{\texorpdfstring{Photoresistor(uint8\+\_\+t port)}{Photoresistor(uint8_t port)}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::\+Photoresistor\+::\+Photoresistor (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{port}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Photoresistor_a53ca472fb36f5ce8b9e199ddcc1ea188}{}\label{classSensors_1_1Photoresistor_a53ca472fb36f5ce8b9e199ddcc1ea188}
+
+
+\hyperlink{classSensors_1_1Photoresistor}{Photoresistor} constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & Port number of analog/digital converter \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classSensors_1_1Photoresistor_a53ca472fb36f5ce8b9e199ddcc1ea188_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}!Get\+Sensor\+String\+X\+ML@{Get\+Sensor\+String\+X\+ML}}
+\index{Get\+Sensor\+String\+X\+ML@{Get\+Sensor\+String\+X\+ML}!Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+\subsubsection[{\texorpdfstring{Get\+Sensor\+String\+X\+M\+L(char $\ast$string)}{GetSensorStringXML(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Photoresistor\+::\+Get\+Sensor\+String\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Photoresistor_a06b802026054f93a7b6659db0ffe731e}{}\label{classSensors_1_1Photoresistor_a06b802026054f93a7b6659db0ffe731e}
+
+
+Get sensor value. 
+
+Returns a character array with the average Sensor value of 1000 measurements and adds a $\vert$ to the end of it. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classSensors_1_1Photoresistor_a06b802026054f93a7b6659db0ffe731e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}!Init@{Init}}
+\index{Init@{Init}!Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+\subsubsection[{\texorpdfstring{Init()}{Init()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Photoresistor\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Photoresistor_a62a0993f8a84a827b843d9bcdded089e}{}\label{classSensors_1_1Photoresistor_a62a0993f8a84a827b843d9bcdded089e}
+
+
+Initialize analog digital converter. 
+
+\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}!read\+A\+D\+Value@{read\+A\+D\+Value}}
+\index{read\+A\+D\+Value@{read\+A\+D\+Value}!Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+\subsubsection[{\texorpdfstring{read\+A\+D\+Value()}{readADValue()}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Sensors\+::\+Photoresistor\+::read\+A\+D\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1Photoresistor_aaee5f77d43f8a7d3175a9bf3e635041d}{}\label{classSensors_1_1Photoresistor_aaee5f77d43f8a7d3175a9bf3e635041d}
+
+
+Reads digital value of the AD converter. 
+
+\begin{DoxyReturn}{Returns}
+Digital value of one AD conversion 
+\end{DoxyReturn}
+\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}!set\+Port@{set\+Port}}
+\index{set\+Port@{set\+Port}!Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+\subsubsection[{\texorpdfstring{set\+Port(uint8\+\_\+t port)}{setPort(uint8_t port)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Photoresistor\+::set\+Port (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1Photoresistor_a46314a8e495c2ad308fe89935b1c2574}{}\label{classSensors_1_1Photoresistor_a46314a8e495c2ad308fe89935b1c2574}
+
+
+Set Port of analog/digital converter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & Port number \\
+\hline
+\end{DoxyParams}
+\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+\subsubsection[{\texorpdfstring{set\+Type(uint8\+\_\+t t)}{setType(uint8_t t)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Photoresistor\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1Photoresistor_a03306f2c1b5a7d65b46178dcc25c1c9a}{}\label{classSensors_1_1Photoresistor_a03306f2c1b5a7d65b46178dcc25c1c9a}
+
+
+Set Type of light detector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em t} & Type number \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}!A\+D\+Port@{A\+D\+Port}}
+\index{A\+D\+Port@{A\+D\+Port}!Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+\subsubsection[{\texorpdfstring{A\+D\+Port}{ADPort}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+Photoresistor\+::\+A\+D\+Port\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1Photoresistor_a43797415ff86174f92b44e69046e3de7}{}\label{classSensors_1_1Photoresistor_a43797415ff86174f92b44e69046e3de7}
+
+
+Analog/\+Digital converter port. 
+
+\index{Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}!type@{type}}
+\index{type@{type}!Sensors\+::\+Photoresistor@{Sensors\+::\+Photoresistor}}
+\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Sensors\+::\+Photoresistor\+::type\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1Photoresistor_abdd598255c0051cbc8db8a457cd29dc8}{}\label{classSensors_1_1Photoresistor_abdd598255c0051cbc8db8a457cd29dc8}
+
+
+Light detector type. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sensors/\hyperlink{Photoresistor_8h}{Photoresistor.\+h}\item 
+src/\+Sensors/\hyperlink{Photoresistor_8cpp}{Photoresistor.\+cpp}\end{DoxyCompactItemize}

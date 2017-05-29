@@ -3,6 +3,377 @@
   <compounddef id="classBMP180" kind="class" language="C++" prot="public">
     <compoundname>BMP180</compoundname>
     <includes refid="BMP180_8hpp" local="no">BMP180.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBMP180_1a641b7fde5e8202d5fc05ee8197e64338" prot="private" static="no" mutable="no">
+        <type><ref refid="classI2C" kindref="compound">I2C</ref></type>
+        <definition>I2C BMP180::i2c</definition>
+        <argsstring></argsstring>
+        <name>i2c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="286" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBMP180_1af1ffd1d5faf651b0ab03011112e8822c" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t BMP180::temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="289" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBMP180_1a981e771ad28cb9cf1d789f33b45a9521" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t BMP180::pressure</definition>
+        <argsstring></argsstring>
+        <name>pressure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="289" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classBMP180_1a309219d172cffdc7b8f3c667666acfb3" prot="private" static="yes" mutable="no">
+        <type>struct <ref refid="structbmp180__t" kindref="compound">bmp180_t</ref> *</type>
+        <definition>struct bmp180_t* BMP180::p_bmp180</definition>
+        <argsstring></argsstring>
+        <name>p_bmp180</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="287" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classBMP180_1abb79348f8b34037cd2a8edbb68b6062c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="BMP180_8hpp_1a0b2541dda714686ae536954aaf5c3387" kindref="member">BMP180_RETURN_FUNCTION_TYPE</ref></type>
+        <definition>BMP180_RETURN_FUNCTION_TYPE BMP180::GetCalibrationParam</definition>
+        <argsstring>()</argsstring>
+        <name>GetCalibrationParam</name>
+        <briefdescription>
+<para>this function used for read the calibration parameter from the register </para>        </briefdescription>
+        <detaileddescription>
+<para><table rows="12" cols="4"><row>
+<entry thead="yes"><para>Parameter </para></entry><entry thead="yes"><para>MSB </para></entry><entry thead="yes"><para>LSB </para></entry><entry thead="yes"><para>bit  </para></entry></row>
+<row>
+<entry thead="no"><para>AC1 </para></entry><entry thead="no"><para>0xAA </para></entry><entry thead="no"><para>0xAB </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>AC2 </para></entry><entry thead="no"><para>0xAC </para></entry><entry thead="no"><para>0xAD </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>AC3 </para></entry><entry thead="no"><para>0xAE </para></entry><entry thead="no"><para>0xAF </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>AC4 </para></entry><entry thead="no"><para>0xB0 </para></entry><entry thead="no"><para>0xB1 </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>AC5 </para></entry><entry thead="no"><para>0xB2 </para></entry><entry thead="no"><para>0xB3 </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>AC6 </para></entry><entry thead="no"><para>0xB4 </para></entry><entry thead="no"><para>0xB5 </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>B1 </para></entry><entry thead="no"><para>0xB6 </para></entry><entry thead="no"><para>0xB7 </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>B2 </para></entry><entry thead="no"><para>0xB8 </para></entry><entry thead="no"><para>0xB9 </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>MB </para></entry><entry thead="no"><para>0xBA </para></entry><entry thead="no"><para>0xBB </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>MC </para></entry><entry thead="no"><para>0xBC </para></entry><entry thead="no"><para>0xBD </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+<row>
+<entry thead="no"><para>MD </para></entry><entry thead="no"><para>0xBE </para></entry><entry thead="no"><para>0xBF </para></entry><entry thead="no"><para>0 to 7 </para></entry></row>
+</table>
+</para><para><simplesect kind="return"><para>results of bus communication function </para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Error </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="292" column="1" bodyfile="src/Sensors/deactivated/BMP180.cpp" bodystart="79" bodyend="118"/>
+        <references refid="BMP180_8hpp_1a0b2541dda714686ae536954aaf5c3387" compoundref="BMP180_8hpp" startline="109">BMP180_RETURN_FUNCTION_TYPE</references>
+        <references refid="BMP180_8hpp_1abaf12c9360a5167e07e32e1cc76f1b19" compoundref="BMP180_8hpp" startline="104">E_BMP_COMM_RES</references>
+        <references refid="BMP180_8hpp_1a45bdfa6d9d7d0cd755e19f73f2dc8b50" compoundref="BMP180_8hpp" startline="176">BMP180_CALIB_DATA_SIZE</references>
+        <references refid="BMP180_8hpp_1aec91741157ae5da3b06f1b5558c9e804" compoundref="BMP180_8hpp" startline="110">BMP180_INIT_VALUE</references>
+        <references refid="classBMP180_1a641b7fde5e8202d5fc05ee8197e64338" compoundref="BMP180_8hpp" startline="286">i2c</references>
+        <references refid="classI2C_1aee4e012db3dc019536ad3da5632cc04a" compoundref="I2C_8cpp" startline="146" endline="163">I2C::ReadReg</references>
+        <references refid="classBMP180_1a309219d172cffdc7b8f3c667666acfb3" compoundref="BMP180_8hpp" startline="287">p_bmp180</references>
+        <references refid="structbmp180__t_1a1fac092bc595a86dc1dae9604f557d5e" compoundref="BMP180_8hpp" startline="228">bmp180_t::dev_addr</references>
+        <references refid="BMP180_8hpp_1aae9dcd153a483f9b55fee66e46e55215" compoundref="BMP180_8hpp" startline="142">BMP180_PROM_START__ADDR</references>
+        <references refid="BMP180_8hpp_1a864467e0bf3ce8f5913b772f720c666a" compoundref="BMP180_8hpp" startline="143">BMP180_PROM_DATA__LEN</references>
+        <references refid="structbmp180__t_1af9052e0c95ba7c63157703465ff14ef1" compoundref="BMP180_8hpp" startline="223">bmp180_t::calib_param</references>
+        <references refid="structbmp180__calib__param__t_1a4af824f7ed92cef41c2e591aff2ed3ba" compoundref="BMP180_8hpp" startline="207">bmp180_calib_param_t::ac1</references>
+        <references refid="BMP180_8hpp_1a39e64257dddcc6853c0b37c7eb452431" compoundref="BMP180_8hpp" startline="177">BMP180_CALIB_PARAM_AC1_MSB</references>
+        <references refid="BMP180_8hpp_1a8f9f6ab90b3fc35d8df2bc1f423513b7" compoundref="BMP180_8hpp" startline="131">BMP180_SHIFT_BIT_POSITION_BY_08_BITS</references>
+        <references refid="BMP180_8hpp_1ac0dddf978225be0576d56bf325dbd65b" compoundref="BMP180_8hpp" startline="178">BMP180_CALIB_PARAM_AC1_LSB</references>
+        <references refid="structbmp180__calib__param__t_1abe5534331e8ea703b759484322101e89" compoundref="BMP180_8hpp" startline="208">bmp180_calib_param_t::ac2</references>
+        <references refid="BMP180_8hpp_1a45b13027666ff588d4e0ea25a0b7e5de" compoundref="BMP180_8hpp" startline="179">BMP180_CALIB_PARAM_AC2_MSB</references>
+        <references refid="BMP180_8hpp_1a44c89211983078d4d29df65a90cecfd7" compoundref="BMP180_8hpp" startline="180">BMP180_CALIB_PARAM_AC2_LSB</references>
+        <references refid="structbmp180__calib__param__t_1ac5563e3a7ecbf6f0a991e04d87d01dd8" compoundref="BMP180_8hpp" startline="209">bmp180_calib_param_t::ac3</references>
+        <references refid="BMP180_8hpp_1ad7ba1882b02203a13e798fc610c08e8b" compoundref="BMP180_8hpp" startline="181">BMP180_CALIB_PARAM_AC3_MSB</references>
+        <references refid="BMP180_8hpp_1a304cdb889839a99363936553b0ec1d0b" compoundref="BMP180_8hpp" startline="182">BMP180_CALIB_PARAM_AC3_LSB</references>
+        <references refid="structbmp180__calib__param__t_1a4f767b1a709975522476f90f58a054f4" compoundref="BMP180_8hpp" startline="210">bmp180_calib_param_t::ac4</references>
+        <references refid="BMP180_8hpp_1a17c8ba1b4a61d5ab9d4f13b06c81ccbd" compoundref="BMP180_8hpp" startline="183">BMP180_CALIB_PARAM_AC4_MSB</references>
+        <references refid="BMP180_8hpp_1a38bba8ad36653ba3fbabff5c7c921294" compoundref="BMP180_8hpp" startline="184">BMP180_CALIB_PARAM_AC4_LSB</references>
+        <references refid="structbmp180__calib__param__t_1a89e488bc5c3c6496925d64a5e42be87a" compoundref="BMP180_8hpp" startline="211">bmp180_calib_param_t::ac5</references>
+        <references refid="BMP180_8hpp_1ac973ad7edc5e8470da8001d0bef6d6fd" compoundref="BMP180_8hpp" startline="185">BMP180_CALIB_PARAM_AC5_MSB</references>
+        <references refid="BMP180_8hpp_1ad47bb58cca0ed07df864e6078c4e8db9" compoundref="BMP180_8hpp" startline="186">BMP180_CALIB_PARAM_AC5_LSB</references>
+        <references refid="structbmp180__calib__param__t_1a7cd1f72878db3636b302794cc067dbce" compoundref="BMP180_8hpp" startline="212">bmp180_calib_param_t::ac6</references>
+        <references refid="BMP180_8hpp_1ae14dd74542602653319571c69d5edfec" compoundref="BMP180_8hpp" startline="187">BMP180_CALIB_PARAM_AC6_MSB</references>
+        <references refid="BMP180_8hpp_1a3d88f5bed7114e516780150aba8434ab" compoundref="BMP180_8hpp" startline="188">BMP180_CALIB_PARAM_AC6_LSB</references>
+        <references refid="structbmp180__calib__param__t_1add43e571a34a76bc7e8c7e35f2b1d13d" compoundref="BMP180_8hpp" startline="213">bmp180_calib_param_t::b1</references>
+        <references refid="BMP180_8hpp_1afed57e0c81c090ec16a4eba681e60b63" compoundref="BMP180_8hpp" startline="189">BMP180_CALIB_PARAM_B1_MSB</references>
+        <references refid="BMP180_8hpp_1af6c60f2ca0d25e1bedc43511d6b15658" compoundref="BMP180_8hpp" startline="190">BMP180_CALIB_PARAM_B1_LSB</references>
+        <references refid="structbmp180__calib__param__t_1ad3e1a7249a88d8eb5ea0d37e3e5137fb" compoundref="BMP180_8hpp" startline="214">bmp180_calib_param_t::b2</references>
+        <references refid="BMP180_8hpp_1a7b96056467ac2826714e9a95c4995f4a" compoundref="BMP180_8hpp" startline="191">BMP180_CALIB_PARAM_B2_MSB</references>
+        <references refid="BMP180_8hpp_1a7ca62ccf1b54fc51026c96dcbba8776e" compoundref="BMP180_8hpp" startline="192">BMP180_CALIB_PARAM_B2_LSB</references>
+        <references refid="structbmp180__calib__param__t_1a64bdabef2d55201e68ee49299b966282" compoundref="BMP180_8hpp" startline="215">bmp180_calib_param_t::mb</references>
+        <references refid="BMP180_8hpp_1a5d53ece45a69f1a924b529915f46c295" compoundref="BMP180_8hpp" startline="193">BMP180_CALIB_PARAM_MB_MSB</references>
+        <references refid="BMP180_8hpp_1a133c7d4adaaf1b3947ac1faa0ed368c9" compoundref="BMP180_8hpp" startline="194">BMP180_CALIB_PARAM_MB_LSB</references>
+        <references refid="structbmp180__calib__param__t_1a5abaaaa05802e6d9b2653182e31f655d" compoundref="BMP180_8hpp" startline="216">bmp180_calib_param_t::mc</references>
+        <references refid="BMP180_8hpp_1a6c8321b858deb498a709d4bccf89a502" compoundref="BMP180_8hpp" startline="195">BMP180_CALIB_PARAM_MC_MSB</references>
+        <references refid="BMP180_8hpp_1aba8f243a128c4213e02bbfaaf071741c" compoundref="BMP180_8hpp" startline="196">BMP180_CALIB_PARAM_MC_LSB</references>
+        <references refid="structbmp180__calib__param__t_1aab92deab6ac7b3bd24feda15460509c3" compoundref="BMP180_8hpp" startline="217">bmp180_calib_param_t::md</references>
+        <references refid="BMP180_8hpp_1ada2dde5c9f08995ce361d7a90ddfc6a2" compoundref="BMP180_8hpp" startline="197">BMP180_CALIB_PARAM_MD_MSB</references>
+        <references refid="BMP180_8hpp_1a3bb56114540128ef597fb04ca7722a2e" compoundref="BMP180_8hpp" startline="198">BMP180_CALIB_PARAM_MD_LSB</references>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1acaf2a12c4a90f0023eda1115639fd203" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kindref="member">s16</ref></type>
+        <definition>s16 BMP180::GetTemperature</definition>
+        <argsstring>(u32 val_uncomp_temp_u32)</argsstring>
+        <name>GetTemperature</name>
+        <param>
+          <type><ref refid="BMP180_8hpp_1afaa62991928fb9fb18ff0db62a040aba" kindref="member">u32</ref></type>
+          <declname>val_uncomp_temp_u32</declname>
+        </param>
+        <briefdescription>
+<para>this API is used to calculate the true temperature using the uncompensated temperature(ut) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>For reading the ut data refer : bmp180_read_ut()</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v_uncomp_temperature_u32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value of uncompensated temperature</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Return the temperature in steps of 0.1 deg Celsius </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="294" column="1" bodyfile="src/Sensors/deactivated/BMP180.cpp" bodystart="132" bodyend="152"/>
+        <references refid="BMP180_8hpp_1aec91741157ae5da3b06f1b5558c9e804" compoundref="BMP180_8hpp" startline="110">BMP180_INIT_VALUE</references>
+        <references refid="classBMP180_1a309219d172cffdc7b8f3c667666acfb3" compoundref="BMP180_8hpp" startline="287">p_bmp180</references>
+        <references refid="structbmp180__t_1af9052e0c95ba7c63157703465ff14ef1" compoundref="BMP180_8hpp" startline="223">bmp180_t::calib_param</references>
+        <references refid="structbmp180__calib__param__t_1a7cd1f72878db3636b302794cc067dbce" compoundref="BMP180_8hpp" startline="212">bmp180_calib_param_t::ac6</references>
+        <references refid="structbmp180__calib__param__t_1a89e488bc5c3c6496925d64a5e42be87a" compoundref="BMP180_8hpp" startline="211">bmp180_calib_param_t::ac5</references>
+        <references refid="BMP180_8hpp_1a3bd16520470bfb7f28d9d3b09519246b" compoundref="BMP180_8hpp" startline="135">BMP180_SHIFT_BIT_POSITION_BY_15_BITS</references>
+        <references refid="BMP180_8hpp_1a14bcdd0c199b6d7cb1dd01e5981d3ca1" compoundref="BMP180_8hpp" startline="123">BMP180_CHECK_DIVISOR</references>
+        <references refid="structbmp180__calib__param__t_1aab92deab6ac7b3bd24feda15460509c3" compoundref="BMP180_8hpp" startline="217">bmp180_calib_param_t::md</references>
+        <references refid="BMP180_8hpp_1a819977dbbeb071c0bf62c8494f373daf" compoundref="BMP180_8hpp" startline="122">BMP180_INVALID_DATA</references>
+        <references refid="structbmp180__calib__param__t_1a5abaaaa05802e6d9b2653182e31f655d" compoundref="BMP180_8hpp" startline="216">bmp180_calib_param_t::mc</references>
+        <references refid="BMP180_8hpp_1ae97d5ce9c32107818cb1cadee7e08d6b" compoundref="BMP180_8hpp" startline="132">BMP180_SHIFT_BIT_POSITION_BY_11_BITS</references>
+        <references refid="structbmp180__t_1ae753cf9c8d8f28a1b3395c472acb61fb" compoundref="BMP180_8hpp" startline="231">bmp180_t::param_b5</references>
+        <references refid="BMP180_8hpp_1afce1e88950bc0bd739f01b4f09678b5a" compoundref="BMP180_8hpp" startline="126">BMP180_CALCULATE_TRUE_TEMPERATURE</references>
+        <references refid="BMP180_8hpp_1afcf00cb84a90469cd2affe034803bccc" compoundref="BMP180_8hpp" startline="129">BMP180_SHIFT_BIT_POSITION_BY_04_BITS</references>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1a2e2dcaced0cf3693329857c8ddc8ec32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="BMP180_8hpp_1ae9b1af5c037e57a98884758875d3a7c4" kindref="member">s32</ref></type>
+        <definition>s32 BMP180::GetPressure</definition>
+        <argsstring>(u32 val_uncomp_pressure_u32)</argsstring>
+        <name>GetPressure</name>
+        <param>
+          <type><ref refid="BMP180_8hpp_1afaa62991928fb9fb18ff0db62a040aba" kindref="member">u32</ref></type>
+          <declname>val_uncomp_pressure_u32</declname>
+        </param>
+        <briefdescription>
+<para>this API is used to calculate the true pressure using the uncompensated pressure(up) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>For reading the up data refer : bmp180_read_up()</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v_uncomp_pressure_u32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value of uncompensated pressure</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Return the value of pressure in steps of 1.0 Pa </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="295" column="1" bodyfile="src/Sensors/deactivated/BMP180.cpp" bodystart="163" bodyend="212"/>
+        <references refid="BMP180_8hpp_1aec91741157ae5da3b06f1b5558c9e804" compoundref="BMP180_8hpp" startline="110">BMP180_INIT_VALUE</references>
+        <references refid="classBMP180_1a309219d172cffdc7b8f3c667666acfb3" compoundref="BMP180_8hpp" startline="287">p_bmp180</references>
+        <references refid="structbmp180__t_1ae753cf9c8d8f28a1b3395c472acb61fb" compoundref="BMP180_8hpp" startline="231">bmp180_t::param_b5</references>
+        <references refid="BMP180_8hpp_1afae522f538b396741fe09b707f6df7ae" compoundref="BMP180_8hpp" startline="133">BMP180_SHIFT_BIT_POSITION_BY_12_BITS</references>
+        <references refid="structbmp180__t_1af9052e0c95ba7c63157703465ff14ef1" compoundref="BMP180_8hpp" startline="223">bmp180_t::calib_param</references>
+        <references refid="structbmp180__calib__param__t_1ad3e1a7249a88d8eb5ea0d37e3e5137fb" compoundref="BMP180_8hpp" startline="214">bmp180_calib_param_t::b2</references>
+        <references refid="BMP180_8hpp_1ae97d5ce9c32107818cb1cadee7e08d6b" compoundref="BMP180_8hpp" startline="132">BMP180_SHIFT_BIT_POSITION_BY_11_BITS</references>
+        <references refid="structbmp180__calib__param__t_1abe5534331e8ea703b759484322101e89" compoundref="BMP180_8hpp" startline="208">bmp180_calib_param_t::ac2</references>
+        <references refid="structbmp180__calib__param__t_1a4af824f7ed92cef41c2e591aff2ed3ba" compoundref="BMP180_8hpp" startline="207">bmp180_calib_param_t::ac1</references>
+        <references refid="structbmp180__t_1a6ade944cf9275b333add5785f33701bd" compoundref="BMP180_8hpp" startline="233">bmp180_t::oversamp_setting</references>
+        <references refid="BMP180_8hpp_1a660d3a734e219a49617299a52bf503d8" compoundref="BMP180_8hpp" startline="128">BMP180_SHIFT_BIT_POSITION_BY_02_BITS</references>
+        <references refid="structbmp180__calib__param__t_1ac5563e3a7ecbf6f0a991e04d87d01dd8" compoundref="BMP180_8hpp" startline="209">bmp180_calib_param_t::ac3</references>
+        <references refid="BMP180_8hpp_1a39d12b3bf4fe21b9ab87e5ca63293a0a" compoundref="BMP180_8hpp" startline="134">BMP180_SHIFT_BIT_POSITION_BY_13_BITS</references>
+        <references refid="structbmp180__calib__param__t_1add43e571a34a76bc7e8c7e35f2b1d13d" compoundref="BMP180_8hpp" startline="213">bmp180_calib_param_t::b1</references>
+        <references refid="BMP180_8hpp_1a5a695b4bac3f3415c84ccbe25eafae55" compoundref="BMP180_8hpp" startline="136">BMP180_SHIFT_BIT_POSITION_BY_16_BITS</references>
+        <references refid="structbmp180__calib__param__t_1a4f767b1a709975522476f90f58a054f4" compoundref="BMP180_8hpp" startline="210">bmp180_calib_param_t::ac4</references>
+        <references refid="BMP180_8hpp_1a3bd16520470bfb7f28d9d3b09519246b" compoundref="BMP180_8hpp" startline="135">BMP180_SHIFT_BIT_POSITION_BY_15_BITS</references>
+        <references refid="BMP180_8hpp_1a14bcdd0c199b6d7cb1dd01e5981d3ca1" compoundref="BMP180_8hpp" startline="123">BMP180_CHECK_DIVISOR</references>
+        <references refid="BMP180_8hpp_1a6ef73fdc1ab45e0813a93f17e361d9b2" compoundref="BMP180_8hpp" startline="127">BMP180_SHIFT_BIT_POSITION_BY_01_BIT</references>
+        <references refid="BMP180_8hpp_1a819977dbbeb071c0bf62c8494f373daf" compoundref="BMP180_8hpp" startline="122">BMP180_INVALID_DATA</references>
+        <references refid="BMP180_8hpp_1a8f9f6ab90b3fc35d8df2bc1f423513b7" compoundref="BMP180_8hpp" startline="131">BMP180_SHIFT_BIT_POSITION_BY_08_BITS</references>
+        <references refid="BMP180_8hpp_1af0585656c25b2652e25a1ab60f579247" compoundref="BMP180_8hpp" startline="161">BMP180_PARAM_MG</references>
+        <references refid="BMP180_8hpp_1a318760ad4869a9da5864ce6e202bba25" compoundref="BMP180_8hpp" startline="162">BMP180_PARAM_MH</references>
+        <references refid="BMP180_8hpp_1a788f1e53260ff41658069d07c84e04c1" compoundref="BMP180_8hpp" startline="163">BMP180_PARAM_MI</references>
+        <references refid="BMP180_8hpp_1afcf00cb84a90469cd2affe034803bccc" compoundref="BMP180_8hpp" startline="129">BMP180_SHIFT_BIT_POSITION_BY_04_BITS</references>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1a4aeb21cd2930e32319bc5e033cc543a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="BMP180_8hpp_1ace9d960e74685e2cd84b36132dbbf8aa" kindref="member">u16</ref></type>
+        <definition>u16 BMP180::GetuncompTemperature</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetuncompTemperature</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>this API is used to read the uncompensated temperature(ut) from the register </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>0xF6(MSB) bit from 0 to 7 </para></simplesect>
+<simplesect kind="note"><para>0xF7(LSB) bit from 0 to 7</para></simplesect>
+<simplesect kind="return"><para>results of bus communication function </para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Error </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="296" column="1" bodyfile="src/Sensors/deactivated/BMP180.cpp" bodystart="227" bodyend="250"/>
+        <references refid="BMP180_8hpp_1aec91741157ae5da3b06f1b5558c9e804" compoundref="BMP180_8hpp" startline="110">BMP180_INIT_VALUE</references>
+        <references refid="BMP180_8hpp_1a5e37fe64ea4d3df3cbc74dc2252d1799" compoundref="BMP180_8hpp" startline="168">BMP180_TEMPERATURE_DATA_BYTES</references>
+        <references refid="BMP180_8hpp_1a0b2541dda714686ae536954aaf5c3387" compoundref="BMP180_8hpp" startline="109">BMP180_RETURN_FUNCTION_TYPE</references>
+        <references refid="BMP180_8hpp_1abaf12c9360a5167e07e32e1cc76f1b19" compoundref="BMP180_8hpp" startline="104">E_BMP_COMM_RES</references>
+        <references refid="BMP180_8hpp_1a981fc4d0873b0aa2e8e81b673b78e182" compoundref="BMP180_8hpp" startline="155">BMP180_T_MEASURE</references>
+        <references refid="BMP180_8hpp_1a64142b951dd5038273d171e75a92bf44" compoundref="BMP180_8hpp" startline="159">BMP180_TEMP_CONVERSION_TIME</references>
+        <references refid="classBMP180_1a641b7fde5e8202d5fc05ee8197e64338" compoundref="BMP180_8hpp" startline="286">i2c</references>
+        <references refid="classI2C_1a4f7e7e3bb2527b721f370ec88011b401" compoundref="I2C_8cpp" startline="130" endline="144">I2C::WriteReg</references>
+        <references refid="classBMP180_1a309219d172cffdc7b8f3c667666acfb3" compoundref="BMP180_8hpp" startline="287">p_bmp180</references>
+        <references refid="structbmp180__t_1a1fac092bc595a86dc1dae9604f557d5e" compoundref="BMP180_8hpp" startline="228">bmp180_t::dev_addr</references>
+        <references refid="BMP180_8hpp_1ab2bd49ee6d3f26126c5cc01b4a5e1192" compoundref="BMP180_8hpp" startline="148">BMP180_CTRL_MEAS_REG</references>
+        <references refid="BMP180_8hpp_1aefe14c0103090f8d4b5976dbb3a53af2" compoundref="BMP180_8hpp" startline="114">BMP180_GEN_READ_WRITE_DATA_LENGTH</references>
+        <references refid="structbmp180__t_1ad6875c8bcf81da576a90decbdf0f2a93" compoundref="BMP180_8hpp" startline="239">bmp180_t::delay_msec</references>
+        <references refid="classI2C_1aee4e012db3dc019536ad3da5632cc04a" compoundref="I2C_8cpp" startline="146" endline="163">I2C::ReadReg</references>
+        <references refid="BMP180_8hpp_1a29580a04b1219dbb55b3341bf24a4ce7" compoundref="BMP180_8hpp" startline="149">BMP180_ADC_OUT_MSB_REG</references>
+        <references refid="BMP180_8hpp_1ad96e88c9d3070b400ebab27712e1df79" compoundref="BMP180_8hpp" startline="115">BMP180_TEMPERATURE_DATA_LENGTH</references>
+        <references refid="BMP180_8hpp_1a318e4b8c649cb1191b1e32f812e973a9" compoundref="BMP180_8hpp" startline="171">BMP180_TEMPERATURE_MSB_DATA</references>
+        <references refid="BMP180_8hpp_1a8f9f6ab90b3fc35d8df2bc1f423513b7" compoundref="BMP180_8hpp" startline="131">BMP180_SHIFT_BIT_POSITION_BY_08_BITS</references>
+        <references refid="BMP180_8hpp_1ac3c5e002d22156752dab103a84894a91" compoundref="BMP180_8hpp" startline="170">BMP180_TEMPERATURE_LSB_DATA</references>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1ab24151206af58316d6f3c2f1c99286bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="BMP180_8hpp_1afaa62991928fb9fb18ff0db62a040aba" kindref="member">u32</ref></type>
+        <definition>u32 BMP180::GetuncompPressure</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetuncompPressure</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>this API is used to read the uncompensated pressure(up) from the register </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>0xF6(MSB) bit from 0 to 7 </para></simplesect>
+<simplesect kind="note"><para>0xF7(LSB) bit from 0 to 7 </para></simplesect>
+<simplesect kind="note"><para>0xF8(LSB) bit from 3 to 7</para></simplesect>
+<simplesect kind="return"><para>results of bus communication function </para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-&gt; Error </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="297" column="1" bodyfile="src/Sensors/deactivated/BMP180.cpp" bodystart="266" bodyend="321"/>
+        <references refid="BMP180_8hpp_1aec91741157ae5da3b06f1b5558c9e804" compoundref="BMP180_8hpp" startline="110">BMP180_INIT_VALUE</references>
+        <references refid="BMP180_8hpp_1afde813116043db05684aec4c882ef72b" compoundref="BMP180_8hpp" startline="169">BMP180_PRESSURE_DATA_BYTES</references>
+        <references refid="BMP180_8hpp_1a0b2541dda714686ae536954aaf5c3387" compoundref="BMP180_8hpp" startline="109">BMP180_RETURN_FUNCTION_TYPE</references>
+        <references refid="BMP180_8hpp_1abaf12c9360a5167e07e32e1cc76f1b19" compoundref="BMP180_8hpp" startline="104">E_BMP_COMM_RES</references>
+        <references refid="classBMP180_1a309219d172cffdc7b8f3c667666acfb3" compoundref="BMP180_8hpp" startline="287">p_bmp180</references>
+        <references refid="structbmp180__t_1a0bda5ec8f08249ee69f2e4a14df59f6e" compoundref="BMP180_8hpp" startline="234">bmp180_t::sw_oversamp</references>
+        <references refid="BMP180_8hpp_1a1dfe583ff745c6214c47408184bde624" compoundref="BMP180_8hpp" startline="117">BMP180_SW_OVERSAMP_U8X</references>
+        <references refid="structbmp180__t_1a6ade944cf9275b333add5785f33701bd" compoundref="BMP180_8hpp" startline="233">bmp180_t::oversamp_setting</references>
+        <references refid="BMP180_8hpp_1af459774ee28cfb538cd08f17585ff394" compoundref="BMP180_8hpp" startline="118">BMP180_OVERSAMP_SETTING_U8X</references>
+        <references refid="BMP180_8hpp_1a880654f882b7d7dc6ec8c15e47231251" compoundref="BMP180_8hpp" startline="124">BMP180_DATA_MEASURE</references>
+        <references refid="BMP180_8hpp_1a750a3efd27f418b085813a55e9835659" compoundref="BMP180_8hpp" startline="157">BMP180_P_MEASURE</references>
+        <references refid="BMP180_8hpp_1a19129024c0e826db4e65b03017619fc9" compoundref="BMP180_8hpp" startline="130">BMP180_SHIFT_BIT_POSITION_BY_06_BITS</references>
+        <references refid="classBMP180_1a641b7fde5e8202d5fc05ee8197e64338" compoundref="BMP180_8hpp" startline="286">i2c</references>
+        <references refid="classI2C_1a4f7e7e3bb2527b721f370ec88011b401" compoundref="I2C_8cpp" startline="130" endline="144">I2C::WriteReg</references>
+        <references refid="structbmp180__t_1a1fac092bc595a86dc1dae9604f557d5e" compoundref="BMP180_8hpp" startline="228">bmp180_t::dev_addr</references>
+        <references refid="BMP180_8hpp_1ab2bd49ee6d3f26126c5cc01b4a5e1192" compoundref="BMP180_8hpp" startline="148">BMP180_CTRL_MEAS_REG</references>
+        <references refid="BMP180_8hpp_1aefe14c0103090f8d4b5976dbb3a53af2" compoundref="BMP180_8hpp" startline="114">BMP180_GEN_READ_WRITE_DATA_LENGTH</references>
+        <references refid="structbmp180__t_1ad6875c8bcf81da576a90decbdf0f2a93" compoundref="BMP180_8hpp" startline="239">bmp180_t::delay_msec</references>
+        <references refid="BMP180_8hpp_1a80f92c90d7f4d60e4d3f4fe4c52e876e" compoundref="BMP180_8hpp" startline="119">BMP180_2MS_DELAY_U8X</references>
+        <references refid="BMP180_8hpp_1aacb74302845470d29a2257326095696b" compoundref="BMP180_8hpp" startline="120">BMP180_3MS_DELAY_U8X</references>
+        <references refid="classI2C_1aee4e012db3dc019536ad3da5632cc04a" compoundref="I2C_8cpp" startline="146" endline="163">I2C::ReadReg</references>
+        <references refid="BMP180_8hpp_1a29580a04b1219dbb55b3341bf24a4ce7" compoundref="BMP180_8hpp" startline="149">BMP180_ADC_OUT_MSB_REG</references>
+        <references refid="BMP180_8hpp_1ab604fb195c734be810208debc0bfcd99" compoundref="BMP180_8hpp" startline="116">BMP180_PRESSURE_DATA_LENGTH</references>
+        <references refid="BMP180_8hpp_1ad6b416924b21cf8c65d07ecdc943e366" compoundref="BMP180_8hpp" startline="172">BMP180_PRESSURE_MSB_DATA</references>
+        <references refid="BMP180_8hpp_1a5a695b4bac3f3415c84ccbe25eafae55" compoundref="BMP180_8hpp" startline="136">BMP180_SHIFT_BIT_POSITION_BY_16_BITS</references>
+        <references refid="BMP180_8hpp_1af62c5810a7ce223732c0bfe4cdf6ac39" compoundref="BMP180_8hpp" startline="173">BMP180_PRESSURE_LSB_DATA</references>
+        <references refid="BMP180_8hpp_1a8f9f6ab90b3fc35d8df2bc1f423513b7" compoundref="BMP180_8hpp" startline="131">BMP180_SHIFT_BIT_POSITION_BY_08_BITS</references>
+        <references refid="BMP180_8hpp_1a2c5796a9889c9f6b52cdd6f6849d6e75" compoundref="BMP180_8hpp" startline="174">BMP180_PRESSURE_XLSB_DATA</references>
+        <references refid="BMP180_8hpp_1a00734fa93ec7c7c04b3370f5c4e98de9" compoundref="BMP180_8hpp" startline="125">BMP180_CALCULATE_TRUE_PRESSURE</references>
+        <references refid="structbmp180__t_1a919c92f3b67c115eb7546855d3322f8f" compoundref="BMP180_8hpp" startline="232">bmp180_t::number_of_samples</references>
+        <references refid="BMP180_8hpp_1ac9208a7578552f16452075c5a3b0fd06" compoundref="BMP180_8hpp" startline="113">BMP180_INITIALIZE_NUMBER_OF_SAMPLES_U8X</references>
+        <references refid="BMP180_8hpp_1aa78d0a0991a2ddbb9fbd66667ce55bd1" compoundref="BMP180_8hpp" startline="121">BMP180_AVERAGE_U8X</references>
+        <references refid="BMP180_8hpp_1a1731a4d0da9c8eca1a064f79b2c828b8" compoundref="BMP180_8hpp" startline="112">BMP180_INITIALIZE_SW_OVERSAMP_U8X</references>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classBMP180_1a8c3e89c7ea65e49c0001a43af07b7c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -12,27 +383,37 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="BMP180_8cpp" kindref="compound">BMP180.cpp</ref></para><para>Created on: 27 Mar 2017 Author: matthias </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180.hpp" line="28" column="1" bodyfile="src/Sensors/BMP180.cpp" bodystart="10" bodyend="13"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="302" column="1" bodyfile="src/Sensors/deactivated/BMP180.cpp" bodystart="11" bodyend="18"/>
+        <references refid="classBMP180_1af1ffd1d5faf651b0ab03011112e8822c" compoundref="BMP180_8hpp" startline="289">temperature</references>
+        <references refid="classBMP180_1a981e771ad28cb9cf1d789f33b45a9521" compoundref="BMP180_8hpp" startline="289">pressure</references>
+        <references refid="classBMP180_1a641b7fde5e8202d5fc05ee8197e64338" compoundref="BMP180_8hpp" startline="286">i2c</references>
       </memberdef>
-      <memberdef kind="function" id="classBMP180_1a8d434a3074ba607d2dbc14657ae224dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classBMP180_1a124111338db49a31f3f716ebe657a83b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>BMP180::~BMP180</definition>
-        <argsstring>()</argsstring>
-        <name>~BMP180</name>
+        <definition>BMP180::BMP180</definition>
+        <argsstring>(I2C &amp;)</argsstring>
+        <name>BMP180</name>
+        <param>
+          <type><ref refid="classI2C" kindref="compound">I2C</ref> &amp;</type>
+          <defname>i2cInterface</defname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180.hpp" line="29" column="1" bodyfile="src/Sensors/BMP180.cpp" bodystart="15" bodyend="17"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="303" column="1" bodyfile="src/Sensors/deactivated/BMP180.cpp" bodystart="20" bodyend="25"/>
+        <references refid="classBMP180_1af1ffd1d5faf651b0ab03011112e8822c" compoundref="BMP180_8hpp" startline="289">temperature</references>
+        <references refid="classBMP180_1a981e771ad28cb9cf1d789f33b45a9521" compoundref="BMP180_8hpp" startline="289">pressure</references>
+        <references refid="classBMP180_1a641b7fde5e8202d5fc05ee8197e64338" compoundref="BMP180_8hpp" startline="286">i2c</references>
       </memberdef>
-      <memberdef kind="function" id="classBMP180_1a4a5650b6821c73b5ad9654a9765a9d82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void BMP180::Init</definition>
+      <memberdef kind="function" id="classBMP180_1aa7171a079dc6e99158839fd5fe3d40cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="BMP180_8hpp_1a0b2541dda714686ae536954aaf5c3387" kindref="member">BMP180_RETURN_FUNCTION_TYPE</ref></type>
+        <definition>BMP180_RETURN_FUNCTION_TYPE BMP180::Init</definition>
         <argsstring>()</argsstring>
         <name>Init</name>
         <briefdescription>
@@ -41,18 +422,135 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180.hpp" line="31" column="1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="305" column="1" bodyfile="src/Sensors/deactivated/BMP180.cpp" bodystart="27" bodyend="52"/>
+        <references refid="BMP180_8hpp_1a0b2541dda714686ae536954aaf5c3387" compoundref="BMP180_8hpp" startline="109">BMP180_RETURN_FUNCTION_TYPE</references>
+        <references refid="BMP180_8hpp_1abaf12c9360a5167e07e32e1cc76f1b19" compoundref="BMP180_8hpp" startline="104">E_BMP_COMM_RES</references>
+        <references refid="BMP180_8hpp_1aec91741157ae5da3b06f1b5558c9e804" compoundref="BMP180_8hpp" startline="110">BMP180_INIT_VALUE</references>
+        <references refid="classBMP180_1a641b7fde5e8202d5fc05ee8197e64338" compoundref="BMP180_8hpp" startline="286">i2c</references>
+        <references refid="classI2C_1aee4e012db3dc019536ad3da5632cc04a" compoundref="I2C_8cpp" startline="146" endline="163">I2C::ReadReg</references>
+        <references refid="classBMP180_1a309219d172cffdc7b8f3c667666acfb3" compoundref="BMP180_8hpp" startline="287">p_bmp180</references>
+        <references refid="structbmp180__t_1a1fac092bc595a86dc1dae9604f557d5e" compoundref="BMP180_8hpp" startline="228">bmp180_t::dev_addr</references>
+        <references refid="BMP180_8hpp_1a6125d3bc40494582fd50ebcd3f42ecd5" compoundref="BMP180_8hpp" startline="251">BMP180_CHIP_ID__REG</references>
+        <references refid="BMP180_8hpp_1aefe14c0103090f8d4b5976dbb3a53af2" compoundref="BMP180_8hpp" startline="114">BMP180_GEN_READ_WRITE_DATA_LENGTH</references>
+        <references refid="structbmp180__t_1af41f334824c5e9e6d0bb72507a734dec" compoundref="BMP180_8hpp" startline="225">bmp180_t::chip_id</references>
+        <references refid="BMP180_8hpp_1a26aca2ea1b03a88992a676e268c4a863" compoundref="BMP180_8hpp" startline="275">BMP180_GET_BITSLICE</references>
+        <references refid="structbmp180__t_1a919c92f3b67c115eb7546855d3322f8f" compoundref="BMP180_8hpp" startline="232">bmp180_t::number_of_samples</references>
+        <references refid="BMP180_8hpp_1ac9208a7578552f16452075c5a3b0fd06" compoundref="BMP180_8hpp" startline="113">BMP180_INITIALIZE_NUMBER_OF_SAMPLES_U8X</references>
+        <references refid="structbmp180__t_1a6ade944cf9275b333add5785f33701bd" compoundref="BMP180_8hpp" startline="233">bmp180_t::oversamp_setting</references>
+        <references refid="BMP180_8hpp_1a9818646a9db453e41b1442eeba251e67" compoundref="BMP180_8hpp" startline="111">BMP180_INITIALIZE_OVERSAMP_SETTING_U8X</references>
+        <references refid="structbmp180__t_1a0bda5ec8f08249ee69f2e4a14df59f6e" compoundref="BMP180_8hpp" startline="234">bmp180_t::sw_oversamp</references>
+        <references refid="BMP180_8hpp_1a1731a4d0da9c8eca1a064f79b2c828b8" compoundref="BMP180_8hpp" startline="112">BMP180_INITIALIZE_SW_OVERSAMP_U8X</references>
+        <references refid="BMP180_8hpp_1a66aebdbb8ff129d30b1412579a0b340c" compoundref="BMP180_8hpp" startline="146">BMP180_VERSION_REG</references>
+        <references refid="structbmp180__t_1a369cb61fc9c7de06061f13eb8be5aa34" compoundref="BMP180_8hpp" startline="226">bmp180_t::ml_version</references>
+        <references refid="structbmp180__t_1aef41548b2ff2ff3cc7db7984cace6918" compoundref="BMP180_8hpp" startline="227">bmp180_t::al_version</references>
+        <references refid="classBMP180_1abb79348f8b34037cd2a8edbb68b6062c" compoundref="BMP180_8cpp" startline="79" endline="118">GetCalibrationParam</references>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1a27de00d6188de674c1973a7181287f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BMP180::GetTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>GetTemperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>init and calibrate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="307" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1aee70a553dc17d04696c8a5cc7458f2dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BMP180::GetPressure</definition>
+        <argsstring>()</argsstring>
+        <name>GetPressure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="308" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1a804923af8373a2faffc72f01da637bf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BMP180::GetTempPressure</definition>
+        <argsstring>()</argsstring>
+        <name>GetTempPressure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="309" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classBMP180_1adcef92ebb205aad908b4f93a54fd313f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BMP180::GetTempPressureString</definition>
+        <argsstring>(char *tempPresStr)</argsstring>
+        <name>GetTempPressureString</name>
+        <param>
+          <type>char *</type>
+          <declname>tempPresStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="310" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="BMP180_8hpp" kindref="compound">BMP180.hpp</ref></para><para>Created on: 27 Mar 2017 Author: Matthias Minx </para>    </detaileddescription>
-    <location file="src/Sensors/BMP180.hpp" line="15" column="1" bodyfile="src/Sensors/BMP180.hpp" bodystart="15" bodyend="38"/>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="88">
+        <label>BMP180</label>
+        <link refid="classBMP180"/>
+        <childnode refid="89" relation="usage">
+          <edgelabel>p_bmp180</edgelabel>
+        </childnode>
+        <childnode refid="91" relation="usage">
+          <edgelabel>i2c</edgelabel>
+        </childnode>
+      </node>
+      <node id="91">
+        <label>I2C</label>
+        <link refid="classI2C"/>
+      </node>
+      <node id="89">
+        <label>bmp180_t</label>
+        <link refid="structbmp180__t"/>
+        <childnode refid="90" relation="usage">
+          <edgelabel>calib_param</edgelabel>
+        </childnode>
+      </node>
+      <node id="90">
+        <label>bmp180_calib_param_t</label>
+        <link refid="structbmp180__calib__param__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Sensors/deactivated/BMP180.hpp" line="283" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="283" bodyend="318"/>
     <listofallmembers>
       <member refid="classBMP180_1a8c3e89c7ea65e49c0001a43af07b7c35" prot="public" virt="non-virtual"><scope>BMP180</scope><name>BMP180</name></member>
-      <member refid="classBMP180_1a4a5650b6821c73b5ad9654a9765a9d82" prot="public" virt="non-virtual"><scope>BMP180</scope><name>Init</name></member>
-      <member refid="classBMP180_1a8d434a3074ba607d2dbc14657ae224dd" prot="public" virt="virtual"><scope>BMP180</scope><name>~BMP180</name></member>
+      <member refid="classBMP180_1a124111338db49a31f3f716ebe657a83b" prot="public" virt="non-virtual"><scope>BMP180</scope><name>BMP180</name></member>
+      <member refid="classBMP180_1abb79348f8b34037cd2a8edbb68b6062c" prot="private" virt="non-virtual"><scope>BMP180</scope><name>GetCalibrationParam</name></member>
+      <member refid="classBMP180_1a2e2dcaced0cf3693329857c8ddc8ec32" prot="private" virt="non-virtual"><scope>BMP180</scope><name>GetPressure</name></member>
+      <member refid="classBMP180_1aee70a553dc17d04696c8a5cc7458f2dd" prot="public" virt="non-virtual"><scope>BMP180</scope><name>GetPressure</name></member>
+      <member refid="classBMP180_1acaf2a12c4a90f0023eda1115639fd203" prot="private" virt="non-virtual"><scope>BMP180</scope><name>GetTemperature</name></member>
+      <member refid="classBMP180_1a27de00d6188de674c1973a7181287f6f" prot="public" virt="non-virtual"><scope>BMP180</scope><name>GetTemperature</name></member>
+      <member refid="classBMP180_1a804923af8373a2faffc72f01da637bf8" prot="public" virt="non-virtual"><scope>BMP180</scope><name>GetTempPressure</name></member>
+      <member refid="classBMP180_1adcef92ebb205aad908b4f93a54fd313f" prot="public" virt="non-virtual"><scope>BMP180</scope><name>GetTempPressureString</name></member>
+      <member refid="classBMP180_1ab24151206af58316d6f3c2f1c99286bd" prot="private" virt="non-virtual"><scope>BMP180</scope><name>GetuncompPressure</name></member>
+      <member refid="classBMP180_1a4aeb21cd2930e32319bc5e033cc543a0" prot="private" virt="non-virtual"><scope>BMP180</scope><name>GetuncompTemperature</name></member>
+      <member refid="classBMP180_1a641b7fde5e8202d5fc05ee8197e64338" prot="private" virt="non-virtual"><scope>BMP180</scope><name>i2c</name></member>
+      <member refid="classBMP180_1aa7171a079dc6e99158839fd5fe3d40cd" prot="public" virt="non-virtual"><scope>BMP180</scope><name>Init</name></member>
+      <member refid="classBMP180_1a309219d172cffdc7b8f3c667666acfb3" prot="private" virt="non-virtual"><scope>BMP180</scope><name>p_bmp180</name></member>
+      <member refid="classBMP180_1a981e771ad28cb9cf1d789f33b45a9521" prot="private" virt="non-virtual"><scope>BMP180</scope><name>pressure</name></member>
+      <member refid="classBMP180_1af1ffd1d5faf651b0ab03011112e8822c" prot="private" virt="non-virtual"><scope>BMP180</scope><name>temperature</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

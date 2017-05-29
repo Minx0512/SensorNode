@@ -23,7 +23,7 @@
 
 #include <avr/io.h>
 
-
+namespace Sensors {
 
 //! Photoresistor class definition
 /*!
@@ -55,6 +55,11 @@ public:
 	 */
 	Photoresistor(uint8_t port);
 
+	//! Initialize analog digital converter
+	/*!
+	 *
+	 */
+	void Init();
 
 	//! Get sensor value
 	/*!
@@ -67,11 +72,7 @@ public:
 
 private:
 
-	//! Initialize analog digital converter
-	/*!
-	 *
-	 */
-	void Init();
+
 
 	//! Set Port of analog/digital converter
 	/*!
@@ -98,6 +99,7 @@ private:
 
 };
 
+}
 //extern Photoresistor photoresistor;
 
 #endif /* PHOTORESISTOR_H_ */

@@ -1,11 +1,12 @@
 <map id="NRF24L01::writeFast" name="NRF24L01::writeFast">
 <area shape="rect" id="node2" href="$classNRF24L01.html#a95faa729cb8245516e9eb0248c6d9b0f" title="NRF24L01::getStatus" alt="" coords="213,157,363,184"/>
-<area shape="rect" id="node7" href="$classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="424,107,597,133"/>
-<area shape="rect" id="node8" href="$classNRF24L01.html#ab1ca9025a8740bc38ad5dd7a427e2d4f" title="NRF24L01::startFastWrite" alt="" coords="200,56,376,83"/>
+<area shape="rect" id="node8" href="$classNRF24L01.html#abfaaa54aff7ce60c4c844dd540c47af5" title="NRF24L01::WriteRegister" alt="" coords="424,107,597,133"/>
+<area shape="rect" id="node9" href="$classNRF24L01.html#ab1ca9025a8740bc38ad5dd7a427e2d4f" title="NRF24L01::startFastWrite" alt="" coords="200,56,376,83"/>
 <area shape="rect" id="node3" href="$classNRF24L01.html#ab604b1e177e4812e33ebc39287503197" title="NRF24L01::spiTrans" alt="" coords="439,157,582,184"/>
 <area shape="rect" id="node4" href="$classNRF24L01.html#acffaad2c6b5e3713f7fe6af22d4553ef" title="NRF24L01::CSN_LOW" alt="" coords="647,56,806,83"/>
-<area shape="rect" id="node5" href="$classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="657,107,796,133"/>
-<area shape="rect" id="node6" href="$classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="645,157,808,184"/>
-<area shape="rect" id="node9" href="$classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="425,5,596,32"/>
-<area shape="rect" id="node10" href="$classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="434,56,587,83"/>
+<area shape="rect" id="node5" href="$classIO.html#acf88aa0feccc7ba9526c232d36e368b2" title="Write and Read one byte. " alt="" coords="647,107,807,133"/>
+<area shape="rect" id="node7" href="$classNRF24L01.html#a958fa3e8a0457c0c655b9652ee9dbad4" title="NRF24L01::CSN_HIGH" alt="" coords="645,157,808,184"/>
+<area shape="rect" id="node6" href="$classSPI.html#ad2c97b15ee0417c355a899c28d2efa5d" title="Write and Read one byte. " alt="" coords="856,107,995,133"/>
+<area shape="rect" id="node10" href="$classNRF24L01.html#a9abae657dc54d97b6eb63f33c83e9f59" title="NRF24L01::WritePayload" alt="" coords="425,5,596,32"/>
+<area shape="rect" id="node11" href="$classNRF24L01.html#a85274c10cbe6317796a209913bfb0253" title="NRF24L01::CE_HIGH" alt="" coords="434,56,587,83"/>
 </map>

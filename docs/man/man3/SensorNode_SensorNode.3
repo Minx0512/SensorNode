@@ -1,4 +1,4 @@
-.TH "SensorNode.SensorNode" 3 "Tue Apr 4 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "SensorNode.SensorNode" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,19 +6,9 @@ SensorNode.SensorNode \-
 .SH SYNOPSIS
 .br
 .PP
-.SS "Public Member Functions"
-
-.in +1c
-.ti -1c
-.RI "def \fBUpdateThreads\fP (self, sensorObj)"
-.br
-.in -1c
 .SS "Static Public Attributes"
 
 .in +1c
-.ti -1c
-.RI "\fBthreadLock\fP = thread\&.allocate_lock()"
-.br
 .ti -1c
 .RI "list \fBnodeAddresses\fP = ['A0:A0:A0:A0:A0']"
 .br
@@ -30,6 +20,9 @@ SensorNode.SensorNode \-
 .br
 .ti -1c
 .RI "\fBsens\fP = \fBsensors\&.Sensors\fP(\fBport\fP, \fBbaudrate\fP)"
+.br
+.ti -1c
+.RI "\fBsignal\fP"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -43,16 +36,6 @@ SensorNode class:
 .fi
 .PP
  
-.SH "Member Function Documentation"
-.PP 
-.SS "def SensorNode\&.SensorNode\&.UpdateThreads ( self,  sensorObj)"
-
-.PP
-.nf
-
-.fi
-.PP
- 
 .SH "Member Data Documentation"
 .PP 
 .SS "int SensorNode\&.SensorNode\&.baudrate = 9600\fC [static]\fP"
@@ -63,7 +46,7 @@ SensorNode class:
 
 .SS "SensorNode\&.SensorNode\&.sens = \fBsensors\&.Sensors\fP(\fBport\fP, \fBbaudrate\fP)\fC [static]\fP"
 
-.SS "SensorNode\&.SensorNode\&.threadLock = thread\&.allocate_lock()\fC [static]\fP"
+.SS "SensorNode\&.SensorNode\&.signal\fC [static]\fP"
 
 
 .SH "Author"

@@ -2,10 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
   <compounddef id="structbmp180__calib__param__t" kind="struct" language="C++" prot="public">
     <compoundname>bmp180_calib_param_t</compoundname>
-    <includes refid="bmp180_8h" local="no">bmp180.h</includes>
+    <includes refid="BMP180_8hpp" local="no">BMP180.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structbmp180__calib__param__t_1a4af824f7ed92cef41c2e591aff2ed3ba" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b" kindref="member">s16</ref></type>
+        <type><ref refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kindref="member">s16</ref></type>
         <definition>s16 bmp180_calib_param_t::ac1</definition>
         <argsstring></argsstring>
         <name>ac1</name>
@@ -15,10 +15,10 @@
 <para>calibration ac1 data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="525" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="525" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="207" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="207" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1abe5534331e8ea703b759484322101e89" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b" kindref="member">s16</ref></type>
+        <type><ref refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kindref="member">s16</ref></type>
         <definition>s16 bmp180_calib_param_t::ac2</definition>
         <argsstring></argsstring>
         <name>ac2</name>
@@ -28,10 +28,10 @@
 <para>calibration ac2 data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="526" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="526" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="208" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="208" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1ac5563e3a7ecbf6f0a991e04d87d01dd8" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b" kindref="member">s16</ref></type>
+        <type><ref refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kindref="member">s16</ref></type>
         <definition>s16 bmp180_calib_param_t::ac3</definition>
         <argsstring></argsstring>
         <name>ac3</name>
@@ -41,10 +41,10 @@
 <para>calibration ac3 data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="527" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="527" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="209" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="209" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1a4f767b1a709975522476f90f58a054f4" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1aa0b167025ed1eead1300bc4dbdfb230e" kindref="member">u16</ref></type>
+        <type><ref refid="BMP180_8hpp_1ace9d960e74685e2cd84b36132dbbf8aa" kindref="member">u16</ref></type>
         <definition>u16 bmp180_calib_param_t::ac4</definition>
         <argsstring></argsstring>
         <name>ac4</name>
@@ -54,10 +54,10 @@
 <para>calibration ac4 data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="528" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="528" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="210" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="210" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1a89e488bc5c3c6496925d64a5e42be87a" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1aa0b167025ed1eead1300bc4dbdfb230e" kindref="member">u16</ref></type>
+        <type><ref refid="BMP180_8hpp_1ace9d960e74685e2cd84b36132dbbf8aa" kindref="member">u16</ref></type>
         <definition>u16 bmp180_calib_param_t::ac5</definition>
         <argsstring></argsstring>
         <name>ac5</name>
@@ -67,10 +67,10 @@
 <para>calibration ac5 data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="529" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="529" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="211" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="211" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1a7cd1f72878db3636b302794cc067dbce" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1aa0b167025ed1eead1300bc4dbdfb230e" kindref="member">u16</ref></type>
+        <type><ref refid="BMP180_8hpp_1ace9d960e74685e2cd84b36132dbbf8aa" kindref="member">u16</ref></type>
         <definition>u16 bmp180_calib_param_t::ac6</definition>
         <argsstring></argsstring>
         <name>ac6</name>
@@ -80,10 +80,10 @@
 <para>calibration ac6 data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="530" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="530" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="212" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="212" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1add43e571a34a76bc7e8c7e35f2b1d13d" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b" kindref="member">s16</ref></type>
+        <type><ref refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kindref="member">s16</ref></type>
         <definition>s16 bmp180_calib_param_t::b1</definition>
         <argsstring></argsstring>
         <name>b1</name>
@@ -93,10 +93,10 @@
 <para>calibration b1 data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="531" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="531" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="213" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="213" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1ad3e1a7249a88d8eb5ea0d37e3e5137fb" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b" kindref="member">s16</ref></type>
+        <type><ref refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kindref="member">s16</ref></type>
         <definition>s16 bmp180_calib_param_t::b2</definition>
         <argsstring></argsstring>
         <name>b2</name>
@@ -106,10 +106,10 @@
 <para>calibration b2 data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="532" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="532" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="214" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="214" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1a64bdabef2d55201e68ee49299b966282" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b" kindref="member">s16</ref></type>
+        <type><ref refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kindref="member">s16</ref></type>
         <definition>s16 bmp180_calib_param_t::mb</definition>
         <argsstring></argsstring>
         <name>mb</name>
@@ -119,10 +119,10 @@
 <para>calibration mb data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="533" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="533" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="215" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="215" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1a5abaaaa05802e6d9b2653182e31f655d" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b" kindref="member">s16</ref></type>
+        <type><ref refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kindref="member">s16</ref></type>
         <definition>s16 bmp180_calib_param_t::mc</definition>
         <argsstring></argsstring>
         <name>mc</name>
@@ -132,10 +132,10 @@
 <para>calibration mc data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="534" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="534" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="216" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="216" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structbmp180__calib__param__t_1aab92deab6ac7b3bd24feda15460509c3" prot="public" static="no" mutable="no">
-        <type><ref refid="bmp180_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b" kindref="member">s16</ref></type>
+        <type><ref refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kindref="member">s16</ref></type>
         <definition>s16 bmp180_calib_param_t::md</definition>
         <argsstring></argsstring>
         <name>md</name>
@@ -145,14 +145,14 @@
 <para>calibration md data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Sensors/BMP180_driver/bmp180.h" line="535" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="535" bodyend="-1"/>
+        <location file="src/Sensors/deactivated/BMP180.hpp" line="217" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="217" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This structure holds all device specific calibration parameters. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Sensors/BMP180_driver/bmp180.h" line="524" column="1" bodyfile="src/Sensors/BMP180_driver/bmp180.h" bodystart="524" bodyend="536"/>
+    <location file="src/Sensors/deactivated/BMP180.hpp" line="206" column="1" bodyfile="src/Sensors/deactivated/BMP180.hpp" bodystart="206" bodyend="218"/>
     <listofallmembers>
       <member refid="structbmp180__calib__param__t_1a4af824f7ed92cef41c2e591aff2ed3ba" prot="public" virt="non-virtual"><scope>bmp180_calib_param_t</scope><name>ac1</name></member>
       <member refid="structbmp180__calib__param__t_1abe5534331e8ea703b759484322101e89" prot="public" virt="non-virtual"><scope>bmp180_calib_param_t</scope><name>ac2</name></member>

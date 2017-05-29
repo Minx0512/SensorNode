@@ -1,8 +1,6 @@
 var structbmp180__t =
 [
     [ "al_version", "structbmp180__t.html#aef41548b2ff2ff3cc7db7984cace6918", null ],
-    [ "BMP180_RD_FUNC_PTR", "structbmp180__t.html#aaef0848adf7837c8cc64024a70cc683f", null ],
-    [ "BMP180_WR_FUNC_PTR", "structbmp180__t.html#a423adc61f46263a61285f13c1bb49375", null ],
     [ "calib_param", "structbmp180__t.html#af9052e0c95ba7c63157703465ff14ef1", null ],
     [ "chip_id", "structbmp180__t.html#af41f334824c5e9e6d0bb72507a734dec", null ],
     [ "delay_msec", "structbmp180__t.html#ad6875c8bcf81da576a90decbdf0f2a93", null ],

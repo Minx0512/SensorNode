@@ -1,4 +1,4 @@
-.TH "readsensor.ReadSensor" 3 "Tue Apr 4 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "readsensor.ReadSensor" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -43,7 +43,16 @@ Inherited by \fBsensors\&.BMP180\fP, \fBsensors\&.DHT22\fP, \fBsensors\&.DS18B20
 .RI "\fBupdateTime\fP"
 .br
 .ti -1c
+.RI "\fBdataValues\fP"
+.br
+.ti -1c
+.RI "\fBitemNames\fP"
+.br
+.ti -1c
 .RI "\fBerr\fP"
+.br
+.ti -1c
+.RI "\fBsignal\fP"
 .br
 .ti -1c
 .RI "\fBcmdID\fP"
@@ -68,9 +77,6 @@ Inherited by \fBsensors\&.BMP180\fP, \fBsensors\&.DHT22\fP, \fBsensors\&.DS18B20
 .br
 .ti -1c
 .RI "\fBavailableSensors\fP"
-.br
-.ti -1c
-.RI "\fBcmdIDs\fP"
 .br
 .in -1c
 .SS "Static Private Attributes"
@@ -125,11 +131,13 @@ Make new query
 
 .SS "readsensor\&.ReadSensor\&.cmdID"
 
-.SS "readsensor\&.ReadSensor\&.cmdIDs"
+.SS "readsensor\&.ReadSensor\&.dataValues"
 
 .SS "readsensor\&.ReadSensor\&.err"
 
 .SS "readsensor\&.ReadSensor\&.interpResp"
+
+.SS "readsensor\&.ReadSensor\&.itemNames"
 
 .SS "readsensor\&.ReadSensor\&.nodeMAC"
 
@@ -144,6 +152,8 @@ Make new query
 .SS "readsensor\&.ReadSensor\&.respMask"
 
 .SS "readsensor\&.ReadSensor\&.serialCon"
+
+.SS "readsensor\&.ReadSensor\&.signal"
 
 .SS "readsensor\&.ReadSensor\&.updateTime"
 

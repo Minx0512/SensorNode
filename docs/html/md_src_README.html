@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('md_src_README.html','');});
 <div class="title"><a class="el" href="namespaceSensorNode.html">SensorNode</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A little private project for a sensor node based on the ATmega328P. The main node is connected to the serial interface of a Raspberry Pi on which an openHab server is running. A nRF24L01+ Transceiver module on the SPI-bus of the ATmega328P serves for communication to other nodes. The main node has 2x <a class="el" href="classDS18B20.html" title="DS18B20 class definition. ">DS18B20</a> temperature sensors, 1 motion sensor and 1 resistive light sensor connected to it.</p>
+<div class="textblock"><p>A little private project for a sensor node based on the ATmega328P. The main node is connected to the serial interface of a Raspberry Pi on which an openHab server is running. A nRF24L01+ Transceiver module on the SPI-bus of the ATmega328P serves for communication to other nodes. The main node has 2x DS18B20 temperature sensors, 1 motion sensor and 1 resistive light sensor connected to it.</p>
 <p>The sensor nodes Wireless addresses can be configured via a python script.</p>
 <blockquote class="doxtable">
 <p>Code is not yet ready &lt; </p>
@@ -128,13 +128,13 @@ $(document).ready(function(){initNavTree('md_src_README.html','');});
 <tr>
 <td>nRF24L01 SystemInfo</td><td>0x10 + 0x07 </td><td>0 </td><td>"" </td></tr>
 <tr>
-<td>GetSensorInfos availableSensors on current node</td><td>0x20 + 0x00 </td><td>MAC </td><td>Sensors </td></tr>
+<td>GetSensorInfos availableSensors on current node</td><td>0x20 + 0x00 </td><td>MAC </td><td><a class="el" href="namespaceSensors.html">Sensors</a> </td></tr>
 <tr>
-<td>GetSensorInfos availableSensors on connected node n</td><td>0x20 + 0x01 </td><td>MAC </td><td>Sensors </td></tr>
+<td>GetSensorInfos availableSensors on connected node n</td><td>0x20 + 0x01 </td><td>MAC </td><td><a class="el" href="namespaceSensors.html">Sensors</a> </td></tr>
 <tr>
 <td>GetSensorData Movement</td><td>0x30 + 0x01 </td><td>MAC </td><td>Mv </td></tr>
 <tr>
-<td>GetSensorData <a class="el" href="classDHT22.html">DHT22</a> </td><td>0x30 + 0x02 </td><td>MAC </td><td><a class="el" href="classDHT22.html">DHT22</a> </td></tr>
+<td>GetSensorData DHT22 </td><td>0x30 + 0x02 </td><td>MAC </td><td>DHT22 </td></tr>
 <tr>
 <td>GetSensorData LightSense</td><td>0x30 + 0x03 </td><td>MAC </td><td>La </td></tr>
 <tr>
@@ -150,13 +150,13 @@ $(document).ready(function(){initNavTree('md_src_README.html','');});
 <tr>
 <td>Light on analog Port </td><td>Lap </td></tr>
 <tr>
-<td>Light digital (I2C) in Lux </td><td>Ldx </td></tr>
+<td>Light digital (<a class="el" href="classI2C.html">I2C</a>) in Lux </td><td>Ldx </td></tr>
 <tr>
 <td>TempDS (1-Wire)</td><td>TDS </td></tr>
 <tr>
 <td>TempHumDHT22 (1-Wire)</td><td>DHT </td></tr>
 <tr>
-<td>Pressure (I2C)</td><td>PT </td></tr>
+<td>Pressure (<a class="el" href="classI2C.html">I2C</a>)</td><td>PT </td></tr>
 <tr>
 <td>Movement </td><td>M </td></tr>
 </table>

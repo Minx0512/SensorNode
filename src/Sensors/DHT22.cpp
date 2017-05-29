@@ -14,6 +14,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+namespace Sensors {
+
 DHT22::DHT22() {
 
 
@@ -45,17 +47,17 @@ DHT22::DHT22(volatile uint8_t &Wire_PORT, volatile uint8_t &Wire_DDR, volatile u
 }
 
 int8_t DHT22::GetTemperatureHumidity(float *temperature, float *humidity){
-	return GetData(temperature, humidity);
+	return (GetData(temperature, humidity));
 }
 
 int8_t DHT22::GetTemperature(float *temperature){
 	float humidity = 0;
-	return GetData(temperature, &humidity);
+	return (GetData(temperature, &humidity));
 }
 
 int8_t DHT22::GetHumidity(float *humidity){
 	float temperature = 0;
-	return GetData(&temperature, humidity);
+	return (GetData(&temperature, humidity));
 }
 
 void DHT22::Reset(){
@@ -76,15 +78,15 @@ uint8_t DHT22::SendRequest(uint8_t bit){
 
 			//check start condition 1
 			if((AM2302_HIGH_INPUT())) {
-				return -1;
+				return (-1);
 			}
 			_delay_us(80);
 			//check start condition 2
 			if(!(AM2302_HIGH_INPUT())) {
-				return -1;
+				return (-1);
 			}
 			_delay_us(80);
-		return 0;
+		return (0);
 
 
 }
@@ -106,12 +108,12 @@ int8_t DHT22::GetData(float *temperature, float *humidity){
 
 		//check start condition 1
 		if((AM2302_HIGH_INPUT())) {
-			return -1;
+			return (-1);
 		}
 		_delay_us(80);
 		//check start condition 2
 		if(!(AM2302_HIGH_INPUT())) {
-			return -2;
+			return (-2);
 		}
 		_delay_us(80);
 
@@ -124,7 +126,7 @@ int8_t DHT22::GetData(float *temperature, float *humidity){
 				while(!(AM2302_HIGH_INPUT())) { //wait for an high input (non blocking)
 					timeoutcounter++;
 					if(timeoutcounter > TIMEOUT) {
-						return -3; //timeout
+						return (-3); //timeout
 					}
 				}
 				_delay_us(30);
@@ -134,7 +136,7 @@ int8_t DHT22::GetData(float *temperature, float *humidity){
 				while(AM2302_HIGH_INPUT()) { //wait until input get low (non blocking)
 					timeoutcounter++;
 					if(timeoutcounter > TIMEOUT) {
-						return -4; //timeout
+						return (-4); //timeout
 					}
 				}
 			}
@@ -157,10 +159,10 @@ int8_t DHT22::GetData(float *temperature, float *humidity){
 			}
 			*humidity = (float)(rawhumidity)/10.0;
 
-			return 0;
+			return (0);
 		}
 
-		return -5;
+		return (-5);
 
 
 
@@ -225,3 +227,4 @@ void DHT22::GetSensorHumidityStringXML(char* string){
 
 }
 
+}

@@ -1,0 +1,70 @@
+.TH "src/IO/I2C.hpp" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/IO/I2C.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <inttypes\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBI2C\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBF_CPU\fP   16000000UL"
+.br
+.ti -1c
+.RI "#define \fBI2C_READ\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBI2C_WRITE\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBF_SCL\fP   100000UL"
+.br
+.ti -1c
+.RI "#define \fBPrescaler\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTWBR_val\fP   ((((\fBF_CPU\fP / \fBF_SCL\fP) / \fBPrescaler\fP) \- 16 ) / 2)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Project: \fBSensorNode\fP
+.PP
+\fBI2C\&.hpp\fP
+.PP
+Created on: 28 Apr 2017
+.PP
+Author: Matthias Minx
+.PP
+Revision:
+.PP
+License: 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define F_CPU   16000000UL"
+
+.SS "#define F_SCL   100000UL"
+
+.SS "#define I2C_READ   0x01"
+
+.SS "#define I2C_WRITE   0x00"
+
+.SS "#define Prescaler   1"
+
+.SS "#define TWBR_val   ((((\fBF_CPU\fP / \fBF_SCL\fP) / \fBPrescaler\fP) \- 16 ) / 2)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

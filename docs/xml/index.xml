@@ -1,9 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
   <compound refid="classBMP180" kind="class"><name>BMP180</name>
+    <member refid="classBMP180_1a641b7fde5e8202d5fc05ee8197e64338" kind="variable"><name>i2c</name></member>
+    <member refid="classBMP180_1af1ffd1d5faf651b0ab03011112e8822c" kind="variable"><name>temperature</name></member>
+    <member refid="classBMP180_1a981e771ad28cb9cf1d789f33b45a9521" kind="variable"><name>pressure</name></member>
+    <member refid="classBMP180_1a309219d172cffdc7b8f3c667666acfb3" kind="variable"><name>p_bmp180</name></member>
+    <member refid="classBMP180_1abb79348f8b34037cd2a8edbb68b6062c" kind="function"><name>GetCalibrationParam</name></member>
+    <member refid="classBMP180_1acaf2a12c4a90f0023eda1115639fd203" kind="function"><name>GetTemperature</name></member>
+    <member refid="classBMP180_1a2e2dcaced0cf3693329857c8ddc8ec32" kind="function"><name>GetPressure</name></member>
+    <member refid="classBMP180_1a4aeb21cd2930e32319bc5e033cc543a0" kind="function"><name>GetuncompTemperature</name></member>
+    <member refid="classBMP180_1ab24151206af58316d6f3c2f1c99286bd" kind="function"><name>GetuncompPressure</name></member>
     <member refid="classBMP180_1a8c3e89c7ea65e49c0001a43af07b7c35" kind="function"><name>BMP180</name></member>
-    <member refid="classBMP180_1a8d434a3074ba607d2dbc14657ae224dd" kind="function"><name>~BMP180</name></member>
-    <member refid="classBMP180_1a4a5650b6821c73b5ad9654a9765a9d82" kind="function"><name>Init</name></member>
+    <member refid="classBMP180_1a124111338db49a31f3f716ebe657a83b" kind="function"><name>BMP180</name></member>
+    <member refid="classBMP180_1aa7171a079dc6e99158839fd5fe3d40cd" kind="function"><name>Init</name></member>
+    <member refid="classBMP180_1a27de00d6188de674c1973a7181287f6f" kind="function"><name>GetTemperature</name></member>
+    <member refid="classBMP180_1aee70a553dc17d04696c8a5cc7458f2dd" kind="function"><name>GetPressure</name></member>
+    <member refid="classBMP180_1a804923af8373a2faffc72f01da637bf8" kind="function"><name>GetTempPressure</name></member>
+    <member refid="classBMP180_1adcef92ebb205aad908b4f93a54fd313f" kind="function"><name>GetTempPressureString</name></member>
   </compound>
   <compound refid="classsensors_1_1BMP180" kind="class"><name>sensors::BMP180</name>
     <member refid="classsensors_1_1BMP180_1a455436ba3d7ef32e8e48d69cc84cd345" kind="variable"><name>P</name></member>
@@ -19,28 +32,55 @@
     <member refid="classsensors_1_1BMP180_1ad249a90be7cff513ac5a9851a9968403" kind="function"><name>InterpretResponse</name></member>
     <member refid="classsensors_1_1BMP180_1a5f5a28a84b1e4aac10f9ce814730c9b4" kind="function"><name>__str__</name></member>
   </compound>
-  <compound refid="classDHT22" kind="class"><name>DHT22</name>
-    <member refid="classDHT22_1a0966fbe5db17d7ca6f1f036830e27502" kind="variable"><name>AM2302_WIRE_PORT</name></member>
-    <member refid="classDHT22_1a69649c4246cd4e255a6e61961b0c948b" kind="variable"><name>AM2302_WIRE_DDR</name></member>
-    <member refid="classDHT22_1a5555aa8aa95149f3a3723582bb4ceffa" kind="variable"><name>AM2302_WIRE_PIN</name></member>
-    <member refid="classDHT22_1a4b6de6908e5eb743dec2c254ef89782e" kind="variable"><name>AM2302_WIRE_DQ</name></member>
-    <member refid="classDHT22_1acbca744f7ed6f46e2d060c7047b0b1a4" kind="variable"><name>TIMEOUT</name></member>
-    <member refid="classDHT22_1ad80f0ddc323aa1ec6702230d4a80349f" kind="function"><name>DHT22</name></member>
-    <member refid="classDHT22_1a266c5c8555486bb830dc4668cd1875d4" kind="function"><name>DHT22</name></member>
-    <member refid="classDHT22_1a51552e5b7373329a6751aeffc04a8fd5" kind="function"><name>GetTemperatureHumidity</name></member>
-    <member refid="classDHT22_1abe301571f40deb569b74e980ef2da9a7" kind="function"><name>GetTemperature</name></member>
-    <member refid="classDHT22_1acaffb8b6e2602a291d3b2e2ec5bc340c" kind="function"><name>GetHumidity</name></member>
-    <member refid="classDHT22_1ac3f4e0757e14c5a8ea96cd4eb5e8d57c" kind="function"><name>GetSensorStringXML</name></member>
-    <member refid="classDHT22_1a7384e5b3512bca9692932cbc74c0d110" kind="function"><name>GetSensorTemperatureStringXML</name></member>
-    <member refid="classDHT22_1acee19cfc832183328130ec99ce0f9854" kind="function"><name>GetSensorHumidityStringXML</name></member>
-    <member refid="classDHT22_1acfa5b6640685318856f09aa84080fd76" kind="function"><name>Reset</name></member>
-    <member refid="classDHT22_1acf1337337af198d3a6216f625c70cbc7" kind="function"><name>SendRequest</name></member>
-    <member refid="classDHT22_1ae8fbd3966b285fd9b7318dcad2036e93" kind="function"><name>GetData</name></member>
-    <member refid="classDHT22_1aae1d3f75d7a34843d3a4b533c56e474c" kind="function"><name>AM2302_PIN_INPUT_MODE</name></member>
-    <member refid="classDHT22_1a96e379a2cf2c6239253c9f706959253c" kind="function"><name>AM2302_PIN_OUTPUT_MODE</name></member>
-    <member refid="classDHT22_1a312eb760672d2818f8de68c553bd5a21" kind="function"><name>AM2302_PIN_LOW</name></member>
-    <member refid="classDHT22_1a98ca5e15fa219b57e819691e16707122" kind="function"><name>AM2302_PIN_HIGH</name></member>
-    <member refid="classDHT22_1ae2f4f7c34bf80cd3f4bf0da52fa96572" kind="function"><name>AM2302_HIGH_INPUT</name></member>
+  <compound refid="structbmp180__calib__param__t" kind="struct"><name>bmp180_calib_param_t</name>
+    <member refid="structbmp180__calib__param__t_1a4af824f7ed92cef41c2e591aff2ed3ba" kind="variable"><name>ac1</name></member>
+    <member refid="structbmp180__calib__param__t_1abe5534331e8ea703b759484322101e89" kind="variable"><name>ac2</name></member>
+    <member refid="structbmp180__calib__param__t_1ac5563e3a7ecbf6f0a991e04d87d01dd8" kind="variable"><name>ac3</name></member>
+    <member refid="structbmp180__calib__param__t_1a4f767b1a709975522476f90f58a054f4" kind="variable"><name>ac4</name></member>
+    <member refid="structbmp180__calib__param__t_1a89e488bc5c3c6496925d64a5e42be87a" kind="variable"><name>ac5</name></member>
+    <member refid="structbmp180__calib__param__t_1a7cd1f72878db3636b302794cc067dbce" kind="variable"><name>ac6</name></member>
+    <member refid="structbmp180__calib__param__t_1add43e571a34a76bc7e8c7e35f2b1d13d" kind="variable"><name>b1</name></member>
+    <member refid="structbmp180__calib__param__t_1ad3e1a7249a88d8eb5ea0d37e3e5137fb" kind="variable"><name>b2</name></member>
+    <member refid="structbmp180__calib__param__t_1a64bdabef2d55201e68ee49299b966282" kind="variable"><name>mb</name></member>
+    <member refid="structbmp180__calib__param__t_1a5abaaaa05802e6d9b2653182e31f655d" kind="variable"><name>mc</name></member>
+    <member refid="structbmp180__calib__param__t_1aab92deab6ac7b3bd24feda15460509c3" kind="variable"><name>md</name></member>
+  </compound>
+  <compound refid="structbmp180__t" kind="struct"><name>bmp180_t</name>
+    <member refid="structbmp180__t_1af9052e0c95ba7c63157703465ff14ef1" kind="variable"><name>calib_param</name></member>
+    <member refid="structbmp180__t_1ac5514a7ce3e3d23f7a6722711039edba" kind="variable"><name>mode</name></member>
+    <member refid="structbmp180__t_1af41f334824c5e9e6d0bb72507a734dec" kind="variable"><name>chip_id</name></member>
+    <member refid="structbmp180__t_1a369cb61fc9c7de06061f13eb8be5aa34" kind="variable"><name>ml_version</name></member>
+    <member refid="structbmp180__t_1aef41548b2ff2ff3cc7db7984cace6918" kind="variable"><name>al_version</name></member>
+    <member refid="structbmp180__t_1a1fac092bc595a86dc1dae9604f557d5e" kind="variable"><name>dev_addr</name></member>
+    <member refid="structbmp180__t_1a9b9ced8e0fdb8fb0ab04a875e4d46f38" kind="variable"><name>sensortype</name></member>
+    <member refid="structbmp180__t_1ae753cf9c8d8f28a1b3395c472acb61fb" kind="variable"><name>param_b5</name></member>
+    <member refid="structbmp180__t_1a919c92f3b67c115eb7546855d3322f8f" kind="variable"><name>number_of_samples</name></member>
+    <member refid="structbmp180__t_1a6ade944cf9275b333add5785f33701bd" kind="variable"><name>oversamp_setting</name></member>
+    <member refid="structbmp180__t_1a0bda5ec8f08249ee69f2e4a14df59f6e" kind="variable"><name>sw_oversamp</name></member>
+    <member refid="structbmp180__t_1ad6875c8bcf81da576a90decbdf0f2a93" kind="variable"><name>delay_msec</name></member>
+  </compound>
+  <compound refid="classSensors_1_1DHT22" kind="class"><name>Sensors::DHT22</name>
+    <member refid="classSensors_1_1DHT22_1a715f00b8b520dc18e0297e16209f474f" kind="variable"><name>AM2302_WIRE_PORT</name></member>
+    <member refid="classSensors_1_1DHT22_1aac53ea2cdcee5bb0724ed9f627bc83a3" kind="variable"><name>AM2302_WIRE_DDR</name></member>
+    <member refid="classSensors_1_1DHT22_1a5c1f031275dbd5c220dede4ce8f83700" kind="variable"><name>AM2302_WIRE_PIN</name></member>
+    <member refid="classSensors_1_1DHT22_1ad581ecb7a40bf65ef4a443ff89c79c7d" kind="variable"><name>AM2302_WIRE_DQ</name></member>
+    <member refid="classSensors_1_1DHT22_1ad3a2e38a8a6dafe6afd0d7474cc2f42f" kind="variable"><name>TIMEOUT</name></member>
+    <member refid="classSensors_1_1DHT22_1aea0dffd84011c7e41e7a9741ba94ba77" kind="function"><name>DHT22</name></member>
+    <member refid="classSensors_1_1DHT22_1a3eedb9d60ca7bf7775b55f48f5f686be" kind="function"><name>DHT22</name></member>
+    <member refid="classSensors_1_1DHT22_1a19d8f961fc57ca65d26c7ed2e814dfe6" kind="function"><name>GetTemperatureHumidity</name></member>
+    <member refid="classSensors_1_1DHT22_1ac4401b7197dcaaab5b5b89a3ccedc103" kind="function"><name>GetTemperature</name></member>
+    <member refid="classSensors_1_1DHT22_1a98c4c72a0f831bb8f3142081f8a1b685" kind="function"><name>GetHumidity</name></member>
+    <member refid="classSensors_1_1DHT22_1a7f720c4ef52d3143142a5b7454ba0129" kind="function"><name>GetSensorStringXML</name></member>
+    <member refid="classSensors_1_1DHT22_1ac3673871317c9d57f99d032bca544dd7" kind="function"><name>GetSensorTemperatureStringXML</name></member>
+    <member refid="classSensors_1_1DHT22_1aa3424d261995128db6f8ae9ecd5cbea7" kind="function"><name>GetSensorHumidityStringXML</name></member>
+    <member refid="classSensors_1_1DHT22_1a538ecec2af343da8ff6170df36728931" kind="function"><name>Reset</name></member>
+    <member refid="classSensors_1_1DHT22_1aa6b9b0e30a17d8744d01a49572e42cfe" kind="function"><name>SendRequest</name></member>
+    <member refid="classSensors_1_1DHT22_1a1a336900a0f16363f64076efcc318e68" kind="function"><name>GetData</name></member>
+    <member refid="classSensors_1_1DHT22_1a3defb05766f77f5d6c5b3ea84ca003cc" kind="function"><name>AM2302_PIN_INPUT_MODE</name></member>
+    <member refid="classSensors_1_1DHT22_1ae9558ae6f38495024ea3f482ebface5c" kind="function"><name>AM2302_PIN_OUTPUT_MODE</name></member>
+    <member refid="classSensors_1_1DHT22_1a57831c26af2a7eb68ad03189b0de8708" kind="function"><name>AM2302_PIN_LOW</name></member>
+    <member refid="classSensors_1_1DHT22_1aa60e4bd1cd75740bb59b6f485002c65a" kind="function"><name>AM2302_PIN_HIGH</name></member>
+    <member refid="classSensors_1_1DHT22_1a6c0e691ca8e80a3fcdf32ae8fdd930e3" kind="function"><name>AM2302_HIGH_INPUT</name></member>
   </compound>
   <compound refid="classsensors_1_1DHT22" kind="class"><name>sensors::DHT22</name>
     <member refid="classsensors_1_1DHT22_1a0f53e4181f2b2008ffe099a22631a617" kind="variable"><name>H</name></member>
@@ -54,32 +94,6 @@
     <member refid="classsensors_1_1DHT22_1a5958701fe5dfdaf901c03926ca5ffc33" kind="function"><name>__init__</name></member>
     <member refid="classsensors_1_1DHT22_1a957aa77f0af01e9306aeb86d122969fc" kind="function"><name>InterpretResponse</name></member>
     <member refid="classsensors_1_1DHT22_1a5c20cdc8c8168efe52e9ce3ce0c3e819" kind="function"><name>__str__</name></member>
-  </compound>
-  <compound refid="classDS18B20" kind="class"><name>DS18B20</name>
-    <member refid="classDS18B20_1a4e8d420cd118999883bde12e766bc1d4" kind="variable"><name>WIRE_PORT</name></member>
-    <member refid="classDS18B20_1a06a1f548d087b8d8971dee5e94653f5c" kind="variable"><name>WIRE_DDR</name></member>
-    <member refid="classDS18B20_1a03a1ad890f9713fc10dc353c9779a7f2" kind="variable"><name>WIRE_PIN</name></member>
-    <member refid="classDS18B20_1aebc6a6ab3c604f19dac9a24ef3301938" kind="variable"><name>WIRE_DQ</name></member>
-    <member refid="classDS18B20_1a6884de10b175289718239bdac0b8e52e" kind="variable"><name>MACString</name></member>
-    <member refid="classDS18B20_1a6340d31cea87cf473af13fc7f15f60e4" kind="function"><name>ReadMeasurement</name></member>
-    <member refid="classDS18B20_1a440a17340ac61a693316550422e4ae4e" kind="function"><name>ReadMeasurement2</name></member>
-    <member refid="classDS18B20_1afc1a4166a4d1d00baef15a9e4c59b632" kind="function"><name>DS18B20</name></member>
-    <member refid="classDS18B20_1afb0ce114e04bc699bc2e3c5282a31bc3" kind="function"><name>DS18B20</name></member>
-    <member refid="classDS18B20_1af18146fd823d04f5472fb305e46f02b0" kind="function"><name>GetMACString</name></member>
-    <member refid="classDS18B20_1a64a03b4a18a9d2b3faeb7943865055e9" kind="function"><name>GetSensorStringXML</name></member>
-    <member refid="classDS18B20_1ae3d50f1b5b71517d633958f54654ea55" kind="function"><name>GetTemperature</name></member>
-    <member refid="classDS18B20_1a817183f6ef9552d6559d58d714e5c804" kind="function"><name>StartMeasurement</name></member>
-    <member refid="classDS18B20_1a890b94747fbd3ec6e45088735c7bc1fe" kind="function"><name>Reset</name></member>
-    <member refid="classDS18B20_1ac2bf79674d18e4ad00d7b41d76d411e3" kind="function"><name>BitIO</name></member>
-    <member refid="classDS18B20_1a7314cb6a438ddd0c214ed409f7dd5d86" kind="function"><name>WriteByte</name></member>
-    <member refid="classDS18B20_1aa43d0c42ebb25bbdc9b7904710652c75" kind="function"><name>ReadByte</name></member>
-    <member refid="classDS18B20_1a356e88e8a6bca4f5ffeb41180c08f91d" kind="function"><name>RomSearch</name></member>
-    <member refid="classDS18B20_1a1f03dae7ea2d07a225343eaa33d119cf" kind="function"><name>Command</name></member>
-    <member refid="classDS18B20_1abd68014bd97396c4b0365d3e1ca1f61c" kind="function"><name>PIN_INPUT_MODE</name></member>
-    <member refid="classDS18B20_1aaa611dcdffd8f02719f62c8a93c0c7c0" kind="function"><name>PIN_OUTPUT_MODE</name></member>
-    <member refid="classDS18B20_1a8a8a45bbfe229978ea7280177b6fe18b" kind="function"><name>PIN_LOW</name></member>
-    <member refid="classDS18B20_1af9d029958b4a835a15867df7ad59d7d3" kind="function"><name>PIN_HIGH</name></member>
-    <member refid="classDS18B20_1a458a891af1a3631958fa84c5b5bbc457" kind="function"><name>__attribute__</name></member>
   </compound>
   <compound refid="classsensors_1_1DS18B20" kind="class"><name>sensors::DS18B20</name>
     <member refid="classsensors_1_1DS18B20_1a9b75c982811d488391ab52a339d58be8" kind="variable"><name>MAC</name></member>
@@ -95,6 +109,61 @@
     <member refid="classsensors_1_1DS18B20_1a00cce06ee0b0b920cb3df86cc5ad1902" kind="function"><name>GetValuePair</name></member>
     <member refid="classsensors_1_1DS18B20_1abaf2d655c254d5595879e91860b545f8" kind="function"><name>GetAvgTemperature</name></member>
     <member refid="classsensors_1_1DS18B20_1a88d7d94ab43332ceea56fa301de9c1d1" kind="function"><name>__str__</name></member>
+  </compound>
+  <compound refid="classSensors_1_1DS18B20" kind="class"><name>Sensors::DS18B20</name>
+    <member refid="classSensors_1_1DS18B20_1a6a769e836e36f4975918eb52f6e00309" kind="variable"><name>WIRE_PORT</name></member>
+    <member refid="classSensors_1_1DS18B20_1aceb52cdfb7462c8c7be8178181ae4dc5" kind="variable"><name>WIRE_DDR</name></member>
+    <member refid="classSensors_1_1DS18B20_1ada7da2f14ca56ef0598caedd5c96ea7a" kind="variable"><name>WIRE_PIN</name></member>
+    <member refid="classSensors_1_1DS18B20_1a10fe94bdfb9a37a86d34925534a4547c" kind="variable"><name>WIRE_DQ</name></member>
+    <member refid="classSensors_1_1DS18B20_1a7c33b18028020215b85039dd9555a6df" kind="variable"><name>MACString</name></member>
+    <member refid="classSensors_1_1DS18B20_1a014be02f21c7f7b7f933fa800213695c" kind="function"><name>ReadMeasurement</name></member>
+    <member refid="classSensors_1_1DS18B20_1a9b8098959de0977e4576093fe2346cbd" kind="function"><name>ReadMeasurement2</name></member>
+    <member refid="classSensors_1_1DS18B20_1af643f9bc9d0095ec396817630aa9fa19" kind="function"><name>DS18B20</name></member>
+    <member refid="classSensors_1_1DS18B20_1a4beaec7604e613184572d0175361fba7" kind="function"><name>DS18B20</name></member>
+    <member refid="classSensors_1_1DS18B20_1a78f6bbedbe849612f39ef6600a7b91f3" kind="function"><name>GetMACString</name></member>
+    <member refid="classSensors_1_1DS18B20_1aeed18c0c1d714f084dab8a74437a3c35" kind="function"><name>GetSensorStringXML</name></member>
+    <member refid="classSensors_1_1DS18B20_1a788dc2898e3ad1a0a17d042cf5e3dd9a" kind="function"><name>GetTemperature</name></member>
+    <member refid="classSensors_1_1DS18B20_1a038c0caa764736529ebaf28af9ee5321" kind="function"><name>StartMeasurement</name></member>
+    <member refid="classSensors_1_1DS18B20_1abefe26ccc02fe5b8519d94a6f46729fb" kind="function"><name>Reset</name></member>
+    <member refid="classSensors_1_1DS18B20_1a56a1466a1d2f1abf713e516e2e6839f8" kind="function"><name>BitIO</name></member>
+    <member refid="classSensors_1_1DS18B20_1adb4e81dac45643fcee9410be3218c4f9" kind="function"><name>WriteByte</name></member>
+    <member refid="classSensors_1_1DS18B20_1af8ade017aba66c9fa52872c7aa68107f" kind="function"><name>ReadByte</name></member>
+    <member refid="classSensors_1_1DS18B20_1a889ad2303c61db988566cbfcfd57a9b9" kind="function"><name>RomSearch</name></member>
+    <member refid="classSensors_1_1DS18B20_1a14af4e7ba13a59b640d651b3abd3bedb" kind="function"><name>Command</name></member>
+    <member refid="classSensors_1_1DS18B20_1a8bb87520d8ef3ad3639afab3fbbc39ce" kind="function"><name>PIN_INPUT_MODE</name></member>
+    <member refid="classSensors_1_1DS18B20_1aaf9c80b1de14fc02dd2cfd188eddf751" kind="function"><name>PIN_OUTPUT_MODE</name></member>
+    <member refid="classSensors_1_1DS18B20_1a3429705d951dec85ffafbc627bcf015f" kind="function"><name>PIN_LOW</name></member>
+    <member refid="classSensors_1_1DS18B20_1a1340454609f372341887949ca72e0951" kind="function"><name>PIN_HIGH</name></member>
+    <member refid="classSensors_1_1DS18B20_1a1eab0f2d40228dbf38f00f69b58e0b78" kind="function"><name>__attribute__</name></member>
+  </compound>
+  <compound refid="classI2C" kind="class"><name>I2C</name>
+    <member refid="classI2C_1a7a9a84fccdacb3346ff97d6f3e158850" kind="function"><name>I2C</name></member>
+    <member refid="classI2C_1ab6cd0165be5e59dfe57976f1ae4325ec" kind="function"><name>Init</name></member>
+    <member refid="classI2C_1a2d89860048673ed968d218a749080916" kind="function"><name>Start</name></member>
+    <member refid="classI2C_1aa18dde601c811e06dda1be29c139dd83" kind="function"><name>Write</name></member>
+    <member refid="classI2C_1aa538a5b392f83063c3d484ec35cf1bcd" kind="function"><name>Read_ack</name></member>
+    <member refid="classI2C_1af40aac783e94fcfcd1f9c8cbfe1eeb37" kind="function"><name>Read_nack</name></member>
+    <member refid="classI2C_1a9eb58b51adaedc941abf120c4df3c481" kind="function"><name>Transmit</name></member>
+    <member refid="classI2C_1ad0c64a4e373b4015647a11c298af4d47" kind="function"><name>Receive</name></member>
+    <member refid="classI2C_1a4f7e7e3bb2527b721f370ec88011b401" kind="function"><name>WriteReg</name></member>
+    <member refid="classI2C_1aee4e012db3dc019536ad3da5632cc04a" kind="function"><name>ReadReg</name></member>
+    <member refid="classI2C_1a5d3e0b1de395932284e2e010a0160b5f" kind="function"><name>Stop</name></member>
+  </compound>
+  <compound refid="classIO" kind="class"><name>IO</name>
+    <member refid="classIO_1a441eb28753ed241386507df53bacdaad" kind="variable"><name>spi</name></member>
+    <member refid="classIO_1a15d36e6764d393254ad99f8d7ec25f51" kind="variable"><name>usart</name></member>
+    <member refid="classIO_1a6dc46e51d3706946a6a13dd8c94cbf60" kind="variable"><name>i2c</name></member>
+    <member refid="classIO_1a041a386e8e27fe7486090449d2749ea2" kind="variable"><name>uartRX_flag</name></member>
+    <member refid="classIO_1a49b27a2ee79bce0de4e3ef163cbebd30" kind="function"><name>IO</name></member>
+    <member refid="classIO_1ad7933ecdc01630b62be377ab873fea21" kind="function"><name>USART_SetRxFlagTrue</name></member>
+    <member refid="classIO_1a69cddfa296c916c81cf7480c6c7f9139" kind="function"><name>USART_SetRxFlagFalse</name></member>
+    <member refid="classIO_1af8171de8979d317fec0a187ba087a626" kind="function"><name>USART_GetRxFlag</name></member>
+    <member refid="classIO_1a240a25927946ea2994e271eb56948362" kind="function"><name>USART_writeString</name></member>
+    <member refid="classIO_1a1febbd3f3b0a0a482226ee1659f2f7d1" kind="function"><name>USART_readString</name></member>
+    <member refid="classIO_1a00d8980cbb7e31f0583a65305dacff9e" kind="function"><name>USART_readString</name></member>
+    <member refid="classIO_1a04360979dfc7e8960abb4b7659257b68" kind="function"><name>USART_Flush</name></member>
+    <member refid="classIO_1acf88aa0feccc7ba9526c232d36e368b2" kind="function"><name>SPI_WriteReadbyte</name></member>
+    <member refid="classIO_1add6f3bdf0120b0d63d7b48a72e8edc1e" kind="function"><name>InitInterfaces</name></member>
   </compound>
   <compound refid="classsensors_1_1LightAnalog" kind="class"><name>sensors::LightAnalog</name>
     <member refid="classsensors_1_1LightAnalog_1ab1748d35da94bc8da0afead5bded8986" kind="variable"><name>value</name></member>
@@ -152,7 +221,6 @@
     <member refid="classNRF24L01_1a7214eaa3fcd3b6576d8f290e6ab71955" kind="function"><name>closeReadingPipe</name></member>
     <member refid="classNRF24L01_1a1feaab910ecff17805f8141fe40028e7" kind="variable"><name>txDelay</name></member>
     <member refid="classNRF24L01_1abae8b8afbf747344006d6163c607be00" kind="variable"><name>csDelay</name></member>
-    <member refid="classNRF24L01_1a6321af25fee367445baa6ab4840f8443" kind="variable"><name>spi</name></member>
     <member refid="classNRF24L01_1a17752733515f67aa9f6ed3daa1ed3d1d" kind="function"><name>setAddressWidth</name></member>
     <member refid="classNRF24L01_1a0bb209d94b62e2a28af53179af713f3c" kind="function"><name>setRetries</name></member>
     <member refid="classNRF24L01_1aa8eaf9d5ed604f60a00cd79fed9edad7" kind="function"><name>setChannel</name></member>
@@ -193,6 +261,7 @@
     <member refid="classNRF24L01_1aceeaa16f91d7c5fd6a429a6adf678bd4" kind="function"><name>ToggleFeatures</name></member>
     <member refid="classNRF24L01_1ab604b1e177e4812e33ebc39287503197" kind="function"><name>spiTrans</name></member>
     <member refid="classNRF24L01_1ad796eb9996a6b528534d1ac2ae2d37cd" kind="function"><name>__attribute__</name></member>
+    <member refid="classNRF24L01_1ae1eea9f32346ecf60ffbf5224d338359" kind="variable"><name>ioInterface</name></member>
     <member refid="classNRF24L01_1a42ef1a6d858a115327d0a7310aaba57c" kind="variable"><name>NRF24L01_DDR</name></member>
     <member refid="classNRF24L01_1a56a20345fcb667fcfc9bc1cb62d5152f" kind="variable"><name>NRF24L01_CE</name></member>
     <member refid="classNRF24L01_1a4d36b61597b9919dd4a0ecdc53526020" kind="variable"><name>NRF24L01_CSN</name></member>
@@ -214,7 +283,7 @@
     <member refid="classNRF24L01_1af6a260dd55ee5c2f7de7cfac4e91178d" kind="variable"><name>NRF24L01_RF24_CRC</name></member>
     <member refid="classNRF24L01_1ae319d1b6a3d950888d2608cc69efb07c" kind="variable"><name>dynamic_payloads_enabled</name></member>
     <member refid="classNRF24L01_1ad3e6263e0afaa974637d1450b6c8cb37" kind="function"><name>NRF24L01</name></member>
-    <member refid="classNRF24L01_1a8e2cc2ca751ff3bd4ea351bd2fcea93e" kind="function"><name>NRF24L01</name></member>
+    <member refid="classNRF24L01_1a8e8e6754c34cf6e6fed554a6e26c8a4b" kind="function"><name>NRF24L01</name></member>
     <member refid="classNRF24L01_1a2973773d1a158e1cfbf52198f248c548" kind="function"><name>Init</name></member>
     <member refid="classNRF24L01_1aaabd39829998b609c0dc317af4f141b2" kind="function"><name>startListening</name></member>
     <member refid="classNRF24L01_1a6ad13189b732f237ac148c659ddf6b01" kind="function"><name>stopListening</name></member>
@@ -223,6 +292,14 @@
     <member refid="classNRF24L01_1a719390c69a2e45df08379f17e3289f4c" kind="function"><name>write</name></member>
     <member refid="classNRF24L01_1ad64a887cae746be5ca43cf08445feed9" kind="function"><name>openWritingPipe</name></member>
     <member refid="classNRF24L01_1a9b458f77f6ae6c42f330710e703dd847" kind="function"><name>openReadingPipe</name></member>
+  </compound>
+  <compound refid="classopenhab_1_1OpenHab" kind="class"><name>openhab::OpenHab</name>
+    <member refid="classopenhab_1_1OpenHab_1a826d2f891c8b4a75abc3d0addfe2791f" kind="variable"><name>host</name></member>
+    <member refid="classopenhab_1_1OpenHab_1a19e269f9557250b74388ec3ace6d180b" kind="variable"><name>https_sslv3_handler</name></member>
+    <member refid="classopenhab_1_1OpenHab_1a8fd99a4690e6c0748f7d841d0b235db6" kind="variable"><name>opener</name></member>
+    <member refid="classopenhab_1_1OpenHab_1a020bd5e4eadf27e4f6f7dadcd5ed96c3" kind="function"><name>__init__</name></member>
+    <member refid="classopenhab_1_1OpenHab_1a78d35fd46b7acd379efdfea36739ee82" kind="function"><name>checkAllItemsExist</name></member>
+    <member refid="classopenhab_1_1OpenHab_1a3c933fe83061e7a84e8b6ba945707efe" kind="function"><name>putDataInItem</name></member>
   </compound>
   <compound refid="classParseStrings" kind="class"><name>ParseStrings</name>
     <member refid="classParseStrings_1a861e286994be25fad33c18c9be18ed12" kind="variable"><name>cmdID</name></member>
@@ -244,16 +321,16 @@
     <member refid="classParseStrings_1a58ddb6be993306d69a0bbb08285fafa6" kind="function"><name>ParseStrings</name></member>
     <member refid="classParseStrings_1ab6f9a98b85f374dd26186cb55018e4a9" kind="function"><name>ParseStrings</name></member>
   </compound>
-  <compound refid="classPhotoresistor" kind="class"><name>Photoresistor</name>
-    <member refid="classPhotoresistor_1a0edaea79b0038417748c103f3647bd7d" kind="variable"><name>type</name></member>
-    <member refid="classPhotoresistor_1a550c85d1df00f323cd2fb86bb3d73c15" kind="variable"><name>ADPort</name></member>
-    <member refid="classPhotoresistor_1a2a717a2af0b5000b3971dc9e57a16e8e" kind="function"><name>Photoresistor</name></member>
-    <member refid="classPhotoresistor_1acfcec6e681f44e5c25ea876583f26964" kind="function"><name>Photoresistor</name></member>
-    <member refid="classPhotoresistor_1afa6d3901116b270855a95156f99010e4" kind="function"><name>GetSensorStringXML</name></member>
-    <member refid="classPhotoresistor_1afe829b4b1be3d742d789ab6b75dc0c9d" kind="function"><name>Init</name></member>
-    <member refid="classPhotoresistor_1a984cf8c9ed6a428f5b025a5ea85822da" kind="function"><name>setPort</name></member>
-    <member refid="classPhotoresistor_1a5c3bc9e8877b54faeded1450a39552fb" kind="function"><name>setType</name></member>
-    <member refid="classPhotoresistor_1aea81da3cce831497e50b02344bbba238" kind="function"><name>readADValue</name></member>
+  <compound refid="classSensors_1_1Photoresistor" kind="class"><name>Sensors::Photoresistor</name>
+    <member refid="classSensors_1_1Photoresistor_1abdd598255c0051cbc8db8a457cd29dc8" kind="variable"><name>type</name></member>
+    <member refid="classSensors_1_1Photoresistor_1a43797415ff86174f92b44e69046e3de7" kind="variable"><name>ADPort</name></member>
+    <member refid="classSensors_1_1Photoresistor_1a636b09df1c219714314a691bef87a6bd" kind="function"><name>Photoresistor</name></member>
+    <member refid="classSensors_1_1Photoresistor_1a53ca472fb36f5ce8b9e199ddcc1ea188" kind="function"><name>Photoresistor</name></member>
+    <member refid="classSensors_1_1Photoresistor_1a62a0993f8a84a827b843d9bcdded089e" kind="function"><name>Init</name></member>
+    <member refid="classSensors_1_1Photoresistor_1a06b802026054f93a7b6659db0ffe731e" kind="function"><name>GetSensorStringXML</name></member>
+    <member refid="classSensors_1_1Photoresistor_1a46314a8e495c2ad308fe89935b1c2574" kind="function"><name>setPort</name></member>
+    <member refid="classSensors_1_1Photoresistor_1a03306f2c1b5a7d65b46178dcc25c1c9a" kind="function"><name>setType</name></member>
+    <member refid="classSensors_1_1Photoresistor_1aaee5f77d43f8a7d3175a9bf3e635041d" kind="function"><name>readADValue</name></member>
   </compound>
   <compound refid="classreadsensor_1_1ReadSensor" kind="class"><name>readsensor::ReadSensor</name>
     <member refid="classreadsensor_1_1ReadSensor_1a26862f7f2d34ceb3201cfeb7339dd21b" kind="variable"><name>__InterpretResponse</name></member>
@@ -261,7 +338,10 @@
     <member refid="classreadsensor_1_1ReadSensor_1a55ad7cd6f26347c571cdc03025d52449" kind="variable"><name>baudrate</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1aca28301a80b828d13f180b3560acd929" kind="variable"><name>nodeMAC</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1adb42967437e88c29257d8fa7e6dcd8e2" kind="variable"><name>updateTime</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1aee72f840d408cc229fe805996b62f0a1" kind="variable"><name>dataValues</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a3a7da988d173549fed3f6c4f8dd48713" kind="variable"><name>itemNames</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1abea3837d8a334bcd560117be3468e555" kind="variable"><name>err</name></member>
+    <member refid="classreadsensor_1_1ReadSensor_1a1e626c0e06fbf1b266d9bb39c363196c" kind="variable"><name>signal</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1a3f1a8b0a95d14b00ceeb4a1d90db4146" kind="variable"><name>cmdID</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1a260848062ae91ce183d5b8a7bb4336a9" kind="variable"><name>pString</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1ac90ad89a36244ff79ec5de39250dbe65" kind="variable"><name>queryStr</name></member>
@@ -270,7 +350,6 @@
     <member refid="classreadsensor_1_1ReadSensor_1a2add837e5b36f9242b3481f30be5ace9" kind="variable"><name>respMask</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1aa9c0ba1400248735f49ccf7f4d7fcbec" kind="variable"><name>interpResp</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1ae04c9a7ad4cb4a0c68225cea810f9edd" kind="variable"><name>availableSensors</name></member>
-    <member refid="classreadsensor_1_1ReadSensor_1ab313380d075409d1fccdd2b47c958cc9" kind="variable"><name>cmdIDs</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1a9c731b9cb06fd6b22f1f9d601ff292e3" kind="function"><name>__init__</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1af42ab8caf111db6f14d49cbcfad445c3" kind="function"><name>InterpretResponse</name></member>
     <member refid="classreadsensor_1_1ReadSensor_1a9eec15e8b601b447851376a2341cbe6e" kind="function"><name>Update</name></member>
@@ -278,12 +357,11 @@
     <member refid="classreadsensor_1_1ReadSensor_1a52daa7fe6c6dba66b99d11a3c01567ba" kind="function"><name>__str__</name></member>
   </compound>
   <compound refid="classSensorNode_1_1SensorNode" kind="class"><name>SensorNode::SensorNode</name>
-    <member refid="classSensorNode_1_1SensorNode_1a6453b42daae16cdc043bea6825374162" kind="variable"><name>threadLock</name></member>
     <member refid="classSensorNode_1_1SensorNode_1a17be4a277b9bfdd041ec006b462d497c" kind="variable"><name>nodeAddresses</name></member>
     <member refid="classSensorNode_1_1SensorNode_1a94712cd1b0bf09fa4cd3de94ca666575" kind="variable"><name>port</name></member>
     <member refid="classSensorNode_1_1SensorNode_1a68f7a87f1d03a2734f3f6505f801a92e" kind="variable"><name>baudrate</name></member>
     <member refid="classSensorNode_1_1SensorNode_1ad8aec254c15c97a8b5c709480f31b2bb" kind="variable"><name>sens</name></member>
-    <member refid="classSensorNode_1_1SensorNode_1ad1e6d287c777ea31608f7b81e0023c60" kind="function"><name>UpdateThreads</name></member>
+    <member refid="classSensorNode_1_1SensorNode_1a983f7af590b412918b4e0113af0388d3" kind="variable"><name>signal</name></member>
   </compound>
   <compound refid="classsensors_1_1Sensors" kind="class"><name>sensors::Sensors</name>
     <member refid="classsensors_1_1Sensors_1a70cd97f59cdb39f1f02260551d7e5ea5" kind="variable"><name>sensorList</name></member>
@@ -296,6 +374,21 @@
     <member refid="classsensors_1_1Sensors_1ae27acc61935425a396ba555e00b9035d" kind="function"><name>InterpretResponse</name></member>
     <member refid="classsensors_1_1Sensors_1a31172fc78a9e842c470acb6719363e5c" kind="function"><name>__str__</name></member>
     <member refid="classsensors_1_1Sensors_1ad5dd799765cbc7c3b422381c02b10f9b" kind="function"><name>spawnSensors</name></member>
+  </compound>
+  <compound refid="classSensors_1_1Sensors" kind="class"><name>Sensors::Sensors</name>
+    <member refid="classSensors_1_1Sensors_1a314fc192a99b64c4679670dcc815eee6" kind="variable"><name>dht22</name></member>
+    <member refid="classSensors_1_1Sensors_1a5636b26f9866b438dd8a5b939f415146" kind="variable"><name>ds18b20</name></member>
+    <member refid="classSensors_1_1Sensors_1a6f8be7ead5ea5f1d116273510879c7cf" kind="variable"><name>pr</name></member>
+    <member refid="classSensors_1_1Sensors_1a04531cb6b01facf58e40cc4263e0904f" kind="variable"><name>movement</name></member>
+    <member refid="classSensors_1_1Sensors_1ac30fb5f0365448e41bb452884d7a3a83" kind="function"><name>Sensors</name></member>
+    <member refid="classSensors_1_1Sensors_1a266e3c68574f125f214528c267723a3d" kind="function"><name>InitSensors</name></member>
+    <member refid="classSensors_1_1Sensors_1adf426a126fdf97ab46e8816bea9fc38a" kind="function"><name>MV_SetMovementTrue</name></member>
+    <member refid="classSensors_1_1Sensors_1a17bd8b2ff819fce13ecfbfbd4f74c0ab" kind="function"><name>MV_SetMovementFalse</name></member>
+    <member refid="classSensors_1_1Sensors_1ac4150d860e2182a70aeb1bbbba371f03" kind="function"><name>MV_GetMovement</name></member>
+    <member refid="classSensors_1_1Sensors_1a4881149a3a797fad4b58e1fea10e8d39" kind="function"><name>PR_GetSensorValueString</name></member>
+    <member refid="classSensors_1_1Sensors_1a633a1ff54564aa6f02093556c0a6b642" kind="function"><name>DHT22_GetSensorValueString</name></member>
+    <member refid="classSensors_1_1Sensors_1af888700f7df3903e91f4aaf4a5c46007" kind="function"><name>DS18B20_GetMACString</name></member>
+    <member refid="classSensors_1_1Sensors_1ae55034345130ef7b24d1f0cc3718c655" kind="function"><name>DS18B20_GetSensorValueString</name></member>
   </compound>
   <compound refid="classserialconnection_1_1SerialConnection" kind="class"><name>serialconnection::SerialConnection</name>
     <member refid="classserialconnection_1_1SerialConnection_1a5b2f2670cc97ed8970dadd829f623d66" kind="variable"><name>ser</name></member>
@@ -314,6 +407,9 @@
     <member refid="classSPI_1a7e28e3328e32b650ead0f7640cee6e81" kind="function"><name>Init</name></member>
     <member refid="classSPI_1ad2c97b15ee0417c355a899c28d2efa5d" kind="function"><name>WriteReadbyte</name></member>
   </compound>
+  <compound refid="classSensorNode_1_1Thread" kind="class"><name>SensorNode::Thread</name>
+    <member refid="classSensorNode_1_1Thread_1aa4c8b015e0df8e9df49892e89fdf13dd" kind="function"><name>__init__</name></member>
+  </compound>
   <compound refid="classUSART" kind="class"><name>USART</name>
     <member refid="classUSART_1adb222c3be48f5a559ed2dd9b4743edda" kind="variable"><name>_BAUD</name></member>
     <member refid="classUSART_1acbd19517b595cf04ff087e040270904f" kind="variable"><name>_UBRR</name></member>
@@ -328,14 +424,25 @@
     <member refid="classUSART_1a42a1789b9a8805da6ed3f4f62f74a764" kind="function"><name>getByte</name></member>
     <member refid="classUSART_1a0103c87dca8c49a1fa9ec607d4d494a9" kind="function"><name>putByte</name></member>
   </compound>
+  <compound refid="namespaceopenhab" kind="namespace"><name>openhab</name>
+  </compound>
   <compound refid="namespacereadsensor" kind="namespace"><name>readsensor</name>
   </compound>
   <compound refid="namespaceSensorNode" kind="namespace"><name>SensorNode</name>
+    <member refid="namespaceSensorNode_1a3016284326d74dfe31b9e2ecfa7fa6df" kind="variable"><name>count</name></member>
+    <member refid="namespaceSensorNode_1a07847a51e8fc73f94d1b5244eabe2926" kind="variable"><name>lock</name></member>
+    <member refid="namespaceSensorNode_1a972db98176c0c5ca50407768608addd0" kind="variable"><name>thr</name></member>
     <member refid="namespaceSensorNode_1a1c06b14e3f48f507247d5b8e0e910f35" kind="variable"><name>app</name></member>
+    <member refid="namespaceSensorNode_1a9ef694aa75e06b802a3ad5f0ef476f6f" kind="function"><name>GetTimeString</name></member>
+    <member refid="namespaceSensorNode_1a12355791e34f3144948a5a6f35a3b2b5" kind="function"><name>UpdateThreads</name></member>
   </compound>
   <compound refid="namespacesensors" kind="namespace"><name>sensors</name>
   </compound>
+  <compound refid="namespaceSensors" kind="namespace"><name>Sensors</name>
+  </compound>
   <compound refid="namespaceserialconnection" kind="namespace"><name>serialconnection</name>
+  </compound>
+  <compound refid="openhab_8py" kind="file"><name>openhab.py</name>
   </compound>
   <compound refid="readsensor_8py" kind="file"><name>readsensor.py</name>
   </compound>
@@ -344,6 +451,20 @@
   <compound refid="sensors_8py" kind="file"><name>sensors.py</name>
   </compound>
   <compound refid="serialconnection_8py" kind="file"><name>serialconnection.py</name>
+  </compound>
+  <compound refid="I2C_8cpp" kind="file"><name>I2C.cpp</name>
+  </compound>
+  <compound refid="I2C_8hpp" kind="file"><name>I2C.hpp</name>
+    <member refid="I2C_8hpp_1a43bafb28b29491ec7f871319b5a3b2f8" kind="define"><name>F_CPU</name></member>
+    <member refid="I2C_8hpp_1ab5c0fbe837494c5f9130a5914854250d" kind="define"><name>I2C_READ</name></member>
+    <member refid="I2C_8hpp_1a9536bf85bced4f4e549a82fb18eb6140" kind="define"><name>I2C_WRITE</name></member>
+    <member refid="I2C_8hpp_1a7a1c522bed64982971384489ee477bd3" kind="define"><name>F_SCL</name></member>
+    <member refid="I2C_8hpp_1a8507c36fb931358ebca2bb6896c0bc09" kind="define"><name>Prescaler</name></member>
+    <member refid="I2C_8hpp_1a290b430572cf8d6c32b9e84171ce7143" kind="define"><name>TWBR_val</name></member>
+  </compound>
+  <compound refid="IO_8cpp" kind="file"><name>IO.cpp</name>
+  </compound>
+  <compound refid="IO_8hpp" kind="file"><name>IO.hpp</name>
   </compound>
   <compound refid="ParseStrings_8cpp" kind="file"><name>ParseStrings.cpp</name>
   </compound>
@@ -377,12 +498,10 @@
     <member refid="main_8cpp_1a836c5fd677da287d2c5fc1b8f8be283e" kind="define"><name>Sensor_Move</name></member>
     <member refid="main_8cpp_1a1302e578dfa4674d460a42d440c505a1" kind="define"><name>Sensor_LightVoltage</name></member>
     <member refid="main_8cpp_1a684578846dbea988173b03a4ccf32bc7" kind="define"><name>Sensor_LightLux</name></member>
-    <member refid="main_8cpp_1a8bf6bf97515b582db8d0e241724566a2" kind="define"><name>Sensor_Pressure</name></member>
+    <member refid="main_8cpp_1aa27be0fec96d7213097669ffc7687167" kind="define"><name>Sensor_BMP180</name></member>
     <member refid="main_8cpp_1a73f3f710edd90106325c0c427e712e60" kind="define"><name>NRF_MainNode</name></member>
     <member refid="main_8cpp_1ade828ec827ef9a6dd7199e6ef25ad134" kind="define"><name>NRF_SN</name></member>
     <member refid="main_8cpp_1a0b139cee69f4fce411cafa9cd3380433" kind="define"><name>NRF_SNnum</name></member>
-    <member refid="main_8cpp_1a8529b711d50e5de54deba7c6b1863d14" kind="variable"><name>uartRX_flag</name></member>
-    <member refid="main_8cpp_1a439ad8ea3b3cc83e6ca8c7625bad49f9" kind="variable"><name>flagMovement</name></member>
     <member refid="main_8cpp_1a4e92ed0235dfab5a966c53305989ecbf" kind="variable"><name>nrfIntFlag</name></member>
     <member refid="main_8cpp_1a557ea16c17e1a3f7a39f32181dc5d531" kind="variable"><name>bufferNRF</name></member>
     <member refid="main_8cpp_1a61b4f384283b1a2ea53ac795896b6a53" kind="variable"><name>firstrun</name></member>
@@ -400,14 +519,11 @@
     <member refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" kind="variable"><name>str</name></member>
     <member refid="main_8cpp_1a1b027732838bd645cecfd35415ecb8c6" kind="variable"><name>adressRx</name></member>
     <member refid="main_8cpp_1aa7192a06e3de8d14ce4345527faaf536" kind="variable"><name>adressTx</name></member>
-    <member refid="main_8cpp_1a4b0f6407730ca2581db1526feda70ea6" kind="variable"><name>uart</name></member>
+    <member refid="main_8cpp_1a5de78d73e194146ea0df32a969c98cc0" kind="variable"><name>iface</name></member>
     <member refid="main_8cpp_1a4d8d5d287d7e4a27644e7c3b83bfcce2" kind="variable"><name>nrf</name></member>
     <member refid="main_8cpp_1aebe9772f1bc160f5bd6e36ec6d174343" kind="variable"><name>ps</name></member>
-    <member refid="main_8cpp_1af23d3ee921f59b64f27b4581ba32eba7" kind="variable"><name>ds</name></member>
-    <member refid="main_8cpp_1a56be6db06a776b7b88ce899534d45d67" kind="variable"><name>pr</name></member>
+    <member refid="main_8cpp_1afae4fba1d9f2de817408b211c6c8b67c" kind="variable"><name>sensors</name></member>
     <member refid="main_8cpp_1aa0dce6d249d81fb85b082273270ba710" kind="function"><name>delay_ms</name></member>
-    <member refid="main_8cpp_1a0cb304e3b4343bd171a793e59ebd5606" kind="function"><name>GetNodeMAC</name></member>
-    <member refid="main_8cpp_1af46bdd771d27528209de39fb63e15b46" kind="function"><name>CreateSensorMAC</name></member>
     <member refid="main_8cpp_1a87e8f767c8e0f0b39062d3b566a97829" kind="function"><name>CreateSensorMAC</name></member>
     <member refid="main_8cpp_1af3f2bf35046819f223de9b818029af1c" kind="function"><name>SetupNRF</name></member>
     <member refid="main_8cpp_1ab6a58c0a49a7211a1bc6185a6f1f605b" kind="function"><name>init_interupt</name></member>
@@ -423,6 +539,105 @@
   <compound refid="BMP180_8cpp" kind="file"><name>BMP180.cpp</name>
   </compound>
   <compound refid="BMP180_8hpp" kind="file"><name>BMP180.hpp</name>
+    <member refid="BMP180_8hpp_1ad668cff49b7688857e73921f67fe6e1b" kind="define"><name>BMP180_I2C_ADDR</name></member>
+    <member refid="BMP180_8hpp_1af04a50240d8c75932bf4729fb95b89b8" kind="define"><name>E_BMP_NULL_PTR</name></member>
+    <member refid="BMP180_8hpp_1abaf12c9360a5167e07e32e1cc76f1b19" kind="define"><name>E_BMP_COMM_RES</name></member>
+    <member refid="BMP180_8hpp_1abb34c5864fd4dfefeda5f84d1d0692a6" kind="define"><name>E_BMP_OUT_OF_RANGE</name></member>
+    <member refid="BMP180_8hpp_1a0b2541dda714686ae536954aaf5c3387" kind="define"><name>BMP180_RETURN_FUNCTION_TYPE</name></member>
+    <member refid="BMP180_8hpp_1aec91741157ae5da3b06f1b5558c9e804" kind="define"><name>BMP180_INIT_VALUE</name></member>
+    <member refid="BMP180_8hpp_1a9818646a9db453e41b1442eeba251e67" kind="define"><name>BMP180_INITIALIZE_OVERSAMP_SETTING_U8X</name></member>
+    <member refid="BMP180_8hpp_1a1731a4d0da9c8eca1a064f79b2c828b8" kind="define"><name>BMP180_INITIALIZE_SW_OVERSAMP_U8X</name></member>
+    <member refid="BMP180_8hpp_1ac9208a7578552f16452075c5a3b0fd06" kind="define"><name>BMP180_INITIALIZE_NUMBER_OF_SAMPLES_U8X</name></member>
+    <member refid="BMP180_8hpp_1aefe14c0103090f8d4b5976dbb3a53af2" kind="define"><name>BMP180_GEN_READ_WRITE_DATA_LENGTH</name></member>
+    <member refid="BMP180_8hpp_1ad96e88c9d3070b400ebab27712e1df79" kind="define"><name>BMP180_TEMPERATURE_DATA_LENGTH</name></member>
+    <member refid="BMP180_8hpp_1ab604fb195c734be810208debc0bfcd99" kind="define"><name>BMP180_PRESSURE_DATA_LENGTH</name></member>
+    <member refid="BMP180_8hpp_1a1dfe583ff745c6214c47408184bde624" kind="define"><name>BMP180_SW_OVERSAMP_U8X</name></member>
+    <member refid="BMP180_8hpp_1af459774ee28cfb538cd08f17585ff394" kind="define"><name>BMP180_OVERSAMP_SETTING_U8X</name></member>
+    <member refid="BMP180_8hpp_1a80f92c90d7f4d60e4d3f4fe4c52e876e" kind="define"><name>BMP180_2MS_DELAY_U8X</name></member>
+    <member refid="BMP180_8hpp_1aacb74302845470d29a2257326095696b" kind="define"><name>BMP180_3MS_DELAY_U8X</name></member>
+    <member refid="BMP180_8hpp_1aa78d0a0991a2ddbb9fbd66667ce55bd1" kind="define"><name>BMP180_AVERAGE_U8X</name></member>
+    <member refid="BMP180_8hpp_1a819977dbbeb071c0bf62c8494f373daf" kind="define"><name>BMP180_INVALID_DATA</name></member>
+    <member refid="BMP180_8hpp_1a14bcdd0c199b6d7cb1dd01e5981d3ca1" kind="define"><name>BMP180_CHECK_DIVISOR</name></member>
+    <member refid="BMP180_8hpp_1a880654f882b7d7dc6ec8c15e47231251" kind="define"><name>BMP180_DATA_MEASURE</name></member>
+    <member refid="BMP180_8hpp_1a00734fa93ec7c7c04b3370f5c4e98de9" kind="define"><name>BMP180_CALCULATE_TRUE_PRESSURE</name></member>
+    <member refid="BMP180_8hpp_1afce1e88950bc0bd739f01b4f09678b5a" kind="define"><name>BMP180_CALCULATE_TRUE_TEMPERATURE</name></member>
+    <member refid="BMP180_8hpp_1a6ef73fdc1ab45e0813a93f17e361d9b2" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_01_BIT</name></member>
+    <member refid="BMP180_8hpp_1a660d3a734e219a49617299a52bf503d8" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_02_BITS</name></member>
+    <member refid="BMP180_8hpp_1afcf00cb84a90469cd2affe034803bccc" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_04_BITS</name></member>
+    <member refid="BMP180_8hpp_1a19129024c0e826db4e65b03017619fc9" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_06_BITS</name></member>
+    <member refid="BMP180_8hpp_1a8f9f6ab90b3fc35d8df2bc1f423513b7" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_08_BITS</name></member>
+    <member refid="BMP180_8hpp_1ae97d5ce9c32107818cb1cadee7e08d6b" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_11_BITS</name></member>
+    <member refid="BMP180_8hpp_1afae522f538b396741fe09b707f6df7ae" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_12_BITS</name></member>
+    <member refid="BMP180_8hpp_1a39d12b3bf4fe21b9ab87e5ca63293a0a" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_13_BITS</name></member>
+    <member refid="BMP180_8hpp_1a3bd16520470bfb7f28d9d3b09519246b" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_15_BITS</name></member>
+    <member refid="BMP180_8hpp_1a5a695b4bac3f3415c84ccbe25eafae55" kind="define"><name>BMP180_SHIFT_BIT_POSITION_BY_16_BITS</name></member>
+    <member refid="BMP180_8hpp_1aae9dcd153a483f9b55fee66e46e55215" kind="define"><name>BMP180_PROM_START__ADDR</name></member>
+    <member refid="BMP180_8hpp_1a864467e0bf3ce8f5913b772f720c666a" kind="define"><name>BMP180_PROM_DATA__LEN</name></member>
+    <member refid="BMP180_8hpp_1ad5beba6e424ba56b2dddaffaf427138a" kind="define"><name>BMP180_CHIP_ID_REG</name></member>
+    <member refid="BMP180_8hpp_1a66aebdbb8ff129d30b1412579a0b340c" kind="define"><name>BMP180_VERSION_REG</name></member>
+    <member refid="BMP180_8hpp_1ab2bd49ee6d3f26126c5cc01b4a5e1192" kind="define"><name>BMP180_CTRL_MEAS_REG</name></member>
+    <member refid="BMP180_8hpp_1a29580a04b1219dbb55b3341bf24a4ce7" kind="define"><name>BMP180_ADC_OUT_MSB_REG</name></member>
+    <member refid="BMP180_8hpp_1a62dfda70d87fbbca20bb167bd4acff4c" kind="define"><name>BMP180_ADC_OUT_LSB_REG</name></member>
+    <member refid="BMP180_8hpp_1a2ae64f3da794401ea2249932fd92e396" kind="define"><name>BMP180_SOFT_RESET_REG</name></member>
+    <member refid="BMP180_8hpp_1a981fc4d0873b0aa2e8e81b673b78e182" kind="define"><name>BMP180_T_MEASURE</name></member>
+    <member refid="BMP180_8hpp_1a750a3efd27f418b085813a55e9835659" kind="define"><name>BMP180_P_MEASURE</name></member>
+    <member refid="BMP180_8hpp_1a64142b951dd5038273d171e75a92bf44" kind="define"><name>BMP180_TEMP_CONVERSION_TIME</name></member>
+    <member refid="BMP180_8hpp_1af0585656c25b2652e25a1ab60f579247" kind="define"><name>BMP180_PARAM_MG</name></member>
+    <member refid="BMP180_8hpp_1a318760ad4869a9da5864ce6e202bba25" kind="define"><name>BMP180_PARAM_MH</name></member>
+    <member refid="BMP180_8hpp_1a788f1e53260ff41658069d07c84e04c1" kind="define"><name>BMP180_PARAM_MI</name></member>
+    <member refid="BMP180_8hpp_1a5e37fe64ea4d3df3cbc74dc2252d1799" kind="define"><name>BMP180_TEMPERATURE_DATA_BYTES</name></member>
+    <member refid="BMP180_8hpp_1afde813116043db05684aec4c882ef72b" kind="define"><name>BMP180_PRESSURE_DATA_BYTES</name></member>
+    <member refid="BMP180_8hpp_1ac3c5e002d22156752dab103a84894a91" kind="define"><name>BMP180_TEMPERATURE_LSB_DATA</name></member>
+    <member refid="BMP180_8hpp_1a318e4b8c649cb1191b1e32f812e973a9" kind="define"><name>BMP180_TEMPERATURE_MSB_DATA</name></member>
+    <member refid="BMP180_8hpp_1ad6b416924b21cf8c65d07ecdc943e366" kind="define"><name>BMP180_PRESSURE_MSB_DATA</name></member>
+    <member refid="BMP180_8hpp_1af62c5810a7ce223732c0bfe4cdf6ac39" kind="define"><name>BMP180_PRESSURE_LSB_DATA</name></member>
+    <member refid="BMP180_8hpp_1a2c5796a9889c9f6b52cdd6f6849d6e75" kind="define"><name>BMP180_PRESSURE_XLSB_DATA</name></member>
+    <member refid="BMP180_8hpp_1a45bdfa6d9d7d0cd755e19f73f2dc8b50" kind="define"><name>BMP180_CALIB_DATA_SIZE</name></member>
+    <member refid="BMP180_8hpp_1a39e64257dddcc6853c0b37c7eb452431" kind="define"><name>BMP180_CALIB_PARAM_AC1_MSB</name></member>
+    <member refid="BMP180_8hpp_1ac0dddf978225be0576d56bf325dbd65b" kind="define"><name>BMP180_CALIB_PARAM_AC1_LSB</name></member>
+    <member refid="BMP180_8hpp_1a45b13027666ff588d4e0ea25a0b7e5de" kind="define"><name>BMP180_CALIB_PARAM_AC2_MSB</name></member>
+    <member refid="BMP180_8hpp_1a44c89211983078d4d29df65a90cecfd7" kind="define"><name>BMP180_CALIB_PARAM_AC2_LSB</name></member>
+    <member refid="BMP180_8hpp_1ad7ba1882b02203a13e798fc610c08e8b" kind="define"><name>BMP180_CALIB_PARAM_AC3_MSB</name></member>
+    <member refid="BMP180_8hpp_1a304cdb889839a99363936553b0ec1d0b" kind="define"><name>BMP180_CALIB_PARAM_AC3_LSB</name></member>
+    <member refid="BMP180_8hpp_1a17c8ba1b4a61d5ab9d4f13b06c81ccbd" kind="define"><name>BMP180_CALIB_PARAM_AC4_MSB</name></member>
+    <member refid="BMP180_8hpp_1a38bba8ad36653ba3fbabff5c7c921294" kind="define"><name>BMP180_CALIB_PARAM_AC4_LSB</name></member>
+    <member refid="BMP180_8hpp_1ac973ad7edc5e8470da8001d0bef6d6fd" kind="define"><name>BMP180_CALIB_PARAM_AC5_MSB</name></member>
+    <member refid="BMP180_8hpp_1ad47bb58cca0ed07df864e6078c4e8db9" kind="define"><name>BMP180_CALIB_PARAM_AC5_LSB</name></member>
+    <member refid="BMP180_8hpp_1ae14dd74542602653319571c69d5edfec" kind="define"><name>BMP180_CALIB_PARAM_AC6_MSB</name></member>
+    <member refid="BMP180_8hpp_1a3d88f5bed7114e516780150aba8434ab" kind="define"><name>BMP180_CALIB_PARAM_AC6_LSB</name></member>
+    <member refid="BMP180_8hpp_1afed57e0c81c090ec16a4eba681e60b63" kind="define"><name>BMP180_CALIB_PARAM_B1_MSB</name></member>
+    <member refid="BMP180_8hpp_1af6c60f2ca0d25e1bedc43511d6b15658" kind="define"><name>BMP180_CALIB_PARAM_B1_LSB</name></member>
+    <member refid="BMP180_8hpp_1a7b96056467ac2826714e9a95c4995f4a" kind="define"><name>BMP180_CALIB_PARAM_B2_MSB</name></member>
+    <member refid="BMP180_8hpp_1a7ca62ccf1b54fc51026c96dcbba8776e" kind="define"><name>BMP180_CALIB_PARAM_B2_LSB</name></member>
+    <member refid="BMP180_8hpp_1a5d53ece45a69f1a924b529915f46c295" kind="define"><name>BMP180_CALIB_PARAM_MB_MSB</name></member>
+    <member refid="BMP180_8hpp_1a133c7d4adaaf1b3947ac1faa0ed368c9" kind="define"><name>BMP180_CALIB_PARAM_MB_LSB</name></member>
+    <member refid="BMP180_8hpp_1a6c8321b858deb498a709d4bccf89a502" kind="define"><name>BMP180_CALIB_PARAM_MC_MSB</name></member>
+    <member refid="BMP180_8hpp_1aba8f243a128c4213e02bbfaaf071741c" kind="define"><name>BMP180_CALIB_PARAM_MC_LSB</name></member>
+    <member refid="BMP180_8hpp_1ada2dde5c9f08995ce361d7a90ddfc6a2" kind="define"><name>BMP180_CALIB_PARAM_MD_MSB</name></member>
+    <member refid="BMP180_8hpp_1a3bb56114540128ef597fb04ca7722a2e" kind="define"><name>BMP180_CALIB_PARAM_MD_LSB</name></member>
+    <member refid="BMP180_8hpp_1a3b56a17531818d126c7acad8067182a4" kind="define"><name>BMP180_CHIP_ID__POS</name></member>
+    <member refid="BMP180_8hpp_1a168dc897ce5d32989da523d49bfa7964" kind="define"><name>BMP180_CHIP_ID__MSK</name></member>
+    <member refid="BMP180_8hpp_1a8e81ee53ed255cfbec05d4d781c60a16" kind="define"><name>BMP180_CHIP_ID__LEN</name></member>
+    <member refid="BMP180_8hpp_1a6125d3bc40494582fd50ebcd3f42ecd5" kind="define"><name>BMP180_CHIP_ID__REG</name></member>
+    <member refid="BMP180_8hpp_1a74a96faedb454d800d35bee00e1c72ab" kind="define"><name>BMP180_ML_VERSION__POS</name></member>
+    <member refid="BMP180_8hpp_1a1632ff899bf24a8b3dddbbf3ea0c9342" kind="define"><name>BMP180_ML_VERSION__LEN</name></member>
+    <member refid="BMP180_8hpp_1a3b258767949daae20afe836f47070bef" kind="define"><name>BMP180_ML_VERSION__MSK</name></member>
+    <member refid="BMP180_8hpp_1aefa3e380b95b1d7bc681c90e4d49aca5" kind="define"><name>BMP180_ML_VERSION__REG</name></member>
+    <member refid="BMP180_8hpp_1a7ecaf88098287f008b364ee7eca7d0f7" kind="define"><name>BMP180_AL_VERSION__POS</name></member>
+    <member refid="BMP180_8hpp_1a9bfc3bf191bb3ce02ea9aa4364bc2091" kind="define"><name>BMP180_AL_VERSION__LEN</name></member>
+    <member refid="BMP180_8hpp_1ac0f026640da01c5921b9a1c6743c4c23" kind="define"><name>BMP180_AL_VERSION__MSK</name></member>
+    <member refid="BMP180_8hpp_1a4e01df7b153652ae440bfbffbe72da6c" kind="define"><name>BMP180_AL_VERSION__REG</name></member>
+    <member refid="BMP180_8hpp_1a26aca2ea1b03a88992a676e268c4a863" kind="define"><name>BMP180_GET_BITSLICE</name></member>
+    <member refid="BMP180_8hpp_1a09ad4542a757613599d835155eb8eeca" kind="define"><name>BMP180_SET_BITSLICE</name></member>
+    <member refid="BMP180_8hpp_1a41a86f515b1a9c1fdd9b74a2a307be08" kind="define"><name>BMP180_MDELAY_DATA_TYPE</name></member>
+    <member refid="BMP180_8hpp_1a92c50087ca0e64fa93fc59402c55f8ca" kind="typedef"><name>u8</name></member>
+    <member refid="BMP180_8hpp_1ace9d960e74685e2cd84b36132dbbf8aa" kind="typedef"><name>u16</name></member>
+    <member refid="BMP180_8hpp_1afaa62991928fb9fb18ff0db62a040aba" kind="typedef"><name>u32</name></member>
+    <member refid="BMP180_8hpp_1a3f7e2bcbb0b4c338f3c4f6c937cd4234" kind="typedef"><name>u64</name></member>
+    <member refid="BMP180_8hpp_1a9e382f207c65ca13ab4ae98363aeda80" kind="typedef"><name>s8</name></member>
+    <member refid="BMP180_8hpp_1aa980e2c02ba2305e0f489d5650655425" kind="typedef"><name>s16</name></member>
+    <member refid="BMP180_8hpp_1ae9b1af5c037e57a98884758875d3a7c4" kind="typedef"><name>s32</name></member>
+    <member refid="BMP180_8hpp_1a350c6fc928e3bdc6c6486268ac8fb269" kind="typedef"><name>s64</name></member>
   </compound>
   <compound refid="DHT22_8cpp" kind="file"><name>DHT22.cpp</name>
   </compound>
@@ -457,6 +672,10 @@
   <compound refid="Photoresistor_8cpp" kind="file"><name>Photoresistor.cpp</name>
   </compound>
   <compound refid="Photoresistor_8h" kind="file"><name>Photoresistor.h</name>
+  </compound>
+  <compound refid="Sensors_8cpp" kind="file"><name>Sensors.cpp</name>
+  </compound>
+  <compound refid="Sensors_8hpp" kind="file"><name>Sensors.hpp</name>
   </compound>
   <compound refid="NRF24L01_8cpp" kind="file"><name>NRF24L01.cpp</name>
     <member refid="NRF24L01_8cpp_1abb144610c9204c33a16ac68ac76d2a43" kind="variable"><name>PROGMEM</name></member>
@@ -592,6 +811,8 @@
   <compound refid="md_Python_README" kind="page"><name>md_Python_README</name>
   </compound>
   <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+  <compound refid="dir_d267ff74786ba7faf6213aab30368589" kind="dir"><name>src/Sensors/deactivated</name>
   </compound>
   <compound refid="dir_fae119eb913a40fe8ed97cde8b98911e" kind="dir"><name>src/IO</name>
   </compound>

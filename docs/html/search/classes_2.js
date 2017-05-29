@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lightanalog',['LightAnalog',['../classsensors_1_1LightAnalog.html',1,'sensors']]],
-  ['lightdigital',['LightDigital',['../classsensors_1_1LightDigital.html',1,'sensors']]]
+  ['i2c',['I2C',['../classI2C.html',1,'']]],
+  ['io',['IO',['../classIO.html',1,'']]]
 ];

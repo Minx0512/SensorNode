@@ -1,0 +1,192 @@
+\hypertarget{classSensors_1_1Sensors}{}\section{Sensors\+:\+:Sensors Class Reference}
+\label{classSensors_1_1Sensors}\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+
+
+{\ttfamily \#include $<$Sensors.\+hpp$>$}
+
+
+
+Collaboration diagram for Sensors\+:\+:Sensors\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSensors_1_1Sensors__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSensors_1_1Sensors_ac30fb5f0365448e41bb452884d7a3a83}{Sensors} ()
+\item 
+void \hyperlink{classSensors_1_1Sensors_a266e3c68574f125f214528c267723a3d}{Init\+Sensors} (void)
+\item 
+void \hyperlink{classSensors_1_1Sensors_adf426a126fdf97ab46e8816bea9fc38a}{M\+V\+\_\+\+Set\+Movement\+True} ()
+\begin{DoxyCompactList}\small\item\em Set movement flag. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1Sensors_a17bd8b2ff819fce13ecfbfbd4f74c0ab}{M\+V\+\_\+\+Set\+Movement\+False} ()
+\begin{DoxyCompactList}\small\item\em Set movement flag. \end{DoxyCompactList}\item 
+bool \hyperlink{classSensors_1_1Sensors_ac4150d860e2182a70aeb1bbbba371f03}{M\+V\+\_\+\+Get\+Movement} ()
+\begin{DoxyCompactList}\small\item\em Get movement. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1Sensors_a4881149a3a797fad4b58e1fea10e8d39}{P\+R\+\_\+\+Get\+Sensor\+Value\+String} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Get sensor value. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1Sensors_a633a1ff54564aa6f02093556c0a6b642}{D\+H\+T22\+\_\+\+Get\+Sensor\+Value\+String} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Get sensor value. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1Sensors_af888700f7df3903e91f4aaf4a5c46007}{D\+S18\+B20\+\_\+\+Get\+M\+A\+C\+String} (char $\ast$M\+A\+C\+String\+Out)
+\begin{DoxyCompactList}\small\item\em Get M\+AC addresses from M\+A\+C\+String. \end{DoxyCompactList}\item 
+void \hyperlink{classSensors_1_1Sensors_ae55034345130ef7b24d1f0cc3718c655}{D\+S18\+B20\+\_\+\+Get\+Sensor\+Value\+String} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Get xml style sensor string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSensors_1_1DHT22}{D\+H\+T22} \hyperlink{classSensors_1_1Sensors_a314fc192a99b64c4679670dcc815eee6}{dht22}
+\item 
+\hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} \hyperlink{classSensors_1_1Sensors_a5636b26f9866b438dd8a5b939f415146}{ds18b20}
+\item 
+\hyperlink{classSensors_1_1Photoresistor}{Photoresistor} \hyperlink{classSensors_1_1Sensors_a6f8be7ead5ea5f1d116273510879c7cf}{pr}
+\item 
+bool \hyperlink{classSensors_1_1Sensors_a04531cb6b01facf58e40cc4263e0904f}{movement}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!Sensors@{Sensors}}
+\index{Sensors@{Sensors}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{Sensors()}{Sensors()}}]{\setlength{\rightskip}{0pt plus 5cm}Sensors\+::\+Sensors\+::\+Sensors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Sensors_ac30fb5f0365448e41bb452884d7a3a83}{}\label{classSensors_1_1Sensors_ac30fb5f0365448e41bb452884d7a3a83}
+$<$ Create new \hyperlink{classSensors_1_1DS18B20}{D\+S18\+B20} object connected to pin P\+D6
+
+$<$ Create new \hyperlink{classSensors_1_1DHT22}{D\+H\+T22} object connected to pin P\+D7
+
+$<$ Create new Photoresitor object connected to the analog output 0x00 
+
+\subsection{Member Function Documentation}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!D\+H\+T22\+\_\+\+Get\+Sensor\+Value\+String@{D\+H\+T22\+\_\+\+Get\+Sensor\+Value\+String}}
+\index{D\+H\+T22\+\_\+\+Get\+Sensor\+Value\+String@{D\+H\+T22\+\_\+\+Get\+Sensor\+Value\+String}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{D\+H\+T22\+\_\+\+Get\+Sensor\+Value\+String(char $\ast$string)}{DHT22_GetSensorValueString(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Sensors\+::\+D\+H\+T22\+\_\+\+Get\+Sensor\+Value\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Sensors_a633a1ff54564aa6f02093556c0a6b642}{}\label{classSensors_1_1Sensors_a633a1ff54564aa6f02093556c0a6b642}
+
+
+Get sensor value. 
+
+Returns a character array with the average Sensor value of 1000 measurements and adds a $\vert$ to the end of it. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & \\
+\hline
+\end{DoxyParams}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!D\+S18\+B20\+\_\+\+Get\+M\+A\+C\+String@{D\+S18\+B20\+\_\+\+Get\+M\+A\+C\+String}}
+\index{D\+S18\+B20\+\_\+\+Get\+M\+A\+C\+String@{D\+S18\+B20\+\_\+\+Get\+M\+A\+C\+String}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{D\+S18\+B20\+\_\+\+Get\+M\+A\+C\+String(char $\ast$\+M\+A\+C\+String\+Out)}{DS18B20_GetMACString(char *MACStringOut)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Sensors\+::\+D\+S18\+B20\+\_\+\+Get\+M\+A\+C\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{M\+A\+C\+String\+Out}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Sensors_af888700f7df3903e91f4aaf4a5c46007}{}\label{classSensors_1_1Sensors_af888700f7df3903e91f4aaf4a5c46007}
+
+
+Get M\+AC addresses from M\+A\+C\+String. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em M\+A\+C\+String\+Out} & Character array of M\+AC addresses \\
+\hline
+\end{DoxyParams}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!D\+S18\+B20\+\_\+\+Get\+Sensor\+Value\+String@{D\+S18\+B20\+\_\+\+Get\+Sensor\+Value\+String}}
+\index{D\+S18\+B20\+\_\+\+Get\+Sensor\+Value\+String@{D\+S18\+B20\+\_\+\+Get\+Sensor\+Value\+String}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{D\+S18\+B20\+\_\+\+Get\+Sensor\+Value\+String(char $\ast$string)}{DS18B20_GetSensorValueString(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Sensors\+::\+D\+S18\+B20\+\_\+\+Get\+Sensor\+Value\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Sensors_ae55034345130ef7b24d1f0cc3718c655}{}\label{classSensors_1_1Sensors_ae55034345130ef7b24d1f0cc3718c655}
+
+
+Get xml style sensor string. 
+
+Puts out one string with the temperature values 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & X\+ML style sensor string \\
+\hline
+\end{DoxyParams}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!Init\+Sensors@{Init\+Sensors}}
+\index{Init\+Sensors@{Init\+Sensors}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{Init\+Sensors(void)}{InitSensors(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Sensors\+::\+Init\+Sensors (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Sensors_a266e3c68574f125f214528c267723a3d}{}\label{classSensors_1_1Sensors_a266e3c68574f125f214528c267723a3d}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!M\+V\+\_\+\+Get\+Movement@{M\+V\+\_\+\+Get\+Movement}}
+\index{M\+V\+\_\+\+Get\+Movement@{M\+V\+\_\+\+Get\+Movement}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{M\+V\+\_\+\+Get\+Movement()}{MV_GetMovement()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sensors\+::\+Sensors\+::\+M\+V\+\_\+\+Get\+Movement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Sensors_ac4150d860e2182a70aeb1bbbba371f03}{}\label{classSensors_1_1Sensors_ac4150d860e2182a70aeb1bbbba371f03}
+
+
+Get movement. 
+
+Returns true or false depending if movement was detected or not. \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!M\+V\+\_\+\+Set\+Movement\+False@{M\+V\+\_\+\+Set\+Movement\+False}}
+\index{M\+V\+\_\+\+Set\+Movement\+False@{M\+V\+\_\+\+Set\+Movement\+False}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{M\+V\+\_\+\+Set\+Movement\+False()}{MV_SetMovementFalse()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Sensors\+::\+M\+V\+\_\+\+Set\+Movement\+False (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Sensors_a17bd8b2ff819fce13ecfbfbd4f74c0ab}{}\label{classSensors_1_1Sensors_a17bd8b2ff819fce13ecfbfbd4f74c0ab}
+
+
+Set movement flag. 
+
+Reset movement flag to false.. \index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!M\+V\+\_\+\+Set\+Movement\+True@{M\+V\+\_\+\+Set\+Movement\+True}}
+\index{M\+V\+\_\+\+Set\+Movement\+True@{M\+V\+\_\+\+Set\+Movement\+True}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{M\+V\+\_\+\+Set\+Movement\+True()}{MV_SetMovementTrue()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Sensors\+::\+M\+V\+\_\+\+Set\+Movement\+True (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Sensors_adf426a126fdf97ab46e8816bea9fc38a}{}\label{classSensors_1_1Sensors_adf426a126fdf97ab46e8816bea9fc38a}
+
+
+Set movement flag. 
+
+Set movement flag to true \index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!P\+R\+\_\+\+Get\+Sensor\+Value\+String@{P\+R\+\_\+\+Get\+Sensor\+Value\+String}}
+\index{P\+R\+\_\+\+Get\+Sensor\+Value\+String@{P\+R\+\_\+\+Get\+Sensor\+Value\+String}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{P\+R\+\_\+\+Get\+Sensor\+Value\+String(char $\ast$string)}{PR_GetSensorValueString(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sensors\+::\+Sensors\+::\+P\+R\+\_\+\+Get\+Sensor\+Value\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classSensors_1_1Sensors_a4881149a3a797fad4b58e1fea10e8d39}{}\label{classSensors_1_1Sensors_a4881149a3a797fad4b58e1fea10e8d39}
+
+
+Get sensor value. 
+
+Returns a character array with the average Sensor value of 1000 measurements and adds a $\vert$ to the end of it. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em string} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!dht22@{dht22}}
+\index{dht22@{dht22}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{dht22}{dht22}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+H\+T22} Sensors\+::\+Sensors\+::dht22\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1Sensors_a314fc192a99b64c4679670dcc815eee6}{}\label{classSensors_1_1Sensors_a314fc192a99b64c4679670dcc815eee6}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!ds18b20@{ds18b20}}
+\index{ds18b20@{ds18b20}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{ds18b20}{ds18b20}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+S18\+B20} Sensors\+::\+Sensors\+::ds18b20\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1Sensors_a5636b26f9866b438dd8a5b939f415146}{}\label{classSensors_1_1Sensors_a5636b26f9866b438dd8a5b939f415146}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!movement@{movement}}
+\index{movement@{movement}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{movement}{movement}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sensors\+::\+Sensors\+::movement\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1Sensors_a04531cb6b01facf58e40cc4263e0904f}{}\label{classSensors_1_1Sensors_a04531cb6b01facf58e40cc4263e0904f}
+\index{Sensors\+::\+Sensors@{Sensors\+::\+Sensors}!pr@{pr}}
+\index{pr@{pr}!Sensors\+::\+Sensors@{Sensors\+::\+Sensors}}
+\subsubsection[{\texorpdfstring{pr}{pr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Photoresistor} Sensors\+::\+Sensors\+::pr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classSensors_1_1Sensors_a6f8be7ead5ea5f1d116273510879c7cf}{}\label{classSensors_1_1Sensors_a6f8be7ead5ea5f1d116273510879c7cf}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sensors/\hyperlink{Sensors_8hpp}{Sensors.\+hpp}\item 
+src/\+Sensors/\hyperlink{Sensors_8cpp}{Sensors.\+cpp}\end{DoxyCompactItemize}

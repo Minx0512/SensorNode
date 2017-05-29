@@ -1,0 +1,174 @@
+\hypertarget{classI2C}{}\section{I2C Class Reference}
+\label{classI2C}\index{I2C@{I2C}}
+
+
+{\ttfamily \#include $<$I2\+C.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classI2C_a7a9a84fccdacb3346ff97d6f3e158850}{I2C} ()
+\item 
+void \hyperlink{classI2C_ab6cd0165be5e59dfe57976f1ae4325ec}{Init} (void)
+\item 
+uint8\+\_\+t \hyperlink{classI2C_a2d89860048673ed968d218a749080916}{Start} (uint8\+\_\+t address)
+\item 
+uint8\+\_\+t \hyperlink{classI2C_aa18dde601c811e06dda1be29c139dd83}{Write} (uint8\+\_\+t data)
+\item 
+uint8\+\_\+t \hyperlink{classI2C_aa538a5b392f83063c3d484ec35cf1bcd}{Read\+\_\+ack} (void)
+\item 
+uint8\+\_\+t \hyperlink{classI2C_af40aac783e94fcfcd1f9c8cbfe1eeb37}{Read\+\_\+nack} (void)
+\item 
+uint8\+\_\+t \hyperlink{classI2C_a9eb58b51adaedc941abf120c4df3c481}{Transmit} (uint8\+\_\+t address, uint8\+\_\+t $\ast$data, uint16\+\_\+t length)
+\item 
+uint8\+\_\+t \hyperlink{classI2C_ad0c64a4e373b4015647a11c298af4d47}{Receive} (uint8\+\_\+t address, uint8\+\_\+t $\ast$data, uint16\+\_\+t length)
+\item 
+uint8\+\_\+t \hyperlink{classI2C_a4f7e7e3bb2527b721f370ec88011b401}{Write\+Reg} (uint8\+\_\+t devaddr, uint8\+\_\+t regaddr, uint8\+\_\+t $\ast$data, uint16\+\_\+t length)
+\item 
+uint8\+\_\+t \hyperlink{classI2C_aee4e012db3dc019536ad3da5632cc04a}{Read\+Reg} (uint8\+\_\+t devaddr, uint8\+\_\+t regaddr, uint8\+\_\+t $\ast$data, uint16\+\_\+t length)
+\item 
+void \hyperlink{classI2C_a5d3e0b1de395932284e2e010a0160b5f}{Stop} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{I2C@{I2C}!I2C@{I2C}}
+\index{I2C@{I2C}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{I2\+C()}{I2C()}}]{\setlength{\rightskip}{0pt plus 5cm}I2\+C\+::\+I2C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_a7a9a84fccdacb3346ff97d6f3e158850}{}\label{classI2C_a7a9a84fccdacb3346ff97d6f3e158850}
+
+
+\subsection{Member Function Documentation}
+\index{I2C@{I2C}!Init@{Init}}
+\index{Init@{Init}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Init(void)}{Init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void I2\+C\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_ab6cd0165be5e59dfe57976f1ae4325ec}{}\label{classI2C_ab6cd0165be5e59dfe57976f1ae4325ec}
+\index{I2C@{I2C}!Read\+\_\+ack@{Read\+\_\+ack}}
+\index{Read\+\_\+ack@{Read\+\_\+ack}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Read\+\_\+ack(void)}{Read_ack(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+::\+Read\+\_\+ack (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_aa538a5b392f83063c3d484ec35cf1bcd}{}\label{classI2C_aa538a5b392f83063c3d484ec35cf1bcd}
+\index{I2C@{I2C}!Read\+\_\+nack@{Read\+\_\+nack}}
+\index{Read\+\_\+nack@{Read\+\_\+nack}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Read\+\_\+nack(void)}{Read_nack(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+::\+Read\+\_\+nack (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_af40aac783e94fcfcd1f9c8cbfe1eeb37}{}\label{classI2C_af40aac783e94fcfcd1f9c8cbfe1eeb37}
+\index{I2C@{I2C}!Read\+Reg@{Read\+Reg}}
+\index{Read\+Reg@{Read\+Reg}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Read\+Reg(uint8\+\_\+t devaddr, uint8\+\_\+t regaddr, uint8\+\_\+t $\ast$data, uint16\+\_\+t length)}{ReadReg(uint8_t devaddr, uint8_t regaddr, uint8_t *data, uint16_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+::\+Read\+Reg (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{devaddr, }
+\item[{uint8\+\_\+t}]{regaddr, }
+\item[{uint8\+\_\+t $\ast$}]{data, }
+\item[{uint16\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_aee4e012db3dc019536ad3da5632cc04a}{}\label{classI2C_aee4e012db3dc019536ad3da5632cc04a}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classI2C_aee4e012db3dc019536ad3da5632cc04a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{I2C@{I2C}!Receive@{Receive}}
+\index{Receive@{Receive}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Receive(uint8\+\_\+t address, uint8\+\_\+t $\ast$data, uint16\+\_\+t length)}{Receive(uint8_t address, uint8_t *data, uint16_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+::\+Receive (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{address, }
+\item[{uint8\+\_\+t $\ast$}]{data, }
+\item[{uint16\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_ad0c64a4e373b4015647a11c298af4d47}{}\label{classI2C_ad0c64a4e373b4015647a11c298af4d47}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classI2C_ad0c64a4e373b4015647a11c298af4d47_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{I2C@{I2C}!Start@{Start}}
+\index{Start@{Start}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Start(uint8\+\_\+t address)}{Start(uint8_t address)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+::\+Start (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_a2d89860048673ed968d218a749080916}{}\label{classI2C_a2d89860048673ed968d218a749080916}
+\index{I2C@{I2C}!Stop@{Stop}}
+\index{Stop@{Stop}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Stop(void)}{Stop(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void I2\+C\+::\+Stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_a5d3e0b1de395932284e2e010a0160b5f}{}\label{classI2C_a5d3e0b1de395932284e2e010a0160b5f}
+\index{I2C@{I2C}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Transmit(uint8\+\_\+t address, uint8\+\_\+t $\ast$data, uint16\+\_\+t length)}{Transmit(uint8_t address, uint8_t *data, uint16_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+::\+Transmit (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{address, }
+\item[{uint8\+\_\+t $\ast$}]{data, }
+\item[{uint16\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_a9eb58b51adaedc941abf120c4df3c481}{}\label{classI2C_a9eb58b51adaedc941abf120c4df3c481}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classI2C_a9eb58b51adaedc941abf120c4df3c481_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{I2C@{I2C}!Write@{Write}}
+\index{Write@{Write}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Write(uint8\+\_\+t data)}{Write(uint8_t data)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+::\+Write (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_aa18dde601c811e06dda1be29c139dd83}{}\label{classI2C_aa18dde601c811e06dda1be29c139dd83}
+\index{I2C@{I2C}!Write\+Reg@{Write\+Reg}}
+\index{Write\+Reg@{Write\+Reg}!I2C@{I2C}}
+\subsubsection[{\texorpdfstring{Write\+Reg(uint8\+\_\+t devaddr, uint8\+\_\+t regaddr, uint8\+\_\+t $\ast$data, uint16\+\_\+t length)}{WriteReg(uint8_t devaddr, uint8_t regaddr, uint8_t *data, uint16_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t I2\+C\+::\+Write\+Reg (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{devaddr, }
+\item[{uint8\+\_\+t}]{regaddr, }
+\item[{uint8\+\_\+t $\ast$}]{data, }
+\item[{uint16\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{classI2C_a4f7e7e3bb2527b721f370ec88011b401}{}\label{classI2C_a4f7e7e3bb2527b721f370ec88011b401}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classI2C_a4f7e7e3bb2527b721f370ec88011b401_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+I\+O/\hyperlink{I2C_8hpp}{I2\+C.\+hpp}\item 
+src/\+I\+O/\hyperlink{I2C_8cpp}{I2\+C.\+cpp}\end{DoxyCompactItemize}

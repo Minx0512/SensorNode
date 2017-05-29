@@ -1,3 +1,6 @@
 <map id="NRF24L01" name="NRF24L01">
-<area shape="rect" id="node2" href="$classSPI.html" title="SPI class definition. " alt="" coords="26,5,70,32"/>
+<area shape="rect" id="node2" href="$classIO.html" title="IO" alt="" coords="100,95,139,121"/>
+<area shape="rect" id="node3" href="$classUSART.html" title="USART class definition. " alt="" coords="5,5,73,32"/>
+<area shape="rect" id="node4" href="$classI2C.html" title="I2C" alt="" coords="98,5,141,32"/>
+<area shape="rect" id="node5" href="$classSPI.html" title="SPI class definition. " alt="" coords="165,5,209,32"/>
 </map>

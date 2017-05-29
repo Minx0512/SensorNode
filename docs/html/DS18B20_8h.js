@@ -1,6 +1,6 @@
 var DS18B20_8h =
 [
-    [ "DS18B20", "classDS18B20.html", "classDS18B20" ],
+    [ "DS18B20", "classSensors_1_1DS18B20.html", "classSensors_1_1DS18B20" ],
     [ "DATA_ERR", "DS18B20_8h.html#a1ed8ed33743473a38141862212eeb93f", null ],
     [ "FOSC", "DS18B20_8h.html#a802b2b582b121e4632aa9a491d503720", null ],
     [ "LAST_DEVICE", "DS18B20_8h.html#a42de6aa1135578f9ed5abd25930b1ad5", null ],

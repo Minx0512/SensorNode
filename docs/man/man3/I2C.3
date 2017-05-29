@@ -1,0 +1,77 @@
+.TH "I2C" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+I2C \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <I2C\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBI2C\fP ()"
+.br
+.ti -1c
+.RI "void \fBInit\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBStart\fP (uint8_t address)"
+.br
+.ti -1c
+.RI "uint8_t \fBWrite\fP (uint8_t data)"
+.br
+.ti -1c
+.RI "uint8_t \fBRead_ack\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBRead_nack\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBTransmit\fP (uint8_t address, uint8_t *data, uint16_t length)"
+.br
+.ti -1c
+.RI "uint8_t \fBReceive\fP (uint8_t address, uint8_t *data, uint16_t length)"
+.br
+.ti -1c
+.RI "uint8_t \fBWriteReg\fP (uint8_t devaddr, uint8_t regaddr, uint8_t *data, uint16_t length)"
+.br
+.ti -1c
+.RI "uint8_t \fBReadReg\fP (uint8_t devaddr, uint8_t regaddr, uint8_t *data, uint16_t length)"
+.br
+.ti -1c
+.RI "void \fBStop\fP (void)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "I2C::I2C ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void I2C::Init (void)"
+
+.SS "uint8_t I2C::Read_ack (void)"
+
+.SS "uint8_t I2C::Read_nack (void)"
+
+.SS "uint8_t I2C::ReadReg (uint8_t devaddr, uint8_t regaddr, uint8_t * data, uint16_t length)"
+
+.SS "uint8_t I2C::Receive (uint8_t address, uint8_t * data, uint16_t length)"
+
+.SS "uint8_t I2C::Start (uint8_t address)"
+
+.SS "void I2C::Stop (void)"
+
+.SS "uint8_t I2C::Transmit (uint8_t address, uint8_t * data, uint16_t length)"
+
+.SS "uint8_t I2C::Write (uint8_t data)"
+
+.SS "uint8_t I2C::WriteReg (uint8_t devaddr, uint8_t regaddr, uint8_t * data, uint16_t length)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SensorNode from the source code\&.

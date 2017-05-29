@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classSensors_1_1Photoresistor" kind="class" language="C++" prot="public">
+    <compoundname>Sensors::Photoresistor</compoundname>
+    <includes refid="Photoresistor_8h" local="no">Photoresistor.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSensors_1_1Photoresistor_1abdd598255c0051cbc8db8a457cd29dc8" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sensors::Photoresistor::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Light detector type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Photoresistor.h" line="36" column="1" bodyfile="src/Sensors/Photoresistor.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSensors_1_1Photoresistor_1a43797415ff86174f92b44e69046e3de7" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sensors::Photoresistor::ADPort</definition>
+        <argsstring></argsstring>
+        <name>ADPort</name>
+        <briefdescription>
+<para>Analog/Digital converter port. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Photoresistor.h" line="38" column="1" bodyfile="src/Sensors/Photoresistor.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSensors_1_1Photoresistor_1a636b09df1c219714314a691bef87a6bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sensors::Photoresistor::Photoresistor</definition>
+        <argsstring>()</argsstring>
+        <name>Photoresistor</name>
+        <briefdescription>
+<para><ref refid="classSensors_1_1Photoresistor" kindref="compound">Photoresistor</ref> standard constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>new <ref refid="classSensors_1_1Photoresistor" kindref="compound">Photoresistor</ref> object and initializes variables </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Photoresistor.h" line="49" column="1" bodyfile="src/Sensors/Photoresistor.cpp" bodystart="26" bodyend="32"/>
+        <references refid="classSensors_1_1Photoresistor_1a03306f2c1b5a7d65b46178dcc25c1c9a" compoundref="Photoresistor_8cpp" startline="58" endline="61">setType</references>
+        <references refid="classSensors_1_1Photoresistor_1a46314a8e495c2ad308fe89935b1c2574" compoundref="Photoresistor_8cpp" startline="53" endline="56">setPort</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Photoresistor_1a53ca472fb36f5ce8b9e199ddcc1ea188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sensors::Photoresistor::Photoresistor</definition>
+        <argsstring>(uint8_t port)</argsstring>
+        <name>Photoresistor</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classSensors_1_1Photoresistor" kindref="compound">Photoresistor</ref> constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port number of analog/digital converter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Photoresistor.h" line="56" column="1" bodyfile="src/Sensors/Photoresistor.cpp" bodystart="34" bodyend="41"/>
+        <references refid="classSensors_1_1Photoresistor_1a03306f2c1b5a7d65b46178dcc25c1c9a" compoundref="Photoresistor_8cpp" startline="58" endline="61">setType</references>
+        <references refid="classSensors_1_1Photoresistor_1a46314a8e495c2ad308fe89935b1c2574" compoundref="Photoresistor_8cpp" startline="53" endline="56">setPort</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Photoresistor_1a62a0993f8a84a827b843d9bcdded089e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Photoresistor::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Initialize analog digital converter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Photoresistor.h" line="62" column="1" bodyfile="src/Sensors/Photoresistor.cpp" bodystart="44" bodyend="51"/>
+        <references refid="classSensors_1_1Photoresistor_1a43797415ff86174f92b44e69046e3de7" compoundref="Photoresistor_8h" startline="38">ADPort</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Photoresistor_1a06b802026054f93a7b6659db0ffe731e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Photoresistor::GetSensorStringXML</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>GetSensorStringXML</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Get sensor value. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns a character array with the average Sensor value of 1000 measurements and adds a | to the end of it. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Photoresistor.h" line="70" column="1" bodyfile="src/Sensors/Photoresistor.cpp" bodystart="73" bodyend="91"/>
+        <references refid="classSensors_1_1Photoresistor_1aaee5f77d43f8a7d3175a9bf3e635041d" compoundref="Photoresistor_8cpp" startline="64" endline="70">readADValue</references>
+        <references refid="main_8cpp_1ac19b967928c4ef5b461808cbac40840c" compoundref="main_8cpp" startline="97">str</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSensors_1_1Photoresistor_1a46314a8e495c2ad308fe89935b1c2574" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Photoresistor::setPort</definition>
+        <argsstring>(uint8_t port)</argsstring>
+        <name>setPort</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Set Port of analog/digital converter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port number </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Photoresistor.h" line="82" column="1" bodyfile="src/Sensors/Photoresistor.cpp" bodystart="53" bodyend="56"/>
+        <references refid="classSensors_1_1Photoresistor_1a43797415ff86174f92b44e69046e3de7" compoundref="Photoresistor_8h" startline="38">ADPort</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Photoresistor_1a03306f2c1b5a7d65b46178dcc25c1c9a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sensors::Photoresistor::setType</definition>
+        <argsstring>(uint8_t t)</argsstring>
+        <name>setType</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Set Type of light detector. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type number </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Photoresistor.h" line="89" column="1" bodyfile="src/Sensors/Photoresistor.cpp" bodystart="58" bodyend="61"/>
+        <references refid="classSensors_1_1Photoresistor_1abdd598255c0051cbc8db8a457cd29dc8" compoundref="Photoresistor_8h" startline="36">type</references>
+      </memberdef>
+      <memberdef kind="function" id="classSensors_1_1Photoresistor_1aaee5f77d43f8a7d3175a9bf3e635041d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t Sensors::Photoresistor::readADValue</definition>
+        <argsstring>()</argsstring>
+        <name>readADValue</name>
+        <briefdescription>
+<para>Reads digital value of the AD converter. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Digital value of one AD conversion </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Sensors/Photoresistor.h" line="96" column="1" bodyfile="src/Sensors/Photoresistor.cpp" bodystart="64" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classSensors_1_1Photoresistor" kindref="compound">Photoresistor</ref> class definition. </para>    </briefdescription>
+    <detaileddescription>
+<para>Defines methods for accessing the <ref refid="classSensors_1_1Photoresistor" kindref="compound">Photoresistor</ref> interface </para>    </detaileddescription>
+    <location file="src/Sensors/Photoresistor.h" line="33" column="1" bodyfile="src/Sensors/Photoresistor.h" bodystart="33" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classSensors_1_1Photoresistor_1a43797415ff86174f92b44e69046e3de7" prot="private" virt="non-virtual"><scope>Sensors::Photoresistor</scope><name>ADPort</name></member>
+      <member refid="classSensors_1_1Photoresistor_1a06b802026054f93a7b6659db0ffe731e" prot="public" virt="non-virtual"><scope>Sensors::Photoresistor</scope><name>GetSensorStringXML</name></member>
+      <member refid="classSensors_1_1Photoresistor_1a62a0993f8a84a827b843d9bcdded089e" prot="public" virt="non-virtual"><scope>Sensors::Photoresistor</scope><name>Init</name></member>
+      <member refid="classSensors_1_1Photoresistor_1a636b09df1c219714314a691bef87a6bd" prot="public" virt="non-virtual"><scope>Sensors::Photoresistor</scope><name>Photoresistor</name></member>
+      <member refid="classSensors_1_1Photoresistor_1a53ca472fb36f5ce8b9e199ddcc1ea188" prot="public" virt="non-virtual"><scope>Sensors::Photoresistor</scope><name>Photoresistor</name></member>
+      <member refid="classSensors_1_1Photoresistor_1aaee5f77d43f8a7d3175a9bf3e635041d" prot="private" virt="non-virtual"><scope>Sensors::Photoresistor</scope><name>readADValue</name></member>
+      <member refid="classSensors_1_1Photoresistor_1a46314a8e495c2ad308fe89935b1c2574" prot="private" virt="non-virtual"><scope>Sensors::Photoresistor</scope><name>setPort</name></member>
+      <member refid="classSensors_1_1Photoresistor_1a03306f2c1b5a7d65b46178dcc25c1c9a" prot="private" virt="non-virtual"><scope>Sensors::Photoresistor</scope><name>setType</name></member>
+      <member refid="classSensors_1_1Photoresistor_1abdd598255c0051cbc8db8a457cd29dc8" prot="private" virt="non-virtual"><scope>Sensors::Photoresistor</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

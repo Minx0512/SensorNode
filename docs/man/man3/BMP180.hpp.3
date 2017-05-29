@@ -1,18 +1,595 @@
-.TH "src/Sensors/BMP180.hpp" 3 "Tue Apr 4 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
+.TH "src/Sensors/deactivated/BMP180.hpp" 3 "Thu May 25 2017" "Version 0.2" "SensorNode" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-src/Sensors/BMP180.hpp \- 
+src/Sensors/deactivated/BMP180.hpp \- 
 .SH SYNOPSIS
 .br
 .PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include '\&.\&./IO/I2C\&.hpp'\fP
+.br
+
 .SS "Classes"
 
 .in +1c
 .ti -1c
+.RI "struct \fBbmp180_calib_param_t\fP"
+.br
+.RI "\fIThis structure holds all device specific calibration parameters\&. \fP"
+.ti -1c
+.RI "struct \fBbmp180_t\fP"
+.br
+.RI "\fIThis structure holds \fBBMP180\fP initialization parameters\&. \fP"
+.ti -1c
 .RI "class \fBBMP180\fP"
 .br
 .in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_MDELAY_DATA_TYPE\fP   \fBu32\fP"
+.br
+.in -1c
+.PP
+.RI "\fBI2C ADDRESS DEFINITION OF BMP180\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_I2C_ADDR\fP   (0xEE>>1)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBERROR CODE DEFINITIONS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBE_BMP_NULL_PTR\fP   ((\fBs8\fP)\-127)"
+.br
+.ti -1c
+.RI "#define \fBE_BMP_COMM_RES\fP   ((\fBs8\fP)\-1)"
+.br
+.ti -1c
+.RI "#define \fBE_BMP_OUT_OF_RANGE\fP   ((\fBs8\fP)\-2)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBCONSTANTS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_RETURN_FUNCTION_TYPE\fP   \fBs8\fP"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INIT_VALUE\fP   ((\fBu8\fP)0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INITIALIZE_OVERSAMP_SETTING_U8X\fP   ((\fBu8\fP)0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INITIALIZE_SW_OVERSAMP_U8X\fP   ((\fBu8\fP)0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INITIALIZE_NUMBER_OF_SAMPLES_U8X\fP   ((\fBu8\fP)1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_GEN_READ_WRITE_DATA_LENGTH\fP   ((\fBu8\fP)1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_TEMPERATURE_DATA_LENGTH\fP   ((\fBu8\fP)2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_DATA_LENGTH\fP   ((\fBu8\fP)3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SW_OVERSAMP_U8X\fP   ((\fBu8\fP)1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_OVERSAMP_SETTING_U8X\fP   ((\fBu8\fP)3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_2MS_DELAY_U8X\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_3MS_DELAY_U8X\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AVERAGE_U8X\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_INVALID_DATA\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHECK_DIVISOR\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_DATA_MEASURE\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALCULATE_TRUE_PRESSURE\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALCULATE_TRUE_TEMPERATURE\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_01_BIT\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_02_BITS\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_04_BITS\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_06_BITS\fP   (6)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_08_BITS\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_11_BITS\fP   (11)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_12_BITS\fP   (12)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_13_BITS\fP   (13)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_15_BITS\fP   (15)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SHIFT_BIT_POSITION_BY_16_BITS\fP   (16)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBREGISTER ADDRESS DEFINITION\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_PROM_START__ADDR\fP   (0xAA)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PROM_DATA__LEN\fP   (22)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID_REG\fP   (0xD0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_VERSION_REG\fP   (0xD1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CTRL_MEAS_REG\fP   (0xF4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ADC_OUT_MSB_REG\fP   (0xF6)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ADC_OUT_LSB_REG\fP   (0xF7)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SOFT_RESET_REG\fP   (0xE0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_T_MEASURE\fP   (0x2E)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_P_MEASURE\fP   (0x34)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_TEMP_CONVERSION_TIME\fP   (5)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PARAM_MG\fP   (3038)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PARAM_MH\fP   (\-7357)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PARAM_MI\fP   (3791)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBARRAY SIZE DEFINITIONS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_TEMPERATURE_DATA_BYTES\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_DATA_BYTES\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_TEMPERATURE_LSB_DATA\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_TEMPERATURE_MSB_DATA\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_MSB_DATA\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_LSB_DATA\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_PRESSURE_XLSB_DATA\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_DATA_SIZE\fP   (22)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC1_MSB\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC1_LSB\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC2_MSB\fP   (2)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC2_LSB\fP   (3)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC3_MSB\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC3_LSB\fP   (5)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC4_MSB\fP   (6)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC4_LSB\fP   (7)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC5_MSB\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC5_LSB\fP   (9)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC6_MSB\fP   (10)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_AC6_LSB\fP   (11)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_B1_MSB\fP   (12)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_B1_LSB\fP   (13)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_B2_MSB\fP   (14)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_B2_LSB\fP   (15)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MB_MSB\fP   (16)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MB_LSB\fP   (17)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MC_MSB\fP   (18)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MC_LSB\fP   (19)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MD_MSB\fP   (20)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CALIB_PARAM_MD_LSB\fP   (21)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBBIT MASK, LENGTH AND POSITION FOR\fP"
+.br
+AL VERSION 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID__POS\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID__MSK\fP   (0xFF)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID__LEN\fP   (8)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_CHIP_ID__REG\fP   (\fBBMP180_CHIP_ID_REG\fP)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ML_VERSION__POS\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ML_VERSION__LEN\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ML_VERSION__MSK\fP   (0x0F)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_ML_VERSION__REG\fP   (\fBBMP180_VERSION_REG\fP)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AL_VERSION__POS\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AL_VERSION__LEN\fP   (4)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AL_VERSION__MSK\fP   (0xF0)"
+.br
+.ti -1c
+.RI "#define \fBBMP180_AL_VERSION__REG\fP   (\fBBMP180_VERSION_REG\fP)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBGET AND SET BITSLICE FUNCTIONS\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBBMP180_GET_BITSLICE\fP(regvar,  bitname)   ((regvar & bitname##__MSK) >> (bitname##__POS))"
+.br
+.ti -1c
+.RI "#define \fBBMP180_SET_BITSLICE\fP(regvar,  bitname,  val)   ((regvar & ~bitname##__MSK) | ((val<<bitname##__POS)&bitname##__MSK))"
+.br
+.in -1c
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef uint8_t \fBu8\fP"
+.br
+.ti -1c
+.RI "typedef uint16_t \fBu16\fP"
+.br
+.ti -1c
+.RI "typedef uint32_t \fBu32\fP"
+.br
+.ti -1c
+.RI "typedef uint64_t \fBu64\fP"
+.br
+.ti -1c
+.RI "typedef int8_t \fBs8\fP"
+.br
+.ti -1c
+.RI "typedef int16_t \fBs16\fP"
+.br
+.ti -1c
+.RI "typedef int32_t \fBs32\fP"
+.br
+.ti -1c
+.RI "typedef int64_t \fBs64\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BMP180_2MS_DELAY_U8X   (2)"
+
+.SS "#define BMP180_3MS_DELAY_U8X   (3)"
+
+.SS "#define BMP180_ADC_OUT_LSB_REG   (0xF7)"
+
+.SS "#define BMP180_ADC_OUT_MSB_REG   (0xF6)"
+
+.SS "#define BMP180_AL_VERSION__LEN   (4)"
+
+.SS "#define BMP180_AL_VERSION__MSK   (0xF0)"
+
+.SS "#define BMP180_AL_VERSION__POS   (4)"
+
+.SS "#define BMP180_AL_VERSION__REG   (\fBBMP180_VERSION_REG\fP)"
+
+.SS "#define BMP180_AVERAGE_U8X   (3)"
+
+.SS "#define BMP180_CALCULATE_TRUE_PRESSURE   (8)"
+
+.SS "#define BMP180_CALCULATE_TRUE_TEMPERATURE   (8)"
+
+.SS "#define BMP180_CALIB_DATA_SIZE   (22)"
+
+.SS "#define BMP180_CALIB_PARAM_AC1_LSB   (1)"
+
+.SS "#define BMP180_CALIB_PARAM_AC1_MSB   (0)"
+
+.SS "#define BMP180_CALIB_PARAM_AC2_LSB   (3)"
+
+.SS "#define BMP180_CALIB_PARAM_AC2_MSB   (2)"
+
+.SS "#define BMP180_CALIB_PARAM_AC3_LSB   (5)"
+
+.SS "#define BMP180_CALIB_PARAM_AC3_MSB   (4)"
+
+.SS "#define BMP180_CALIB_PARAM_AC4_LSB   (7)"
+
+.SS "#define BMP180_CALIB_PARAM_AC4_MSB   (6)"
+
+.SS "#define BMP180_CALIB_PARAM_AC5_LSB   (9)"
+
+.SS "#define BMP180_CALIB_PARAM_AC5_MSB   (8)"
+
+.SS "#define BMP180_CALIB_PARAM_AC6_LSB   (11)"
+
+.SS "#define BMP180_CALIB_PARAM_AC6_MSB   (10)"
+
+.SS "#define BMP180_CALIB_PARAM_B1_LSB   (13)"
+
+.SS "#define BMP180_CALIB_PARAM_B1_MSB   (12)"
+
+.SS "#define BMP180_CALIB_PARAM_B2_LSB   (15)"
+
+.SS "#define BMP180_CALIB_PARAM_B2_MSB   (14)"
+
+.SS "#define BMP180_CALIB_PARAM_MB_LSB   (17)"
+
+.SS "#define BMP180_CALIB_PARAM_MB_MSB   (16)"
+
+.SS "#define BMP180_CALIB_PARAM_MC_LSB   (19)"
+
+.SS "#define BMP180_CALIB_PARAM_MC_MSB   (18)"
+
+.SS "#define BMP180_CALIB_PARAM_MD_LSB   (21)"
+
+.SS "#define BMP180_CALIB_PARAM_MD_MSB   (20)"
+
+.SS "#define BMP180_CHECK_DIVISOR   (0)"
+
+.SS "#define BMP180_CHIP_ID__LEN   (8)"
+
+.SS "#define BMP180_CHIP_ID__MSK   (0xFF)"
+
+.SS "#define BMP180_CHIP_ID__POS   (0)"
+
+.SS "#define BMP180_CHIP_ID__REG   (\fBBMP180_CHIP_ID_REG\fP)"
+
+.SS "#define BMP180_CHIP_ID_REG   (0xD0)"
+
+.SS "#define BMP180_CTRL_MEAS_REG   (0xF4)"
+
+.SS "#define BMP180_DATA_MEASURE   (3)"
+
+.SS "#define BMP180_GEN_READ_WRITE_DATA_LENGTH   ((\fBu8\fP)1)"
+
+.SS "#define BMP180_GET_BITSLICE(regvar, bitname)   ((regvar & bitname##__MSK) >> (bitname##__POS))"
+
+.SS "#define BMP180_I2C_ADDR   (0xEE>>1)"
+
+.SS "#define BMP180_INIT_VALUE   ((\fBu8\fP)0)"
+
+.SS "#define BMP180_INITIALIZE_NUMBER_OF_SAMPLES_U8X   ((\fBu8\fP)1)"
+
+.SS "#define BMP180_INITIALIZE_OVERSAMP_SETTING_U8X   ((\fBu8\fP)0)"
+
+.SS "#define BMP180_INITIALIZE_SW_OVERSAMP_U8X   ((\fBu8\fP)0)"
+
+.SS "#define BMP180_INVALID_DATA   (0)"
+
+.SS "#define BMP180_MDELAY_DATA_TYPE   \fBu32\fP"
+
+.SS "#define BMP180_ML_VERSION__LEN   (4)"
+
+.SS "#define BMP180_ML_VERSION__MSK   (0x0F)"
+
+.SS "#define BMP180_ML_VERSION__POS   (0)"
+
+.SS "#define BMP180_ML_VERSION__REG   (\fBBMP180_VERSION_REG\fP)"
+
+.SS "#define BMP180_OVERSAMP_SETTING_U8X   ((\fBu8\fP)3)"
+
+.SS "#define BMP180_P_MEASURE   (0x34)"
+
+.SS "#define BMP180_PARAM_MG   (3038)"
+
+.SS "#define BMP180_PARAM_MH   (\-7357)"
+
+.SS "#define BMP180_PARAM_MI   (3791)"
+
+.SS "#define BMP180_PRESSURE_DATA_BYTES   (3)"
+
+.SS "#define BMP180_PRESSURE_DATA_LENGTH   ((\fBu8\fP)3)"
+
+.SS "#define BMP180_PRESSURE_LSB_DATA   (1)"
+
+.SS "#define BMP180_PRESSURE_MSB_DATA   (0)"
+
+.SS "#define BMP180_PRESSURE_XLSB_DATA   (2)"
+
+.SS "#define BMP180_PROM_DATA__LEN   (22)"
+
+.SS "#define BMP180_PROM_START__ADDR   (0xAA)"
+
+.SS "#define BMP180_RETURN_FUNCTION_TYPE   \fBs8\fP"
+
+.SS "#define BMP180_SET_BITSLICE(regvar, bitname, val)   ((regvar & ~bitname##__MSK) | ((val<<bitname##__POS)&bitname##__MSK))"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_01_BIT   (1)"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_02_BITS   (2)"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_04_BITS   (4)"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_06_BITS   (6)"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_08_BITS   (8)"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_11_BITS   (11)"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_12_BITS   (12)"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_13_BITS   (13)"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_15_BITS   (15)"
+
+.SS "#define BMP180_SHIFT_BIT_POSITION_BY_16_BITS   (16)"
+
+.SS "#define BMP180_SOFT_RESET_REG   (0xE0)"
+
+.SS "#define BMP180_SW_OVERSAMP_U8X   ((\fBu8\fP)1)"
+
+.SS "#define BMP180_T_MEASURE   (0x2E)"
+
+.SS "#define BMP180_TEMP_CONVERSION_TIME   (5)"
+
+.SS "#define BMP180_TEMPERATURE_DATA_BYTES   (2)"
+
+.SS "#define BMP180_TEMPERATURE_DATA_LENGTH   ((\fBu8\fP)2)"
+
+.SS "#define BMP180_TEMPERATURE_LSB_DATA   (1)"
+
+.SS "#define BMP180_TEMPERATURE_MSB_DATA   (0)"
+
+.SS "#define BMP180_VERSION_REG   (0xD1)"
+
+.SS "#define E_BMP_COMM_RES   ((\fBs8\fP)\-1)"
+
+.SS "#define E_BMP_NULL_PTR   ((\fBs8\fP)\-127)"
+
+.SS "#define E_BMP_OUT_OF_RANGE   ((\fBs8\fP)\-2)"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef int16_t \fBs16\fP"
+used for signed 16bit 
+.SS "typedef int32_t \fBs32\fP"
+used for signed 32bit 
+.SS "typedef int64_t \fBs64\fP"
+used for signed 64bit 
+.SS "typedef int8_t \fBs8\fP"
+used for signed 8bit 
+.SS "typedef uint16_t \fBu16\fP"
+used for unsigned 16bit 
+.SS "typedef uint32_t \fBu32\fP"
+used for unsigned 32bit 
+.SS "typedef uint64_t \fBu64\fP"
+used for unsigned 64bit 
+.SS "typedef uint8_t \fBu8\fP"
+used for unsigned 8bit 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for SensorNode from the source code\&.
